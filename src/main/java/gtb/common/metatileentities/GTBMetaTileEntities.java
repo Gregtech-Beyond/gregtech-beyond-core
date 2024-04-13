@@ -1,13 +1,19 @@
 package gtb.common.metatileentities;
 
+import static gregtech.common.metatileentities.MetaTileEntities.registerMetaTileEntity;
+import static gtb.api.utils.GTBUtil.gtb;
+
+import gtb.common.metatileentities.multiblocks.MultiBlockExample;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBMetaTileEntities {
 
-    // public static MetaTileEntityLargeMacerator LARGE_MACERATOR;
-
-    private GTBMetaTileEntities() {}
+    public static MultiBlockExample MULTI_BLOCK_EXAMPLE;
 
     public static void init() {
         // Multiblocks
-        // LARGE_MACERATOR = registerMetaTileEntity(3000, new MetaTileEntityLargeMacerator(gtb("large_macerator")));
+        MULTI_BLOCK_EXAMPLE = registerMetaTileEntity(3000, new MultiBlockExample(gtb("multi_block_example")));
     }
 }

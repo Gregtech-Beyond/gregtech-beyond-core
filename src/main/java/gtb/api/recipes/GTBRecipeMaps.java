@@ -1,5 +1,11 @@
 package gtb.api.recipes;
 
+import gregtech.api.recipes.RecipeMap;
+
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
 
     /**
@@ -17,5 +23,6 @@ public final class GTBRecipeMaps {
      * .setSound(GTSoundEvents.FURNACE);
      */
 
-    private GTBRecipeMaps() {}
+    public static final RecipeMap<NoEnergyRecipeBuilder> WATER_TANK = new RecipeMap<>("water_tank",
+            1, 0, 0, 1, new NoEnergyRecipeBuilder(), false);
 }
