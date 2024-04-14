@@ -18,5 +18,12 @@ public final class GTBRecipeLoader {
                 .duration(20)
                 .fluidOutputs(Materials.Water.getFluid(200))
                 .buildAndRegister();
+
+        GTBRecipeMaps.SOLAR_THERMAL_CONCENTRATOR.recipeBuilder()
+                .circuitMeta(1)
+                .duration(20)
+                .fluidInputs(Materials.Water.getFluid(10))
+                .fluidOutputs(Materials.Steam.getFluid(5000))
+                .buildAndRegister();
     }
 }
