@@ -19,6 +19,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityBedrockPump BEDROCK_PUMP;
     public static MetaTileEntityBlackHoleCompressor BLACK_HOLE_COMPRESSOR;
     public static MetaTileEntityCatalyticReformationUnit CATALYTIC_REFORMATION_UNIT;
+    public static MetaTileEntitySolidFuelGenerator SOLID_FUEL_GENERATOR;
+    public static MetaTileEntityCoker COKER;
 
     public static void init() {
         // Multiblocks
@@ -29,7 +31,15 @@ public final class GTBMetaTileEntities {
         ASTRO_MINING_STATION = registerMetaTileEntity(3004, new MetaTileEntityAstroMiningStation(gtb("astro_mining_station")));
         BEDROCK_PUMP  = registerMetaTileEntity(3005, new MetaTileEntityBedrockPump(gtb("bedrock_pump")));
         BLACK_HOLE_COMPRESSOR  = registerMetaTileEntity(3006, new MetaTileEntityBlackHoleCompressor(gtb("black_hole_compressor")));
-        CATALYTIC_REFORMATION_UNIT  = registerMetaTileEntity(3006, new MetaTileEntityCatalyticReformationUnit(gtb("catalytic_reformation_unit")));
+        CATALYTIC_REFORMATION_UNIT  = registerMetaTileEntity(3007, new MetaTileEntityCatalyticReformationUnit(gtb("catalytic_reformation_unit")));
+        SOLID_FUEL_GENERATOR  = registerMetaTileEntity(3008, new MetaTileEntitySolidFuelGenerator(gtb("solid_fuel_generator")));
+        COKER  = registerMetaTileEntity(3009, new MetaTileEntityCoker(gtb("coker")));
+
+
+
+
+
+
 
     }
 

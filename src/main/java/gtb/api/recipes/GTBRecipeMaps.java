@@ -48,4 +48,18 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> CATALYTIC_REFORMATION_UNIT = new RecipeMap<>("catalytic_reformation_unit",
             1, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> SOLID_FUEL_GENERATOR = new RecipeMap<>("solid_fuel_generator",
+            2, 0, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> COKER = new RecipeMap<>("coker",
+            1, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+
+
+
+
+
+
+
+
 }
