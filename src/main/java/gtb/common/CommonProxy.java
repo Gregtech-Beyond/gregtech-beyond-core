@@ -41,6 +41,12 @@ public class CommonProxy {
 
         registry.register(GTBMetaBlocks.EXAMPLE);
         registry.register(GTBMetaBlocks.CLIMATE_PROOF_CASING);
+        registry.register(GTBMetaBlocks.VACUUM_FURNACE_CASING);
+        registry.register(GTBMetaBlocks.QUANTUM_CASING);
+        registry.register(GTBMetaBlocks.QUANTUM_GLASS);
+        registry.register(GTBMetaBlocks.DIMENSIONAL_CASING);
+        registry.register(GTBMetaBlocks.FIELD_GENERATOR_CASING);
+        registry.register(GTBMetaBlocks.HIGH_ENERGY_COIL);
     }
 
     @SubscribeEvent

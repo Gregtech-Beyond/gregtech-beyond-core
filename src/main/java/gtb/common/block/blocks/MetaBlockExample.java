@@ -22,8 +22,8 @@ public class MetaBlockExample extends VariantBlock<MetaBlockExample.CasingType> 
         setSoundType(SoundType.METAL);
         setHarvestLevel("wrench", 2);
         setDefaultState(getState(CasingType.BLOCK_EXAMPLE));
-
     }
+
     @Override
     public boolean canCreatureSpawn(@NotNull IBlockState state, @NotNull IBlockAccess world, @NotNull BlockPos pos,
                                     @NotNull EntityLiving.SpawnPlacementType type) {

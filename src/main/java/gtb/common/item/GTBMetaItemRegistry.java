@@ -10,9 +10,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
 
     @Override
     public void registerSubItems() {
-    GTBMetaItems.ASTRO_MINER = addItem(1, "astro_miner");
-    GTBMetaItems.MOON = addItem(2, "moon");
+        GTBMetaItems.ASTRO_MINER = addItem(1, "astro_miner");
+        GTBMetaItems.MOON = addItem(2, "moon");
+    }
 }
-
-}
-
