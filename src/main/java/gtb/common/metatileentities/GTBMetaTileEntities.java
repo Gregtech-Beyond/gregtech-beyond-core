@@ -17,6 +17,7 @@ public final class GTBMetaTileEntities {
     public static void init() {
         // Multiblocks
         WATER_TANK = registerMetaTileEntity(3000, new MetaTileEntityWaterTank(gtb("water_tank")));
-        SOLAR_THERMAL_CONCENTRATOR = registerMetaTileEntity(3001, new MetaTileEntitySolarThermalConcentrator(gtb("solar_thermal_concentrator")));
+        SOLAR_THERMAL_CONCENTRATOR = registerMetaTileEntity(3001,
+                new MetaTileEntitySolarThermalConcentrator(gtb("solar_thermal_concentrator")));
     }
 }

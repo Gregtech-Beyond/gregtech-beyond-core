@@ -7,12 +7,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.jetbrains.annotations.NotNull;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
-import gregtech.common.blocks.BlockFireboxCasing;
-import gregtech.common.blocks.BlockMetalCasing.MetalCasingType;
-import gregtech.common.blocks.BlockTurbineCasing;
-import gregtech.common.blocks.MetaBlocks;
-import gregtech.common.blocks.StoneVariantBlock;
+
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -24,6 +19,8 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockFireboxCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
@@ -45,15 +42,16 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     public IBlockState getCasingState() {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.BRONZE_BRICKS);
     }
+
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("FFFFF","FCCCF","FCCCF","FFSFF")
-                .aisle("CBPBC","CBPBC","CBPBC","CBPBC")
-                .aisle("Z~~~Z","~~~~~","~~~~~","Z~~~Z")
-                .aisle("Z~~~Z","~~~~~","~~~~~","Z~~~Z")
-                .aisle("GGGGG","GGGGG","GGGGG","GGGGG")
-                .aisle("~GGG~","~GGG~","~GGG~","~GGG~")
+                .aisle("FFFFF", "FCCCF", "FCCCF", "FFSFF")
+                .aisle("CBPBC", "CBPBC", "CBPBC", "CBPBC")
+                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
+                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
+                .aisle("GGGGG", "GGGGG", "GGGGG", "GGGGG")
+                .aisle("~GGG~", "~GGG~", "~GGG~", "~GGG~")
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
@@ -63,9 +61,12 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
                 .where('Z', frames(Materials.Bronze))
                 .where('B', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.BRONZE_PIPE))))
-                .where('F', states(MetaBlocks.BOILER_FIREBOX_CASING.getState(BlockFireboxCasing.FireboxCasingType.BRONZE_FIREBOX)))
+                .where('F',
+                        states(MetaBlocks.BOILER_FIREBOX_CASING
+                                .getState(BlockFireboxCasing.FireboxCasingType.BRONZE_FIREBOX)))
                 .build();
     }
+
     @Override
     public TraceabilityPredicate autoAbilities() {
         return autoAbilities(false, false, true, false, false, true, false);
