@@ -28,9 +28,9 @@ import gtb.api.NoEnergyLogic;
 import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MultiBlockExample extends NoEnergyMultiController {
+public class MetaTileEntityWaterTank extends NoEnergyMultiController {
 
-    public MultiBlockExample(ResourceLocation metaTileEntityId) {
+    public MetaTileEntityWaterTank(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.WATER_TANK);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
@@ -83,6 +83,6 @@ public class MultiBlockExample extends NoEnergyMultiController {
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MultiBlockExample(metaTileEntityId);
+        return new MetaTileEntityWaterTank(metaTileEntityId);
     }
 }
