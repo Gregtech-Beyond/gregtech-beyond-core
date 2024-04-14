@@ -1,6 +1,8 @@
 package gtb.api.recipes;
 
+import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
+import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -28,4 +30,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<NoEnergyRecipeBuilder> SOLAR_THERMAL_CONCENTRATOR = new RecipeMap<>("solar_thermal_concentrator",
             1, 0, 1, 1, new NoEnergyRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ASTRO_MINING_STATION = new RecipeMap<>("astro_mining_station",
+            4, 9, 1, 0, new SimpleRecipeBuilder(), false);
 }

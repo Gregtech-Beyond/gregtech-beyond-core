@@ -13,22 +13,22 @@ import org.jetbrains.annotations.NotNull;
 
 import gregtech.common.blocks.MetaBlocks;
 
-import gtb.common.block.blocks.MetaBlockExample;
+import gtb.common.block.blocks.GTBMetaBlock;
 
 public final class GTBMetaBlocks {
 
     private GTBMetaBlocks() {}
 
-    public static MetaBlockExample EXAMPLE;
+    public static GTBMetaBlock CLIMATE_PROOF_CASING;
 
     public static void init() {
-        EXAMPLE = new MetaBlockExample();
-        EXAMPLE.setRegistryName("meta_block_example");
+        CLIMATE_PROOF_CASING = new GTBMetaBlock();
+        CLIMATE_PROOF_CASING.setRegistryName("example");
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
-        registerItemModel(EXAMPLE);
+        registerItemModel(CLIMATE_PROOF_CASING);
     }
 
     @SideOnly(Side.CLIENT)

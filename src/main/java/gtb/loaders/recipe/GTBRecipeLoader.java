@@ -25,5 +25,7 @@ public final class GTBRecipeLoader {
                 .fluidInputs(Materials.Water.getFluid(10))
                 .fluidOutputs(Materials.Steam.getFluid(5000))
                 .buildAndRegister();
+
+
     }
 }
