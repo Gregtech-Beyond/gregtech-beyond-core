@@ -18,8 +18,6 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockMetalCasing;
-import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
@@ -27,6 +25,7 @@ import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
 import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.common.block.GTBMetaBlocks;
 
 public class MetaTileEntityWaterTank extends NoEnergyMultiController {
 
@@ -37,7 +36,7 @@ public class MetaTileEntityWaterTank extends NoEnergyMultiController {
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
+        return GTBMetaBlocks.EXAMPLE.getDefaultState();
     }
 
     @Override

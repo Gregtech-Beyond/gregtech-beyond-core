@@ -13,23 +13,29 @@ import org.jetbrains.annotations.NotNull;
 
 import gregtech.common.blocks.MetaBlocks;
 
-import gtb.common.block.blocks.GTBMetaBlock;
+import gtb.common.block.blocks.MetaBlockExample;
 
 public final class GTBMetaBlocks {
 
-    private GTBMetaBlocks() {}
-
-    public static GTBMetaBlock CLIMATE_PROOF_CASING;
+    public static MetaBlockExample EXAMPLE;
 
     public static void init() {
-        CLIMATE_PROOF_CASING = new GTBMetaBlock();
-        CLIMATE_PROOF_CASING.setRegistryName("example");
+        EXAMPLE = new MetaBlockExample();
+        EXAMPLE.setRegistryName("meta_block_example");
+
+        CLIMATE_PROOF_CASING = new MetaBlockExample();
+        CLIMATE_PROOF_CASING.setRegistryName("meta_block_example");
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
+        registerItemModel(EXAMPLE);
         registerItemModel(CLIMATE_PROOF_CASING);
     }
+
+    public static MetaBlockExample CLIMATE_PROOF_CASING;
+
+
 
     @SideOnly(Side.CLIENT)
     private static void registerItemModel(@NotNull Block block) {

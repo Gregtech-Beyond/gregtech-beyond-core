@@ -40,6 +40,7 @@ public class CommonProxy {
         IForgeRegistry<Block> registry = event.getRegistry();
 
         registry.register(GTBMetaBlocks.EXAMPLE);
+        registry.register(GTBMetaBlocks.CLIMATE_PROOF_CASING);
     }
 
     @SubscribeEvent

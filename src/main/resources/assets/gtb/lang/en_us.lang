@@ -7,3 +7,6 @@ recipemap.water_tank.name=Water Tank
 
 # Multiblock machine controllers
 gtb.machine.water_tank.name=Water Tank
+
+# MetaItems
+metaitem.astro_miner.name=Astro Miner
