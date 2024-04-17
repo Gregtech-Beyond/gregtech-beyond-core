@@ -2,7 +2,7 @@ package gtb.api.unification.materials;
 import gregtech.api.unification.material.Material;
 
 public class GTBMaterials {
-        public GTBMaterials() {}
+    public GTBMaterials() {}
 
     //Element Materials
 

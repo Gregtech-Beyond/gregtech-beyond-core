@@ -11,7 +11,6 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.util.GTUtility.gregtechId;
-import static gtb.api.unification.materials.GTBMaterials.PlatinumConcentrate;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
 public class GTBUnknownCompositionMaterials {
