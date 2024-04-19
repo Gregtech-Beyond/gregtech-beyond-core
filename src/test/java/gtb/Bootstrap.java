@@ -27,9 +27,9 @@ import gregtech.api.unification.ore.OrePrefix;
 import gregtech.common.items.MetaItems;
 import gregtech.core.unification.material.internal.MaterialRegistryManager;
 import gregtech.modules.ModuleManager;
-
 import gtb.api.unification.materials.GTBMaterialFlagAddition;
 import gtb.api.unification.materials.GTBMaterials;
+import gtb.api.unification.GTBMaterialFlagAddition;
 
 public final class Bootstrap {
 

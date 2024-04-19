@@ -1,6 +1,7 @@
 package gtb.api.unification;
 
 import gregtech.api.unification.material.info.MaterialFlag;
+import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.PropertyKey;
 
 public final class GTBMaterialFlags {
@@ -20,5 +21,9 @@ public final class GTBMaterialFlags {
             .requireFlags(NO_ALLOY_BLAST_RECIPES)
             .build();
 
+    public static final MaterialFlag DISABLE_CRYSTALLIZATION = new MaterialFlag.Builder("no_crystallization")
+            .requireFlags(MaterialFlags.CRYSTALLIZABLE)
+            .requireProps(PropertyKey.GEM)
+            .build();
     private GTBMaterialFlags() {}
 }
