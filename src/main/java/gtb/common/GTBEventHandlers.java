@@ -10,7 +10,7 @@ import gregtech.api.unification.material.event.MaterialEvent;
 import gregtech.api.unification.material.event.PostMaterialEvent;
 
 import gtb.GregtechBeyondCore;
-import gtb.api.unification.materials.GTBMaterialFlagAddition;
+import gtb.api.unification.GTBMaterialFlagAddition;
 import gtb.api.unification.materials.GTBMaterials;
 
 @ApiStatus.Internal

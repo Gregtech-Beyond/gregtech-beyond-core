@@ -19,4 +19,3 @@ public class GTBMaterialFlags {
             .requireProps(PropertyKey.GEM)
             .build();
 }
-
