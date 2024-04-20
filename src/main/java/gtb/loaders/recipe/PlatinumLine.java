@@ -1,6 +1,7 @@
 package gtb.loaders.recipe;
 
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.unification.material.Materials;
@@ -42,6 +43,16 @@ public final class PlatinumLine {
         RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder().input(dust, GTBMaterials.IridiumDioxide, 6).fluidInputs(Materials.HydrochloricAcid.getFluid(1000)).fluidOutputs(GTBMaterials.AcidicIridiumDioxide.getFluid(1000)).duration(200).EUt(100).buildAndRegister();
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder().input(dust, Materials.AmmoniumChloride, 4).fluidInputs(GTBMaterials.AcidicIridiumDioxide.getFluid(1000)).fluidOutputs(Materials.Water.getFluid(1000)).fluidOutputs(Materials.Ammonia.getFluid(4000)).duration(800).EUt(900).buildAndRegister();
         RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder().input(dust, Materials.AmmoniumChloride, 4).fluidInputs(GTBMaterials.AcidicIridiumDioxide.getFluid(1000)).fluidOutputs(Materials.Water.getFluid(1000)).fluidOutputs(Materials.Ammonia.getFluid(4000)).output(dust, Materials.IridiumChloride, 8).duration(800).EUt(900).buildAndRegister();
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.PlatinumExtractionMixture.getFluid(4000)).fluidInputs(GTBMaterials.PlatinumConcentrate.getFluid(4000)).fluidOutputs(GTBMaterials.PalladiumExtract.getFluid(1000)).fluidOutputs(GTBMaterials.PlatinumExtract.getFluid(3000)).duration(200).EUt(120).buildAndRegister();
+        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.PlatinumExtractionMixture.getFluid(4000)).fluidInputs(GTBMaterials.PlatinumConcentrate.getFluid(4000)).fluidOutputs(GTBMaterials.PalladiumExtract.getFluid(1000)).fluidOutputs(GTBMaterials.PlatinumExtract.getFluid(3000)).duration(200).EUt(120).buildAndRegister();
+        RecipeMaps.DISTILLATION_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.PlatinumExtract.getFluid(1000)).fluidOutputs(GTBMaterials.PlatinumExtractionMixture.getFluid(1000)).fluidOutputs(GTBMaterials.PlatinumSolution.getFluid(1000)).duration(200).EUt(80).buildAndRegister();
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.PlatinumSolution.getFluid(1000)).input(dust, AmmoniumChloride, 2).fluidOutputs(Materials.NitricAcid.getFluid(2000)).fluidOutputs(Materials.Hydrogen.getFluid(1200)).output(dust, GTBMaterials.PlatinumSalt, 1).output(dust, PlatinumRaw, 2).duration(400).EUt(80).buildAndRegister();
+        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.PlatinumSolution.getFluid(1000)).input(dust, AmmoniumChloride, 2).fluidOutputs(Materials.NitricAcid.getFluid(2000)).fluidOutputs(Materials.Hydrogen.getFluid(1200)).output(dust, GTBMaterials.PlatinumSalt, 1).output(dust, PlatinumRaw, 2).duration(400).EUt(80).buildAndRegister();
+        RecipeMaps.DISTILLATION_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.PalladiumExtract.getFluid(1000)).fluidOutputs(GTBMaterials.PlatinumExtractionMixture.getFluid(1000)).fluidOutputs(GTBMaterials.PalladiumMotherLiqour.getFluid(1000)).fluidOutputs(GTBMaterials.PalladiumEnrichedAmmonia.getFluid(1000)).duration(200).EUt(12).buildAndRegister();
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.PalladiumEnrichedAmmonia.getFluid(1000)).circuitMeta(1).output(dust, GTBMaterials.PalladiumSalt, 2).duration(80).EUt(90).buildAndRegister();
+        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.PalladiumEnrichedAmmonia.getFluid(1000)).circuitMeta(1).output(dust, GTBMaterials.PalladiumSalt, 2).duration(80).EUt(90).buildAndRegister();
+        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.PalladiumEnrichedAmmonia.getFluid(6000)).input(dust, GTBMaterials.PalladiumMetallicPowder, 12).circuitMeta(9).output(dust, GTBMaterials.PalladiumSalt, 15).output(dust, GTBMaterials.ReprecipitatedPalladium, 8).duration(1500).EUt(30).buildAndRegister();
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.FormicAcid.getFluid(2000)).input(dust, GTBMaterials.ReprecipitatedPalladium, 2).output(dust, Materials.Palladium).fluidOutputs(Materials.AceticAcid.getFluid(1000)).fluidOutputs(Materials.Ammonia.getFluid(2000)).duration(800).EUt(9).buildAndRegister();
 
 
 
