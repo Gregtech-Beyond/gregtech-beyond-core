@@ -1,5 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -31,7 +32,7 @@ import gtb.api.NoEnergyLogic;
 import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntitySolidFuelGenerator extends NoEnergyMultiController {
+public class MetaTileEntitySolidFuelGenerator extends RecipeMapMultiblockController {
 
     public MetaTileEntitySolidFuelGenerator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.SOLID_FUEL_GENERATOR);
