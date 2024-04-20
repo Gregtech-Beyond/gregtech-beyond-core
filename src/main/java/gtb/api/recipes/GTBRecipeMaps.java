@@ -36,8 +36,7 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<NoEnergyRecipeBuilder> WATER_TANK = new RecipeMap<>("water_tank",
             1, 0, 0, 1, new NoEnergyRecipeBuilder(), false);
 
-    public static final RecipeMap<NoEnergyRecipeBuilder> SOLAR_THERMAL_CONCENTRATOR = new RecipeMap<>(
-            "solar_thermal_concentrator",
+    public static final RecipeMap<NoEnergyRecipeBuilder> SOLAR_THERMAL_CONCENTRATOR = new RecipeMap<>("solar_thermal_concentrator",
             1, 0, 1, 1, new NoEnergyRecipeBuilder(), false);
             
     public static final RecipeMap<SimpleRecipeBuilder> ASTRO_MINING_STATION = new RecipeMap<>("astro_mining_station",
@@ -64,4 +63,7 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> COKER = new RecipeMap<>("coker",
             1, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
-}
+    public static void init(){
+        RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(2);
+        RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);
+}}
