@@ -11,3 +11,4 @@ public final class GTBMaterialFlagAddition {
 
     public static void initLate() {}
 }
+

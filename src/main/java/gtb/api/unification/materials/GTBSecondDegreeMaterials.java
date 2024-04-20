@@ -9,13 +9,13 @@ import gregtech.api.unification.material.properties.PropertyKey;
 import gregtech.api.unification.material.properties.ToolProperty;
 import net.minecraft.util.text.TextFormatting;
 
-import static gtb.api.unification.materials.material.info.GTBMaterialFlags.*;
+import static gtb.api.unification.materials.info.GTBMaterialFlags.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.util.GTUtility.*;
-import static gtb.api.unification.materials.material.info.GTBMaterialIconType.*;
+import static gtb.api.unification.materials.info.GTBMaterialIconType.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 
@@ -40,15 +40,15 @@ public class GTBSecondDegreeMaterials {
                 .color(0x52514F)
                 .build().setFormula("(HCl)2(Ir02)2", true);
 
+        PalladiumEnrichedAmmonia = new Material.Builder(getMaterialsId(), gregtechId("palladium_enriched_ammonia"))
+                .liquid(new FluidBuilder().attributes(ACID))
+                .color(0x52514F)
+                .build().setFormula("Pd(NH3)?", true);
 
-
-
-
-
-
-
-
-
+        ReprecipitatedPalladium = new Material.Builder(getMaterialsId(), gregtechId("reprecipitated_palladium"))
+                .dust()
+                .color(0x52514F)
+                .build().setFormula("Pd?(NH3)", true);
 
 
     }
@@ -60,3 +60,5 @@ public class GTBSecondDegreeMaterials {
         throw new ArrayIndexOutOfBoundsException();
     }
 }
+
+
