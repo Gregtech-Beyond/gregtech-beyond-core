@@ -63,6 +63,13 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> COKER = new RecipeMap<>("coker",
             1, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_DISTILLATION_TOWER = new RecipeMap<>("vacuum_distillation_tower",
+            1, 3, 1, 5, new SimpleRecipeBuilder(), false);
+
+
+
+
+
     public static void init(){
         RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);

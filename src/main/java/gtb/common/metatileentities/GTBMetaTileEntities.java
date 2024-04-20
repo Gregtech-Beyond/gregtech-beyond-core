@@ -21,6 +21,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityCatalyticReformationUnit CATALYTIC_REFORMATION_UNIT;
     public static MetaTileEntitySolidFuelGenerator SOLID_FUEL_GENERATOR;
     public static MetaTileEntityCoker COKER;
+    public static MetaTileEntityVacuumDistillationTower VACUUM_DISTILLATION_TOWER;
 
     public static void init() {
         // Multiblocks
@@ -34,6 +35,7 @@ public final class GTBMetaTileEntities {
         CATALYTIC_REFORMATION_UNIT  = registerMetaTileEntity(3007, new MetaTileEntityCatalyticReformationUnit(gtb("catalytic_reformation_unit")));
         SOLID_FUEL_GENERATOR  = registerMetaTileEntity(3008, new MetaTileEntitySolidFuelGenerator(gtb("solid_fuel_generator")));
         COKER  = registerMetaTileEntity(3009, new MetaTileEntityCoker(gtb("coker")));
+        VACUUM_DISTILLATION_TOWER  = registerMetaTileEntity(3010, new MetaTileEntityVacuumDistillationTower(gtb("vacuum_distillation_tower")));
 
 
 
