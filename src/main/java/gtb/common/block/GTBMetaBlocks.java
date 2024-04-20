@@ -22,7 +22,6 @@ public final class GTBMetaBlocks {
     public static void init() {
         EXAMPLE = new MetaBlockExample();
         EXAMPLE.setRegistryName("meta_block_example");
-
         CLIMATE_PROOF_CASING = new MetaBlockExample();
         CLIMATE_PROOF_CASING.setRegistryName("meta_block_example");
 
@@ -43,6 +42,10 @@ public final class GTBMetaBlocks {
 
         HIGH_ENERGY_COIL = new MetaBlockExample();
         HIGH_ENERGY_COIL.setRegistryName("meta_block_example");
+=======
+        EXAMPLE = new MetaBlockExample();
+        EXAMPLE.setRegistryName("meta_block_example");
+>>>>>>> Stashed changes
     }
 
     @SideOnly(Side.CLIENT)
