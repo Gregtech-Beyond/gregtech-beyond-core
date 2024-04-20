@@ -11,6 +11,7 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.unification.material.info.MaterialIconSet.*;
 import static gregtech.api.util.GTUtility.gregtechId;
+import static gtb.api.unification.materials.GTBMaterials.PlatinumConcentrate;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
 public class GTBUnknownCompositionMaterials {
@@ -23,9 +24,14 @@ public class GTBUnknownCompositionMaterials {
 
         // 25201 Platinum Extraction Mixture
         PlatinumExtractionMixture = new Material.Builder(getMaterialsId(), gregtechId("platinum_extraction_mixture"))
-                .liquid(new FluidBuilder().attributes(ACID))
+                .liquid(new FluidBuilder())
                 .color(0xFFB546)
-                .build();
+                .build().setFormula("?", true);
+
+        PalladiumMotherLiqour = new Material.Builder(getMaterialsId(), gregtechId("palladium_mother_liqour"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
     }
 
     private static int getMaterialsId() {
