@@ -1,4 +1,4 @@
-package gtb.api.unification.materials.material.info;
+package gtb.api.unification.materials.info;
 
 import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.info.MaterialFlags;
@@ -19,4 +19,3 @@ public class GTBMaterialFlags {
             .requireProps(PropertyKey.GEM)
             .build();
 }
-
