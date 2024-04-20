@@ -1,7 +1,7 @@
 package gtb.api.unification.materials;
 import gregtech.api.unification.material.Material;
-import gtb.api.unification.GTBMaterialFlagAddition;
-import gtb.api.unification.materials.info.GTBElementMaterials;
+import gtb.api.unification.materials.GTBMaterialFlagAddition;
+import gtb.api.unification.materials.GTBElementMaterials;
 
 public class GTBMaterials {
 
@@ -36,6 +36,12 @@ public class GTBMaterials {
 
     //Unknown Materials
     public static Material PlatinumExtractionMixture;
+    public static Material DilutedOil;
+    public static Material DesaltedOil;
+    public static Material SulfuricKerosene;
+    public static Material SulfuricDiesel;
+    public static Material SulfuricOilResidues;
+    public static Material SulfuricGasoline;
 
     //Organic Chemistry Materials
 

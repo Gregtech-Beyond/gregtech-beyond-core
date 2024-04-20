@@ -39,7 +39,12 @@ public class CommonProxy {
         GTBLog.logger.info("Registering blocks...");
         IForgeRegistry<Block> registry = event.getRegistry();
 
-        registry.register(GTBMetaBlocks.EXAMPLE);
+        registry.register(GTBMetaBlocks.QUANTUM_CASING);
+        registry.register(GTBMetaBlocks.QUANTUM_GLASS);
+        registry.register(GTBMetaBlocks.VACUUM_FURNACE_CASING);
+        registry.register(GTBMetaBlocks.DIMENSIONAL_CASING);
+        registry.register(GTBMetaBlocks.FIELD_GENERATOR_CASING);
+        registry.register(GTBMetaBlocks.HIGH_ENERGY_COIL);
     }
 
     @SubscribeEvent
@@ -47,7 +52,14 @@ public class CommonProxy {
         GTBLog.logger.info("Registering Items...");
         IForgeRegistry<Item> registry = event.getRegistry();
 
-        registry.register(createItemBlock(GTBMetaBlocks.EXAMPLE, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.QUANTUM_GLASS, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.QUANTUM_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.VACUUM_FURNACE_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.DIMENSIONAL_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.FIELD_GENERATOR_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.HIGH_ENERGY_COIL, VariantItemBlock::new));
+
+
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {

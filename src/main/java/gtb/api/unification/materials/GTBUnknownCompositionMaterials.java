@@ -32,6 +32,36 @@ public class GTBUnknownCompositionMaterials {
                 .liquid(new FluidBuilder())
                 .color(0xFFB546)
                 .build().setFormula("?", true);
+
+        DilutedOil = new Material.Builder(getMaterialsId(), gregtechId("diluted_oil"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        DesaltedOil = new Material.Builder(getMaterialsId(), gregtechId("desalted_oil"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        SulfuricDiesel = new Material.Builder(getMaterialsId(), gregtechId("sulfuric_diesel"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        SulfuricGasoline = new Material.Builder(getMaterialsId(), gregtechId("sulfuric_gasoline"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        SulfuricKerosene = new Material.Builder(getMaterialsId(), gregtechId("sulfuric_kerosene"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        SulfuricOilResidues = new Material.Builder(getMaterialsId(), gregtechId("sulfuric_oil_residues"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
     }
 
     private static int getMaterialsId() {
