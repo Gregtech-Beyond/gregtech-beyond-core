@@ -20,6 +20,11 @@ public final class GTBMetaBlocks {
     private GTBMetaBlocks() {}
 
     public static MetaBlockExample EXAMPLE;
+    public static MetaBlockExample QUANTUM_GLASS;
+    public static MetaBlockExample DIMENSIONAL_CASING;
+    public static MetaBlockExample FIELD_GENERATOR_CASING;
+    public static MetaBlockExample HIGH_ENERGY_COIL;
+    public static QuantumCasing QUANTUM_CASING;
 
     public static void init() {
         EXAMPLE = new MetaBlockExample();

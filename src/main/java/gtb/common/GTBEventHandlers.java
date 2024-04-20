@@ -11,8 +11,6 @@ import gregtech.api.unification.material.event.MaterialEvent;
 import gregtech.api.unification.material.event.PostMaterialEvent;
 
 import gtb.GregtechBeyondCore;
-import gtb.api.unification.materials.GTBMaterialFlagAddition;
-import gtb.api.unification.materials.GTBMaterials;
 import gtb.api.unification.GTBMaterialFlagAddition;
 
 @ApiStatus.Internal
