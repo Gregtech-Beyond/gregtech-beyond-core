@@ -1,11 +1,13 @@
 package gtb.common.block;
 
+import gtb.common.block.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.network.DimensionMessageHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -13,27 +15,46 @@ import org.jetbrains.annotations.NotNull;
 
 import gregtech.common.blocks.MetaBlocks;
 
-import gtb.common.block.blocks.MetaBlockExample;
-
 public final class GTBMetaBlocks {
 
     private GTBMetaBlocks() {}
 
-    public static MetaBlockExample EXAMPLE;
-    public static MetaBlockExample QUANTUM_GLASS;
-    public static MetaBlockExample DIMENSIONAL_CASING;
-    public static MetaBlockExample FIELD_GENERATOR_CASING;
-    public static MetaBlockExample HIGH_ENERGY_COIL;
+    public static QuantumGlass QUANTUM_GLASS;
+    public static DimensionalCasing DIMENSIONAL_CASING;
+    public static FieldGeneratorCasing FIELD_GENERATOR_CASING;
+    public static HighEnergyCoil HIGH_ENERGY_COIL;
     public static QuantumCasing QUANTUM_CASING;
+    public static VacuumFurnaceCasing VACUUM_FURNACE_CASING;
 
     public static void init() {
-        EXAMPLE = new MetaBlockExample();
-        EXAMPLE.setRegistryName("meta_block_example");
+
+        QUANTUM_GLASS = new QuantumGlass();
+        QUANTUM_GLASS.setRegistryName("QuantumGlass");
+
+        DIMENSIONAL_CASING = new DimensionalCasing();
+        DIMENSIONAL_CASING.setRegistryName("DimensionalCasing");
+
+        FIELD_GENERATOR_CASING = new FieldGeneratorCasing();
+        FIELD_GENERATOR_CASING.setRegistryName("FieldGeneratorCasing");
+
+        VACUUM_FURNACE_CASING = new VacuumFurnaceCasing();
+        VACUUM_FURNACE_CASING.setRegistryName("VacuumFurnaceCasing");
+
+        QUANTUM_CASING = new QuantumCasing();
+        QUANTUM_CASING.setRegistryName("QuantumCasing");
+
+        HIGH_ENERGY_COIL = new HighEnergyCoil();
+        HIGH_ENERGY_COIL.setRegistryName("HighEnergyCoil");
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
-        registerItemModel(EXAMPLE);
+        registerItemModel(HIGH_ENERGY_COIL);
+        registerItemModel(QUANTUM_CASING);
+        registerItemModel(VACUUM_FURNACE_CASING);
+        registerItemModel(FIELD_GENERATOR_CASING);
+        registerItemModel(DIMENSIONAL_CASING);
+        registerItemModel(QUANTUM_GLASS);
     }
 
     @SideOnly(Side.CLIENT)

@@ -12,16 +12,16 @@ import org.jetbrains.annotations.NotNull;
 
 import gregtech.api.block.VariantBlock;
 
-public class MetaBlockExample extends VariantBlock<MetaBlockExample.CasingType> {
+public class VacuumFurnaceCasing extends VariantBlock<VacuumFurnaceCasing.CasingType> {
 
-    public MetaBlockExample() {
+    public VacuumFurnaceCasing() {
         super(Material.IRON);
-        setTranslationKey("meta_block_example");
+        setTranslationKey("quantum_casing");
         setHardness(5.0f);
         setResistance(10.0f);
         setSoundType(SoundType.METAL);
         setHarvestLevel("wrench", 2);
-        setDefaultState(getState(CasingType.BLOCK_EXAMPLE));
+        setDefaultState(getState(CasingType.VACUUM_FURNACE_CASING));
     }
 
     @Override
@@ -32,7 +32,7 @@ public class MetaBlockExample extends VariantBlock<MetaBlockExample.CasingType> 
 
     public enum CasingType implements IStringSerializable {
 
-        BLOCK_EXAMPLE("block_example");
+        VACUUM_FURNACE_CASING("vacuum_furnace_casing");
 
         private final String name;
 
