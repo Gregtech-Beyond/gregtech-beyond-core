@@ -17,7 +17,6 @@ public final class GTBTextures {
     /**
      * Either declare here and initialize in {@link GTBTextures#preInit()}
      */
-    public static SimpleOverlayRenderer EXAMPLE_TEXTURE;
 
     /**
      * Or declare and initialize in one step so it can be used without thinking about initialize order}
@@ -28,6 +27,5 @@ public final class GTBTextures {
     private GTBTextures() {}
 
     public static void preInit() {
-        EXAMPLE_TEXTURE = new SimpleOverlayRenderer("meta_block_example/block_example");;
     }
 }

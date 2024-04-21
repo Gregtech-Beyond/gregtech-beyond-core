@@ -75,7 +75,7 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.BRONZE_PLATED_BRICKS;
     }
 
     @Override

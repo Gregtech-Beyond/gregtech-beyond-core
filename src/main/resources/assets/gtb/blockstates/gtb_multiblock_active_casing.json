@@ -1,0 +1,42 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "active=false,variant=field_generator_casing": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_multiblocks_active_casing/field_generator_casing"
+      }
+    },
+    "active=true,variant=field_generator_casing": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_multiblocks_active_casing/dimensional_casing_on"
+      }
+    },
+    "active=false,variant=dimensional_casing": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_multiblocks_active_casing/dimensional_casing"
+      }
+    },
+    "active=true,variant=dimensional_casing": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_multiblocks_active_casing/dimensional_casing_on"
+      }
+    },
+    "active=false,variant=high_energy_coil": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/coils/high_energy_coil"
+      }
+    },
+    "active=true,variant=high_energy_coil": {
+      "model": "gregtech:cube_2_layer_all",
+      "textures": {
+        "bot_all": "gregtech:blocks/coils/high_energy_coil",
+        "top_all": "gregtech:blocks/coils/high_energy_coil_bloom"
+      }
+    }
+  }
+}

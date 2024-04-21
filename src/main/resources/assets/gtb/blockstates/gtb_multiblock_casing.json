@@ -1,0 +1,49 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "textures": {
+      "all": "gregtech:blocks/rendering_error"
+    }
+  },
+  "variants": {
+    "variant": {
+      "climate_proof_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/climate_proof_casing"
+        }
+      },
+      "high_energy_coil": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/high_energy_coil"
+        }
+      },
+      "quantum_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/quantum_casing"
+        }
+      },
+      "quantum_glass": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/quantum_glass"
+        }
+      },
+      "steel_bordered_wooden_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/steel_bordered_wooden_casing"
+        }
+      },
+      "vacuum_furnace_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/vacuum_furnace_casing"
+        }
+      }
+    }
+  }
+}

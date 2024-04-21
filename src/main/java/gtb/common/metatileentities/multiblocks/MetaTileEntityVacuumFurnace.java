@@ -1,5 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gtb.common.block.blocks.GTBMultiblockCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -28,6 +29,7 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.common.block.GTBMetaBlocks;
+import gtb.api.render.GTBTextures;
 
 public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
 
@@ -37,7 +39,7 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.VACUUM_FURNACE_CASING.getDefaultState();
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.VACUUM_FURNACE_CASING);
     }
 
     @Override
@@ -69,7 +71,7 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return GTBTextures.VACUUM_TEXTURES;
     }
 
     @Override
