@@ -26,6 +26,7 @@ public final class GTBMetaBlocks {
     public static QuantumCasing QUANTUM_CASING;
     public static VacuumFurnaceCasing VACUUM_FURNACE_CASING;
     public static SteelBorderedWoodenCasing STEEL_BORDERED_WOODEN_CASING;
+    public static ClimateProofCasing CLIMATE_PROOF_CASING;
 
     public static void init() {
 
@@ -49,11 +50,15 @@ public final class GTBMetaBlocks {
 
         STEEL_BORDERED_WOODEN_CASING = new SteelBorderedWoodenCasing();
         STEEL_BORDERED_WOODEN_CASING.setRegistryName("SteelBorderedWoodenCasing");
+
+        CLIMATE_PROOF_CASING = new ClimateProofCasing();
+        CLIMATE_PROOF_CASING.setRegistryName("ClimateProofCasing");
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
         registerItemModel(HIGH_ENERGY_COIL);
+        registerItemModel(CLIMATE_PROOF_CASING);
         registerItemModel(QUANTUM_CASING);
         registerItemModel(VACUUM_FURNACE_CASING);
         registerItemModel(FIELD_GENERATOR_CASING);

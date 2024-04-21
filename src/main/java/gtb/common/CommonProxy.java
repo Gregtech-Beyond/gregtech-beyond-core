@@ -45,6 +45,7 @@ public class CommonProxy {
         registry.register(GTBMetaBlocks.DIMENSIONAL_CASING);
         registry.register(GTBMetaBlocks.FIELD_GENERATOR_CASING);
         registry.register(GTBMetaBlocks.HIGH_ENERGY_COIL);
+        registry.register(GTBMetaBlocks.CLIMATE_PROOF_CASING);
     }
 
     @SubscribeEvent
@@ -58,6 +59,7 @@ public class CommonProxy {
         registry.register(createItemBlock(GTBMetaBlocks.DIMENSIONAL_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.FIELD_GENERATOR_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.HIGH_ENERGY_COIL, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.CLIMATE_PROOF_CASING, VariantItemBlock::new));
 
 
     }
