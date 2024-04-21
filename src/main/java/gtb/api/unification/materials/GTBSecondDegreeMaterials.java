@@ -1,12 +1,12 @@
 package gtb.api.unification.materials;
 
-public final class GTBFirstDegreeMaterials {
+public class GTBSecondDegreeMaterials {
 
-    // Range 24001-24500
-    private static int startId = 24001;
-    private static final int END_ID = startId + 500;
+    // Range: 25401 - 25500
+    private static int startId = 25401;
+    private static final int END_ID = startId + 100;
 
-    public static void register() {}
+    public static void init() {}
 
     private static int getMaterialsId() {
         if (startId < END_ID) {

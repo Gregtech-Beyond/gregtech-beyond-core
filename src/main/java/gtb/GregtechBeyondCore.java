@@ -16,7 +16,7 @@ import gtb.common.metatileentities.GTBMetaTileEntities;
 @Mod(modid = GregtechBeyondCore.MODID,
      name = GregtechBeyondCore.NAME,
      version = GregtechBeyondCore.VERSION,
-     dependencies = GTBInternalTags.DEP_VERSION_STRING)
+     dependencies = GTBInternalTags.GT_VERSION_STRING)
 public class GregtechBeyondCore {
 
     public static final String MODID = "gtb";

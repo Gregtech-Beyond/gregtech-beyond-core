@@ -1,10 +1,10 @@
 package gtb.api.unification.materials;
 
-public final class GTBFirstDegreeMaterials {
+public class GTBOrganicChemistryMaterials {
 
-    // Range 24001-24500
-    private static int startId = 24001;
-    private static final int END_ID = startId + 500;
+    // Range 25001-25200
+    private static int startId = 25001;
+    private static final int END_ID = startId + 200;
 
     public static void register() {}
 
