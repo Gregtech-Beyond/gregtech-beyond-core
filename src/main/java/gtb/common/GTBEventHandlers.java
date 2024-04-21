@@ -1,5 +1,6 @@
 package gtb.common;
 
+import gtb.api.unification.materials.GTBMaterialFlagAddition;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -10,7 +11,6 @@ import gregtech.api.unification.material.event.MaterialEvent;
 import gregtech.api.unification.material.event.PostMaterialEvent;
 
 import gtb.GregtechBeyondCore;
-import gtb.api.unification.GTBMaterialFlagAddition;
 import gtb.api.unification.GTBMaterials;
 
 @ApiStatus.Internal

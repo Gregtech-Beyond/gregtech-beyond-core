@@ -42,10 +42,10 @@ public final class GTBMetaBlocks {
 
         HIGH_ENERGY_COIL = new MetaBlockExample();
         HIGH_ENERGY_COIL.setRegistryName("meta_block_example");
-=======
+
         EXAMPLE = new MetaBlockExample();
         EXAMPLE.setRegistryName("meta_block_example");
->>>>>>> Stashed changes
+
     }
 
     @SideOnly(Side.CLIENT)
