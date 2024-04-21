@@ -39,7 +39,6 @@ public class CommonProxy {
         GTBLog.logger.info("Registering blocks...");
         IForgeRegistry<Block> registry = event.getRegistry();
 
-        registry.register(GTBMetaBlocks.EXAMPLE);
         registry.register(GTBMetaBlocks.CLIMATE_PROOF_CASING);
         registry.register(GTBMetaBlocks.VACUUM_FURNACE_CASING);
         registry.register(GTBMetaBlocks.QUANTUM_CASING);
