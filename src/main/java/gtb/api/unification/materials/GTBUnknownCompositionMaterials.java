@@ -62,6 +62,77 @@ public class GTBUnknownCompositionMaterials {
                 .liquid(new FluidBuilder())
                 .color(0xFFB546)
                 .build().setFormula("?", true);
+
+        Resin = new Material.Builder(getMaterialsId(), gregtechId("resin"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        Kerosene = new Material.Builder(getMaterialsId(), gregtechId("kerosene"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        SulfuricFuelOil = new Material.Builder(getMaterialsId(), gregtechId("sulfuric_fuel_oil"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        FuelOil = new Material.Builder(getMaterialsId(), gregtechId("fuel_oil"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        SteamCrackedKerosene = new Material.Builder(getMaterialsId(), gregtechId("steam_cracked_kerosene"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        HydroCrackedKerosene = new Material.Builder(getMaterialsId(), gregtechId("hydro_cracked_kerosene"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        Furfural = new Material.Builder(getMaterialsId(), gregtechId("furfural"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        BTEX = new Material.Builder(getMaterialsId(), gregtechId("btex"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        EthanolWaterAzeotrope = new Material.Builder(getMaterialsId(), gregtechId("ethanol_water_azeotrope"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        FuselOil = new Material.Builder(getMaterialsId(), gregtechId("fusel_oil"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        ImpureEthanol = new Material.Builder(getMaterialsId(), gregtechId("impure_ethanol"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        GrainSolution = new Material.Builder(getMaterialsId(), gregtechId("grain_solution"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+        Vinegar = new Material.Builder(getMaterialsId(), gregtechId("vinegar"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("?", true);
+
+
+
+
+
+
     }
 
     private static int getMaterialsId() {

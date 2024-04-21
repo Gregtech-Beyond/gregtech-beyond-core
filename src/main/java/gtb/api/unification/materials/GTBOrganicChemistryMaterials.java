@@ -42,6 +42,11 @@ public class GTBOrganicChemistryMaterials {
                 .liquid(new FluidBuilder())
                 .color(0x52514F)
                 .build().setFormula("HCOONa", true);
+
+        Tripropylamine = new Material.Builder(getMaterialsId(), gregtechId("tripropylamine"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("C8H10", true);
     }
 
     private static int getMaterialsId() {
