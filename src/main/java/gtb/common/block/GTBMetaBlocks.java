@@ -25,6 +25,7 @@ public final class GTBMetaBlocks {
     public static HighEnergyCoil HIGH_ENERGY_COIL;
     public static QuantumCasing QUANTUM_CASING;
     public static VacuumFurnaceCasing VACUUM_FURNACE_CASING;
+    public static SteelBorderedWoodenCasing STEEL_BORDERED_WOODEN_CASING;
 
     public static void init() {
 
@@ -45,6 +46,9 @@ public final class GTBMetaBlocks {
 
         HIGH_ENERGY_COIL = new HighEnergyCoil();
         HIGH_ENERGY_COIL.setRegistryName("HighEnergyCoil");
+
+        STEEL_BORDERED_WOODEN_CASING = new SteelBorderedWoodenCasing();
+        STEEL_BORDERED_WOODEN_CASING.setRegistryName("SteelBorderedWoodenCasing");
     }
 
     @SideOnly(Side.CLIENT)
@@ -55,6 +59,7 @@ public final class GTBMetaBlocks {
         registerItemModel(FIELD_GENERATOR_CASING);
         registerItemModel(DIMENSIONAL_CASING);
         registerItemModel(QUANTUM_GLASS);
+        registerItemModel(STEEL_BORDERED_WOODEN_CASING);
     }
 
     @SideOnly(Side.CLIENT)
