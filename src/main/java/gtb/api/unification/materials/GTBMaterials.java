@@ -1,7 +1,5 @@
 package gtb.api.unification.materials;
 import gregtech.api.unification.material.Material;
-import gtb.api.unification.materials.GTBMaterialFlagAddition;
-import gtb.api.unification.materials.GTBElementMaterials;
 
 public class GTBMaterials {
 
@@ -23,6 +21,24 @@ public class GTBMaterials {
     public static Material PalladiumMotherLiqour;
     public static Material PalladiumSalt;
     public static Material PalladiumMetallicPowder;
+    public static Material Nonene;
+    public static Material Propylene;
+    public static Material Hexane;
+    public static Material Pentane;
+    public static Material NHexadecane;
+    public static Material NHeptane;
+    public static Material NOctane;
+    public static Material ZSM5;
+    public static Material OXylene;
+    public static Material PXylene;
+    public static Material MPXylene;
+    public static Material MXylene;
+    public static Material NPropanol;
+    public static Material NButanol;
+    public static Material IsoamylAlcohol;
+    public static Material IsobutylAlcohol;
+
+
 
 
     //SD Materials
@@ -32,9 +48,11 @@ public class GTBMaterials {
     public static Material ReprecipitatedPalladium;
     public static Material RutheniumTetroxideSolution;
     public static Material RhodiumSulfateSolution;
-
+    public static Material Tetrapropylammoniumbromide;
 
     //Unknown Materials
+    public static Material HydroCrackedKerosene;
+    public static Material SteamCrackedKerosene;
     public static Material PlatinumExtractionMixture;
     public static Material DilutedOil;
     public static Material DesaltedOil;
@@ -42,12 +60,29 @@ public class GTBMaterials {
     public static Material SulfuricDiesel;
     public static Material SulfuricOilResidues;
     public static Material SulfuricGasoline;
+    public static Material Resin;
+    public static Material Kerosene;
+    public static Material SulfuricFuelOil;
+    public static Material FuelOil;
+    public static Material Furfural;
+    public static Material BTEX;
+    public static Material EthanolWaterAzeotrope;
+    public static Material FuselOil;
+    public static Material ImpureEthanol;
+    public static Material GrainSolution;
+    public static Material Vinegar;
+
+
+
+
+
+
 
     //Organic Chemistry Materials
 
     public static Material FormicAcid;
     public static Material SodiumFormate;
-
+    public static Material Tripropylamine;
 
 
     public static void init() {

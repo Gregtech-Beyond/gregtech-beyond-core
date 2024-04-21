@@ -50,6 +50,11 @@ public class GTBSecondDegreeMaterials {
                 .color(0x52514F)
                 .build().setFormula("Pd?(NH3)", true);
 
+        Tetrapropylammoniumbromide = new Material.Builder(getMaterialsId(), gregtechId("tetrapropylammoniumbromide"))
+                .dust()
+                .color(0x52514F)
+                .build().setFormula("?", true);
+
 
     }
 
