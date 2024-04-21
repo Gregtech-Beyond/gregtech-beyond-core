@@ -33,7 +33,7 @@ public final class GTBMetaBlocks {
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
         registerItemModel(GTB_MULTIBLOCK_CASING);
-        registerItemModel(GTB_MULTIBLOCK_ACTIVE_CASING);
+        GTB_MULTIBLOCK_ACTIVE_CASING.onModelRegister();
     }
 
     @SideOnly(Side.CLIENT)
