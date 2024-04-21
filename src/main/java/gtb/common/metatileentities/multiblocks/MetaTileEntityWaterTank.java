@@ -36,7 +36,7 @@ public class MetaTileEntityWaterTank extends NoEnergyMultiController {
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.EXAMPLE.getDefaultState();
+        return GTBMetaBlocks.STEEL_BORDERED_WOODEN_CASING.getDefaultState();
     }
 
     @Override
