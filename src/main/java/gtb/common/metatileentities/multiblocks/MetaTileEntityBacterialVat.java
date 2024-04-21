@@ -44,9 +44,10 @@ public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("PAP","FCF","~C~","~C~","WCW","WCW")
-                .aisle("WAW","P~P","G~G","G~G","P~P","CSC")
-                .aisle("PAP","FCF","~C~","~C~","WCW","WCW")
+                .aisle("CCCCC","CCCCC","CCCCC","CCCCC","CCSCC")
+                .aisle("GGGGG","G~~~G","G~~~G","G~~~G","GGGGG")
+                .aisle("GGGGG","G~~~G","G~~~G","G~~~G","GGGGG")
+                .aisle("CCCCC","CCCCC","CCCCC","CCCCC","CCCCC")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
@@ -55,9 +56,6 @@ public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
-                .where('F', frames(Materials.Steel))
-                .where('W', states(MetaBlocks.MACHINE_CASING.getDefaultState()))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .build();
     }
