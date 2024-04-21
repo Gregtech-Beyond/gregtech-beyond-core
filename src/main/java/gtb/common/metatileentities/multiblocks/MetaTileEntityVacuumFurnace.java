@@ -21,13 +21,16 @@ import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 
 public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
 
@@ -37,15 +40,15 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.VACUUM_FURNACE_CASING.getDefaultState();
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.VACUUM_FURNACE_CASING);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("PAP","FCF","~C~","~C~","WCW","WCW")
-                .aisle("WAW","P~P","G~G","G~G","P~P","CSC")
-                .aisle("PAP","FCF","~C~","~C~","WCW","WCW")
+                .aisle("PAP", "FCF", "~C~", "~C~", "WCW", "WCW")
+                .aisle("WAW", "P~P", "G~G", "G~G", "P~P", "CSC")
+                .aisle("PAP", "FCF", "~C~", "~C~", "WCW", "WCW")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
@@ -54,11 +57,12 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
+                .where('A', states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN)))
                 .where('F', frames(Materials.Steel))
                 .where('W', states(MetaBlocks.MACHINE_CASING.getDefaultState()))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
-        .build();
+                .build();
     }
 
     @Override
@@ -69,7 +73,7 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return GTBTextures.VACUUM_CASING;
     }
 
     @Override

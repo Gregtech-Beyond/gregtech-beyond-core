@@ -1,6 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.common.blocks.BlockMetalCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -17,18 +16,16 @@ import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
-import gtb.common.block.GTBMetaBlocks;
 
 public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
 
@@ -44,9 +41,10 @@ public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("PAP","FCF","~C~","~C~","WCW","WCW")
-                .aisle("WAW","P~P","G~G","G~G","P~P","CSC")
-                .aisle("PAP","FCF","~C~","~C~","WCW","WCW")
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCSCC")
+                .aisle("GGGGG", "G~~~G", "G~~~G", "G~~~G", "GGGGG")
+                .aisle("GGGGG", "G~~~G", "G~~~G", "G~~~G", "GGGGG")
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
@@ -55,9 +53,6 @@ public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
-                .where('F', frames(Materials.Steel))
-                .where('W', states(MetaBlocks.MACHINE_CASING.getDefaultState()))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .build();
     }

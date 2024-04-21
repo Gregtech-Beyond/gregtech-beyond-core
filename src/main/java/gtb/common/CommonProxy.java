@@ -39,14 +39,8 @@ public class CommonProxy {
         GTBLog.logger.info("Registering blocks...");
         IForgeRegistry<Block> registry = event.getRegistry();
 
-        registry.register(GTBMetaBlocks.CLIMATE_PROOF_CASING);
-        registry.register(GTBMetaBlocks.VACUUM_FURNACE_CASING);
-        registry.register(GTBMetaBlocks.QUANTUM_CASING);
-        registry.register(GTBMetaBlocks.QUANTUM_GLASS);
-        registry.register(GTBMetaBlocks.DIMENSIONAL_CASING);
-        registry.register(GTBMetaBlocks.FIELD_GENERATOR_CASING);
-        registry.register(GTBMetaBlocks.HIGH_ENERGY_COIL);
-        registry.register(GTBMetaBlocks.STEEL_BORDERED_WOODEN_CASING);
+        registry.register(GTBMetaBlocks.GTB_MULTIBLOCK_CASING);
+        registry.register(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING);
     }
 
     @SubscribeEvent
@@ -54,15 +48,8 @@ public class CommonProxy {
         GTBLog.logger.info("Registering Items...");
         IForgeRegistry<Item> registry = event.getRegistry();
 
-        registry.register(createItemBlock(GTBMetaBlocks.CLIMATE_PROOF_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(GTBMetaBlocks.VACUUM_FURNACE_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(GTBMetaBlocks.QUANTUM_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(GTBMetaBlocks.QUANTUM_GLASS, VariantItemBlock::new));
-        registry.register(createItemBlock(GTBMetaBlocks.DIMENSIONAL_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(GTBMetaBlocks.FIELD_GENERATOR_CASING, VariantItemBlock::new));
-        registry.register(createItemBlock(GTBMetaBlocks.HIGH_ENERGY_COIL, VariantItemBlock::new));
-        registry.register(createItemBlock(GTBMetaBlocks.STEEL_BORDERED_WOODEN_CASING, VariantItemBlock::new));
-
+        registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING, VariantItemBlock::new));
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {

@@ -46,9 +46,9 @@ public class MetaTileEntitySolidFuelGenerator extends NoEnergyMultiController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCCCCCCC","CCCCCCCC","CCCCCCCC")
-                .aisle("CCCCCCCC","C~~~~C~C","CGGGGCSC")
-                .aisle("CCCCCCCC","CGGGGCCC","~~~~~CCC")
+                .aisle("CCCCCCCC", "CCCCCCCC", "CCCCCCCC")
+                .aisle("CCCCCCCC", "C~~~~C~C", "CGGGGCSC")
+                .aisle("CCCCCCCC", "CGGGGCCC", "~~~~~CCC")
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
@@ -72,7 +72,7 @@ public class MetaTileEntitySolidFuelGenerator extends NoEnergyMultiController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.BRONZE_PLATED_BRICKS;
     }
 
     @Override

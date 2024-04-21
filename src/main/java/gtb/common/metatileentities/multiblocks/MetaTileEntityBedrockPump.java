@@ -1,7 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.common.blocks.BlockFireboxCasing;
-import gregtech.common.blocks.BlockMetalCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -22,14 +20,15 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockBoilerCasing;
+import gregtech.common.blocks.BlockFireboxCasing;
+import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
-import gtb.common.block.GTBMetaBlocks;
 
 public class MetaTileEntityBedrockPump extends RecipeMapMultiblockController {
 
@@ -45,14 +44,14 @@ public class MetaTileEntityBedrockPump extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~~","~F~F~","~~~~~","~F~F~","~~~~~")
-                .aisle("~~~~~","~F~F~","~~~~~","~F~F~","~~~~~")
-                .aisle("~~~~~","~F~F~","~~~~~","~F~F~","~~~~~")
-                .aisle("~~C~~","~HCH~","CCCCC","~HCH~","~~S~~")
-                .aisle("~CGC~","C~~~C","G~~~G","C~~~C","~CGC~")
-                .aisle("~CGC~","C~~~C","G~~~G","C~~~C","~CGC~")
-                .aisle("~CGC~","C~~~C","G~~~G","C~~~C","~CGC~")
-                .aisle("~~C~~","~HCH~","CCCCC","~HCH~","~~C~~")
+                .aisle("~~~~~", "~F~F~", "~~~~~", "~F~F~", "~~~~~")
+                .aisle("~~~~~", "~F~F~", "~~~~~", "~F~F~", "~~~~~")
+                .aisle("~~~~~", "~F~F~", "~~~~~", "~F~F~", "~~~~~")
+                .aisle("~~C~~", "~HCH~", "CCCCC", "~HCH~", "~~S~~")
+                .aisle("~CGC~", "C~~~C", "G~~~G", "C~~~C", "~CGC~")
+                .aisle("~CGC~", "C~~~C", "G~~~G", "C~~~C", "~CGC~")
+                .aisle("~CGC~", "C~~~C", "G~~~G", "C~~~C", "~CGC~")
+                .aisle("~~C~~", "~HCH~", "CCCCC", "~HCH~", "~~C~~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
@@ -62,8 +61,12 @@ public class MetaTileEntityBedrockPump extends RecipeMapMultiblockController {
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
                 .where('F', frames(Materials.Steel))
-                .where('P', states(MetaBlocks.BOILER_FIREBOX_CASING.getState((BlockFireboxCasing.FireboxCasingType.TUNGSTENSTEEL_FIREBOX))))
+                .where('P',
+                        states(MetaBlocks.BOILER_FIREBOX_CASING
+                                .getState((BlockFireboxCasing.FireboxCasingType.TUNGSTENSTEEL_FIREBOX))))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
+
+                .where('H', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
 
                 .build();
     }

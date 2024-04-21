@@ -1,10 +1,6 @@
-
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.common.blocks.BlockFireboxCasing;
-import gregtech.common.blocks.BlockMetalCasing;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -19,11 +15,10 @@ import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
@@ -31,6 +26,8 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockActiveCasing;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 
 public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockController {
 
@@ -40,17 +37,17 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.QUANTUM_CASING.getDefaultState();
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.QUANTUM_CASING);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~F~F~F~","~~~~~~~","~F~F~F~")
-                .aisle("~CCCCC~","~CCCCC~","~CCSCC~")
-                .aisle("~CCCCC~","PC~~~CP","~CCCCC~")
-                .aisle("~CCCCC~","PCCCCCP","~CCCCC~")
-                .aisle("~~~~~~~","PPP~PPP","~~~~~~~")
+                .aisle("~F~F~F~", "~~~~~~~", "~F~F~F~")
+                .aisle("~CCCCC~", "~CCCCC~", "~CCSCC~")
+                .aisle("~CCCCC~", "PC~~~CP", "~CCCCC~")
+                .aisle("~CCCCC~", "PCCCCCP", "~CCCCC~")
+                .aisle("~~~~~~~", "PPP~PPP", "~~~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
@@ -59,10 +56,19 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
-                .where('F', states(GTBMetaBlocks.FIELD_GENERATOR_CASING.getDefaultState()))
-                .where('D', states(GTBMetaBlocks.DIMENSIONAL_CASING.getDefaultState()))
-                .where('G', states(GTBMetaBlocks.QUANTUM_GLASS.getDefaultState()))
-                .where('O', states(GTBMetaBlocks.HIGH_ENERGY_COIL.getDefaultState()))
+                .where('F',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING
+                                .getState(GTBMultiblockActiveCasing.ActiveCasingType.FIELD_GENERATOR_CASING)))
+                .where('D',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING
+                                .getState(GTBMultiblockActiveCasing.ActiveCasingType.DIMENSIONAL_CASING)))
+                .where('G',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
+                                .getState(GTBMultiblockCasing.CasingType.QUANTUM_GLASS)))
+                .where('O',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING
+                                .getState(GTBMultiblockActiveCasing.ActiveCasingType.HIGH_ENERGY_COIL)))
+                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
                 .build();
     }
 

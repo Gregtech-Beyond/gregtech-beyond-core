@@ -28,6 +28,7 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 
 public class MetaTileEntityAstroMiningStation extends RecipeMapMultiblockController {
 
@@ -37,7 +38,7 @@ public class MetaTileEntityAstroMiningStation extends RecipeMapMultiblockControl
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.CLIMATE_PROOF_CASING.getDefaultState();
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.CLIMATE_PROOF_CASING);
     }
 
     @Override
