@@ -71,7 +71,7 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return GTBTextures.VACUUM_TEXTURES;
+        return GTBTextures.VACUUM_CASING;
     }
 
     @Override

@@ -7,25 +7,13 @@ import gregtech.client.renderer.texture.cube.SimpleOverlayRenderer;
 
 import gtb.GregtechBeyondCore;
 
-/**
- * Example taken from
- */
 @Mod.EventBusSubscriber(modid = GregtechBeyondCore.MODID, value = Side.CLIENT)
 public final class GTBTextures {
 
-    // Multiblock Controllers
-    /**
-     * Either declare here and initialize in {@link GTBTextures#preInit()}
-     */
-
-    /**
-     * Or declare and initialize in one step so it can be used without thinking about initialize order}
-     */
-    // public static SimpleOverlayRenderer EXAMPLE_TEXTURE = new SimpleOverlayRenderer(
-    // "meta_block_example/block_example");
+    public static SimpleOverlayRenderer VACUUM_CASING = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing/vacuum_furnace_casing");
 
     private GTBTextures() {}
 
-    public static void preInit() {
-    }
+    public static void preInit() {}
 }
