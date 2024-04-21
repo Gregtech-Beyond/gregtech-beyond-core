@@ -84,6 +84,6 @@ public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityVacuumFurnace(metaTileEntityId);
+        return new MetaTileEntityBacterialVat(metaTileEntityId);
     }
 }
