@@ -3,7 +3,6 @@ package gtb.api.unification.materials;
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
 
-import static gregtech.api.fluids.attribute.FluidAttributes.ACID;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
@@ -83,10 +82,86 @@ public class GTBFirstDegreeMaterials {
                 .color(0x52514F)
                 .build().setFormula("Pd?", true);
 
+        Nonene = new Material.Builder(getMaterialsId(), gregtechId("nonene"))
+                .liquid(new FluidBuilder())
+                .color(0x52514F)
+                .build().setFormula("C9H18", true);
+
+        Propylene = new Material.Builder(getMaterialsId(), gregtechId("propylene"))
+                .liquid(new FluidBuilder())
+                .color(0x52514F)
+                .build().setFormula("C3H6", true);
+
+        Hexane = new Material.Builder(getMaterialsId(), gregtechId("hexane"))
+                .liquid(new FluidBuilder())
+                .color(0x52514F)
+                .build().setFormula("C3H6", true);
+
+        Pentane = new Material.Builder(getMaterialsId(), gregtechId("pentane"))
+                .liquid(new FluidBuilder())
+                .color(0x52514F)
+                .build().setFormula("C3H6", true);
+
+        NHexadecane = new Material.Builder(getMaterialsId(), gregtechId("nhexadecane"))
+                .liquid(new FluidBuilder())
+                .color(0x52514F)
+                .build().setFormula("C16H34", true);
+
+        NOctane = new Material.Builder(getMaterialsId(), gregtechId("noctane"))
+                .liquid(new FluidBuilder())
+                .color(0x52514F)
+                .build().setFormula("C8H18", true);
+
+        NHeptane = new Material.Builder(getMaterialsId(), gregtechId("nheptane"))
+                .liquid(new FluidBuilder())
+                .color(0x52514F)
+                .build().setFormula("C7H16", true);
+
+        ZSM5 = new Material.Builder(getMaterialsId(), gregtechId("zsm5"))
+                .liquid(new FluidBuilder())
+                .color(0x52514F)
+                .build().setFormula("C7H16", true);
+
+        MXylene = new Material.Builder(getMaterialsId(), gregtechId("mxylene"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("C8H10", true);
+
+        OXylene = new Material.Builder(getMaterialsId(), gregtechId("oxylene"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("C8H10", true);
+
+        PXylene = new Material.Builder(getMaterialsId(), gregtechId("pxylene"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("C8H10", true);
+
+        MPXylene = new Material.Builder(getMaterialsId(), gregtechId("opxylene"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("C8H10", true);
+
+        NPropanol = new Material.Builder(getMaterialsId(), gregtechId("npropanol"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("CH10O", true);
+
+        NButanol = new Material.Builder(getMaterialsId(), gregtechId("nbutanol"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("CH10O", true);
+
+        IsoamylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("isoamyl_alcohol"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("C5H12O", true);
 
 
-
-
+        IsobutylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("isobutyl_alcohol"))
+                .liquid(new FluidBuilder())
+                .color(0xFFB546)
+                .build().setFormula("C5H12O", true);
 
     }
 
