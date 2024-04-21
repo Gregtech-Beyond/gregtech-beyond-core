@@ -12,16 +12,16 @@ import org.jetbrains.annotations.NotNull;
 
 import gregtech.api.block.VariantBlock;
 
-public class QuantumGlass extends VariantBlock<QuantumGlass.CasingType> {
+public class MetaBlockExample extends VariantBlock<MetaBlockExample.CasingType> {
 
-    public QuantumGlass() {
+    public MetaBlockExample() {
         super(Material.IRON);
-        setTranslationKey("quantum_glass");
+        setTranslationKey("meta_block_example");
         setHardness(5.0f);
         setResistance(10.0f);
         setSoundType(SoundType.METAL);
         setHarvestLevel("wrench", 2);
-        setDefaultState(getState(CasingType.QUANTUM_GLASS));
+        setDefaultState(getState(CasingType.BLOCK_EXAMPLE));
     }
 
     @Override
@@ -32,7 +32,7 @@ public class QuantumGlass extends VariantBlock<QuantumGlass.CasingType> {
 
     public enum CasingType implements IStringSerializable {
 
-        QUANTUM_GLASS("quantum_glass");
+        BLOCK_EXAMPLE("block_example");
 
         private final String name;
 
