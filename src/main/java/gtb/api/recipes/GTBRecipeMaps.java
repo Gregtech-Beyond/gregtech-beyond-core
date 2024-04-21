@@ -66,8 +66,11 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_DISTILLATION_TOWER = new RecipeMap<>("vacuum_distillation_tower",
             1, 3, 1, 5, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> DILUTION_TANK = new RecipeMap<>("dilution_tank",
+            1, 2, 1, 2, new SimpleRecipeBuilder(), false);
 
-
+    public static final RecipeMap<SimpleRecipeBuilder> FERMENTATION_VAT = new RecipeMap<>("fermentation_vat",
+            2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
 
     public static void init(){
