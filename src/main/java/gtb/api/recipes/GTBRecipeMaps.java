@@ -3,6 +3,7 @@ package gtb.api.recipes;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.RecipeMaps;
+import gregtech.api.recipes.builders.*;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
@@ -54,6 +55,7 @@ public final class GTBRecipeMaps {
             2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
     // TODO test this
+
     public static void init() {
         RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);

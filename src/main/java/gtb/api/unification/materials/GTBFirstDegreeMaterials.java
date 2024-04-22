@@ -9,10 +9,15 @@ import gregtech.api.unification.material.Material;
 
 public class GTBFirstDegreeMaterials {
 
+
+    public static void register() {
+        // Range 24001-24500
+    }
+
     private static int startId = 24001;
     private static final int END_ID = startId + 500;;
 
-    public static void register() {
+    public static void init() {
         PalladiumExtract = new Material.Builder(getMaterialsId(), gregtechId("palladium_extract"))
                 .liquid(new FluidBuilder())
                 .color(0x626262)

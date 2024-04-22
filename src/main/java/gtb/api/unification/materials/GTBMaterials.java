@@ -7,6 +7,7 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+
     public static Material PlatinumConcentrate;
     public static Material PlatinumExtract;
     public static Material PalladiumExtract;
@@ -69,6 +70,7 @@ public class GTBMaterials {
     public static Material Vinegar;
 
     // Organic Chemistry Materials
+    
     public static Material FormicAcid;
     public static Material SodiumFormate;
     public static Material Tripropylamine;
@@ -76,7 +78,6 @@ public class GTBMaterials {
     public static void init() {
         GTBMaterialPropertyAddition.init();
         GTBMaterialFlagAddition.init();
-
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();
         GTBSecondDegreeMaterials.register();
