@@ -1,5 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gregtech.api.unification.material.Materials;
+import gregtech.common.blocks.BlockMetalCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -37,7 +39,7 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.QUANTUM_CASING);
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.TITANIUM_STABLE);
     }
 
     @Override
@@ -56,18 +58,7 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
-                .where('F',
-                        states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING
-                                .getState(GTBMultiblockActiveCasing.ActiveCasingType.FIELD_GENERATOR_CASING)))
-                .where('D',
-                        states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING
-                                .getState(GTBMultiblockActiveCasing.ActiveCasingType.DIMENSIONAL_CASING)))
-                .where('G',
-                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
-                                .getState(GTBMultiblockCasing.CasingType.QUANTUM_GLASS)))
-                .where('O',
-                        states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING
-                                .getState(GTBMultiblockActiveCasing.ActiveCasingType.HIGH_ENERGY_COIL)))
+                .where('F', frames(Materials.Steel))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
                 .build();
     }
@@ -94,7 +85,7 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.CLEANROOM_OVERLAY;
+        return Textures.ASSEMBLER_OVERLAY;
     }
 
     @Override
