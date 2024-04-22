@@ -70,7 +70,7 @@ public class MetaTileEntityDilutionTank extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.CLEAN_STAINLESS_STEEL_CASING;
     }
 
     @Override
