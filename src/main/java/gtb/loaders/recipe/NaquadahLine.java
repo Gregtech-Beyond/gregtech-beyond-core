@@ -2,7 +2,6 @@ package gtb.loaders.recipe;
 
 import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.GTRecipeHandler;
-import net.minecraftforge.fluids.FluidStack;
 
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;

@@ -9,7 +9,6 @@ import gregtech.api.recipes.RecipeMaps;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.VacuumFurnaceCasing;
 import gtb.common.item.GTBMetaItems;
 import gtb.loaders.recipe.handlers.GTBMaterialRecipeHandler;
 
@@ -17,15 +16,11 @@ import static gregtech.api.recipes.RecipeMaps.MIXER_RECIPES;
 import static gregtech.api.recipes.ingredients.IntCircuitIngredient.getIntegratedCircuit;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import gregtech.common.items.MetaItems;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
+
 
 public class AlcoholLine {
     public static void init() {

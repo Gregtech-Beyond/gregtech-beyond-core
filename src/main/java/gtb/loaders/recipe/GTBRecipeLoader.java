@@ -10,9 +10,6 @@ import gtb.loaders.recipe.handlers.GTBMaterialRecipeHandler;
 import static gregtech.api.recipes.ingredients.IntCircuitIngredient.getIntegratedCircuit;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import gregtech.common.items.MetaItems;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 
 
 public final class GTBRecipeLoader {
