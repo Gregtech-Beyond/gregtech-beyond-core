@@ -1,4 +1,3 @@
 package gtb.common.metatileentities.multiblocks;
 
-public class MetaTileEntityNeutronAccelerator {
-}
+public class MetaTileEntityNeutronAccelerator {}

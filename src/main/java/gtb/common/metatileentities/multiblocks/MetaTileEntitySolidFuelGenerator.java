@@ -1,6 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -32,7 +31,7 @@ import gtb.api.NoEnergyLogic;
 import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntitySolidFuelGenerator extends RecipeMapMultiblockController {
+public class MetaTileEntitySolidFuelGenerator extends NoEnergyMultiController {
 
     public MetaTileEntitySolidFuelGenerator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.SOLID_FUEL_GENERATOR);
@@ -47,9 +46,9 @@ public class MetaTileEntitySolidFuelGenerator extends RecipeMapMultiblockControl
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCCCCCCC","CCCCCCCC","CCCCCCCC")
-                .aisle("CCCCCCCC","C~~~~C~C","CGGGGCSC")
-                .aisle("CCCCCCCC","CGGGGCCC","~~~~~CCC")
+                .aisle("CCCCCCCC", "CCCCCCCC", "CCCCCCCC")
+                .aisle("CCCCCCCC", "C~~~~C~C", "CGGGGCSC")
+                .aisle("CCCCCCCC", "CGGGGCCC", "~~~~~CCC")
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
@@ -73,7 +72,7 @@ public class MetaTileEntitySolidFuelGenerator extends RecipeMapMultiblockControl
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.BRONZE_PLATED_BRICKS;
     }
 
     @Override

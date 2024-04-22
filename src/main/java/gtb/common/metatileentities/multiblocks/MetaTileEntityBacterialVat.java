@@ -1,6 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.common.blocks.BlockMetalCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -17,12 +16,12 @@ import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
+
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
@@ -42,10 +41,10 @@ public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCCCC","CCCCC","CCCCC","CCCCC","CCSCC")
-                .aisle("GGGGG","G~~~G","G~~~G","G~~~G","GGGGG")
-                .aisle("GGGGG","G~~~G","G~~~G","G~~~G","GGGGG")
-                .aisle("CCCCC","CCCCC","CCCCC","CCCCC","CCCCC")
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCSCC")
+                .aisle("GGGGG", "G~~~G", "G~~~G", "G~~~G", "GGGGG")
+                .aisle("GGGGG", "G~~~G", "G~~~G", "G~~~G", "GGGGG")
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
@@ -85,6 +84,6 @@ public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityVacuumFurnace(metaTileEntityId);
+        return new MetaTileEntityBacterialVat(metaTileEntityId);
     }
 }

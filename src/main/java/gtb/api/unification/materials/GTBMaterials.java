@@ -1,12 +1,12 @@
 package gtb.api.unification.materials;
+
 import gregtech.api.unification.material.Material;
 
 public class GTBMaterials {
 
-    //Element Materials
+    // Element Materials
 
-    //FD Materials
-
+    // FD Materials
     public static Material PlatinumConcentrate;
     public static Material PlatinumExtract;
     public static Material PalladiumExtract;
@@ -38,11 +38,7 @@ public class GTBMaterials {
     public static Material IsoamylAlcohol;
     public static Material IsobutylAlcohol;
 
-
-
-
-    //SD Materials
-
+    // SD Materials
     public static Material PalladiumEnrichedAmmonia;
     public static Material AcidicIridiumDioxide;
     public static Material ReprecipitatedPalladium;
@@ -50,7 +46,7 @@ public class GTBMaterials {
     public static Material RhodiumSulfateSolution;
     public static Material Tetrapropylammoniumbromide;
 
-    //Unknown Materials
+    // Unknown Materials
     public static Material HydroCrackedKerosene;
     public static Material SteamCrackedKerosene;
     public static Material PlatinumExtractionMixture;
@@ -72,22 +68,15 @@ public class GTBMaterials {
     public static Material GrainSolution;
     public static Material Vinegar;
 
-
-
-
-
-
-
-    //Organic Chemistry Materials
-
+    // Organic Chemistry Materials
     public static Material FormicAcid;
     public static Material SodiumFormate;
     public static Material Tripropylamine;
 
-
     public static void init() {
         GTBMaterialPropertyAddition.init();
         GTBMaterialFlagAddition.init();
+
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();
         GTBSecondDegreeMaterials.register();

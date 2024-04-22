@@ -1,6 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gtb.common.block.GTBMetaBlocks;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -26,6 +25,8 @@ import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
 import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
+import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing;
 
 public class MetaTileEntityWaterTank extends NoEnergyMultiController {
@@ -37,7 +38,8 @@ public class MetaTileEntityWaterTank extends NoEnergyMultiController {
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.STEEL_BORDERED_WOODEN_CASING);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING
+                .getState(GTBMultiblockCasing.CasingType.STEEL_BORDERED_WOODEN_CASING);
     }
 
     @Override
@@ -64,7 +66,7 @@ public class MetaTileEntityWaterTank extends NoEnergyMultiController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return GTBTextures.STEEL_BORDERED_WOODEN_CASING;
     }
 
     @Override

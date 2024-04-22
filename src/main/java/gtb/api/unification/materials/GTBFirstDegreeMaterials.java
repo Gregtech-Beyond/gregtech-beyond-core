@@ -1,21 +1,18 @@
 package gtb.api.unification.materials;
 
-import gregtech.api.fluids.FluidBuilder;
-import gregtech.api.unification.material.Material;
-
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import gregtech.api.fluids.FluidBuilder;
+import gregtech.api.unification.material.Material;
+
 public class GTBFirstDegreeMaterials {
 
-    public static void register() {
-        //  Range 24001-24500
-    }
     private static int startId = 24001;
     private static final int END_ID = startId + 500;;
-    public static void init() {
 
+    public static void register() {
         PalladiumExtract = new Material.Builder(getMaterialsId(), gregtechId("palladium_extract"))
                 .liquid(new FluidBuilder())
                 .color(0x626262)
@@ -117,7 +114,7 @@ public class GTBFirstDegreeMaterials {
                 .color(0x52514F)
                 .build().setFormula("C7H16", true);
 
-        ZSM5 = new Material.Builder(getMaterialsId(), gregtechId("zsm5"))
+        ZSM5 = new Material.Builder(getMaterialsId(), gregtechId("zsm_5"))
                 .liquid(new FluidBuilder())
                 .color(0x52514F)
                 .build().setFormula("C7H16", true);
@@ -157,12 +154,10 @@ public class GTBFirstDegreeMaterials {
                 .color(0xFFB546)
                 .build().setFormula("C5H12O", true);
 
-
         IsobutylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("isobutyl_alcohol"))
                 .liquid(new FluidBuilder())
                 .color(0xFFB546)
                 .build().setFormula("C5H12O", true);
-
     }
 
     private static int getMaterialsId() {

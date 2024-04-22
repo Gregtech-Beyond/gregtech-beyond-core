@@ -1,6 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -61,9 +60,14 @@ public class MetaTileEntityBedrockPump extends RecipeMapMultiblockController {
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
-                .where('P', states(MetaBlocks.BOILER_FIREBOX_CASING.getState((BlockFireboxCasing.FireboxCasingType.TUNGSTENSTEEL_FIREBOX))))
+                .where('F', frames(Materials.Steel))
+                .where('P',
+                        states(MetaBlocks.BOILER_FIREBOX_CASING
+                                .getState((BlockFireboxCasing.FireboxCasingType.TUNGSTENSTEEL_FIREBOX))))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
+
                 .where('H', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+
                 .build();
     }
 

@@ -1,30 +1,18 @@
 package gtb.loaders.recipe;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.Recipe;
-import gregtech.api.recipes.ingredients.IntCircuitIngredient;
-import gregtech.api.items.metaitem.MetaItem;
-import gregtech.api.unification.material.Materials;
-import gregtech.api.recipes.RecipeMaps;
-import gtb.api.recipes.GTBRecipeMaps;
-import gtb.api.unification.materials.GTBMaterials;
-import gtb.common.block.GTBMetaBlocks;
-import gtb.common.item.GTBMetaItems;
-import gtb.loaders.recipe.handlers.GTBMaterialRecipeHandler;
-
-import static gregtech.api.recipes.RecipeMaps.MIXER_RECIPES;
-import static gregtech.api.recipes.ingredients.IntCircuitIngredient.getIntegratedCircuit;
-import static gregtech.api.unification.ore.OrePrefix.*;
-import gregtech.common.items.MetaItems;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
+import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.unification.materials.GTBMaterials;
+import gtb.loaders.recipe.handlers.GTBMaterialRecipeHandler;
+
 public class XylenolLine {
+
     public static void init() {
         GTBMaterialRecipeHandler.register();
-
 
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(Gasoline.getFluid(1000))
@@ -88,8 +76,5 @@ public class XylenolLine {
                 .duration(80)
                 .EUt(190)
                 .buildAndRegister();
-
-
-
-
-        }}
+    }
+}

@@ -1,4 +1,3 @@
 package gtb.loaders.recipe;
 
-public class TungstenLine {
-}
+public class TungstenLine {}

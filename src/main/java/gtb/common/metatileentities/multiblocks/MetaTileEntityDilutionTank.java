@@ -1,6 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -13,6 +12,7 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
+import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
@@ -20,8 +20,6 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
-import gregtech.common.blocks.BlockFireboxCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
@@ -29,7 +27,6 @@ import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
-import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityDilutionTank extends RecipeMapMultiblockController {
@@ -47,13 +44,13 @@ public class MetaTileEntityDilutionTank extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("F~F","~~~","F~F")
-                .aisle("CCC","CCC","CSC")
-                .aisle("GGG","G~G","GGG")
-                .aisle("GGG","G~G","GGG")
-                .aisle("GGG","G~G","GGG")
-                .aisle("CCC","CCC","CCC")
-                .aisle("~C~","CCC","~C~")
+                .aisle("F~F", "~~~", "F~F")
+                .aisle("CCC", "CCC", "CSC")
+                .aisle("GGG", "G~G", "GGG")
+                .aisle("GGG", "G~G", "GGG")
+                .aisle("GGG", "G~G", "GGG")
+                .aisle("CCC", "CCC", "CCC")
+                .aisle("~C~", "CCC", "~C~")
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())

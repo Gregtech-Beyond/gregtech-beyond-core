@@ -27,7 +27,6 @@ import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
-import gtb.common.block.GTBMetaBlocks;
 
 public class MetaTileEntityFermentationVat extends RecipeMapMultiblockController {
 
@@ -43,13 +42,13 @@ public class MetaTileEntityFermentationVat extends RecipeMapMultiblockController
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~~","~F~F~","~~~~~","~F~F~","~~~~~")
-                .aisle("~~P~~","~WWW~","PWWWP","~WWW~","~~S~~")
-                .aisle("~~P~~","~GGG~","PG~GP","~GGG~","~~P~~")
-                .aisle("~~P~~","~GGG~","PG~GP","~GGG~","~~P~~")
-                .aisle("~~P~~","~GGG~","PG~GP","~GGG~","~~P~~")
-                .aisle("~~P~~","~WWW~","PWWWP","~WWW~","~~P~~")
-                .aisle("~~~~~","~~P~~","~PPP~","~~P~~","~~~~~")
+                .aisle("~~~~~", "~F~F~", "~~~~~", "~F~F~", "~~~~~")
+                .aisle("~~P~~", "~WWW~", "PWWWP", "~WWW~", "~~S~~")
+                .aisle("~~P~~", "~GGG~", "PG~GP", "~GGG~", "~~P~~")
+                .aisle("~~P~~", "~GGG~", "PG~GP", "~GGG~", "~~P~~")
+                .aisle("~~P~~", "~GGG~", "PG~GP", "~GGG~", "~~P~~")
+                .aisle("~~P~~", "~WWW~", "PWWWP", "~WWW~", "~~P~~")
+                .aisle("~~~~~", "~~P~~", "~PPP~", "~~P~~", "~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('W', states(getCasingState())

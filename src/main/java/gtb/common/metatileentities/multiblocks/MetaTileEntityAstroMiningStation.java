@@ -27,9 +27,9 @@ import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing;
-import gregtech.common.blocks.BlockMetalCasing;
 
 public class MetaTileEntityAstroMiningStation extends RecipeMapMultiblockController {
 
@@ -38,7 +38,9 @@ public class MetaTileEntityAstroMiningStation extends RecipeMapMultiblockControl
         initializeAbilities();
     }
 
-    public IBlockState getCasingState() {return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.CLIMATE_PROOF_CASING);}
+    public IBlockState getCasingState() {
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.CLIMATE_PROOF_CASING);
+    }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
@@ -58,7 +60,8 @@ public class MetaTileEntityAstroMiningStation extends RecipeMapMultiblockControl
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
-                .where('G', states(Blocks.GLASS.getDefaultState()))
+                .where('F', frames(Materials.Steel))
+                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .build();
     }
 
@@ -70,7 +73,7 @@ public class MetaTileEntityAstroMiningStation extends RecipeMapMultiblockControl
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return GTBTextures.CLIMATE_PROOF_CASING;
     }
 
     @Override

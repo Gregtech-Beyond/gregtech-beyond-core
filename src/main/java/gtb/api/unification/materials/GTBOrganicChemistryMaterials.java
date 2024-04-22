@@ -1,38 +1,19 @@
 package gtb.api.unification.materials;
 
-import gregtech.api.fluids.FluidBuilder;
-import gregtech.api.fluids.FluidState;
 import static gregtech.api.fluids.attribute.FluidAttributes.ACID;
-import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.properties.BlastProperty;
-import gregtech.api.unification.material.properties.PropertyKey;
-import gregtech.api.unification.material.properties.ToolProperty;
-import net.minecraft.util.text.TextFormatting;
-
-import static gtb.api.unification.materials.info.GTBMaterialFlags.*;
-import static gregtech.api.GTValues.*;
-import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.material.info.MaterialFlags.*;
-import static gregtech.api.unification.material.info.MaterialIconSet.*;
-import static gregtech.api.util.GTUtility.*;
-import static gtb.api.unification.materials.info.GTBMaterialIconType.*;
-import static gtb.api.unification.materials.GTBMaterials.*;
 import static gregtech.api.util.GTUtility.gregtechId;
+import static gtb.api.unification.materials.GTBMaterials.*;
+
+import gregtech.api.fluids.FluidBuilder;
+import gregtech.api.unification.material.Material;
 
 public class GTBOrganicChemistryMaterials {
-    //  Range 25001-25200
+
+    // Range 25001-25200
     private static int startId = 25001;
     private static final int END_ID = startId + 200;
 
     public static void register() {
-
-
-
-
-
-
-
-
         FormicAcid = new Material.Builder(getMaterialsId(), gregtechId("formic_acid"))
                 .liquid(new FluidBuilder().attributes(ACID))
                 .color(0x52514F)
@@ -43,6 +24,7 @@ public class GTBOrganicChemistryMaterials {
                 .color(0x52514F)
                 .build().setFormula("HCOONa", true);
 
+        //TODO fix chemical formula
         Tripropylamine = new Material.Builder(getMaterialsId(), gregtechId("tripropylamine"))
                 .liquid(new FluidBuilder())
                 .color(0xFFB546)
