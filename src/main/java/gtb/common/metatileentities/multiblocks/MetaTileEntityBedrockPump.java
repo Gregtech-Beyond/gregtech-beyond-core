@@ -12,6 +12,7 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
+import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
@@ -19,7 +20,7 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockFireboxCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
@@ -27,43 +28,46 @@ import gregtech.common.blocks.MetaBlocks;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
-import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiController {
+public class MetaTileEntityBedrockPump extends RecipeMapMultiblockController {
 
-    public MetaTileEntitySolarThermalConcentrator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.SOLAR_THERMAL_CONCENTRATOR);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
+    public MetaTileEntityBedrockPump(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.BEDROCK_PUMP);
         initializeAbilities();
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.BRONZE_BRICKS);
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.TUNGSTENSTEEL_ROBUST);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("FFFFF", "FCCCF", "FCCCF", "FFSFF")
-                .aisle("CBPBC", "CBPBC", "CBPBC", "CBPBC")
-                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
-                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
-                .aisle("GGGGG", "GGGGG", "GGGGG", "GGGGG")
-                .aisle("~GGG~", "~GGG~", "~GGG~", "~GGG~")
+                .aisle("~~~~~", "~F~F~", "~~~~~", "~F~F~", "~~~~~")
+                .aisle("~~~~~", "~F~F~", "~~~~~", "~F~F~", "~~~~~")
+                .aisle("~~~~~", "~F~F~", "~~~~~", "~F~F~", "~~~~~")
+                .aisle("~~C~~", "~HCH~", "CCCCC", "~HCH~", "~~S~~")
+                .aisle("~CGC~", "C~~~C", "G~~~G", "C~~~C", "~CGC~")
+                .aisle("~CGC~", "C~~~C", "G~~~G", "C~~~C", "~CGC~")
+                .aisle("~CGC~", "C~~~C", "G~~~G", "C~~~C", "~CGC~")
+                .aisle("~~C~~", "~HCH~", "CCCCC", "~HCH~", "~~C~~")
                 .where('S', selfPredicate())
-                .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
-                .where('Z', frames(Materials.Bronze))
-                .where('B', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.BRONZE_PIPE))))
-                .where('F',
+                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
+                .where('F', frames(Materials.Steel))
+                .where('P',
                         states(MetaBlocks.BOILER_FIREBOX_CASING
-                                .getState(BlockFireboxCasing.FireboxCasingType.BRONZE_FIREBOX)))
+                                .getState((BlockFireboxCasing.FireboxCasingType.TUNGSTENSTEEL_FIREBOX))))
+                .where('G', states(Blocks.GLASS.getDefaultState()))
+
+                .where('H', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+
                 .build();
     }
 
@@ -75,7 +79,7 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.BRONZE_PLATED_BRICKS;
+        return Textures.ROBUST_TUNGSTENSTEEL_CASING;
     }
 
     @Override
@@ -89,11 +93,11 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.PRIMITIVE_BLAST_FURNACE_OVERLAY;
+        return Textures.CLEANROOM_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntitySolarThermalConcentrator(metaTileEntityId);
+        return new MetaTileEntityBedrockPump(metaTileEntityId);
     }
 }

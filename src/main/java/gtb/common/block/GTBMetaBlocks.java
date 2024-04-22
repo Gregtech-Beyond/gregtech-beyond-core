@@ -13,22 +13,27 @@ import org.jetbrains.annotations.NotNull;
 
 import gregtech.common.blocks.MetaBlocks;
 
-import gtb.common.block.blocks.MetaBlockExample;
+import gtb.common.block.blocks.*;
 
 public final class GTBMetaBlocks {
 
     private GTBMetaBlocks() {}
 
-    public static MetaBlockExample EXAMPLE;
+    public static GTBMultiblockCasing GTB_MULTIBLOCK_CASING;
+    public static GTBMultiblockActiveCasing GTB_MULTIBLOCK_ACTIVE_CASING;
 
     public static void init() {
-        EXAMPLE = new MetaBlockExample();
-        EXAMPLE.setRegistryName("meta_block_example");
+        GTB_MULTIBLOCK_CASING = new GTBMultiblockCasing();
+        GTB_MULTIBLOCK_CASING.setRegistryName("gtb_multiblock_casing");
+
+        GTB_MULTIBLOCK_ACTIVE_CASING = new GTBMultiblockActiveCasing();
+        GTB_MULTIBLOCK_ACTIVE_CASING.setRegistryName("gtb_multiblock_active_casing");
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
-        registerItemModel(EXAMPLE);
+        registerItemModel(GTB_MULTIBLOCK_CASING);
+        GTB_MULTIBLOCK_ACTIVE_CASING.onModelRegister();
     }
 
     @SideOnly(Side.CLIENT)

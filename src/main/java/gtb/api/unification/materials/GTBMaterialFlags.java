@@ -1,4 +1,4 @@
-package gtb.api.unification;
+package gtb.api.unification.materials;
 
 import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.properties.PropertyKey;

@@ -31,10 +31,10 @@ import gtb.api.NoEnergyLogic;
 import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiController {
+public class MetaTileEntitySolidFuelGenerator extends NoEnergyMultiController {
 
-    public MetaTileEntitySolarThermalConcentrator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.SOLAR_THERMAL_CONCENTRATOR);
+    public MetaTileEntitySolidFuelGenerator(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.SOLID_FUEL_GENERATOR);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
@@ -46,12 +46,9 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("FFFFF", "FCCCF", "FCCCF", "FFSFF")
-                .aisle("CBPBC", "CBPBC", "CBPBC", "CBPBC")
-                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
-                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
-                .aisle("GGGGG", "GGGGG", "GGGGG", "GGGGG")
-                .aisle("~GGG~", "~GGG~", "~GGG~", "~GGG~")
+                .aisle("CCCCCCCC", "CCCCCCCC", "CCCCCCCC")
+                .aisle("CCCCCCCC", "C~~~~C~C", "CGGGGCSC")
+                .aisle("CCCCCCCC", "CGGGGCCC", "~~~~~CCC")
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
@@ -94,6 +91,6 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntitySolarThermalConcentrator(metaTileEntityId);
+        return new MetaTileEntitySolidFuelGenerator(metaTileEntityId);
     }
 }

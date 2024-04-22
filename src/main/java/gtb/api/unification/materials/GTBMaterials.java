@@ -2,9 +2,6 @@ package gtb.api.unification.materials;
 
 import gregtech.api.unification.material.Material;
 
-import gtb.api.unification.GTBFirstDegreeMaterials;
-import gtb.api.unification.GTBMaterialFlagAddition;
-
 public class GTBMaterials {
 
     public GTBMaterials() {}
@@ -23,8 +20,9 @@ public class GTBMaterials {
     public static void init() {
         GTBMaterialPropertyAddition.init();
         GTBMaterialFlagAddition.init();
+
         GTBElementMaterials.register();
-        GTBFirstDegreeMaterials.init();
+        GTBFirstDegreeMaterials.register();
         GTBSecondDegreeMaterials.init();
         GTBOrganicChemistryMaterials.register();
         GTBUnknownCompositionMaterials.register();

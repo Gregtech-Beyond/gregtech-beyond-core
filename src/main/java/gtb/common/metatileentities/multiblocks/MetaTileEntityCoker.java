@@ -31,10 +31,10 @@ import gtb.api.NoEnergyLogic;
 import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiController {
+public class MetaTileEntityCoker extends NoEnergyMultiController {
 
-    public MetaTileEntitySolarThermalConcentrator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.SOLAR_THERMAL_CONCENTRATOR);
+    public MetaTileEntityCoker(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.COKER);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
@@ -46,12 +46,16 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("FFFFF", "FCCCF", "FCCCF", "FFSFF")
-                .aisle("CBPBC", "CBPBC", "CBPBC", "CBPBC")
-                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
-                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
-                .aisle("GGGGG", "GGGGG", "GGGGG", "GGGGG")
-                .aisle("~GGG~", "~GGG~", "~GGG~", "~GGG~")
+                .aisle("~~~~~CCC~~~~~", "~CP~PCCCP~PC~", "C~CFCCCCCFC~C", "~CP~PCCCP~PC~", "~~~~~CSC~~~~~")
+                .aisle("~~~~~CCC~~~~~", "~CPPP~~~PPPC~", "C~CFC~~~CFC~C", "~CPPP~~~PPPC~", "~~~~~CCC~~~~~")
+                .aisle("~~~~~CCC~~~~~", "~C~~P~~~P~~C~", "C~CFP~~~PFC~C", "~C~~P~~~P~~C~", "~~~~~CCC~~~~~")
+                .aisle("~~~~~CCC~~~~~", "~C~~P~~~P~~C~", "C~CFP~~~PFC~C", "~C~~P~~~P~~C~", "~~~~~CCC~~~~~")
+                .aisle("~~~~~CCC~~~~~", "~C~~P~~~P~~C~", "C~CFP~~~PFC~C", "~C~~P~~~P~~C~", "~~~~~CCC~~~~~")
+                .aisle("~~~~~CCC~~~~~", "~C~~P~~~P~~C~", "C~CFP~~~PFC~C", "~C~~P~~~P~~C~", "~~~~~CCC~~~~~")
+                .aisle("~~~~~CCC~~~~~", "~C~~PC~CP~~C~", "C~CFP~~~PFC~C", "~C~~PC~CP~~C~", "~~~~~CCC~~~~~")
+                .aisle("~~~~~~F~~~~~~", "~C~~~FCF~~~C~", "C~CFFCCCFFC~C", "~C~~~FCF~~~C~", "~~~~~~F~~~~~~")
+                .aisle("~~~~~~~~~~~~~", "~C~~~~~~~~~C~", "C~C~~~~~~~C~C", "~C~~~~~~~~~C~", "~~~~~~~~~~~~~")
+                .aisle("~~~~~~~~~~~~~", "~~~~~~~~~~~~~", "~C~~~~~~~~~C~", "~~~~~~~~~~~~~", "~~~~~~~~~~~~~")
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
@@ -94,6 +98,6 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntitySolarThermalConcentrator(metaTileEntityId);
+        return new MetaTileEntityCoker(metaTileEntityId);
     }
 }

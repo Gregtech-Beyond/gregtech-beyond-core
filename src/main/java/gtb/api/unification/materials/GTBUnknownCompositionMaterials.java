@@ -1,11 +1,11 @@
 package gtb.api.unification.materials;
 
-import gregtech.api.fluids.FluidBuilder;
-import gregtech.api.unification.material.Material;
-
 import static gregtech.api.fluids.attribute.FluidAttributes.ACID;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.PlatinumExtractionMixture;
+
+import gregtech.api.fluids.FluidBuilder;
+import gregtech.api.unification.material.Material;
 
 public class GTBUnknownCompositionMaterials {
 

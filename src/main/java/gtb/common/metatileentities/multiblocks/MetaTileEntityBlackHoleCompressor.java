@@ -1,7 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -12,58 +11,61 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
+import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
-import gregtech.common.blocks.BlockFireboxCasing;
-import gregtech.common.blocks.BlockMetalCasing;
-import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
-import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockActiveCasing;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 
-public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiController {
+public class MetaTileEntityBlackHoleCompressor extends RecipeMapMultiblockController {
 
-    public MetaTileEntitySolarThermalConcentrator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.SOLAR_THERMAL_CONCENTRATOR);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
+    public MetaTileEntityBlackHoleCompressor(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.BLACK_HOLE_COMPRESSOR);
         initializeAbilities();
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.BRONZE_BRICKS);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.QUANTUM_CASING);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("FFFFF", "FCCCF", "FCCCF", "FFSFF")
-                .aisle("CBPBC", "CBPBC", "CBPBC", "CBPBC")
-                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
-                .aisle("Z~~~Z", "~~~~~", "~~~~~", "Z~~~Z")
-                .aisle("GGGGG", "GGGGG", "GGGGG", "GGGGG")
-                .aisle("~GGG~", "~GGG~", "~GGG~", "~GGG~")
+                .aisle("~DFD~", "DCCCD", "FCCCF", "DCCCD", "~DSD~")
+                .aisle("~GGG~", "G~~~G", "G~O~G", "G~~~G", "~GGG~")
+                .aisle("~GGG~", "G~~~G", "G~O~G", "G~~~G", "~GGG~")
+                .aisle("~GGG~", "G~~~G", "G~O~G", "G~~~G", "~GGG~")
+                .aisle("~DFD~", "DCCCD", "FCCCF", "DCCCD", "~DFD~")
                 .where('S', selfPredicate())
-                .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
-                .where('Z', frames(Materials.Bronze))
-                .where('B', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.BRONZE_PIPE))))
+                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
                 .where('F',
-                        states(MetaBlocks.BOILER_FIREBOX_CASING
-                                .getState(BlockFireboxCasing.FireboxCasingType.BRONZE_FIREBOX)))
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING
+                                .getState(GTBMultiblockActiveCasing.ActiveCasingType.FIELD_GENERATOR_CASING)))
+                .where('D',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING
+                                .getState(GTBMultiblockActiveCasing.ActiveCasingType.DIMENSIONAL_CASING)))
+                .where('G',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
+                                .getState(GTBMultiblockCasing.CasingType.QUANTUM_GLASS)))
+                .where('O',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING
+                                .getState(GTBMultiblockActiveCasing.ActiveCasingType.HIGH_ENERGY_COIL)))
                 .build();
     }
 
@@ -75,7 +77,7 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.BRONZE_PLATED_BRICKS;
+        return Textures.ROBUST_TUNGSTENSTEEL_CASING;
     }
 
     @Override
@@ -89,11 +91,11 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.PRIMITIVE_BLAST_FURNACE_OVERLAY;
+        return Textures.CLEANROOM_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntitySolarThermalConcentrator(metaTileEntityId);
+        return new MetaTileEntityBlackHoleCompressor(metaTileEntityId);
     }
 }
