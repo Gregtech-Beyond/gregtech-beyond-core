@@ -40,7 +40,7 @@ public class MetaTileEntityCoker extends NoEnergyMultiController {
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.BRONZE_BRICKS);
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
     }
 
     @Override
@@ -62,12 +62,11 @@ public class MetaTileEntityCoker extends NoEnergyMultiController {
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
-                .where('Z', frames(Materials.Bronze))
-                .where('B', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.BRONZE_PIPE))))
+                .where('Z', frames(Materials.Steel))
+                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .where('F',
                         states(MetaBlocks.BOILER_FIREBOX_CASING
-                                .getState(BlockFireboxCasing.FireboxCasingType.BRONZE_FIREBOX)))
+                                .getState(BlockFireboxCasing.FireboxCasingType.STEEL_FIREBOX)))
                 .build();
     }
 
