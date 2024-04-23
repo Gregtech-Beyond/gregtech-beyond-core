@@ -1,16 +1,27 @@
 package gtb.loaders.recipe;
 
-import static gregtech.api.unification.ore.OrePrefix.*;
-
+import gregtech.api.gui.GuiTextures;
+import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.material.Materials;
 
 import gtb.api.recipes.GTBRecipeMaps;
-import gtb.loaders.recipe.handlers.GTBMaterialRecipeHandler;
 
 public final class GTBRecipeLoader {
 
+    public static void editGTCEuRecipeMaps() {
+        RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2);
+        RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(2);
+        RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);
+    }
+
     public static void init() {
-        GTBMaterialRecipeHandler.register();
+        AlcoholLine.init();
+        Catalysts.init();
+        NaquadahLine.init();
+        OilLine.init();
+        OrganicChemistry.init();
+        PlatinumLine.init();
+        XylenolLine.init();
 
         GTBRecipeMaps.WATER_TANK.recipeBuilder().circuitMeta(1).duration(20).fluidOutputs(Materials.Water.getFluid(200))
                 .buildAndRegister();

@@ -9,14 +9,10 @@ import gregtech.api.unification.material.Material;
 
 public class GTBFirstDegreeMaterials {
 
-    public static void register() {
-        // Range 24001-24500
-    }
-
     private static int startId = 24001;
     private static final int END_ID = startId + 500;;
 
-    public static void init() {
+    public static void register() {
         PalladiumExtract = new Material.Builder(getMaterialsId(), gregtechId("palladium_extract"))
                 .liquid(new FluidBuilder())
                 .color(0xEF5350)
@@ -41,8 +37,8 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0xD84315)
                 .components(Potassium, 2, Sulfur, 2, Oxygen, 7)
-
                 .build();
+
         LeachResidue = new Material.Builder(getMaterialsId(), gregtechId("potassium_disulfate"))
                 .dust()
                 .color(0x8D8333)
@@ -119,6 +115,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("C7H16", true);
 
         ZSM5 = new Material.Builder(getMaterialsId(), gregtechId("zsm_5"))
+                .dust()
                 .liquid(new FluidBuilder())
                 .color(0x7D967F)
                 .build().setFormula("C7H16", true);
@@ -144,7 +141,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("C8H10", true);
 
         NPropanol = new Material.Builder(getMaterialsId(), gregtechId("npropanol"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0xF8EC7F)
                 .build().setFormula("CH10O", true);
 

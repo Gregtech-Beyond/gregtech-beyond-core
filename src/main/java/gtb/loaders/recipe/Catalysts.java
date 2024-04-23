@@ -1,18 +1,15 @@
 package gtb.loaders.recipe;
 
-import static gregtech.api.GTValues.*;
-import static gregtech.api.recipes.RecipeMaps.*;
+import static gregtech.api.recipes.RecipeMaps.CHEMICAL_RECIPES;
+import static gregtech.api.recipes.RecipeMaps.LARGE_CHEMICAL_RECIPES;
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.api.unification.ore.OrePrefix.dust;
 
 import gtb.api.unification.materials.GTBMaterials;
-import gtb.loaders.recipe.handlers.GTBMaterialRecipeHandler;
 
 public class Catalysts {
 
     public static void init() {
-        GTBMaterialRecipeHandler.register();
-
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(SulfuricAcid.getFluid(1000))
                 .fluidInputs(GTBMaterials.Tetrapropylammoniumbromide.getFluid(1000))

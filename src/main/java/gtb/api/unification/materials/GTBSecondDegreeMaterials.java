@@ -1,15 +1,8 @@
 package gtb.api.unification.materials;
 
-import static gregtech.api.GTValues.*;
 import static gregtech.api.fluids.attribute.FluidAttributes.ACID;
-import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.material.info.MaterialFlags.*;
-import static gregtech.api.unification.material.info.MaterialIconSet.*;
-import static gregtech.api.util.GTUtility.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
-import static gtb.api.unification.materials.info.GTBMaterialFlags.*;
-import static gtb.api.unification.materials.info.GTBMaterialIconType.*;
 
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
@@ -27,6 +20,7 @@ public class GTBSecondDegreeMaterials {
                 .build().setFormula("(RhSO4?)(H2O)", true);
 
         RutheniumTetroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("ruthenium_tetroxide_solution"))
+                .fluid()
                 .dust()
                 .color(0xAAC0BC)
                 .build().setFormula("(NaCl)2Ru04", true);
@@ -47,6 +41,7 @@ public class GTBSecondDegreeMaterials {
                 .build().setFormula("Pd?(NH3)", true);
 
         Tetrapropylammoniumbromide = new Material.Builder(getMaterialsId(), gregtechId("tetrapropylammoniumbromide"))
+                .fluid()
                 .dust()
                 .color(0xEF5350)
                 .build().setFormula("?", true);
