@@ -1,7 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.api.unification.material.Materials;
-import gregtech.common.blocks.BlockMetalCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -17,19 +15,18 @@ import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
+import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockBoilerCasing;
+import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
-import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.GTBMultiblockActiveCasing;
-import gtb.common.block.blocks.GTBMultiblockCasing;
 
 public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockController {
 
@@ -71,7 +68,7 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.ROBUST_TUNGSTENSTEEL_CASING;
+        return Textures.STABLE_TITANIUM_CASING;
     }
 
     @Override

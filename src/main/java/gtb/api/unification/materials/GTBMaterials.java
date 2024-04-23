@@ -70,7 +70,7 @@ public class GTBMaterials {
     public static Material Vinegar;
 
     // Organic Chemistry Materials
-    
+
     public static Material FormicAcid;
     public static Material SodiumFormate;
     public static Material Tripropylamine;

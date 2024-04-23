@@ -20,7 +20,6 @@ import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
-import gregtech.common.blocks.BlockFireboxCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
@@ -62,11 +61,8 @@ public class MetaTileEntityCoker extends NoEnergyMultiController {
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
-                .where('Z', frames(Materials.Steel))
+                .where('F', frames(Materials.Steel))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
-                .where('F',
-                        states(MetaBlocks.BOILER_FIREBOX_CASING
-                                .getState(BlockFireboxCasing.FireboxCasingType.STEEL_FIREBOX)))
                 .build();
     }
 
@@ -78,7 +74,7 @@ public class MetaTileEntityCoker extends NoEnergyMultiController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.BRONZE_PLATED_BRICKS;
+        return Textures.SOLID_STEEL_CASING;
     }
 
     @Override

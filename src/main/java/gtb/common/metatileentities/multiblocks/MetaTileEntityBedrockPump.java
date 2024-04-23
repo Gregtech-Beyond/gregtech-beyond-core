@@ -95,6 +95,7 @@ public class MetaTileEntityBedrockPump extends RecipeMapMultiblockController {
     protected ICubeRenderer getFrontOverlay() {
         return Textures.ASSEMBLER_OVERLAY;
     }
+
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
         return new MetaTileEntityBedrockPump(metaTileEntityId);

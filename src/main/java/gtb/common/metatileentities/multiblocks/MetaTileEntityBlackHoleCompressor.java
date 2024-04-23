@@ -91,7 +91,7 @@ public class MetaTileEntityBlackHoleCompressor extends RecipeMapMultiblockContro
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.CLEANROOM_OVERLAY;
+        return Textures.COMPRESSOR_OVERLAY;
     }
 
     @Override
