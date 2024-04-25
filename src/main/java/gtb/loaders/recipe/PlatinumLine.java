@@ -20,13 +20,6 @@ public final class PlatinumLine {
                 .circuitMeta(1).duration(20).EUt(120)
                 .buildAndRegister();
 
-        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(Materials.AquaRegia.getFluid(9000))
-                .input(dust, Materials.PlatinumGroupSludge, 18).output(dust, GTBMaterials.PlatinumResidues, 5)
-                .fluidOutputs(GTBMaterials.PlatinumConcentrate.getFluid(9000))
-                .circuitMeta(1).duration(20).EUt(120)
-                .buildAndRegister();
-
         RecipeMaps.BLAST_RECIPES.recipeBuilder()
                 .input(dust, GTBMaterials.PotassiumDisulfate, 11)
                 .input(dust, GTBMaterials.PlatinumResidues, 5)
@@ -45,15 +38,6 @@ public final class PlatinumLine {
                 .EUt(30).duration(800)
                 .buildAndRegister();
 
-        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(Materials.Water.getFluid(9000))
-                .fluidInputs(Materials.RhodiumSulfate.getFluid(27000))
-                .output(dust, GTBMaterials.LeachResidue, 4)
-                .circuitMeta(1)
-                .fluidOutputs(GTBMaterials.RhodiumSulfateSolution.getFluid(27000))
-                .EUt(30).duration(800)
-                .buildAndRegister();
-
         RecipeMaps.BLAST_RECIPES.recipeBuilder()
                 .fluidInputs(Materials.Oxygen.getFluid(3000))
                 .input(dust, Materials.SodaAsh, 18)
@@ -65,12 +49,6 @@ public final class PlatinumLine {
                 .buildAndRegister();
 
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder().fluidInputs(Materials.Chlorine.getFluid(4000))
-                .input(dust, GTBMaterials.SodiumRuthenate, 14)
-                .fluidOutputs(GTBMaterials.RutheniumTetroxideSolution.getFluid(2000))
-                .EUt(30).duration(200)
-                .buildAndRegister();
-
-        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder().fluidInputs(Materials.Chlorine.getFluid(4000))
                 .input(dust, GTBMaterials.SodiumRuthenate, 14)
                 .fluidOutputs(GTBMaterials.RutheniumTetroxideSolution.getFluid(2000))
                 .EUt(30).duration(200)
@@ -103,13 +81,6 @@ public final class PlatinumLine {
                 .duration(200).EUt(100)
                 .buildAndRegister();
 
-        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .input(dust, GTBMaterials.IridiumDioxide, 6)
-                .fluidInputs(Materials.HydrochloricAcid.getFluid(1000))
-                .fluidOutputs(GTBMaterials.AcidicIridiumDioxide.getFluid(1000))
-                .duration(200).EUt(100)
-                .buildAndRegister();
-
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, Materials.AmmoniumChloride, 4)
                 .fluidInputs(GTBMaterials.AcidicIridiumDioxide.getFluid(1000))
@@ -117,21 +88,7 @@ public final class PlatinumLine {
                 .fluidOutputs(Materials.Ammonia.getFluid(4000))
                 .duration(800).EUt(900).buildAndRegister();
 
-        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .input(dust, Materials.AmmoniumChloride, 4)
-                .fluidInputs(GTBMaterials.AcidicIridiumDioxide.getFluid(1000))
-                .fluidOutputs(Materials.Water.getFluid(1000))
-                .fluidOutputs(Materials.Ammonia.getFluid(4000))
-                .output(dust, Materials.IridiumChloride, 8).duration(800).EUt(900).buildAndRegister();
-
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(GTBMaterials.PlatinumExtractionMixture.getFluid(4000))
-                .fluidInputs(GTBMaterials.PlatinumConcentrate.getFluid(4000))
-                .fluidOutputs(GTBMaterials.PalladiumExtract.getFluid(1000))
-                .fluidOutputs(GTBMaterials.PlatinumExtract.getFluid(3000))
-                .duration(200).EUt(120).buildAndRegister();
-
-        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(GTBMaterials.PlatinumExtractionMixture.getFluid(4000))
                 .fluidInputs(GTBMaterials.PlatinumConcentrate.getFluid(4000))
                 .fluidOutputs(GTBMaterials.PalladiumExtract.getFluid(1000))
@@ -153,14 +110,6 @@ public final class PlatinumLine {
                 .output(dust, PlatinumRaw, 2)
                 .duration(400).EUt(80).buildAndRegister();
 
-        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(GTBMaterials.PlatinumSolution.getFluid(1000))
-                .input(dust, AmmoniumChloride, 2)
-                .fluidOutputs(Materials.NitricAcid.getFluid(2000))
-                .fluidOutputs(Materials.Hydrogen.getFluid(1200))
-                .output(dust, GTBMaterials.PlatinumSalt, 1)
-                .output(dust, PlatinumRaw, 2).duration(400).EUt(80).buildAndRegister();
-
         RecipeMaps.DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(GTBMaterials.PalladiumExtract.getFluid(1000))
                 .fluidOutputs(GTBMaterials.PlatinumExtractionMixture.getFluid(1000))
@@ -174,20 +123,6 @@ public final class PlatinumLine {
                 .circuitMeta(1)
                 .output(dust, GTBMaterials.PalladiumSalt, 2)
                 .duration(80).EUt(90).buildAndRegister();
-
-        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(GTBMaterials.PalladiumEnrichedAmmonia.getFluid(1000))
-                .circuitMeta(1)
-                .output(dust, GTBMaterials.PalladiumSalt, 2)
-                .duration(80).EUt(90).buildAndRegister();
-
-        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(GTBMaterials.PalladiumEnrichedAmmonia.getFluid(6000))
-                .input(dust, GTBMaterials.PalladiumMetallicPowder, 12)
-                .circuitMeta(9)
-                .output(dust, GTBMaterials.PalladiumSalt, 15)
-                .output(dust, GTBMaterials.ReprecipitatedPalladium, 8)
-                .duration(1500).EUt(30).buildAndRegister();
 
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(GTBMaterials.FormicAcid.getFluid(2000))
