@@ -2,6 +2,7 @@ package gtb.api.recipes;
 
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
+
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
