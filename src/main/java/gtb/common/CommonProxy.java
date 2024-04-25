@@ -80,7 +80,6 @@ public class CommonProxy {
         // Main recipe registration
         // This is called AFTER GregTech registers recipes, so
         // anything here is safe to call removals in
-        GTBRecipeLoader.editGTCEuRecipeMaps();
         GTBRecipeLoader.init();
     }
 }
