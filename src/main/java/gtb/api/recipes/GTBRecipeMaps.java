@@ -50,4 +50,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> FERMENTATION_VAT = new RecipeMap<>("fermentation_vat",
             2, 1, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> NEUTRON_ACCELERATOR = new RecipeMap<>("neutron_accelerator",
+            2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 }
