@@ -39,7 +39,7 @@ public class GTBFirstDegreeMaterials {
                 .components(Potassium, 2, Sulfur, 2, Oxygen, 7)
                 .build();
 
-        LeachResidue = new Material.Builder(getMaterialsId(), gregtechId("potassium_disulfate"))
+        LeachResidue = new Material.Builder(getMaterialsId(), gregtechId("leach_residues"))
                 .dust()
                 .color(0x8D8333)
                 .build().setFormula("Ir2??", true);

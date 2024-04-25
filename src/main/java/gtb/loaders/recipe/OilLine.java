@@ -24,25 +24,13 @@ public class OilLine {
         CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.SulfuricKerosene.getFluid(1000))
                 .fluidInputs(Hydrogen.getFluid(1000)).fluidOutputs(GTBMaterials.Kerosene.getFluid(1000))
                 .fluidOutputs(HydrogenSulfide.getFluid(1000)).EUt(12).duration(20).buildAndRegister();
-        LARGE_CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.SulfuricKerosene.getFluid(1000))
-                .fluidInputs(Hydrogen.getFluid(1000)).fluidOutputs(GTBMaterials.Kerosene.getFluid(1000))
-                .fluidOutputs(HydrogenSulfide.getFluid(1000)).EUt(12).duration(20).buildAndRegister();
         CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.SulfuricGasoline.getFluid(1000))
-                .fluidInputs(Hydrogen.getFluid(1000)).fluidOutputs(Gasoline.getFluid(1000))
-                .fluidOutputs(HydrogenSulfide.getFluid(1000)).EUt(12).duration(20).buildAndRegister();
-        LARGE_CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.SulfuricGasoline.getFluid(1000))
                 .fluidInputs(Hydrogen.getFluid(1000)).fluidOutputs(Gasoline.getFluid(1000))
                 .fluidOutputs(HydrogenSulfide.getFluid(1000)).EUt(12).duration(20).buildAndRegister();
         CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.SulfuricFuelOil.getFluid(1000))
                 .fluidInputs(Hydrogen.getFluid(1000)).fluidOutputs(GTBMaterials.FuelOil.getFluid(1000))
                 .fluidOutputs(HydrogenSulfide.getFluid(1000)).EUt(12).duration(20).buildAndRegister();
-        LARGE_CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.SulfuricFuelOil.getFluid(1000))
-                .fluidInputs(Hydrogen.getFluid(1000)).fluidOutputs(GTBMaterials.FuelOil.getFluid(1000))
-                .fluidOutputs(HydrogenSulfide.getFluid(1000)).EUt(12).duration(20).buildAndRegister();
         CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.SulfuricDiesel.getFluid(1000))
-                .fluidInputs(Hydrogen.getFluid(1000)).fluidOutputs(Diesel.getFluid(1000))
-                .fluidOutputs(HydrogenSulfide.getFluid(1000)).EUt(12).duration(20).buildAndRegister();
-        LARGE_CHEMICAL_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.SulfuricDiesel.getFluid(1000))
                 .fluidInputs(Hydrogen.getFluid(1000)).fluidOutputs(Diesel.getFluid(1000))
                 .fluidOutputs(HydrogenSulfide.getFluid(1000)).EUt(12).duration(20).buildAndRegister();
         DISTILLATION_RECIPES.recipeBuilder().fluidInputs(Gasoline.getFluid(1000)).fluidOutputs(Propane.getFluid(200))
