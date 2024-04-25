@@ -23,12 +23,12 @@ public class GTBSecondDegreeMaterials {
                 .fluid()
                 .dust()
                 .color(0xAAC0BC)
-                .build().setFormula("(NaCl)2Ru04", true);
+                .build().setFormula("(NaCl)2RuO4", true);
 
         AcidicIridiumDioxide = new Material.Builder(getMaterialsId(), gregtechId("acidic_iridium_dioxide"))
                 .liquid(new FluidBuilder().attributes(ACID))
                 .color(0xD4CAB0)
-                .build().setFormula("(HCl)2(Ir02)2", true);
+                .build().setFormula("(HCl)2(IrO2)2", true);
 
         PalladiumEnrichedAmmonia = new Material.Builder(getMaterialsId(), gregtechId("palladium_enriched_ammonia"))
                 .liquid(new FluidBuilder().attributes(ACID))
