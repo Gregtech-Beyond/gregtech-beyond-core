@@ -3,18 +3,15 @@ package gtb.loaders.recipe;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.material.Materials;
-
 import gtb.api.recipes.GTBRecipeMaps;
 
 public final class GTBRecipeLoader {
 
-    public static void editGTCEuRecipeMaps() {
-        RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2);
+    public static void init() {
+        RecipeMaps.BLAST_RECIPES.setMaxInputs(4);
         RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);
-    }
 
-    public static void init() {
         AlcoholLine.init();
         Catalysts.init();
         NaquadahLine.init();
