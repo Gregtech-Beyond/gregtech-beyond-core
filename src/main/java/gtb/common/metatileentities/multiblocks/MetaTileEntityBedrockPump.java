@@ -93,7 +93,7 @@ public class MetaTileEntityBedrockPump extends RecipeMapMultiblockController {
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.CLEANROOM_OVERLAY;
+        return Textures.ASSEMBLER_OVERLAY;
     }
 
     @Override

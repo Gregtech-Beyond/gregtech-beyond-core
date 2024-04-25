@@ -1,3 +1,5 @@
 package gtb.api.unification.materials.material.info;
 
-public class GTBElementMaterials {}
+public class GTBElementMaterials {
+
+}

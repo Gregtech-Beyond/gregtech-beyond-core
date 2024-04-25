@@ -12,5 +12,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
     public void registerSubItems() {
         GTBMetaItems.ASTRO_MINER = addItem(1, "astro_miner");
         GTBMetaItems.MOON = addItem(2, "moon");
+        GTBMetaItems.PARAFFIN_WAX = addItem(3, "paraffin_wax");
     }
 }

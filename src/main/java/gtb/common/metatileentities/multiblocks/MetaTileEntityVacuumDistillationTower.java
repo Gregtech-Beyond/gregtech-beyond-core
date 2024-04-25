@@ -12,6 +12,7 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
+import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
@@ -27,41 +28,47 @@ import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
-import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityCoker extends NoEnergyMultiController {
+public class MetaTileEntityVacuumDistillationTower extends RecipeMapMultiblockController {
 
-    public MetaTileEntityCoker(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.COKER);
+    public MetaTileEntityVacuumDistillationTower(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.VACUUM_DISTILLATION_TOWER);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~~CCC~~~~~", "~CP~PCCCP~PC~", "C~CFCCCCCFC~C", "~CP~PCCCP~PC~", "~~~~~CSC~~~~~")
-                .aisle("~~~~~CCC~~~~~", "~CPPP~~~PPPC~", "C~CFC~~~CFC~C", "~CPPP~~~PPPC~", "~~~~~CCC~~~~~")
-                .aisle("~~~~~CCC~~~~~", "~C~~P~~~P~~C~", "C~CFP~~~PFC~C", "~C~~P~~~P~~C~", "~~~~~CCC~~~~~")
-                .aisle("~~~~~CCC~~~~~", "~C~~P~~~P~~C~", "C~CFP~~~PFC~C", "~C~~P~~~P~~C~", "~~~~~CCC~~~~~")
-                .aisle("~~~~~CCC~~~~~", "~C~~P~~~P~~C~", "C~CFP~~~PFC~C", "~C~~P~~~P~~C~", "~~~~~CCC~~~~~")
-                .aisle("~~~~~CCC~~~~~", "~C~~P~~~P~~C~", "C~CFP~~~PFC~C", "~C~~P~~~P~~C~", "~~~~~CCC~~~~~")
-                .aisle("~~~~~CCC~~~~~", "~C~~PC~CP~~C~", "C~CFP~~~PFC~C", "~C~~PC~CP~~C~", "~~~~~CCC~~~~~")
-                .aisle("~~~~~~F~~~~~~", "~C~~~FCF~~~C~", "C~CFFCCCFFC~C", "~C~~~FCF~~~C~", "~~~~~~F~~~~~~")
-                .aisle("~~~~~~~~~~~~~", "~C~~~~~~~~~C~", "C~C~~~~~~~C~C", "~C~~~~~~~~~C~", "~~~~~~~~~~~~~")
-                .aisle("~~~~~~~~~~~~~", "~~~~~~~~~~~~~", "~C~~~~~~~~~C~", "~~~~~~~~~~~~~", "~~~~~~~~~~~~~")
+                .aisle("~CCCCC~", "CCCPCCC", "CCCPCCC", "CPPPPPC", "CCCPCCC", "CCCPCCC", "~CCSCC~")
+                .aisle("~C~~~C~", "CCF~FCC", "~F~~~F~", "~~~P~~~", "~F~~~F~", "CCF~FCC", "~C~~~C~")
+                .aisle("~~~~~~~", "~FF~FF~", "~F~~~F~", "~~~P~~~", "~F~~~F~", "~FF~FF~", "~~~~~~~")
+                .aisle("~~~~~~~", "~F~~~F~", "~~HHH~~", "~~HHH~~", "~~HHH~~", "~F~~~F~", "~~~~~~~")
+                .aisle("~~~~~~~", "~FHHHF~", "~H~~~H~", "~H~~~H~", "~H~~~H~", "~FHHHF~", "~~~~~~~")
+                .aisle("~~~~~~~", "~FHHHF~", "~H~~~H~", "~H~~~H~", "~H~~~H~", "~FHHHF~", "~~~~~~~")
+                .aisle("~~~~~~~", "~FHHHF~", "~H~~~H~", "~H~~~H~", "~H~~~H~", "~FHHHF~", "~~~~~~~")
+                .aisle("~~CCC~~", "~C~~~C~", "C~~~~~C", "C~~~~~C", "C~~~~~C", "~C~~~C~", "~~CCC~~")
+                .aisle("~~CCC~~", "~C~~~C~", "C~~~~~C", "C~~~~~C", "C~~~~~C", "~C~~~C~", "~~CCC~~")
+                .aisle("~~CCC~~", "~C~~~C~", "C~~~~~C", "C~~~~~C", "C~~~~~C", "~C~~~C~", "~~CCC~~")
+                .aisle("~~CCC~~", "~C~~~C~", "C~~~~~C", "C~~~~~C", "C~~~~~C", "~C~~~C~", "~~CCC~~")
+                .aisle("~~CCC~~", "~C~~~C~", "C~~~~~C", "C~~~~~C", "C~~~~~C", "~C~~~C~", "~~CCC~~")
+                .aisle("~~~~~~~", "~~HHH~~", "~H~~~H~", "~H~~~H~", "~H~~~H~", "~~HHH~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~HHH~~", "~H~~~H~", "~H~~~H~", "~H~~~H~", "~~HHH~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~HHH~~", "~H~~~H~", "~H~~~H~", "~H~~~H~", "~~HHH~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~~~~~~", "~~HHH~~", "~~HHH~~", "~~HHH~~", "~~~~~~~", "~~~~~~~")
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
-                .where('F', frames(Materials.Steel))
+                .where('F', frames(Materials.BlueSteel))
+                .where('H', states(MetaBlocks.METAL_CASING.getState((BlockMetalCasing.MetalCasingType.STEEL_SOLID))))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .build();
     }
@@ -93,6 +100,6 @@ public class MetaTileEntityCoker extends NoEnergyMultiController {
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityCoker(metaTileEntityId);
+        return new MetaTileEntityVacuumDistillationTower(metaTileEntityId);
     }
 }

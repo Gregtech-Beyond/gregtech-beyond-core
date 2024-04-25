@@ -1,6 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -19,8 +20,7 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing;
-import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
@@ -28,35 +28,38 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockController {
+public class MetaTileEntityFermentationVat extends RecipeMapMultiblockController {
 
-    public MetaTileEntityCatalyticReformationUnit(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CATALYTIC_REFORMATION_UNIT);
+    public MetaTileEntityFermentationVat(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.FERMENTATION_VAT);
         initializeAbilities();
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.TITANIUM_STABLE);
+        return MetaBlocks.MACHINE_CASING.getDefaultState();
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~F~F~F~", "~~~~~~~", "~F~F~F~")
-                .aisle("~CCCCC~", "~CCCCC~", "~CCSCC~")
-                .aisle("~CCCCC~", "PC~~~CP", "~CCCCC~")
-                .aisle("~CCCCC~", "PCCCCCP", "~CCCCC~")
-                .aisle("~~~~~~~", "PPP~PPP", "~~~~~~~")
+                .aisle("~~~~~", "~F~F~", "~~~~~", "~F~F~", "~~~~~")
+                .aisle("~~P~~", "~WWW~", "PWWWP", "~WWW~", "~~S~~")
+                .aisle("~~P~~", "~GGG~", "PG~GP", "~GGG~", "~~P~~")
+                .aisle("~~P~~", "~GGG~", "PG~GP", "~GGG~", "~~P~~")
+                .aisle("~~P~~", "~GGG~", "PG~GP", "~GGG~", "~~P~~")
+                .aisle("~~P~~", "~WWW~", "PWWWP", "~WWW~", "~~P~~")
+                .aisle("~~~~~", "~~P~~", "~PPP~", "~~P~~", "~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState())
+                .where('W', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
                 .where('F', frames(Materials.Steel))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
+                .where('G', states(Blocks.GLASS.getDefaultState()))
                 .build();
     }
 
@@ -68,7 +71,7 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.STABLE_TITANIUM_CASING;
+        return Textures.SOLID_STEEL_CASING;
     }
 
     @Override
@@ -82,11 +85,11 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.ASSEMBLER_OVERLAY;
+        return Textures.PRIMITIVE_BLAST_FURNACE_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityCatalyticReformationUnit(metaTileEntityId);
+        return new MetaTileEntityFermentationVat(metaTileEntityId);
     }
 }

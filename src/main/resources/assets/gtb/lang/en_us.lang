@@ -1,12 +1,107 @@
 
 # Blocks
-tile.meta_block_example.block_example.name=Block Example
+tile.gtb_multiblock_active_casing.high_energy_coil.name=High Energy Coil
+tile.gtb_multiblock_active_casing.field_generator_casing.name=Field Generator Casing
+tile.gtb_multiblock_active_casing.dimensional_casing.name=Dimensional Casing
+tile.gtb_multiblock_casing.vacuum_furnace_casing.name=Vacuum Furnace Casing
+tile.gtb_multiblock_casing.climate_proof_casing.name=Climate Proof
+tile.gtb_multiblock_casing.steel_bordered_wooden_casing.name=Steel Bordered Wooden Casing
+tile.gtb_multiblock_casing.quantum_casing.name=Quantum Casing
+tile.gtb_multiblock_casing.quantum_glass.name=Quantum Glass
 
 # Recipemaps
-recipemap.water_tank.name=Water Tank
+recipemap.water_tank.name=Water Collection
+recipemap.vacuum_furnace.name=Vacuum Smelting
+recipemap.vacuum_distillation_tower.name=Vacuum Distillation
+recipemap.solid_fuel_generator.name=Solid Fuel Generation
+recipemap.solar_thermal_concentrator.name=Solar Thermal Concentration
+recipemap.fermentation_vat.name=Fermentation
+recipemap.dilution_tank.name=Dilution
+recipemap.coker.name=Coking
+recipemap.catalytic_reformation_unit.name=Catalytic Reforming
+recipemap.black_hole_compressor.name=Black Hole Compressing
+recipemap.bedrock_pump.name=Bedrock Pumping
+recipemap.bacterial_vat.name=Bacterial Vat
+recipemap.astro_mining_station.name=Astro Mining
 
 # Multiblock machine controllers
 gtb.machine.water_tank.name=Water Tank
+gtb.machine.vacuum_furnace.name=Vacuum Furnace
+gtb.machine.vacuum_distillation_tower.name=Vacuum Distillation Tower
+gtb.machine.solid_fuel_generator.name=Solid Fuel Generator
+gtb.machine.solar_thermal_concentrator.name=Solar Thermal Concentrator
+gtb.machine.fermentation_vat.name=Fermentation Vat
+gtb.machine.dilution_tank.name=Dilution Tank
+gtb.machine.coker.name=Coker
+gtb.machine.catalytic_reformation_unit.name=Catalytic Reformation Unit
+gtb.machine.black_hole_compressor.name=Black Hole Compressor
+gtb.machine.bedrock_pump.name=Bedrock Pump
+gtb.machine.bacterial_vat.name=Bacterial Vat
+gtb.machine.astro_mining_station.name=Astro Mining Station
+
 
 # MetaItems
 metaitem.astro_miner.name=Astro Miner
+metaitem.moon.name=Moon
+metaitem.paraffin_wax.name=Paraffin Wax
+
+#Materials
+gregtech.material.palladium_extract=Palladium Extract
+gregtech.material.platinum_extract=Platinum Extract
+gregtech.material.platinum_concentrate=Platinum Concentrate
+gregtech.material.ruthenium_tetroxide_solution=Ruthenium Tetroxide Solution
+gregtech.material.ruthenium_tetroxide_liquid=Ruthenium Tetroxide
+gregtech.material.platinum_solution=Platinum Solution
+gregtech.material.nonene=Nonene
+gregtech.material.propylene=Propylene
+gregtech.material.platinum_residues=Platinum Residues
+gregtech.material.potassium_disulfate=Potassium Disulfate
+gregtech.material.leach_residues=Leach Residues
+gregtech.material.sodium_ruthenate=Sodium Ruthenate
+gregtech.material.platinum_salt=Platinum Salt
+gregtech.material.iridium_dioxide=Iridium Dixode
+gregtech.material.palladium_mother_liqour=Palladium Mother Liqour
+gregtech.material.palladium_salt=Palladium Salt
+gregtech.material.palladium_metallic_powder=Palladium Metallic Powder
+gregtech.material.pentane=Pentane
+gregtech.material.hexane=Hexane
+gregtech.material.nhexadecane=N-Hexadecane
+gregtech.material.nheptane=N-Heptane
+gregtech.material.noctane=N-Octane
+gregtech.material.zsm_5=ZSM-5
+gregtech.material.o_xylene=O-Xylene
+gregtech.material.p_xylene=P-Xylene
+gregtech.material.mp_xylene=M/P-Xylene
+gregtech.material.m_xylene=M-Xylene
+gregtech.material.npropanol=N-Propanol
+gregtech.material.nbutanol=N-Butanol
+gregtech.material.isoamyl_alcohol=Isoamyl Alcohol
+gregtech.material.isobutyl_alcohol=Isobutyl Alcohol
+gregtech.material.palladium_enriched_ammonia=Palladium Enriched Ammonia
+gregtech.material.acidic_iridium_dioxide=Acidic Iridium Dioxide
+gregtech.material.reprecipitated_palladium=Reprecipitated Palladium
+gregtech.material.rhodium_sulfate_solution=Rhodium Sulfate Solution
+gregtech.material.tetrapropylammoniumbromide=Tetrapropylammoniumbromide
+gregtech.material.hydro_cracked_kerosene=Hydro Cracked Kerosene
+gregtech.material.steam_cracked_kerosene=Steam Cracked Kerosene
+gregtech.material.platinum_extraction_mixture=Platinum Extraction Mixture
+gregtech.material.diluted_oil=Diluted Oil
+gregtech.material.desalted_oil=Desalted Oil
+gregtech.material.sulfuric_kerosene=Sulfuric Kerosene
+gregtech.material.sulfuric_diesel=Sulfuric Diesel
+gregtech.material.sulfuric_oil_residues=Sulfuric Oil Residues
+gregtech.material.sulfuric_gasoline=Sulfuric Gasoline
+gregtech.material.resin=Resin
+gregtech.material.kerosene=Kerosene
+gregtech.material.sulfuric_fuel_oil=Sulfuric Fuel Oil
+gregtech.material.fuel_oil=Fuel Oil
+gregtech.material.furfural=Furfural
+gregtech.material.btex=B.T.E.X
+gregtech.material.ethanol_water_azeotrope=Ethanol-Water-Azeotrope
+gregtech.material.fusel_oil=Fusel Oil
+gregtech.material.impure_ethanol=Impure Ethanol
+gregtech.material.grain_solution=Grain Solution
+gregtech.material.vinegar=Vinegar
+gregtech.material.tripropylamine=Tripropylamine
+gregtech.material.sodium_formate=Sodium Formate
+gregtech.material.formic_acid=Formic Acid
