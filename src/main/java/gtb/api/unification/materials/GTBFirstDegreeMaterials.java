@@ -7,6 +7,8 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
 
+import java.text.Normalizer;
+
 public class GTBFirstDegreeMaterials {
 
     private static int startId = 24001;
@@ -159,6 +161,11 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0xAB47BC)
                 .build().setFormula("C5H12O", true);
+
+        Formaldehyde = new Material.Builder(getMaterialsId(), gregtechId("formaldehyde"))
+                .liquid(new FluidBuilder())
+                .color(0xAB47BC)
+                .build().setFormula("CH20", true);
     }
 
     private static int getMaterialsId() {
