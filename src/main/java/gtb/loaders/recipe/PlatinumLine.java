@@ -85,6 +85,7 @@ public final class PlatinumLine {
                 .input(dust, Materials.AmmoniumChloride, 4)
                 .fluidInputs(GTBMaterials.AcidicIridiumDioxide.getFluid(1000))
                 .fluidOutputs(Materials.Water.getFluid(1000))
+                .output(dust, IridiumChloride, 8)
                 .fluidOutputs(Materials.Ammonia.getFluid(4000))
                 .duration(800).EUt(900).buildAndRegister();
 
