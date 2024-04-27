@@ -23,6 +23,7 @@ recipemap.black_hole_compressor.name=Black Hole Compressing
 recipemap.bedrock_pump.name=Bedrock Pumping
 recipemap.bacterial_vat.name=Bacterial Vat
 recipemap.astro_mining_station.name=Astro Mining
+recipemap.fischer_tropsch_reactor.name=Fischer Tropsch Reaction
 
 # Multiblock machine controllers
 gtb.machine.water_tank.name=Water Tank
@@ -38,7 +39,7 @@ gtb.machine.black_hole_compressor.name=Black Hole Compressor
 gtb.machine.bedrock_pump.name=Bedrock Pump
 gtb.machine.bacterial_vat.name=Bacterial Vat
 gtb.machine.astro_mining_station.name=Astro Mining Station
-
+gtb.machine.fischer_tropsch_reactor.name=Fischer Tropsch Reactor
 
 # MetaItems
 metaitem.astro_miner.name=Astro Miner
@@ -105,3 +106,4 @@ gregtech.material.vinegar=Vinegar
 gregtech.material.tripropylamine=Tripropylamine
 gregtech.material.sodium_formate=Sodium Formate
 gregtech.material.formic_acid=Formic Acid
+gregtech.material.formaldehyde=Formaldehyde
