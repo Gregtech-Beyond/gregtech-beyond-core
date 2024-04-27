@@ -38,7 +38,7 @@ public class GTBMaterials {
     public static Material NButanol;
     public static Material IsoamylAlcohol;
     public static Material IsobutylAlcohol;
-
+    public static Material Formaldehyde;
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;
     public static Material AcidicIridiumDioxide;
