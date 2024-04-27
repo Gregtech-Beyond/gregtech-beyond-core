@@ -2,6 +2,7 @@ package gtb.loaders.recipe;
 
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.ore.OrePrefix.*;
 
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
@@ -97,5 +98,12 @@ public class OilLine {
                 .fluidOutputs(GTBMaterials.DilutedOil.getFluid(2000)).EUt(80).duration(100).buildAndRegister();
         MIXER_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1000)).fluidInputs(Oil.getFluid(1000))
                 .fluidOutputs(GTBMaterials.DilutedOil.getFluid(2000)).EUt(80).duration(100).buildAndRegister();
+
+
+        GTBRecipeMaps.FISCHER_TROPSCH_REACTOR.recipeBuilder().fluidInputs(DistilledWater.getFluid(2000)).fluidInputs(RefineryGas.getFluid(8000)).notConsumable(dust, CobaltOxide, 1).output(GTBMetaItems.PARAFFIN_WAX, 1).fluidOutputs(Diesel.getFluid(1000)).fluidOutputs(Gasoline.getFluid(500)).fluidOutputs(Water.getFluid(2000)).fluidOutputs(SulfuricAcid.getFluid(1000)).fluidOutputs(Ethylene.getFluid(1500)).fluidOutputs(Ethanol.getFluid(1500)).fluidOutputs(Methane.getFluid(2000)).fluidOutputs(GTBMaterials.Formaldehyde.getFluid(500)).duration(200).EUt(5000).buildAndRegister();
+
+
+
+
     }
 }
