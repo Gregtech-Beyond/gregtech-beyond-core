@@ -8,6 +8,7 @@ import gregtech.api.unification.material.Materials;
 import gregtech.common.items.MetaItems;
 
 import gtb.api.unification.materials.GTBMaterials;
+import org.codehaus.groovy.runtime.metaclass.MethodMetaProperty;
 
 public final class PlatinumLine {
 
@@ -132,5 +133,27 @@ public final class PlatinumLine {
                 .fluidOutputs(Materials.AceticAcid.getFluid(1000))
                 .fluidOutputs(Materials.Ammonia.getFluid(2000))
                 .duration(800).EUt(9).buildAndRegister();
+
+        RecipeMaps.BLAST_RECIPES.recipeBuilder()
+                .fluidInputs(Oxygen.getFluid(3000))
+                .input(dust, SodaAsh, 18)
+                .input(dust, GTBMaterials.LeachResidue, 40)
+                .output(dust, RarestMetalMixture, 6)
+                .output(dust, GTBMaterials.SodiumRuthenate, 2)
+                .fluidOutputs(CarbonMonoxide.getFluid(3000))
+                .duration(200).EUt(12).buildAndRegister();
+
+        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, GTBMaterials.PalladiumMetallicPowder, 12)
+                .fluidInputs(GTBMaterials.PalladiumEnrichedAmmonia.getFluid(6000))
+                .circuitMeta(1)
+                .output(dust, GTBMaterials.PalladiumSalt, 15)
+                .output(dust, PalladiumRaw, 8)
+                .duration(80).EUt(90).buildAndRegister();
+
+        RecipeMaps.SIFTER_RECIPES.recipeBuilder()
+                .input(dust, GTBMaterials.PalladiumSalt, 1)
+                .output(dust, GTBMaterials.PalladiumMetallicPowder, 1)
+                .duration(200).EUt(12).buildAndRegister();
     }
 }
