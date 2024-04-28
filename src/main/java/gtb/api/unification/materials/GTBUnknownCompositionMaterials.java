@@ -118,6 +118,11 @@ public class GTBUnknownCompositionMaterials {
                 .liquid(new FluidBuilder())
                 .color(0xc3c4b3)
                 .build().setFormula("?", true);
+
+        C5Fraction = new Material.Builder(getMaterialsId(), gregtechId("c5_fraction"))
+                .liquid(new FluidBuilder())
+                .color(0xc3c4b3)
+                .build();
     }
 
     private static int getMaterialsId() {

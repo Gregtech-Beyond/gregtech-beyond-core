@@ -39,6 +39,9 @@ public class GTBMaterials {
     public static Material IsoamylAlcohol;
     public static Material IsobutylAlcohol;
     public static Material Formaldehyde;
+    public static Material Dicyclopentadiene;
+    public static Material Cyclopentadiene;
+
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;
     public static Material AcidicIridiumDioxide;
@@ -68,6 +71,7 @@ public class GTBMaterials {
     public static Material ImpureEthanol;
     public static Material GrainSolution;
     public static Material Vinegar;
+    public static Material C5Fraction;
 
     // Organic Chemistry Materials
 

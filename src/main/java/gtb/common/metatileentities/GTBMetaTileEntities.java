@@ -28,19 +28,25 @@ public final class GTBMetaTileEntities {
     public static void init() {
         // Multiblocks
         WATER_TANK = registerMetaTileEntity(3000, new MetaTileEntityWaterTank(gtb("water_tank")));
-        SOLAR_THERMAL_CONCENTRATOR = registerMetaTileEntity(3001, new MetaTileEntitySolarThermalConcentrator(gtb("solar_thermal_concentrator")));
+        SOLAR_THERMAL_CONCENTRATOR = registerMetaTileEntity(3001,
+                new MetaTileEntitySolarThermalConcentrator(gtb("solar_thermal_concentrator")));
         BACTERIAL_VAT = registerMetaTileEntity(3002, new MetaTileEntityBacterialVat(gtb("bacterial_vat")));
         VACUUM_FURNACE = registerMetaTileEntity(3003, new MetaTileEntityVacuumFurnace(gtb("vacuum_furnace")));
-        ASTRO_MINING_STATION = registerMetaTileEntity(3004, new MetaTileEntityAstroMiningStation(gtb("astro_mining_station")));
+        ASTRO_MINING_STATION = registerMetaTileEntity(3004,
+                new MetaTileEntityAstroMiningStation(gtb("astro_mining_station")));
         BEDROCK_PUMP = registerMetaTileEntity(3005, new MetaTileEntityBedrockPump(gtb("bedrock_pump")));
-        BLACK_HOLE_COMPRESSOR = registerMetaTileEntity(3006, new MetaTileEntityBlackHoleCompressor(gtb("black_hole_compressor")));
-        CATALYTIC_REFORMATION_UNIT = registerMetaTileEntity(3007, new MetaTileEntityCatalyticReformationUnit(gtb("catalytic_reformation_unit")));
-        SOLID_FUEL_GENERATOR = registerMetaTileEntity(3008, new MetaTileEntitySolidFuelGenerator(gtb("solid_fuel_generator")));
+        BLACK_HOLE_COMPRESSOR = registerMetaTileEntity(3006,
+                new MetaTileEntityBlackHoleCompressor(gtb("black_hole_compressor")));
+        CATALYTIC_REFORMATION_UNIT = registerMetaTileEntity(3007,
+                new MetaTileEntityCatalyticReformationUnit(gtb("catalytic_reformation_unit")));
+        SOLID_FUEL_GENERATOR = registerMetaTileEntity(3008,
+                new MetaTileEntitySolidFuelGenerator(gtb("solid_fuel_generator")));
         COKER = registerMetaTileEntity(3009, new MetaTileEntityCoker(gtb("coker")));
-        VACUUM_DISTILLATION_TOWER = registerMetaTileEntity(3010, new MetaTileEntityVacuumDistillationTower(gtb("vacuum_distillation_tower")));
+        VACUUM_DISTILLATION_TOWER = registerMetaTileEntity(3010,
+                new MetaTileEntityVacuumDistillationTower(gtb("vacuum_distillation_tower")));
         DILUTION_TANK = registerMetaTileEntity(3011, new MetaTileEntityDilutionTank(gtb("dilution_tank")));
         FERMENTATION_VAT = registerMetaTileEntity(3012, new MetaTileEntityFermentationVat(gtb("fermentation_vat")));
-        FISCHER_TROPSCH_REACTOR = registerMetaTileEntity(3013, new MetaTileEntityFischerTropschReactor(gtb("fischer_tropsch_reactor")));
-
+        FISCHER_TROPSCH_REACTOR = registerMetaTileEntity(3013,
+                new MetaTileEntityFischerTropschReactor(gtb("fischer_tropsch_reactor")));
     }
 }
