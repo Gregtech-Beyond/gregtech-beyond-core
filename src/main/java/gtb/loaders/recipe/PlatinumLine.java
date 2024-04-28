@@ -8,7 +8,6 @@ import gregtech.api.unification.material.Materials;
 import gregtech.common.items.MetaItems;
 
 import gtb.api.unification.materials.GTBMaterials;
-import org.codehaus.groovy.runtime.metaclass.MethodMetaProperty;
 
 public final class PlatinumLine {
 

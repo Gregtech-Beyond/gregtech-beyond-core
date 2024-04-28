@@ -1,6 +1,6 @@
 package gtb.loaders.recipe;
 
-public class TungstenLine {
+public class NaturalGasLine {
 
     public static void init() {}
 }
