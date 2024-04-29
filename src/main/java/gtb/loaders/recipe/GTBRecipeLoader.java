@@ -10,6 +10,7 @@ public final class GTBRecipeLoader {
 
     public static void init() {
         RecipeMaps.BLAST_RECIPES.setMaxInputs(4);
+        RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);
 
