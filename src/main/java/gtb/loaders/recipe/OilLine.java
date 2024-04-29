@@ -134,7 +134,6 @@ public class OilLine {
                 .fluidOutputs(GTBMaterials.Cyclopentadiene.getFluid(2000))
                 .duration(80).EUt(90).buildAndRegister();
 
-
         // Desulfurization with CoMoAl Catalyst
 
         // Dilution of Oil
