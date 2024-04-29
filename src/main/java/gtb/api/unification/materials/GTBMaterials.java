@@ -71,7 +71,7 @@ public class GTBMaterials {
     public static Material ImpureEthanol;
     public static Material GrainSolution;
     public static Material Vinegar;
-    public static Material C5Fraction;
+    public static Material FractionC_5;
 
     // Organic Chemistry Materials
 

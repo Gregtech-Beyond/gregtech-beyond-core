@@ -98,7 +98,7 @@ public class OilLine {
                 .fluidOutputs(Propane.getFluid(15))
                 .fluidOutputs(Propene.getFluid(200))
                 .fluidOutputs(Benzene.getFluid(150))
-                .fluidOutputs(GTBMaterials.C5Fraction.getFluid(150))
+                .fluidOutputs(GTBMaterials.FractionC_5.getFluid(150))
                 .fluidOutputs(Butene.getFluid(80))
                 .fluidOutputs(GTBMaterials.Kerosene.getFluid(75))
                 .fluidOutputs(Gasoline.getFluid(150))
@@ -115,7 +115,7 @@ public class OilLine {
                 .fluidOutputs(Propane.getFluid(15))
                 .fluidOutputs(Propene.getFluid(300))
                 .fluidOutputs(Benzene.getFluid(100))
-                .fluidOutputs(GTBMaterials.C5Fraction.getFluid(350))
+                .fluidOutputs(GTBMaterials.FractionC_5.getFluid(350))
                 .fluidOutputs(Butene.getFluid(50))
                 .fluidOutputs(GTBMaterials.Kerosene.getFluid(25))
                 .fluidOutputs(Gasoline.getFluid(50))
@@ -124,7 +124,7 @@ public class OilLine {
                 .EUt(120)
                 .buildAndRegister();
 
-        DISTILLATION_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.C5Fraction.getFluid(1000))
+        DISTILLATION_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.FractionC_5.getFluid(1000))
                 .fluidOutputs(GTBMaterials.Dicyclopentadiene.getFluid(200))
                 .fluidOutputs(GTBMaterials.Pentane.getFluid(400))
                 .fluidOutputs(Isoprene.getFluid(400)).duration(200).EUt(12).buildAndRegister();
