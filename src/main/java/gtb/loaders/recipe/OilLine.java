@@ -185,5 +185,21 @@ public class OilLine {
                 .duration(20)
                 .EUt(12)
                 .buildAndRegister();
+
+        EXTRACTOR_RECIPES.recipeBuilder()
+                .circuitMeta(1)
+                .input(GTBMetaItems.PARAFFIN_WAX)
+                .fluidOutputs(GTBMaterials.Resin.getFluid(1000))
+                .duration(20)
+                .EUt(8)
+                .buildAndRegister();
+
+        EXTRACTOR_RECIPES.recipeBuilder()
+                .circuitMeta(2)
+                .input(GTBMetaItems.PARAFFIN_WAX)
+                .fluidOutputs(Lubricant.getFluid(1000))
+                .duration(20)
+                .EUt(8)
+                .buildAndRegister();
     }
 }
