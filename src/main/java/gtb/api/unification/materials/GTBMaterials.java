@@ -72,6 +72,8 @@ public class GTBMaterials {
     public static Material GrainSolution;
     public static Material Vinegar;
     public static Material FractionC_5;
+    public static Material LubricantMixture;
+    public static Material SlackWax;
 
     // Organic Chemistry Materials
 
