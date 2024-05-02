@@ -4,6 +4,8 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
+import gregtech.api.items.metaitem.MetaItem;
+import gregtech.common.items.MetaItems;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.common.item.GTBMetaItems;
@@ -14,9 +16,6 @@ public class OilLine {
         CENTRIFUGE_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.DilutedOil.getFluid(1000))
                 .fluidOutputs(SaltWater.getFluid(600)).fluidOutputs(GTBMaterials.DesaltedOil.getFluid(400)).EUt(299)
                 .duration(120).buildAndRegister();
-
-        CENTRIFUGE_RECIPES.recipeBuilder().input(GTBMetaItems.PARAFFIN_WAX, 1)
-                .fluidOutputs(GTBMaterials.Resin.getFluid(1000)).duration(200).EUt(120).buildAndRegister();
 
         DISTILLATION_RECIPES.recipeBuilder().fluidInputs(GTBMaterials.DesaltedOil.getFluid(1000))
                 .fluidOutputs(SulfuricGas.getFluid(500)).fluidOutputs(GTBMaterials.SulfuricGasoline.getFluid(100))
@@ -209,5 +208,36 @@ public class OilLine {
                 .duration(200)
                 .EUt(12)
                 .buildAndRegister();
+
+        DISTILLERY_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.Resin.getFluid(100))
+                .fluidOutputs(Glue.getFluid(100))
+                .duration(200)
+                .EUt(9)
+                .buildAndRegister();
+
+        FLUID_SOLIDFICATION_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.Resin.getFluid(100))
+                .output(MetaItems.STICKY_RESIN, 1)
+                .duration(200)
+                .EUt(12)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .input(MetaItems.STICKY_RESIN, 1)
+                .fluidOutputs(GTBMaterials.Resin.getFluid(100))
+                .duration(120)
+                .EUt(80)
+                .buildAndRegister();
+
+        GTBRecipeMaps.COKER.recipeBuilder()
+                .input(GTBMetaItems.BITOMINOUS_RESIDUES, 1)
+                .fluidInputs(Steam.getFluid(1000))
+                .fluidOutputs(GTBMaterials.SulfuricOilResidues.getFluid(150))
+                .output(dust, Coke, 4)
+                .duration(200)
+                .EUt(99)
+                .buildAndRegister();
     }
+
 }
