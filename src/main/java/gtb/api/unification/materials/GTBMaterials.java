@@ -81,7 +81,8 @@ public class GTBMaterials {
     public static Material FractionC_5;
     public static Material LubricantMixture;
     public static Material SlackWax;
-
+    public static Material AlkylatedNaturalGas;
+    public static Material Syngas;
     // Organic Chemistry Materials
 
     public static Material FormicAcid;
