@@ -42,7 +42,13 @@ public class GTBMaterials {
     public static Material Formaldehyde;
     public static Material Dicyclopentadiene;
     public static Material Cyclopentadiene;
-
+    public static Material HydrogenPeroxide;
+    public static Material CalciumHydroxide;
+    public static Material LithiumHydroxide;
+    public static Material SodiumTungstate;
+    public static Material CalciumTungstate;
+    public static Material LithiumHydroxideSolution;
+    public static Material LithiumFluoride;
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;
     public static Material AcidicIridiumDioxide;
