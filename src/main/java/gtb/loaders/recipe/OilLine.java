@@ -4,6 +4,7 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
+import gregtech.api.unification.material.Materials;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.common.item.GTBMetaItems;
@@ -165,5 +166,26 @@ public class OilLine {
                 .fluidOutputs(SulfuricAcid.getFluid(1000)).fluidOutputs(Ethylene.getFluid(1500))
                 .fluidOutputs(Ethanol.getFluid(1500)).fluidOutputs(Methane.getFluid(2000))
                 .fluidOutputs(GTBMaterials.Formaldehyde.getFluid(500)).duration(200).EUt(5000).buildAndRegister();
+
+        GTBRecipeMaps.VACUUM_DISTILLATION_TOWER.recipeBuilder()
+                .fluidInputs(GTBMaterials.SulfuricOilResidues.getFluid(1000))
+                .fluidOutputs(GTBMaterials.LubricantMixture.getFluid(850))
+                .fluidOutputs(GTBMaterials.SulfuricFuelOil.getFluid(200))
+                .output(GTBMetaItems.BITOMINOUS_RESIDUES, 1)
+                .fluidOutputs(GTBMaterials.SulfuricDiesel.getFluid(200))
+                .fluidOutputs(GTBMaterials.SulfuricKerosene.getFluid(150))
+                .fluidOutputs(SulfuricNaphtha.getFluid(100))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.LubricantMixture.getFluid(1000))
+                .fluidOutputs(GTBMaterials.SlackWax.getFluid(350))
+                .fluidOutputs(Lubricant.getFluid(650))
+                .duration(20)
+                .EUt(12)
+                .buildAndRegister();
     }
+
 }
