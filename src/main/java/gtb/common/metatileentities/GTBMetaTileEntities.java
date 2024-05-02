@@ -31,7 +31,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDilutionTank DILUTION_TANK;
     public static MetaTileEntityFermentationVat FERMENTATION_VAT;
     public static MetaTileEntityFischerTropschReactor FISCHER_TROPSCH_REACTOR;
-    public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[5];
+    public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] DEHYDRATOR = new SimpleMachineMetaTileEntity[15];
 
     public static void init() {
         // Multiblocks
@@ -61,5 +62,12 @@ public final class GTBMetaTileEntities {
                 CRYSTALLIZERS, 4012, "crystallizers",
                 GTBRecipeMaps.CRYSTALLIZATION, Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                DEHYDRATOR, 4027, "dehydrator",
+                GTBRecipeMaps.DEHYDRATOR, Textures.ASSEMBLER_OVERLAY,
+                        true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+
     }
 }
