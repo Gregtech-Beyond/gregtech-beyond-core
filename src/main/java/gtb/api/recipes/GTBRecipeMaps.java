@@ -60,5 +60,5 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION = new RecipeMap<>(
             "crystallization",
-            3, 1, 1, 1, new SimpleRecipeBuilder(), false);
+            3, 3, 3, 3, new SimpleRecipeBuilder(), false);
 }
