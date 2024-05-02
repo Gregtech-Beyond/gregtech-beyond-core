@@ -1,8 +1,15 @@
 package gtb.common.metatileentities;
 
 import static gregtech.common.metatileentities.MetaTileEntities.registerMetaTileEntity;
+import static gregtech.common.metatileentities.MetaTileEntities.registerSimpleMetaTileEntity;
 import static gtb.api.utils.GTBUtil.gtb;
 
+import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
+import gregtech.api.util.GTUtility;
+import gregtech.client.renderer.texture.Textures;
+
+import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.utils.GTBUtil;
 import gtb.common.metatileentities.multiblocks.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -24,6 +31,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDilutionTank DILUTION_TANK;
     public static MetaTileEntityFermentationVat FERMENTATION_VAT;
     public static MetaTileEntityFischerTropschReactor FISCHER_TROPSCH_REACTOR;
+    public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[5];
 
     public static void init() {
         // Multiblocks
@@ -48,5 +56,10 @@ public final class GTBMetaTileEntities {
         FERMENTATION_VAT = registerMetaTileEntity(3012, new MetaTileEntityFermentationVat(gtb("fermentation_vat")));
         FISCHER_TROPSCH_REACTOR = registerMetaTileEntity(3013,
                 new MetaTileEntityFischerTropschReactor(gtb("fischer_tropsch_reactor")));
+
+        registerSimpleMetaTileEntity(
+                CRYSTALLIZERS, 4012, "crystallizers",
+                GTBRecipeMaps.CRYSTALLIZATION, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }

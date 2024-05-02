@@ -57,4 +57,8 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> FISCHER_TROPSCH_REACTOR = new RecipeMap<>(
             "fischer_tropsch_reactor",
             2, 1, 2, 9, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION = new RecipeMap<>(
+            "crystallization",
+            3, 1, 1, 1, new SimpleRecipeBuilder(), false);
 }

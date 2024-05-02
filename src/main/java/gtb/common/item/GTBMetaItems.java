@@ -1,7 +1,6 @@
 package gtb.common.item;
 
 import gregtech.api.items.metaitem.MetaItem;
-import scala.tools.cmd.Meta;
 
 public class GTBMetaItems {
 
