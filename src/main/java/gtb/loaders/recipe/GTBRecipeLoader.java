@@ -24,8 +24,6 @@ public final class GTBRecipeLoader {
         NaturalGasLine.init();
         TungstenLine.init();
         MaterialBenefication.init();
-        VacuumFurnaceRecipes.init();
-
 
         GTBRecipeMaps.WATER_TANK.recipeBuilder().circuitMeta(1).duration(20).fluidOutputs(Materials.Water.getFluid(200))
                 .buildAndRegister();
