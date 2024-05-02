@@ -61,4 +61,8 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION = new RecipeMap<>(
             "crystallization",
             3, 3, 3, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR = new RecipeMap<>(
+            "dehydrator",
+            3, 3, 3, 3, new SimpleRecipeBuilder(), false);
 }
