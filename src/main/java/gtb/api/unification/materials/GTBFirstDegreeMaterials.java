@@ -214,7 +214,6 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0x1A4051)
                 .build().setFormula("(H2O)LiOH", true);
-
     }
 
     private static int getMaterialsId() {

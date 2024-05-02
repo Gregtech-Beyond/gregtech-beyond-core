@@ -66,8 +66,6 @@ public final class GTBMetaTileEntities {
         registerSimpleMetaTileEntity(
                 DEHYDRATOR, 4027, "dehydrator",
                 GTBRecipeMaps.DEHYDRATOR, Textures.ASSEMBLER_OVERLAY,
-                        true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
-
-
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }

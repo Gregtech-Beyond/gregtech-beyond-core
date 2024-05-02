@@ -4,8 +4,8 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
-import gregtech.api.items.metaitem.MetaItem;
 import gregtech.common.items.MetaItems;
+
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.common.item.GTBMetaItems;
@@ -239,5 +239,4 @@ public class OilLine {
                 .EUt(99)
                 .buildAndRegister();
     }
-
 }
