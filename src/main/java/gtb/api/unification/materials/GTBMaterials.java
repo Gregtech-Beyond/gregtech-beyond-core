@@ -8,6 +8,7 @@ public class GTBMaterials {
 
     // FD Materials
 
+    public static Material TungstenTrioxide;
     public static Material PlatinumConcentrate;
     public static Material PlatinumExtract;
     public static Material PalladiumExtract;
