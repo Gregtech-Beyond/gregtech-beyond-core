@@ -44,7 +44,7 @@ public final class PlatinumLine {
                 .input(dust, GTBMaterials.LeachResidue, 40)
                 .output(dust, GTBMaterials.SodiumRuthenate, 21)
                 .output(dust, Materials.RarestMetalMixture, 6)
-                .fluidInputs(Materials.CarbonMonoxide.getFluid(3000))
+                .fluidOutputs(Materials.CarbonMonoxide.getFluid(3000))
                 .EUt(120).duration(600).blastFurnaceTemp(775)
                 .buildAndRegister();
 
@@ -132,15 +132,6 @@ public final class PlatinumLine {
                 .fluidOutputs(Materials.AceticAcid.getFluid(1000))
                 .fluidOutputs(Materials.Ammonia.getFluid(2000))
                 .duration(800).EUt(9).buildAndRegister();
-
-        RecipeMaps.BLAST_RECIPES.recipeBuilder()
-                .fluidInputs(Oxygen.getFluid(3000))
-                .input(dust, SodaAsh, 18)
-                .input(dust, GTBMaterials.LeachResidue, 40)
-                .output(dust, RarestMetalMixture, 6)
-                .output(dust, GTBMaterials.SodiumRuthenate, 2)
-                .fluidOutputs(CarbonMonoxide.getFluid(3000))
-                .duration(200).EUt(12).buildAndRegister();
 
         RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, GTBMaterials.PalladiumMetallicPowder, 12)
