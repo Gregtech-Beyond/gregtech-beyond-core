@@ -123,6 +123,16 @@ public class GTBUnknownCompositionMaterials {
                 .liquid(new FluidBuilder())
                 .color(0xc3c4b3)
                 .build();
+
+        LubricantMixture = new Material.Builder(getMaterialsId(), gregtechId("lubricant_mixture"))
+                .liquid(new FluidBuilder())
+                .color(0x837D4A)
+                .build();
+
+        SlackWax = new Material.Builder(getMaterialsId(), gregtechId("slack_wax"))
+                .liquid(new FluidBuilder())
+                .color(0xFBC02D)
+                .build();
     }
 
     private static int getMaterialsId() {
