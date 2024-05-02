@@ -201,5 +201,13 @@ public class OilLine {
                 .duration(20)
                 .EUt(8)
                 .buildAndRegister();
+
+        GTBRecipeMaps.CRYSTALLIZATION.recipeBuilder()
+                .fluidInputs(GTBMaterials.SlackWax.getFluid(1000))
+                .output(GTBMetaItems.PARAFFIN_WAX, 4)
+                .fluidOutputs(Lubricant.getFluid(250))
+                .duration(200)
+                .EUt(12)
+                .buildAndRegister();
     }
 }
