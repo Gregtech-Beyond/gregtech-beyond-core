@@ -2,9 +2,6 @@ package gtb.loaders.recipe;
 
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
-import gregtech.api.unification.material.Materials;
-
-import gtb.api.recipes.GTBRecipeMaps;
 
 public final class GTBRecipeLoader {
 
@@ -24,6 +21,6 @@ public final class GTBRecipeLoader {
         NaturalGasLine.init();
         TungstenLine.init();
         MaterialBenefication.init();
-
+        RandomRecipes.init();
     }
 }
