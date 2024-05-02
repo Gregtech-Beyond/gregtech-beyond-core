@@ -15,6 +15,7 @@ public final class GTBRecipeLoader {
         AlcoholLine.init();
         Catalysts.init();
         NaquadahLine.init();
+        NaturalGasLine.init();
         OilLine.init();
         OrganicChemistry.init();
         PlatinumLine.init();
