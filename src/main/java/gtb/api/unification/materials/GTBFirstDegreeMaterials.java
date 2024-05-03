@@ -192,6 +192,7 @@ public class GTBFirstDegreeMaterials {
 
         LithiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxidesolution"))
                 .dust()
+                .fluid()
                 .color(0x1A4051)
                 .build().setFormula("(H2O)LiOH", true);
 
