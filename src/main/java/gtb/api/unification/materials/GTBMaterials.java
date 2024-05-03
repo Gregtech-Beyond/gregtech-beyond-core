@@ -7,6 +7,15 @@ public class GTBMaterials {
     // Biological Materials
 
     public static Material CupriavidusNecator;
+    public static Material CupriavidusNecatorBacteriaSample;
+    public static Material BacterialGrowthMedium;
+    public static Material BloodCells;
+    public static Material BloodPlasma;
+    public static Material Blood;
+    public static Material Catalase;
+    public static Material DepletedBacterialGrowthMedium;
+    public static Material BasicFibroblastGrowthMedium;
+    public static Material EpidermalGrowthFactor;
     // Element Materials
 
     // FD Materials
@@ -52,6 +61,19 @@ public class GTBMaterials {
     public static Material CalciumTungstate;
     public static Material LithiumHydroxideSolution;
     public static Material LithiumFluoride;
+    public static Material Polyetheretherketone;
+    public static Material HundredEthanol;
+    public static Material HundredMethanol;
+    public static Material HundredButanol;
+    public static Material Cuproquin;
+
+
+
+
+
+
+
+
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;
     public static Material AcidicIridiumDioxide;

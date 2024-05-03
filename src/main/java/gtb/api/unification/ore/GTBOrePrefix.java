@@ -22,4 +22,6 @@ public class GTBOrePrefix {
             ENABLE_UNIFICATION,
             hasGemProperty.and(mat -> mat.hasFlag(GENERATE_BOULE) || (mat.hasFlag(MaterialFlags.CRYSTALLIZABLE) &&
                     !mat.hasFlag(GTBMaterialFlags.DISABLE_CRYSTALLIZATION))));
+
+
 }
