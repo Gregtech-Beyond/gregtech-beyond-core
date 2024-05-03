@@ -4,6 +4,9 @@ import gregtech.api.unification.material.Material;
 
 public class GTBMaterials {
 
+    // Biological Materials
+
+    public static Material CupriavidusNecator;
     // Element Materials
 
     // FD Materials
