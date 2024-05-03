@@ -79,5 +79,14 @@ public class TungstenLine {
                 .duration(70)
                 .EUt(12)
                 .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Hydrogen.getFluid(6000))
+                .input(dust, GTBMaterials.TungstenTrioxide, 4)
+                .output(dust, Tungsten, 1)
+                .fluidOutputs(Water.getFluid(3000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
     }
 }
