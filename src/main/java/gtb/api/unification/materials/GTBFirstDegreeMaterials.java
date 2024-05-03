@@ -159,6 +159,46 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0xAB47BC)
                 .build().setFormula("C5H12O", true);
+
+        TungstenTrioxide = new Material.Builder(getMaterialsId(), gregtechId("tungstentrioxide"))
+                .dust()
+                .color(0x6E9C46)
+                .build().setFormula("WO3", true);
+
+        HydrogenPeroxide = new Material.Builder(getMaterialsId(), gregtechId("hydrogenperoxide"))
+                .liquid(new FluidBuilder())
+                .color(0xC2E2F0)
+                .build().setFormula("H2O2", true);
+
+        CalciumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("calciumhydroxide"))
+                .dust()
+                .color(0x9FC0A1)
+                .build().setFormula("Ca(OH)2", true);
+
+        LithiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxide"))
+                .dust()
+                .color(0x1A4051)
+                .build().setFormula("LiOH", true);
+
+        SodiumTungstate = new Material.Builder(getMaterialsId(), gregtechId("sodiumtungstate"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("Na2WO4", true);
+
+        CalciumTungstate = new Material.Builder(getMaterialsId(), gregtechId("calciumtungstate"))
+                .dust()
+                .color(0x1A4051)
+                .build().setFormula("WCaO4", true);
+
+        LithiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxidesolution"))
+                .dust()
+                .color(0x1A4051)
+                .build().setFormula("(H2O)LiOH", true);
+
+        LithiumFluoride = new Material.Builder(getMaterialsId(), gregtechId("lithiumfluoride"))
+                .dust()
+                .color(0x1A4051)
+                .build().setFormula("(H2O)LiOH", true);
     }
 
     private static int getMaterialsId() {
