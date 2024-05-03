@@ -1,8 +1,15 @@
 package gtb.common.metatileentities;
 
 import static gregtech.common.metatileentities.MetaTileEntities.registerMetaTileEntity;
+import static gregtech.common.metatileentities.MetaTileEntities.registerSimpleMetaTileEntity;
 import static gtb.api.utils.GTBUtil.gtb;
 
+import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
+import gregtech.api.util.GTUtility;
+import gregtech.client.renderer.texture.Textures;
+
+import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.utils.GTBUtil;
 import gtb.common.metatileentities.multiblocks.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -23,6 +30,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityVacuumDistillationTower VACUUM_DISTILLATION_TOWER;
     public static MetaTileEntityDilutionTank DILUTION_TANK;
     public static MetaTileEntityFermentationVat FERMENTATION_VAT;
+    public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
 
     public static void init() {
         // Multiblocks
@@ -45,5 +53,7 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityVacuumDistillationTower(gtb("vacuum_distillation_tower")));
         DILUTION_TANK = registerMetaTileEntity(3011, new MetaTileEntityDilutionTank(gtb("dilution_tank")));
         FERMENTATION_VAT = registerMetaTileEntity(3012, new MetaTileEntityFermentationVat(gtb("fermentation_vat")));
+        registerSimpleMetaTileEntity(DEHYDRATORS, 3013, "dehydrator", GTBRecipeMaps.DEHYDRATOR,
+                Textures.ASSEMBLER_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }
