@@ -33,6 +33,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityFischerTropschReactor FISCHER_TROPSCH_REACTOR;
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] MICROSCOPE = new SimpleMachineMetaTileEntity[15];
 
     public static void init() {
         // Multiblocks
@@ -64,8 +65,13 @@ public final class GTBMetaTileEntities {
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
-                DEHYDRATOR, 4027, "dehydrator",
+                DEHYDRATOR, 4028, "dehydrator",
                 GTBRecipeMaps.DEHYDRATOR, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                MICROSCOPE, 4044, "microscope",
+                GTBRecipeMaps.MICROSCOPE, Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }
