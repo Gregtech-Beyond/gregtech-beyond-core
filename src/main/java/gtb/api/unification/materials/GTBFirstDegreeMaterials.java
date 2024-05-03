@@ -197,23 +197,23 @@ public class GTBFirstDegreeMaterials {
 
         SodiumTungstate = new Material.Builder(getMaterialsId(), gregtechId("sodiumtungstate"))
                 .liquid(new FluidBuilder())
-                .color(0x1A4051)
+                .color(0x606262)
                 .build().setFormula("Na2WO4", true);
 
         CalciumTungstate = new Material.Builder(getMaterialsId(), gregtechId("calciumtungstate"))
                 .dust()
-                .color(0x1A4051)
+                .color(0x909393)
                 .build().setFormula("WCaO4", true);
 
         LithiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxidesolution"))
-                .dust()
+                .liquid(new FluidBuilder())
                 .color(0x1A4051)
                 .build().setFormula("(H2O)LiOH", true);
 
         LithiumFluoride = new Material.Builder(getMaterialsId(), gregtechId("lithiumfluoride"))
                 .dust()
-                .color(0x1A4051)
-                .build().setFormula("(H2O)LiOH", true);
+                .color(0x9DD6D0)
+                .build().setFormula("LiF3", true);
     }
 
     private static int getMaterialsId() {
