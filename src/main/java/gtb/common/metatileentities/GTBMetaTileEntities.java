@@ -31,9 +31,11 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDilutionTank DILUTION_TANK;
     public static MetaTileEntityFermentationVat FERMENTATION_VAT;
     public static MetaTileEntityFischerTropschReactor FISCHER_TROPSCH_REACTOR;
+    public static MetaTileEntityBioReactor BIO_REACTOR;
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] MICROSCOPE = new SimpleMachineMetaTileEntity[15];
+
 
     public static void init() {
         // Multiblocks
@@ -58,7 +60,7 @@ public final class GTBMetaTileEntities {
         FERMENTATION_VAT = registerMetaTileEntity(3012, new MetaTileEntityFermentationVat(gtb("fermentation_vat")));
         FISCHER_TROPSCH_REACTOR = registerMetaTileEntity(3013,
                 new MetaTileEntityFischerTropschReactor(gtb("fischer_tropsch_reactor")));
-
+        BIO_REACTOR = registerMetaTileEntity( 3014, new MetaTileEntityBioReactor(gtb("bio_reactor")));
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
                 GTBRecipeMaps.CRYSTALLIZATION, Textures.ASSEMBLER_OVERLAY,
