@@ -22,5 +22,7 @@ public final class GTBRecipeLoader {
         TungstenLine.init();
         MaterialBenefication.init();
         RandomRecipes.init();
+        BiologyLines.init();
+        Metallurgy.init();
     }
 }

@@ -4,15 +4,11 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
-import gregtech.common.items.MetaItems;
-
-import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
-import gtb.common.item.GTBMetaItems;
+
 public class NaturalGasLine {
 
     public static void init() {
-
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(SulfuricAcid.getFluid(3000))
                 .fluidInputs(NaturalGas.getFluid(1000))
@@ -38,8 +34,5 @@ public class NaturalGasLine {
                 .duration(200)
                 .EUt(8)
                 .buildAndRegister();
-
-
-
     }
 }
