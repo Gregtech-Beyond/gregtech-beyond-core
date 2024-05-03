@@ -8,7 +8,6 @@ import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.material.Materials;
 
 import gtb.api.unification.materials.GTBMaterials;
-import net.minecraft.entity.passive.EntityWaterMob;
 
 public class OrganicChemistry {
 
