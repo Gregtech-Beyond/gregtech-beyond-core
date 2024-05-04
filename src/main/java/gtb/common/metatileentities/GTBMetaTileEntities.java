@@ -2,10 +2,8 @@ package gtb.common.metatileentities;
 
 import static gregtech.common.metatileentities.MetaTileEntities.*;
 import static gtb.api.utils.GTBUtil.gtb;
-
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.util.GTUtility;
-
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
@@ -32,7 +30,6 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
 
 
-
     public static void init() {
         // Multiblocks
         WATER_TANK = registerMetaTileEntity(3000, new MetaTileEntityWaterTank(gtb("water_tank")));
@@ -51,7 +48,6 @@ public final class GTBMetaTileEntities {
 
         registerSimpleMetaTileEntity(DEHYDRATORS, 3013, "dehydrator", GTBRecipeMaps.DEHYDRATOR,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
-
     }
 
 }

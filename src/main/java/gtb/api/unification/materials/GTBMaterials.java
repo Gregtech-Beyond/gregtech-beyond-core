@@ -46,6 +46,7 @@ public class GTBMaterials {
     public static Material CalciumTungstate;
     public static Material LithiumHydroxideSolution;
     public static Material LithiumFluoride;
+
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;
     public static Material AcidicIridiumDioxide;

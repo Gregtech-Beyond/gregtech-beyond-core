@@ -20,6 +20,7 @@ public final class GTBRecipeLoader {
         OilLine.init();
         OrganicChemistry.init();
         PlatinumLine.init();
+        TungstenLine.init();
         XylenolLine.init();
         TungstenLine.init();
 
