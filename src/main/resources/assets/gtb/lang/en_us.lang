@@ -45,7 +45,21 @@ metaitem.astro_miner.name=Astro Miner
 metaitem.moon.name=Moon
 metaitem.paraffin_wax.name=Paraffin Wax
 
+
 #Materials
+gregtech.material.tungstentrioxide=Tungsten Trioxide
+gregtech.material.calciumhydroxide=Calcium Hydroxide
+gregtech.material.lithiumhydroxide=Lithium Hydroxide
+gregtech.material.calciumtungstate=Calcium Tungstate
+gregtech.material.lithiumhydroxidesolution=Lithium Hydroxide Solution
+gregtech.material.lthiiumfluoride=Lithium Fluoride
+gregtech.material.oxylene=O-Xylene
+gregtech.material.pxylene=P-Xylene
+gregtech.material.opxylene=O/P-Xylene
+gregtech.material.hydrogenperoxide=Hydrogen Peroxide
+gregtech.material.sodiumtungstate=Sodium Tungstate
+gregtech.material.lithiumhydroxidesolution=Lithium Hydroxide Solution
+gregtech.material.mxylene=M-Xylene
 gregtech.material.palladium_extract=Palladium Extract
 gregtech.material.platinum_extract=Platinum Extract
 gregtech.material.platinum_concentrate=Platinum Concentrate

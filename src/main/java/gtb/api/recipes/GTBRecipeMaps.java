@@ -53,4 +53,8 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> NEUTRON_ACCELERATOR = new RecipeMap<>("neutron_accelerator",
             2, 1, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR = new RecipeMap<>(
+            "dehydrator",
+            3, 3, 3, 3, new SimpleRecipeBuilder(), false);
 }
