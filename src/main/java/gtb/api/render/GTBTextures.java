@@ -17,6 +17,8 @@ public final class GTBTextures {
             "gtb_multiblock_casing/climate_proof_casing");
     public static SimpleOverlayRenderer STEEL_BORDERED_WOODEN_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/steel_bordered_wooden_casing");
+    public static final OrientedOverlayRenderer CRYSTALLIZER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/crystallizer");
     public static OrientedOverlayRenderer DEHYDRATOR_OVERLAY = new OrientedOverlayRenderer(
             "machines/dehydrator");
 

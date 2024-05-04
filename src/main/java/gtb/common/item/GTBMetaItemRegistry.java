@@ -13,5 +13,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ASTRO_MINER = addItem(1, "astro_miner");
         GTBMetaItems.MOON = addItem(2, "moon");
         GTBMetaItems.PARAFFIN_WAX = addItem(3, "paraffin_wax");
+        GTBMetaItems.BITOMINOUS_RESIDUES = addItem(4, "bitominous_residues");
     }
 }
