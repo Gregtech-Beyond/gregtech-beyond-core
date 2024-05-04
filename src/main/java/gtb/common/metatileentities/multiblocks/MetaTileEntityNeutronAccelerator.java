@@ -43,11 +43,11 @@ public class MetaTileEntityNeutronAccelerator extends RecipeMapMultiblockControl
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CNMNC","CCCCC","CCCCC","CCCCC","CCSCC")
-                .aisle("F~~~F","~~~~~","~~P~~","~~~~~","F~~~F")
-                .aisle("F~~~F","~~~~~","~~P~~","~~~~~","F~~~F")
-                .aisle("F~~~F","~~~~~","~~P~~","~~~~~","F~~~F")
-                .aisle("CCCCC","CCCCC","CCCCC","CCCCC","CCCCC")
+                .aisle("CNMNC", "CCCCC", "CCCCC", "CCCCC", "CCSCC")
+                .aisle("F~~~F", "~~~~~", "~~P~~", "~~~~~", "F~~~F")
+                .aisle("F~~~F", "~~~~~", "~~P~~", "~~~~~", "F~~~F")
+                .aisle("F~~~F", "~~~~~", "~~P~~", "~~~~~", "F~~~F")
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('W', states(getCasingState())
