@@ -1,6 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.common.blocks.BlockMetalCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -22,6 +21,7 @@ import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
@@ -39,6 +39,7 @@ public class MetaTileEntityNeutronAccelerator extends RecipeMapMultiblockControl
     public IBlockState getCasingState() {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
     }
+
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
