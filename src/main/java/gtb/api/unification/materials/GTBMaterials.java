@@ -76,7 +76,8 @@ public class GTBMaterials {
     public static Material ImpureEthanol;
     public static Material GrainSolution;
     public static Material Vinegar;
-
+    public static Material AlkylatedNaturalGas;
+    public static Material Syngas;
     // Organic Chemistry Materials
 
     public static Material FormicAcid;

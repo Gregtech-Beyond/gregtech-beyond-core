@@ -159,7 +159,7 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0xAB47BC)
                 .build().setFormula("C5H12O", true);
-
+      
         TungstenTrioxide = new Material.Builder(getMaterialsId(), gregtechId("tungstentrioxide"))
                 .dust()
                 .color(0x6E9C46)
