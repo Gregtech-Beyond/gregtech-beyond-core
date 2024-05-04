@@ -38,6 +38,14 @@ public class GTBMaterials {
     public static Material NButanol;
     public static Material IsoamylAlcohol;
     public static Material IsobutylAlcohol;
+    public static Material HydrogenPeroxide;
+    public static Material TungstenTrioxide;
+    public static Material CalciumHydroxide;
+    public static Material LithiumHydroxide;
+    public static Material SodiumTungstate;
+    public static Material CalciumTungstate;
+    public static Material LithiumHydroxideSolution;
+    public static Material LithiumFluoride;
 
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;
@@ -68,7 +76,8 @@ public class GTBMaterials {
     public static Material ImpureEthanol;
     public static Material GrainSolution;
     public static Material Vinegar;
-
+    public static Material AlkylatedNaturalGas;
+    public static Material Syngas;
     // Organic Chemistry Materials
 
     public static Material FormicAcid;
