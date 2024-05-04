@@ -122,17 +122,27 @@ public class GTBUnknownCompositionMaterials {
         FractionC_5 = new Material.Builder(getMaterialsId(), gregtechId("fraction_c_5"))
                 .liquid(new FluidBuilder())
                 .color(0xc3c4b3)
-                .build();
+                .build().setFormula("?", true);
 
         LubricantMixture = new Material.Builder(getMaterialsId(), gregtechId("lubricant_mixture"))
                 .liquid(new FluidBuilder())
                 .color(0x837D4A)
-                .build();
+                .build().setFormula("?", true);
 
         SlackWax = new Material.Builder(getMaterialsId(), gregtechId("slack_wax"))
                 .liquid(new FluidBuilder())
                 .color(0xFBC02D)
-                .build();
+                .build().setFormula("?", true);
+      
+        AlkylatedNaturalGas = new Material.Builder(getMaterialsId(), gregtechId("alkylated_natural_gas"))
+                .liquid(new FluidBuilder())
+                .color(0xFBC02D)
+                .build().setFormula("?", true);
+
+        Syngas = new Material.Builder(getMaterialsId(), gregtechId("syngas"))
+                .liquid(new FluidBuilder())
+                .color(0xE8D6D1)
+                .build().setFormula("?", true);
     }
 
     private static int getMaterialsId() {

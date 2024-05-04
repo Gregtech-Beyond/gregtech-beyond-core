@@ -2,6 +2,8 @@ package gtb.loaders.recipe;
 
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
+import gregtech.api.unification.material.Materials;
+import gtb.api.recipes.GTBRecipeMaps;
 
 public final class GTBRecipeLoader {
 
@@ -15,9 +17,11 @@ public final class GTBRecipeLoader {
         AlcoholLine.init();
         Catalysts.init();
         NaquadahLine.init();
+        NaturalGasLine.init();
         OilLine.init();
         OrganicChemistry.init();
         PlatinumLine.init();
+        TungstenLine.init();
         XylenolLine.init();
         NaturalGasLine.init();
         TungstenLine.init();

@@ -41,6 +41,14 @@ public class GTBMaterials {
     public static Material Formaldehyde;
     public static Material Dicyclopentadiene;
     public static Material Cyclopentadiene;
+    public static Material HydrogenPeroxide;
+    public static Material TungstenTrioxide;
+    public static Material CalciumHydroxide;
+    public static Material LithiumHydroxide;
+    public static Material SodiumTungstate;
+    public static Material CalciumTungstate;
+    public static Material LithiumHydroxideSolution;
+    public static Material LithiumFluoride;
 
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;
@@ -74,7 +82,8 @@ public class GTBMaterials {
     public static Material FractionC_5;
     public static Material LubricantMixture;
     public static Material SlackWax;
-
+    public static Material AlkylatedNaturalGas;
+    public static Material Syngas;
     // Organic Chemistry Materials
 
     public static Material FormicAcid;
