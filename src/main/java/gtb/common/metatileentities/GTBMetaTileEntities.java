@@ -1,12 +1,18 @@
 package gtb.common.metatileentities;
 
 import static gregtech.common.metatileentities.MetaTileEntities.registerMetaTileEntity;
+import static gregtech.common.metatileentities.MetaTileEntities.registerSimpleMetaTileEntity;
 import static gtb.api.utils.GTBUtil.gtb;
 
+import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
+import gregtech.api.util.GTUtility;
+
+import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
+import gtb.api.utils.GTBUtil;
 import gtb.common.metatileentities.multiblocks.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBMetaTileEntities {
 
