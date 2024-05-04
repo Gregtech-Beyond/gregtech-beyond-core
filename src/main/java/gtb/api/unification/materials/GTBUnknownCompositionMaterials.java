@@ -133,7 +133,7 @@ public class GTBUnknownCompositionMaterials {
                 .liquid(new FluidBuilder())
                 .color(0xFBC02D)
                 .build().setFormula("?", true);
-      
+
         AlkylatedNaturalGas = new Material.Builder(getMaterialsId(), gregtechId("alkylated_natural_gas"))
                 .liquid(new FluidBuilder())
                 .color(0xFBC02D)
