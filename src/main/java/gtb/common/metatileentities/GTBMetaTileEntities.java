@@ -1,9 +1,9 @@
 package gtb.common.metatileentities;
 
-import static gregtech.common.metatileentities.MetaTileEntities.*;
 import static gtb.api.utils.GTBUtil.gtb;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.util.GTUtility;
+import static gregtech.common.metatileentities.MetaTileEntities.*;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
@@ -27,6 +27,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityVacuumDistillationTower VACUUM_DISTILLATION_TOWER;
     public static MetaTileEntityDilutionTank DILUTION_TANK;
     public static MetaTileEntityFermentationVat FERMENTATION_VAT;
+    public static MetaTileEntityFischerTropschReactor FISCHER_TROPSCH_REACTOR;
+    public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
 
 
@@ -45,6 +47,12 @@ public final class GTBMetaTileEntities {
         VACUUM_DISTILLATION_TOWER = registerMetaTileEntity(3010, new MetaTileEntityVacuumDistillationTower(gtb("vacuum_distillation_tower")));
         DILUTION_TANK = registerMetaTileEntity(3011, new MetaTileEntityDilutionTank(gtb("dilution_tank")));
         FERMENTATION_VAT = registerMetaTileEntity(3012, new MetaTileEntityFermentationVat(gtb("fermentation_vat")));
+        FISCHER_TROPSCH_REACTOR = registerMetaTileEntity(3013,
+                new MetaTileEntityFischerTropschReactor(gtb("fischer_tropsch_reactor")));
+
+        registerSimpleMetaTileEntity(
+                CRYSTALLIZERS, 4012, "crystallizers",GTBRecipeMaps.CRYSTALLIZATION,
+                GTBTextures.CRYSTALLIZER_OVERLAY,true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(DEHYDRATORS, 3013, "dehydrator", GTBRecipeMaps.DEHYDRATOR,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);

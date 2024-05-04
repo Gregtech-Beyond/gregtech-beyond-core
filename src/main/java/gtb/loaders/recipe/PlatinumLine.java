@@ -44,7 +44,7 @@ public final class PlatinumLine {
                 .input(dust, GTBMaterials.LeachResidue, 40)
                 .output(dust, GTBMaterials.SodiumRuthenate, 21)
                 .output(dust, Materials.RarestMetalMixture, 6)
-                .fluidInputs(Materials.CarbonMonoxide.getFluid(3000))
+                .fluidOutputs(Materials.CarbonMonoxide.getFluid(3000))
                 .EUt(120).duration(600).blastFurnaceTemp(775)
                 .buildAndRegister();
 
@@ -85,6 +85,7 @@ public final class PlatinumLine {
                 .input(dust, Materials.AmmoniumChloride, 4)
                 .fluidInputs(GTBMaterials.AcidicIridiumDioxide.getFluid(1000))
                 .fluidOutputs(Materials.Water.getFluid(1000))
+                .output(dust, IridiumChloride, 8)
                 .fluidOutputs(Materials.Ammonia.getFluid(4000))
                 .duration(800).EUt(900).buildAndRegister();
 
@@ -131,5 +132,18 @@ public final class PlatinumLine {
                 .fluidOutputs(Materials.AceticAcid.getFluid(1000))
                 .fluidOutputs(Materials.Ammonia.getFluid(2000))
                 .duration(800).EUt(9).buildAndRegister();
+
+        RecipeMaps.LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, GTBMaterials.PalladiumMetallicPowder, 12)
+                .fluidInputs(GTBMaterials.PalladiumEnrichedAmmonia.getFluid(6000))
+                .circuitMeta(1)
+                .output(dust, GTBMaterials.PalladiumSalt, 15)
+                .output(dust, PalladiumRaw, 8)
+                .duration(80).EUt(90).buildAndRegister();
+
+        RecipeMaps.SIFTER_RECIPES.recipeBuilder()
+                .input(dust, GTBMaterials.PalladiumSalt, 1)
+                .output(dust, GTBMaterials.PalladiumMetallicPowder, 1)
+                .duration(200).EUt(12).buildAndRegister();
     }
 }

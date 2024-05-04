@@ -159,6 +159,21 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0xAB47BC)
                 .build().setFormula("C5H12O", true);
+
+        Formaldehyde = new Material.Builder(getMaterialsId(), gregtechId("formaldehyde"))
+                .liquid(new FluidBuilder())
+                .color(0xAB47BC)
+                .build().setFormula("CH20", true);
+
+        Dicyclopentadiene = new Material.Builder(getMaterialsId(), gregtechId("dicyclopentadiene"))
+                .liquid(new FluidBuilder())
+                .color(0xAB47BC)
+                .build().setFormula("C10H12", true);
+
+        Cyclopentadiene = new Material.Builder(getMaterialsId(), gregtechId("cyclopentadiene"))
+                .liquid(new FluidBuilder())
+                .color(0xAB47BC)
+                .build().setFormula("C5H6", true);
       
         TungstenTrioxide = new Material.Builder(getMaterialsId(), gregtechId("tungstentrioxide"))
                 .dust()

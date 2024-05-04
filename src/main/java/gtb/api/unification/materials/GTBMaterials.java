@@ -38,6 +38,9 @@ public class GTBMaterials {
     public static Material NButanol;
     public static Material IsoamylAlcohol;
     public static Material IsobutylAlcohol;
+    public static Material Formaldehyde;
+    public static Material Dicyclopentadiene;
+    public static Material Cyclopentadiene;
     public static Material HydrogenPeroxide;
     public static Material TungstenTrioxide;
     public static Material CalciumHydroxide;
@@ -76,6 +79,9 @@ public class GTBMaterials {
     public static Material ImpureEthanol;
     public static Material GrainSolution;
     public static Material Vinegar;
+    public static Material FractionC_5;
+    public static Material LubricantMixture;
+    public static Material SlackWax;
     public static Material AlkylatedNaturalGas;
     public static Material Syngas;
     // Organic Chemistry Materials
