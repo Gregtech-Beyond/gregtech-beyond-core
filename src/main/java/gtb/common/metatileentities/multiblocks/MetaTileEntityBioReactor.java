@@ -1,8 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gtb.common.block.blocks.GTBMultiblockCasing;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -17,19 +15,17 @@ import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing;
-import gregtech.common.blocks.BlockFireboxCasing;
-import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 
 public class MetaTileEntityBioReactor extends RecipeMapMultiblockController {
 
@@ -39,7 +35,7 @@ public class MetaTileEntityBioReactor extends RecipeMapMultiblockController {
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(GTBMultiblockCasing.CasingType.BIOLOGICALLY_STERILE_CASING);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.BIOLOGICALLY_STERILE_CASING);
     }
 
     @Override
@@ -58,7 +54,7 @@ public class MetaTileEntityBioReactor extends RecipeMapMultiblockController {
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
-                .where('G', states(Blocks.GLASS.getDefaultState()))
+                .where('G', states(MetaBlocks.TRANSPARENT_CASING.getDefaultState()))
                 .build();
     }
 
