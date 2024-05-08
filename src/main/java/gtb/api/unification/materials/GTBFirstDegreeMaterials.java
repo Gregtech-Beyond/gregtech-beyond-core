@@ -216,14 +216,14 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("LiF3", true);
 
         Polyetheretherketone = new Material.Builder(getMaterialsId(), gregtechId("polyetheretherketone"))
-                .dust()
+                .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
                 .build().setFormula("C20H12O3", true);
 
-        Cuproquin = new Material.Builder(getMaterialsId(), gregtechId("cuproquin"))
-                .dust()
-                .color(0x191919)
-                .build().setFormula("C18H13CuN2O", true);
+        EthyleneOxide = new Material.Builder(getMaterialsId(), gregtechId("ethylene_oxide"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("C2H4O", true);
     }
 
     private static int getMaterialsId() {

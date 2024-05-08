@@ -16,10 +16,39 @@ public class GTBMaterials {
     public static Material DepletedBacterialGrowthMedium;
     public static Material BasicFibroblastGrowthMedium;
     public static Material EpidermalGrowthFactor;
+    public static Material HundredEthanol;
+    public static Material HundredMethanol;
+    public static Material HundredButanol;
+    public static Material Cuproquin;
+    public static Material Sulfanilamide;
+    public static Material AcetylsulfanilylChloride;
+    public static Material ChlorosulfonicAcid;
+    public static Material AceticAnhydride;
+    public static Material Aniline;
+    public static Material AmmoniumNitrate;
+    public static Material B_27_Supplement;
+    public static Material Glutamine;
+    public static Material LinoleicAcid;
+    public static Material Biotin;
+    public static Material Ethanolamine;
+    public static Material VitaminA;
+    public static Material BetaIonone;
+    public static Material PropargylChloride;
+    public static Material Citral;
+    public static Material BetaPinene;
+    public static Material Turpentine;
+    public static Material PropargylAlcohol;
+    public static Material Acetylene;
+    public static Material CleanAmmoniaSolution;
+    public static Material BrevibacteriumFlavium;
+    public static Material Yeast;
+    public static Material Leucine;
+    public static Material BetaPineneSolution;
     // Element Materials
 
     // FD Materials
 
+    public static Material EthyleneOxide;
     public static Material TungstenTrioxide;
     public static Material PlatinumConcentrate;
     public static Material PlatinumExtract;
@@ -62,17 +91,6 @@ public class GTBMaterials {
     public static Material LithiumHydroxideSolution;
     public static Material LithiumFluoride;
     public static Material Polyetheretherketone;
-    public static Material HundredEthanol;
-    public static Material HundredMethanol;
-    public static Material HundredButanol;
-    public static Material Cuproquin;
-
-
-
-
-
-
-
 
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;
