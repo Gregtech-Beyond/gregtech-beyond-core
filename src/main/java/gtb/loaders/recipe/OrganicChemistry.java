@@ -4,7 +4,6 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
-import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.unification.material.Materials;
 
 import gtb.api.unification.materials.GTBMaterials;
