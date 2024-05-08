@@ -6,6 +6,7 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 
 import net.minecraft.init.Items;
 
+import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.common.item.GTBMetaItems;
 
@@ -63,16 +64,15 @@ public class BiologyLines {
                 .EUt(1200)
                 .buildAndRegister();
 
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(Oxygen.getFluid(1000))
-                .fluidInputs(SulfuricAcid.getFluid(2000))
-                .fluidInputs(HydrochloricAcid.getFluid(1000))
-                .fluidOutputs(GTBMaterials.ChlorosulfonicAcid.getFluid(2000))
-                .fluidOutputs(Water.getFluid(2000))
-                .fluidOutputs(SulfurTrioxide.getFluid(1000))
-                .EUt(480)
-                .duration(100)
-                .buildAndRegister();
+    GTBRecipeMaps.BIO_REACTOR.recipeBuilder()
+            .input(GTBMetaItems.CUPRIAVIDUS_NECATOR_CULTURE)
+            .fluidInputs(GTBMaterials.BacterialGrowthMedium.getFluid(1000))
+            .fluidOutputs(GTBMaterials.DepletedBacterialGrowthMedium.getFluid(1000))
+            .duration(200)
+            .output(dust, GTBMaterials.CupriavidusNecator, 1)
+            .output(GTBMetaItems.CONTAMINATED_STERILIZED_PETRI_DISH)
+            .EUt(120)
+            .buildAndRegister();
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(GTBMaterials.ChlorosulfonicAcid.getFluid(1000))
