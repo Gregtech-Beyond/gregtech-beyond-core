@@ -20,5 +20,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.CONTAMINATED_STERILIZED_PETRI_DISH = addItem(8, "contaminated_sterilized_petri_dish");
         GTBMetaItems.PETRI_DISH_MOLD = addItem(9, "petri_dish_mold");
         GTBMetaItems.CUPRIAVIDUS_BACTERIA_SAMPLE_PETRI_DISH = addItem(10, "cuprivavidus_bacteria_sample_petri_dish");
-
-    }}
+        GTBMetaItems.ULTRASONIC_HOMOGENIZER = addItem(11, "ultrasonic_homogenizer");
+    }
+}
