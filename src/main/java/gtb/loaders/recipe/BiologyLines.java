@@ -64,15 +64,15 @@ public class BiologyLines {
                 .EUt(1200)
                 .buildAndRegister();
 
-    GTBRecipeMaps.BIO_REACTOR.recipeBuilder()
-            .input(GTBMetaItems.CUPRIAVIDUS_NECATOR_CULTURE)
-            .fluidInputs(GTBMaterials.BacterialGrowthMedium.getFluid(1000))
-            .fluidOutputs(GTBMaterials.DepletedBacterialGrowthMedium.getFluid(1000))
-            .duration(200)
-            .output(dust, GTBMaterials.CupriavidusNecator, 1)
-            .output(GTBMetaItems.CONTAMINATED_STERILIZED_PETRI_DISH)
-            .EUt(120)
-            .buildAndRegister();
+        GTBRecipeMaps.BIO_REACTOR.recipeBuilder()
+                .input(GTBMetaItems.CUPRIAVIDUS_NECATOR_CULTURE)
+                .fluidInputs(GTBMaterials.BacterialGrowthMedium.getFluid(1000))
+                .fluidOutputs(GTBMaterials.DepletedBacterialGrowthMedium.getFluid(1000))
+                .duration(200)
+                .output(dust, GTBMaterials.CupriavidusNecator, 1)
+                .output(GTBMetaItems.CONTAMINATED_STERILIZED_PETRI_DISH)
+                .EUt(120)
+                .buildAndRegister();
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(GTBMaterials.ChlorosulfonicAcid.getFluid(1000))

@@ -12,7 +12,6 @@ public final class GTBRecipeLoader {
         RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);
         RecipeMaps.CHEMICAL_BATH_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.CHEMICAL_BATH_RECIPES.setSlotOverlay(false, true, false, GuiTextures.FLUID_TANK_OVERLAY);
-        RecipeMaps.CHEMICAL_RECIPES.setMaxFluidInputs(3);
 
         AlcoholLine.init();
         Catalysts.init();

@@ -80,7 +80,5 @@ public class AlcoholLine {
                 .duration(200)
                 .EUt(800)
                 .buildAndRegister();
-
-
     }
 }
