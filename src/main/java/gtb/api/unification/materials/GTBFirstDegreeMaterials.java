@@ -224,6 +224,16 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
+
+        HundredMethanol = new Material.Builder(getMaterialsId(), gregtechId("hundret_methanol"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("C2H4O", true);
+
+        HundredButanol = new Material.Builder(getMaterialsId(), gregtechId("hundret_butanol"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("C2H4O", true);
     }
 
     private static int getMaterialsId() {
