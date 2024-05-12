@@ -196,15 +196,17 @@ public class GTBBiologicalMaterials {
                 .color(0x4A148C)
                 .build().setFormula("C20H12O3", true);
 
-        YeastExtractMannitolAgarSolution = new Material.Builder(getMaterialsId(), gregtechId("yeast_extract_mannitol_agar_solution"))
-                .liquid(new FluidBuilder())
-                .color(0x4A148C)
-                .build().setFormula("C20H12O3", true);
+        YeastExtractMannitolAgarSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("yeast_extract_mannitol_agar_solution"))
+                        .liquid(new FluidBuilder())
+                        .color(0x4A148C)
+                        .build().setFormula("C20H12O3", true);
 
-        DissolvedYeastExtractMannitolMixture = new Material.Builder(getMaterialsId(), gregtechId("dissolved_yeast_extract_mannitol_mixture"))
-                .liquid(new FluidBuilder())
-                .color(0x4A148C)
-                .build().setFormula("C20H12O3", true);
+        DissolvedYeastExtractMannitolMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("dissolved_yeast_extract_mannitol_mixture"))
+                        .liquid(new FluidBuilder())
+                        .color(0x4A148C)
+                        .build().setFormula("C20H12O3", true);
 
         YeastExtract = new Material.Builder(getMaterialsId(), gregtechId("yeast_extract"))
                 .liquid(new FluidBuilder())
@@ -267,22 +269,22 @@ public class GTBBiologicalMaterials {
                 .build().setFormula("C20H12O3", true);
 
         Nonoxynol_9 = new Material.Builder(getMaterialsId(), gregtechId("nonoxynol_9"))
-                .dust()
+                .liquid(new FluidBuilder())
                 .color(0x4A148C)
                 .build().setFormula("C20H12O3", true);
 
         Nonoxynol_9_Solution = new Material.Builder(getMaterialsId(), gregtechId("nonoxynol_9_solution"))
-                .dust()
+                .liquid(new FluidBuilder())
                 .color(0x4A148C)
                 .build().setFormula("C20H12O3", true);
 
         EthoxylatedNonylphenol = new Material.Builder(getMaterialsId(), gregtechId("ethoxylated_nonylphenol"))
-                .dust()
+                .liquid(new FluidBuilder())
                 .color(0x4A148C)
                 .build().setFormula("C20H12O3", true);
 
         Nonylphenol = new Material.Builder(getMaterialsId(), gregtechId("nonylphenol"))
-                .dust()
+                .liquid(new FluidBuilder())
                 .color(0x4A148C)
                 .build().setFormula("C20H12O3", true);
 
@@ -301,17 +303,58 @@ public class GTBBiologicalMaterials {
                 .color(0x4A148C)
                 .build().setFormula("?", true);
 
+        SheepBlood = new Material.Builder(getMaterialsId(), gregtechId("sheep_blood"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
+        SheepBloodPlasma = new Material.Builder(getMaterialsId(), gregtechId("sheep_blood_plasma"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
+        SheepBloodCells = new Material.Builder(getMaterialsId(), gregtechId("sheep_blood_cells"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
+        DefibernatedSheepBlood = new Material.Builder(getMaterialsId(), gregtechId("defibernated_sheep_blood"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
+        EdeticAcid = new Material.Builder(getMaterialsId(), gregtechId("edetic_acid"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
+        SolidifiedSterileDefibernatedSheepBlood = new Material.Builder(getMaterialsId(), gregtechId("edetic_acid"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
+        DissolvedPhenylEthylAlcoholAgar = new Material.Builder(getMaterialsId(), gregtechId("dissolved_phenyl_ethyl_alcohol_agar"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
+        PhenylEthylAlcoholAgarSolution = new Material.Builder(getMaterialsId(), gregtechId("phenyl_ethyl_alcohol_agar_solution"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
+        PhenylEthylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("phenyl_ethyl_alcohol"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
+        Xerizin = new Material.Builder(getMaterialsId(), gregtechId("xerizin"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
 
     }
+
 
     private static int getMaterialsId() {
         if (startId < END_ID) {

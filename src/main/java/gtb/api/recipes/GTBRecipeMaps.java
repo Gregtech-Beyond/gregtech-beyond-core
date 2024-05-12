@@ -81,9 +81,4 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> ROTARY_EVAPORATOR = new RecipeMap<>(
             "rotary_evaporator",
             1, 2, 1, 1, new SimpleRecipeBuilder(), false);
-
-
-
-
-
 }

@@ -285,6 +285,10 @@ public class GTBFirstDegreeMaterials {
                 .color(0x9DD6D0)
                 .build().setFormula("KOH", true);
 
+        AluminiumChloride = new Material.Builder(getMaterialsId(), gregtechId("aluminium_chloride"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("AlCl3", true);
     }
 
     private static int getMaterialsId() {

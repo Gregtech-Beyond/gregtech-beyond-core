@@ -7,10 +7,15 @@ public class GTBMaterials {
     // Biological Materials
 
 
-
-
-
-
+    public static Material PhenylEthylAlcoholBloodAgar;
+    public static Material PhenylEthylAlcohol;
+    public static Material PhenylEthylAlcoholAgarSolution;
+    public static Material DissolvedPhenylEthylAlcoholAgar;
+    public static Material SolidifiedSterileDefibernatedSheepBlood;
+    public static Material EdeticAcid;
+    public static Material DefibernatedSheepBlood;
+    public static Material SheepBloodPlasma;
+    public static Material SheepBloodCells;
     public static Material Fructose;
     public static Material Iriditus;
     public static Material EschericiaColi;
@@ -73,10 +78,14 @@ public class GTBMaterials {
     public static Material Yeast;
     public static Material Leucine;
     public static Material BetaPineneSolution;
+    public static Material SheepBlood;
+    public static Material Xerizin;
+    
     // Element Materials
 
     // FD Materials
 
+    public static Material AluminiumChloride;
     public static Material PotassiumHydroxide;
     public static Material PotassiumManganate;
     public static Material SodiumEthoxide;
