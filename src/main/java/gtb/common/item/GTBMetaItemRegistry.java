@@ -24,5 +24,8 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.YEAST_CELLS = addItem(12, "yeast_cells");
         GTBMetaItems.GROWN_YEAST_CULTURE = addItem(13, "grown_yeast_culture");
         GTBMetaItems.BARLEY = addItem(14, "barley");
+        GTBMetaItems.SYRINGE = addItem(15, "syringe");
+        GTBMetaItems.STERILIZED_SYRINGE = addItem(16, "sterilized_syringe");
+        GTBMetaItems.SHEEP_BLOOD_SYRINGE = addItem(17, "sheep_blood_syringe");
     }
 }
