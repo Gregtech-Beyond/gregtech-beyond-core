@@ -19,7 +19,10 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem YEAST_CELLS;
     public static MetaItem<?>.MetaValueItem GROWN_YEAST_CULTURE;
     public static MetaItem<?>.MetaValueItem BARLEY;
-
+    public static MetaItem<?>.MetaValueItem SYRINGE;
+    public static MetaItem<?>.MetaValueItem STERILIZED_SYRINGE;
+    public static MetaItem<?>.MetaValueItem SHEEP_BLOOD_SYRINGE;
+    public static MetaItem<?>.MetaValueItem PAD_PETRI_DISH;
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
         metaItem1.setRegistryName("gtb");
