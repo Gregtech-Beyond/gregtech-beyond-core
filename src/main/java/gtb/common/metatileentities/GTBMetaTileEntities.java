@@ -35,6 +35,7 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] MICROSCOPE = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] ROTARY_EVAPORATOR = new SimpleMachineMetaTileEntity[15];
 
     public static void init() {
         // Multiblocks
@@ -74,6 +75,11 @@ public final class GTBMetaTileEntities {
         registerSimpleMetaTileEntity(
                 MICROSCOPE, 4044, "microscope",
                 GTBRecipeMaps.MICROSCOPE, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                MICROSCOPE, 4060, "rotary_evaporator",
+                GTBRecipeMaps.ROTARY_EVAPORATOR, Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }
