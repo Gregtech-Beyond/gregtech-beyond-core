@@ -3,7 +3,6 @@ package gtb.loaders.recipe;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.dust;
-
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.loaders.recipe.handlers.GTBMaterialRecipeHandler;
@@ -67,7 +66,5 @@ public class Catalysts {
                 .duration(80)
                 .EUt(120)
                 .buildAndRegister();
-
-
     }
 }
