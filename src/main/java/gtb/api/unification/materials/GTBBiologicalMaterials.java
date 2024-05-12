@@ -182,9 +182,135 @@ public class GTBBiologicalMaterials {
                 .build().setFormula("C20H12O3", true);
 
         BrevibacteriumFlavium = new Material.Builder(getMaterialsId(), gregtechId("brevibacterium_flavium"))
-                .liquid(new FluidBuilder())
+                .dust()
                 .color(0x9DD6D0)
                 .build().setFormula("C20H12O3", true);
+
+        YEEMSolution = new Material.Builder(getMaterialsId(), gregtechId("yeem_solution"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        YeastExtractMannitolMedium = new Material.Builder(getMaterialsId(), gregtechId("yeast_extract_mannitol_medium"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        YeastExtractMannitolAgarSolution = new Material.Builder(getMaterialsId(), gregtechId("yeast_extract_mannitol_agar_solution"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        DissolvedYeastExtractMannitolMixture = new Material.Builder(getMaterialsId(), gregtechId("dissolved_yeast_extract_mannitol_mixture"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        YeastExtract = new Material.Builder(getMaterialsId(), gregtechId("yeast_extract"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        Mannitol = new Material.Builder(getMaterialsId(), gregtechId("mannitol"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        YeastMixture = new Material.Builder(getMaterialsId(), gregtechId("yeast_mixture"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        WasteWater = new Material.Builder(getMaterialsId(), gregtechId("waste_water"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        NutrientRichSolution = new Material.Builder(getMaterialsId(), gregtechId("nutrient_rich_solution"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        MaltExtract = new Material.Builder(getMaterialsId(), gregtechId("malt_extract"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        Peptone = new Material.Builder(getMaterialsId(), gregtechId("peptone"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        Wort = new Material.Builder(getMaterialsId(), gregtechId("wort"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        HotGristSolution = new Material.Builder(getMaterialsId(), gregtechId("hot_grist_solution"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        GristPowder = new Material.Builder(getMaterialsId(), gregtechId("grist_powder"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        SolidGrain = new Material.Builder(getMaterialsId(), gregtechId("solid_grain"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        Glucose = new Material.Builder(getMaterialsId(), gregtechId("glucose"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        Nonoxynol_9 = new Material.Builder(getMaterialsId(), gregtechId("nonoxynol_9"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        Nonoxynol_9_Solution = new Material.Builder(getMaterialsId(), gregtechId("nonoxynol_9_solution"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        EthoxylatedNonylphenol = new Material.Builder(getMaterialsId(), gregtechId("ethoxylated_nonylphenol"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        Nonylphenol = new Material.Builder(getMaterialsId(), gregtechId("nonylphenol"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("C20H12O3", true);
+
+        EschericiaColi = new Material.Builder(getMaterialsId(), gregtechId("eschericia_coli"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        Iriditus = new Material.Builder(getMaterialsId(), gregtechId("iriditus"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        Fructose = new Material.Builder(getMaterialsId(), gregtechId("fructose"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+
+
+
+
+
+
+
+
+
+
     }
 
     private static int getMaterialsId() {
