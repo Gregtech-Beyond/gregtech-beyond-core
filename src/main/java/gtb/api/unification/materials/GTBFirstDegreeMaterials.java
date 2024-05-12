@@ -234,6 +234,57 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
+
+        ActivatedCarbon = new Material.Builder(getMaterialsId(), gregtechId("activated_carbon"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("C", true);
+
+        HotWater = new Material.Builder(getMaterialsId(), gregtechId("hot_water"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("H2O", true);
+
+        EthyleneGlycol = new Material.Builder(getMaterialsId(), gregtechId("ethylene_glycol"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("C2H6O2", true);
+
+        SodiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_hydroxide_solution"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("(H2O)NaOH", true);
+
+        SodiumBorohydride = new Material.Builder(getMaterialsId(), gregtechId("sodium_borohydride"))
+                .dust()
+                .color(0x9DD6D0)
+                .build().setFormula("NaBH4", true);
+
+        SodiumHydride = new Material.Builder(getMaterialsId(), gregtechId("sodium_hydride"))
+                .dust()
+                .color(0x9DD6D0)
+                .build().setFormula("NaH", true);
+
+        BoricAcid = new Material.Builder(getMaterialsId(), gregtechId("boric_acid"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("H3BO3", true);
+
+        SodiumEthoxide = new Material.Builder(getMaterialsId(), gregtechId("sodium_ethoxide"))
+                .dust()
+                .color(0x9DD6D0)
+                .build().setFormula("C2H5ONa", true);
+
+        PotassiumManganate = new Material.Builder(getMaterialsId(), gregtechId("potassium_manganate"))
+                .dust()
+                .color(0x9DD6D0)
+                .build().setFormula("K2MnO4", true);
+
+        PotassiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("potassium_hydroxide"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("KOH", true);
+
     }
 
     private static int getMaterialsId() {

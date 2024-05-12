@@ -6,6 +6,35 @@ public class GTBMaterials {
 
     // Biological Materials
 
+
+
+
+
+
+    public static Material Fructose;
+    public static Material Iriditus;
+    public static Material EschericiaColi;
+    public static Material EthyleneGlycol;
+    public static Material Nonylphenol;
+    public static Material EthoxylatedNonylphenol;
+    public static Material Nonoxynol_9_Solution;
+    public static Material Nonoxynol_9;
+    public static Material Glucose;
+    public static Material SolidGrain;
+    public static Material Wort;
+    public static Material HotGristSolution;
+    public static Material GristPowder;
+    public static Material Peptone;
+    public static Material MaltExtract;
+    public static Material NutrientRichSolution;
+    public static Material WasteWater;
+    public static Material YeastMixture;
+    public static Material Mannitol;
+    public static Material YeastExtract;
+    public static Material DissolvedYeastExtractMannitolMixture;
+    public static Material YeastExtractMannitolAgarSolution;
+    public static Material YeastExtractMannitolMedium;
+    public static Material YEEMSolution;
     public static Material CupriavidusNecator;
     public static Material CupriavidusNecatorBacteriaSample;
     public static Material BacterialGrowthMedium;
@@ -48,6 +77,15 @@ public class GTBMaterials {
 
     // FD Materials
 
+    public static Material PotassiumHydroxide;
+    public static Material PotassiumManganate;
+    public static Material SodiumEthoxide;
+    public static Material BoricAcid;
+    public static Material SodiumHydride;
+    public static Material SodiumBorohydride;
+    public static Material SodiumHydroxideSolution;
+    public static Material HotWater;
+    public static Material ActivatedCarbon;
     public static Material EthyleneOxide;
     public static Material TungstenTrioxide;
     public static Material PlatinumConcentrate;
