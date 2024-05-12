@@ -21,5 +21,8 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.PETRI_DISH_MOLD = addItem(9, "petri_dish_mold");
         GTBMetaItems.CUPRIAVIDUS_BACTERIA_SAMPLE_PETRI_DISH = addItem(10, "cuprivavidus_bacteria_sample_petri_dish");
         GTBMetaItems.ULTRASONIC_HOMOGENIZER = addItem(11, "ultrasonic_homogenizer");
+        GTBMetaItems.YEAST_CELLS = addItem(12, "yeast_cells");
+        GTBMetaItems.GROWN_YEAST_CULTURE = addItem(13, "grown_yeast_culture");
+        GTBMetaItems.BARLEY = addItem(14, "barley");
     }
 }
