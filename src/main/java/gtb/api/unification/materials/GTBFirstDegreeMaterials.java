@@ -289,6 +289,22 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
                 .build().setFormula("AlCl3", true);
+
+        CucrmgbaCatalyst = new Material.Builder(getMaterialsId(), gregtechId("cucrmgba_catalyst"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("CuCrMgBa", true);
+
+        OneFourButanediol = new Material.Builder(getMaterialsId(), gregtechId("one_four_butanediol"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C4H10O2", true);
+
+        OneFourButynediol = new Material.Builder(getMaterialsId(), gregtechId("one_four_butanediol"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("C4H6O2", true);
+
     }
 
     private static int getMaterialsId() {

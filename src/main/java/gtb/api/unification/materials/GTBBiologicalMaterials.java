@@ -79,97 +79,97 @@ public class GTBBiologicalMaterials {
         AcetylsulfanilylChloride = new Material.Builder(getMaterialsId(), gregtechId("acetylsulfanilyl_chloride"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("C8H8ClNO3S", true);
 
         ChlorosulfonicAcid = new Material.Builder(getMaterialsId(), gregtechId("chlorosulfonic_acid"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("HSO3Cl", true);
 
         AceticAnhydride = new Material.Builder(getMaterialsId(), gregtechId("acetic_anhydride"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("(CH3CO)2O", true);
 
         Aniline = new Material.Builder(getMaterialsId(), gregtechId("aniline"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("C6H5NH2", true);
 
         AmmoniumNitrate = new Material.Builder(getMaterialsId(), gregtechId("ammonium_nitrate"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("NH4NO3", true);
 
         B_27_Supplement = new Material.Builder(getMaterialsId(), gregtechId("b_27_supplement"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("C142H230N36O44S", true);
 
         Glutamine = new Material.Builder(getMaterialsId(), gregtechId("glutamine"))
                 .dust()
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("C5H10N2O3", true);
 
         LinoleicAcid = new Material.Builder(getMaterialsId(), gregtechId("linoleic_acid"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("C18H32O2", true);
 
         Biotin = new Material.Builder(getMaterialsId(), gregtechId("biotin"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("C10H16N2O3S", true);
 
         Ethanolamine = new Material.Builder(getMaterialsId(), gregtechId("ethanolamine"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("HOCH2CH2NH2", true);
 
         VitaminA = new Material.Builder(getMaterialsId(), gregtechId("vitamin_a"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("C20H30O", true);
 
         BetaIonone = new Material.Builder(getMaterialsId(), gregtechId("beta_ionone"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("C13H20O", true);
 
         PropargylChloride = new Material.Builder(getMaterialsId(), gregtechId("PropargylChloride"))
                 .liquid(new FluidBuilder())
                 .color(0x191919)
-                .build().setFormula("C6H8N2O2S", true);
+                .build().setFormula("HC2CH2Cl", true);
 
         Citral = new Material.Builder(getMaterialsId(), gregtechId("citral"))
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
-                .build().setFormula("C20H12O3", true);
+                .build().setFormula("C10H16O", true);
 
         BetaPinene = new Material.Builder(getMaterialsId(), gregtechId("beta_pinene"))
                 .dust()
                 .color(0x9DD6D0)
-                .build().setFormula("C20H12O3", true);
+                .build().setFormula("C10H16", true);
 
         Turpentine = new Material.Builder(getMaterialsId(), gregtechId("turpentine"))
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
-                .build().setFormula("C20H12O3", true);
+                .build().setFormula("C10H16", true);
 
         PropargylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("propargyl_alcohol"))
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
-                .build().setFormula("C20H12O3", true);
+                .build().setFormula("CHCCH2OH", true);
 
         Acetylene = new Material.Builder(getMaterialsId(), gregtechId("acetylene"))
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
-                .build().setFormula("C20H12O3", true);
+                .build().setFormula("C2H2", true);
 
         CleanAmmoniaSolution = new Material.Builder(getMaterialsId(), gregtechId("clean_ammonia_solution"))
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
-                .build().setFormula("C20H12O3", true);
+                .build().setFormula("NH3(H2O)", true);
 
         Leucine = new Material.Builder(getMaterialsId(), gregtechId("leucine"))
                 .dust()
@@ -179,7 +179,7 @@ public class GTBBiologicalMaterials {
         Yeast = new Material.Builder(getMaterialsId(), gregtechId("yeast"))
                 .dust()
                 .color(0x9DD6D0)
-                .build().setFormula("C20H12O3", true);
+                .build().setFormula("???", true);
 
         BrevibacteriumFlavium = new Material.Builder(getMaterialsId(), gregtechId("brevibacterium_flavium"))
                 .dust()
@@ -339,12 +339,12 @@ public class GTBBiologicalMaterials {
                 .build().setFormula("?", true);
 
         PhenylEthylAlcoholAgarSolution = new Material.Builder(getMaterialsId(), gregtechId("phenyl_ethyl_alcohol_agar_solution"))
-                .dust()
+                .liquid(new FluidBuilder())
                 .color(0x4A148C)
                 .build().setFormula("?", true);
 
         PhenylEthylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("phenyl_ethyl_alcohol"))
-                .dust()
+                .liquid(new FluidBuilder())
                 .color(0x4A148C)
                 .build().setFormula("?", true);
 
@@ -352,6 +352,108 @@ public class GTBBiologicalMaterials {
                 .dust()
                 .color(0x4A148C)
                 .build().setFormula("?", true);
+
+        SolidMilkResidues = new Material.Builder(getMaterialsId(), gregtechId("solid_milk_residues"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        HeatedMilkSlurry = new Material.Builder(getMaterialsId(), gregtechId("heated_milk_slurry"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        PeptoneMixture = new Material.Builder(getMaterialsId(), gregtechId("peptone_mixture"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        AlphaLinolenicAcid = new Material.Builder(getMaterialsId(), gregtechId("alpha_linolenic_acid"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        MilkOil = new Material.Builder(getMaterialsId(), gregtechId("milk_oil"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        HomogenizedPancreasMixture = new Material.Builder(getMaterialsId(), gregtechId("homogenized_pancreas_mixture"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        Trypsin = new Material.Builder(getMaterialsId(), gregtechId("trypsin"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        BeanSlurry = new Material.Builder(getMaterialsId(), gregtechId("bean_slurry"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        Rhizobium = new Material.Builder(getMaterialsId(), gregtechId("rhizobium"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        PapaicDigestOfSoybeanMeal = new Material.Builder(getMaterialsId(), gregtechId("papair_digest_of_soybean_meal"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        DefattedSoybeanFlour = new Material.Builder(getMaterialsId(), gregtechId("defatted_soybean_flour"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        SoybeanOil = new Material.Builder(getMaterialsId(), gregtechId("soybean_oil"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        CrushedSoybean = new Material.Builder(getMaterialsId(), gregtechId("crushed_soybean"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        MethyleneDiphosphoricAcid = new Material.Builder(getMaterialsId(), gregtechId("methylene_diphosphoric_acid"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        OrthophosphoricAcid = new Material.Builder(getMaterialsId(), gregtechId("orthophosphoric_acid"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        OrthophosphoricAcidSolution = new Material.Builder(getMaterialsId(), gregtechId("orthophosphoric_acid_solution"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        PhosphoricAnihydride = new Material.Builder(getMaterialsId(), gregtechId("phosphoric_anihydride"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        PolyhydroxylAlkanoate = new Material.Builder(getMaterialsId(), gregtechId("polyhydroxylalkanoate"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        YButyrolacetone = new Material.Builder(getMaterialsId(), gregtechId("y_butyralacetone"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+        PalmOil = new Material.Builder(getMaterialsId(), gregtechId("y_butyralacetone"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
+
+
 
     }
 

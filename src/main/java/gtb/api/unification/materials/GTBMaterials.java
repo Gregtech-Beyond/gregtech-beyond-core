@@ -7,6 +7,28 @@ public class GTBMaterials {
     // Biological Materials
 
 
+
+
+    public static Material PolyhydroxylAlkanoate;
+    public static Material YButyrolacetone;
+    public static Material PalmOil;
+    public static Material OrthophosphoricAcidSolution;
+    public static Material OrthophosphoricAcid;
+    public static Material PhosphoricAnihydride;
+    public static Material MethyleneDiphosphoricAcid;
+    public static Material PapaicDigestOfSoybeanMeal;
+    public static Material BeanSlurry;
+    public static Material Rhizobium;
+    public static Material DefattedSoybeanFlour;
+    public static Material SoybeanOil;
+    public static Material CrushedSoybean;
+    public static Material Trypsin;
+    public static Material HomogenizedPancreasMixture;
+    public static Material AlphaLinolenicAcid;
+    public static Material SolidMilkResidues;
+    public static Material MilkOil;
+    public static Material HeatedMilkSlurry;
+    public static Material PeptoneMixture;
     public static Material PhenylEthylAlcoholBloodAgar;
     public static Material PhenylEthylAlcohol;
     public static Material PhenylEthylAlcoholAgarSolution;
@@ -86,6 +108,9 @@ public class GTBMaterials {
     // FD Materials
 
     public static Material AluminiumChloride;
+    public static Material CucrmgbaCatalyst;
+    public static Material OneFourButynediol;
+    public static Material OneFourButanediol;
     public static Material PotassiumHydroxide;
     public static Material PotassiumManganate;
     public static Material SodiumEthoxide;
@@ -146,6 +171,7 @@ public class GTBMaterials {
     public static Material RutheniumTetroxideSolution;
     public static Material RhodiumSulfateSolution;
     public static Material Tetrapropylammoniumbromide;
+    public static Material Ethylenediamine;
 
     // Unknown Materials
     public static Material HydroCrackedKerosene;
