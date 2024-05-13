@@ -14,6 +14,8 @@ import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.common.item.GTBMetaItems;
 
+import java.util.concurrent.Callable;
+
 public class BiologyLines {
 
     public static void init() {
@@ -733,6 +735,61 @@ public class BiologyLines {
                 .circuitMeta(1)
                 .buildAndRegister();
 
+        GTBRecipeMaps.BIO_REACTOR.recipeBuilder()
+                .input(dust, GTBMaterials.Glucose, 1)
+                .notConsumable(dust, GTBMaterials.CupriavidusNecator)
+                .fluidInputs(GTBMaterials.PalmOil.getFluid(20))
+                .fluidInputs(GTBMaterials.YButyrolacetone.getFluid(20))
+                .fluidOutputs(GTBMaterials.PolyhydroxylAlkanoate.getFluid(100))
+                .duration(200)
+                .EUt(700)
+                .buildAndRegister();
+
+        FLUID_SOLIDFICATION_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.PolyhydroxylAlkanoate.getFluid(1000))
+                .output(GTBMetaItems.BIO_PLASTIC)
+                .notConsumable(MetaItems.SHAPE_MOLD_PLATE)
+                .duration(240)
+                .EUt(500)
+                .buildAndRegister();
+
+        GTBRecipeMaps.DEHYDRATOR.recipeBuilder()
+                .fluidInputs(GTBMaterials.OneFourButanediol.getFluid(1000))
+                .fluidOutputs(GTBMaterials.YButyrolacetone.getFluid(1000))
+                .notConsumable(dust, GTBMaterials.CucrmgbaCatalyst, 1)
+                .duration(210)
+                .duration(80)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Hydrogen.getFluid(4000))
+                .fluidOutputs(GTBMaterials.OneFourButanediol.getFluid(1000))
+                .fluidInputs(GTBMaterials.OneFourButynediol.getFluid(1000))
+                .notConsumable(dust, Palladium, 1)
+                .duration(200)
+                .EUt(90)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.Acetylene.getFluid(1000))
+                .circuitMeta(1)
+                .fluidInputs(GTBMaterials.Formaldehyde.getFluid(1000))
+                .fluidOutputs(GTBMaterials.OneFourButynediol.getFluid(1000))
+                .duration(400)
+                .EUt(1200)
+                .buildAndRegister();
+
+
+
+
+
+
+
+
+
+
+            }
+        };
 
 
 
