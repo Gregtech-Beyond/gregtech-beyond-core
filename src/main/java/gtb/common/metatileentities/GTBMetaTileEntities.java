@@ -32,6 +32,10 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityFermentationVat FERMENTATION_VAT;
     public static MetaTileEntityFischerTropschReactor FISCHER_TROPSCH_REACTOR;
     public static MetaTileEntityBioReactor BIO_REACTOR;
+    public static MetaTileEntityTextileFactory TEXTILE_FACTORY;
+    public static MetaTileEntityElectrolyticCell ELECTROLYTIC_CELL;
+    public static MetaTileEntityNeutronAccelerator NEUTRON_ACCELERATOR;
+
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] MICROSCOPE = new SimpleMachineMetaTileEntity[15];
@@ -61,6 +65,10 @@ public final class GTBMetaTileEntities {
         FISCHER_TROPSCH_REACTOR = registerMetaTileEntity(3013,
                 new MetaTileEntityFischerTropschReactor(gtb("fischer_tropsch_reactor")));
         BIO_REACTOR = registerMetaTileEntity(3014, new MetaTileEntityBioReactor(gtb("bio_reactor")));
+        TEXTILE_FACTORY = registerMetaTileEntity(3015, new MetaTileEntityTextileFactory(gtb("textile_factory")));
+        ELECTROLYTIC_CELL = registerMetaTileEntity(3016, new MetaTileEntityElectrolyticCell(gtb("electrolytic_cell")));
+        NEUTRON_ACCELERATOR = registerMetaTileEntity(3017,
+                new MetaTileEntityNeutronAccelerator(gtb("neutron_accelerator")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -78,7 +86,7 @@ public final class GTBMetaTileEntities {
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
-                MICROSCOPE, 4060, "rotary_evaporator",
+                ROTARY_EVAPORATOR, 4060, "rotary_evaporator",
                 GTBRecipeMaps.ROTARY_EVAPORATOR, Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
