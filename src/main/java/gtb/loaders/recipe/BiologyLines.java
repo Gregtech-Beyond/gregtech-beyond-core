@@ -5,6 +5,7 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
 import gregtech.api.unification.ore.OrePrefix;
+import gtb.common.item.GTBMetaItemRegistry;
 import net.minecraft.init.Items;
 
 import gregtech.common.items.MetaItems;
@@ -363,6 +364,15 @@ public class BiologyLines {
                 .EUt(120)
                 .buildAndRegister();
 
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.SodiumHydroxideSolution.getFluid(1000))
+                .input(dust, GTBMaterials.Glucose, 6)
+                .notConsumable(dust, GTBMaterials.SodiumBorohydride, 1)
+                .duration(200)
+                .fluidOutputs(GTBMaterials.Mannitol.getFluid(1000))
+                .EUt(120)
+                .buildAndRegister();
+
         MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(1000))
                 .input(dust, SodiumHydroxide, 3)
@@ -402,7 +412,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         GTBRecipeMaps.BIO_REACTOR.recipeBuilder()
-                .notConsumable(GTBMaterials.YeastExtract.getFluid(1000))
+                .notConsumable(GTBMaterials.YEEMSolution.getFluid(1000))
                 .fluidInputs(GTBMaterials.BacterialGrowthMedium.getFluid(250))
                 .fluidOutputs(GTBMaterials.DepletedBacterialGrowthMedium.getFluid(250))
                 .input(dust, GTBMaterials.CupriavidusNecator, 1)
@@ -412,7 +422,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         GTBRecipeMaps.BIO_REACTOR.recipeBuilder()
-                .notConsumable(GTBMaterials.YeastExtract.getFluid(1000))
+                .notConsumable(GTBMaterials.YEEMSolution.getFluid(1000))
                 .fluidInputs(GTBMaterials.BacterialGrowthMedium.getFluid(250))
                 .fluidOutputs(GTBMaterials.DepletedBacterialGrowthMedium.getFluid(250))
                 .input(dust, GTBMaterials.Iriditus, 1)
@@ -422,11 +432,21 @@ public class BiologyLines {
                 .buildAndRegister();
 
         GTBRecipeMaps.BIO_REACTOR.recipeBuilder()
-                .notConsumable(GTBMaterials.YeastExtract.getFluid(1000))
+                .notConsumable(GTBMaterials.YEEMSolution.getFluid(1000))
                 .fluidInputs(GTBMaterials.BacterialGrowthMedium.getFluid(250))
                 .fluidOutputs(GTBMaterials.DepletedBacterialGrowthMedium.getFluid(250))
                 .input(dust, GTBMaterials.EschericiaColi, 1)
                 .output(dust, GTBMaterials.EschericiaColi, 2)
+                .duration(800)
+                .EUt(20000)
+                .buildAndRegister();
+
+        GTBRecipeMaps.BIO_REACTOR.recipeBuilder()
+                .notConsumable(GTBMaterials.YEEMSolution.getFluid(1000))
+                .fluidInputs(GTBMaterials.BacterialGrowthMedium.getFluid(250))
+                .fluidOutputs(GTBMaterials.DepletedBacterialGrowthMedium.getFluid(250))
+                .input(dust, GTBMaterials.Rhizobium, 1)
+                .output(dust, GTBMaterials.Rhizobium, 2)
                 .duration(800)
                 .EUt(20000)
                 .buildAndRegister();
@@ -547,6 +567,182 @@ public class BiologyLines {
                 .duration(120)
                 .EUt(80)
                 .buildAndRegister();
+
+        GTBRecipeMaps.TEXTILE_FACTORY.recipeBuilder()
+                .input(GTBMetaItems.COTTON)
+                .output(GTBMetaItems.COTTON_SHEET)
+                .duration(200)
+                .EUt(120)
+                .buildAndRegister();
+
+        GTBRecipeMaps.TEXTILE_FACTORY.recipeBuilder()
+                .input(GTBMetaItems.COTTON_SHEET)
+                .output(GTBMetaItems.CHEESE_CLOTH)
+                .duration(200)
+                .EUt(120)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .notConsumable(GTBMetaItems.CHEESE_CLOTH)
+                .fluidInputs(GTBMaterials.HeatedMilkSlurry.getFluid(1000))
+                .fluidOutputs(GTBMaterials.PeptoneMixture.getFluid(400))
+                .output(dust,GTBMaterials.SolidMilkResidues)
+                .duration(800)
+                .EUt(612)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .input(dust, GTBMaterials.SolidMilkResidues)
+                .fluidOutputs(GTBMaterials.AlphaLinolenicAcid.getFluid(400))
+                .fluidOutputs(GTBMaterials.MilkOil.getFluid(600))
+                .duration(200)
+                .EUt(150)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .notConsumable(GTBMaterials.Trypsin.getFluid(100))
+                .fluidInputs(GTBMaterials.PeptoneMixture.getFluid(1000))
+                .fluidOutputs(GTBMaterials.Peptone.getFluid(500))
+                .fluidOutputs(Water.getFluid(500))
+                .duration(600)
+                .EUt(560)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.HomogenizedPancreasMixture.getFluid(1000))
+                .fluidOutputs(GTBMaterials.Trypsin.getFluid(50))
+                .duration(200)
+                .notConsumable(GTBMaterials.Nonylphenol.getFluid(100))
+                .EUt(120)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(DistilledWater.getFluid(1000))
+                .input(GTBMetaItems.PANCREAS)
+                .fluidOutputs(GTBMaterials.HomogenizedPancreasMixture.getFluid(1000))
+                .notConsumable(GTBMetaItems.ULTRASONIC_HOMOGENIZER)
+                .duration(120)
+                .EUt(800)
+                .buildAndRegister();
+
+        MACERATOR_RECIPES.recipeBuilder()
+                .input(GTBMetaItems.SOY_BEAN)
+                .output(dust, GTBMaterials.CrushedSoybean, 1)
+                .duration(50)
+                .EUt(60)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.NHeptane.getFluid(1000))
+                .input(dust, GTBMaterials.CrushedSoybean, 1)
+                .output(dust, GTBMaterials.DefattedSoybeanFlour, 1)
+                .fluidOutputs(GTBMaterials.SoybeanOil.getFluid(100))
+                .EUt(120)
+                .EUt(500)
+                .buildAndRegister();
+
+        GTBRecipeMaps.DEHYDRATOR.recipeBuilder()
+                .input(dust, GTBMaterials.DefattedSoybeanFlour, 1)
+                .output(dust, GTBMaterials.PapaicDigestOfSoybeanMeal, 1)
+                .duration(800)
+                .EUt(12)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .input(dust, GTBMaterials.PapaicDigestOfSoybeanMeal, 1)
+                .fluidOutputs(GTBMaterials.BeanSlurry.getFluid(1000))
+                .fluidInputs(Water.getFluid(1000))
+                .output(dust, Wood, 1)
+                .duration(800)
+                .EUt(160)
+                .buildAndRegister();
+
+        GTBRecipeMaps.BIO_REACTOR.recipeBuilder()
+                .fluidInputs(GTBMaterials.BeanSlurry.getFluid(1000))
+                .notConsumable(GTBMetaItems.YEEM_PETRI)
+                .duration(200)
+                .output(dust, GTBMaterials.Rhizobium, 1)
+                .EUt(400)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.YEEMSolution.getFluid(100))
+                .input(GTBMetaItems.PLUS_STERILIZED_PETRI_DISH)
+                .output(GTBMetaItems.YEEM_PETRI)
+                .duration(120)
+                .EUt(120)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(PhosphorusPentoxide.getFluid(1000))
+                .fluidInputs(Chlorine.getFluid(1000))
+                .fluidOutputs(GTBMaterials.PhosphoricAnihydride.getFluid(2000))
+                .duration(200)
+                .EUt(120)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.PhosphoricAnihydride.getFluid(1000))
+                .fluidInputs(Chlorine.getFluid(1000))
+                .fluidOutputs(GTBMaterials.OrthophosphoricAcid.getFluid(2000))
+                .duration(200)
+                .EUt(120)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.OrthophosphoricAcid.getFluid(2000))
+                .fluidOutputs(HydrochloricAcid.getFluid(1000))
+                .fluidOutputs(GTBMaterials.OrthophosphoricAcid.getFluid(1000))
+                .duration(400)
+                .EUt(800)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, GTBMaterials.Formaldehyde, 1)
+                .fluidOutputs(GTBMaterials.MethyleneDiphosphoricAcid.getFluid(1000))
+                .fluidInputs(GTBMaterials.OrthophosphoricAcid.getFluid(1000))
+                .duration(200)
+                .EUt(7000)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidOutputs(GTBMaterials.Ethylenediamine.getFluid(1000))
+                .fluidOutputs(Water.getFluid(1000))
+                .fluidInputs(Ammonia.getFluid(1000))
+                .fluidInputs(GTBMaterials.Ethanolamine.getFluid(1000))
+                .notConsumable(dust, Palladium, 1)
+                .duration(90)
+                .EUt(1280)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.EthyleneOxide.getFluid(1000))
+                .fluidInputs(Ammonia.getFluid(1000))
+                .fluidOutputs(GTBMaterials.Ethanolamine.getFluid(1000))
+                .duration(200)
+                .EUt(800)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(GTBMaterials.Ethylenediamine.getFluid(1000))
+                .fluidInputs(GTBMaterials.SodiumHydroxideSolution.getFluid(1000))
+                .fluidInputs(GTBMaterials.MethyleneDiphosphoricAcid.getFluid(1000))
+                .fluidOutputs(GTBMaterials.EdeticAcid.getFluid(1000))
+                .duration(200)
+                .EUt(1280)
+                .circuitMeta(1)
+                .buildAndRegister();
+
+
+
+
+
+
+
+
+
+
+
 
 
                 }

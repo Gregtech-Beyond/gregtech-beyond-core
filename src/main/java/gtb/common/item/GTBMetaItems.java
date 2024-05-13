@@ -23,6 +23,25 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem STERILIZED_SYRINGE;
     public static MetaItem<?>.MetaValueItem SHEEP_BLOOD_SYRINGE;
     public static MetaItem<?>.MetaValueItem PAD_PETRI_DISH;
+    public static MetaItem<?>.MetaValueItem CHEESE_CLOTH;
+    public static MetaItem<?>.MetaValueItem COTTON_SHEET;
+    public static MetaItem<?>.MetaValueItem COTTON;
+    public static MetaItem<?>.MetaValueItem PANCREAS;
+    public static MetaItem<?>.MetaValueItem YEEM_PETRI;
+    public static MetaItem<?>.MetaValueItem SOY_BEAN;
+    public static MetaItem<?>.MetaValueItem BIO_PLASTIC;
+
+
+
+
+
+
+
+
+
+
+
+
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
         metaItem1.setRegistryName("gtb");

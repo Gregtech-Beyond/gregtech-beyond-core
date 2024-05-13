@@ -27,5 +27,30 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.SYRINGE = addItem(15, "syringe");
         GTBMetaItems.STERILIZED_SYRINGE = addItem(16, "sterilized_syringe");
         GTBMetaItems.SHEEP_BLOOD_SYRINGE = addItem(17, "sheep_blood_syringe");
+        GTBMetaItems.COTTON = addItem(18, "cotton");
+        GTBMetaItems.COTTON_SHEET = addItem(19, "cotton_sheet");
+        GTBMetaItems.CHEESE_CLOTH = addItem(20, "cheese_cloth");
+        GTBMetaItems.PANCREAS = addItem(21, "pancreas");
+        GTBMetaItems.YEEM_PETRI = addItem(22, "yeem_petri");
+        GTBMetaItems.SOY_BEAN = addItem(23, "soy_bean");
+        GTBMetaItems.BIO_PLASTIC = addItem(24, "bio_plastic");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
