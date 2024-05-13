@@ -31,17 +31,6 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem SOY_BEAN;
     public static MetaItem<?>.MetaValueItem BIO_PLASTIC;
 
-
-
-
-
-
-
-
-
-
-
-
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
         metaItem1.setRegistryName("gtb");
