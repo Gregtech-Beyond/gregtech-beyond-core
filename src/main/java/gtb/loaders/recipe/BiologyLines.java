@@ -4,8 +4,6 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
-import gregtech.api.unification.ore.OrePrefix;
-import gtb.common.item.GTBMetaItemRegistry;
 import net.minecraft.init.Items;
 
 import gregtech.common.items.MetaItems;
@@ -13,8 +11,6 @@ import gregtech.common.items.MetaItems;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.common.item.GTBMetaItems;
-
-import java.util.concurrent.Callable;
 
 public class BiologyLines {
 
@@ -154,10 +150,9 @@ public class BiologyLines {
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs()
                 .input(dust, GTBMaterials.BetaPinene, 26)
-                .fluidOutputs(Isoprene.getFluid(2000))
-                .fluidOutputs(Oxygen.getFluid(2000))
+                .fluidInputs(Isoprene.getFluid(2000))
+                .fluidInputs(Oxygen.getFluid(2000))
                 .fluidOutputs(GTBMaterials.Citral.getFluid(2000))
                 .duration(120)
                 .EUt(90)
@@ -588,7 +583,7 @@ public class BiologyLines {
                 .notConsumable(GTBMetaItems.CHEESE_CLOTH)
                 .fluidInputs(GTBMaterials.HeatedMilkSlurry.getFluid(1000))
                 .fluidOutputs(GTBMaterials.PeptoneMixture.getFluid(400))
-                .output(dust,GTBMaterials.SolidMilkResidues)
+                .output(dust, GTBMaterials.SolidMilkResidues)
                 .duration(800)
                 .EUt(612)
                 .buildAndRegister();
@@ -778,29 +773,5 @@ public class BiologyLines {
                 .duration(400)
                 .EUt(1200)
                 .buildAndRegister();
-
-
-
-
-
-
-
-
-
-
-            }
-        };
-
-
-
-
-
-
-
-
-
-
-
-
-                }
-}
+    }
+};
