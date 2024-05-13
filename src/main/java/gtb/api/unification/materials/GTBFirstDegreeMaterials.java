@@ -225,12 +225,17 @@ public class GTBFirstDegreeMaterials {
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
 
-        HundredMethanol = new Material.Builder(getMaterialsId(), gregtechId("hundret_methanol"))
+        HundredMethanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_methanol"))
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
 
-        HundredButanol = new Material.Builder(getMaterialsId(), gregtechId("hundret_butanol"))
+        HundredButanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_butanol"))
+                .liquid(new FluidBuilder())
+                .color(0x9DD6D0)
+                .build().setFormula("C2H4O", true);
+
+        HundredEthanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_ethanol"))
                 .liquid(new FluidBuilder())
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
@@ -286,12 +291,12 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("KOH", true);
 
         AluminiumChloride = new Material.Builder(getMaterialsId(), gregtechId("aluminium_chloride"))
-                .liquid(new FluidBuilder())
+                .dust()
                 .color(0x9DD6D0)
                 .build().setFormula("AlCl3", true);
 
         CucrmgbaCatalyst = new Material.Builder(getMaterialsId(), gregtechId("cucrmgba_catalyst"))
-                .liquid(new FluidBuilder())
+                .dust()
                 .color(0x4A148C)
                 .build().setFormula("CuCrMgBa", true);
 
@@ -304,7 +309,6 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0x4A148C)
                 .build().setFormula("C4H6O2", true);
-
     }
 
     private static int getMaterialsId() {

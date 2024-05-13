@@ -6,9 +6,6 @@ public class GTBMaterials {
 
     // Biological Materials
 
-
-
-
     public static Material PolyhydroxylAlkanoate;
     public static Material YButyrolacetone;
     public static Material PalmOil;

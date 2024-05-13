@@ -15,7 +15,7 @@ public class GTBBiologicalMaterials {
     public static void register() {
         CupriavidusNecator = new Material.Builder(getMaterialsId(), gregtechId("cupriavidus_necator"))
                 .dust()
-                .color(0xEF5350)
+                .color(0x6B8D6E)
                 .build().setFormula("Bacteria", true);
 
         BacterialGrowthMedium = new Material.Builder(getMaterialsId(), gregtechId("bacterial_growth_medium"))
@@ -328,20 +328,23 @@ public class GTBBiologicalMaterials {
                 .color(0x4A148C)
                 .build().setFormula("?", true);
 
-        SolidifiedSterileDefibernatedSheepBlood = new Material.Builder(getMaterialsId(), gregtechId("edetic_acid"))
-                .dust()
-                .color(0x4A148C)
-                .build().setFormula("?", true);
+        SolidifiedSterileDefibernatedSheepBlood = new Material.Builder(getMaterialsId(),
+                gregtechId("solidified_sterile_defibernated_sheep_blood"))
+                        .dust()
+                        .color(0x4A148C)
+                        .build().setFormula("?", true);
 
-        DissolvedPhenylEthylAlcoholAgar = new Material.Builder(getMaterialsId(), gregtechId("dissolved_phenyl_ethyl_alcohol_agar"))
-                .dust()
-                .color(0x4A148C)
-                .build().setFormula("?", true);
+        DissolvedPhenylEthylAlcoholAgar = new Material.Builder(getMaterialsId(),
+                gregtechId("dissolved_phenyl_ethyl_alcohol_agar"))
+                        .dust()
+                        .color(0x4A148C)
+                        .build().setFormula("?", true);
 
-        PhenylEthylAlcoholAgarSolution = new Material.Builder(getMaterialsId(), gregtechId("phenyl_ethyl_alcohol_agar_solution"))
-                .liquid(new FluidBuilder())
-                .color(0x4A148C)
-                .build().setFormula("?", true);
+        PhenylEthylAlcoholAgarSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("phenyl_ethyl_alcohol_agar_solution"))
+                        .liquid(new FluidBuilder())
+                        .color(0x4A148C)
+                        .build().setFormula("?", true);
 
         PhenylEthylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("phenyl_ethyl_alcohol"))
                 .liquid(new FluidBuilder())
@@ -428,10 +431,11 @@ public class GTBBiologicalMaterials {
                 .color(0x4A148C)
                 .build().setFormula("?", true);
 
-        OrthophosphoricAcidSolution = new Material.Builder(getMaterialsId(), gregtechId("orthophosphoric_acid_solution"))
-                .liquid(new FluidBuilder())
-                .color(0x4A148C)
-                .build().setFormula("?", true);
+        OrthophosphoricAcidSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("orthophosphoric_acid_solution"))
+                        .liquid(new FluidBuilder())
+                        .color(0x4A148C)
+                        .build().setFormula("?", true);
 
         PhosphoricAnihydride = new Material.Builder(getMaterialsId(), gregtechId("phosphoric_anihydride"))
                 .liquid(new FluidBuilder())
@@ -453,10 +457,11 @@ public class GTBBiologicalMaterials {
                 .color(0x4A148C)
                 .build().setFormula("?", true);
 
-
-
+        BetaPineneSolution = new Material.Builder(getMaterialsId(), gregtechId("beta_pinene_solution"))
+                .liquid(new FluidBuilder())
+                .color(0x4A148C)
+                .build().setFormula("?", true);
     }
-
 
     private static int getMaterialsId() {
         if (startId < END_ID) {
