@@ -4,9 +4,8 @@ import static gregtech.api.recipes.RecipeMap.getByName;
 import static gregtech.api.recipes.RecipeMap.getRecipeMaps;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.ore.OrePrefix.dust;
-import static gtb.api.recipes.GTBRecipeMaps.DEHYDRATOR;
-import static net.minecraft.client.renderer.GlStateManager.TexGen.R;
+import static gregtech.api.unification.ore.OrePrefix.*;
+import static gtb.api.recipes.GTBRecipeMaps.*;
 
 import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.items.metaitem.MetaOreDictItem;

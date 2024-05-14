@@ -1,6 +1,6 @@
 package gtb.common.item;
 
-import gregtech.api.items.metaitem.MetaItem;
+
 import gregtech.api.items.metaitem.StandardMetaItem;
 
 public class GTBMetaItems extends StandardMetaItem {
@@ -18,5 +18,12 @@ public class GTBMetaItems extends StandardMetaItem {
         metaItem1.addItem(4, "bitominous_residues");
         metaItem1.addItem(5, "damascus_steel_assembly");
         metaItem1.addItem(6, "hot_damascus_steel_assembly");
+        metaItem1.addItem(7, "lightly_forged_damascus_steel_plate");
+        metaItem1.addItem(8, "hot_lightly_forged_damascus_steel_plate");
+        metaItem1.addItem(9, "moderately_forged_damascus_steel_plate");
+        metaItem1.addItem(10, "hot_moderately_forged_damascus_steel_plate");
+        metaItem1.addItem(11, "highly_forged_damascus_steel_plate");
+        metaItem1.addItem(12, "hot_highly_forged_damascus_steel_plate");
+        metaItem1.addItem(13, "forged_damascus_steel_plate");
     }
 }

@@ -159,7 +159,7 @@ public class OilLine {
 
         GTBRecipeMaps.FISCHER_TROPSCH_REACTOR.recipeBuilder().fluidInputs(DistilledWater.getFluid(2000))
                 .fluidInputs(RefineryGas.getFluid(8000)).notConsumable(dust, CobaltOxide, 1)
-                .output(GTBMetaItems.getByNameOrId("paraffin_wax"), 1).fluidOutputs(Diesel.getFluid(1000))
+                .output(GTBMetaItems.getByNameOrId("3"), 1).fluidOutputs(Diesel.getFluid(1000))
                 .fluidOutputs(Gasoline.getFluid(500)).fluidOutputs(Water.getFluid(2000))
                 .fluidOutputs(SulfuricAcid.getFluid(1000)).fluidOutputs(Ethylene.getFluid(1500))
                 .fluidOutputs(Ethanol.getFluid(1500)).fluidOutputs(Methane.getFluid(2000))
@@ -187,7 +187,7 @@ public class OilLine {
 
         EXTRACTOR_RECIPES.recipeBuilder()
                 .circuitMeta(1)
-                .input(GTBMetaItems.getByNameOrId("paraffin_wax"))
+                .input(GTBMetaItems.getByNameOrId("paraffin_wax"), 1)
                 .fluidOutputs(GTBMaterials.Resin.getFluid(1000))
                 .duration(20)
                 .EUt(8)
@@ -195,7 +195,7 @@ public class OilLine {
 
         EXTRACTOR_RECIPES.recipeBuilder()
                 .circuitMeta(2)
-                .input(GTBMetaItems.getByNameOrId("paraffin_wax"))
+                .input(GTBMetaItems.getByNameOrId("paraffin_wax"), 1)
                 .fluidOutputs(Lubricant.getFluid(1000))
                 .duration(20)
                 .EUt(8)
