@@ -19,6 +19,10 @@ import net.minecraft.client.network.NetHandlerHandshakeMemory;
 import net.minecraftforge.common.ForgeChunkManager;
 import org.apache.logging.log4j.core.pattern.AbstractStyleNameConverter;
 import scala.swing.MainFrame;
+import java.util.ArrayList;
+import java.util.List;
+
+import gregtech.api.unification.material.Material;
 
 public class Photolithography {
 
@@ -1336,33 +1340,122 @@ public class Photolithography {
                 .EUt(901275)
                 .buildAndRegister();
 
+        List<Material> N_DOPANT_MATERIALS = new ArrayList<>();
+        N_DOPANT_MATERIALS.add(GTBMaterials.WhitePhosphorus);
+        N_DOPANT_MATERIALS.add(Arsenic);
+        N_DOPANT_MATERIALS.add(Antimony);
+        N_DOPANT_MATERIALS.add(Bismuth);
+        N_DOPANT_MATERIALS.add(Moscovium);
+        N_DOPANT_MATERIALS.add(Antimony);
+
+        List<Material> P_DOPANT_MATERIALS = new ArrayList<>();
+        P_DOPANT_MATERIALS.add(Aluminium);
+        P_DOPANT_MATERIALS.add(Boron);
+        P_DOPANT_MATERIALS.add(Gallium);
+        P_DOPANT_MATERIALS.add(Thallium);
+        P_DOPANT_MATERIALS.add(Nihonium);
+        P_DOPANT_MATERIALS.add(Indium);
+
+        for (Material nDopantMaterial : N_DOPANT_MATERIALS) {
+            for (Material pDopantMaterial : P_DOPANT_MATERIALS) {
+
+
+                CVD_UNIT.recipeBuilder()
+                        .input(ENGRAVED_POWER_IC_WAFER)
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(DOPED_POWER_IC_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                CVD_UNIT.recipeBuilder()
+                        .input(POLYSILICON_WAFER)
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(DOPED_POLYSILICON_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                CVD_UNIT.recipeBuilder()
+                        .input(ENGRAVED_RAM_WAFER)
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(DOPED_RAM_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                CVD_UNIT.recipeBuilder()
+                        .input(ENGRAVED_CPU_WAFER)
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(DOPED_CPU_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                CVD_UNIT.recipeBuilder()
+                        .input(ENGRAVED_IC_WAFER)
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(DOPED_IC_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                ION_IMPLANTER.recipeBuilder()
+                        .input(ENGRAVED_NANOCPU_WAFER)
+                        .fluidInputs(GTBMaterials.VeryHotArgon.getFluid(1000))
+                        .fluidOutputs(Argon.getFluid(1000))
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(DOPED_NANOCPU_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                ION_IMPLANTER.recipeBuilder()
+                        .input(ENGRAVED_SPINORIAL_MEMORY_WAFER)
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(DOPED_ARAM_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                ION_IMPLANTER.recipeBuilder()
+                        .input(ENGRAVED_HASOC_WAFER)
+                        .input(dust, Naquadah)
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(UNPOLARIZED_HASOC_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                ION_IMPLANTER.recipeBuilder()
+                        .input(ENGRAVED_SOC_WAFER)
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(DOPED_SOC_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                ION_IMPLANTER.recipeBuilder()
+                        .input(SILICON_DIOXIDE_WAFER)
+                        .input(dust, nDopantMaterial)
+                        .output(N_DOPED_SILICON_DIOXIDE_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            }
+        }
     }
 }
