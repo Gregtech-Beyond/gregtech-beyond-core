@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.jetbrains.annotations.NotNull;
 
 import gtb.api.GTBInternalTags;
+import gtb.api.capabilites.GTBTileCapabilities;
 import gtb.api.utils.GTBLog;
 import gtb.common.CommonProxy;
 import gtb.common.block.GTBMetaBlocks;
@@ -31,7 +32,7 @@ public class GregtechBeyondCore {
     @Mod.EventHandler
     public void onPreInit(@NotNull FMLPreInitializationEvent event) {
         GTBLog.init(event.getModLog());
-
+        GTBTileCapabilities.register();
         GTBMetaItems.init();
         GTBMetaBlocks.init();
         GTBMetaTileEntities.init();
