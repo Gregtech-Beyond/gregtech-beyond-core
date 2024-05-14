@@ -2,6 +2,7 @@ package gtb.loaders.recipe;
 
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
+import gtb.loaders.recipe.handlers.DamascusSteelLine;
 
 public final class GTBRecipeLoader {
 
@@ -25,5 +26,6 @@ public final class GTBRecipeLoader {
         TungstenLine.init();
         MaterialBenefication.init();
         RandomRecipes.init();
+        DamascusSteelLine.init();
     }
 }
