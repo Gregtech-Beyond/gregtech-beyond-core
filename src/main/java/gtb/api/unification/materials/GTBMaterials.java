@@ -63,6 +63,9 @@ public class GTBMaterials {
     public static Material LithiumFluoride;
     public static Material PhotopolymerSolution;
     public static Material UsedPhotopolymerSolution;
+    public static Material VeryHotXenon;
+    public static Material VeryHotArgon;
+
 
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;

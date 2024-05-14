@@ -262,15 +262,17 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(gregtech:meta_item_1:12001,gregtech:meta_item_1:12364)
-    .circuitMeta(1)
+                .input(plate, Aluminium)
+                .input(plate, BorosilicateGlass)
+                .circuitMeta(1)
     .output(LITHOGRAPHY_BASE_MASK)
     .duration(20)
                 .EUt(12)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
     .circuitMeta(1)
     .output(PIC_LITHOGRAPHY_MASK)
     .duration(50)
@@ -278,90 +280,90 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,MetaItems.DYEBLACK)
-    .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 2}))
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+    .circuitMeta(2)
     .output(CPU_LITHOGRAPHY_MASK)
     .duration(50)
                 .EUt(12)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
-    .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 3}))
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
+    .circuitMeta(3)
     .output(RAM_LITHOGRAPHY_MASK)
     .duration(50)
                 .EUt(12)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
-    .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 4}))
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
+                .circuitMeta(4)
     .output(SINGLE_JOSEPHSON_JUNCTION_LITHOGRAPHY_MASK)
     .duration(50)
                 .EUt(12)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
-    .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 5}))
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
+                .circuitMeta(5)
     .output(LPIC_LITHOGRAPHY_MASK)
     .duration(50)
                 .EUt(12)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
-    .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 6}))
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
+                .circuitMeta(6)
     .output(INTEGRATED_CIRCUIT_LITHOGRAPHY_MASK)
     .duration(50)
                 .EUt(12)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
-    .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 7}))
-    .output(NANOCPU_LITHOGRAPHY_MASK)
+                .input(LITHOGRAPHY_BASE_MASK)
+                .input(dye, DyeBlack)
+                .circuitMeta(7)
+                .output(NANOCPU_LITHOGRAPHY_MASK)
     .duration(50)
                 .EUt(12)
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
-    .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 8}))
-    .output(HASOC_LITHOGRAPHY_MASK)
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
+                .circuitMeta(8)
+                .output(HASOC_LITHOGRAPHY_MASK)
     .duration(50)
                 .EUt(12)
                 .buildAndRegister();
 
         FLUID_HEATER_RECIPES.recipeBuilder()
-                .fluidInputs(xenon.getFluid(1000))
-    .fluidOutputs(very_hot_xenon.getFluid(1000))
+                .fluidInputs(Xenon.getFluid(1000))
+    .fluidOutputs(GTBMaterials.VeryHotXenon.getFluid(1000))
     .duration(200)
                 .EUt(80)
                 .buildAndRegister();
 
         LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(RAM_LITHOGRAPHY_MASK).input(MetaItems.SILICON_WAFER).output(ENGRAVED_RAM_WAFER).duration(20).EUt(12).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(RAM_LITHOGRAPHY_MASK).input(MetaItems.PHOSPHORUS_WAFER).output(ENGRAVED_RAM_WAFER,4).duration(20).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(RAM_LITHOGRAPHY_MASK).input(gregtech:meta_item_2:32442).output(ENGRAVED_RAM_WAFER,8).duration(20).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(RAM_LITHOGRAPHY_MASK).input(gtadditions:ga_meta_item:32333).output(ENGRAVED_RAM_WAFER,12).duration(20).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(RAM_LITHOGRAPHY_MASK).input(gtadditions:ga_meta_item:32334).output(ENGRAVED_RAM_WAFER,16).duration(20).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(RAM_LITHOGRAPHY_MASK).input(gtadditions:ga_meta_item:32335).output(ENGRAVED_RAM_WAFER,20).duration(20).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(RAM_LITHOGRAPHY_MASK).input(gtadditions:ga_meta_item:32335).output(ENGRAVED_RAM_WAFER,20).duration(20).EUt(12).buildAndRegister();
-
+        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(RAM_LITHOGRAPHY_MASK).input(MetaItems.NAQUADAH_BOULE).output(ENGRAVED_RAM_WAFER,8).duration(20).EUt(12).buildAndRegister();
+        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(RAM_LITHOGRAPHY_MASK).input(MetaItems.NEUTRONIUM_BOULE).output(ENGRAVED_RAM_WAFER,12).duration(20).EUt(12).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(PIC_LITHOGRAPHY_MASK).input(POLYSILICON_WAFER).output(ENGRAVED_POWER_IC_WAFER).duration(20).EUt(12).buildAndRegister();
 
         LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(CPU_LITHOGRAPHY_MASK).input(MetaItems.SILICON_WAFER).output(ENGRAVED_CPU_WAFER).duration(20).EUt(12).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(CPU_LITHOGRAPHY_MASK).input(MetaItems.PHOSPHORUS_WAFER).output(ENGRAVED_CPU_WAFER,4).duration(20).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(CPU_LITHOGRAPHY_MASK).input(gregtech:meta_item_2:32442).output(ENGRAVED_CPU_WAFER,8).duration(20).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(CPU_LITHOGRAPHY_MASK).input(gtadditions:ga_meta_item:32333).output(ENGRAVED_CPU_WAFER,12).duration(20).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(CPU_LITHOGRAPHY_MASK).input(gtadditions:ga_meta_item:32334).output(ENGRAVED_CPU_WAFER,16).duration(20).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(CPU_LITHOGRAPHY_MASK).input(gtadditions:ga_meta_item:32335).output(ENGRAVED_CPU_WAFER,20).duration(20).EUt(12).buildAndRegister();
+        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(CPU_LITHOGRAPHY_MASK).input(MetaItems.NAQUADAH_BOULE).output(ENGRAVED_CPU_WAFER,8).duration(20).EUt(12).buildAndRegister();
+        LASER_ENGRAVER_RECIPES.recipeBuilder().notConsumable(CPU_LITHOGRAPHY_MASK).input(MetaItems.NEUTRONIUM_BOULE).output(ENGRAVED_CPU_WAFER,12).duration(20).EUt(12).buildAndRegister();
 
         CHEMICAL_BATH_RECIPES.recipeBuilder()
-                .fluidInputs(very_hot_argon.getFluid(1000))
+                .fluidInputs(GTBMaterials.VeryHotArgon.getFluid(1000))
     .input(DOPED_HIGH_POWER_IC_WAFER)
-    .output(gregtech:meta_item_2:32465)
-    .fluidOutputs(argon.getFluid(1000))
+    .output(MetaItems.HIGH_POWER_INTEGRATED_CIRCUIT)
+    .fluidOutputs(Argon.getFluid(1000))
     .duration(200)
                 .EUt(12)
                 .buildAndRegister();
@@ -386,8 +388,9 @@ public class Photolithography {
                 .buildAndRegister();
 
         cvd_unit.recipeBuilder()
-                .input(ENGRAVED_TITANATE_SUBSTRATE,gregtech:meta_item_1:2744,2)
-    .fluidInputs(silicon_carbide_vapor.getFluid(144))
+                .input(ENGRAVED_TITANATE_SUBSTRATE)
+                .input(dust, )
+    .fluidInputs(GTBMaterials.SiliconCarbideVapor.getFluid(144))
     .output(SUPERCONDUCTOR_COATED_SUBSTRATE_WAFER)
     .duration(800)
                 .EUt(1800)
@@ -530,7 +533,7 @@ gregtech:meta_item_1:2679,
 
         roasters.recipeBuilder()
                 .fluidInputs(oxygen,4000)
-    .input(gregtech:meta_item_2:32442)
+    .input(MetaItems.NAQUADAH_BOULE)
     .output(GTBMetaItems.silicon_dioxide_wafer,4)
     .duration(200)
                 .EUt(12)
@@ -538,7 +541,7 @@ gregtech:meta_item_1:2679,
 
         roasters.recipeBuilder()
                 .fluidInputs(oxygen,6000)
-    .input(gtadditions:ga_meta_item:32333)
+    .input(MetaItems.NEUTRONIUM_BOULE)
     .output(GTBMetaItems.silicon_dioxide_wafer,6)
     .duration(200)
                 .EUt(12)
@@ -571,15 +574,15 @@ gregtech:meta_item_1:2679,
 
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.SILICON_WAFER)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer)    .duration(400).EUt(12).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.PHOSPHORUS_WAFER)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,4)    .duration(400).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gregtech:meta_item_2:32442)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,8)    .duration(400).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gtadditions:ga_meta_item:32333)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,12)    .duration(400).EUt(12).buildAndRegister();
+        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.NAQUADAH_BOULE)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,8)    .duration(400).EUt(12).buildAndRegister();
+        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.NEUTRONIUM_BOULE)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,12)    .duration(400).EUt(12).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gtadditions:ga_meta_item:32334)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,16)    .duration(400).EUt(12).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gtadditions:ga_meta_item:32335)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,20)    .duration(400).EUt(12).buildAndRegister();
 
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.SILICON_WAFER)    .notConsumable(GTBMetaItems.nanocpu_lithography_mask)   .output(ENGRAVED_NANOCPU_WAFER)    .duration(400).EUt(480).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.PHOSPHORUS_WAFER)    .notConsumable(GTBMetaItems.nanocpu_lithography_mask)   .output(ENGRAVED_NANOCPU_WAFER,4)    .duration(400).EUt(480).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gregtech:meta_item_2:32442)    .notConsumable(GTBMetaItems.nanocpu_lithography_mask)   .output(ENGRAVED_NANOCPU_WAFER,8)    .duration(400).EUt(480).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gtadditions:ga_meta_item:32333)    .notConsumable(GTBMetaItems.nanocpu_lithography_mask)   .output(ENGRAVED_NANOCPU_WAFER,12)    .duration(400).EUt(480).buildAndRegister();
+        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.NAQUADAH_BOULE)    .notConsumable(GTBMetaItems.nanocpu_lithography_mask)   .output(ENGRAVED_NANOCPU_WAFER,8)    .duration(400).EUt(480).buildAndRegister();
+        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.NEUTRONIUM_BOULE)    .notConsumable(GTBMetaItems.nanocpu_lithography_mask)   .output(ENGRAVED_NANOCPU_WAFER,12)    .duration(400).EUt(480).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gtadditions:ga_meta_item:32334)    .notConsumable(GTBMetaItems.nanocpu_lithography_mask)   .output(ENGRAVED_NANOCPU_WAFER,16)    .duration(400).EUt(480).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gtadditions:ga_meta_item:32335)    .notConsumable(GTBMetaItems.nanocpu_lithography_mask)   .output(ENGRAVED_NANOCPU_WAFER,20)    .duration(400).EUt(480).buildAndRegister();
 
@@ -635,8 +638,8 @@ gregtech:meta_item_1:2679,
 
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.SILICON_WAFER)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer)    .duration(400).EUt(12).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.PHOSPHORUS_WAFER)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,4)    .duration(400).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gregtech:meta_item_2:32442)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,8)    .duration(400).EUt(12).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gtadditions:ga_meta_item:32333)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,12)    .duration(400).EUt(12).buildAndRegister();
+        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.NAQUADAH_BOULE)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,8)    .duration(400).EUt(12).buildAndRegister();
+        LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(MetaItems.NEUTRONIUM_BOULE)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,12)    .duration(400).EUt(12).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gtadditions:ga_meta_item:32334)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,16)    .duration(400).EUt(12).buildAndRegister();
         LASER_ENGRAVER_RECIPES.recipeBuilder()    .input(gtadditions:ga_meta_item:32335)    .notConsumable(GTBMetaItems.integrated_circuit_photolithography_mask)   .output(GTBMetaItems.engraved_ic_wafer,20)    .duration(400).EUt(12).buildAndRegister();
 
@@ -685,7 +688,8 @@ gregtech:meta_item_1:2679,
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
     .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 7}))
     .output(GTBMetaItems.nor_photolithography_mask)
     .duration(50)
@@ -693,7 +697,8 @@ gregtech:meta_item_1:2679,
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
     .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 8}))
     .output(GTBMetaItems.nand_photolithography_mask)
     .duration(50)
@@ -701,7 +706,8 @@ gregtech:meta_item_1:2679,
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
     .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 9}))
     .output(GTBMetaItems.soc_lithography_mask)
     .duration(50)
@@ -709,7 +715,8 @@ gregtech:meta_item_1:2679,
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK,ore:dyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK
+                ).input(dye, DyeBlack)
     .notConsumable(gregtech:meta_item_1:32766.withTag({Configuration: 10}))
     .output(GTBMetaItems.pre_engraving_oganesson_lithography_mask)
     .duration(50)

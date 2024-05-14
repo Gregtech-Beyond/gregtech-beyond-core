@@ -276,7 +276,7 @@ public class GTBFirstDegreeMaterials {
         VeryHotNitrogen = new Material.Builder(getMaterialsId(), gregtechId("very_hot_nitrogen"))
                 .liquid(new FluidBuilder())
                 .color(0x1A4051)
-                .build().setFormula("NqO2", true);
+                .build().setFormula("N", true);
 
         PhotopolymerSolution = new Material.Builder(getMaterialsId(), gregtechId("photopolymer_solution"))
                 .liquid(new FluidBuilder())
@@ -287,6 +287,16 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0x1A4051)
                 .build().setFormula("NqO2", true);
+
+        VeryHotXenon = new Material.Builder(getMaterialsId(), gregtechId("very_hot_xenon"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("Xe", true);
+
+        VeryHotArgon = new Material.Builder(getMaterialsId(), gregtechId("very_hot_xenon"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("Ar", true);
 
 
 
