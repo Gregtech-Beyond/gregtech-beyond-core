@@ -7,7 +7,19 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
-
+    public static Material VeryHotNitrogen;
+    public static Material SiliconCarbideVapor;
+    public static Material SiliconCarbide;
+    public static Material LiquidXenon;
+    public static Material ExtraDistilledWater;
+    public static Material Nylon;
+    public static Material NaquadahDioxide;
+    public static Material ElectronDegenerateRhenium;
+    public static Material ElectronDegenerateRheniumPlasma;
+    public static Material HighPurityArsenic;
+    public static Material WhitePhosphorus;
+    public static Material NovolacsPhotoresist;
+    public static Material IndiumChloride;
     public static Material PlatinumConcentrate;
     public static Material PlatinumExtract;
     public static Material PalladiumExtract;
@@ -49,6 +61,8 @@ public class GTBMaterials {
     public static Material CalciumTungstate;
     public static Material LithiumHydroxideSolution;
     public static Material LithiumFluoride;
+    public static Material PhotopolymerSolution;
+    public static Material UsedPhotopolymerSolution;
 
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;

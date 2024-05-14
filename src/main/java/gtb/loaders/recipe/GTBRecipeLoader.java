@@ -25,5 +25,6 @@ public final class GTBRecipeLoader {
         TungstenLine.init();
         MaterialBenefication.init();
         RandomRecipes.init();
+        Photolithography.init();
     }
 }

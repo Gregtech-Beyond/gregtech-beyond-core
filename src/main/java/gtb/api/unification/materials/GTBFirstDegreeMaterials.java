@@ -6,6 +6,7 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
+import gtb.loaders.recipe.Photolithography;
 
 public class GTBFirstDegreeMaterials {
 
@@ -207,7 +208,7 @@ public class GTBFirstDegreeMaterials {
 
         LithiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxidesolution"))
                 .dust()
-                .fluid()
+                .liquid(new FluidBuilder())
                 .color(0x1A4051)
                 .build().setFormula("(H2O)LiOH", true);
 
@@ -215,6 +216,81 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0x1A4051)
                 .build().setFormula("(H2O)LiOH", true);
+
+        NaquadahDioxide = new Material.Builder(getMaterialsId(), gregtechId("naquadah_dioxide"))
+                .dust()
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        Nylon = new Material.Builder(getMaterialsId(), gregtechId("nylon"))
+                .dust()
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        ElectronDegenerateRhenium = new Material.Builder(getMaterialsId(), gregtechId("electron_degenerate_rhenium"))
+                .dust()
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        ElectronDegenerateRheniumPlasma = new Material.Builder(getMaterialsId(), gregtechId("electron_degenerate_rhenium_plasma"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        HighPurityArsenic = new Material.Builder(getMaterialsId(), gregtechId("high_purity_arsenic"))
+                .dust()
+                .color(0xB0B0B1)
+                .build().setFormula("NqO2", true);
+
+        IndiumChloride = new Material.Builder(getMaterialsId(), gregtechId("indium_chloride"))
+                .dust()
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        NovolacsPhotoresist = new Material.Builder(getMaterialsId(), gregtechId("novolacs_photoresist"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        WhitePhosphorus = new Material.Builder(getMaterialsId(), gregtechId("white_phosphorus"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("P4", true);
+
+        LiquidXenon = new Material.Builder(getMaterialsId(), gregtechId("liquid_xenon"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        SiliconCarbide = new Material.Builder(getMaterialsId(), gregtechId("silicon_carbide"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        SiliconCarbideVapor = new Material.Builder(getMaterialsId(), gregtechId("silicon_carbide_vapor"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        VeryHotNitrogen = new Material.Builder(getMaterialsId(), gregtechId("very_hot_nitrogen"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        PhotopolymerSolution = new Material.Builder(getMaterialsId(), gregtechId("photopolymer_solution"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+        UsedPhotopolymerSolution = new Material.Builder(getMaterialsId(), gregtechId("used_photopolymer_solution"))
+                .liquid(new FluidBuilder())
+                .color(0x1A4051)
+                .build().setFormula("NqO2", true);
+
+
+
+
     }
 
     private static int getMaterialsId() {
