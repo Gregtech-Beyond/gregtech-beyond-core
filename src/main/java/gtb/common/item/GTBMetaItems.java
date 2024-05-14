@@ -4,6 +4,7 @@ import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.items.metaitem.StandardMetaItem;
 
 public class GTBMetaItems extends StandardMetaItem {
+
     public GTBMetaItems(short i) {
         super(i);
     }

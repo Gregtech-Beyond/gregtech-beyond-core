@@ -2,9 +2,9 @@ package gtb.api.unification.materials;
 
 public class GTBBiologicalMaterials {
 
-    // Range 25601-25800
+    // Range 25601-26601
     private static int startId = 25601;
-    private static final int END_ID = startId + 200;
+    private static final int END_ID = startId + 1000;
 
     public static void register() {}
 

@@ -2,7 +2,8 @@ package gtb.api.unification.materials;
 
 public class GTBElementMaterials {
 
-    private static int startId = 26001;
+    //range 2652-2752
+    private static int startId = 2652;
     private static final int END_ID = startId + 100;
 
     public static void register() {}

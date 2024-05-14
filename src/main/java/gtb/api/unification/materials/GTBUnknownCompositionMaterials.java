@@ -8,7 +8,7 @@ import gregtech.api.unification.material.Material;
 
 public class GTBUnknownCompositionMaterials {
 
-    // Range 25201-25400
+    // Range 25201-25401
     private static int startId = 25201;
     private static final int END_ID = startId + 200;
 

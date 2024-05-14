@@ -9,8 +9,9 @@ import gregtech.api.unification.material.Material;
 
 public class GTBFirstDegreeMaterials {
 
+    //range 24001-25001
     private static int startId = 24001;
-    private static final int END_ID = startId + 500;;
+    private static final int END_ID = startId + 1000;
 
     public static void register() {
         PalladiumExtract = new Material.Builder(getMaterialsId(), gregtechId("palladium_extract"))

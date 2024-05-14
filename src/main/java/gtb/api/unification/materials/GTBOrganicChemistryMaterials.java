@@ -10,7 +10,7 @@ import gregtech.api.unification.material.Material;
 public class GTBOrganicChemistryMaterials {
 
     // Range 25001-25200
-    private static int startId = 25001;
+    private static int startId = 25002;
     private static final int END_ID = startId + 200;
 
     public static void register() {

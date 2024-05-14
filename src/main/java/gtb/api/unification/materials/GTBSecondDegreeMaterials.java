@@ -9,7 +9,7 @@ import gregtech.api.unification.material.Material;
 
 public class GTBSecondDegreeMaterials {
 
-    // Range: 25401 - 25500
+    // Range: 25401 - 25501
     private static int startId = 25401;
     private static final int END_ID = startId + 100;
 
