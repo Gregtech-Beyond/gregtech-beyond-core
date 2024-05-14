@@ -687,7 +687,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         CENTRIFUGE_RECIPES.recipeBuilder()
-                .fluidInputs(GTBMaterials.OrthophosphoricAcid.getFluid(2000))
+                .fluidInputs(GTBMaterials.OrthophosphoricAcidSolution.getFluid(2000))
                 .fluidOutputs(HydrochloricAcid.getFluid(1000))
                 .fluidOutputs(GTBMaterials.OrthophosphoricAcid.getFluid(1000))
                 .duration(400)
