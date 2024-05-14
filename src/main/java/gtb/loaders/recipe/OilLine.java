@@ -159,7 +159,7 @@ public class OilLine {
 
         GTBRecipeMaps.FISCHER_TROPSCH_REACTOR.recipeBuilder().fluidInputs(DistilledWater.getFluid(2000))
                 .fluidInputs(RefineryGas.getFluid(8000)).notConsumable(dust, CobaltOxide, 1)
-                .output(GTBMetaItems.PARAFFIN_WAX, 1).fluidOutputs(Diesel.getFluid(1000))
+                .output(GTBMetaItems.getByNameOrId("paraffin_wax"), 1).fluidOutputs(Diesel.getFluid(1000))
                 .fluidOutputs(Gasoline.getFluid(500)).fluidOutputs(Water.getFluid(2000))
                 .fluidOutputs(SulfuricAcid.getFluid(1000)).fluidOutputs(Ethylene.getFluid(1500))
                 .fluidOutputs(Ethanol.getFluid(1500)).fluidOutputs(Methane.getFluid(2000))
@@ -169,7 +169,7 @@ public class OilLine {
                 .fluidInputs(GTBMaterials.SulfuricOilResidues.getFluid(1000))
                 .fluidOutputs(GTBMaterials.LubricantMixture.getFluid(850))
                 .fluidOutputs(GTBMaterials.SulfuricFuelOil.getFluid(200))
-                .output(GTBMetaItems.BITOMINOUS_RESIDUES, 1)
+                .output(GTBMetaItems.getByNameOrId("bitominous_residues"), 1)
                 .fluidOutputs(GTBMaterials.SulfuricDiesel.getFluid(200))
                 .fluidOutputs(GTBMaterials.SulfuricKerosene.getFluid(150))
                 .fluidOutputs(SulfuricNaphtha.getFluid(100))
@@ -187,7 +187,7 @@ public class OilLine {
 
         EXTRACTOR_RECIPES.recipeBuilder()
                 .circuitMeta(1)
-                .input(GTBMetaItems.PARAFFIN_WAX)
+                .input(GTBMetaItems.getByNameOrId("paraffin_wax"))
                 .fluidOutputs(GTBMaterials.Resin.getFluid(1000))
                 .duration(20)
                 .EUt(8)
@@ -195,7 +195,7 @@ public class OilLine {
 
         EXTRACTOR_RECIPES.recipeBuilder()
                 .circuitMeta(2)
-                .input(GTBMetaItems.PARAFFIN_WAX)
+                .input(GTBMetaItems.getByNameOrId("paraffin_wax"))
                 .fluidOutputs(Lubricant.getFluid(1000))
                 .duration(20)
                 .EUt(8)
@@ -203,7 +203,7 @@ public class OilLine {
 
         GTBRecipeMaps.CRYSTALLIZATION.recipeBuilder()
                 .fluidInputs(GTBMaterials.SlackWax.getFluid(1000))
-                .output(GTBMetaItems.PARAFFIN_WAX, 4)
+                .output(GTBMetaItems.getByNameOrId("paraffin_wax"), 4)
                 .fluidOutputs(Lubricant.getFluid(250))
                 .duration(200)
                 .EUt(12)
@@ -231,7 +231,7 @@ public class OilLine {
                 .buildAndRegister();
 
         GTBRecipeMaps.COKER.recipeBuilder()
-                .input(GTBMetaItems.BITOMINOUS_RESIDUES, 1)
+                .input(GTBMetaItems.getByNameOrId("bitominous_residues"), 1)
                 .fluidInputs(Steam.getFluid(1000))
                 .fluidOutputs(GTBMaterials.SulfuricOilResidues.getFluid(150))
                 .output(dust, Coke, 4)
