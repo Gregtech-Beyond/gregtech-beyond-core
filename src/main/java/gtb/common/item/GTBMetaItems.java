@@ -119,7 +119,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem ENGRAVED_NANOCPU_WAFER;
     public static MetaItem<?>.MetaValueItem DOPED_NANOCPU_WAFER;
     public static MetaItem<?>.MetaValueItem NANOCPU_LITHOGRAPHY_MASK;
-    public static MetaItem<?>.MetaValueItem GATED_NANOCPU_LITHOGRAPHY_MASK;
+    public static MetaItem<?>.MetaValueItem GATED_NANOCPU_WAFER;
     public static MetaItem<?>.MetaValueItem INSULATED_NANOCPU_WAFER;
 	public static MetaItem<?>.MetaValueItem NICKEL_BREEDING_BED;
 	public static MetaItem<?>.MetaValueItem NAQUADAH_DIOXDE_SEED_CRYSTAL;
@@ -148,6 +148,14 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem DOPED_ARAM_WAFER;
     public static MetaItem<?>.MetaValueItem UNBAKED_MONOCRYSTALLINE_SILICON_BOULE;
     public static MetaItem<?>.MetaValueItem PHOTOCOATED_HASSIUM_WAFER;
+    public static MetaItem<?>.MetaValueItem QBIT_WAFER;
+    public static MetaItem<?>.MetaValueItem QBIT_CPU;
+    public static MetaItem<?>.MetaValueItem NOR_PHOTOLITHOGRAPHY_MASK;
+    public static MetaItem<?>.MetaValueItem NAND_PHOTOLITHOGRAPHY_MASK;
+    public static MetaItem<?>.MetaValueItem ARAM_WAFER;
+    public static MetaItem<?>.MetaValueItem UHASOC_WAFER;
+    public static MetaItem<?>.MetaValueItem OPTICAL_SOC_WAFER;
+    public static MetaItem<?>.MetaValueItem OPTICAL_SOC;
 
 
     public static void init() {

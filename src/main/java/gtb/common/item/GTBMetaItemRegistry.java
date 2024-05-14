@@ -122,7 +122,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ENGRAVED_NANOCPU_WAFER = addItem(110, "engraved_nanocpu_wafer");
         GTBMetaItems.DOPED_NANOCPU_WAFER = addItem(111, "doped_nanocpu_wafer");
         GTBMetaItems.NANOCPU_LITHOGRAPHY_MASK = addItem(112, "nanocpu_lithography_mask");
-        GTBMetaItems.GATED_NANOCPU_LITHOGRAPHY_MASK = addItem(113, "gated_nanocpu_lithography_mask");
+        GTBMetaItems.GATED_NANOCPU_WAFER = addItem(113, "gated_nanocpu_wafer");
         GTBMetaItems.INSULATED_NANOCPU_WAFER = addItem(114, "insulated_nanocpu_wafer");
         GTBMetaItems.TRENCHED_INSULATED_NANOCPU_WAFER = addItem(115, "trenched_insulated_nanocpu_wafer");
         GTBMetaItems.UNPLANARIZED_NANOCPU_WAFER = addItem(116, "unplanarized_nanocpu_wafer");
@@ -153,6 +153,13 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.OPTICAL_LITHOGRAPHY_MASK  = addItem(141, "optical_lithography_mask");
         GTBMetaItems.INTERCONNCETED_INP_WAFER  = addItem(142, "interconnceted_inp_wafer");
         GTBMetaItems.PHOTOCOATED_HASSIUM_WAFER  = addItem(143, "photocoated_hassium_wafer");
+        GTBMetaItems.QBIT_WAFER  = addItem(144, "qbit_wafer");
+        GTBMetaItems.NOR_PHOTOLITHOGRAPHY_MASK  = addItem(145, "nor_photolithography_mask");
+        GTBMetaItems.NAND_PHOTOLITHOGRAPHY_MASK  = addItem(146, "nand_photolithography_mask");
+        GTBMetaItems.ARAM_WAFER  = addItem(147, "aram_wafer");
+        GTBMetaItems.UHASOC_WAFER  = addItem(148, "uhasoc_wafer");
+        GTBMetaItems.OPTICAL_SOC_WAFER = addItem(149, "optical_soc_wafer");
+
 
     }
 

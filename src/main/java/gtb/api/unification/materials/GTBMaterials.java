@@ -7,6 +7,12 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+
+
+    public static Material Trichloroflerane;
+    public static Material LiquidEnrichedHelium_4;
+    public static Material Helium_4;
+    public static Material SuperFluidHelium_4;
     public static Material VeryHotNitrogen;
     public static Material SiliconCarbideVapor;
     public static Material SiliconCarbide;
@@ -65,6 +71,37 @@ public class GTBMaterials {
     public static Material UsedPhotopolymerSolution;
     public static Material VeryHotXenon;
     public static Material VeryHotArgon;
+    public static Material NickelNitride;
+    public static Material VanadiumTrichloride;
+    public static Material LiquidHelium;
+    public static Material MetastableOganesson;
+    public static Material VeryHotKrypton;
+    public static Material NaquadahRichSterileGrowthMedium;
+    public static Material HighDensityPolyethylene;
+    public static Material LiquidNitrogen;
+    public static Material GrapheneOxidationSolution;
+    public static Material GraphiteOxide;
+    public static Material GrapheneOxide;
+    public static Material GrapheneOxidationResidues;
+    public static Material SilverBromide;
+    public static Material Silane;
+    public static Material Trichlorosilane;
+    public static Material ChloronaquadicAcid;
+    public static Material VeryHotAquaRegia;
+    public static Material SodiumNitrate;
+    public static Material BariumTitanate;
+    public static Material HydrogenChloride;
+    public static Material ZBLAN;
+    public static Material DopedNanotubeDepositionMixture;
+    public static Material NanotubeDepositionMix;
+    public static Material DopedNanotubeDepositionMix;
+    public static Material CarbonNanotubes;
+    public static Material LiquidCrystalDetector;
+    public static Material FullerenePolymerMatrix;
+    public static Material FullerenePolymerTetrix;
+    public static Material SeaborgiumDopedNanotubes;
+    public static Material NaquadriaticTaranium;
+    public static Material ChromaticGlass;
 
 
     // SD Materials
@@ -74,6 +111,8 @@ public class GTBMaterials {
     public static Material RutheniumTetroxideSolution;
     public static Material RhodiumSulfateSolution;
     public static Material Tetrapropylammoniumbromide;
+    public static Material UEVSuperconductor;
+
 
     // Unknown Materials
     public static Material HydroCrackedKerosene;

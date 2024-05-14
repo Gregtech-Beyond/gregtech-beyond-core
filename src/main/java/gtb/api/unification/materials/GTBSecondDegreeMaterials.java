@@ -45,6 +45,18 @@ public class GTBSecondDegreeMaterials {
                 .dust()
                 .color(0xEF5350)
                 .build().setFormula("?", true);
+
+        UEVSuperconductor = new Material.Builder(getMaterialsId(), gregtechId("uev_superconductor"))
+                .fluid()
+                .dust()
+                .color(0xEF5350)
+                .build().setFormula("?", true);
+
+        ZBLAN = new Material.Builder(getMaterialsId(), gregtechId("zblan"))
+                .fluid()
+                .dust()
+                .color(0xEF5350)
+                .build().setFormula("?", true);
     }
 
     private static int getMaterialsId() {
