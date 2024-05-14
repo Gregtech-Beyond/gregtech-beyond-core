@@ -121,3 +121,7 @@ gregtech.material.tripropylamine=Tripropylamine
 gregtech.material.sodium_formate=Sodium Formate
 gregtech.material.formic_acid=Formic Acid
 gregtech.material.formaldehyde=Formaldehyde
+
+# Energy types
+
+gtb.recipe.kev=Neutron Kinetic Energy: %d KeV

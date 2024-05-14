@@ -1,5 +1,8 @@
 package gtb.api.recipes;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.jetbrains.annotations.NotNull;
+
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
@@ -7,9 +10,8 @@ import gregtech.api.recipes.recipeproperties.RecipePropertyStorage;
 import gregtech.api.util.EnumValidationResult;
 import gregtech.api.util.GTLog;
 import gregtech.api.util.ValidationResult;
+
 import gtb.api.recipes.properties.KevRecipeProperty;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.jetbrains.annotations.NotNull;
 
 public class EuKevRecipeBuilder extends RecipeBuilder<EuKevRecipeBuilder> {
 
@@ -33,7 +35,8 @@ public class EuKevRecipeBuilder extends RecipeBuilder<EuKevRecipeBuilder> {
     @NotNull
     public EuKevRecipeBuilder KeV(int kev) {
         if (kev <= 0) {
-            GTLog.logger.error(KevRecipeProperty.KEY + " cannot be less than or equal to 0", new IllegalArgumentException());
+            GTLog.logger.error(KevRecipeProperty.KEY + " cannot be less than or equal to 0",
+                    new IllegalArgumentException());
             recipeStatus = EnumValidationResult.INVALID;
         }
         this.applyProperty(KevRecipeProperty.getInstance(), kev);
