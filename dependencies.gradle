@@ -31,5 +31,5 @@ dependencies {
     // Soft Dependencies
     implementation "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.684"
     implementation rfg.deobf("curse.maven:ctm-267602:2915363") // CTM 1.0.2.31
-    implementation rfg.deobf("curse.maven:groovyscript-687577:4905039") // GRS 0.7.0
+    implementation rfg.deobf("curse.maven:groovyscript-687577:5219945") // GRS 1.0.1
 }
