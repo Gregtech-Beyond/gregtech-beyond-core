@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gtb:items/metaitems/lpicwafer"
+    "layer0": "gtb:items/metaitems/optical_soc_wafer"
   }
 }

@@ -22,7 +22,7 @@ public class Photolithography {
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Redstone.getFluid(1000))
                 .input(MetaItems.ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER)
-                .output(NANO_PIC_WAFER)
+                .output(NANO_CPU_WAFER)
                 .duration(200)
                 .EUt(120)
                 .buildAndRegister();
@@ -132,52 +132,6 @@ public class Photolithography {
                 .output(ENGRAVED_CPU_WAFER)
                 .duration(20)
                 .EUt(12)
-                .buildAndRegister();
-
-        LASER_ENGRAVER_RECIPES.recipeBuilder()
-                .input(MetaItems.SILICON_WAFER)
-                .notConsumable(lens, DyeMagenta)
-                .output(ULPIC_WAFER)
-                .duration(900)
-                .EUt(120)
-                .buildAndRegister();
-
-        LASER_ENGRAVER_RECIPES.recipeBuilder()
-                .input(MetaItems.PHOSPHORUS_WAFER)
-                .notConsumable(lens, DyeMagenta)
-                .output(ULPIC_WAFER, 4)
-                .duration(900)
-                .EUt(120)
-                .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder()
-                .input(ULPIC_WAFER)
-                .output(ULPIC, 6)
-                .duration(900)
-                .EUt(120)
-                .buildAndRegister();
-
-        LASER_ENGRAVER_RECIPES.recipeBuilder()
-                .input(MetaItems.SILICON_WAFER)
-                .notConsumable(lens, DyeOrange)
-                .output(LPIC_WAFER)
-                .duration(900)
-                .EUt(480)
-                .buildAndRegister();
-
-        LASER_ENGRAVER_RECIPES.recipeBuilder()
-                .input(MetaItems.PHOSPHORUS_WAFER)
-                .notConsumable(lens, DyeOrange)
-                .output(LPIC_WAFER, 4)
-                .duration(900)
-                .EUt(480)
-                .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder()
-                .input(LPIC_WAFER)
-                .output(LPIC, 4)
-                .duration(900)
-                .EUt(480)
                 .buildAndRegister();
 
         BENDER_RECIPES.recipeBuilder()
@@ -380,7 +334,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         CVD_UNIT.recipeBuilder()
-                .input(ENGRAVED_TITANATE_SUBSTRATE)
+                .input(ENGRAVED_TITANATE_SUBSTRATE_WAFER)
                 .input(dust, EnrichedNaquadahTriniumEuropiumDuranide)
                 .fluidInputs(GTBMaterials.SiliconCarbideVapor.getFluid(144))
                 .output(SUPERCONDUCTOR_COATED_SUBSTRATE_WAFER)
@@ -875,21 +829,21 @@ public class Photolithography {
                 .fluidInputs(GTBMaterials.VeryHotArgon.getFluid(1000))
                 .input(DOPED_QBIT_CPU_WAFER)
                 .fluidOutputs(Argon.getFluid(1000))
-                .output(SUPERCONDUCTOR_COATED_QBIT_WAFER)
+                .output(SUPERCONDUCTOR_COATED_QBIT_CPU_WAFER)
                 .duration(200)
                 .EUt(900)
                 .buildAndRegister();
 
         ION_IMPLANTER.recipeBuilder()
-                .input(SUPERCONDUCTOR_COATED_QBIT_WAFER)
+                .input(SUPERCONDUCTOR_COATED_QBIT_CPU_WAFER)
                 .input(U_TWOFOURTY_ELECTRON_SOURCE)
-                .output(GTBMetaItems.QBIT_WAFER)
+                .output(GTBMetaItems.QBIT_CPU_WAFER)
                 .duration(200)
                 .EUt(90)
                 .buildAndRegister();
 
         CUTTER_RECIPES.recipeBuilder()
-                .input(GTBMetaItems.QBIT_WAFER)
+                .input(GTBMetaItems.QBIT_CPU_WAFER)
                 .output(QBIT_CPU_DIE, 5)
                 .fluidInputs(Water.getFluid(12))
                 .duration(200)
@@ -897,7 +851,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         CUTTER_RECIPES.recipeBuilder()
-                .input(GTBMetaItems.QBIT_WAFER)
+                .input(GTBMetaItems.QBIT_CPU_WAFER)
                 .output(QBIT_CPU_DIE, 5)
                 .fluidInputs(DistilledWater.getFluid(8))
                 .duration(100)
@@ -905,7 +859,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         CUTTER_RECIPES.recipeBuilder()
-                .input(GTBMetaItems.QBIT_WAFER)
+                .input(GTBMetaItems.QBIT_CPU_WAFER)
                 .output(QBIT_CPU_DIE, 5)
                 .fluidInputs(Lubricant.getFluid(6))
                 .duration(60)
@@ -1012,7 +966,7 @@ public class Photolithography {
                 .fluidInputs(Lubricant.getFluid(6)).duration(600).EUt(60000).buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(HASOC_DIE).input(NEUROLOGICAL_LIFE_SUPPORT).input(plate, Polybenzimidazole)
+                .input(HASOC_DIE).input(NEUROLOGICAL_LIFE_SUPPORT_UNIT).input(plate, Polybenzimidazole)
                 .input(wireFine, NaquadahAlloy, 4).input(MetaItems.STEM_CELLS)
                 .fluidInputs(SterileGrowthMedium.getFluid(144))
                 .output(NEURAL_IMPLANTED_HASOC_DIE)
@@ -1240,7 +1194,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ION_IMPLANTER.recipeBuilder()
-                .input(dust, GTBMaterials.DopedNanotubeDepositionMixture).input(GTBMetaItems.INTERCONNCETED_INP_WAFER)
+                .input(dust, GTBMaterials.DopedNanotubeDepositionMixture).input(GTBMetaItems.INTERCONNECTED_INP_WAFER)
                 .output(RESONANT_INP_WAFER)
                 .duration(560)
                 .EUt(12864590)
@@ -1263,13 +1217,13 @@ public class Photolithography {
 
         CVD_UNIT.recipeBuilder()
                 .input(dust, GTBMaterials.DopedNanotubeDepositionMix).input(RE_EXPOSED_INP_WAFER)
-                .output(ELECTROLUMINSECENT_WAFER)
+                .output(ELECTROLUMINESCENT_INP_WAFER)
                 .duration(1200)
                 .EUt(80901234)
                 .buildAndRegister();
 
         CVD_UNIT.recipeBuilder()
-                .input(ELECTROLUMINSECENT_WAFER).input(dust, GTBMaterials.DopedNanotubeDepositionMixture)
+                .input(ELECTROLUMINESCENT_INP_WAFER).input(dust, GTBMaterials.DopedNanotubeDepositionMixture)
                 .output(RECOATED_INP_WAFER)
                 .duration(1200)
                 .EUt(80129012)
@@ -1425,7 +1379,7 @@ public class Photolithography {
                         .buildAndRegister();
 
                 ION_IMPLANTER.recipeBuilder()
-                        .input(ENGRAVED_HASOC_WAFER)
+                        .input(ENGRAVED_UHASOC_WAFER)
                         .input(dust, Naquadah)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)

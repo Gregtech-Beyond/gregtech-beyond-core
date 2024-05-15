@@ -13,10 +13,10 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ASTRO_MINER = addItem(1, "astro_miner");
         GTBMetaItems.MOON = addItem(2, "moon");
         GTBMetaItems.PARAFFIN_WAX = addItem(3, "paraffin_wax");
-        GTBMetaItems.NANO_PIC_WAFER = addItem(5, "nano_pic_wafer");
+        GTBMetaItems.NANO_CPU_WAFER = addItem(5, "nano_cpu_wafer");
         GTBMetaItems.TRENCHED_SUPERCONDUCTOR_LAYERED_UHASOC_WAFER = addItem(6,
                 "trenched_superconductor_layered_uhasoc_wafer");
-        GTBMetaItems.MONOCRYSTALLINE_SEED_CRYSTAL = addItem(7, "monocrystallne_seed_crystal");
+        GTBMetaItems.MONOCRYSTALLINE_SEED_CRYSTAL = addItem(7, "monocrystalline_seed_crystal");
         GTBMetaItems.POLYSILICON_WAFER = addItem(8, "polysilicon_wafer");
         GTBMetaItems.N_DOPED_SILICON_DIOXIDE_WAFER = addItem(9, "n_doped_silicon_dioxide_wafer");
         GTBMetaItems.SINGLE_JOSEPHSON_JUNCTION_LITHOGRAPHY_MASK = addItem(10,
@@ -30,7 +30,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ENGRAVED_POWER_IC_WAFER = addItem(17, "engraved_power_ic_wafer");
         GTBMetaItems.ENGRAVED_CPU_WAFER = addItem(18, "engraved_cpu_wafer");
         GTBMetaItems.ENGRAVED_IC_WAFER = addItem(19, "engraved_ic_wafer");
-        GTBMetaItems.ENGRAVED_TITANATE_SUBSTRATE = addItem(20, "engraved_titanate_substrate");
+        GTBMetaItems.ENGRAVED_TITANATE_SUBSTRATE_WAFER = addItem(20, "engraved_titanate_substrate_wafer");
         GTBMetaItems.ENGRAVED_RAM_WAFER = addItem(21, "engraved_ram_wafer");
         GTBMetaItems.CONTROLLED_SHAPED_NAQUADRIA_CHARGE = addItem(22, "controlled_shaped_naquadria_charge");
         GTBMetaItems.CONTROLLED_SHAPED_NAQUADRIA_CHARGE_CASING = addItem(23,
@@ -38,8 +38,8 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.RAM_LITHOGRAPHY_MASK = addItem(24, "ram_lithography_mask");
         GTBMetaItems.CPU_LITHOGRAPHY_MASK = addItem(25, "cpu_lithography_mask");
         GTBMetaItems.LPIC_LITHOGRAPHY_MASK = addItem(26, "lpic_lithography_mask");
-        GTBMetaItems.MANUFACTURED_SUPERCONDUCTOR_CIRCUIT = addItem(27, "manufacturedd_superconductor_circuit");
-        GTBMetaItems.SPUTTERED_SAPPHIRE_SUBSTRATE = addItem(28, "sputtered_sapphire_substratee");
+        GTBMetaItems.MANUFACTURED_SUPERCONDUCTOR_CIRCUIT = addItem(27, "manufactured_superconductor_circuit");
+        GTBMetaItems.SPUTTERED_SAPPHIRE_SUBSTRATE = addItem(28, "sputtered_sapphire_substrate");
         GTBMetaItems.UHPIC_BASE = addItem(29, "uhpic_base");
         GTBMetaItems.UHPIC_BASE_WAFER = addItem(30, "uhpic_base_wafer");
         GTBMetaItems.UHPIC_LITHOGRAPHY_MASK = addItem(31, "uhpic_lithography_mask");
@@ -75,7 +75,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.RESONANT_INP_WAFER = addItem(61, "resonant_inp_wafer");
         GTBMetaItems.INSULATED_INP_WAFER = addItem(62, "insulated_inp_wafer");
         GTBMetaItems.RE_EXPOSED_INP_WAFER = addItem(63, "re_exposed_inp_wafer");
-        GTBMetaItems.ELECTROLUMINSECENT_WAFER = addItem(64, "electroluminsecent_wafer");
+        GTBMetaItems.ELECTROLUMINESCENT_INP_WAFER = addItem(64, "electroluminescent_inp_wafer");
         GTBMetaItems.RECOATED_INP_WAFER = addItem(65, "recoated_inp_wafer");
         GTBMetaItems.CONTACT_READY_INP_WAFER = addItem(66, "contact_ready_inp_wafer");
         GTBMetaItems.UNINSULATED_OPTICAL_SOC = addItem(67, "uninsulated_optical_soc");
@@ -97,16 +97,15 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.PRE_ENGRAVED_OGANESSON_WAFER = addItem(83, "engraved_oganesson_wafer");
         GTBMetaItems.RAW_OGANESSON_WAFER = addItem(84, "raw_oganesson_wafer");
         GTBMetaItems.DOPED_OGANESSON_WAFER = addItem(85, "doped_oganesson_wafer");
-        GTBMetaItems.ENGRAVED_HASOC_WAFER = addItem(86, "engraved_hasoc_wafer");
+        GTBMetaItems.ENGRAVED_UHASOC_WAFER = addItem(86, "engraved_uhasoc_wafer");
         GTBMetaItems.BATHED_TREATED_OGANESSON_WAFER = addItem(87, "bathed_treated_oganesson_wafer");
-        GTBMetaItems.UNPOLARIZED_HASOC_WAFER = addItem(88, "unplanarized_hasoc_wafer");
+        GTBMetaItems.UNPOLARIZED_HASOC_WAFER = addItem(88, "unpolarized_hasoc_wafer");
         GTBMetaItems.HASOC_DIE = addItem(89, "hasoc_die");
         GTBMetaItems.BIOSAFE_PROTECTIVE_PLATING = addItem(90, "biosafe_protective_plating");
         GTBMetaItems.CLEAN_HASOC_DIE = addItem(91, "clean_hasoc_die");
         GTBMetaItems.NEURAL_IMPLANTED_HASOC_DIE = addItem(92, "neural_implanted_hasoc_die");
         GTBMetaItems.GROWN_HASOC_DIE = addItem(93, "grown_hasoc_die");
-        GTBMetaItems.NEUROLOGICAL_LIFE_SUPPORT = addItem(94, "neurological_life_support");
-        GTBMetaItems.FEMTO_PIC_WAFER = addItem(95, "femto_pic_wafer");
+        GTBMetaItems.NEUROLOGICAL_LIFE_SUPPORT_UNIT = addItem(94, "neurological_life_support_unit");
         GTBMetaItems.SAPPHIRE_SEED_CRYSTAL = addItem(96, "sapphire_seed_crystal");
         GTBMetaItems.SAPPHIRE_BOULE = addItem(97, "sapphire_boule");
         GTBMetaItems.MONOCRYSTALLINE_SAPPHIRE_INGOT = addItem(98, "monocrystalline_sapphire_ingot");
@@ -114,11 +113,10 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.QBIT_CPU_LITHOGRAPHY_MASK = addItem(100, "qbit_cpu_lithography_mask");
         GTBMetaItems.ENGRAVED_QBIT_CPU_WAFER = addItem(101, "engraved_qbit_cpu_wafer");
         GTBMetaItems.DOPED_QBIT_CPU_WAFER = addItem(102, "doped_qbit_cpu_wafer");
-        GTBMetaItems.SUPERCONDUCTOR_COATED_QBIT_WAFER = addItem(103, "superconductor_coated_qbit_wafer");
+        GTBMetaItems.SUPERCONDUCTOR_COATED_QBIT_CPU_WAFER = addItem(103, "superconductor_coated_qbit_cpu_wafer");
         GTBMetaItems.U_TWOFOURTY_ELECTRON_SOURCE = addItem(104, "u_twofourty_electron_source");
         GTBMetaItems.QBIT_CPU_DIE = addItem(105, "qbit_cpu_die");
         GTBMetaItems.COVERED_QBIT_CPU = addItem(106, "covered_qbit_cpu");
-        GTBMetaItems.FEMTO_PIC = addItem(107, "femto_pic");
         GTBMetaItems.CELAUWAFER = addItem(108, "celauwafer");
         GTBMetaItems.SILICON_DIOXIDE_WAFER = addItem(109, "silicon_dioxide_wafer");
         GTBMetaItems.ENGRAVED_NANOCPU_WAFER = addItem(110, "engraved_nanocpu_wafer");
@@ -128,10 +126,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.INSULATED_NANOCPU_WAFER = addItem(114, "insulated_nanocpu_wafer");
         GTBMetaItems.TRENCHED_INSULATED_NANOCPU_WAFER = addItem(115, "trenched_insulated_nanocpu_wafer");
         GTBMetaItems.UNPLANARIZED_NANOCPU_WAFER = addItem(116, "unplanarized_nanocpu_wafer");
-        GTBMetaItems.ULPIC_WAFER = addItem(117, "ulpic_wafer");
-        GTBMetaItems.LPIC_WAFER = addItem(118, "lpic_wafer");
-        GTBMetaItems.ULPIC = addItem(119, "uplic");
-        GTBMetaItems.LPIC = addItem(120, "lpic");
         GTBMetaItems.NICKEL_NITRIDE_WAFER = addItem(121, "nickel_nitride_wafer");
         GTBMetaItems.ENGRAVED_NOR_WAFER = addItem(122, "engraved_nor_wafer");
         GTBMetaItems.ENGRAVED_NAND_WAFER = addItem(123, "engraved_nand_wafer");
@@ -153,9 +147,9 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.TRENCHED_NAQUADAH_DIOXIDE_WAFER = addItem(139, "trenched_naquadah_dioxide_wafer");
         GTBMetaItems.NICKEL_BREEDING_BED = addItem(140, "nickel_breeding_bed");
         GTBMetaItems.OPTICAL_LITHOGRAPHY_MASK = addItem(141, "optical_lithography_mask");
-        GTBMetaItems.INTERCONNCETED_INP_WAFER = addItem(142, "interconnceted_inp_wafer");
+        GTBMetaItems.INTERCONNECTED_INP_WAFER = addItem(142, "interconnected_inp_wafer");
         GTBMetaItems.PHOTOCOATED_HASSIUM_WAFER = addItem(143, "photocoated_hassium_wafer");
-        GTBMetaItems.QBIT_WAFER = addItem(144, "qbit_wafer");
+        GTBMetaItems.QBIT_CPU_WAFER = addItem(144, "qbit_cpu_wafer");
         GTBMetaItems.NOR_PHOTOLITHOGRAPHY_MASK = addItem(145, "nor_photolithography_mask");
         GTBMetaItems.NAND_PHOTOLITHOGRAPHY_MASK = addItem(146, "nand_photolithography_mask");
         GTBMetaItems.ARAM_WAFER = addItem(147, "aram_wafer");
@@ -167,10 +161,14 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.DAMASCUS_STEEL_ASSEMBLY = addItem(152, "damascus_steel_assembly");
         GTBMetaItems.HOT_DAMASCUS_STEEL_ASSEMBLY = addItem(153, "hot_damascus_steel_assembly");
         GTBMetaItems.LIGHTLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(154, "lightly_forged_damascus_steel_assembly");
-        GTBMetaItems.HOT_LIGHTLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(155, "hot_lightly_forged_damascus_steel_assembly");
-        GTBMetaItems.MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(156, "moderately_forged_damascus_steel_assembly");
-        GTBMetaItems.HOT_MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(157, "hot_moderately_forged_damascus_steel_assembly");
+        GTBMetaItems.HOT_LIGHTLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(155,
+                "hot_lightly_forged_damascus_steel_assembly");
+        GTBMetaItems.MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(156,
+                "moderately_forged_damascus_steel_assembly");
+        GTBMetaItems.HOT_MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(157,
+                "hot_moderately_forged_damascus_steel_assembly");
         GTBMetaItems.HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(158, "highly_forged_damascus_steel_assembly");
-        GTBMetaItems.HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(159, "hot_highly_forged_damascus_steel_assembly");
+        GTBMetaItems.HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(159,
+                "hot_highly_forged_damascus_steel_assembly");
     }
 }

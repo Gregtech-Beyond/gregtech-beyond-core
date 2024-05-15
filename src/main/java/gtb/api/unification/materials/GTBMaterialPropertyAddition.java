@@ -15,5 +15,6 @@ public class GTBMaterialPropertyAddition {
         Moscovium.setProperty(PropertyKey.DUST, new DustProperty());
         Nihonium.setProperty(PropertyKey.DUST, new DustProperty());
         Thallium.setProperty(PropertyKey.DUST, new DustProperty());
+
     }
 }

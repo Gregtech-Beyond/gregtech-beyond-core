@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gtb:items/metaitems/u_twofourty_electron_source"
+  }
+}

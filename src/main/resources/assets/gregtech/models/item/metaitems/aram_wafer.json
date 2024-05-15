@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gtb:items/metaitems/ulpicwafer"
+    "layer0": "gtb:items/metaitems/aram_wafer"
   }
 }
