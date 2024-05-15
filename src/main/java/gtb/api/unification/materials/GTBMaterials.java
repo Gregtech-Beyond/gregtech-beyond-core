@@ -8,7 +8,6 @@ public class GTBMaterials {
 
     // FD Materials
 
-
     public static Material Trichloroflerane;
     public static Material LiquidEnrichedHelium_4;
     public static Material Helium_4;
@@ -103,7 +102,6 @@ public class GTBMaterials {
     public static Material NaquadriaticTaranium;
     public static Material ChromaticGlass;
 
-
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;
     public static Material AcidicIridiumDioxide;
@@ -112,7 +110,6 @@ public class GTBMaterials {
     public static Material RhodiumSulfateSolution;
     public static Material Tetrapropylammoniumbromide;
     public static Material UEVSuperconductor;
-
 
     // Unknown Materials
     public static Material HydroCrackedKerosene;
