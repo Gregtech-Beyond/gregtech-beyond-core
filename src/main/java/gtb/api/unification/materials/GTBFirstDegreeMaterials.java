@@ -4,9 +4,7 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
-import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
-import gtb.loaders.recipe.Photolithography;
 
 public class GTBFirstDegreeMaterials {
 
@@ -233,10 +231,11 @@ public class GTBFirstDegreeMaterials {
                 .color(0x1A4051)
                 .build().setFormula("NqO2", true);
 
-        ElectronDegenerateRheniumPlasma = new Material.Builder(getMaterialsId(), gregtechId("electron_degenerate_rhenium_plasma"))
-                .fluid()
-                .color(0x1A4051)
-                .build().setFormula("NqO2", true);
+        ElectronDegenerateRheniumPlasma = new Material.Builder(getMaterialsId(),
+                gregtechId("electron_degenerate_rhenium_plasma"))
+                        .fluid()
+                        .color(0x1A4051)
+                        .build().setFormula("NqO2", true);
 
         HighPurityArsenic = new Material.Builder(getMaterialsId(), gregtechId("high_purity_arsenic"))
                 .dust()
@@ -338,13 +337,14 @@ public class GTBFirstDegreeMaterials {
                 .color(0x1A4051)
                 .build().setFormula("He", true);
 
-        NaquadahRichSterileGrowthMedium = new Material.Builder(getMaterialsId(), gregtechId("naquadah_rich_sterile_growth_medium"))
-                .fluid()
-                .color(0x1A4051)
-                .build().setFormula("He", true);
+        NaquadahRichSterileGrowthMedium = new Material.Builder(getMaterialsId(),
+                gregtechId("naquadah_rich_sterile_growth_medium"))
+                        .fluid()
+                        .color(0x1A4051)
+                        .build().setFormula("He", true);
 
         HighDensityPolyethylene = new Material.Builder(getMaterialsId(), gregtechId("high_density_polyethylene"))
-                .liquid()
+                .fluid()
                 .dust()
                 .color(0x1A4051)
                 .build().setFormula("He", true);
@@ -414,10 +414,11 @@ public class GTBFirstDegreeMaterials {
                 .color(0x1A4051)
                 .build().setFormula("HCl", true);
 
-        DopedNanotubeDepositionMixture = new Material.Builder(getMaterialsId(), gregtechId("doped_nanotube_deposition_mixture"))
-                .dust()
-                .color(0x1A4051)
-                .build().setFormula("HCl", true);
+        DopedNanotubeDepositionMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("doped_nanotube_deposition_mixture"))
+                        .dust()
+                        .color(0x1A4051)
+                        .build().setFormula("HCl", true);
 
         CarbonNanotubes = new Material.Builder(getMaterialsId(), gregtechId("carbon_nanotubes"))
                 .dust()
@@ -453,9 +454,11 @@ public class GTBFirstDegreeMaterials {
                 .color(0x1A4051)
                 .build().setFormula("HCl", true);
 
-
+        ExtraDistilledWater = new Material.Builder(getMaterialsId(), gregtechId("extra_distilled_water"))
+                .fluid()
+                .color(0x1A4051)
+                .build().setFormula("HCl", true);
     }
-
 
     private static int getMaterialsId() {
         if (startId < END_ID) {
