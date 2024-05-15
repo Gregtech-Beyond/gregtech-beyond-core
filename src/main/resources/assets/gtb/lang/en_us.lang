@@ -24,6 +24,8 @@ recipemap.bedrock_pump.name=Bedrock Pumping
 recipemap.bacterial_vat.name=Bacterial Vat
 recipemap.astro_mining_station.name=Astro Mining
 recipemap.fischer_tropsch_reactor.name=Fischer Tropsch Reaction
+recipemap.dehydrator.name=Dehydration
+recipemap.crystallizer.name=Chemical Crystallization
 
 # Multiblock machine controllers
 gtb.machine.water_tank.name=Water Tank
@@ -45,7 +47,15 @@ gtb.machine.fischer_tropsch_reactor.name=Fischer Tropsch Reactor
 metaitem.astro_miner.name=Astro Miner
 metaitem.moon.name=Moon
 metaitem.paraffin_wax.name=Paraffin Wax
-
+metaitem.bituminous_residues.name=Bituminous Residues
+metaitem.damascus_steel_assembly.name=Damascus Steel Assembly
+metaitem.hot_damascus_steel_assembly.name=Hot Damascus Steel Assembly
+metaitem.lightly_forged_damascus_steel_assembly.name=Lightly Forged Damascus Steel Assembly
+metaitem.hot_lightly_forged_damascus_steel_assembly.name=Hot Lightly Forged Damascus Steel Assembly
+metaitem.moderately_forged_damascus_steel_assembly.name=Moderately Forged Damascus Steel Assembly
+metaitem.hot_moderately_forged_damascus_steel_assembly.name=Hot Moderately Forged Damascus Steel Assembly
+metaitem.highly_forged_damascus_steel_assembly.name=Highly Forged Damascus Steel Assembly
+metaitem.hot_highly_forged_damascus_steel_assembly.name=Hot Highly Forged Damascus Steel Assembly
 
 #Materials
 gregtech.material.tungstentrioxide=Tungsten Trioxide

@@ -2,15 +2,20 @@ package gtb.loaders.recipe;
 
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.ore.OrePrefix.dust;
 
-import gtb.api.recipes.GTBRecipeMaps;
+import static gregtech.api.unification.ore.OrePrefix.dust;
+import static gtb.api.recipes.GTBRecipeMaps.*;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
+
 import gtb.api.unification.materials.GTBMaterials;
 
 public class TungstenLine {
 
     public static void init() {
-        GTBRecipeMaps.DEHYDRATOR.recipeBuilder()
+
+        DEHYDRATOR.recipeBuilder()
                 .input(dust, TungsticAcid, 7)
                 .output(dust, GTBMaterials.TungstenTrioxide, 4)
                 .duration(200)
@@ -44,7 +49,7 @@ public class TungstenLine {
                 .output(dust, GTBMaterials.CalciumTungstate, 6)
                 .duration(800)
                 .EUt(70)
-                .buildAndRegister();;
+                .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(2000))
@@ -88,5 +93,7 @@ public class TungstenLine {
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, TungsticAcid, 7));
     }
 }
