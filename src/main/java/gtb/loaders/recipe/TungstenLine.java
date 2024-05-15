@@ -13,6 +13,7 @@ import gtb.api.unification.materials.GTBMaterials;
 public class TungstenLine {
 
     public static void init() {
+
         DEHYDRATOR.recipeBuilder()
                 .input(dust, TungsticAcid, 7)
                 .output(dust, GTBMaterials.TungstenTrioxide, 4)
