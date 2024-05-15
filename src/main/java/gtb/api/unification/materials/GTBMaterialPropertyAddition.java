@@ -2,10 +2,9 @@ package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
 
-import gregtech.api.unification.material.properties.DustProperty;
-import gregtech.api.unification.material.properties.FluidProperty;
-import gregtech.api.unification.material.properties.IngotProperty;
-import gregtech.api.unification.material.properties.PropertyKey;
+import gregtech.api.unification.material.Materials;
+import gregtech.api.unification.material.info.MaterialFlags;
+import gregtech.api.unification.material.properties.*;
 
 public class GTBMaterialPropertyAddition {
 
@@ -15,6 +14,6 @@ public class GTBMaterialPropertyAddition {
         Moscovium.setProperty(PropertyKey.DUST, new DustProperty());
         Nihonium.setProperty(PropertyKey.DUST, new DustProperty());
         Thallium.setProperty(PropertyKey.DUST, new DustProperty());
-
+        NaquadahAlloy.addFlags(MaterialFlags.GENERATE_FINE_WIRE);
     }
 }
