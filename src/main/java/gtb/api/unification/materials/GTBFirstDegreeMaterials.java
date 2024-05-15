@@ -253,6 +253,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("NqO2", true);
 
         WhitePhosphorus = new Material.Builder(getMaterialsId(), gregtechId("white_phosphorus"))
+                .dust()
                 .fluid()
                 .color(0x1A4051)
                 .build().setFormula("P4", true);
@@ -468,9 +469,6 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0x1A4051)
                 .build().setFormula("HCl", true);
-
-
-
     }
 
     private static int getMaterialsId() {
