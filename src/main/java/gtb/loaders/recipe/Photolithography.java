@@ -9,6 +9,9 @@ import static gtb.common.item.GTBMetaItems.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import gregtech.api.items.metaitem.MetaItem;
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.material.Material;
 import gregtech.common.items.MetaItems;
@@ -958,8 +961,14 @@ public class Photolithography {
                 .EUt(8112)
                 .buildAndRegister();
 
-        CUTTER_RECIPES.recipeBuilder().input(MetaItems.HIGHLY_ADVANCED_SOC_WAFER).output(HASOC_DIE, 6)
-                .fluidInputs(Water.getFluid(12)).duration(2000).EUt(80000).buildAndRegister();
+        CUTTER_RECIPES.recipeBuilder()
+                .input(MetaItems.HIGHLY_ADVANCED_SOC_WAFER)
+                .output(HASOC_DIE, 6)
+                .fluidInputs(Water.getFluid(12))
+                .duration(2000)
+                .EUt(80000)
+                .buildAndRegister();
+
         CUTTER_RECIPES.recipeBuilder().input(MetaItems.HIGHLY_ADVANCED_SOC_WAFER).output(GTBMetaItems.HASOC_DIE, 6)
                 .fluidInputs(DistilledWater.getFluid(6)).duration(1000).EUt(80000).buildAndRegister();
         CUTTER_RECIPES.recipeBuilder().input(MetaItems.HIGHLY_ADVANCED_SOC_WAFER).output(GTBMetaItems.HASOC_DIE, 6)
@@ -1404,6 +1413,7 @@ public class Photolithography {
                         .duration(800)
                         .EUt(100)
                         .buildAndRegister();
+
 
             }
         }

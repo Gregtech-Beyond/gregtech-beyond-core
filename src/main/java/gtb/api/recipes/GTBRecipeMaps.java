@@ -5,6 +5,7 @@ import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import scala.sys.process.ProcessBuilderImpl;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
@@ -72,4 +73,13 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ROASTER = new RecipeMap<>("roaster",
             2, 4, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ENGRAVING_UNIT  = new RecipeMap<>("engraving_unit",
+            2, 4, 2, 2, new SimpleRecipeBuilder(), false);
+
+
+
+
+
+
 }
