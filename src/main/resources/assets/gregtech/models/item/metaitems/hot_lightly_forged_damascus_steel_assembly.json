@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gtb:items/metaitems/hot_lightly_forged_damascus_steel_assembly"
+    "layer0": "gtb:items/metaitems/lightly_forged_damascus_steel_assembly",
+    "layer1": "gtb:items/metaitems/hot_damascus_steel_assembly_overlay"
   }
 }

@@ -24,6 +24,7 @@ public class DamascusSteelLine {
         BLAST_RECIPES.recipeBuilder()
                 .input(GTBMetaItems.DAMASCUS_STEEL_ASSEMBLY, 1)
                 .output(GTBMetaItems.HOT_DAMASCUS_STEEL_ASSEMBLY, 1)
+                .blastFurnaceTemp(1200)
                 .duration(1200)
                 .EUt(1920)
                 .buildAndRegister();
@@ -38,6 +39,7 @@ public class DamascusSteelLine {
         BLAST_RECIPES.recipeBuilder()
                 .input(GTBMetaItems.LIGHTLY_FORGED_DAMASCUS_STEEL_ASSEMBLY, 1)
                 .output(GTBMetaItems.HOT_LIGHTLY_FORGED_DAMASCUS_STEEL_ASSEMBLY, 1)
+                .blastFurnaceTemp(1200)
                 .duration(1200)
                 .EUt(1920)
                 .buildAndRegister();
@@ -52,6 +54,7 @@ public class DamascusSteelLine {
         BLAST_RECIPES.recipeBuilder()
                 .input(GTBMetaItems.MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY, 1)
                 .output(GTBMetaItems.HOT_MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY, 1)
+                .blastFurnaceTemp(1200)
                 .duration(1200)
                 .EUt(1920)
                 .buildAndRegister();
@@ -66,6 +69,7 @@ public class DamascusSteelLine {
         BLAST_RECIPES.recipeBuilder()
                 .input(GTBMetaItems.HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY, 1)
                 .output(GTBMetaItems.HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY, 1)
+                .blastFurnaceTemp(1200)
                 .duration(1200)
                 .EUt(1920)
                 .buildAndRegister();
