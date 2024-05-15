@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/engraved_spinorial_memory_wafer"
+    "layer0": "gtb:items/metaitems/engraved_spinorial_memory_wafer"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/insulated_optical_soc"
+    "layer0": "gtb:items/metaitems/insulated_optical_soc"
   }
 }

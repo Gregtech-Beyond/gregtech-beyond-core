@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/power_ic_wafer"
+    "layer0": "gtb:items/metaitems/power_ic_wafer"
   }
 }

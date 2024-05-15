@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/enriched_naquadah_photolithography_mask"
+    "layer0": "gtb:items/metaitems/enriched_naquadah_photolithography_mask"
   }
 }

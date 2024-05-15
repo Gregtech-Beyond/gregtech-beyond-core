@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/raw_cpu_wafer"
+    "layer0": "gtb:items/metaitems/doped_cpu_wafer"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/engraved_soc_wafer"
+    "layer0": "gtb:items/metaitems/engraved_soc_wafer"
   }
 }

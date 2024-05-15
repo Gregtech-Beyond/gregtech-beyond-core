@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/electroluminescent_inp_wafer"
+    "layer0": "gtb:items/metaitems/electroluminescent_inp_wafer"
   }
 }

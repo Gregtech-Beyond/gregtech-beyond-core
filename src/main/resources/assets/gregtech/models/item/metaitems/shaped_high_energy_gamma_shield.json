@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/shaped_high_energy_gamma_shield"
+    "layer0": "gtb:items/metaitems/shaped_high_energy_gamma_shield"
   }
 }

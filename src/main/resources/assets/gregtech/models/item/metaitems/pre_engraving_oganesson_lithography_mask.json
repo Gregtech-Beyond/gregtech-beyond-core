@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/pre_engraving_oganesson_lithography_mask"
+    "layer0": "gtb:items/metaitems/pre_engraving_oganesson_lithography_mask"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/naquadah_dioxide_wafer"
+    "layer0": "gtb:items/metaitems/naquadah_dioxide_wafer"
   }
 }

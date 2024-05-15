@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/neural_implanted_hasoc_die"
+    "layer0": "gtb:items/metaitems/neural_implanted_hasoc_die"
   }
 }

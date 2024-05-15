@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/u240_electron_source"
+    "layer0": "gtb:items/metaitems/u240_electron_source"
   }
 }

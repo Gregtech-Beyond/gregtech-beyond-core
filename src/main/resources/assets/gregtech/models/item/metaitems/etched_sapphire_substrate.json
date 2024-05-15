@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/etched_sapphire_substrate"
+    "layer0": "gtb:items/metaitems/etched_sapphire_substrate"
   }
 }

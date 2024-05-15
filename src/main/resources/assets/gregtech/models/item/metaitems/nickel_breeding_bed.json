@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/nickel_breeding_bed"
+    "layer0": "gtb:items/metaitems/nickel_breeding_bed"
   }
 }

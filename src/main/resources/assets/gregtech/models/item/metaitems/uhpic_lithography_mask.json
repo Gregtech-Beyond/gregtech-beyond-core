@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/uhpic_lithography_mask"
+    "layer0": "gtb:items/metaitems/uhpic_lithography_mask"
   }
 }

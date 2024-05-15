@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "contenttweaker:items/unimprintedntypewafer"
+    "layer0": "gtb:items/metaitems/unimprintedntypewafer"
   }
 }
