@@ -369,6 +369,11 @@ public class GTBFirstDegreeMaterials {
                 .color(0x1A4051)
                 .build().setFormula("C(O2)", true);
 
+        GrapheneOxidationSolution = new Material.Builder(getMaterialsId(), gregtechId("graphene_oxidation_solution"))
+                .fluid()
+                .color(0x1A4051)
+                .build().setFormula("C(O2)", true);
+
         SilverBromide = new Material.Builder(getMaterialsId(), gregtechId("silver_bromides"))
                 .dust()
                 .color(0x1A4051)
@@ -455,6 +460,11 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("HCl", true);
 
         ExtraDistilledWater = new Material.Builder(getMaterialsId(), gregtechId("extra_distilled_water"))
+                .fluid()
+                .color(0x1A4051)
+                .build().setFormula("HCl", true);
+
+        Trichlorosilane = new Material.Builder(getMaterialsId(), gregtechId("trichlorosilane"))
                 .fluid()
                 .color(0x1A4051)
                 .build().setFormula("HCl", true);

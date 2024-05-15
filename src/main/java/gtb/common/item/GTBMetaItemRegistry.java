@@ -162,5 +162,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ARAM_WAFER = addItem(147, "aram_wafer");
         GTBMetaItems.UHASOC_WAFER = addItem(148, "uhasoc_wafer");
         GTBMetaItems.OPTICAL_SOC_WAFER = addItem(149, "optical_soc_wafer");
+        GTBMetaItems.QBIT_CPU = addItem(150, "qbit_cpu");
+        GTBMetaItems.OPTICAL_SOC = addItem(151, "optical_soc");
     }
 }
