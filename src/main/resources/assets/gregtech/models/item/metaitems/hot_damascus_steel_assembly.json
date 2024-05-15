@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gtb:items/metaitems/damascus_steel_assembly",
+    "layer1": "gtb:items/metaitems/Hot_damascus_steel_assembly_overlay"
+  }
+}
