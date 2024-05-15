@@ -13,7 +13,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ASTRO_MINER = addItem(1, "astro_miner");
         GTBMetaItems.MOON = addItem(2, "moon");
         GTBMetaItems.PARAFFIN_WAX = addItem(3, "paraffin_wax");
-        GTBMetaItems.BITOMINOUS_RESIDUES = addItem(4, "bitominous_residues");
         GTBMetaItems.NANO_PIC_WAFER = addItem(5, "nano_pic_wafer");
         GTBMetaItems.TRENCHED_SUPERCONDUCTOR_LAYERED_UHASOC_WAFER = addItem(6,
                 "trenched_superconductor_layered_uhasoc_wafer");
@@ -164,5 +163,14 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.OPTICAL_SOC_WAFER = addItem(149, "optical_soc_wafer");
         GTBMetaItems.QBIT_CPU = addItem(150, "qbit_cpu");
         GTBMetaItems.OPTICAL_SOC = addItem(151, "optical_soc");
+        GTBMetaItems.BITUMINOUS_RESIDUES = addItem(4, "bituminous_residues");
+        GTBMetaItems.DAMASCUS_STEEL_ASSEMBLY = addItem(152, "damascus_steel_assembly");
+        GTBMetaItems.HOT_DAMASCUS_STEEL_ASSEMBLY = addItem(153, "hot_damascus_steel_assembly");
+        GTBMetaItems.LIGHTLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(154, "lightly_forged_damascus_steel_assembly");
+        GTBMetaItems.HOT_LIGHTLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(155, "hot_lightly_forged_damascus_steel_assembly");
+        GTBMetaItems.MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(156, "moderately_forged_damascus_steel_assembly");
+        GTBMetaItems.HOT_MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(157, "hot_moderately_forged_damascus_steel_assembly");
+        GTBMetaItems.HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(158, "highly_forged_damascus_steel_assembly");
+        GTBMetaItems.HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(159, "hot_highly_forged_damascus_steel_assembly");
     }
 }

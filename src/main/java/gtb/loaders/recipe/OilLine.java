@@ -169,7 +169,7 @@ public class OilLine {
                 .fluidInputs(GTBMaterials.SulfuricOilResidues.getFluid(1000))
                 .fluidOutputs(GTBMaterials.LubricantMixture.getFluid(850))
                 .fluidOutputs(GTBMaterials.SulfuricFuelOil.getFluid(200))
-                .output(GTBMetaItems.BITOMINOUS_RESIDUES, 1)
+                .output(GTBMetaItems.BITUMINOUS_RESIDUES, 1)
                 .fluidOutputs(GTBMaterials.SulfuricDiesel.getFluid(200))
                 .fluidOutputs(GTBMaterials.SulfuricKerosene.getFluid(150))
                 .fluidOutputs(SulfuricNaphtha.getFluid(100))
@@ -231,7 +231,7 @@ public class OilLine {
                 .buildAndRegister();
 
         GTBRecipeMaps.COKER.recipeBuilder()
-                .input(GTBMetaItems.BITOMINOUS_RESIDUES, 1)
+                .input(GTBMetaItems.BITUMINOUS_RESIDUES, 1)
                 .fluidInputs(Steam.getFluid(1000))
                 .fluidOutputs(GTBMaterials.SulfuricOilResidues.getFluid(150))
                 .output(dust, Coke, 4)

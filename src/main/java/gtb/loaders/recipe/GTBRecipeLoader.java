@@ -26,5 +26,6 @@ public final class GTBRecipeLoader {
         MaterialBenefication.init();
         RandomRecipes.init();
         Photolithography.init();
+        DamascusSteelLine.init();
     }
 }
