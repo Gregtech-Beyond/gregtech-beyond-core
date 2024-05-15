@@ -4,7 +4,6 @@ import gregtech.api.items.metaitem.MetaItem;
 
 public class GTBMetaItems {
 
-
     public static MetaItem<?>.MetaValueItem ASTRO_MINER;
     public static MetaItem<?>.MetaValueItem MOON;
     public static MetaItem<?>.MetaValueItem PARAFFIN_WAX;
@@ -112,23 +111,23 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem QBIT_CPU_DIE;
     public static MetaItem<?>.MetaValueItem COVERED_QBIT_CPU;
     public static MetaItem<?>.MetaValueItem FEMTO_PIC;
-	public static MetaItem<?>.MetaValueItem PHOTOPOLYMER_PLATE;
+    public static MetaItem<?>.MetaValueItem PHOTOPOLYMER_PLATE;
     public static MetaItem<?>.MetaValueItem CELAUWAFER;
-	public static MetaItem<?>.MetaValueItem INTEGRATED_CIRCUIT_LITHOGRAPHY_MASK;
+    public static MetaItem<?>.MetaValueItem INTEGRATED_CIRCUIT_LITHOGRAPHY_MASK;
     public static MetaItem<?>.MetaValueItem SILICON_DIOXIDE_WAFER;
     public static MetaItem<?>.MetaValueItem ENGRAVED_NANOCPU_WAFER;
     public static MetaItem<?>.MetaValueItem DOPED_NANOCPU_WAFER;
     public static MetaItem<?>.MetaValueItem NANOCPU_LITHOGRAPHY_MASK;
     public static MetaItem<?>.MetaValueItem GATED_NANOCPU_WAFER;
     public static MetaItem<?>.MetaValueItem INSULATED_NANOCPU_WAFER;
-	public static MetaItem<?>.MetaValueItem NICKEL_BREEDING_BED;
-	public static MetaItem<?>.MetaValueItem NAQUADAH_DIOXDE_SEED_CRYSTAL;
-	public static MetaItem<?>.MetaValueItem OPTICAL_LITHOGRAPHY_MASK;
-	public static MetaItem<?>.MetaValueItem INTERCONNCETED_INP_WAFER;
-	public static MetaItem<?>.MetaValueItem NAQUADAH_DIOXDE_BOULE;
-	public static MetaItem<?>.MetaValueItem NAQUADAH_DIOXIDE_WAFER;
-	public static MetaItem<?>.MetaValueItem SOC_LITHOGRAPHY_MASK;
-	public static MetaItem<?>.MetaValueItem TRENCHED_NAQUADAH_DIOXIDE_WAFER;
+    public static MetaItem<?>.MetaValueItem NICKEL_BREEDING_BED;
+    public static MetaItem<?>.MetaValueItem NAQUADAH_DIOXDE_SEED_CRYSTAL;
+    public static MetaItem<?>.MetaValueItem OPTICAL_LITHOGRAPHY_MASK;
+    public static MetaItem<?>.MetaValueItem INTERCONNCETED_INP_WAFER;
+    public static MetaItem<?>.MetaValueItem NAQUADAH_DIOXDE_BOULE;
+    public static MetaItem<?>.MetaValueItem NAQUADAH_DIOXIDE_WAFER;
+    public static MetaItem<?>.MetaValueItem SOC_LITHOGRAPHY_MASK;
+    public static MetaItem<?>.MetaValueItem TRENCHED_NAQUADAH_DIOXIDE_WAFER;
     public static MetaItem<?>.MetaValueItem TRENCHED_INSULATED_NANOCPU_WAFER;
     public static MetaItem<?>.MetaValueItem UNPLANARIZED_NANOCPU_WAFER;
     public static MetaItem<?>.MetaValueItem ULPIC_WAFER;
@@ -156,7 +155,6 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem UHASOC_WAFER;
     public static MetaItem<?>.MetaValueItem OPTICAL_SOC_WAFER;
     public static MetaItem<?>.MetaValueItem OPTICAL_SOC;
-
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
