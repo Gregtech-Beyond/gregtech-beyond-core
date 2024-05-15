@@ -11,7 +11,6 @@ import org.jetbrains.annotations.NotNull;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
@@ -20,8 +19,7 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockMetalCasing;
-import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.blocks.*;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
@@ -41,30 +39,50 @@ public class MetaTileEntityEngravingUnit extends RecipeMapMultiblockController {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
     }
 
+    public IBlockState getIronPillar() {
+        return Blocks.IRON_BARS.getDefaultState();
+    }
+
+    public IBlockState getGearBoxCasing() {
+        return MetaBlocks.TURBINE_CASING.getState(BlockTurbineCasing.TurbineCasingType.STEEL_GEARBOX);
+    }
+
+    public IBlockState getPipeCasing() {
+        return MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE);
+    }
+
+    public IBlockState getLaserDanger() {
+        return MetaBlocks.WARNING_SIGN_1.getState(BlockWarningSign1.SignType.LASER_HAZARD);
+    }
+
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("F~F", "~~~", "F~F")
-                .aisle("CCC", "CCC", "CSC")
-                .aisle("GGG", "G~G", "GGG")
-                .aisle("GGG", "G~G", "GGG")
-                .aisle("GGG", "G~G", "GGG")
-                .aisle("CCC", "CCC", "CCC")
-                .aisle("~C~", "CCC", "~C~")
-                .where('S', selfPredicate())
-                .where('G', states(Blocks.GLASS.getDefaultState()))
-                .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
+                .aisle("F---F", "-----", "-----", "-----", "-----", "-----", "F---F", "-----", "-F-F-")
+                .aisle("HHHHH", "HHHHH", "HHHHH", "HHHHH", "HHHHH", "HHHHH", "HHHHH", "HHHHH", "-HHH-")
+                .aisle("HGGGH", "GAAAG", "GAAAG", "GAAAG", "GAAAG", "GAAAG", "GAAAG", "HCCCH", "-HHH-")
+                .aisle("HGGGH", "GAAAG", "GAAAG", "GAAAG", "GAAAG", "GAAAG", "GAAAG", "HCCCH", "-HSH-")
+                .aisle("HGGGH", "GAAAG", "GAAAG", "GAAAG", "GAAAG", "GABAG", "GAAAG", "HCCCH", "-PDP-")
+                .aisle("HGGGH", "GAAAG", "GAAAG", "GAAAG", "GAAAG", "GABAG", "GAAAG", "HCCCH", "-PPP-")
+                .aisle("HHDHH", "HHTHH", "HHTHH", "HHTHH", "HHTHH", "HHDHH", "HHTHH", "HHTHH", "--T--")
+                .where('-', any())
+                .where('A', air())
+                .where('B', states(getIronPillar()))
+                .where('P', states(getPipeCasing()))
+                .where('D', states(getLaserDanger()))
+                .where('T', states(getGearBoxCasing()))
+                .where('C', states(getCasingState()))
+                .where('H', states(getCasingState())
+                        .or(autoAbilities()))
                 .where('F', frames(Materials.BlueSteel))
                 .where('G', states(MetaBlocks.TRANSPARENT_CASING.getDefaultState()))
+                .where('S', selfPredicate())
                 .build();
     }
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
@@ -84,7 +102,7 @@ public class MetaTileEntityEngravingUnit extends RecipeMapMultiblockController {
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.PRIMITIVE_BLAST_FURNACE_OVERLAY;
+        return Textures.LASER_ENGRAVER_OVERLAY;
     }
 
     @Override
