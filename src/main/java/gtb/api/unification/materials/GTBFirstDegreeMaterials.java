@@ -292,7 +292,7 @@ public class GTBFirstDegreeMaterials {
                 .color(0x1A4051)
                 .build().setFormula("Xe", true);
 
-        VeryHotArgon = new Material.Builder(getMaterialsId(), gregtechId("very_hot_xenon"))
+        VeryHotArgon = new Material.Builder(getMaterialsId(), gregtechId("very_hot_argon"))
                 .fluid()
                 .color(0x1A4051)
                 .build().setFormula("Ar", true);
