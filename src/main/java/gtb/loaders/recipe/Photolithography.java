@@ -511,10 +511,11 @@ public class Photolithography {
         // Naquadah Dioxide
 
         CHEMICAL_RECIPES.recipeBuilder()
-                .fluidOutputs(GTBMaterials.ChloronaquadicAcid.getFluid(1000))
+                .fluidInputs(GTBMaterials.ChloronaquadicAcid.getFluid(1000))
                 .input(dust, GTBMaterials.SodiumNitrate)
                 .output(dust, GTBMaterials.NaquadahDioxide)
-                .fluidOutputs(SaltWater.getFluid(1000)).fluidInputs(NitrogenDioxide.getFluid(1000))
+                .fluidOutputs(SaltWater.getFluid(1000))
+                .fluidInputs(NitrogenDioxide.getFluid(1000))
                 .duration(200)
                 .EUt(100)
                 .buildAndRegister();
