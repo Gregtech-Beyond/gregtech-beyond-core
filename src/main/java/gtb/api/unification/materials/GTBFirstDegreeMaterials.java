@@ -323,12 +323,12 @@ public class GTBFirstDegreeMaterials {
         SuperFluidHelium_4 = new Material.Builder(getMaterialsId(), gregtechId("super_fluid_helium_4"))
                 .fluid()
                 .color(0xFDD835)
-                .build().setFormula("He", true);
+                .build().setFormula("He-4", true);
 
         Helium_4 = new Material.Builder(getMaterialsId(), gregtechId("helium_4"))
                 .fluid()
                 .color(0x928550)
-                .build().setFormula("He", true);
+                .build().setFormula("He-4", true);
 
         LiquidEnrichedHelium_4 = new Material.Builder(getMaterialsId(), gregtechId("liquid_enriched_helium_4"))
                 .fluid()
