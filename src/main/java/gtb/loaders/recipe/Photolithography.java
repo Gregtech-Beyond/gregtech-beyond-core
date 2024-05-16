@@ -1062,7 +1062,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         CVD_UNIT.recipeBuilder()
-                .input(PRE_ENGRAVED_OGANESSON_WAFER).input(dust, RutheniumTriniumAmericiumNeutronate)
+                .input(PRE_ENGRAVED_OGANESSON_WAFER).input(dust, RutheniumTriniumAmericiumNeutronate, 1)
                 .output(SUPERCONDUCTOR_LAYERED_UHASOC_WAFER)
                 .duration(800)
                 .EUt(2000001)
@@ -1605,5 +1605,32 @@ public class Photolithography {
                 .duration(200)
                 .EUt(820)
                 .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(SPINORIAL_MEMORY_WAFER)
+                .notConsumable(lens, DyeYellow)
+                .output(ENGRAVED_SPINORIAL_MEMORY_WAFER)
+                .duration(120)
+                .EUt(900)
+                .buildAndRegister();
+
+        ASSEMBLY_LINE_RECIPES.recipeBuilder()
+                .fluidInputs(Tritanium.getFluid(1296))
+                .input(plate, GTBMaterials.ElectronDegenerateRhenium, 1)
+                .input(FIELD_GENERATOR_LuV)
+                .input(plate, RhodiumPlatedPalladium, 1)
+                .output(CONTROLLED_SHAPED_NAQUADRIA_CHARGE_CASING)
+                .duration(800)
+                .EUt(612)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(CONTROLLED_SHAPED_NAQUADRIA_CHARGE)
+                .input(NAQUADRIA_CHARGE)
+                .output(CONTROLLED_SHAPED_NAQUADRIA_CHARGE)
+                .duration(120)
+                .circuitMeta(2)
+                .buildAndRegister();
+
     }
 }
