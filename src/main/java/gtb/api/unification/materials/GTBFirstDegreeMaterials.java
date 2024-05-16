@@ -5,6 +5,7 @@ import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
 import gregtech.api.unification.material.Material;
+import gregtech.api.unification.material.info.MaterialFlags;
 
 public class GTBFirstDegreeMaterials {
 
@@ -310,6 +311,7 @@ public class GTBFirstDegreeMaterials {
 
         MetastableOganesson = new Material.Builder(getMaterialsId(), gregtechId("metastable_oganesson"))
                 .fluid()
+                .dust()
                 .color(0xB71C1C)
                 .build().setFormula("Og", true);
 
@@ -346,8 +348,9 @@ public class GTBFirstDegreeMaterials {
 
         HighDensityPolyethylene = new Material.Builder(getMaterialsId(), gregtechId("high_density_polyethylene"))
                 .fluid()
+                .flags(MaterialFlags.GENERATE_PLATE)
                 .dust()
-                .color(0xC8C8C8)
+                .color(0xBDBDBD)
                 .build().setFormula("C2H4", true);
 
         LiquidNitrogen = new Material.Builder(getMaterialsId(), gregtechId("liquid_nitrogen"))
@@ -439,12 +442,14 @@ public class GTBFirstDegreeMaterials {
         FullerenePolymerMatrix = new Material.Builder(getMaterialsId(), gregtechId("fullerene_polymer_matrix"))
                 .fluid()
                 .dust()
+                .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0x313031)
                 .build().setFormula("HCl", true);
 
         FullerenePolymerTetrix = new Material.Builder(getMaterialsId(), gregtechId("fullerene_polymer_tetrix"))
                 .fluid()
                 .dust()
+                .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0x1D181E)
                 .build().setFormula("HCl", true);
 
@@ -469,6 +474,17 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0x444545)
                 .build().setFormula("HCl4", true);
+
+        SuperFluidHelium = new Material.Builder(getMaterialsId(), gregtechId("super_fluid_helium"))
+                .fluid()
+                .color(0xFFC107)
+                .build().setFormula("He", true);
+
+        ChromaticGlass = new Material.Builder(getMaterialsId(), gregtechId("chromatic_glass"))
+                .gem()
+                .dust()
+                .color(0xBEA0D0)
+                .build().setFormula("(SiO2)*", true);
     }
 
     private static int getMaterialsId() {
