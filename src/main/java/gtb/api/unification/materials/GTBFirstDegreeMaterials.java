@@ -229,6 +229,7 @@ public class GTBFirstDegreeMaterials {
 
         ElectronDegenerateRhenium = new Material.Builder(getMaterialsId(), gregtechId("electron_degenerate_rhenium"))
                 .dust()
+                .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0xDCD4EA)
                 .build().setFormula("NqO2", true);
 
@@ -241,12 +242,12 @@ public class GTBFirstDegreeMaterials {
         HighPurityArsenic = new Material.Builder(getMaterialsId(), gregtechId("high_purity_arsenic"))
                 .dust()
                 .color(0xD7CCC8)
-                .build().setFormula("NqO2", true);
+                .build().setFormula("As", true);
 
         IndiumChloride = new Material.Builder(getMaterialsId(), gregtechId("indium_chloride"))
                 .dust()
                 .color(0x8E24AA)
-                .build().setFormula("NqO2", true);
+                .build().setFormula("InCl", true);
 
         NovolacsPhotoresist = new Material.Builder(getMaterialsId(), gregtechId("novolacs_photoresist"))
                 .fluid()
@@ -262,17 +263,17 @@ public class GTBFirstDegreeMaterials {
         LiquidXenon = new Material.Builder(getMaterialsId(), gregtechId("liquid_xenon"))
                 .fluid()
                 .color(0x29B6F6)
-                .build().setFormula("NqO2", true);
+                .build().setFormula("Xe", true);
 
         SiliconCarbide = new Material.Builder(getMaterialsId(), gregtechId("silicon_carbide"))
                 .fluid()
                 .color(0x43535A)
-                .build().setFormula("NqO2", true);
+                .build().setFormula("SiC", true);
 
         SiliconCarbideVapor = new Material.Builder(getMaterialsId(), gregtechId("silicon_carbide_vapor"))
                 .fluid()
                 .color(0x5A707A)
-                .build().setFormula("NqO2", true);
+                .build().setFormula("SiC", true);
 
         VeryHotNitrogen = new Material.Builder(getMaterialsId(), gregtechId("very_hot_nitrogen"))
                 .fluid()
@@ -302,7 +303,7 @@ public class GTBFirstDegreeMaterials {
         NickelNitride = new Material.Builder(getMaterialsId(), gregtechId("nickel_nitride"))
                 .fluid()
                 .color(0xFFF176)
-                .build().setFormula("Ar", true);
+                .build().setFormula("NiN3", true);
 
         LiquidHelium = new Material.Builder(getMaterialsId(), gregtechId("liquid_helium"))
                 .fluid()
@@ -333,7 +334,7 @@ public class GTBFirstDegreeMaterials {
         LiquidEnrichedHelium_4 = new Material.Builder(getMaterialsId(), gregtechId("liquid_enriched_helium_4"))
                 .fluid()
                 .color(0xC0CA33)
-                .build().setFormula("He", true);
+                .build().setFormula("He-4", true);
 
         Trichloroflerane = new Material.Builder(getMaterialsId(), gregtechId("trichloroflerane"))
                 .fluid()
@@ -459,7 +460,7 @@ public class GTBFirstDegreeMaterials {
                 .color(0x0D47A1)
                 .build().setFormula("HCl", true);
 
-        NaquadriaticTaranium = new Material.Builder(getMaterialsId(), gregtechId("naquadadriatic_taranium"))
+        NaquadriaticTaranium = new Material.Builder(getMaterialsId(), gregtechId("naquadriatic_taranium"))
                 .fluid()
                 .dust()
                 .color(0x4A4B4B)
