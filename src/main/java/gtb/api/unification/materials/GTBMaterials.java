@@ -99,7 +99,6 @@ public class GTBMaterials {
         GTBOrganicChemistryMaterials.register();
         GTBUnknownCompositionMaterials.register();
         GTBBiologicalMaterials.register();
-        GTBMaterialIconSetAddition.init();
         GTBMaterialSetFormula.init();
     }
 }
