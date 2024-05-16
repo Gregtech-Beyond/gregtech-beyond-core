@@ -2,14 +2,13 @@ package gtb.loaders.recipe;
 
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
-
-import static gregtech.api.unification.ore.OrePrefix.dust;
+import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
-
 import gtb.api.unification.materials.GTBMaterials;
+
 
 public class TungstenLine {
 
@@ -95,5 +94,6 @@ public class TungstenLine {
                 .buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, TungsticAcid, 7));
+
     }
 }
