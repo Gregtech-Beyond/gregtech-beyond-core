@@ -2,7 +2,6 @@ package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
 
-import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.*;
 
