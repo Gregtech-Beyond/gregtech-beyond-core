@@ -43,19 +43,19 @@ public class GTBSecondDegreeMaterials {
         Tetrapropylammoniumbromide = new Material.Builder(getMaterialsId(), gregtechId("tetrapropylammoniumbromide"))
                 .fluid()
                 .dust()
-                .color(0xEF5350)
+                .color(0xAD77C3)
                 .build().setFormula("?", true);
 
         UEVSuperconductor = new Material.Builder(getMaterialsId(), gregtechId("uev_superconductor"))
                 .fluid()
                 .dust()
-                .color(0xEF5350)
+                .color(0x29B6F6)
                 .build().setFormula("?", true);
 
         ZBLAN = new Material.Builder(getMaterialsId(), gregtechId("zblan"))
                 .fluid()
                 .dust()
-                .color(0xEF5350)
+                .color(0xE0E1E1)
                 .build().setFormula("?", true);
     }
 

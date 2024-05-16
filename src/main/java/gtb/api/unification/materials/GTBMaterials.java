@@ -101,6 +101,7 @@ public class GTBMaterials {
     public static Material SeaborgiumDopedNanotubes;
     public static Material NaquadriaticTaranium;
     public static Material ChromaticGlass;
+    public static Material SuperFluidHelium;
 
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;

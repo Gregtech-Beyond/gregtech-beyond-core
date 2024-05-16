@@ -60,7 +60,7 @@ public final class GTBMetaTileEntities {
         FERMENTATION_VAT = registerMetaTileEntity(3012, new MetaTileEntityFermentationVat(gtb("fermentation_vat")));
         FISCHER_TROPSCH_REACTOR = registerMetaTileEntity(3013,
                 new MetaTileEntityFischerTropschReactor(gtb("fischer_tropsch_reactor")));
-        ENGRAVING_UNIT  = registerMetaTileEntity(3014,
+        ENGRAVING_UNIT = registerMetaTileEntity(3014,
                 new MetaTileEntityEngravingUnit(gtb("engraving_unit")));
 
         registerSimpleMetaTileEntity(CRYSTALLIZERS, 4010, "crystallizers", GTBRecipeMaps.CRYSTALLIZATION,
