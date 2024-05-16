@@ -10,6 +10,11 @@ import static gtb.common.item.GTBMetaItems.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.material.Material;
 import gregtech.common.items.MetaItems;
@@ -1305,7 +1310,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(BARIUM_TITANATE_SUBSTRATE_WAFER)
@@ -1315,7 +1320,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(SUPERCONDUCTOR_COATED_SUBSTRATE_WAFER)
@@ -1325,7 +1330,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(FLEROVIUM_LAYERED_WAFER)
@@ -1334,7 +1339,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(SOC_WAFER_BASE)
@@ -1344,7 +1349,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(DOPED_OGANESSON_WAFER)
@@ -1354,7 +1359,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(RELAYERED_UHASOC_WAFER)
@@ -1364,7 +1369,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(ZBLAN_LAYERED_INP_WAFER)
@@ -1374,7 +1379,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(INSULATED_INP_WAFER)
@@ -1384,7 +1389,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(RECOATED_INP_WAFER)
@@ -1393,7 +1398,7 @@ public class Photolithography {
 
         ENGRAVING_UNIT.recipeBuilder()
                 .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
-                .fluidInputs(Helium.getFluid(4000))
+                .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
                 .input(INSULATED_OPTICAL_SOC)
@@ -1522,5 +1527,73 @@ public class Photolithography {
 
             }
         }
+        // Recipe Removals
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeLightBlue),
+                SILICON_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeLightBlue),
+                NAQUADAH_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeLightBlue),
+                PHOSPHORUS_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeLightBlue),
+                NEUTRONIUM_WAFER.getStackForm(1));
+
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeGreen),
+                SILICON_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeGreen),
+                NAQUADAH_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeGreen),
+                PHOSPHORUS_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeGreen),
+                NEUTRONIUM_WAFER.getStackForm(1));
+
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeRed),
+                SILICON_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeRed),
+                NAQUADAH_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeRed),
+                PHOSPHORUS_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeRed),
+                NEUTRONIUM_WAFER.getStackForm(1));
+
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeGray),
+                PHOSPHORUS_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeGray),
+                NAQUADAH_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeGray),
+                NEUTRONIUM_WAFER.getStackForm(1));
+
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyePink),
+                PHOSPHORUS_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyePink),
+                NAQUADAH_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyePink),
+                NEUTRONIUM_WAFER.getStackForm(1));
+
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeYellow),
+                PHOSPHORUS_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeYellow),
+                NAQUADAH_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeYellow),
+                NEUTRONIUM_WAFER.getStackForm(1));
+
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeBrown),
+                PHOSPHORUS_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeBrown),
+                NAQUADAH_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeBrown),
+                NEUTRONIUM_WAFER.getStackForm(1));
+
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyePurple),
+                NAQUADAH_WAFER.getStackForm(1));
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyePurple),
+                NEUTRONIUM_WAFER.getStackForm(1));
+
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeBlack),
+                NEUTRONIUM_WAFER.getStackForm(1));
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1),
+                        OreDictUnifier.get(dust, IndiumGalliumPhosphide, 8) },
+                new FluidStack[] { Naquadah.getFluid(576) });
     }
 }
