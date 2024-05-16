@@ -301,6 +301,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("Ar", true);
 
         NickelNitride = new Material.Builder(getMaterialsId(), gregtechId("nickel_nitride"))
+                .dust()
                 .fluid()
                 .color(0xFFF176)
                 .build().setFormula("NiN3", true);

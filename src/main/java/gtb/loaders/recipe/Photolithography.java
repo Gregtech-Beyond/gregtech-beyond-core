@@ -197,7 +197,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         FLUID_HEATER_RECIPES.recipeBuilder()
-                .fluidOutputs(GTBMaterials.UsedPhotopolymerSolution.getFluid(1000))
+                .fluidInputs(GTBMaterials.UsedPhotopolymerSolution.getFluid(1000))
                 .circuitMeta(1)
                 .fluidOutputs(GTBMaterials.PhotopolymerSolution.getFluid(500))
                 .duration(1000)
@@ -1628,9 +1628,9 @@ public class Photolithography {
                 .input(CONTROLLED_SHAPED_NAQUADRIA_CHARGE)
                 .input(NAQUADRIA_CHARGE)
                 .output(CONTROLLED_SHAPED_NAQUADRIA_CHARGE)
+                .EUt(250) // TODO was missing, I don't which value you want
                 .duration(120)
                 .circuitMeta(2)
                 .buildAndRegister();
-
     }
 }
