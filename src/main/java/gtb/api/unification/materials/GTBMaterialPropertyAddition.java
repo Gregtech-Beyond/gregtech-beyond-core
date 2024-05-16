@@ -1,7 +1,6 @@
 package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.Bromine;
-import static gregtech.api.unification.material.Materials.DamascusSteel;
 
 import gregtech.api.unification.material.properties.FluidProperty;
 import gregtech.api.unification.material.properties.PropertyKey;

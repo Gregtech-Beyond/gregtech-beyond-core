@@ -1,8 +1,6 @@
 package gtb.api.unification.materials;
 
 import gregtech.api.unification.material.Material;
-import gtb.api.unification.materials.info.GTBMaterialFlags;
-import gtb.api.unification.materials.info.GTBMaterialIconTypes;
 
 public class GTBMaterials {
 
@@ -93,15 +91,15 @@ public class GTBMaterials {
     public static Material Tripropylamine;
 
     public static void init() {
-        GTBMaterialFlagAddition.setFormula();
-        GTBMaterialFlagAddition.setProperty();
-        GTBMaterialFlagAddition.addFlags();
-        GTBMaterialFlagAddition.setIcon();
+        GTBMaterialPropertyAddition.init();
+        GTBMaterialFlagAddition.init();
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();
         GTBSecondDegreeMaterials.register();
         GTBOrganicChemistryMaterials.register();
         GTBUnknownCompositionMaterials.register();
         GTBBiologicalMaterials.register();
+        GTBMaterialIconSetAddition.init();
+        GTBMaterialSetFormula.init();
     }
 }
