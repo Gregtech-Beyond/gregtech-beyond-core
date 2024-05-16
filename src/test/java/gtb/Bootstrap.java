@@ -74,11 +74,8 @@ public final class Bootstrap {
         meta.modId = GTValues.MODID;
         Loader.instance().setupTestHarness(new DummyModContainer(meta));
 
-        GTBMaterials.init();
-        GTBMaterialFlagAddition.init();
-
         managerInternal.closeRegistries();
-        GTBMaterialFlagAddition.initLate();
+        GTBMaterialFlagAddition.addFlags();
 
         managerInternal.freezeRegistries();
 

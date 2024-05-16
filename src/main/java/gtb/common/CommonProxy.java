@@ -64,7 +64,7 @@ public class CommonProxy {
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public static void registerMaterialsPost(PostMaterialEvent event) {
-        GTBMaterialFlagAddition.initLate();
+        GTBMaterialFlagAddition.addFlags();
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
