@@ -662,7 +662,8 @@ public class Photolithography {
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(GTBMaterials.LiquidEnrichedHelium_4.getFluid(1000))
                 .fluidInputs(GTBMaterials.LiquidNitrogen.getFluid(1000))
-                .fluidOutputs(GTBMaterials.SuperFluidHelium_4.getFluid(1000)).fluidInputs(Helium3.getFluid(1000))
+                .fluidOutputs(GTBMaterials.SuperFluidHelium_4.getFluid(1000))
+                .fluidOutputs(Helium3.getFluid(1000))
                 .duration(200)
                 .EUt(100)
                 .buildAndRegister();
@@ -1309,7 +1310,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1319,7 +1320,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1329,7 +1330,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1338,7 +1339,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1348,7 +1349,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1358,7 +1359,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1368,7 +1369,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1378,7 +1379,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1388,7 +1389,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1397,7 +1398,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ENGRAVING_UNIT.recipeBuilder()
-                .fluidInputs(GTBMaterials.SuperFluidHelium.getFluid(4000))
+                .fluidInputs(GTBMaterials.SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
                 .EUt(8000)
@@ -1595,5 +1596,14 @@ public class Photolithography {
                 new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1),
                         OreDictUnifier.get(dust, IndiumGalliumPhosphide, 8) },
                 new FluidStack[] { Naquadah.getFluid(576) });
+
+        FUSION_RECIPES.recipeBuilder()
+                .EUToStart(160000000)
+                .fluidInputs(Helium3.getFluid(12))
+                .fluidInputs(Helium3.getFluid(12))
+                .fluidOutputs(GTBMaterials.Helium_4.getFluid(12))
+                .duration(200)
+                .EUt(820)
+                .buildAndRegister();
     }
 }
