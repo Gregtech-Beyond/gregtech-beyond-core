@@ -180,7 +180,6 @@ public class GTBFirstDegreeMaterials {
                 .color(0x6E9C46)
                 .build().setFormula("WO3", true);
 
-
         HydrogenPeroxide = new Material.Builder(getMaterialsId(), gregtechId("hydrogenperoxide"))
                 .fluid()
                 .color(0x64B5F6)
@@ -194,7 +193,6 @@ public class GTBFirstDegreeMaterials {
         LithiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxide"))
                 .dust()
                 .build().setFormula("LiOH", true);
-
 
         SodiumTungstate = new Material.Builder(getMaterialsId(), gregtechId("sodiumtungstate"))
                 .fluid()
@@ -316,7 +314,7 @@ public class GTBFirstDegreeMaterials {
                 .liquid(new FluidBuilder())
                 .color(0x4A148C)
                 .build().setFormula("C4H6O2", true);
-      
+
         NaquadahDioxide = new Material.Builder(getMaterialsId(), gregtechId("naquadah_dioxide"))
                 .dust()
                 .color(0x6A1B9A)

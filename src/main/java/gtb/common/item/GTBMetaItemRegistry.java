@@ -12,7 +12,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
     public void registerSubItems() {
         GTBMetaItems.ASTRO_MINER = addItem(1, "astro_miner");
         GTBMetaItems.MOON = addItem(2, "moon");
-        GTBMetaItems.PARAFFIN_WAX = addItem(3, "paraffin_wax"); 
+        GTBMetaItems.PARAFFIN_WAX = addItem(3, "paraffin_wax");
         GTBMetaItems.NANO_CPU_WAFER = addItem(5, "nano_cpu_wafer");
         GTBMetaItems.TRENCHED_SUPERCONDUCTOR_LAYERED_UHASOC_WAFER = addItem(6,
                 "trenched_superconductor_layered_uhasoc_wafer");
@@ -189,5 +189,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.SOY_BEAN = addItem(178, "soy_bean");
         GTBMetaItems.BIO_PLASTIC = addItem(179, "bio_plastic");
         GTBMetaItems.CUPRIAVIDUS_NECATOR_CULTURE = addItem(180, "cupriavidus_necator_culture");
-        GTBMetaItems.PAD_PETRI_DISH = addItem(181, "pad_petri_dish");    }
+        GTBMetaItems.PAD_PETRI_DISH = addItem(181, "pad_petri_dish");
+    }
 }

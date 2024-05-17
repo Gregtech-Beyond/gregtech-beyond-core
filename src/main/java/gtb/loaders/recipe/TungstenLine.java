@@ -3,15 +3,15 @@ package gtb.loaders.recipe;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.dust;
-import gtb.api.recipes.GTBRecipeMaps;
+
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
+
 import gtb.api.unification.materials.GTBMaterials;
 
 public class TungstenLine {
 
     public static void init() {
-
         DEHYDRATOR.recipeBuilder()
                 .input(dust, TungsticAcid, 7)
                 .output(dust, GTBMaterials.TungstenTrioxide, 4)

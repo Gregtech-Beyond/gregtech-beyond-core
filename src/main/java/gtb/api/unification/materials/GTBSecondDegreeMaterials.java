@@ -51,7 +51,7 @@ public class GTBSecondDegreeMaterials {
                 .fluid()
                 .color(0x4A148C)
                 .build().setFormula("C2H4(NH2)2", true);
-      
+
         ZBLAN = new Material.Builder(getMaterialsId(), gregtechId("zblan"))
                 .fluid()
                 .dust()

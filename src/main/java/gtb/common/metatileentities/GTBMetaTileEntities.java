@@ -35,7 +35,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityElectrolyticCell ELECTROLYTIC_CELL;
     public static MetaTileEntityNeutronAccelerator NEUTRON_ACCELERATOR;
     public static MetaTileEntityEngravingUnit ENGRAVING_UNIT;
-      
+
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ION_IMPLANTER = new SimpleMachineMetaTileEntity[15];
