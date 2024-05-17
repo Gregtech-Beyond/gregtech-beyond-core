@@ -216,7 +216,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye,  MarkerMaterials.Color.Black)
                 .circuitMeta(1)
                 .output(PIC_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -224,7 +224,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(2)
                 .output(CPU_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -232,7 +232,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(3)
                 .output(RAM_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -240,7 +240,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(4)
                 .output(SINGLE_JOSEPHSON_JUNCTION_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -248,7 +248,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(5)
                 .output(LPIC_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -256,7 +256,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(6)
                 .output(INTEGRATED_CIRCUIT_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -265,7 +265,7 @@ public class Photolithography {
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(LITHOGRAPHY_BASE_MASK)
-                .input(dye, DyeBlack)
+                .input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(7)
                 .output(NANOCPU_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -273,7 +273,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(8)
                 .output(HASOC_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -537,7 +537,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(7)
                 .output(NOR_PHOTOLITHOGRAPHY_MASK)
                 .duration(50)
@@ -545,7 +545,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(8)
                 .output(NAND_PHOTOLITHOGRAPHY_MASK)
                 .duration(50)
@@ -553,7 +553,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(9)
                 .output(SOC_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -561,7 +561,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, DyeBlack)
+                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
                 .circuitMeta(10)
                 .output(PRE_ENGRAVING_OGANESSON_LITHOGRAPHY_MASK)
                 .duration(50)
@@ -1591,7 +1591,7 @@ public class Photolithography {
         GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyePurple),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, DyeBlack),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Black),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
         GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
