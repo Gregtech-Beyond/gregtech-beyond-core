@@ -1623,6 +1623,7 @@ public class Photolithography {
                 .fluidInputs(Tritanium.getFluid(1296))
                 .input(plate, GTBMaterials.ElectronDegenerateRhenium, 1)
                 .input(FIELD_GENERATOR_LuV)
+                .input(plate, Osmiridium)
                 .input(plate, RhodiumPlatedPalladium, 1)
                 .output(CONTROLLED_SHAPED_NAQUADRIA_CHARGE_CASING)
                 .duration(800)
@@ -1630,7 +1631,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(CONTROLLED_SHAPED_NAQUADRIA_CHARGE)
+                .input(CONTROLLED_SHAPED_NAQUADRIA_CHARGE_CASING)
                 .input(NAQUADRIA_CHARGE)
                 .output(CONTROLLED_SHAPED_NAQUADRIA_CHARGE)
                 .EUt(800000)
