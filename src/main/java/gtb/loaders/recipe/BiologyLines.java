@@ -774,4 +774,4 @@ public class BiologyLines {
                 .EUt(1200)
                 .buildAndRegister();
     }
-};
+}
