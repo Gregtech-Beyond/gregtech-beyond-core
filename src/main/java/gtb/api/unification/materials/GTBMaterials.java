@@ -118,7 +118,6 @@ public class GTBMaterials {
     public static Material HotWater;
     public static Material ActivatedCarbon;
     public static Material EthyleneOxide;
-    public static Material TungstenTrioxide;
     public static Material PhosphorusSolution;
     public static Material Trichloroflerane;
     public static Material LiquidEnrichedHelium_4;
