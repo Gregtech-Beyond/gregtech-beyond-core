@@ -83,6 +83,9 @@ public final class GTBRecipeMaps {
             1, 2, 1, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> TEXTILE_FACTORY = new RecipeMap<>(
-            "rotary_evaporator",
+            "textile_factory",
             4, 1, 2, 0, new SimpleRecipeBuilder(), false);
+
+
+    
 }
