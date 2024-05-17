@@ -483,6 +483,11 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0xBEA0D0)
                 .build().setFormula("(SiO2)*", true);
+
+        PhosphorusSolution = new Material.Builder(getMaterialsId(), gregtechId("phosphorus_solution"))
+                .fluid()
+                .color(0xBEA0D0)
+                .build().setFormula("P(H2O)", true);
     }
 
     private static int getMaterialsId() {

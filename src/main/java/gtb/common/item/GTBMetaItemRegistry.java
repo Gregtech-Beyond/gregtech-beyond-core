@@ -97,7 +97,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.PRE_ENGRAVED_OGANESSON_WAFER = addItem(83, "engraved_oganesson_wafer");
         GTBMetaItems.RAW_OGANESSON_WAFER = addItem(84, "raw_oganesson_wafer");
         GTBMetaItems.DOPED_OGANESSON_WAFER = addItem(85, "doped_oganesson_wafer");
-        GTBMetaItems.ENGRAVED_UHASOC_WAFER = addItem(86, "engraved_uhasoc_wafer");
+        GTBMetaItems.ENGRAVED_HASOC_WAFER = addItem(86, "engraved_hasoc_wafer");
         GTBMetaItems.BATHED_TREATED_OGANESSON_WAFER = addItem(87, "bathed_treated_oganesson_wafer");
         GTBMetaItems.UNPOLARIZED_HASOC_WAFER = addItem(88, "unpolarized_hasoc_wafer");
         GTBMetaItems.HASOC_DIE = addItem(89, "hasoc_die");

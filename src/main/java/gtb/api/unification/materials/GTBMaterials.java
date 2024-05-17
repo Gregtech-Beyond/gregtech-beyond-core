@@ -8,6 +8,7 @@ public class GTBMaterials {
 
     // FD Materials
 
+    public static Material PhosphorusSolution;
     public static Material Trichloroflerane;
     public static Material LiquidEnrichedHelium_4;
     public static Material Helium_4;
