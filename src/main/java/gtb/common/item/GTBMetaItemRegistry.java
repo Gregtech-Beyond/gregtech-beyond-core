@@ -170,12 +170,5 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(158, "highly_forged_damascus_steel_assembly");
         GTBMetaItems.HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(159,
                 "hot_highly_forged_damascus_steel_assembly");
-        GTBMetaItems.NAQUADRIA_CHARGE = addItem(117, "naquadria_charge");
-
-
-
-
-
-
     }
 }

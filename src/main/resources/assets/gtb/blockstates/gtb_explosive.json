@@ -1,0 +1,21 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "textures": {
+      "all": "gregtech:blocks/rendering_error"
+    }
+  },
+  "variants": {
+    "variant": {
+      "naquadria_charge": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "sides": "gregtech:blocks/gtb_explosive/naquadria_charge/naquadria_charge_side",
+          "top": "gregtech:blocks/gtb_explosive/naquadria_charge/naquadria_charge_top_bottom",
+          "bottom": "gregtech:blocks/gtb_explosive/naquadria_charge/naquadria_charge_top_bottom"
+        }
+      }
+    }
+  }
+}
