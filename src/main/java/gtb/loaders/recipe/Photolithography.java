@@ -1628,7 +1628,7 @@ public class Photolithography {
                 .input(CONTROLLED_SHAPED_NAQUADRIA_CHARGE)
                 .input(NAQUADRIA_CHARGE)
                 .output(CONTROLLED_SHAPED_NAQUADRIA_CHARGE)
-                .EUt(250) // TODO was missing, I don't which value you want
+                .EUt(800000)
                 .duration(120)
                 .circuitMeta(2)
                 .buildAndRegister();
