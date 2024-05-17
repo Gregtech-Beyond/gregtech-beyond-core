@@ -1,11 +1,10 @@
 package gtb.loaders.recipe;
 
-import gtb.common.item.GTBMetaItems;
-
-import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.recipes.RecipeMaps.*;
+import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 
+import gtb.common.item.GTBMetaItems;
 
 public class DamascusSteelLine {
 
