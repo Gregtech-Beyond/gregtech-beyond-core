@@ -396,8 +396,9 @@ public class GTBFirstDegreeMaterials {
 
         BariumTitanate = new Material.Builder(getMaterialsId(), gregtechId("barium_titanate"))
                 .dust()
+                .ingot()
                 .color(0x88B68A)
-                .build().setFormula("BaTi02", true);
+                .build().setFormula("BaTiO2", true);
 
         HydrogenChloride = new Material.Builder(getMaterialsId(), gregtechId("hydrogen_chloride"))
                 .fluid()
