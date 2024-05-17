@@ -3,6 +3,7 @@ package gtb.api.render;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.Side;
 
+import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 import gregtech.client.renderer.texture.cube.SimpleOverlayRenderer;
 
 import gtb.GregtechBeyondCore;
@@ -18,6 +19,10 @@ public final class GTBTextures {
             "gtb_multiblock_casing/steel_bordered_wooden_casing");
     public static SimpleOverlayRenderer BIOLOGICALLY_STERILE_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/biologically_sterile_casing");
+    public static final OrientedOverlayRenderer CRYSTALLIZER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/crystallizer");
+    public static OrientedOverlayRenderer DEHYDRATOR_OVERLAY = new OrientedOverlayRenderer(
+            "machines/dehydrator");
 
     private GTBTextures() {}
 

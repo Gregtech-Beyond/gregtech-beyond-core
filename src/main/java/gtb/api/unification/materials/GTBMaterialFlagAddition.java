@@ -17,5 +17,7 @@ public final class GTBMaterialFlagAddition {
     public static void initLate() {
         Materials.Graphene.addFlags(MaterialFlags.GENERATE_FOIL);
         GTBMaterials.CupriavidusNecator.addFlags(GTBMaterialFlags.GENERATE_PETRI);
+        Materials.Mica.addFlags(MaterialFlags.GENERATE_FOIL);
+        Materials.BorosilicateGlass.addFlags(MaterialFlags.GENERATE_PLATE);
     }
 }
