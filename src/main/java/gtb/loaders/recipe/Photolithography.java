@@ -450,7 +450,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         LASER_ENGRAVER_RECIPES.recipeBuilder().input(INSULATED_NANOCPU_WAFER)
-                .notConsumable(lens, MarkerMaterials.Color.Red)
+                .notConsumable(craftingLens, MarkerMaterials.Color.Red)
                 .output(TRENCHED_INSULATED_NANOCPU_WAFER).duration(200).EUt(12).buildAndRegister();
 
         CVD_UNIT.recipeBuilder()
@@ -532,7 +532,7 @@ public class Photolithography {
                 .input(dust, GTBMaterials.SodiumNitrate)
                 .output(dust, GTBMaterials.NaquadahDioxide)
                 .fluidOutputs(SaltWater.getFluid(1000))
-                .fluidInputs(NitrogenDioxide.getFluid(1000))
+                .fluidOutputs(NitrogenDioxide.getFluid(1000))
                 .duration(200)
                 .EUt(100)
                 .buildAndRegister();
@@ -587,7 +587,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(plateDense, NaquadahEnriched)
+                .input(plate, NaquadahEnriched)
                 .input(plate, Glass)
                 .circuitMeta(1)
                 .output(ENRICHED_NAQUADAH_PHOTOLITHOGRAPHY_MASK)
@@ -865,13 +865,13 @@ public class Photolithography {
         ION_IMPLANTER.recipeBuilder()
                 .input(SUPERCONDUCTOR_COATED_QBIT_CPU_WAFER)
                 .input(U_TWOFOURTY_ELECTRON_SOURCE)
-                .output(GTBMetaItems.QBIT_CPU_WAFER)
+                .output(MetaItems.QUBIT_CENTRAL_PROCESSING_UNIT)
                 .duration(200)
                 .EUt(90)
                 .buildAndRegister();
 
         CUTTER_RECIPES.recipeBuilder()
-                .input(GTBMetaItems.QBIT_CPU_WAFER)
+                .input(MetaItems.QUBIT_CENTRAL_PROCESSING_UNIT)
                 .output(QBIT_CPU_DIE, 5)
                 .fluidInputs(Water.getFluid(12))
                 .duration(200)
@@ -879,7 +879,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         CUTTER_RECIPES.recipeBuilder()
-                .input(GTBMetaItems.QBIT_CPU_WAFER)
+                .input(MetaItems.QUBIT_CENTRAL_PROCESSING_UNIT)
                 .output(QBIT_CPU_DIE, 5)
                 .fluidInputs(DistilledWater.getFluid(8))
                 .duration(100)
@@ -887,7 +887,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         CUTTER_RECIPES.recipeBuilder()
-                .input(GTBMetaItems.QBIT_CPU_WAFER)
+                .input(MetaItems.QUBIT_CENTRAL_PROCESSING_UNIT)
                 .output(QBIT_CPU_DIE, 5)
                 .fluidInputs(Lubricant.getFluid(6))
                 .duration(60)
@@ -906,7 +906,7 @@ public class Photolithography {
                 .fluidInputs(GTBMaterials.LiquidHelium.getFluid(1000))
                 .fluidOutputs(Helium.getFluid(1000))
                 .input(COVERED_QBIT_CPU)
-                .output(QBIT_CPU)
+                .output(QUBIT_CENTRAL_PROCESSING_UNIT)
                 .duration(120)
                 .EUt(70)
                 .buildAndRegister();
@@ -929,11 +929,14 @@ public class Photolithography {
                 .blastFurnaceTemp(8000)
                 .buildAndRegister();
 
-        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT, 16).output(OGANESSON_SEED_CRYSTAL)
+        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT, 16)
+                .output(OGANESSON_SEED_CRYSTAL)
                 .fluidInputs(Water.getFluid(12)).duration(2000).EUt(80000).buildAndRegister();
-        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT, 16).output(OGANESSON_SEED_CRYSTAL)
+        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT, 16)
+                .output(OGANESSON_SEED_CRYSTAL)
                 .fluidInputs(DistilledWater.getFluid(6)).duration(1000).EUt(80000).buildAndRegister();
-        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT, 16).output(OGANESSON_SEED_CRYSTAL)
+        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT, 16)
+                .output(OGANESSON_SEED_CRYSTAL)
                 .fluidInputs(Lubricant.getFluid(6)).duration(600).EUt(60000).buildAndRegister();
 
         CUTTER_RECIPES.recipeBuilder().output(OGANESSON_WAFER)
@@ -965,14 +968,14 @@ public class Photolithography {
 
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(BATHED_TREATED_OGANESSON_WAFER)
-                .output(PRE_ENGRAVED_OGANESSON_WAFER)
+                .output(ENGRAVED_OGANESSON_WAFER)
                 .notConsumable(PRE_ENGRAVING_OGANESSON_LITHOGRAPHY_MASK)
                 .duration(1200)
                 .EUt(800)
                 .buildAndRegister();
 
         ION_IMPLANTER.recipeBuilder()
-                .input(PRE_ENGRAVED_OGANESSON_WAFER)
+                .input(ENGRAVED_OGANESSON_WAFER)
                 .input(dust, GTBMaterials.UEVSuperconductor, 1)
                 .output(RAW_OGANESSON_WAFER)
                 .duration(800)
@@ -1082,7 +1085,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         CVD_UNIT.recipeBuilder()
-                .input(PRE_ENGRAVED_OGANESSON_WAFER).input(dust, RutheniumTriniumAmericiumNeutronate, 1)
+                .input(ENGRAVED_OGANESSON_WAFER).input(dust, RutheniumTriniumAmericiumNeutronate, 1)
                 .output(SUPERCONDUCTOR_LAYERED_UHASOC_WAFER)
                 .duration(800)
                 .EUt(2000001)
@@ -1121,7 +1124,7 @@ public class Photolithography {
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(plate, GTBMaterials.MetastableOganesson)
-                .input(lens, MarkerMaterials.Color.Yellow)
+                .input(craftingLens, MarkerMaterials.Color.Yellow)
                 .circuitMeta(1)
                 .output(UHASOC_POST_ENGRAVING_MASK)
                 .duration(90)
@@ -1323,7 +1326,7 @@ public class Photolithography {
 
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(gemExquisite, Glass)
-                .notConsumable(lens, MarkerMaterials.Color.Magenta)
+                .notConsumable(craftingLens, MarkerMaterials.Color.Magenta)
                 .output(gemExquisite, GTBMaterials.ChromaticGlass)
                 .duration(800)
                 .EUt(901275)
@@ -1530,6 +1533,15 @@ public class Photolithography {
                         .buildAndRegister();
 
                 ION_IMPLANTER.recipeBuilder()
+                        .input(ENGRAVED_ASOC_WAFER)
+                        .input(dust, nDopantMaterial)
+                        .input(dust, pDopantMaterial)
+                        .output(DOPED_ASOC_WAFER)
+                        .duration(800)
+                        .EUt(100)
+                        .buildAndRegister();
+
+                ION_IMPLANTER.recipeBuilder()
                         .input(ENGRAVED_SOC_WAFER)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1649,10 +1661,69 @@ public class Photolithography {
                 OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Black),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1),
+                        OreDictUnifier.get(dust, IndiumGalliumPhosphide, 8) },
+                new FluidStack[] { Naquadah.getFluid(576) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1),
+                        CARBON_FIBERS.getStackForm(16) },
+                new FluidStack[] { Glowstone.getFluid(576) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { NANO_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1),
+                        QUANTUM_EYE.getStackForm(2) },
+                new FluidStack[] { GalliumArsenide.getFluid(288) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { NANO_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1),
+                        OreDictUnifier.get(dust, IndiumGalliumPhosphide, 1) },
+                new FluidStack[] { Radon.getFluid(50) });
+
         GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
                 new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1),
                         OreDictUnifier.get(dust, IndiumGalliumPhosphide, 8) },
                 new FluidStack[] { Naquadah.getFluid(576) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1),
+                        CARBON_FIBERS.getStackForm(16) },
+                new FluidStack[] { Glowstone.getFluid(576) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { NANO_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1),
+                        QUANTUM_EYE.getStackForm(2) },
+                new FluidStack[] { GalliumArsenide.getFluid(288) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { NANO_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1),
+                        OreDictUnifier.get(dust, IndiumGalliumPhosphide, 1) },
+                new FluidStack[] { Radon.getFluid(50) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new FluidStack[] { Water.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new FluidStack[] { DistilledWater.getFluid(750) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new FluidStack[] { Lubricant.getFluid(250) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new FluidStack[] { Water.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new FluidStack[] { DistilledWater.getFluid(750) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new FluidStack[] { Lubricant.getFluid(250) });
 
         FUSION_RECIPES.recipeBuilder()
                 .EUToStart(160000000)
@@ -1665,7 +1736,7 @@ public class Photolithography {
 
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(SPINORIAL_MEMORY_WAFER)
-                .notConsumable(lens, MarkerMaterials.Color.Yellow)
+                .notConsumable(craftingLens, MarkerMaterials.Color.Yellow)
                 .output(ENGRAVED_SPINORIAL_MEMORY_WAFER)
                 .duration(120)
                 .EUt(900)

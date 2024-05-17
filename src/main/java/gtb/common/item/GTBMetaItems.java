@@ -85,7 +85,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem OGANESSON_WAFER;
     public static MetaItem<?>.MetaValueItem TREATED_OGANESSON_WAFER;
     public static MetaItem<?>.MetaValueItem PRE_ENGRAVING_OGANESSON_LITHOGRAPHY_MASK;
-    public static MetaItem<?>.MetaValueItem PRE_ENGRAVED_OGANESSON_WAFER;
+    public static MetaItem<?>.MetaValueItem ENGRAVED_OGANESSON_WAFER;
     public static MetaItem<?>.MetaValueItem RAW_OGANESSON_WAFER;
     public static MetaItem<?>.MetaValueItem DOPED_OGANESSON_WAFER;
     public static MetaItem<?>.MetaValueItem ENGRAVED_HASOC_WAFER;
