@@ -3,7 +3,6 @@ package gtb.common;
 import java.util.Objects;
 import java.util.function.Function;
 
-import gtb.common.block.blocks.GTBExplosive;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;

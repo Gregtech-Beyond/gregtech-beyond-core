@@ -32,7 +32,6 @@ public class GTBExplosive extends VariantBlock<GTBExplosive.CasingType> {
 
     public enum CasingType implements IStringSerializable {
 
-
         NAQUADRIA_CHARGE("naquadria_charge");
 
         private final String name;
