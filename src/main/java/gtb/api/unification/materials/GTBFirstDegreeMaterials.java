@@ -205,7 +205,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("WCaO4", true);
 
         LithiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxidesolution"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x667678)
                 .build().setFormula("WCaO4", true);
 
@@ -221,47 +221,47 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("LiF3", true);
 
         Polyetheretherketone = new Material.Builder(getMaterialsId(), gregtechId("polyetheretherketone"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C20H12O3", true);
 
         EthyleneOxide = new Material.Builder(getMaterialsId(), gregtechId("ethylene_oxide"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
 
         HundredMethanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_methanol"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
 
         HundredButanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_butanol"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
 
         HundredEthanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_ethanol"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
 
         ActivatedCarbon = new Material.Builder(getMaterialsId(), gregtechId("activated_carbon"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C", true);
 
         HotWater = new Material.Builder(getMaterialsId(), gregtechId("hot_water"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("H2O", true);
 
         EthyleneGlycol = new Material.Builder(getMaterialsId(), gregtechId("ethylene_glycol"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C2H6O2", true);
 
         SodiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_hydroxide_solution"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("(H2O)NaOH", true);
 
@@ -276,7 +276,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("NaH", true);
 
         BoricAcid = new Material.Builder(getMaterialsId(), gregtechId("boric_acid"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("H3BO3", true);
 
@@ -291,7 +291,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("K2MnO4", true);
 
         PotassiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("potassium_hydroxide"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("KOH", true);
 
@@ -306,12 +306,12 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("CuCrMgBa", true);
 
         OneFourButanediol = new Material.Builder(getMaterialsId(), gregtechId("one_four_butanediol"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x4A148C)
                 .build().setFormula("C4H10O2", true);
 
         OneFourButynediol = new Material.Builder(getMaterialsId(), gregtechId("one_four_butynediol"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x4A148C)
                 .build().setFormula("C4H6O2", true);
 
