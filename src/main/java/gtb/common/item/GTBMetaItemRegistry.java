@@ -94,7 +94,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.OGANESSON_WAFER = addItem(80, "oganesson_wafer");
         GTBMetaItems.TREATED_OGANESSON_WAFER = addItem(81, "treated_oganesson_wafer");
         GTBMetaItems.PRE_ENGRAVING_OGANESSON_LITHOGRAPHY_MASK = addItem(82, "pre_engraving_oganesson_lithography_mask");
-        GTBMetaItems.PRE_ENGRAVED_OGANESSON_WAFER = addItem(83, "engraved_oganesson_wafer");
+        GTBMetaItems.ENGRAVED_OGANESSON_WAFER = addItem(83, "engraved_oganesson_wafer");
         GTBMetaItems.RAW_OGANESSON_WAFER = addItem(84, "raw_oganesson_wafer");
         GTBMetaItems.DOPED_OGANESSON_WAFER = addItem(85, "doped_oganesson_wafer");
         GTBMetaItems.ENGRAVED_HASOC_WAFER = addItem(86, "engraved_hasoc_wafer");
@@ -149,13 +149,11 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.OPTICAL_LITHOGRAPHY_MASK = addItem(141, "optical_lithography_mask");
         GTBMetaItems.INTERCONNECTED_INP_WAFER = addItem(142, "interconnected_inp_wafer");
         GTBMetaItems.PHOTOCOATED_HASSIUM_WAFER = addItem(143, "photocoated_hassium_wafer");
-        GTBMetaItems.QBIT_CPU_WAFER = addItem(144, "qbit_cpu_wafer");
         GTBMetaItems.NOR_PHOTOLITHOGRAPHY_MASK = addItem(145, "nor_photolithography_mask");
         GTBMetaItems.NAND_PHOTOLITHOGRAPHY_MASK = addItem(146, "nand_photolithography_mask");
         GTBMetaItems.ARAM_WAFER = addItem(147, "aram_wafer");
         GTBMetaItems.UHASOC_WAFER = addItem(148, "uhasoc_wafer");
         GTBMetaItems.OPTICAL_SOC_WAFER = addItem(149, "optical_soc_wafer");
-        GTBMetaItems.QBIT_CPU = addItem(150, "qbit_cpu");
         GTBMetaItems.OPTICAL_SOC = addItem(151, "optical_soc");
         GTBMetaItems.BITUMINOUS_RESIDUES = addItem(4, "bituminous_residues");
         GTBMetaItems.DAMASCUS_STEEL_ASSEMBLY = addItem(152, "damascus_steel_assembly");
