@@ -3,6 +3,9 @@ package gtb.api.unification.materials;
 import gregtech.api.unification.material.Material;
 import gtb.api.unification.materials.info.GTBMaterialIconSet;
 
+import gtb.api.unification.materials.info.GTBMaterialFlags;
+import gtb.api.unification.materials.info.GTBMaterialIconSet;
+
 public class GTBMaterials {
 
     // Element Materials
@@ -93,7 +96,8 @@ public class GTBMaterials {
 
     public static void init() {
         GTBMaterialPropertyAddition.init();
-        GTBMaterialFlagAddition.init();
+        GTBMaterialFlags.add();
+        GTBMaterialIconSet.set();
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();
         GTBSecondDegreeMaterials.register();
