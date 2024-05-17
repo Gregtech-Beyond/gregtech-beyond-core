@@ -9,11 +9,11 @@
   "variants": {
     "variant": {
       "naquadria_charge": {
-        "model": "minecraft:cube_all",
+        "model": "minecraft:cube_bottom_top",
         "textures": {
-          "sides": "gregtech:blocks/gtb_explosive/naquadria_charge/naquadria_charge_side",
+          "side": "gregtech:blocks/gtb_explosive/naquadria_charge/naquadria_charge_side",
           "top": "gregtech:blocks/gtb_explosive/naquadria_charge/naquadria_charge_top_bottom",
-          "bottom": "gregtech:blocks/gtb_explosive/naquadria_charge/naquadria_charge_top_bottom"
+          "bottom": "#top"
         }
       }
     }
