@@ -305,7 +305,7 @@ public class GTBFirstDegreeMaterials {
                 .color(0x4A148C)
                 .build().setFormula("C4H10O2", true);
 
-        OneFourButynediol = new Material.Builder(getMaterialsId(), gregtechId("one_four_butanediol"))
+        OneFourButynediol = new Material.Builder(getMaterialsId(), gregtechId("one_four_butynediol"))
                 .liquid(new FluidBuilder())
                 .color(0x4A148C)
                 .build().setFormula("C4H6O2", true);
