@@ -5,11 +5,14 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
+import static gtb.common.block.blocks.GTBExplosive.CasingType.*;
 import static gtb.common.item.GTBMetaItems.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBExplosive;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
@@ -21,6 +24,8 @@ import gregtech.common.items.MetaItems;
 
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.common.item.GTBMetaItems;
+
+import javax.print.attribute.standard.MediaSize;
 
 public class Photolithography {
 
