@@ -6,6 +6,7 @@ import static gtb.api.utils.GTBUtil.gtb;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.util.GTUtility;
 
+import gregtech.client.renderer.texture.Textures;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
@@ -81,7 +82,7 @@ public final class GTBMetaTileEntities {
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
-                DEHYDRATOR, 4028, "dehydrator",
+                DEHYDRATORS, 4028, "dehydrator",
                 GTBRecipeMaps.DEHYDRATOR, Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
