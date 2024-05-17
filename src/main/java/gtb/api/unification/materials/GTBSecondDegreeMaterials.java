@@ -48,6 +48,7 @@ public class GTBSecondDegreeMaterials {
 
         Ethylenediamine = new Material.Builder(getMaterialsId(), gregtechId("ethylenediamine"))
                 .dust()
+                .fluid()
                 .color(0x4A148C)
                 .build().setFormula("C2H4(NH2)2", true);
     }
