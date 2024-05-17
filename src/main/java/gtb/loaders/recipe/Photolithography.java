@@ -10,9 +10,7 @@ import static gtb.common.item.GTBMetaItems.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-import com.cleanroommc.groovyscript.compat.vanilla.Furnace;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
@@ -451,7 +449,8 @@ public class Photolithography {
                 .EUt(80)
                 .buildAndRegister();
 
-        LASER_ENGRAVER_RECIPES.recipeBuilder().input(INSULATED_NANOCPU_WAFER).notConsumable(lens, MarkerMaterials.Color.Red)
+        LASER_ENGRAVER_RECIPES.recipeBuilder().input(INSULATED_NANOCPU_WAFER)
+                .notConsumable(lens, MarkerMaterials.Color.Red)
                 .output(TRENCHED_INSULATED_NANOCPU_WAFER).duration(200).EUt(12).buildAndRegister();
 
         CVD_UNIT.recipeBuilder()
@@ -930,20 +929,20 @@ public class Photolithography {
                 .blastFurnaceTemp(8000)
                 .buildAndRegister();
 
-        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT)
+        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT, 16).output(OGANESSON_SEED_CRYSTAL)
                 .fluidInputs(Water.getFluid(12)).duration(2000).EUt(80000).buildAndRegister();
-        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT)
+        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT, 16).output(OGANESSON_SEED_CRYSTAL)
                 .fluidInputs(DistilledWater.getFluid(6)).duration(1000).EUt(80000).buildAndRegister();
-        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT)
+        CUTTER_RECIPES.recipeBuilder().input(OGANESSON_BOULE).output(MONOCRYSTALLINE_OGANESSON_INGOT, 16).output(OGANESSON_SEED_CRYSTAL)
                 .fluidInputs(Lubricant.getFluid(6)).duration(600).EUt(60000).buildAndRegister();
 
-        CUTTER_RECIPES.recipeBuilder().output(OGANESSON_WAFER).output(OGANESSON_SEED_CRYSTAL)
+        CUTTER_RECIPES.recipeBuilder().output(OGANESSON_WAFER)
                 .input(MONOCRYSTALLINE_OGANESSON_INGOT).fluidInputs(Water.getFluid(12)).duration(2000).EUt(80000)
                 .buildAndRegister();
-        CUTTER_RECIPES.recipeBuilder().output(OGANESSON_WAFER).output(OGANESSON_SEED_CRYSTAL)
+        CUTTER_RECIPES.recipeBuilder().output(OGANESSON_WAFER)
                 .input(MONOCRYSTALLINE_OGANESSON_INGOT).fluidInputs(DistilledWater.getFluid(6)).duration(1000)
                 .EUt(80000).buildAndRegister();
-        CUTTER_RECIPES.recipeBuilder().output(OGANESSON_WAFER).output(OGANESSON_SEED_CRYSTAL)
+        CUTTER_RECIPES.recipeBuilder().output(OGANESSON_WAFER)
                 .input(MONOCRYSTALLINE_OGANESSON_INGOT).fluidInputs(Lubricant.getFluid(6)).duration(600).EUt(60000)
                 .buildAndRegister();
 
@@ -1375,7 +1374,7 @@ public class Photolithography {
                 .duration(1200)
                 .EUt(8000)
                 .input(DOPED_OGANESSON_WAFER)
-                .output(PRE_ENGRAVED_OGANESSON_WAFER)
+                .output(ENGRAVED_HASOC_WAFER)
                 .notConsumable(UHASOC_LITHOGRAPHY_MASK)
                 .buildAndRegister();
 
@@ -1521,7 +1520,7 @@ public class Photolithography {
                         .buildAndRegister();
 
                 ION_IMPLANTER.recipeBuilder()
-                        .input(ENGRAVED_UHASOC_WAFER)
+                        .input(ENGRAVED_HASOC_WAFER)
                         .input(dust, Naquadah)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1550,71 +1549,100 @@ public class Photolithography {
             }
         }
         // Recipe Removals
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.LightBlue),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.LightBlue),
                 SILICON_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.LightBlue),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.LightBlue),
                 NAQUADAH_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.LightBlue),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.LightBlue),
                 PHOSPHORUS_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.LightBlue),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.LightBlue),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Green),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Green),
                 SILICON_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Green),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Green),
                 NAQUADAH_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Green),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Green),
                 PHOSPHORUS_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Green),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Green),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Red),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Red),
                 SILICON_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Red),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Red),
                 NAQUADAH_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Red),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Red),
                 PHOSPHORUS_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Red),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Red),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Gray),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Gray),
                 PHOSPHORUS_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Gray),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Gray),
                 NAQUADAH_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Gray),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Gray),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Pink),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Pink),
                 PHOSPHORUS_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Pink),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Pink),
                 NAQUADAH_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Pink),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Pink),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Yellow),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Yellow),
                 PHOSPHORUS_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Yellow),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Yellow),
                 NAQUADAH_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Yellow),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Yellow),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
                 PHOSPHORUS_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
                 NAQUADAH_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
                 PHOSPHORUS_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
                 NAQUADAH_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Brown),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Purple),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Purple),
                 NAQUADAH_WAFER.getStackForm(1));
-        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES, OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Purple),
+        GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
+                OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Purple),
                 NEUTRONIUM_WAFER.getStackForm(1));
 
         GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
@@ -1680,5 +1708,20 @@ public class Photolithography {
                 .duration(600)
                 .buildAndRegister();
 
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Water.getFluid(2000))
+                .input(dust, Phosphorus, 2)
+                .fluidOutputs(GTBMaterials.PhosphorusSolution.getFluid(2000))
+                .duration(120)
+                .EUt(80)
+                .buildAndRegister();
+
+        CRYSTALLIZATION.recipeBuilder()
+                .fluidInputs(GTBMaterials.PhosphorusSolution.getFluid(1000))
+                .output(dust, GTBMaterials.WhitePhosphorus)
+                .fluidOutputs(Water.getFluid(1000))
+                .duration(90)
+                .EUt(70)
+                .buildAndRegister();
     }
 }
