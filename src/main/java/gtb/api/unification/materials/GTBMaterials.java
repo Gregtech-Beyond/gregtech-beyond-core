@@ -17,7 +17,6 @@ public class GTBMaterials {
     public static Material SiliconCarbide;
     public static Material LiquidXenon;
     public static Material ExtraDistilledWater;
-    public static Material Nylon;
     public static Material NaquadahDioxide;
     public static Material ElectronDegenerateRhenium;
     public static Material ElectronDegenerateRheniumPlasma;

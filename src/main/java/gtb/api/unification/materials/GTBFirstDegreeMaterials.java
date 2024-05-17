@@ -221,23 +221,17 @@ public class GTBFirstDegreeMaterials {
                 .color(0x6A1B9A)
                 .build().setFormula("NqO2", true);
 
-        Nylon = new Material.Builder(getMaterialsId(), gregtechId("nylon"))
-                .dust()
-                .fluid()
-                .color(0xCAB788)
-                .build().setFormula("NqO2", true);
-
         ElectronDegenerateRhenium = new Material.Builder(getMaterialsId(), gregtechId("electron_degenerate_rhenium"))
                 .dust()
                 .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0xDCD4EA)
-                .build().setFormula("NqO2", true);
+                .build().setFormula("Re-", true);
 
         ElectronDegenerateRheniumPlasma = new Material.Builder(getMaterialsId(),
                 gregtechId("electron_degenerate_rhenium_plasma"))
                         .fluid()
                         .color(0x7986CB)
-                        .build().setFormula("NqO2", true);
+                        .build().setFormula("Re-", true);
 
         HighPurityArsenic = new Material.Builder(getMaterialsId(), gregtechId("high_purity_arsenic"))
                 .dust()
@@ -248,11 +242,6 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0x8E24AA)
                 .build().setFormula("InCl", true);
-
-        NovolacsPhotoresist = new Material.Builder(getMaterialsId(), gregtechId("novolacs_photoresist"))
-                .fluid()
-                .color(0xAF877B)
-                .build().setFormula("NqO2", true);
 
         WhitePhosphorus = new Material.Builder(getMaterialsId(), gregtechId("white_phosphorus"))
                 .dust()
@@ -283,12 +272,12 @@ public class GTBFirstDegreeMaterials {
         PhotopolymerSolution = new Material.Builder(getMaterialsId(), gregtechId("photopolymer_solution"))
                 .fluid()
                 .color(0x4DB6AC)
-                .build().setFormula("NqO2", true);
+                .build().setFormula("C149H97N10O2(TiBF20)", true);
 
         UsedPhotopolymerSolution = new Material.Builder(getMaterialsId(), gregtechId("used_photopolymer_solution"))
                 .fluid()
                 .color(0xCE93D8)
-                .build().setFormula("NqO2", true);
+                .build().setFormula("C149H97N10O2(TiBF20)?", true);
 
         VeryHotXenon = new Material.Builder(getMaterialsId(), gregtechId("very_hot_xenon"))
                 .fluid()
@@ -454,6 +443,12 @@ public class GTBFirstDegreeMaterials {
                 .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0x1D181E)
                 .build().setFormula("HCl", true);
+
+        Tetrapropylammoniumbromide = new Material.Builder(getMaterialsId(), gregtechId("tetrapropylammoniumbromide"))
+                .fluid()
+                .dust()
+                .color(0xAD77C3)
+                .build().setFormula("C12H28BrN", true);
 
         SeaborgiumDopedNanotubes = new Material.Builder(getMaterialsId(), gregtechId("seaborgium_doped_nanotubes"))
                 .fluid()

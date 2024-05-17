@@ -40,12 +40,6 @@ public class GTBSecondDegreeMaterials {
                 .color(0xB1AC9E)
                 .build().setFormula("Pd?(NH3)", true);
 
-        Tetrapropylammoniumbromide = new Material.Builder(getMaterialsId(), gregtechId("tetrapropylammoniumbromide"))
-                .fluid()
-                .dust()
-                .color(0xAD77C3)
-                .build().setFormula("?", true);
-
         UEVSuperconductor = new Material.Builder(getMaterialsId(), gregtechId("uev_superconductor"))
                 .fluid()
                 .dust()
@@ -57,6 +51,11 @@ public class GTBSecondDegreeMaterials {
                 .dust()
                 .color(0xE0E1E1)
                 .build().setFormula("?", true);
+
+        Syngas = new Material.Builder(getMaterialsId(), gregtechId("syngas"))
+                .liquid(new FluidBuilder())
+                .color(0xE8D6D1)
+                .build().setFormula("(H)6(CO)", true);
     }
 
     private static int getMaterialsId() {
