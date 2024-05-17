@@ -302,6 +302,7 @@ public class GTBFirstDegreeMaterials {
 
         MetastableOganesson = new Material.Builder(getMaterialsId(), gregtechId("metastable_oganesson"))
                 .fluid()
+                .flags(MaterialFlags.GENERATE_PLATE)
                 .dust()
                 .color(0xB71C1C)
                 .build().setFormula("Og", true);
