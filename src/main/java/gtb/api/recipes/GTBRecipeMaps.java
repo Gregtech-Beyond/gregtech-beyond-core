@@ -96,4 +96,16 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ENGRAVING_UNIT = new RecipeMap<>("engraving_unit",
             2, 4, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CHEMICAL_PLANT = new RecipeMap<>("chemical_plant",
+            6, 4, 5, 4, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CLARIFIER = new RecipeMap<>("clarifier",
+            1, 6, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FROTH_FLOTATION_UNIT = new RecipeMap<>("froth_flotation_unit",
+            4, 4, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DIGESTER = new RecipeMap<>("digester",
+            4, 4, 4, 2, new SimpleRecipeBuilder(), false);
 }
