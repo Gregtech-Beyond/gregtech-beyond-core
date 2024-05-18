@@ -1,6 +1,6 @@
 package gtb.api.unification.materials.info;
 
-import static gregtech.api.unification.material.Materials.Graphene;
+import static gregtech.api.unification.material.Materials.*;
 
 import org.jetbrains.annotations.ApiStatus;
 
@@ -27,5 +27,7 @@ public class GTBMaterialFlags {
 
     public static void add() {
         Graphene.addFlags(MaterialFlags.GENERATE_FOIL);
+        Mica.addFlags(MaterialFlags.GENERATE_FOIL);
+        BorosilicateGlass.addFlags(MaterialFlags.GENERATE_PLATE);
     }
 }
