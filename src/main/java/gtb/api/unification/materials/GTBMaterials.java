@@ -219,6 +219,7 @@ public class GTBMaterials {
     public static Material NaquadriaticTaranium;
     public static Material ChromaticGlass;
     public static Material SuperFluidHelium;
+    public static Material Adamantium;
 
     // SD Materials
     public static Material PalladiumEnrichedAmmonia;

@@ -602,6 +602,13 @@ public class GTBFirstDegreeMaterials {
                 .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0xAFC896)
                 .build().setFormula("P(H2O)", true);
+
+        Adamantium = new Material.Builder(getMaterialsId(), gregtechId("adamantium"))
+                .fluid()
+                .dust()
+                .flags(MaterialFlags.GENERATE_PLATE)
+                .color(0x2B3052)
+                .build().setFormula("Ad", true);
     }
 
     private static int getMaterialsId() {
