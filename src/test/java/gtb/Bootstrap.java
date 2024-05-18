@@ -7,7 +7,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import gtb.api.unification.materials.info.GTBMaterialFlags;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.resources.Locale;
 import net.minecraft.network.INetHandler;
@@ -30,6 +29,7 @@ import gregtech.core.unification.material.internal.MaterialRegistryManager;
 import gregtech.modules.ModuleManager;
 
 import gtb.api.unification.materials.GTBMaterials;
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 
 public final class Bootstrap {
 
