@@ -260,7 +260,6 @@ public class GTBMaterials {
 
     public static void init() {
         GTBMaterialPropertyAddition.init();
-        GTBMaterialFlagAddition.init();
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();
         GTBSecondDegreeMaterials.register();
