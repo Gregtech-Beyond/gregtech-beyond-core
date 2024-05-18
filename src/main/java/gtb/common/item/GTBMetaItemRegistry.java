@@ -186,7 +186,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.PANCREAS = addItem(176, "pancreas");
         GTBMetaItems.YEEM_PETRI = addItem(177, "yeem_petri");
         GTBMetaItems.SOY_BEAN = addItem(178, "soy_bean");
-        GTBMetaItems.BIO_PLASTIC = addItem(179, "bio_plastic");
         GTBMetaItems.CUPRIAVIDUS_NECATOR_CULTURE = addItem(180, "cupriavidus_necator_culture");
         GTBMetaItems.PAD_PETRI_DISH = addItem(181, "pad_petri_dish");
     }

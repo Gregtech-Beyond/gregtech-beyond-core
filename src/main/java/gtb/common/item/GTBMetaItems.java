@@ -28,7 +28,6 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem PANCREAS;
     public static MetaItem<?>.MetaValueItem YEEM_PETRI;
     public static MetaItem<?>.MetaValueItem SOY_BEAN;
-    public static MetaItem<?>.MetaValueItem BIO_PLASTIC;
     public static MetaItem<?>.MetaValueItem NANO_CPU_WAFER;
     public static MetaItem<?>.MetaValueItem TRENCHED_SUPERCONDUCTOR_LAYERED_UHASOC_WAFER;
     public static MetaItem<?>.MetaValueItem MONOCRYSTALLINE_SEED_CRYSTAL;

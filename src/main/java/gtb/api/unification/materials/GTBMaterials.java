@@ -103,6 +103,8 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+
+    public static Material BioPlastic;
     public static Material Photopolymer;
     public static Material AluminiumChloride;
     public static Material CucrmgbaCatalyst;

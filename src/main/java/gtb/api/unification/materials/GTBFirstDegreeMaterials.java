@@ -595,6 +595,13 @@ public class GTBFirstDegreeMaterials {
                 .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0xAFC896)
                 .build().setFormula("P(H2O)", true);
+
+        BioPlastic = new Material.Builder(getMaterialsId(), gregtechId("bio_plastic"))
+                .fluid()
+                .dust()
+                .flags(MaterialFlags.GENERATE_PLATE)
+                .color(0xAFC896)
+                .build().setFormula("P(H2O)", true);
     }
 
     private static int getMaterialsId() {
