@@ -111,7 +111,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         CENTRIFUGE_RECIPES.recipeBuilder()
-                .fluidInputs(BloodPlasma.getFluid(1000))
+                .fluidInputs(BloodPlasma.getPlasma(1000))
                 .fluidOutputs(Catalase.getFluid(200))
                 .fluidOutputs(BasicFibroblastGrowthMedium.getFluid(200))
                 .fluidOutputs(EpidermalGrowthFactor.getFluid(200))
