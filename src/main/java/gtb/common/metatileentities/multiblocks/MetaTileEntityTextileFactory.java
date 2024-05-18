@@ -84,6 +84,6 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityBacterialVat(metaTileEntityId);
+        return new MetaTileEntityTextileFactory(metaTileEntityId);
     }
 }
