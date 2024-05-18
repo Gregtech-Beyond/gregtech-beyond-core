@@ -130,7 +130,6 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem U_TWOFOURTY_ELECTRON_SOURCE;
     public static MetaItem<?>.MetaValueItem QBIT_CPU_DIE;
     public static MetaItem<?>.MetaValueItem COVERED_QBIT_CPU;
-    public static MetaItem<?>.MetaValueItem PHOTOPOLYMER_PLATE;
     public static MetaItem<?>.MetaValueItem CELAUWAFER;
     public static MetaItem<?>.MetaValueItem INTEGRATED_CIRCUIT_LITHOGRAPHY_MASK;
     public static MetaItem<?>.MetaValueItem SILICON_DIOXIDE_WAFER;

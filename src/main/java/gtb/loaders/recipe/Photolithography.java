@@ -152,8 +152,8 @@ public class Photolithography {
                 .buildAndRegister();
 
         BENDER_RECIPES.recipeBuilder()
-                .input(PHOTOPOLYMER_PLATE)
-                .output(foil, Mica)
+                .input(plate, GTBMaterials.Photopolymer)
+                .output(foil, Mica, 16)
                 .duration(80)
                 .EUt(8000)
                 .buildAndRegister();
