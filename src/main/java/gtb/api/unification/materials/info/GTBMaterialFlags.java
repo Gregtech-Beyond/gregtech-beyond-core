@@ -1,9 +1,14 @@
 package gtb.api.unification.materials.info;
 
+import static gregtech.api.unification.material.Materials.*;
+
+import org.jetbrains.annotations.ApiStatus;
+
 import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.PropertyKey;
 
+@ApiStatus.Internal
 public class GTBMaterialFlags {
 
     public static final MaterialFlag GENERATE_COIL = new MaterialFlag.Builder("generate_coil")
@@ -19,4 +24,10 @@ public class GTBMaterialFlags {
     public static final MaterialFlag GENERATE_BOULE = new MaterialFlag.Builder("generate_boule")
             .requireProps(PropertyKey.GEM)
             .build();
+
+    public static void add() {
+        Graphene.addFlags(MaterialFlags.GENERATE_FOIL);
+        Mica.addFlags(MaterialFlags.GENERATE_FOIL);
+        BorosilicateGlass.addFlags(MaterialFlags.GENERATE_PLATE);
+    }
 }
