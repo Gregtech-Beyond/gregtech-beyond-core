@@ -33,13 +33,13 @@ public class GTBBiologicalMaterials {
                 .color(0xAA2424)
                 .build();
 
-        BloodCells = new Material.Builder(getMaterialsId(), gregtechId("blood"))
+        BloodCells = new Material.Builder(getMaterialsId(), gregtechId("blood_cells"))
                 .fluid()
                 .color(0xC66868)
                 .build();
 
-        BloodPlasma = new Material.Builder(getMaterialsId(), gregtechId("blood"))
-                .fluid()
+        BloodPlasma = new Material.Builder(getMaterialsId(), gregtechId("blood_plasma"))
+                .plasma()
                 .color(0x9D3939)
                 .build();
 
