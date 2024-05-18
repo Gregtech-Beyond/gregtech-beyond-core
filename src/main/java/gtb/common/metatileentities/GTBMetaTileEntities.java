@@ -30,8 +30,12 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDilutionTank DILUTION_TANK;
     public static MetaTileEntityFermentationVat FERMENTATION_VAT;
     public static MetaTileEntityFischerTropschReactor FISCHER_TROPSCH_REACTOR;
+    public static MetaTileEntityEngravingUnit ENGRAVING_UNIT;
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] ION_IMPLANTER = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] CVD_UNIT = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] ROASTER = new SimpleMachineMetaTileEntity[15];
 
     public static void init() {
         // Multiblocks
@@ -56,11 +60,22 @@ public final class GTBMetaTileEntities {
         FERMENTATION_VAT = registerMetaTileEntity(3012, new MetaTileEntityFermentationVat(gtb("fermentation_vat")));
         FISCHER_TROPSCH_REACTOR = registerMetaTileEntity(3013,
                 new MetaTileEntityFischerTropschReactor(gtb("fischer_tropsch_reactor")));
+        ENGRAVING_UNIT = registerMetaTileEntity(3014,
+                new MetaTileEntityEngravingUnit(gtb("engraving_unit")));
 
         registerSimpleMetaTileEntity(CRYSTALLIZERS, 4010, "crystallizers", GTBRecipeMaps.CRYSTALLIZATION,
                 GTBTextures.CRYSTALLIZER_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(DEHYDRATORS, 4030, "dehydrator", GTBRecipeMaps.DEHYDRATOR,
+                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(CVD_UNIT, 4090, "cvd_unit", GTBRecipeMaps.CVD_UNIT,
+                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(ION_IMPLANTER, 4110, "ion_implanter", GTBRecipeMaps.ION_IMPLANTER,
+                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(ROASTER, 4130, "roaster", GTBRecipeMaps.ROASTER,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }

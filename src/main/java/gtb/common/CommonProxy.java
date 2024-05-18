@@ -46,6 +46,7 @@ public class CommonProxy {
 
         registry.register(GTBMetaBlocks.GTB_MULTIBLOCK_CASING);
         registry.register(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING);
+        registry.register(GTBMetaBlocks.GTB_EXPLOSIVE);
     }
 
     @SubscribeEvent
@@ -53,6 +54,7 @@ public class CommonProxy {
         GTBLog.logger.info("Registering Items...");
         IForgeRegistry<Item> registry = event.getRegistry();
 
+        registry.register(createItemBlock(GTBMetaBlocks.GTB_EXPLOSIVE, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING, VariantItemBlock::new));
     }

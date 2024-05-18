@@ -16,6 +16,7 @@ public class GTBMaterialFlags {
             .build();
     public static final MaterialFlag GENERATE_FOATED = new MaterialFlag.Builder("generate_floated")
             .build();
+
     public static final MaterialFlag DISABLE_CRYSTALLIZATION = new MaterialFlag.Builder("no_crystallization")
             .requireFlags(MaterialFlags.CRYSTALLIZABLE)
             .requireProps(PropertyKey.GEM)

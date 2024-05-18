@@ -63,4 +63,16 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR = new RecipeMap<>("dehydrator",
             3, 3, 3, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ION_IMPLANTER = new RecipeMap<>("ion_implanter",
+            4, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CVD_UNIT = new RecipeMap<>("cvd_unit",
+            3, 2, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ROASTER = new RecipeMap<>("roaster",
+            2, 4, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ENGRAVING_UNIT = new RecipeMap<>("engraving_unit",
+            2, 4, 2, 2, new SimpleRecipeBuilder(), false);
 }
