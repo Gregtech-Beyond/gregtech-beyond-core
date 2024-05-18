@@ -61,8 +61,29 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION = new RecipeMap<>("crystallization",
             3, 3, 3, 3, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR = new RecipeMap<>("dehydrator",
+    public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR = new RecipeMap<>(
+            "dehydrator",
             3, 3, 3, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> MICROSCOPE = new RecipeMap<>(
+            "microscope",
+            1, 9, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> BIO_REACTOR = new RecipeMap<>(
+            "bio_reactor",
+            3, 3, 5, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTROLYTIC_CELL = new RecipeMap<>(
+            "electrolytic_cell",
+            2, 4, 2, 6, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ROTARY_EVAPORATOR = new RecipeMap<>(
+            "rotary_evaporator",
+            1, 2, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> TEXTILE_FACTORY = new RecipeMap<>(
+            "textile_factory",
+            4, 1, 2, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ION_IMPLANTER = new RecipeMap<>("ion_implanter",
             4, 1, 1, 1, new SimpleRecipeBuilder(), false);

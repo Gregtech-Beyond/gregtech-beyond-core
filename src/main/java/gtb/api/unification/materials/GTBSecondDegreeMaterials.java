@@ -15,7 +15,7 @@ public class GTBSecondDegreeMaterials {
 
     public static void register() {
         RhodiumSulfateSolution = new Material.Builder(getMaterialsId(), gregtechId("rhodium_sulfate_solution"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0xC7C7C7)
                 .build().setFormula("(RhSO4?)(H2O)", true);
 
@@ -46,6 +46,12 @@ public class GTBSecondDegreeMaterials {
                 .color(0x29B6F6)
                 .build().setFormula("?", true);
 
+        Ethylenediamine = new Material.Builder(getMaterialsId(), gregtechId("ethylenediamine"))
+                .dust()
+                .fluid()
+                .color(0x4A148C)
+                .build().setFormula("C2H4(NH2)2", true);
+
         ZBLAN = new Material.Builder(getMaterialsId(), gregtechId("zblan"))
                 .fluid()
                 .dust()
@@ -53,7 +59,7 @@ public class GTBSecondDegreeMaterials {
                 .build().setFormula("?", true);
 
         Syngas = new Material.Builder(getMaterialsId(), gregtechId("syngas"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0xE8D6D1)
                 .build().setFormula("(H)6(CO)", true);
     }

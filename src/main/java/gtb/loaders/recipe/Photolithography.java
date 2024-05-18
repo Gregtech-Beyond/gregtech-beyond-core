@@ -152,8 +152,8 @@ public class Photolithography {
                 .buildAndRegister();
 
         BENDER_RECIPES.recipeBuilder()
-                .input(PHOTOPOLYMER_PLATE)
-                .output(foil, Mica)
+                .input(plate, GTBMaterials.Photopolymer)
+                .output(foil, Mica, 16)
                 .duration(80)
                 .EUt(8000)
                 .buildAndRegister();
@@ -1702,27 +1702,27 @@ public class Photolithography {
                 new FluidStack[] { Radon.getFluid(50) });
 
         GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new ItemStack[] { ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1) },
                 new FluidStack[] { Water.getFluid(1000) });
 
         GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new ItemStack[] { ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1) },
                 new FluidStack[] { DistilledWater.getFluid(750) });
 
         GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new ItemStack[] { ULTRA_HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1) },
                 new FluidStack[] { Lubricant.getFluid(250) });
 
         GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1) },
                 new FluidStack[] { Water.getFluid(1000) });
 
         GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1) },
                 new FluidStack[] { DistilledWater.getFluid(750) });
 
         GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1)},
+                new ItemStack[] { HIGH_POWER_INTEGRATED_CIRCUIT_WAFER.getStackForm(1) },
                 new FluidStack[] { Lubricant.getFluid(250) });
 
         FUSION_RECIPES.recipeBuilder()

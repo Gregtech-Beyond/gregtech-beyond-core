@@ -139,6 +139,11 @@ public class GTBUnknownCompositionMaterials {
                 .color(0xFBC02D)
                 .build();
 
+        Syngas = new Material.Builder(getMaterialsId(), gregtechId("syngas"))
+                .liquid(new FluidBuilder())
+                .color(0xE8D6D1)
+                .build();
+
         NovolacsPhotoresist = new Material.Builder(getMaterialsId(), gregtechId("novolacs_photoresist"))
                 .fluid()
                 .color(0xAF877B)

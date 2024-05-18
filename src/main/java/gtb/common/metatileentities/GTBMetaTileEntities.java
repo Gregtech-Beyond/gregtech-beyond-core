@@ -5,6 +5,7 @@ import static gtb.api.utils.GTBUtil.gtb;
 
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.util.GTUtility;
+import gregtech.client.renderer.texture.Textures;
 
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
@@ -30,12 +31,19 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDilutionTank DILUTION_TANK;
     public static MetaTileEntityFermentationVat FERMENTATION_VAT;
     public static MetaTileEntityFischerTropschReactor FISCHER_TROPSCH_REACTOR;
+    public static MetaTileEntityBioReactor BIO_REACTOR;
+    public static MetaTileEntityTextileFactory TEXTILE_FACTORY;
+    public static MetaTileEntityElectrolyticCell ELECTROLYTIC_CELL;
+    public static MetaTileEntityNeutronAccelerator NEUTRON_ACCELERATOR;
     public static MetaTileEntityEngravingUnit ENGRAVING_UNIT;
+
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ION_IMPLANTER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] CVD_UNIT = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ROASTER = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] MICROSCOPE = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] ROTARY_EVAPORATOR = new SimpleMachineMetaTileEntity[15];
 
     public static void init() {
         // Multiblocks
@@ -60,14 +68,33 @@ public final class GTBMetaTileEntities {
         FERMENTATION_VAT = registerMetaTileEntity(3012, new MetaTileEntityFermentationVat(gtb("fermentation_vat")));
         FISCHER_TROPSCH_REACTOR = registerMetaTileEntity(3013,
                 new MetaTileEntityFischerTropschReactor(gtb("fischer_tropsch_reactor")));
-        ENGRAVING_UNIT = registerMetaTileEntity(3014,
+        BIO_REACTOR = registerMetaTileEntity(3014, new MetaTileEntityBioReactor(gtb("bio_reactor")));
+        TEXTILE_FACTORY = registerMetaTileEntity(3015, new MetaTileEntityTextileFactory(gtb("textile_factory")));
+        ELECTROLYTIC_CELL = registerMetaTileEntity(3016, new MetaTileEntityElectrolyticCell(gtb("electrolytic_cell")));
+        NEUTRON_ACCELERATOR = registerMetaTileEntity(3017,
+                new MetaTileEntityNeutronAccelerator(gtb("neutron_accelerator")));
+        ENGRAVING_UNIT = registerMetaTileEntity(3018,
                 new MetaTileEntityEngravingUnit(gtb("engraving_unit")));
 
-        registerSimpleMetaTileEntity(CRYSTALLIZERS, 4010, "crystallizers", GTBRecipeMaps.CRYSTALLIZATION,
-                GTBTextures.CRYSTALLIZER_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+        registerSimpleMetaTileEntity(
+                CRYSTALLIZERS, 4012, "crystallizers",
+                GTBRecipeMaps.CRYSTALLIZATION, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
-        registerSimpleMetaTileEntity(DEHYDRATORS, 4030, "dehydrator", GTBRecipeMaps.DEHYDRATOR,
-                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+        registerSimpleMetaTileEntity(
+                DEHYDRATORS, 4028, "dehydrator",
+                GTBRecipeMaps.DEHYDRATOR, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                MICROSCOPE, 4044, "microscope",
+                GTBRecipeMaps.MICROSCOPE, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                ROTARY_EVAPORATOR, 4060, "rotary_evaporator",
+                GTBRecipeMaps.ROTARY_EVAPORATOR, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(CVD_UNIT, 4090, "cvd_unit", GTBRecipeMaps.CVD_UNIT,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);

@@ -177,7 +177,7 @@ public class GTBFirstDegreeMaterials {
 
         TungstenTrioxide = new Material.Builder(getMaterialsId(), gregtechId("tungstentrioxide"))
                 .dust()
-                .color(0xD9C572)
+                .color(0x6E9C46)
                 .build().setFormula("WO3", true);
 
         HydrogenPeroxide = new Material.Builder(getMaterialsId(), gregtechId("hydrogenperoxide"))
@@ -192,7 +192,6 @@ public class GTBFirstDegreeMaterials {
 
         LithiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxide"))
                 .dust()
-                .color(0xC4C8CB)
                 .build().setFormula("LiOH", true);
 
         SodiumTungstate = new Material.Builder(getMaterialsId(), gregtechId("sodiumtungstate"))
@@ -202,6 +201,11 @@ public class GTBFirstDegreeMaterials {
 
         CalciumTungstate = new Material.Builder(getMaterialsId(), gregtechId("calciumtungstate"))
                 .dust()
+                .color(0x909393)
+                .build().setFormula("WCaO4", true);
+
+        LithiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxidesolution"))
+                .fluid()
                 .color(0x667678)
                 .build().setFormula("WCaO4", true);
 
@@ -213,8 +217,103 @@ public class GTBFirstDegreeMaterials {
 
         LithiumFluoride = new Material.Builder(getMaterialsId(), gregtechId("lithiumfluoride"))
                 .dust()
-                .color(0x00796B)
-                .build().setFormula("(H2O)LiOH", true);
+                .color(0x9DD6D0)
+                .build().setFormula("LiF3", true);
+
+        Polyetheretherketone = new Material.Builder(getMaterialsId(), gregtechId("polyetheretherketone"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("C20H12O3", true);
+
+        EthyleneOxide = new Material.Builder(getMaterialsId(), gregtechId("ethylene_oxide"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("C2H4O", true);
+
+        HundredMethanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_methanol"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("C2H4O", true);
+
+        HundredButanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_butanol"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("C2H4O", true);
+
+        HundredEthanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_ethanol"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("C2H4O", true);
+
+        ActivatedCarbon = new Material.Builder(getMaterialsId(), gregtechId("activated_carbon"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("C", true);
+
+        HotWater = new Material.Builder(getMaterialsId(), gregtechId("hot_water"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("H2O", true);
+
+        EthyleneGlycol = new Material.Builder(getMaterialsId(), gregtechId("ethylene_glycol"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("C2H6O2", true);
+
+        SodiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_hydroxide_solution"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("(H2O)NaOH", true);
+
+        SodiumBorohydride = new Material.Builder(getMaterialsId(), gregtechId("sodium_borohydride"))
+                .dust()
+                .color(0x9DD6D0)
+                .build().setFormula("NaBH4", true);
+
+        SodiumHydride = new Material.Builder(getMaterialsId(), gregtechId("sodium_hydride"))
+                .dust()
+                .color(0x9DD6D0)
+                .build().setFormula("NaH", true);
+
+        BoricAcid = new Material.Builder(getMaterialsId(), gregtechId("boric_acid"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("H3BO3", true);
+
+        SodiumEthoxide = new Material.Builder(getMaterialsId(), gregtechId("sodium_ethoxide"))
+                .dust()
+                .color(0x9DD6D0)
+                .build().setFormula("C2H5ONa", true);
+
+        PotassiumManganate = new Material.Builder(getMaterialsId(), gregtechId("potassium_manganate"))
+                .dust()
+                .color(0x9DD6D0)
+                .build().setFormula("K2MnO4", true);
+
+        PotassiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("potassium_hydroxide"))
+                .fluid()
+                .color(0x9DD6D0)
+                .build().setFormula("KOH", true);
+
+        AluminiumChloride = new Material.Builder(getMaterialsId(), gregtechId("aluminium_chloride"))
+                .dust()
+                .color(0x9DD6D0)
+                .build().setFormula("AlCl3", true);
+
+        CucrmgbaCatalyst = new Material.Builder(getMaterialsId(), gregtechId("cucrmgba_catalyst"))
+                .dust()
+                .color(0x4A148C)
+                .build().setFormula("CuCrMgBa", true);
+
+        OneFourButanediol = new Material.Builder(getMaterialsId(), gregtechId("one_four_butanediol"))
+                .fluid()
+                .color(0x4A148C)
+                .build().setFormula("C4H10O2", true);
+
+        OneFourButynediol = new Material.Builder(getMaterialsId(), gregtechId("one_four_butynediol"))
+                .fluid()
+                .color(0x4A148C)
+                .build().setFormula("C4H6O2", true);
 
         NaquadahDioxide = new Material.Builder(getMaterialsId(), gregtechId("naquadah_dioxide"))
                 .dust()
@@ -487,7 +586,21 @@ public class GTBFirstDegreeMaterials {
 
         PhosphorusSolution = new Material.Builder(getMaterialsId(), gregtechId("phosphorus_solution"))
                 .fluid()
-                .color(0xBEA0D0)
+                .color(0xFDD835)
+                .build().setFormula("P(H2O)", true);
+
+        Photopolymer = new Material.Builder(getMaterialsId(), gregtechId("photopolymer"))
+                .fluid()
+                .dust()
+                .flags(MaterialFlags.GENERATE_PLATE)
+                .color(0xAFC896)
+                .build().setFormula("P(H2O)", true);
+
+        BioPlastic = new Material.Builder(getMaterialsId(), gregtechId("bio_plastic"))
+                .fluid()
+                .dust()
+                .flags(MaterialFlags.GENERATE_PLATE)
+                .color(0xAFC896)
                 .build().setFormula("P(H2O)", true);
     }
 

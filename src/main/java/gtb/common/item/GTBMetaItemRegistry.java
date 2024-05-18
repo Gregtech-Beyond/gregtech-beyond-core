@@ -138,7 +138,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ENGRAVED_SPINORIAL_MEMORY_WAFER = addItem(130, "engraved_spinorial_memory_wafer");
         GTBMetaItems.DOPED_ARAM_WAFER = addItem(131, "doped_aram_wafer");
         GTBMetaItems.UNBAKED_MONOCRYSTALLINE_SILICON_BOULE = addItem(132, "unbaked_monocrystalline_silicon_boule");
-        GTBMetaItems.PHOTOPOLYMER_PLATE = addItem(133, "photopolymer_plate");
         GTBMetaItems.INTEGRATED_CIRCUIT_LITHOGRAPHY_MASK = addItem(134, "integrated_circuit_lithography_mask");
         GTBMetaItems.NAQUADAH_DIOXDE_SEED_CRYSTAL = addItem(135, "naquadah_dioxide_seed_crystal");
         GTBMetaItems.NAQUADAH_DIOXDE_BOULE = addItem(136, "naquadah_dioxide_boule");
@@ -168,5 +167,26 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(158, "highly_forged_damascus_steel_assembly");
         GTBMetaItems.HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(159,
                 "hot_highly_forged_damascus_steel_assembly");
+        GTBMetaItems.PETRI_DISH = addItem(160, "petri_dish");
+        GTBMetaItems.STERILIZED_PETRI_DISH = addItem(161, "sterilized_petri_dish");
+        GTBMetaItems.PLUS_STERILIZED_PETRI_DISH = addItem(162, "plus_sterilized_petri_dish");
+        GTBMetaItems.CONTAMINATED_STERILIZED_PETRI_DISH = addItem(163, "contaminated_sterilized_petri_dish");
+        GTBMetaItems.PETRI_DISH_MOLD = addItem(164, "petri_dish_mold");
+        GTBMetaItems.CUPRIAVIDUS_BACTERIA_SAMPLE_PETRI_DISH = addItem(165, "cupriavidus_bacteria_sample_petri_dish");
+        GTBMetaItems.ULTRASONIC_HOMOGENIZER = addItem(166, "ultrasonic_homogenizer");
+        GTBMetaItems.YEAST_CELLS = addItem(167, "yeast_cells");
+        GTBMetaItems.GROWN_YEAST_CULTURE = addItem(168, "grown_yeast_culture");
+        GTBMetaItems.BARLEY = addItem(169, "barley");
+        GTBMetaItems.SYRINGE = addItem(170, "syringe");
+        GTBMetaItems.STERILIZED_SYRINGE = addItem(171, "sterilized_syringe");
+        GTBMetaItems.SHEEP_BLOOD_SYRINGE = addItem(172, "sheep_blood_syringe");
+        GTBMetaItems.COTTON = addItem(173, "cotton");
+        GTBMetaItems.COTTON_SHEET = addItem(174, "cotton_sheet");
+        GTBMetaItems.CHEESE_CLOTH = addItem(175, "cheese_cloth");
+        GTBMetaItems.PANCREAS = addItem(176, "pancreas");
+        GTBMetaItems.YEEM_PETRI = addItem(177, "yeem_petri");
+        GTBMetaItems.SOY_BEAN = addItem(178, "soy_bean");
+        GTBMetaItems.CUPRIAVIDUS_NECATOR_CULTURE = addItem(180, "cupriavidus_necator_culture");
+        GTBMetaItems.PAD_PETRI_DISH = addItem(181, "pad_petri_dish");
     }
 }

@@ -9,4 +9,5 @@ public class GTBMaterialIconType {
     public static final MaterialIconType floated = new MaterialIconType("floated");
     public static final MaterialIconType seedCrystal = new MaterialIconType("seedCrystal");
     public static final MaterialIconType boule = new MaterialIconType("boule");
+    public static final MaterialIconType petri = new MaterialIconType("petri");
 }

@@ -1,7 +1,6 @@
 package gtb.loaders.recipe;
 
-import static gregtech.api.recipes.RecipeMaps.CHEMICAL_RECIPES;
-import static gregtech.api.recipes.RecipeMaps.LARGE_CHEMICAL_RECIPES;
+import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.dust;
 
@@ -53,6 +52,16 @@ public class Catalysts {
                 .fluidInputs(Ammonia.getFluid(500))
                 .fluidOutputs(Water.getFluid(1500))
                 .fluidOutputs(GTBMaterials.Tripropylamine.getFluid(500))
+                .duration(80)
+                .EUt(120)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Pyrolusite, 3)
+                .fluidInputs(Oxygen.getFluid(1000))
+                .fluidInputs(GTBMaterials.PotassiumHydroxide.getFluid(2000))
+                .fluidOutputs(Water.getFluid(1000))
+                .output(dust, GTBMaterials.PotassiumManganate, 7)
                 .duration(80)
                 .EUt(120)
                 .buildAndRegister();

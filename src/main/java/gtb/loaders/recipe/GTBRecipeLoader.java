@@ -10,6 +10,9 @@ public final class GTBRecipeLoader {
         RecipeMaps.BLAST_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);
+        RecipeMaps.CHEMICAL_BATH_RECIPES.setMaxFluidInputs(2);
+        RecipeMaps.CHEMICAL_BATH_RECIPES.setSlotOverlay(false, true, false, GuiTextures.FLUID_TANK_OVERLAY);
+        RecipeMaps.MIXER_RECIPES.setMaxFluidInputs(4);
         RecipeMaps.EXTRACTOR_RECIPES.setMaxInputs(2);
 
         AlcoholLine.init();
@@ -21,10 +24,10 @@ public final class GTBRecipeLoader {
         PlatinumLine.init();
         TungstenLine.init();
         XylenolLine.init();
-        NaturalGasLine.init();
-        TungstenLine.init();
         MaterialBenefication.init();
         RandomRecipes.init();
+        BiologyLines.init();
+        Metallurgy.init();
         Photolithography.init();
         DamascusSteelLine.init();
     }
