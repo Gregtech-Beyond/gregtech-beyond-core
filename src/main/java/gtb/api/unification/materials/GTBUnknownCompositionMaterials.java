@@ -148,6 +148,148 @@ public class GTBUnknownCompositionMaterials {
                 .fluid()
                 .color(0xAF877B)
                 .build();
+
+        BedrockContaminatedOil = new Material.Builder(getMaterialsId(), gregtechId("bedrock_contaminated_oil"))
+                .fluid()
+                .color(0x888D83)
+                .build();
+
+        Perfluorotributylamine = new Material.Builder(getMaterialsId(), gregtechId("perfluorotributylamine"))
+                .fluid()
+                .color(0x80638B)
+                .build();
+
+        BedrockSlurry = new Material.Builder(getMaterialsId(), gregtechId("bedrock_slurry"))
+                .fluid()
+                .color(0x383739)
+                .build();
+
+        PurifiedBedrockSlurry = new Material.Builder(getMaterialsId(), gregtechId("purified_bedrock_slurry"))
+                .fluid()
+                .color(0x2D2B2E)
+                .build();
+
+        AdamantaneRichOilSolution = new Material.Builder(getMaterialsId(), gregtechId("adamantane_rich_oil_solution"))
+                .fluid()
+                .color(0x516B95)
+                .build();
+
+        LiquidOzone = new Material.Builder(getMaterialsId(), gregtechId("liquid_ozone"))
+                .fluid()
+                .color(0x0288D1)
+                .build();
+
+        TriniumSolution = new Material.Builder(getMaterialsId(), gregtechId("trinium_solution"))
+                .fluid()
+                .color(0xB8BCBE)
+                .build();
+
+        AdamantiumPentoxide = new Material.Builder(getMaterialsId(), gregtechId("adamantiun_pentoxide"))
+                .fluid()
+                .dust()
+                .color(0x04273B)
+                .build();
+
+        AdamantiumPhosphorusHydrogenPlasma = new Material.Builder(getMaterialsId(),
+                gregtechId("admantium_phosphorus_hydrogen_plasma"))
+                        .plasma()
+                        .color(0x1B4F6B)
+                        .build();
+
+        GaseousAdamantane = new Material.Builder(getMaterialsId(), gregtechId("gaseous_adamantane"))
+                .fluid()
+                .color(0x5C7786)
+                .build();
+
+        MoltenAdamantiumDioxide = new Material.Builder(getMaterialsId(), gregtechId("molten_adamantium_dioxide"))
+                .fluid()
+                .color(0x0F374C)
+                .build();
+
+        MithrilFluoride = new Material.Builder(getMaterialsId(), gregtechId("mithril_fluoride"))
+                .fluid()
+                .color(0x0F5A83)
+                .build();
+
+        AdamantaneLubricant = new Material.Builder(getMaterialsId(), gregtechId("adamantane_lubricant"))
+                .fluid()
+                .color(0xB3AC87)
+                .build();
+
+        Adamantane = new Material.Builder(getMaterialsId(), gregtechId("adamantane"))
+                .fluid()
+                .color(0x0288D1)
+                .build();
+
+        IodizedOil = new Material.Builder(getMaterialsId(), gregtechId("iodized_oil"))
+                .fluid()
+                .color(0x32312F)
+                .build();
+
+        WetBedrockDust = new Material.Builder(getMaterialsId(), gregtechId("wet_bedrock_dust"))
+                .dust()
+                .color(0x121212)
+                .build();
+
+        OilyBedrockDust = new Material.Builder(getMaterialsId(), gregtechId("oily_bedrock_dust"))
+                .dust()
+                .color(0x7A7D7F)
+                .build();
+
+        SodiumIsobutylXanthate = new Material.Builder(getMaterialsId(), gregtechId("sodium_isobutyl_xanthate"))
+                .dust()
+                .color(0x8D8B83)
+                .build();
+
+        FineBedrockDust = new Material.Builder(getMaterialsId(), gregtechId("fine_bedrock_dust"))
+                .dust()
+                .color(0x010101)
+                .build();
+
+        Adamantite = new Material.Builder(getMaterialsId(), gregtechId("adamantite"))
+                .dust()
+                .color(0x27374F)
+                .build();
+
+        EnrichedNaquadahNitrate = new Material.Builder(getMaterialsId(), gregtechId("enriched_naquadah_nitrate"))
+                .dust()
+                .color(0x212121)
+                .build();
+
+        NaquadriaNitrate = new Material.Builder(getMaterialsId(), gregtechId("naquadria_nitrate"))
+                .dust()
+                .color(0x1C1C1E)
+                .build();
+
+        PrecipitateMithril = new Material.Builder(getMaterialsId(), gregtechId("precipitate_mithril"))
+                .dust()
+                .color(0x0277BD)
+                .build();
+
+        RoughenMithril = new Material.Builder(getMaterialsId(), gregtechId("roughen_mithril"))
+                .dust()
+                .color(0x7DAAC4)
+                .build();
+
+        ExcitedRoughenMithril = new Material.Builder(getMaterialsId(), gregtechId("excited_roughen_mithril"))
+                .dust()
+                .color(0x667F8E)
+                .build();
+
+        ExcitedMithril = new Material.Builder(getMaterialsId(), gregtechId("excited_mithril"))
+                .dust()
+                .color(0x75AACA)
+                .build();
+
+        Mithril = new Material.Builder(getMaterialsId(), gregtechId("mithril"))
+                .dust()
+                .color(0x0478BC)
+                .build();
+
+        GrainsOfInfinity = new Material.Builder(getMaterialsId(), gregtechId("grains_of_infinity"))
+                .dust()
+                .color(0x292B2C)
+                .build();
     }
 
     private static int getMaterialsId() {

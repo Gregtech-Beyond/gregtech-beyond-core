@@ -602,6 +602,46 @@ public class GTBFirstDegreeMaterials {
                 .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0xAFC896)
                 .build().setFormula("P(H2O)", true);
+
+        Ozone = new Material.Builder(getMaterialsId(), gregtechId("ozone"))
+                .fluid()
+                .color(0x2182BC)
+                .build().setFormula("O3", true);
+
+        DarmstadtiumCatalyst = new Material.Builder(getMaterialsId(), gregtechId("darmstadtium_catalyst"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("O3", true);
+
+        Adamantium = new Material.Builder(getMaterialsId(), gregtechId("adamantium"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("Ad", true);
+
+        FluorodarmstadticAcid = new Material.Builder(getMaterialsId(), gregtechId("fluorodarmstadtic_acid"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("Ad", true);
+
+        AntimonyPentafluoride = new Material.Builder(getMaterialsId(), gregtechId("antimony_pentafluoride"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("SbF5", true);
+
+        Triphenylphosphine = new Material.Builder(getMaterialsId(), gregtechId("triphenylphosphine"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("(C6H5)3P", true);
+
+        NaquadriaticCompound = new Material.Builder(getMaterialsId(), gregtechId("naquadriatic_compound"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("*Nq*?", true);
+
+        EnrichedNaquadahCompound = new Material.Builder(getMaterialsId(), gregtechId("enriched_naquadah_compound"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("Nq+?", true);
     }
 
     private static int getMaterialsId() {
