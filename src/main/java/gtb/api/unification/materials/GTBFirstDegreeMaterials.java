@@ -586,14 +586,14 @@ public class GTBFirstDegreeMaterials {
 
         PhosphorusSolution = new Material.Builder(getMaterialsId(), gregtechId("phosphorus_solution"))
                 .fluid()
-                .color(0xBEA0D0)
+                .color(0xFDD835)
                 .build().setFormula("P(H2O)", true);
 
         Photopolymer = new Material.Builder(getMaterialsId(), gregtechId("photopolymer"))
                 .fluid()
                 .dust()
                 .flags(MaterialFlags.GENERATE_PLATE)
-                .color(0xBEA0D0)
+                .color(0xAFC896)
                 .build().setFormula("P(H2O)", true);
     }
 
