@@ -50,7 +50,7 @@ public class MetaTileEntityNeutronAccelerator extends RecipeMapMultiblockControl
                 .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('W', states(getCasingState())
+                .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
