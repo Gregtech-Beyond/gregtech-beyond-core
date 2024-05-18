@@ -130,7 +130,7 @@ public class BiologyLines {
                 .EUt(2400)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(PropargylAlcohol.getFluid(5000))
                 .fluidInputs(BetaIonone.getFluid(25000))
                 .fluidOutputs(Oxygen.getFluid(8000))
