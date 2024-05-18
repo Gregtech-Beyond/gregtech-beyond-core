@@ -30,6 +30,7 @@ import gregtech.modules.ModuleManager;
 
 import gtb.api.unification.materials.GTBMaterialFlagAddition;
 import gtb.api.unification.materials.GTBMaterials;
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 
 public final class Bootstrap {
 

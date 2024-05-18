@@ -15,5 +15,8 @@ public class GTBMaterialPropertyAddition {
         Nihonium.setProperty(PropertyKey.DUST, new DustProperty());
         Thallium.setProperty(PropertyKey.DUST, new DustProperty());
         NaquadahAlloy.addFlags(MaterialFlags.GENERATE_FINE_WIRE);
+        Graphene.addFlags(MaterialFlags.GENERATE_FOIL);
+        Mica.addFlags(MaterialFlags.GENERATE_FOIL);
+        BorosilicateGlass.addFlags(MaterialFlags.GENERATE_PLATE);
     }
 }
