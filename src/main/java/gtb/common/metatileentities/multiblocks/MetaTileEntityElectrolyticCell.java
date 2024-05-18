@@ -82,6 +82,6 @@ public class MetaTileEntityElectrolyticCell extends RecipeMapMultiblockControlle
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityBedrockPump(metaTileEntityId);
+        return new MetaTileEntityElectrolyticCell(metaTileEntityId);
     }
 }
