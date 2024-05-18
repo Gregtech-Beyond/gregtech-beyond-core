@@ -177,6 +177,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem HOT_MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY;
     public static MetaItem<?>.MetaValueItem HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY;
     public static MetaItem<?>.MetaValueItem HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem LASER_ASSEMBLY;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);

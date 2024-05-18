@@ -1,10 +1,12 @@
 package gtb.api.recipes;
 
+import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import mezz.jei.plugins.vanilla.anvil.AnvilRecipeMaker;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
@@ -96,4 +98,8 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ENGRAVING_UNIT = new RecipeMap<>("engraving_unit",
             2, 4, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CHEMICAL_PLANT = new RecipeMap<>("chemical_plant",
+            2, 4, 2, 2, new SimpleRecipeBuilder(), false);
+
 }

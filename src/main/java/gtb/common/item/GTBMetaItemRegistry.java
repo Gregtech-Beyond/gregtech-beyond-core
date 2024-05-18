@@ -188,5 +188,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.SOY_BEAN = addItem(178, "soy_bean");
         GTBMetaItems.CUPRIAVIDUS_NECATOR_CULTURE = addItem(180, "cupriavidus_necator_culture");
         GTBMetaItems.PAD_PETRI_DISH = addItem(181, "pad_petri_dish");
+        GTBMetaItems.LASER_ASSEMBLY = addItem(182, "laser_assembly");
     }
 }
