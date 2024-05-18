@@ -8,6 +8,7 @@ tile.gtb_multiblock_casing.climate_proof_casing.name=Climate Proof
 tile.gtb_multiblock_casing.steel_bordered_wooden_casing.name=Steel Bordered Wooden Casing
 tile.gtb_multiblock_casing.quantum_casing.name=Quantum Casing
 tile.gtb_multiblock_casing.quantum_glass.name=Quantum Glass
+tile.gtb_multiblock_casing.biologically_sterile_casing.name=Biologically Sterile Casing
 tile.gtb_explosive.naquadria_charge.name=Naquadria Charge
 
 
@@ -31,10 +32,38 @@ recipemap.crystallizer.name=Crystallization
 recipemap.cvd_unit.name=Continous Vapour Deposition
 recipemap.ion_implanter.name=Ion Implantation
 recipemap.roaster.name=Roasting
+recipemap.rotary_evaporator.name=Rotary Evaporation
+recipemap.bio_reactor.name=Bio Reactor
+recipemap.textile_factory.name=Textile Factory
+recipemap.electrolytic_cell.name=Advanced Electrolysis
+recipemap.neutron_accelerator.name=Neutron Acceleration
+recipemap.microscope.name=Microscope
+
+
+
+
+
 
 
 # Singleblock machinery
 
+gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator
+gtb.machine.rotary_evaporator.mv.name=Advanced Rotary Evaporator
+gtb.machine.rotary_evaporator.hv.name=Advanced Rotary Evaporator II
+gtb.machine.rotary_evaporator.ev.name=Advanced Rotary Evaporator III
+gtb.machine.rotary_evaporator.iv.name=Elite Rotary Evaporator
+gtb.machine.rotary_evaporator.luv.name=Elite Rotary Evaporator II
+gtb.machine.rotary_evaporator.zpm.name=Elite Rotary Evaporator III
+gtb.machine.rotary_evaporator.uv.name=Ultimate Rotary Evaporator
+
+gtb.machine.microscope.lv.name=Basic Microscope
+gtb.machine.microscope.mv.name=Advanced Microscope
+gtb.machine.microscope.hv.name=Advanced Microscope II
+gtb.machine.microscope.ev.name=Advanced Microscope III
+gtb.machine.microscope.iv.name=Elite Microscope
+gtb.machine.microscope.luv.name=Elite Microscope II
+gtb.machine.microscope.zpm.name=Elite Microscope III
+gtb.machine.microscope.uv.name=Ultimate Microscope
 
 gtb.machine.crystallizers.lv.name=Basic Crystallizer
 gtb.machine.crystallizers.mv.name=Advanced Crystallizer
@@ -100,6 +129,10 @@ gtb.machine.bacterial_vat.name=Bacterial Vat
 gtb.machine.astro_mining_station.name=Astro Mining Station
 gtb.machine.fischer_tropsch_reactor.name=Fischer Tropsch Reactor
 gtb.machine.engraving_unit.name=Engraving Unit
+gtb.machine.bio_reactor.name=Bio Reactor
+gtb.machine.textile_factory.name=Textile Factory
+gtb.machine.electrolytic_cell.name=Electrolytic Cell
+gtb.machine.neutron_accelerator.name=Neutron Accelerator
 
 # MetaItems
 
@@ -107,7 +140,7 @@ metaitem.engraved_hasoc_wafer.name=Engraved HaSoC Wafer
 metaitem.astro_miner.name=Astro Miner
 metaitem.moon.name=Moon
 metaitem.paraffin_wax.name=Paraffin Wax
-metaitem.bituminous_residues.name=Bituminous Residues
+metaitem..name=
 metaitem.damascus_steel_assembly.name=Damascus Steel Assembly
 metaitem.hot_damascus_steel_assembly.name=Hot Damascus Steel Assembly
 metaitem.lightly_forged_damascus_steel_assembly.name=Lightly Forged Damascus Steel Assembly
@@ -258,6 +291,26 @@ metaitem.optical_soc_wafer.name=Optical SoC Wafer
 metaitem.qbit_cpu.name=QBit CPU
 metaitem.optical_soc.name=Optical SoC
 metaitem.bituminous_residues.name=Bituminous Residues
+metaitem.cotton_sheet.name=Cotton Sheet
+metaitem.cheese_cloth.name=Cheese Cloth
+metaitem.sterilized_petri_dish.name=Sterilized Petri Dish
+metaitem.plus_sterilized_petri_dish.name=Extra Sterilized Petri Dish
+metaitem.pancreas.name=Pancreas
+metaitem.yeem_petri.name=YEEM Petri Dish
+metaitem.contaminated_sterilized_petri_dish.name=Contaminated Petri Dish
+metaitem.petri_dish_mold.name=Petri Dish Mold
+metaitem.soy_bean.name=Soy Bean
+metaitem.cupriavidus_necator_culture.name=Cupriavidus Necator Culture
+metaitem.cupriavidus_bacteria_sample_culture.name=Cupriavidus Bacterial Sample Culture
+metaitem.ultrasonic_homogenizer.name=Ultrasonic Homogenizer
+metaitem.pad_petri_dish.name=PAD Petri Dish
+metaitem.yeast_cells.name=Yeast Cells
+metaitem.grown_yeast_culture.name=Grown Yeast Culture
+metaitem.barley.name=Barley
+metaitem.syringe.name=Syringe
+metaitem.sterilized_syringe.name=Sterilized Syringe
+metaitem.sheep_blood_syringe.name=Sheep Blood Syringe
+metaitem.cotton.name=Cotton
 
 
 
@@ -427,7 +480,7 @@ gregtech.material.grist_powder=Grist Powder
 gregtech.material.yeast_extract_mannitol_medium=Yeast Extract Mannitol Medium
 gregtech.material.brevibacterium_flavium=Brevibacterium Flavium
 gregtech.material.yeast=Yeast
-gregtech.material.blood=Bloood
+gregtech.material.blood=Blood
 gregtech.material.bacterial_growth_medium=Bacterial Growth Medium
 gregtech.material.depleted_bacterial_growth_medium=Depleted Bacterial Growth Medium
 gregtech.material.polyetheretherketone=Polyetheretherketone
@@ -462,10 +515,52 @@ gregtech.material.one_four_butynediol=1,4-Butynediol
 gregtech.material.photopolymer=Photopolymer
 gregtech.material.clean_ammonia_solution=Clean Ammonia Solution
 gregtech.material.nonoxynol_9_solution=Nonoxynol-9 Solution
+gregtech.material.ammonium_nitrate=Ammonium Nitrate
 gregtech.material.peptone_mixture=Peptone Mixture
 gregtech.material.beta_pinene_solution=Beta Pinene Solution
 gregtech.material.ethoxylated_nonylphenol=Ethoxylated Nonylphenol
-gregtech.material.yeem_solution=YEEM Solutiongregtech.material.bio_plastic=
-gregtech.material.aniline=Bio Plastic
+gregtech.material.yeem_solution=YEEM Solution
+gregtech.material.yeast_mixture=Yeast Mixture
+gregtech.material.aniline=Aniline
 gregtech.material.alpha_linolenic_acid=Alpha Linolenic Acid
-gregtech.material.ammonium_nitrate=Ammonium Nitrate
+gregtech.material.yeast_extract_mannitol_agar_solution=Yeast Extract Mannitol Agar Solution
+gregtech.material.nonylphenol=Nonylphenol
+gregtech.material.milk_oil=Milk Oil
+gregtech.material.b_27_supplement=B27 Supplement
+gregtech.material.dissolved_yeast_extract_mannitol_mixture=Dissolved Yeast Extract Mannitol Mixture
+gregtech.material.sheep_blood=Sheep Blood
+gregtech.material.homogenized_pancreas_mixture=Homogenized Pancreas Mixture
+gregtech.material.trypsin=Trypsin
+gregtech.material.sheep_blood_plasma=Sheep Blood Plasma
+gregtech.material.bean_slurry=Bean Slurry
+gregtech.material.sheep_blood_cells=Sheep Blood Cells
+gregtech.material.mannitol=Mannitol
+gregtech.material.biotin=Biotin
+gregtech.material.yeast_extract=Yeast Extract
+gregtech.material.defibernated_sheep_blood=Defibernated Sheep Blood
+gregtech.material.soybean_oil=Soybean Oil
+gregtech.material.ethanolamine=Ethanolamine
+gregtech.material.catalase=Catalase
+gregtech.material.vitamin_a=Vitamin A
+gregtech.material.waste_water=Waste Water
+gregtech.material.edetic_acid=Edetic Acid
+gregtech.material.methylene_diphosphoric_acid=Methylene Diphosphoric Acid
+gregtech.material.orthophosphoric_acid=Orthophosphoric Acid
+gregtech.material.phenyl_ethyl_alcohol_agar=Phenyl Ethyl Alcohol Agar
+gregtech.material.nutrient_rich_solution=Nutrient Rich Solution
+gregtech.material.beta_ionone=Beta Ionone
+gregtech.material.basic_fibroglast_growth_medium=Basic Fibroglast Growth Medium
+gregtech.material.epidermal_growth_factora=Epidermal Growth Factor
+gregtech.material.propargylchloride=Proparglychloride
+gregtech.material.malt_extract=Malt Extract
+gregtech.material.dissolved_phenyl_ethyl_alcohol_agar=Dissolved Phenyl Ethyl Alcohol Agar
+gregtech.material.orthophosphoric_acid_solution=Orthophosphoric Acid Solution
+gregtech.material.phosphoric_anihydride=Phoshoric Anhydride
+gregtech.material.phenyl_ethyl_alcohol_agar_solution=Phenyl Ethyl Alcohol Agar Solution
+gregtech.material.peptone=Peptone
+gregtech.material.citral=Citral
+gregtech.material.cuproquin=Cuproquin
+gregtech.material.acetic_anhydride=Acetic Anhydirde
+gregtech.material.blood_cells=Blood Cells
+gregtech.material.blood_plasma=Blood
+gregtech.material.linoleic_acid=Linoleic Acid
