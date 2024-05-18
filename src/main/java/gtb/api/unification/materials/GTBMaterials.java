@@ -1,6 +1,10 @@
 package gtb.api.unification.materials;
 
 import gregtech.api.unification.material.Material;
+import gtb.api.unification.materials.info.GTBMaterialIconSet;
+
+import gtb.api.unification.materials.info.GTBMaterialFlags;
+import gtb.api.unification.materials.info.GTBMaterialIconSet;
 
 public class GTBMaterials {
 
@@ -260,11 +264,15 @@ public class GTBMaterials {
 
     public static void init() {
         GTBMaterialPropertyAddition.init();
+        GTBMaterialFlags.add();
+        GTBMaterialIconSet.set();
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();
         GTBSecondDegreeMaterials.register();
         GTBOrganicChemistryMaterials.register();
         GTBUnknownCompositionMaterials.register();
         GTBBiologicalMaterials.register();
+        GTBMaterialSetFormula.init();
+        GTBMaterialIconSet.set();
     }
 }

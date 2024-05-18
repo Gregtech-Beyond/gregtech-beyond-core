@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.resources.Locale;
 import net.minecraft.network.INetHandler;
@@ -74,10 +75,9 @@ public final class Bootstrap {
         Loader.instance().setupTestHarness(new DummyModContainer(meta));
 
         GTBMaterials.init();
-        GTBMaterialFlagAddition.init();
 
         managerInternal.closeRegistries();
-        GTBMaterialFlagAddition.initLate();
+        GTBMaterialFlags.add();
 
         managerInternal.freezeRegistries();
 

@@ -22,6 +22,7 @@ import gregtech.api.unification.material.event.PostMaterialEvent;
 
 import gtb.GregtechBeyondCore;
 import gtb.api.unification.materials.GTBMaterials;
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 import gtb.api.utils.GTBLog;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.loaders.recipe.GTBRecipeLoader;
@@ -65,7 +66,7 @@ public class CommonProxy {
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public static void registerMaterialsPost(PostMaterialEvent event) {
-        GTBMaterialFlagAddition.initLate();
+        GTBMaterialFlags.add();
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
