@@ -106,6 +106,11 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+
+    public static Material CarbonSulfide;
+    public static Material Tributylamine;
+    public static Material IsoOctane;
+    public static Material AlkylatedAdamantanes;
     public static Material EnrichedNaquadahCompound;
     public static Material NaquadriaticCompound;
     public static Material Triphenylphosphine;

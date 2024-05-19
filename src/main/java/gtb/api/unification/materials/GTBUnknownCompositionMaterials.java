@@ -236,11 +236,6 @@ public class GTBUnknownCompositionMaterials {
                 .color(0x7A7D7F)
                 .build();
 
-        SodiumIsobutylXanthate = new Material.Builder(getMaterialsId(), gregtechId("sodium_isobutyl_xanthate"))
-                .dust()
-                .color(0x8D8B83)
-                .build();
-
         FineBedrockDust = new Material.Builder(getMaterialsId(), gregtechId("fine_bedrock_dust"))
                 .dust()
                 .color(0x010101)
