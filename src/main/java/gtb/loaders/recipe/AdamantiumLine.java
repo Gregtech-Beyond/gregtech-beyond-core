@@ -256,5 +256,39 @@ public final class AdamantiumLine {
                 .duration(800)
                 .EUt(670)
                 .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(AdamantaneRichOilSolution.getFluid(1000))
+                .fluidOutputs(Adamantane.getFluid(400))
+                .fluidOutputs(Perfluorotributylamine.getFluid(90))
+                .fluidOutputs(IodizedOil.getFluid(510))
+                .duration(120)
+                .EUt(700)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidOutputs(AlkylatedAdamantanes.getFluid(2000))
+                .fluidInputs(IsoOctane.getFluid(1000))
+                .fluidInputs(Adamantane.getFluid(1000))
+                .notConsumable(dust, AluminiumChloride, 3)
+                .duration(900)
+                .EUt(80000)
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(AlkylatedAdamantanes.getFluid(1000))
+                .fluidOutputs(AdamantaneLubricant.getFluid(500))
+                .fluidOutputs(Ethanol.getFluid(500))
+                .duration(700)
+                .EUt(7800)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Tributylamine.getFluid(1000))
+                .fluidInputs(HydrochloricAcid.getFluid(1000))
+                .fluidOutputs(Perfluorotributylamine.getFluid(2000))
+                .EUt(700)
+                .duration(1200)
+                .buildAndRegister();
     }
 }
