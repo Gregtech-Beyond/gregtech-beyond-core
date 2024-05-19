@@ -113,7 +113,7 @@ public final class AdamantiumLine {
         FUSION_RECIPES.recipeBuilder()
                 .fluidInputs(AdamantiumPentoxide.getFluid(12))
                 .fluidInputs(Hydrogen.getFluid(12))
-                .fluidOutputs(AdamantiumPhosphorusHydrogenPlasma.getFluid(12))
+                .fluidOutputs(AdamantiumPhosphorusHydrogenPlasma.getPlasma(12))
                 .EUToStart(320000000)
                 .EUt(200000)
                 .duration(70)
@@ -136,7 +136,7 @@ public final class AdamantiumLine {
                 .fluidInputs(Fluorine.getFluid(1000))
                 .fluidInputs(AntimonyPentafluoride.getFluid(1000))
                 .input(dust, Triphenylphosphine)
-                .fluidInputs(FluorodarmstadticAcid.getFluid(1000))
+                .fluidOutputs(FluorodarmstadticAcid.getFluid(1000))
                 .duration(210)
                 .EUt(800)
                 .buildAndRegister();
@@ -150,7 +150,7 @@ public final class AdamantiumLine {
                 .buildAndRegister();
 
         CHEMICAL_PLANT.recipeBuilder()
-                .fluidInputs(AdamantiumPhosphorusHydrogenPlasma.getFluid(2000))
+                .fluidInputs(AdamantiumPhosphorusHydrogenPlasma.getPlasma(2000))
                 .output(dust, Phosphorus)
                 .output(dust, AdamantiumPentoxide, 2)
                 .fluidOutputs(GaseousAdamantane.getFluid(800))
