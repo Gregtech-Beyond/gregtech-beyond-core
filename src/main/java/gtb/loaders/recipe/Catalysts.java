@@ -64,5 +64,24 @@ public class Catalysts {
                 .duration(80)
                 .EUt(120)
                 .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, SodiumHydroxide, 3)
+                .fluidInputs(CarbonSulfide.getFluid(1000))
+                .fluidInputs(IsobutylAlcohol.getFluid(1000))
+                .output(dust, SodiumIsobutylXanthate)
+                .duration(120)
+                .EUt(780)
+                .buildAndRegister();
+
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, Carbon)
+                .input(dust, Sulfur, 2)
+                .fluidOutputs(CarbonSulfide.getFluid(1000))
+                .chancedOutput(dust, Ash, 1111, 0)
+                .duration(1200)
+                .blastFurnaceTemp(1290)
+                .EUt(660)
+                .buildAndRegister();
     }
 }
