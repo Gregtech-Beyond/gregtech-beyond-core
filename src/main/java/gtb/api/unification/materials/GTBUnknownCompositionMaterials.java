@@ -216,11 +216,6 @@ public class GTBUnknownCompositionMaterials {
                 .color(0xB3AC87)
                 .build();
 
-        Adamantane = new Material.Builder(getMaterialsId(), gregtechId("adamantane"))
-                .fluid()
-                .color(0x0288D1)
-                .build();
-
         IodizedOil = new Material.Builder(getMaterialsId(), gregtechId("iodized_oil"))
                 .fluid()
                 .color(0x32312F)

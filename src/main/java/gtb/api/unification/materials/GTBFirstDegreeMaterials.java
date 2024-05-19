@@ -655,6 +655,11 @@ public class GTBFirstDegreeMaterials {
                 .color(0x3949AB)
                 .build().setFormula("C10H16(?)", true);
 
+        Adamantane = new Material.Builder(getMaterialsId(), gregtechId("adamantane"))
+                .fluid()
+                .color(0x0288D1)
+                .build().setFormula("C10H16", true);
+
         IsoOctane = new Material.Builder(getMaterialsId(), gregtechId("iso_octane"))
                 .fluid()
                 .color(0x33691E)
