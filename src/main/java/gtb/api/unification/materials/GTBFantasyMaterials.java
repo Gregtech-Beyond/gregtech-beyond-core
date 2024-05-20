@@ -1,11 +1,9 @@
 package gtb.api.unification.materials;
 
-import gregtech.api.fluids.FluidBuilder;
-import gregtech.api.unification.material.Material;
-
-import static gregtech.api.fluids.attribute.FluidAttributes.ACID;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
+
+import gregtech.api.unification.material.Material;
 
 public class GTBFantasyMaterials {
 
@@ -14,7 +12,6 @@ public class GTBFantasyMaterials {
     private static final int END_ID = startId + 50;
 
     public static void register() {
-
         AwakenedDraconium = new Material.Builder(getMaterialsId(), gregtechId("awakened_draconium"))
                 .ingot()
                 .build().setFormula("AwDr", true);
@@ -31,17 +28,19 @@ public class GTBFantasyMaterials {
                 .ingot()
                 .build().setFormula("If", true);
 
-        Eternal  = new Material.Builder(getMaterialsId(), gregtechId("eternal"))
+        Eternal = new Material.Builder(getMaterialsId(), gregtechId("eternal"))
                 .ingot()
                 .build().setFormula("Et*", true);
 
-        TemporallyConstrainedAntiMatter = new Material.Builder(getMaterialsId(), gregtechId("temporally_constrained_anti_matter"))
-                .ingot()
-                .build().setFormula("Am**", true);
+        TemporallyConstrainedAntiMatter = new Material.Builder(getMaterialsId(),
+                gregtechId("temporally_constrained_anti_matter"))
+                        .ingot()
+                        .build().setFormula("Am**", true);
 
-        CataclysmInducedMixedMatter = new Material.Builder(getMaterialsId(), gregtechId("cataclysm_induced_mixed_matter"))
-                .ingot()
-                .build().setFormula("Mm***", true);
+        CataclysmInducedMixedMatter = new Material.Builder(getMaterialsId(),
+                gregtechId("cataclysm_induced_mixed_matter"))
+                        .ingot()
+                        .build().setFormula("Mm***", true);
     }
 
     private static int getMaterialsId() {

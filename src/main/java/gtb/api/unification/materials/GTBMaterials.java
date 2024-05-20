@@ -312,7 +312,7 @@ public class GTBMaterials {
     public static Material SodiumFormate;
     public static Material Tripropylamine;
 
-    //Fantasy Materials
+    // Fantasy Materials
     public static Material AwakenedDraconium;
     public static Material Adamantium;
     public static Material Pikyonium;

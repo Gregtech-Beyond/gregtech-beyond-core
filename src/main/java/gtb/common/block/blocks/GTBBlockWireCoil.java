@@ -1,14 +1,10 @@
 package gtb.common.block.blocks;
 
-import gregtech.api.block.IHeatingCoilBlockStats;
-import gregtech.api.block.VariantActiveBlock;
-import gregtech.api.block.VariantItemBlock;
-import gregtech.api.items.toolitem.ToolClasses;
-import gregtech.api.unification.material.Material;
-import gregtech.client.utils.TooltipHelper;
-import gregtech.common.ConfigHolder;
+import static gregtech.api.unification.material.Materials.*;
+import static gtb.api.unification.materials.GTBMaterials.*;
 
-import gregtech.common.metatileentities.multi.electric.MetaTileEntityMultiSmelter;
+import java.util.List;
+
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
@@ -17,21 +13,26 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.IStringSerializable;
-
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-
-import static gregtech.api.unification.material.Materials.*;
-import static gtb.api.unification.materials.GTBMaterials.*;
+import gregtech.api.block.IHeatingCoilBlockStats;
+import gregtech.api.block.VariantActiveBlock;
+import gregtech.api.block.VariantItemBlock;
+import gregtech.api.items.toolitem.ToolClasses;
+import gregtech.api.unification.material.Material;
+import gregtech.client.utils.TooltipHelper;
+import gregtech.common.ConfigHolder;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityMultiSmelter;
 
 public class GTBBlockWireCoil extends VariantActiveBlock<GTBBlockWireCoil.GTBCoilType> {
+
     public GTBBlockWireCoil() {
         super(net.minecraft.block.material.Material.IRON);
         setTranslationKey("gtb_wire_coil");
@@ -94,9 +95,10 @@ public class GTBBlockWireCoil extends VariantActiveBlock<GTBBlockWireCoil.GTBCoi
     }
 
     public enum GTBCoilType implements IStringSerializable, IHeatingCoilBlockStats {
-        HSS_S("hss_s", 6300, 4,4, 4, HSSS),
+
+        HSS_S("hss_s", 6300, 4, 4, 4, HSSS),
         NAQUADAH_ALLOY("naquadah_alloy", 8100, 8, 4, 5, NaquadahAlloy),
-        AWAKENED_DRACONIUM("awakened_draconium",9900, 8, 8, 6, AwakenedDraconium),
+        AWAKENED_DRACONIUM("awakened_draconium", 9900, 8, 8, 6, AwakenedDraconium),
         ADAMANTIUM("adamantium", 11700, 16, 4, 8, Adamantium),
         PIKYONIUM("pikyonium", 12600, 32, 16, 9, Pikyonium),
         COSMIC_NEUTRONIUM("comsic_neutronium", 13500, 64, 16, 9, CosmicNeutronium),
