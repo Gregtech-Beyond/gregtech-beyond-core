@@ -7,10 +7,6 @@ import static gregtech.common.items.MetaItems.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.unification.OreDictUnifier;
-import gtb.api.unification.materials.GTBMaterials;
-
 public final class Metallurgy {
 
     public static void init() {
@@ -37,6 +33,5 @@ public final class Metallurgy {
                 .duration(120)
                 .EUt(12)
                 .buildAndRegister();
-
     }
 }
