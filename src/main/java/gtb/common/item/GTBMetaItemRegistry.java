@@ -132,7 +132,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.BORON_SATURATED_YARN = addItem(117, "boron_saturated_yarn");
         GTBMetaItems.BORON_RETAINING_YARN = addItem(118, "boron_retaining_yarn");
         GTBMetaItems.COOLANT_CELL = addItem(119, "coolant_cell");
-        GTBMetaItems.NAK_COOLANT_CELL = addItem(120, "nak_coolant_cell");
+        GTBMetaItems.NAK_COOLANT_CELL = addItem(181, "nak_coolant_cell");
         GTBMetaItems.NICKEL_NITRIDE_WAFER = addItem(121, "nickel_nitride_wafer");
         GTBMetaItems.ENGRAVED_NOR_WAFER = addItem(122, "engraved_nor_wafer");
         GTBMetaItems.ENGRAVED_NAND_WAFER = addItem(123, "engraved_nand_wafer");
@@ -194,6 +194,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.YEEM_PETRI = addItem(177, "yeem_petri");
         GTBMetaItems.SOY_BEAN = addItem(178, "soy_bean");
         GTBMetaItems.CUPRIAVIDUS_NECATOR_CULTURE = addItem(180, "cupriavidus_necator_culture");
-        GTBMetaItems.PAD_PETRI_DISH = addItem(181, "pad_petri_dish");
+        GTBMetaItems.PAD_PETRI_DISH = addItem(182, "pad_petri_dish");
     }
 }
