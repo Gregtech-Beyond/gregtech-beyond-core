@@ -177,6 +177,12 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem HOT_MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY;
     public static MetaItem<?>.MetaValueItem HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY;
     public static MetaItem<?>.MetaValueItem HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem COOLANT_CELL;
+    public static MetaItem<?>.MetaValueItem NAK_COOLANT_CELL;
+    public static MetaItem<?>.MetaValueItem BORON_RETAINING_YARN;
+    public static MetaItem<?>.MetaValueItem BORON_SATURATED_YARN;
+    public static MetaItem<?>.MetaValueItem LITHIUM_SIEVE;
+    public static MetaItem<?>.MetaValueItem LITHIUM_SATURATED_LITHIUM_SIEVE;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
