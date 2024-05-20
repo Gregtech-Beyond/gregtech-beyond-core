@@ -32,6 +32,7 @@ public final class GTBRecipeLoader {
         Metallurgy.init();
         Photolithography.init();
         DamascusSteelLine.init();
+        MachineRecipes.init();
         BrineLine.init();
     }
 }
