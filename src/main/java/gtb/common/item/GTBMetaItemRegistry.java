@@ -117,7 +117,9 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.SUPERCONDUCTOR_COATED_QBIT_CPU_WAFER = addItem(103, "superconductor_coated_qbit_cpu_wafer");
         GTBMetaItems.U_TWOFOURTY_ELECTRON_SOURCE = addItem(104, "u_twofourty_electron_source");
         GTBMetaItems.QBIT_CPU_DIE = addItem(105, "qbit_cpu_die");
-        GTBMetaItems.COVERED_QBIT_CPU = addItem(106, "covered_qbit_cpu");
+        GTBMetaItems.COVERED_QBIT_CPU = addItem(95, "covered_qbit_cpu");
+        GTBMetaItems.LITHIUM_SIEVE = addItem(106, "lithium_sieve");
+        GTBMetaItems.LITHIUM_SATURATED_LITHIUM_SIEVE = addItem(107, "lithium_saturated_sieve_lithium");
         GTBMetaItems.CELAUWAFER = addItem(108, "celauwafer");
         GTBMetaItems.SILICON_DIOXIDE_WAFER = addItem(109, "silicon_dioxide_wafer");
         GTBMetaItems.ENGRAVED_NANOCPU_WAFER = addItem(110, "engraved_nanocpu_wafer");
@@ -127,6 +129,10 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.INSULATED_NANOCPU_WAFER = addItem(114, "insulated_nanocpu_wafer");
         GTBMetaItems.TRENCHED_INSULATED_NANOCPU_WAFER = addItem(115, "trenched_insulated_nanocpu_wafer");
         GTBMetaItems.UNPLANARIZED_NANOCPU_WAFER = addItem(116, "unplanarized_nanocpu_wafer");
+        GTBMetaItems.BORON_SATURATED_YARN = addItem(117, "boron_saturated_yarn");
+        GTBMetaItems.BORON_RETAINING_YARN = addItem(118, "boron_retaining_yarn");
+        GTBMetaItems.COOLANT_CELL = addItem(119, "coolant_cell");
+        GTBMetaItems.NAK_COOLANT_CELL = addItem(120, "nak_coolant_cell");
         GTBMetaItems.NICKEL_NITRIDE_WAFER = addItem(121, "nickel_nitride_wafer");
         GTBMetaItems.ENGRAVED_NOR_WAFER = addItem(122, "engraved_nor_wafer");
         GTBMetaItems.ENGRAVED_NAND_WAFER = addItem(123, "engraved_nand_wafer");

@@ -62,6 +62,26 @@ public class GTBSecondDegreeMaterials {
                 .fluid()
                 .color(0xE8D6D1)
                 .build().setFormula("(H)6(CO)", true);
+
+        PotassiumMagnesiumSalts = new Material.Builder(getMaterialsId(), gregtechId("potassium_magnesium_salts"))
+                .fluid()
+                .color(0xD7D6D6)
+                .build().setFormula("KClMgSO4K2SO4KF", true);
+
+        SodiumSalts = new Material.Builder(getMaterialsId(), gregtechId("sodium_salts"))
+                .fluid()
+                .color(0x30345E)
+                .build().setFormula("NaCl?", true);
+
+        CalciumSalts = new Material.Builder(getMaterialsId(), gregtechId("calcium_salts"))
+                .fluid()
+                .color(0xCBBB94)
+                .build().setFormula("(CaO3)(CaS(H2O)2O4)", true);
+
+        LithiumChlorideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithium_chloride_solution"))
+                .fluid()
+                .color(0xCBBB94)
+                .build().setFormula("LiCl(H2O)", true);
     }
 
     private static int getMaterialsId() {
