@@ -7,10 +7,12 @@ import static gregtech.common.items.MetaItems.*;
 import static gregtech.loaders.recipe.CraftingComponent.*;
 import static gregtech.loaders.recipe.MetaTileEntityLoader.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
 
 import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
+import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.BlockMetalCasing;
@@ -34,7 +36,7 @@ public class MachineRecipes {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(MetaTileEntities.STEEL_TANK.getStackForm(1).getItem())
+                .input(foil, StainlessSteel, 4)
                 .input(frameGt, StainlessSteel)
                 .input(circuit, MarkerMaterials.Tier.EV, 2)
                 .input(ELECTRIC_PUMP_EV, 2)
@@ -72,31 +74,32 @@ public class MachineRecipes {
                 .EUt(800)
                 .buildAndRegister();
 
-        ModHandler.addShapedRecipe("water_tank_machine", GTBMetaTileEntities.WATER_TANK.getStackForm(1),
+        ModHandler.addShapedRecipe("water_tank_machine", GTBMetaTileEntities.WATER_TANK.getStackForm(),
                 "WPW", "FSF", "WCW",
-                'W', OreDictUnifier.get(plate, Wood),
-                'C', OreDictUnifier.get(circuit, MarkerMaterials.Tier.LV),
-                'P', ELECTRIC_PUMP_LV,
-                'F', OreDictUnifier.get(frameGt, Steel));
+                'W', new UnificationEntry(plate, Wood),
+                'C', new UnificationEntry(OrePrefix.circuit, MarkerMaterials.Tier.LV),
+                'P', ELECTRIC_PUMP_LV.getStackForm(),
+                'S', STEEL_BORDERED_WOODEN_CASING,
+                'F', new UnificationEntry(frameGt, Steel));
 
-        ModHandler.addShapedRecipe("clarifier_machine", GTBMetaTileEntities.CLARIFIER.getStackForm(1),
+        ModHandler.addShapedRecipe("clarifier_machine", GTBMetaTileEntities.CLARIFIER.getStackForm(),
                 "PCP", "UMU", "PCP",
                 'M', MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.EV),
-                'C', OreDictUnifier.get(circuit, MarkerMaterials.Tier.LV),
-                'P', PISTON,
-                'U', PUMP);
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.LV),
+                'P', ELECTRIC_PISTON_EV.getStackForm(),
+                'U', ELECTRIC_PUMP_EV.getStackForm());
 
-        ModHandler.addShapedRecipe("digester_machine", GTBMetaTileEntities.DIGESTER.getStackForm(1),
+        ModHandler.addShapedRecipe("digester_machine", GTBMetaTileEntities.DIGESTER.getStackForm(),
                 "TTT", "PMP", "TTT",
                 'M', MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.IV),
-                'P', PISTON,
-                'T', OreDictUnifier.get(plate, Titanium));
+                'P', ELECTRIC_PISTON_EV.getStackForm(),
+                'T', new UnificationEntry(plate, Titanium));
 
-        ModHandler.addShapedRecipe("ffu_machine", GTBMetaTileEntities.FROTH_FLOTATION_UNIT.getStackForm(1),
+        ModHandler.addShapedRecipe("ffu_machine", GTBMetaTileEntities.FROTH_FLOTATION_UNIT.getStackForm(),
                 "CPC", "PMP", "CPC",
                 'M', MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.EV),
-                'C', OreDictUnifier.get(circuit, MarkerMaterials.Tier.LV),
-                'P', PUMP);
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
+                'P', ELECTRIC_PUMP_EV.getStackForm());
 
         registerMachineRecipe(GTBMetaTileEntities.ROTARY_EVAPORATOR,
                 "PRP", "CMC", "PRP",
