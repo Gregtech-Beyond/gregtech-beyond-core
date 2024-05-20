@@ -84,7 +84,7 @@ public class GTBSecondDegreeMaterials {
 
         LithiumChlorideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithium_chloride_solution"))
                 .fluid()
-                .color(0xCBBB94)
+                .color(0xc293e6)
                 .build().setFormula("LiCl(H2O)", true);
     }
 
