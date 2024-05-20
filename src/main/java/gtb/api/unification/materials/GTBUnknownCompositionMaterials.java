@@ -183,7 +183,7 @@ public class GTBUnknownCompositionMaterials {
                 .fluid()
                 .color(0xAFC896)
                 .build().setFormula("?", true);
-      
+
         BedrockContaminatedOil = new Material.Builder(getMaterialsId(), gregtechId("bedrock_contaminated_oil"))
                 .fluid()
                 .color(0x888D83)

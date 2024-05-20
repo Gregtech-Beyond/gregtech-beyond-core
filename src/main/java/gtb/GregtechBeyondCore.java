@@ -1,7 +1,7 @@
 package gtb;
 
-import gtb.common.block.blocks.GTBBlockWireCoil;
-import gtb.common.block.blocks.GTBBlockWireCoil2;
+import static gregtech.api.GregTechAPI.HEATING_COILS;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -12,10 +12,10 @@ import gtb.api.GTBInternalTags;
 import gtb.api.utils.GTBLog;
 import gtb.common.CommonProxy;
 import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBBlockWireCoil;
+import gtb.common.block.blocks.GTBBlockWireCoil2;
 import gtb.common.item.GTBMetaItems;
 import gtb.common.metatileentities.GTBMetaTileEntities;
-
-import static gregtech.api.GregTechAPI.HEATING_COILS;
 
 @Mod(modid = GregtechBeyondCore.MODID,
      name = GregtechBeyondCore.NAME,

@@ -8,8 +8,6 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
-import gtb.api.unification.materials.GTBMaterials;
-
 
 public class TungstenLine {
 

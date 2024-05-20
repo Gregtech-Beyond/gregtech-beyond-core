@@ -1,13 +1,9 @@
 package gtb.common.block.blocks;
 
-import gregtech.api.block.IHeatingCoilBlockStats;
-import gregtech.api.block.VariantActiveBlock;
-import gregtech.api.block.VariantItemBlock;
-import gregtech.api.items.toolitem.ToolClasses;
-import gregtech.api.unification.material.Material;
-import gregtech.client.utils.TooltipHelper;
-import gregtech.common.ConfigHolder;
-import gregtech.common.metatileentities.multi.electric.MetaTileEntityMultiSmelter;
+import static gtb.api.unification.materials.GTBMaterials.*;
+
+import java.util.List;
+
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
@@ -21,16 +17,21 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-
-import static gregtech.api.unification.material.Materials.HSSS;
-import static gregtech.api.unification.material.Materials.NaquadahAlloy;
-import static gtb.api.unification.materials.GTBMaterials.*;
+import gregtech.api.block.IHeatingCoilBlockStats;
+import gregtech.api.block.VariantActiveBlock;
+import gregtech.api.block.VariantItemBlock;
+import gregtech.api.items.toolitem.ToolClasses;
+import gregtech.api.unification.material.Material;
+import gregtech.client.utils.TooltipHelper;
+import gregtech.common.ConfigHolder;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityMultiSmelter;
 
 public class GTBBlockWireCoil2 extends VariantActiveBlock<GTBBlockWireCoil2.GTBCoilType> {
+
     public GTBBlockWireCoil2() {
         super(net.minecraft.block.material.Material.IRON);
         setTranslationKey("gtb_wire_coil_2");
@@ -93,8 +94,11 @@ public class GTBBlockWireCoil2 extends VariantActiveBlock<GTBBlockWireCoil2.GTBC
     }
 
     public enum GTBCoilType implements IStringSerializable, IHeatingCoilBlockStats {
-        TEMPORALLYCONSTRAINEDANTIMATTER("temporally_constrained_anti_matter", 16200, 512, 256, 9, TemporallyConstrainedAntiMatter),
-        CATACLYSMINDUCEDMIXEDMATTER("cataclysm_induced_mixed_matter", 17100, 1024, 4096, 9, CataclysmInducedMixedMatter);
+
+        TEMPORALLYCONSTRAINEDANTIMATTER("temporally_constrained_anti_matter", 16200, 512, 256, 9,
+                TemporallyConstrainedAntiMatter),
+        CATACLYSMINDUCEDMIXEDMATTER("cataclysm_induced_mixed_matter", 17100, 1024, 4096, 9,
+                CataclysmInducedMixedMatter);
 
         private final String name;
         private final int coilTemperature;
