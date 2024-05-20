@@ -149,6 +149,41 @@ public class GTBUnknownCompositionMaterials {
                 .color(0xAF877B)
                 .build();
 
+        IodizedOil = new Material.Builder(getMaterialsId(), gregtechId("iodized_oil"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("I?", true);
+
+        IodizedBrine = new Material.Builder(getMaterialsId(), gregtechId("iodized_brine"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("I?", true);
+
+        IodineSlurry = new Material.Builder(getMaterialsId(), gregtechId("iodine_slurry"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("I??", true);
+
+        BrominatedBrine = new Material.Builder(getMaterialsId(), gregtechId("brominated_brine"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("I??", true);
+
+        Brine = new Material.Builder(getMaterialsId(), gregtechId("brine"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("I??", true);
+
+        CrudeBromineSolution = new Material.Builder(getMaterialsId(), gregtechId("crude_bromine_solution"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("I??", true);
+
+        ConcentratedBrine = new Material.Builder(getMaterialsId(), gregtechId("concentrated_brine"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("?", true);
+      
         BedrockContaminatedOil = new Material.Builder(getMaterialsId(), gregtechId("bedrock_contaminated_oil"))
                 .fluid()
                 .color(0x888D83)

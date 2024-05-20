@@ -14,6 +14,7 @@ public final class GTBRecipeLoader {
         RecipeMaps.CHEMICAL_BATH_RECIPES.setSlotOverlay(false, true, false, GuiTextures.FLUID_TANK_OVERLAY);
         RecipeMaps.MIXER_RECIPES.setMaxFluidInputs(4);
         RecipeMaps.EXTRACTOR_RECIPES.setMaxInputs(2);
+        RecipeMaps.CHEMICAL_RECIPES.setMaxOutputs(3);
 
         AlcoholLine.init();
         Catalysts.init();
@@ -31,5 +32,6 @@ public final class GTBRecipeLoader {
         Metallurgy.init();
         Photolithography.init();
         DamascusSteelLine.init();
+        BrineLine.init();
     }
 }
