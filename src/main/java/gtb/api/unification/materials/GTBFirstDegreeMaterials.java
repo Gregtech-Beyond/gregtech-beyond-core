@@ -602,6 +602,21 @@ public class GTBFirstDegreeMaterials {
                 .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0xAFC896)
                 .build().setFormula("P(H2O)", true);
+
+        DampBromine = new Material.Builder(getMaterialsId(), gregtechId("damp_bromine"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("Br(H2O)", true);
+
+        SaltFreeBrine = new Material.Builder(getMaterialsId(), gregtechId("salt_free_brine"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("?", true);
+
+        BoronFreeSolution = new Material.Builder(getMaterialsId(), gregtechId("boron_free_solution"))
+                .fluid()
+                .color(0xAFC896)
+                .build().setFormula("?", true);
     }
 
     private static int getMaterialsId() {
