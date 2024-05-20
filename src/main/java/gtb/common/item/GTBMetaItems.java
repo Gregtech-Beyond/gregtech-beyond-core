@@ -160,8 +160,6 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem DOPED_ARAM_WAFER;
     public static MetaItem<?>.MetaValueItem UNBAKED_MONOCRYSTALLINE_SILICON_BOULE;
     public static MetaItem<?>.MetaValueItem PHOTOCOATED_HASSIUM_WAFER;
-    public static MetaItem<?>.MetaValueItem QBIT_CPU_WAFER;
-    public static MetaItem<?>.MetaValueItem QBIT_CPU;
     public static MetaItem<?>.MetaValueItem NOR_PHOTOLITHOGRAPHY_MASK;
     public static MetaItem<?>.MetaValueItem NAND_PHOTOLITHOGRAPHY_MASK;
     public static MetaItem<?>.MetaValueItem ARAM_WAFER;
@@ -177,6 +175,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem HOT_MODERATELY_FORGED_DAMASCUS_STEEL_ASSEMBLY;
     public static MetaItem<?>.MetaValueItem HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY;
     public static MetaItem<?>.MetaValueItem HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem LASER_ASSEMBLY;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);

@@ -7,8 +7,7 @@ import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
-
-import net.minecraft.init.Items;
+import static net.minecraft.init.Items.*;
 
 import gregtech.common.items.MetaItems;
 
@@ -201,7 +200,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         MACERATOR_RECIPES.recipeBuilder()
-                .input(Items.APPLE)
+                .input(APPLE)
                 .output(dust, Yeast)
                 .EUt(12)
                 .duration(80)
@@ -458,7 +457,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(MetaItems.GLASS_TUBE)
+                .input(GLASS_TUBE)
                 .input(stick, Steel)
                 .output(SYRINGE)
                 .duration(120)
@@ -475,7 +474,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
-                .input(Items.MUTTON)
+                .input(MUTTON)
                 .input(STERILIZED_SYRINGE)
                 .output(SHEEP_BLOOD_SYRINGE)
                 .duration(120)
@@ -507,7 +506,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
-                .notConsumable(MetaItems.SHAPE_MOLD_CYLINDER)
+                .notConsumable(SHAPE_MOLD_CYLINDER)
                 .output(dust, SolidifiedSterileDefibernatedSheepBlood, 1)
                 .notConsumable(EthyleneOxide.getFluid(200))
                 .fluidInputs(DefibernatedSheepBlood.getFluid(1000))

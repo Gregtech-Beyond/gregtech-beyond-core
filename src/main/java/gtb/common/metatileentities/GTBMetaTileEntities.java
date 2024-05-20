@@ -36,6 +36,10 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityElectrolyticCell ELECTROLYTIC_CELL;
     public static MetaTileEntityNeutronAccelerator NEUTRON_ACCELERATOR;
     public static MetaTileEntityEngravingUnit ENGRAVING_UNIT;
+    public static MetaTileEntityClarifier CLARIFIER;
+    public static MetaTileEntityFrothFlotationUnit FROTH_FLOTATION_UNIT;
+    public static MetaTileEntityDigester DIGESTER;
+    public static MetaTileEntityChemicalPlant CHEMICAL_PLANT;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -75,6 +79,14 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityNeutronAccelerator(gtb("neutron_accelerator")));
         ENGRAVING_UNIT = registerMetaTileEntity(3018,
                 new MetaTileEntityEngravingUnit(gtb("engraving_unit")));
+        CHEMICAL_PLANT = registerMetaTileEntity(3019,
+                new MetaTileEntityChemicalPlant(gtb("chemical_plant")));
+        CLARIFIER = registerMetaTileEntity(3020,
+                new MetaTileEntityClarifier(gtb("clarifier")));
+        FROTH_FLOTATION_UNIT = registerMetaTileEntity(3021,
+                new MetaTileEntityFrothFlotationUnit(gtb("froth_flotation_unit")));
+        DIGESTER = registerMetaTileEntity(3022,
+                new MetaTileEntityDigester(gtb("digester")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

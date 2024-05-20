@@ -9,6 +9,7 @@ tile.gtb_multiblock_casing.steel_bordered_wooden_casing.name=Steel Bordered Wood
 tile.gtb_multiblock_casing.quantum_casing.name=Quantum Casing
 tile.gtb_multiblock_casing.quantum_glass.name=Quantum Glass
 tile.gtb_multiblock_casing.biologically_sterile_casing.name=Biologically Sterile Casing
+tile.gtb_multiblock_casing.fullerene_polymer_tetrix_casing.name=Fullerene Polymer Tetrix Casing
 tile.gtb_explosive.naquadria_charge.name=Naquadria Charge
 
 
@@ -38,6 +39,11 @@ recipemap.textile_factory.name=Textile Factory
 recipemap.electrolytic_cell.name=Advanced Electrolysis
 recipemap.neutron_accelerator.name=Neutron Acceleration
 recipemap.microscope.name=Microscope
+recipemap.chemical_plant.name=Chemical Plant
+recipemap.clarifier.name=Clarification
+recipemap.froth_flotation_unit.name=Froth Flotation
+recipemap.digester.name=Digestion
+
 
 
 
@@ -133,14 +139,19 @@ gtb.machine.bio_reactor.name=Bio Reactor
 gtb.machine.textile_factory.name=Textile Factory
 gtb.machine.electrolytic_cell.name=Electrolytic Cell
 gtb.machine.neutron_accelerator.name=Neutron Accelerator
+gtb.machine.digester.name=Digester
+gtb.machine.froth_flotation_unit.name=Froth Flotation Unit
+gtb.machine.clarifier.name=Clarifier
+gtb.machine.chemical_plant.name=Chemical Plant
 
 # MetaItems
 
+metaitem.laser_assembly.name=Laser Assembly
 metaitem.engraved_hasoc_wafer.name=Engraved HaSoC Wafer
 metaitem.astro_miner.name=Astro Miner
 metaitem.moon.name=Moon
 metaitem.paraffin_wax.name=Paraffin Wax
-metaitem..name=
+metaitem.cupriavidus_bacteria_sample_petri_dish.name=Cupriavidus Bacteria Sample Petri Dish
 metaitem.damascus_steel_assembly.name=Damascus Steel Assembly
 metaitem.hot_damascus_steel_assembly.name=Hot Damascus Steel Assembly
 metaitem.lightly_forged_damascus_steel_assembly.name=Lightly Forged Damascus Steel Assembly
@@ -317,13 +328,54 @@ metaitem.cotton.name=Cotton
 
 
 
+
 #Materials
+
+gregtech.material.iso_octane=Iso Octane
+gregtech.material.tributylamine=Tributylamine
+gregtech.material.carbon_sulfide=Carbon Sulfide
+gregtech.material.alkylated_adamantanes=Alkylated Adamantanes
+gregtech.material.admantium_phosphorus_hydrogen_plasma=Adamantium Phosphorus Hydrogen
+gregtech.material.fluorodarmstadtic_acid=Fluorodarmstadtic Acid
+gregtech.material.triphenylphosphine=Triphenylphosphine
+gregtech.material.antimony_pentafluoride=Antimony Pentafluoride
+gregtech.material.darmstadtium_catalyst=Darmstadtium Catalyst
+gregtech.material.iodized_oil=Iodized Oil
+gregtech.material.adamantane=Adamantane
+gregtech.material.adamantane_lubricant=Adamantane Lurbicant
+gregtech.material.mithril_fluoride=Mithril Fluoride
+gregtech.material.molten_adamantium_dioxide=Molten Adamantium Dioxide
+gregtech.material.adamantane_rich_oil_solution=Adamantane Rich Oil Solution
+gregtech.material.liquid_ozone=Liquid Ozone
+gregtech.material.bedrock_contaminated_oil=Bedrock Contaminated Oil
+gregtech.material.trinium_solution=Trinium Solution
+gregtech.material.perfluorotributylamine=Perfluorotributylamine
+gregtech.material.purified_bedrock_slurry=Purified Bedrock Slurry
+gregtech.material.bedrock_slurry=Bedrock Slurry
+gregtech.material.gaseous_adamantane=Gaseous Adamantane
+gregtech.material.ozone=Ozone
+gregtech.material.grains_of_infinity=Grains Of Infinity
+gregtech.material.mithril=Mithril
+gregtech.material.excited_mithril=Excited Mithril
+gregtech.material.excited_roughen_mithril=Excited Roughen Mithril
+gregtech.material.roughen_mithril=Roughen Mithril
+gregtech.material.precipitate_mithril=Precipitate Mithril
+gregtech.material.naquadria_nitrate=Naquadria Nitrate
+gregtech.material.enriched_naquadah_nitrate=Enriched Naquadah Nitrate
+gregtech.material.adamantite=Adamantite
+gregtech.material.sodium_isobutyl_xanthate=Sodium Isobutyl Xanthate
+gregtech.material.adamantiun_pentoxide=Adamantium Pentoxide
+gregtech.material.enriched_naquadah_compound=Enriched Naquadah Compound
+gregtech.material.naquadriatic_compound=Naquadriatic Compound
+gregtech.material.wet_bedrock_dust=Wet Bedrock
+gregtech.material.oily_bedrock_dust=Oily Bedrock
+gregtech.material.fine_bedrock_dust=Fine Bedrock
+gregtech.material.adamantium=Adamantium
 gregtech.material.phosphorus_solution=Phosphorus Solution
 gregtech.material.tungstentrioxide=Tungsten Trioxide
 gregtech.material.calciumhydroxide=Calcium Hydroxide
 gregtech.material.lithiumhydroxide=Lithium Hydroxide
 gregtech.material.calciumtungstate=Calcium Tungstate
-gregtech.material.lithiumhydroxidesolution=Lithium Hydroxide Solution
 gregtech.material.lthiiumfluoride=Lithium Fluoride
 gregtech.material.oxylene=O-Xylene
 gregtech.material.pxylene=P-Xylene

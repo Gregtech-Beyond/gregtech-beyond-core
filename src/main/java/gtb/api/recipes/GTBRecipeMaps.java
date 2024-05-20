@@ -26,7 +26,7 @@ public final class GTBRecipeMaps {
             1, 1, 0, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BEDROCK_PUMP = new RecipeMap<>("bedrock_pump",
-            1, 0, 1, 0, new SimpleRecipeBuilder(), false);
+            1, 0, 0, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BLACK_HOLE_COMPRESSOR = new RecipeMap<>("black_hole_compressor",
             2, 1, 1, 1, new SimpleRecipeBuilder(), false);
@@ -52,7 +52,7 @@ public final class GTBRecipeMaps {
             2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> NEUTRON_ACCELERATOR = new RecipeMap<>("neutron_accelerator",
-            2, 1, 2, 1, new SimpleRecipeBuilder(), false);
+            2, 3, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> FISCHER_TROPSCH_REACTOR = new RecipeMap<>(
             "fischer_tropsch_reactor",
@@ -96,4 +96,16 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ENGRAVING_UNIT = new RecipeMap<>("engraving_unit",
             2, 4, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CHEMICAL_PLANT = new RecipeMap<>("chemical_plant",
+            6, 4, 5, 4, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CLARIFIER = new RecipeMap<>("clarifier",
+            1, 6, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FROTH_FLOTATION_UNIT = new RecipeMap<>("froth_flotation_unit",
+            4, 4, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DIGESTER = new RecipeMap<>("digester",
+            4, 4, 4, 2, new SimpleRecipeBuilder(), false);
 }
