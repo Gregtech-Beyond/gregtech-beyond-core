@@ -62,6 +62,10 @@ public class GTBSecondDegreeMaterials {
                 .fluid()
                 .color(0xE8D6D1)
                 .build().setFormula("(H)6(CO)", true);
+
+        Pikyonium = new Material.Builder(getMaterialsId(), gregtechId("pikyonium"))
+                .ingot()
+                .build().setFormula("(Ni2NbAl2(Ni4Cr))8((Fe4(FeAlCr)(Fe2Ni05)10SSiC)5?4Ce3Sb2Pt2Yb(FeW)4", true);
     }
 
     private static int getMaterialsId() {

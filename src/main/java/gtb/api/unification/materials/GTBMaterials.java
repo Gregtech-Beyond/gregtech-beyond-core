@@ -118,7 +118,6 @@ public class GTBMaterials {
     public static Material AntimonyPentafluoride;
     public static Material Ozone;
     public static Material DarmstadtiumCatalyst;
-    public static Material Adamantium;
     public static Material BioPlastic;
     public static Material Photopolymer;
     public static Material AluminiumChloride;
@@ -295,11 +294,21 @@ public class GTBMaterials {
     public static Material SlackWax;
     public static Material AlkylatedNaturalGas;
     public static Material Syngas;
-    // Organic Chemistry Materials
 
+    // Organic Chemistry Materials
     public static Material FormicAcid;
     public static Material SodiumFormate;
     public static Material Tripropylamine;
+
+    //Fantasy Materials
+    public static Material AwakenedDraconium;
+    public static Material Adamantium;
+    public static Material Pikyonium;
+    public static Material CosmicNeutronium;
+    public static Material Infinity;
+    public static Material Eternal;
+    public static Material TemporallyConstrainedAntiMatter;
+    public static Material CataclysmInducedMixedMatter;
 
     public static void init() {
         GTBMaterialPropertyAddition.init();
@@ -311,6 +320,7 @@ public class GTBMaterials {
         GTBOrganicChemistryMaterials.register();
         GTBUnknownCompositionMaterials.register();
         GTBBiologicalMaterials.register();
+        GTBFantasyMaterials.register();
         GTBMaterialSetFormula.init();
         GTBMaterialIconSet.set();
     }
