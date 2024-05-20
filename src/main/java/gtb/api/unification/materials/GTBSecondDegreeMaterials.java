@@ -63,6 +63,11 @@ public class GTBSecondDegreeMaterials {
                 .color(0xE8D6D1)
                 .build().setFormula("(H)6(CO)", true);
 
+<<<<<<< main
+        Pikyonium = new Material.Builder(getMaterialsId(), gregtechId("pikyonium"))
+                .ingot()
+                .build().setFormula("(Ni2NbAl2(Ni4Cr))8((Fe4(FeAlCr)(Fe2Ni05)10SSiC)5?4Ce3Sb2Pt2Yb(FeW)4", true);
+=======
         PotassiumMagnesiumSalts = new Material.Builder(getMaterialsId(), gregtechId("potassium_magnesium_salts"))
                 .fluid()
                 .color(0xD7D6D6)
@@ -82,6 +87,7 @@ public class GTBSecondDegreeMaterials {
                 .fluid()
                 .color(0xCBBB94)
                 .build().setFormula("LiCl(H2O)", true);
+>>>>>>> main
     }
 
     private static int getMaterialsId() {

@@ -3,6 +3,7 @@ package gtb.common;
 import java.util.Objects;
 import java.util.function.Function;
 
+import gtb.common.block.blocks.GTBBlockWireCoil;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -47,6 +48,8 @@ public class CommonProxy {
         registry.register(GTBMetaBlocks.GTB_MULTIBLOCK_CASING);
         registry.register(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING);
         registry.register(GTBMetaBlocks.GTB_EXPLOSIVE);
+        registry.register(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL);
+        registry.register(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL_2);
     }
 
     @SubscribeEvent
@@ -57,6 +60,8 @@ public class CommonProxy {
         registry.register(createItemBlock(GTBMetaBlocks.GTB_EXPLOSIVE, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL_2, VariantItemBlock::new));
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)

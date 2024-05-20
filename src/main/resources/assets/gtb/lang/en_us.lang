@@ -11,6 +11,17 @@ tile.gtb_multiblock_casing.quantum_glass.name=Quantum Glass
 tile.gtb_multiblock_casing.biologically_sterile_casing.name=Biologically Sterile Casing
 tile.gtb_multiblock_casing.fullerene_polymer_tetrix_casing.name=Fullerene Polymer Tetrix Casing
 tile.gtb_explosive.naquadria_charge.name=Naquadria Charge
+tile.gtb_wire_coil.hss_s.name=HSS-S Coil Block
+tile.gtb_wire_coil.naquadah_alloy.name=Naquadah Alloy Coil Block
+tile.gtb_wire_coil.awakened_draconium.name=Awakened Draconium Coil Block
+tile.gtb_wire_coil.adamantium.name=Adamantium Coil Block
+tile.gtb_wire_coil.pikyonium.name=Pikyonium Coil Block
+tile.gtb_wire_coil.comsic_neutronium.name=Cosmic Neutronium Coil Block
+tile.gtb_wire_coil.infinity.name=Infinity Coil Block
+tile.gtb_wire_coil.eternal.name=Eternal Coil Block
+tile.gtb_wire_coil_2.temporally_constrained_anti_matter.name=Temporally Constrained Anti-Matter Coil Block
+tile.gtb_wire_coil_2.cataclysm_induced_mixed_matter.name=Cataclysm Induced Mixed-Matter Coil Block
+
 
 
 # Recipemaps
@@ -504,6 +515,14 @@ gregtech.material.doped_nanotube_deposition_mix=Doped Nanotube Deposition Mix
 gregtech.material.nanotube_deposition_mix=Nanotube Deposition Mix
 gregtech.material.doped_nanotube_deposition_mixture=Doped Nanotube Deposition Mixture
 gregtech.material.carbon_nanotubes=Carbon Nanotubes
+gregtech.material.awakened_draconium=Awakened Draconium
+gregtech.material.adamantium=Adamantium
+gregtech.material.pikyonium=Pikyonium
+gregtech.material.comsic_neutronium=Cosmic Neutronium
+gregtech.material.infinity=Infinity
+gregtech.material.eternal=Eternal
+gregtech.material.temporally_constrained_anti_matter=Temporally Constrained Anti-Matter
+gregtech.material.cataclysm_induced_mixed_matter=Cataclysm Induced Mixed-Matter
 gregtech.material.sodium_hydride=Sodium Hydride
 gregtech.material.sodium_borohydride=Sodium Borohydride
 gregtech.material.sodium_ethoxide=Sodium Ethoxide
