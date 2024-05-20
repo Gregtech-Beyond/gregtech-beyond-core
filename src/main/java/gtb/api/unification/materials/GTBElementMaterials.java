@@ -1,5 +1,7 @@
 package gtb.api.unification.materials;
 
+import static gtb.api.unification.materials.GTBMaterials.*;
+
 public class GTBElementMaterials {
 
     private static int startId = 26001;

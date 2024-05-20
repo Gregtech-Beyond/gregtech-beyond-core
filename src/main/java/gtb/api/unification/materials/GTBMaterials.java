@@ -1,7 +1,6 @@
 package gtb.api.unification.materials;
 
 import gregtech.api.unification.material.Material;
-import gtb.api.unification.materials.info.GTBMaterialIconSet;
 
 import gtb.api.unification.materials.info.GTBMaterialFlags;
 import gtb.api.unification.materials.info.GTBMaterialIconSet;
@@ -105,7 +104,6 @@ public class GTBMaterials {
     public static Material Xerizin;
 
     // Element Materials
-
     // FD Materials
 
     public static Material BioPlastic;
@@ -219,8 +217,14 @@ public class GTBMaterials {
     public static Material NaquadriaticTaranium;
     public static Material ChromaticGlass;
     public static Material SuperFluidHelium;
+    public static Material SaltFreeBrine;
+    public static Material LithiumChlorideSolution;
+    public static Material BoronFreeSolution;
 
     // SD Materials
+    public static Material CalciumSalts;
+    public static Material SodiumSalts;
+    public static Material PotassiumMagnesiumSalts;
     public static Material PalladiumEnrichedAmmonia;
     public static Material AcidicIridiumDioxide;
     public static Material ReprecipitatedPalladium;
@@ -231,6 +235,14 @@ public class GTBMaterials {
     public static Material UEVSuperconductor;
 
     // Unknown Materials
+    public static Material ConcentratedBrine;
+    public static Material DampBromine;
+    public static Material IodineSlurry;
+    public static Material CrudeBromineSolution;
+    public static Material Brine;
+    public static Material BrominatedBrine;
+    public static Material IodizedBrine;
+    public static Material IodizedOil;
     public static Material HydroCrackedKerosene;
     public static Material SteamCrackedKerosene;
     public static Material PlatinumExtractionMixture;

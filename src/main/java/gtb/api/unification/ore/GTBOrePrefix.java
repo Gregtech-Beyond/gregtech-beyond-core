@@ -6,7 +6,8 @@ import gregtech.api.unification.ore.OrePrefix;
 
 import gtb.api.unification.materials.info.GTBMaterialIconType;
 
+
 public class GTBOrePrefix {
 
-
+    
 }
