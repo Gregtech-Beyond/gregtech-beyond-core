@@ -106,6 +106,18 @@ public class GTBMaterials {
     // Element Materials
     // FD Materials
 
+    public static Material CarbonSulfide;
+    public static Material Tributylamine;
+    public static Material IsoOctane;
+    public static Material AlkylatedAdamantanes;
+    public static Material EnrichedNaquadahCompound;
+    public static Material NaquadriaticCompound;
+    public static Material Triphenylphosphine;
+    public static Material FluorodarmstadticAcid;
+    public static Material AntimonyPentafluoride;
+    public static Material Ozone;
+    public static Material DarmstadtiumCatalyst;
+    public static Material Adamantium;
     public static Material BioPlastic;
     public static Material Photopolymer;
     public static Material AluminiumChloride;
@@ -242,6 +254,33 @@ public class GTBMaterials {
     public static Material Brine;
     public static Material BrominatedBrine;
     public static Material IodizedBrine;
+    public static Material GrainsOfInfinity;
+    public static Material WetBedrockDust;
+    public static Material OilyBedrockDust;
+    public static Material BedrockContaminatedOil;
+    public static Material SodiumIsobutylXanthate;
+    public static Material FineBedrockDust;
+    public static Material Adamantite;
+    public static Material EnrichedNaquadahNitrate;
+    public static Material NaquadriaNitrate;
+    public static Material PrecipitateMithril;
+    public static Material RoughenMithril;
+    public static Material ExcitedRoughenMithril;
+    public static Material ExcitedMithril;
+    public static Material Mithril;
+    public static Material Perfluorotributylamine;
+    public static Material BedrockSlurry;
+    public static Material PurifiedBedrockSlurry;
+    public static Material AdamantaneRichOilSolution;
+    public static Material LiquidOzone;
+    public static Material TriniumSolution;
+    public static Material AdamantiumPentoxide;
+    public static Material AdamantiumPhosphorusHydrogenPlasma;
+    public static Material GaseousAdamantane;
+    public static Material MoltenAdamantiumDioxide;
+    public static Material MithrilFluoride;
+    public static Material AdamantaneLubricant;
+    public static Material Adamantane;
     public static Material IodizedOil;
     public static Material HydroCrackedKerosene;
     public static Material SteamCrackedKerosene;

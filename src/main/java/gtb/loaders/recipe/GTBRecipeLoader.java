@@ -28,6 +28,7 @@ public final class GTBRecipeLoader {
         MaterialBenefication.init();
         RandomRecipes.init();
         BiologyLines.init();
+        AdamantiumLine.init();
         Metallurgy.init();
         Photolithography.init();
         DamascusSteelLine.init();

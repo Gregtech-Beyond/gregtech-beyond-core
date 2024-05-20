@@ -617,6 +617,78 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0xAFC896)
                 .build().setFormula("?", true);
+
+        Ozone = new Material.Builder(getMaterialsId(), gregtechId("ozone"))
+                .fluid()
+                .color(0x2182BC)
+                .build().setFormula("O3", true);
+
+        DarmstadtiumCatalyst = new Material.Builder(getMaterialsId(), gregtechId("darmstadtium_catalyst"))
+                .dust()
+                .color(0x333537)
+                .build().setFormula("O3", true);
+
+        Adamantium = new Material.Builder(getMaterialsId(), gregtechId("adamantium"))
+                .fluid()
+                .dust()
+                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME)
+                .color(0x333537)
+                .build().setFormula("Ad", true);
+
+        FluorodarmstadticAcid = new Material.Builder(getMaterialsId(), gregtechId("fluorodarmstadtic_acid"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("Ad", true);
+
+        AntimonyPentafluoride = new Material.Builder(getMaterialsId(), gregtechId("antimony_pentafluoride"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("SbF5", true);
+
+        Triphenylphosphine = new Material.Builder(getMaterialsId(), gregtechId("triphenylphosphine"))
+                .fluid()
+                .color(0x333537)
+                .build().setFormula("(C6H5)3P", true);
+
+        NaquadriaticCompound = new Material.Builder(getMaterialsId(), gregtechId("naquadriatic_compound"))
+                .dust()
+                .color(0x333537)
+                .build().setFormula("*Nq*?", true);
+
+        EnrichedNaquadahCompound = new Material.Builder(getMaterialsId(), gregtechId("enriched_naquadah_compound"))
+                .dust()
+                .color(0x333537)
+                .build().setFormula("Nq+?", true);
+
+        SodiumIsobutylXanthate = new Material.Builder(getMaterialsId(), gregtechId("sodium_isobutyl_xanthate"))
+                .dust()
+                .color(0xA7933D)
+                .build().setFormula("C5H9NaOS2", true);
+
+        AlkylatedAdamantanes = new Material.Builder(getMaterialsId(), gregtechId("alkylated_adamantanes"))
+                .fluid()
+                .color(0x3949AB)
+                .build().setFormula("C10H16(?)", true);
+
+        Adamantane = new Material.Builder(getMaterialsId(), gregtechId("adamantane"))
+                .fluid()
+                .color(0x0288D1)
+                .build().setFormula("C10H16", true);
+
+        IsoOctane = new Material.Builder(getMaterialsId(), gregtechId("iso_octane"))
+                .fluid()
+                .color(0x33691E)
+                .build().setFormula("C8H18", true);
+
+        Tributylamine = new Material.Builder(getMaterialsId(), gregtechId("tributylamine"))
+                .fluid()
+                .color(0xAD1457)
+                .build().setFormula("C12H27N", true);
+
+        CarbonSulfide = new Material.Builder(getMaterialsId(), gregtechId("carbon_sulfide"))
+                .fluid()
+                .color(0xF9A825)
+                .build().setFormula("CS2", true);
     }
 
     private static int getMaterialsId() {
