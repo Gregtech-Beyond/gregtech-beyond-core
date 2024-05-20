@@ -23,5 +23,14 @@ public class OrganicChemistry {
                 .duration(200)
                 .EUt(120)
                 .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .notConsumable(dust, Zeolite)
+                .fluidInputs(Ammonia.getFluid(1000))
+                .fluidInputs(NButanol.getFluid(1000))
+                .fluidOutputs(Tributylamine.getFluid(1000))
+                .duration(120)
+                .EUt(600)
+                .buildAndRegister();
     }
 }

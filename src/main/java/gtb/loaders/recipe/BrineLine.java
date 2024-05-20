@@ -124,5 +124,20 @@ public class BrineLine {
                 .duration(120)
                 .EUt(800)
                 .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Water.getFluid(1000))
+                .fluidInputs(SodiumSulfide.getFluid(1000))
+                .fluidOutputs(SodiumSulfideSolution.getFluid(2000))
+                .duration(120)
+                .EUt(800)
+                .buildAndRegister();
+
+        DEHYDRATOR.recipeBuilder()
+                .fluidInputs(SodiumSulfideSolution.getFluid(1000))
+                .output(dust, SodiumSulfide)
+                .duration(102)
+                .EUt(800)
+                .buildAndRegister();
     }
 }

@@ -689,6 +689,17 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0xF9A825)
                 .build().setFormula("CS2", true);
+
+        Grisium = new Material.Builder(getMaterialsId(), gregtechId("grisium"))
+                .fluid()
+                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
+                .color(0xF9A825)
+                .build().setFormula("Ti9C9K9Li9S9H5", true);
+
+        SodiumSulfideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
+                .fluid()
+                .color(0xF9A825)
+                .build().setFormula("Na2S(H2O)", true);
     }
 
     private static int getMaterialsId() {
