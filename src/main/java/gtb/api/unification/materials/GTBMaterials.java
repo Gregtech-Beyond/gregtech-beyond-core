@@ -105,10 +105,13 @@ public class GTBMaterials {
 
     // Element Materials
 
-
     // FD Materials
-
-
+    public static Material PolybenzimidazoleWaste;
+    public static Material PolybenzimidazoleSolution;
+    public static Material ImpurePolybenzimidazoleSolution;
+    public static Material PolybenzimidazolePrePolymerFoam;
+    public static Material DisproportionatedChloroSilane;
+    public static Material ChloroSilane;
     public static Material PhenyleneSulfidePrePolymerMixture;
     public static Material SodiumSulfideDichloroBenzeneMixture;
     public static Material SodiumSulfideSolution;

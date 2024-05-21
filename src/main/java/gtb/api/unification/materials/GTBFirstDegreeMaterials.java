@@ -690,30 +690,64 @@ public class GTBFirstDegreeMaterials {
                 .color(0xF9A825)
                 .build().setFormula("CS2", true);
 
-        KaminskyCatalyst  = new Material.Builder(getMaterialsId(), gregtechId("kaminsky_catalyst"))
+        KaminskyCatalyst = new Material.Builder(getMaterialsId(), gregtechId("kaminsky_catalyst"))
                 .dust()
                 .color(0xF9A825)
                 .build().setFormula("(Zr(C5H5)2Cl2(AlCH3O)", true);
 
-        PhilipsCatalyst  = new Material.Builder(getMaterialsId(), gregtechId("philips_catalyst"))
+        PhilipsCatalyst = new Material.Builder(getMaterialsId(), gregtechId("philips_catalyst"))
                 .dust()
                 .color(0xF9A825)
                 .build().setFormula("(SiO2)(CrO3)", true);
 
-        ZieglerNattaCatalyst  = new Material.Builder(getMaterialsId(), gregtechId("ziegler_natta_catalyst"))
+        ZieglerNattaCatalyst = new Material.Builder(getMaterialsId(), gregtechId("ziegler_natta_catalyst"))
                 .dust()
                 .color(0xF9A825)
                 .build().setFormula("Al2(C2H5)6)(TiCl4)", true);
 
-        SodiumSulfideSolution  = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
+        SodiumSulfideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
                 .fluid()
                 .color(0xF9A825)
                 .build().setFormula("NaS2(H2O)", true);
 
-        SodiumSulfideDichloroBenzeneMixture  = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
+        SodiumSulfideDichloroBenzeneMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("sodium_sulfide_solution"))
+                        .fluid()
+                        .color(0xF9A825)
+                        .build().setFormula("(C6H4Cl2)(NaS2(H2O))", true);
+
+        ChloroSilane = new Material.Builder(getMaterialsId(), gregtechId("chloro_silane"))
                 .fluid()
                 .color(0xF9A825)
-                .build().setFormula("(C6H4Cl2)(NaS2(H2O))", true);
+                .build().setFormula("HClSi", true);
+
+        DisproportionatedChloroSilane = new Material.Builder(getMaterialsId(),
+                gregtechId("disproportionated_chloro_silane"))
+                        .fluid()
+                        .color(0xF9A825)
+                        .build().setFormula("HClSi", true);
+
+        PolybenzimidazolePrePolymerFoam = new Material.Builder(getMaterialsId(),
+                gregtechId("polybenzimidazole_pre_polymer_foam"))
+                        .dust()
+                        .color(0xF9A825)
+                        .build().setFormula("?", true);
+
+        ImpurePolybenzimidazoleSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("impure_polybenzimidazole_solution"))
+                        .fluid()
+                        .color(0xF9A825)
+                        .build().setFormula("?", true);
+
+        PolybenzimidazoleSolution = new Material.Builder(getMaterialsId(), gregtechId("polybenzimidazole_solution"))
+                .fluid()
+                .color(0xF9A825)
+                .build().setFormula("?", true);
+
+        PolybenzimidazoleWaste = new Material.Builder(getMaterialsId(), gregtechId("polybenzimidazole_waste"))
+                .fluid()
+                .color(0xF9A825)
+                .build().setFormula("?", true);
     }
 
     private static int getMaterialsId() {
