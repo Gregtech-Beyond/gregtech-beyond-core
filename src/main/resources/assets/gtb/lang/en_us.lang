@@ -332,8 +332,13 @@ metaitem.barley.name=Barley
 metaitem.syringe.name=Syringe
 metaitem.sterilized_syringe.name=Sterilized Syringe
 metaitem.sheep_blood_syringe.name=Sheep Blood Syringe
+metaitem.lithium_sieve.name=Lithium Sieve
+metaitem.lithium_saturated_sieve_lithium.name=Lithium Saturated Litium Sieve
+metaitem.boron_saturated_yarn.name=Boron Saturated Yarn
+metaitem.boron_retaining_yarn.name=Boron Retaining Yarn
+metaitem.coolant_cell.name=Coolant Cell
+metaitem.nak_coolant_cell.name=NaK Coolant Cell
 metaitem.cotton.name=Cotton
-
 
 
 
@@ -342,6 +347,43 @@ metaitem.cotton.name=Cotton
 
 #Materials
 
+gregtech.material.iodine_slurry=Iodine Slurry
+gregtech.material.boron_free_solution=Boron Free Solution
+gregtech.material.brominated_brine=Brominated Brine
+gregtech.material.iodized_brine=Iodized Brine
+gregtech.material.lithium_chloride_solution=Lithium Chloride Solution
+gregtech.material.calcium_salts=Calcium Salts
+gregtech.material.disproportionated_chloro_silane=Disproportionated Chlorosilane
+gregtech.material.impure_polybenzimidazole_solution=Impure Polybenzimidazole Solution
+gregtech.material.polybenzimidazole_solution=Polybenzimidazole Solution
+gregtech.material.polybenzimidazole_waste=Polybenzimidazole Waste
+gregtech.material.phenylene_sulfide_pre_polymer_mixture=Phenylene Sulfide Pre-Polymer Mixture
+gregtech.material.butanal=Butanal
+gregtech.material.chloro_silane=Chlorosilane
+gregtech.material.sodium_salts=Sodium Salts
+gregtech.material.damp_bromine=Damp Bromine
+gregtech.material.triaryl_phosphine=Triaryl Phosphine
+gregtech.material.brine=Brine
+gregtech.material.diethyl_ether=Diethyl Ether
+gregtech.material.ether=Ether
+gregtech.material.salt_free_brine=Salts-Free Brine
+gregtech.material.boron_free_brine=Boron-Free Brine
+gregtech.material.arylmagnesium_halides=Arylmagnesium Halides
+gregtech.material.concentrated_brine=Concentrated Brine
+gregtech.material.triaryl_phosphine_solution=Triaryl Phosphine Solution
+gregtech.material.sodium_sulfide_solution=Sodium Sulfide Solution
+gregtech.material.sodium_sulfide_solution_dichloro_benzene_mixture=Sodium Sulfide Solution Dichlorobenzene Mixture
+gregtech.material.potassium_magnesium_salts=Potassium Magnesium Salts
+gregtech.material.cosmic_neutronium=Cosmic Neutronium
+gregtech.material.crude_bromine_solution=Crude Bromine Solution
+gregtech.material.kaminsky_catalyst=Kaminsky Catalyst
+gregtech.material.philips_catalyst=Philips Catalyst
+gregtech.material.ziegler_natta_catalyst=Ziegler Natta Catalyst
+gregtech.material.pre_polymerized_caprolactam=Pre-Polymerized Caprolactam
+gregtech.material.phosphorus_trichloride=Phosphorus Trichloride
+gregtech.material.polybenzimidazole_pre_polymer_foam=Polybenzimidazole Pre-Polymer Foam
+
+gregtech.material.benzyl_bromide=α-Bromtoluol
 gregtech.material.iso_octane=Iso Octane
 gregtech.material.tributylamine=Tributylamine
 gregtech.material.carbon_sulfide=Carbon Sulfide
