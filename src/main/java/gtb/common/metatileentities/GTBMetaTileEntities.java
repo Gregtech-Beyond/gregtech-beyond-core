@@ -5,8 +5,8 @@ import static gtb.api.utils.GTBUtil.gtb;
 
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.util.GTUtility;
-
 import gregtech.client.renderer.texture.Textures;
+
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
@@ -119,7 +119,7 @@ public final class GTBMetaTileEntities {
 
         registerSimpleMetaTileEntity(ROASTER, 4130, "roaster", GTBRecipeMaps.ROASTER,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
-        KEV_OUTPUT_HATCH = registerMetaTileEntity(4035, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), false));
-        KEV_INPUT_HATCH = registerMetaTileEntity(4036, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), true));
+        KEV_OUTPUT_HATCH = registerMetaTileEntity(4145, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), false));
+        KEV_INPUT_HATCH = registerMetaTileEntity(4146, new MetaTileEntityKevHatch(gtb("kev_input_hatch"), true));
     }
 }
