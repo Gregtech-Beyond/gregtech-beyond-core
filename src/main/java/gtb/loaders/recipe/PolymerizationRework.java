@@ -217,8 +217,48 @@ public class PolymerizationRework {
                 .fluidInputs(Oxygen.getFluid(1000)).fluidOutputs(Polytetrafluoroethylene.getFluid(144)).duration(120)
                 .EUt(670).buildAndRegister();
         POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Tetrafluoroethylene.getFluid(144))
-                .fluidInputs(Air.getFluid(1000)).fluidOutputs(Polytetrafluoroethylene.getFluid(144)).duration(120).EUt(670)
+                .fluidInputs(Air.getFluid(1000)).fluidOutputs(Polytetrafluoroethylene.getFluid(144)).duration(120)
+                .EUt(670)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(dust, Caprolactam) },
+                new FluidStack[] { Nitrogen.getFluid(1000) });
+
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, Caprolactam)
+                .fluidInputs(Nitrogen.getFluid(1000))
+                .output(dust, NitrogenizedCaprolactam)
+                .duration(900)
+                .EUt(780)
+                .buildAndRegister();
+
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, NitrogenizedCaprolactam)
+                .notConsumable(Butanal.getFluid(1000))
+                .output(dust, PrePolymerizedCaprolactam)
+                .blastFurnaceTemp(1500)
+                .EUt(800)
+                .duration(120)
+                .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+                .notConsumable(dust, KaminskyCatalyst).output(dust, Polycaprolactam).duration(120)
+                .EUt(670).buildAndRegister();
+        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+                .notConsumable(dust, PhilipsCatalyst).output(dust, Polycaprolactam).duration(120)
+                .EUt(670).buildAndRegister();
+        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+                .notConsumable(dust, ZieglerNattaCatalyst).output(dust, Polycaprolactam)
+                .duration(120).EUt(670).buildAndRegister();
+        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+                .fluidInputs(Oxygen.getFluid(1000)).output(dust, Polycaprolactam).duration(120)
+                .EUt(670).buildAndRegister();
+        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+                .fluidInputs(Air.getFluid(1000)).output(dust, Polycaprolactam).duration(120)
+                .EUt(670)
+                .buildAndRegister();
+
 
     }
 }
