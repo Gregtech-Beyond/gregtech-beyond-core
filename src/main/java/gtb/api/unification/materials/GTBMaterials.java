@@ -106,6 +106,10 @@ public class GTBMaterials {
     // Element Materials
     // FD Materials
 
+
+    public static Material PhilipsCatalyst;
+    public static Material KaminskyCatalyst;
+    public static Material ZieglerNattaCatalyst;
     public static Material CarbonSulfide;
     public static Material Tributylamine;
     public static Material IsoOctane;

@@ -689,6 +689,21 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0xF9A825)
                 .build().setFormula("CS2", true);
+
+        KaminskyCatalyst  = new Material.Builder(getMaterialsId(), gregtechId("kaminsky_catalyst"))
+                .dust()
+                .color(0xF9A825)
+                .build().setFormula("(Zr(C5H5)2Cl2(AlCH3O)", true);
+
+        PhilipsCatalyst  = new Material.Builder(getMaterialsId(), gregtechId("philips_catalyst"))
+                .dust()
+                .color(0xF9A825)
+                .build().setFormula("(SiO2)(CrO3)", true);
+
+        ZieglerNattaCatalyst  = new Material.Builder(getMaterialsId(), gregtechId("ziegler_natta_catalyst"))
+                .dust()
+                .color(0xF9A825)
+                .build().setFormula("Al2(C2H5)6)(TiCl4)", true);
     }
 
     private static int getMaterialsId() {

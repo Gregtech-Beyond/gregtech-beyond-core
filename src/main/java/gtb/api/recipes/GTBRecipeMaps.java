@@ -5,6 +5,7 @@ import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import net.minecraftforge.common.animation.TimeValues;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
@@ -108,4 +109,8 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> DIGESTER = new RecipeMap<>("digester",
             4, 4, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> POLYMERIZATION_TANK = new RecipeMap<>("polymerization_tank",
+            2, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
 }
