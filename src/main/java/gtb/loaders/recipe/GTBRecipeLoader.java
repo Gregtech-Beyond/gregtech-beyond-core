@@ -33,5 +33,6 @@ public final class GTBRecipeLoader {
         Photolithography.init();
         DamascusSteelLine.init();
         BrineLine.init();
+        PolymerizationRework.init();
     }
 }
