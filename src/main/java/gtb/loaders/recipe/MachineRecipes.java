@@ -135,9 +135,9 @@ public class MachineRecipes {
                 'K', CABLE);
 
         registerMachineRecipe(GTBMetaTileEntities.ROTARY_EVAPORATOR,
-                "PRP",
-                "CMC",
-                "PRP",
+                "PCP",
+                "RMR",
+                "PCP",
                 'C', CIRCUIT,
                 'M', HULL,
                 'R', ROTOR,
