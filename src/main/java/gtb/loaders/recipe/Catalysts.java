@@ -3,7 +3,9 @@ package gtb.loaders.recipe;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.items.MetaItems.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.common.item.GTBMetaItems.*;
 
 public class Catalysts {
 
@@ -82,6 +84,21 @@ public class Catalysts {
                 .duration(1200)
                 .blastFurnaceTemp(1290)
                 .EUt(660)
+                .buildAndRegister();
+
+        CANNER_RECIPES.recipeBuilder()
+                .fluidInputs(SodiumPotassium.getFluid(1000))
+                .input(COOLANT_CELL)
+                .output(NAK_COOLANT_CELL)
+                .duration(120)
+                .EUt(800)
+                .buildAndRegister();
+
+        BENDER_RECIPES.recipeBuilder()
+                .input(FLUID_CELL)
+                .output(COOLANT_CELL)
+                .duration(120)
+                .EUt(300)
                 .buildAndRegister();
     }
 }

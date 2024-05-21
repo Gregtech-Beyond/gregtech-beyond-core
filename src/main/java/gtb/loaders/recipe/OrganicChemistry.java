@@ -48,5 +48,71 @@ public class OrganicChemistry {
                 .duration(120)
                 .EUt(70)
                 .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Toluene.getFluid(1000))
+                .fluidInputs(Bromine.getFluid(1000))
+                .fluidOutputs(Benzylbromide.getFluid(1000))
+                .duration(120)
+                .EUt(800)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Magnesium, 2)
+                .fluidInputs(Benzylbromide.getFluid(1000))
+                .notConsumable(Nitrogen.getFluid(1000))
+                .notConsumable(dust, Iodine)
+                .fluidInputs(DiethylEther.getFluid(1000))
+                .fluidOutputs(ArylmagnesiumHalides.getFluid(2000))
+                .duration(1287)
+                .EUt(700)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(ArylmagnesiumHalides.getFluid(1000))
+                .input(dust, PhosphorusTrichloride, 2)
+                .input(dust, SodiumHydroxide, 3)
+                .fluidInputs(DiethylEther.getFluid(1000))
+                .fluidOutputs(TriarylPhosphineSolution.getFluid(4000))
+                .duration(1200)
+                .EUt(80)
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(TriarylPhosphineSolution.getFluid(4000))
+                .fluidOutputs(DiethylEther.getFluid(1000))
+                .fluidOutputs(HydrochloricAcid.getFluid(1000))
+                .output(dust, Sodium)
+                .fluidOutputs(TriarylPhosphine.getFluid(1000))
+                .duration(100)
+                .EUt(800)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .notConsumable(TriarylPhosphine.getFluid(1000))
+                .fluidInputs(Propene.getFluid(1000))
+                .fluidOutputs(Butanal.getFluid(1000))
+                .input(dust, Rhodium)
+                .duration(890)
+                .EUt(700)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Ethanol.getFluid(1000))
+                .fluidInputs(SulfuricAcid.getFluid(1000))
+                .fluidOutputs(DiethylEther.getFluid(1000))
+                .circuitMeta(2)
+                .duration(200)
+                .EUt(480)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Ethanol.getFluid(1000))
+                .fluidInputs(SulfuricAcid.getFluid(1000))
+                .fluidOutputs(Ether.getFluid(1000))
+                .circuitMeta(1)
+                .duration(200)
+                .EUt(480)
+                .buildAndRegister();
     }
 }
