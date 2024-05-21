@@ -106,6 +106,17 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+
+    public static Material Ether;
+    public static Material PrePolymerizedCaprolactam;
+    public static Material TriarylPhosphineSolution;
+    public static Material PhosphorusTrichloride;
+    public static Material ArylmagnesiumHalides;
+    public static Material DiethylEther;
+    public static Material TriarylPhosphine;
+    public static Material Butanal;
+    public static Material Benzylbromide;
+    public static Material NitrogenizedCaprolactam;
     public static Material PolybenzimidazoleWaste;
     public static Material PolybenzimidazoleSolution;
     public static Material ImpurePolybenzimidazoleSolution;

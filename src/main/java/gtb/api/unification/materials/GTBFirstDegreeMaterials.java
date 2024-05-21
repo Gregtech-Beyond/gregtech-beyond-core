@@ -754,6 +754,56 @@ public class GTBFirstDegreeMaterials {
                         .fluid()
                         .color(0x565453)
                         .build().setFormula("?", true);
+
+        NitrogenizedCaprolactam = new Material.Builder(getMaterialsId(), gregtechId("nitrogenized_caprolactam"))
+                .dust()
+                .color(0x71777D)
+                .build().setFormula("(CH2)5C(O)NH", true);
+
+        Benzylbromide = new Material.Builder(getMaterialsId(), gregtechId("benzyl_bromide"))
+                .fluid()
+                .color(0x4A4B4C)
+                .build().setFormula("C8H8Br", true);
+
+        Butanal = new Material.Builder(getMaterialsId(), gregtechId("butanal"))
+                .fluid()
+                .color(0xEF9A9A)
+                .build().setFormula("C4H8O", true);
+
+        TriarylPhosphine = new Material.Builder(getMaterialsId(), gregtechId("triaryl_phosphine"))
+                .fluid()
+                .color(0xEF9A9A)
+                .build().setFormula("(H5C6)3P", true);
+
+        DiethylEther = new Material.Builder(getMaterialsId(), gregtechId("diethyl_ether"))
+                .fluid()
+                .color(0xEF9A9A)
+                .build().setFormula("(C2H5)2O", true);
+
+        ArylmagnesiumHalides = new Material.Builder(getMaterialsId(), gregtechId("arylmagnesium_halides"))
+                .fluid()
+                .color(0xEF9A9A)
+                .build().setFormula("(C2H5)2O", true);
+
+        PhosphorusTrichloride = new Material.Builder(getMaterialsId(), gregtechId("phosphorus_trichloride"))
+                .dust()
+                .color(0xEF9A9A)
+                .build().setFormula("PCl3", true);
+
+        TriarylPhosphineSolution = new Material.Builder(getMaterialsId(), gregtechId("triaryl_phosphine_solution"))
+                .fluid()
+                .color(0xEF9A9A)
+                .build().setFormula("(H5C6)3P(H2O)?", true);
+
+        PrePolymerizedCaprolactam = new Material.Builder(getMaterialsId(), gregtechId("pre_polymerized_caprolactam"))
+                .dust()
+                .color(0xEF9A9A)
+                .build().setFormula("PCl3", true);
+
+        Ether = new Material.Builder(getMaterialsId(), gregtechId("ether"))
+                .fluid()
+                .color(0xEF9A9A)
+                .build().setFormula("PCl3", true);
     }
 
     private static int getMaterialsId() {
