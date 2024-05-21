@@ -258,7 +258,5 @@ public class PolymerizationRework {
                 .fluidInputs(Air.getFluid(1000)).output(dust, Polycaprolactam).duration(120)
                 .EUt(670)
                 .buildAndRegister();
-
-
     }
 }

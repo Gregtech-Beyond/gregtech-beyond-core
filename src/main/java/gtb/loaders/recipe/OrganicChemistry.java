@@ -114,7 +114,7 @@ public class OrganicChemistry {
                 .duration(200)
                 .EUt(480)
                 .buildAndRegister();
-                
+
         CHEMICAL_RECIPES.recipeBuilder()
                 .notConsumable(dust, Zeolite)
                 .fluidInputs(Ammonia.getFluid(1000))
