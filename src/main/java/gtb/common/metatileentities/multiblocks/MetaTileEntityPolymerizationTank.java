@@ -1,7 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -20,7 +19,6 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
@@ -43,11 +41,11 @@ public class MetaTileEntityPolymerizationTank extends RecipeMapMultiblockControl
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("F~F","~~~","F~F")
-                .aisle("CCC","CCC","CSC")
-                .aisle("CCC","C~C","CCC")
-                .aisle("CCC","C~C","CCC")
-                .aisle("CCC","CCC","CCC")
+                .aisle("F~F", "~~~", "F~F")
+                .aisle("CCC", "CCC", "CSC")
+                .aisle("CCC", "C~C", "CCC")
+                .aisle("CCC", "C~C", "CCC")
+                .aisle("CCC", "CCC", "CCC")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
