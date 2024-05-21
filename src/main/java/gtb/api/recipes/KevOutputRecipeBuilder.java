@@ -11,56 +11,56 @@ import gregtech.api.util.EnumValidationResult;
 import gregtech.api.util.GTLog;
 import gregtech.api.util.ValidationResult;
 
-import gtb.api.recipes.properties.KevInputRecipeProperty;
+import gtb.api.recipes.properties.KevOutputRecipeProperty;
 import gtb.api.recipes.properties.RecipePropertiesKey;
 
-public class EuKevRecipeBuilder extends RecipeBuilder<EuKevRecipeBuilder> {
+public class KevOutputRecipeBuilder extends RecipeBuilder<KevOutputRecipeBuilder> {
 
     @SuppressWarnings("unused")
-    public EuKevRecipeBuilder() {}
+    public KevOutputRecipeBuilder() {}
 
     @SuppressWarnings("unused")
-    public EuKevRecipeBuilder(Recipe recipe, RecipeMap<EuKevRecipeBuilder> recipeMap) {
+    public KevOutputRecipeBuilder(Recipe recipe, RecipeMap<KevOutputRecipeBuilder> recipeMap) {
         super(recipe, recipeMap);
     }
 
-    public EuKevRecipeBuilder(EuKevRecipeBuilder builder) {
+    public KevOutputRecipeBuilder(KevOutputRecipeBuilder builder) {
         super(builder);
     }
 
     @Override
-    public EuKevRecipeBuilder copy() {
-        return new EuKevRecipeBuilder(this);
+    public KevOutputRecipeBuilder copy() {
+        return new KevOutputRecipeBuilder(this);
     }
 
     @NotNull
-    public EuKevRecipeBuilder KeV(int kev) {
+    public KevOutputRecipeBuilder outputKeV(int kev) {
         if (kev <= 0) {
-            GTLog.logger.error(RecipePropertiesKey.KEV + " cannot be less than or equal to 0",
+            GTLog.logger.error(RecipePropertiesKey.KEV_OUTPUT + " cannot be less than or equal to 0",
                     new IllegalArgumentException());
             recipeStatus = EnumValidationResult.INVALID;
         }
-        this.applyProperty(KevInputRecipeProperty.getInstance(), kev);
+        this.applyProperty(KevOutputRecipeProperty.getInstance(), kev);
         return this;
     }
 
     @Override
     public ValidationResult<Recipe> build() {
         if (this.recipePropertyStorage == null) this.recipePropertyStorage = new RecipePropertyStorage();
-        if (this.recipePropertyStorage.hasRecipeProperty(KevInputRecipeProperty.getInstance())) {
-            if (this.recipePropertyStorage.getRecipePropertyValue(KevInputRecipeProperty.getInstance(), 0) <= 0) {
-                this.recipePropertyStorage.store(KevInputRecipeProperty.getInstance(), 0);
+        if (this.recipePropertyStorage.hasRecipeProperty(KevOutputRecipeProperty.getInstance())) {
+            if (this.recipePropertyStorage.getRecipePropertyValue(KevOutputRecipeProperty.getInstance(), 0) <= 0) {
+                this.recipePropertyStorage.store(KevOutputRecipeProperty.getInstance(), 0);
             }
         } else {
-            this.recipePropertyStorage.store(KevInputRecipeProperty.getInstance(), 0);
+            this.recipePropertyStorage.store(KevOutputRecipeProperty.getInstance(), 0);
         }
         return super.build();
     }
 
     @Override
     public boolean applyProperty(@NotNull String key, Object value) {
-        if (key.equals(RecipePropertiesKey.KEV.name())) {
-            this.KeV(((Number) value).intValue());
+        if (key.equals(RecipePropertiesKey.KEV_OUTPUT.name())) {
+            this.outputKeV(((Number) value).intValue());
             return true;
         }
         return super.applyProperty(key, value);
@@ -68,7 +68,7 @@ public class EuKevRecipeBuilder extends RecipeBuilder<EuKevRecipeBuilder> {
 
     public int getKeV() {
         return this.recipePropertyStorage == null ? 0 :
-                this.recipePropertyStorage.getRecipePropertyValue(KevInputRecipeProperty.getInstance(), 0);
+                this.recipePropertyStorage.getRecipePropertyValue(KevOutputRecipeProperty.getInstance(), 0);
     }
 
     @Override

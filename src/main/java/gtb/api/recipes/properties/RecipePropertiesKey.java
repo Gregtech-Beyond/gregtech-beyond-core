@@ -1,5 +1,6 @@
 package gtb.api.recipes.properties;
 
 public enum RecipePropertiesKey {
-    KEV
+    KEV,
+    KEV_OUTPUT
 }

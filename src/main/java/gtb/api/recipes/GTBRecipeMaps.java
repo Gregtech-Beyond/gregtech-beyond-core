@@ -111,4 +111,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<EuKevRecipeBuilder> KEV_TEST = new RecipeMap<>("kev_test",
             3, 3, 3, 3, new EuKevRecipeBuilder(), false);
+
+    public static final RecipeMap<KevOutputRecipeBuilder> KEV_SUPPLY = new RecipeMap<>("kev_supply",
+            1, 0, 0, 0, new KevOutputRecipeBuilder(), false).allowEmptyOutput();
 }

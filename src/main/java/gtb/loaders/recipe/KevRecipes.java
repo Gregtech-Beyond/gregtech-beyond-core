@@ -15,5 +15,12 @@ public class KevRecipes {
                 .input(OrePrefix.ingot, Materials.Steel)
                 .output(OrePrefix.ingot, Materials.SteelMagnetic)
                 .buildAndRegister();
+
+        GTBRecipeMaps.KEV_SUPPLY.recipeBuilder()
+                .EUt(100)
+                .duration(300)
+                .input(OrePrefix.ingot, Materials.Steel)
+                .outputKeV(25)
+                .buildAndRegister();
     }
 }

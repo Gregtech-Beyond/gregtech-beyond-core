@@ -656,4 +656,5 @@ gregtech.material.linoleic_acid=Linoleic Acid
 
 # Energy types
 
-gtb.recipe.kev=Neutron Kinetic Energy: %d KeV
+gtb.recipe.KEV=Neutron Kinetic Energy: %d KeV
+gtb.recipe.KEV_OUTPUT=Outputs %d KeV
