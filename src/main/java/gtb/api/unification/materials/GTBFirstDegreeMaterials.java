@@ -799,6 +799,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0xEF9A9A)
                 .build().setFormula("PCl3", true);
+
         Grisium = new Material.Builder(getMaterialsId(), gregtechId("grisium"))
                 .fluid()
                 .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
@@ -809,6 +810,27 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0xF9A825)
                 .build().setFormula("Na2S(H2O)", true);
+
+        MethylAluminoxane = new Material.Builder(getMaterialsId(), gregtechId("methyl_aluminoxane"))
+                .dust()
+                .color(0xF9A825)
+                .build().setFormula("AlCH30", true);
+
+        RecrystallizedZirconiumDioxide = new Material.Builder(getMaterialsId(), gregtechId("recrystallized_zirconium_dioxide"))
+                .dust()
+                .color(0xF9A825)
+                .build().setFormula("Zr*O2", true);
+
+        ZirconiumChloride = new Material.Builder(getMaterialsId(), gregtechId("zirconium_chlorine"))
+                .dust()
+                .color(0xF9A825)
+                .build().setFormula("ZrCl", true);
+
+        ZirconiumDioxideSolution = new Material.Builder(getMaterialsId(), gregtechId("zirconium_dioxide_solution"))
+                .dust()
+                .color(0xF9A825)
+                .build().setFormula("ZrCl?", true);
+
     }
 
     private static int getMaterialsId() {

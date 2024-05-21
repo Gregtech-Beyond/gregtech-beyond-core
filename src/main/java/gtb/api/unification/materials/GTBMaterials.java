@@ -106,7 +106,12 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
-
+    public static Material ZirconiumDioxideSolution;
+    public static Material ZirconiumChloride;
+    public static Material TrimethylAluminium;
+    public static Material MethylAluminoxane;
+    public static Material RecrystallizedZirconiumDioxide;
+    public static Material TriethylAluminium;
     public static Material Ether;
     public static Material PrePolymerizedCaprolactam;
     public static Material TriarylPhosphineSolution;
