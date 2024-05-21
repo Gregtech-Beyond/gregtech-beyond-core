@@ -2,6 +2,7 @@ package gtb.api.capabilites.impl;
 
 import static gtb.api.utils.NBTKeys.KEV_KEY;
 
+import gtb.api.capabilites.interfaces.containers.ContainerNames;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.common.capabilities.Capability;
@@ -35,7 +36,7 @@ public class KevContainer extends MTETrait implements IKevContainer {
     @NotNull
     @Override
     public String getName() {
-        return "KeVContainer";
+        return ContainerNames.KEV_CONTAINER.name();
     }
 
     @Nullable
@@ -60,15 +61,15 @@ public class KevContainer extends MTETrait implements IKevContainer {
     }
 
     @Override
-    public void writeInitialData(@NotNull PacketBuffer buffer) {
-        super.writeInitialData(buffer);
-        buffer.writeInt(this.kev);
+    public void writeInitialSyncData(@NotNull PacketBuffer buf) {
+        super.writeInitialSyncData(buf);
+        buf.writeInt(this.kev);
     }
 
     @Override
-    public void receiveInitialData(@NotNull PacketBuffer buffer) {
-        super.receiveInitialData(buffer);
-        this.kev = buffer.readInt();
+    public void receiveInitialSyncData(@NotNull PacketBuffer buf) {
+        super.receiveInitialSyncData(buf);
+        this.kev = buf.readInt();
     }
 
     @Override

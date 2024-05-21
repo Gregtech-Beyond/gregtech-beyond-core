@@ -9,7 +9,7 @@ import gregtech.api.recipes.recipeproperties.RecipeProperty;
 
 public class KevRecipeProperty extends RecipeProperty<Integer> {
 
-    public static final String KEY = "kev";
+    public static final String KEY = RecipePropertiesKey.KEV.name();
     public static KevRecipeProperty INSTANCE;
 
     private KevRecipeProperty() {
