@@ -9,7 +9,11 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 import static net.minecraft.init.Items.*;
 
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.common.items.MetaItems;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
 
 public class BiologyLines {
 
@@ -772,5 +776,13 @@ public class BiologyLines {
                 .duration(400)
                 .EUt(1200)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
+                new ItemStack[] { SHAPE_MOLD_CREDIT.getStackForm() },
+                new FluidStack[] { Polytetrafluoroethylene.getFluid(36)});
+
+        GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
+                new ItemStack[] { SHAPE_MOLD_CREDIT.getStackForm() },
+                new FluidStack[] { Polybenzimidazole.getFluid(18)});
     }
 }
