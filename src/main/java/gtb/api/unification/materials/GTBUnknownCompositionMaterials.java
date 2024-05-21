@@ -182,6 +182,21 @@ public class GTBUnknownCompositionMaterials {
         ConcentratedBrine = new Material.Builder(getMaterialsId(), gregtechId("concentrated_brine"))
                 .fluid()
                 .color(0xDBCF99)
+                .build().setFormula("Br?", true);
+
+        Brine = new Material.Builder(getMaterialsId(), gregtechId("brine"))
+                .fluid()
+                .color(0xa88539)
+                .build().setFormula("?", true);
+
+        CrudeBromineSolution = new Material.Builder(getMaterialsId(), gregtechId("crude_bromine_solution"))
+                .fluid()
+                .color(0xeb5a21)
+                .build().setFormula("H2SO4Br(H2O)Cl", true);
+
+        ConcentratedBrine = new Material.Builder(getMaterialsId(), gregtechId("concentrated_brine"))
+                .fluid()
+                .color(0xebc221)
                 .build().setFormula("?", true);
 
         BedrockContaminatedOil = new Material.Builder(getMaterialsId(), gregtechId("bedrock_contaminated_oil"))

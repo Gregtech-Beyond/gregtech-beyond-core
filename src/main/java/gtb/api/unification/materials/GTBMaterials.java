@@ -254,6 +254,8 @@ public class GTBMaterials {
     public static Material SaltFreeBrine;
     public static Material LithiumChlorideSolution;
     public static Material BoronFreeSolution;
+    public static Material Grisium;
+    public static Material SodiumSulfideSolution;
 
     // SD Materials
     public static Material CalciumSalts;

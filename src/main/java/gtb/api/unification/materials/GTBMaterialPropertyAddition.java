@@ -20,5 +20,6 @@ public class GTBMaterialPropertyAddition {
         Graphene.addFlags(MaterialFlags.GENERATE_FOIL);
         Mica.addFlags(MaterialFlags.GENERATE_FOIL);
         BorosilicateGlass.addFlags(MaterialFlags.GENERATE_PLATE);
+        Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
     }
 }

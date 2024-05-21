@@ -705,11 +705,6 @@ public class GTBFirstDegreeMaterials {
                 .color(0x7A5D9F)
                 .build().setFormula("Al2(C2H5)6)(TiCl4)", true);
 
-        SodiumSulfideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
-                .fluid()
-                .color(0xA39450)
-                .build().setFormula("NaS2(H2O)", true);
-
         SodiumSulfideDichloroBenzeneMixture = new Material.Builder(getMaterialsId(),
                 gregtechId("sodium_sulfide_solution_dichloro_benzene_mixture"))
                         .fluid()
@@ -804,6 +799,16 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0xEF9A9A)
                 .build().setFormula("PCl3", true);
+        Grisium = new Material.Builder(getMaterialsId(), gregtechId("grisium"))
+                .fluid()
+                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
+                .color(0xF9A825)
+                .build().setFormula("Ti9C9K9Li9S9H5", true);
+
+        SodiumSulfideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
+                .fluid()
+                .color(0xF9A825)
+                .build().setFormula("Na2S(H2O)", true);
     }
 
     private static int getMaterialsId() {

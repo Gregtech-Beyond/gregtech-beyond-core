@@ -339,7 +339,12 @@ metaitem.boron_retaining_yarn.name=Boron Retaining Yarn
 metaitem.coolant_cell.name=Coolant Cell
 metaitem.nak_coolant_cell.name=NaK Coolant Cell
 metaitem.cotton.name=Cotton
-
+metaitem.lithium_sieve.name=Lithium Sieve
+metaitem.lithium_saturated_sieve_lithum.name=Lithium Saturated Lithium Sieve
+metaitem.boron_saturated_yarn.name=Boron Saturated Yarn
+metaitem.boron_retaining_yarn.name=Boron Retaining Yarn
+metaitem.coolant_cell.name=Coolant Cell
+metaitem.nak_coolant_cell.name=NaK Coolant Cell
 
 
 
@@ -384,6 +389,19 @@ gregtech.material.phosphorus_trichloride=Phosphorus Trichloride
 gregtech.material.polybenzimidazole_pre_polymer_foam=Polybenzimidazole Pre-Polymer Foam
 
 gregtech.material.benzyl_bromide=α-Bromtoluol
+gregtech.material.damp_bromine=Damp Bromine
+gregtech.material.brominated_brine=Brominated Brine
+gregtech.material.salt_free_brine=Salt Free Brine
+gregtech.material.boron_free_solution=Boron Free Solution
+gregtech.material.potassium_magnesium_salts=Potassium Magnesium Salts
+gregtech.material.sodium_salts=Sodium Salts
+gregtech.material.calcium_salts=Calcium Salts
+gregtech.material.lithium_chloride_solution=Lithium Chloride Solution
+gregtech.material.iodized_brine=Iodized Brine
+gregtech.material.iodine_slurry=Iodine Slurry
+gregtech.material.brine=Brine
+gregtech.material.crude_bromine_solution=Crude Bromine Solution
+gregtech.material.concentrated_brine=Concentrated Brine
 gregtech.material.iso_octane=Iso Octane
 gregtech.material.tributylamine=Tributylamine
 gregtech.material.carbon_sulfide=Carbon Sulfide
