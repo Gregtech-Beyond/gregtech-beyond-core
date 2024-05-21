@@ -711,7 +711,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("NaS2(H2O)", true);
 
         SodiumSulfideDichloroBenzeneMixture = new Material.Builder(getMaterialsId(),
-                gregtechId("sodium_sulfide_solution"))
+                gregtechId("sodium_sulfide_solution_dichloro_benzene_mixture"))
                         .fluid()
                         .color(0x635E46)
                         .build().setFormula("(C6H4Cl2)(NaS2(H2O))", true);
@@ -748,6 +748,12 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0x565453)
                 .build().setFormula("?", true);
+
+        PhenyleneSulfidePrePolymerMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("phenylene_sulfide_pre_polymer_mixture"))
+                        .fluid()
+                        .color(0x565453)
+                        .build().setFormula("?", true);
     }
 
     private static int getMaterialsId() {

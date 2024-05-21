@@ -145,8 +145,7 @@ public class PolymerizationRework {
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Diaminobenzidine.getFluid(1000))
                 .fluidInputs(DiphenylIsophtalate.getFluid(1000))
-                .fluidOutputs(Phenol.getFluid(1000))
-                .output(dust, PolybenzimidazolePrePolymerFoam, 3)
+                .output(dust, PolybenzimidazolePrePolymerFoam, 4)
                 .duration(120)
                 .EUt(800)
                 .buildAndRegister();
@@ -182,5 +181,44 @@ public class PolymerizationRework {
                 .duration(120)
                 .EUt(700)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(1) },
+                new FluidStack[] { Tetrafluoroethylene.getFluid(144),
+                        Air.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(1) },
+                new FluidStack[] { Tetrafluoroethylene.getFluid(144),
+                        Oxygen.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(2) },
+                new FluidStack[] { Tetrafluoroethylene.getFluid(2160),
+                        TitaniumTetrachloride.getFluid(100),
+                        Oxygen.getFluid(7500) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(2) },
+                new FluidStack[] { Tetrafluoroethylene.getFluid(2160),
+                        TitaniumTetrachloride.getFluid(100),
+                        Air.getFluid(7500) });
+
+        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Tetrafluoroethylene.getFluid(144))
+                .notConsumable(dust, KaminskyCatalyst).fluidOutputs(Polytetrafluoroethylene.getFluid(576)).duration(120)
+                .EUt(670).buildAndRegister();
+        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Tetrafluoroethylene.getFluid(144))
+                .notConsumable(dust, PhilipsCatalyst).fluidOutputs(Polytetrafluoroethylene.getFluid(288)).duration(120)
+                .EUt(670).buildAndRegister();
+        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Tetrafluoroethylene.getFluid(144))
+                .notConsumable(dust, ZieglerNattaCatalyst).fluidOutputs(Polytetrafluoroethylene.getFluid(432))
+                .duration(120).EUt(670).buildAndRegister();
+        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Tetrafluoroethylene.getFluid(144))
+                .fluidInputs(Oxygen.getFluid(1000)).fluidOutputs(Polytetrafluoroethylene.getFluid(144)).duration(120)
+                .EUt(670).buildAndRegister();
+        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Tetrafluoroethylene.getFluid(144))
+                .fluidInputs(Air.getFluid(1000)).fluidOutputs(Polytetrafluoroethylene.getFluid(144)).duration(120).EUt(670)
+                .buildAndRegister();
+
     }
 }
