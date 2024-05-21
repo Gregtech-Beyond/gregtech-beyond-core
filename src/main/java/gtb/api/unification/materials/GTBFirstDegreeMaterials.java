@@ -704,6 +704,16 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0xF9A825)
                 .build().setFormula("Al2(C2H5)6)(TiCl4)", true);
+
+        SodiumSulfideSolution  = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
+                .fluid()
+                .color(0xF9A825)
+                .build().setFormula("NaS2(H2O)", true);
+
+        SodiumSulfideDichloroBenzeneMixture  = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
+                .fluid()
+                .color(0xF9A825)
+                .build().setFormula("(C6H4Cl2)(NaS2(H2O))", true);
     }
 
     private static int getMaterialsId() {

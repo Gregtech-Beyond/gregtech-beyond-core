@@ -104,9 +104,14 @@ public class GTBMaterials {
     public static Material Xerizin;
 
     // Element Materials
+
+
     // FD Materials
 
 
+    public static Material PhenyleneSulfidePrePolymerMixture;
+    public static Material SodiumSulfideDichloroBenzeneMixture;
+    public static Material SodiumSulfideSolution;
     public static Material PhilipsCatalyst;
     public static Material KaminskyCatalyst;
     public static Material ZieglerNattaCatalyst;
