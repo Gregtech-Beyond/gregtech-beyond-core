@@ -36,7 +36,7 @@ public class KevContainer extends MTETrait implements IKevContainer {
     @NotNull
     @Override
     public String getName() {
-        return ContainerNames.KEV_CONTAINER.name();
+        return ContainerNames.KEV_CONTAINER_NAME.name();
     }
 
     @Nullable
