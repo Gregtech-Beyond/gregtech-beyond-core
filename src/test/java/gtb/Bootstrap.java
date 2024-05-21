@@ -28,8 +28,8 @@ import gregtech.common.items.MetaItems;
 import gregtech.core.unification.material.internal.MaterialRegistryManager;
 import gregtech.modules.ModuleManager;
 
-import gtb.api.unification.materials.GTBMaterialFlagAddition;
 import gtb.api.unification.materials.GTBMaterials;
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 
 public final class Bootstrap {
 
@@ -75,10 +75,9 @@ public final class Bootstrap {
         Loader.instance().setupTestHarness(new DummyModContainer(meta));
 
         GTBMaterials.init();
-        GTBMaterialFlagAddition.init();
 
         managerInternal.closeRegistries();
-        GTBMaterialFlagAddition.initLate();
+        GTBMaterialFlags.add();
 
         managerInternal.freezeRegistries();
 

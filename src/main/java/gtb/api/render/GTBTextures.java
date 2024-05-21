@@ -17,6 +17,8 @@ public final class GTBTextures {
             "gtb_multiblock_casing/climate_proof_casing");
     public static SimpleOverlayRenderer STEEL_BORDERED_WOODEN_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/steel_bordered_wooden_casing");
+    public static SimpleOverlayRenderer BIOLOGICALLY_STERILE_CASING = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing/biologically_sterile_casing");
     public static final SimpleOverlayRenderer KEV_MULTIBLOCK_HATCH = new SimpleOverlayRenderer(
             "hatches/kev_multiblock_hatch/cube_all");
     public static final OrientedOverlayRenderer CRYSTALLIZER_OVERLAY = new OrientedOverlayRenderer(

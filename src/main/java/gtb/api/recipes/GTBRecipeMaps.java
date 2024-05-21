@@ -26,7 +26,7 @@ public final class GTBRecipeMaps {
             1, 1, 0, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BEDROCK_PUMP = new RecipeMap<>("bedrock_pump",
-            1, 0, 1, 0, new SimpleRecipeBuilder(), false);
+            1, 0, 0, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BLACK_HOLE_COMPRESSOR = new RecipeMap<>("black_hole_compressor",
             2, 1, 1, 1, new SimpleRecipeBuilder(), false);
@@ -52,7 +52,7 @@ public final class GTBRecipeMaps {
             2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> NEUTRON_ACCELERATOR = new RecipeMap<>("neutron_accelerator",
-            2, 1, 2, 1, new SimpleRecipeBuilder(), false);
+            2, 3, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> FISCHER_TROPSCH_REACTOR = new RecipeMap<>(
             "fischer_tropsch_reactor",
@@ -61,8 +61,53 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION = new RecipeMap<>("crystallization",
             3, 3, 3, 3, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR = new RecipeMap<>("dehydrator",
+    public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR = new RecipeMap<>(
+            "dehydrator",
             3, 3, 3, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> MICROSCOPE = new RecipeMap<>(
+            "microscope",
+            1, 9, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> BIO_REACTOR = new RecipeMap<>(
+            "bio_reactor",
+            3, 3, 5, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTROLYTIC_CELL = new RecipeMap<>(
+            "electrolytic_cell",
+            2, 4, 2, 6, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ROTARY_EVAPORATOR = new RecipeMap<>(
+            "rotary_evaporator",
+            1, 2, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> TEXTILE_FACTORY = new RecipeMap<>(
+            "textile_factory",
+            4, 1, 2, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ION_IMPLANTER = new RecipeMap<>("ion_implanter",
+            4, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CVD_UNIT = new RecipeMap<>("cvd_unit",
+            3, 2, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ROASTER = new RecipeMap<>("roaster",
+            2, 4, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ENGRAVING_UNIT = new RecipeMap<>("engraving_unit",
+            2, 4, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CHEMICAL_PLANT = new RecipeMap<>("chemical_plant",
+            6, 4, 5, 4, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CLARIFIER = new RecipeMap<>("clarifier",
+            1, 6, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FROTH_FLOTATION_UNIT = new RecipeMap<>("froth_flotation_unit",
+            4, 4, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DIGESTER = new RecipeMap<>("digester",
+            4, 4, 4, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<EuKevRecipeBuilder> KEV_TEST = new RecipeMap<>("kev_test",
             3, 3, 3, 3, new EuKevRecipeBuilder(), false);

@@ -1,3 +1,4 @@
+
 //version: 1700970468
 /*
  * DO NOT CHANGE THIS FILE!
@@ -336,9 +337,9 @@ minecraft {
     extraRunJvmArguments.add("-ea:${modGroup}")
     if (usesMixins.toBoolean()) {
         extraRunJvmArguments.addAll([
-            '-Dmixin.hotSwap=true',
-            '-Dmixin.checks.interfaces=true',
-            '-Dmixin.debug.export=true'
+                '-Dmixin.hotSwap=true',
+                '-Dmixin.checks.interfaces=true',
+                '-Dmixin.debug.export=true'
         ])
     }
 
@@ -504,6 +505,7 @@ dependencies {
 
     compileOnlyApi 'org.jetbrains:annotations:24.1.0'
     annotationProcessor 'org.jetbrains:annotations:24.1.0'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
     patchedMinecraft('net.minecraft:launchwrapper:1.17.2') {
         transitive = false
     }

@@ -36,7 +36,9 @@ public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.Casing
         QUANTUM_CASING("quantum_casing"),
         QUANTUM_GLASS("quantum_glass"),
         STEEL_BORDERED_WOODEN_CASING("steel_bordered_wooden_casing"),
-        VACUUM_FURNACE_CASING("vacuum_furnace_casing");
+        VACUUM_FURNACE_CASING("vacuum_furnace_casing"),
+        BIOLOGICALLY_STERILE_CASING("biologically_sterile_casing"),
+        FULLERENE_POLYMER_TETRIX_CASING("fullerene_polymer_tetrix_casing");
 
         private final String name;
 

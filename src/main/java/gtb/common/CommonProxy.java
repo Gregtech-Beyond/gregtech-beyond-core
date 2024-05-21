@@ -21,8 +21,8 @@ import gregtech.api.unification.material.event.MaterialEvent;
 import gregtech.api.unification.material.event.PostMaterialEvent;
 
 import gtb.GregtechBeyondCore;
-import gtb.api.unification.materials.GTBMaterialFlagAddition;
 import gtb.api.unification.materials.GTBMaterials;
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 import gtb.api.utils.GTBLog;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.loaders.recipe.GTBRecipeLoader;
@@ -46,6 +46,9 @@ public class CommonProxy {
 
         registry.register(GTBMetaBlocks.GTB_MULTIBLOCK_CASING);
         registry.register(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING);
+        registry.register(GTBMetaBlocks.GTB_EXPLOSIVE);
+        registry.register(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL);
+        registry.register(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL_2);
     }
 
     @SubscribeEvent
@@ -53,8 +56,11 @@ public class CommonProxy {
         GTBLog.logger.info("Registering Items...");
         IForgeRegistry<Item> registry = event.getRegistry();
 
+        registry.register(createItemBlock(GTBMetaBlocks.GTB_EXPLOSIVE, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL_2, VariantItemBlock::new));
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)
@@ -64,7 +70,7 @@ public class CommonProxy {
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public static void registerMaterialsPost(PostMaterialEvent event) {
-        GTBMaterialFlagAddition.initLate();
+        GTBMaterialFlags.add();
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {

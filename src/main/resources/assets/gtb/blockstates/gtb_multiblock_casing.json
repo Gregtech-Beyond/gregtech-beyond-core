@@ -43,6 +43,18 @@
         "textures": {
           "all": "gregtech:blocks/gtb_multiblock_casing/vacuum_furnace_casing"
         }
+      },
+      "biologically_sterile_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/biologically_sterile_casing"
+        }
+      },
+      "fullerene_polymer_tetrix_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/fullerene_polymer_tetrix_casing"
+        }
       }
     }
   }

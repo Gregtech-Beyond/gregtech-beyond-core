@@ -21,18 +21,31 @@ public final class GTBMetaBlocks {
 
     public static GTBMultiblockCasing GTB_MULTIBLOCK_CASING;
     public static GTBMultiblockActiveCasing GTB_MULTIBLOCK_ACTIVE_CASING;
+    public static GTBExplosive GTB_EXPLOSIVE;
+    public static GTBBlockWireCoil GTB_BLOCK_WIRE_COIL;
+    public static GTBBlockWireCoil2 GTB_BLOCK_WIRE_COIL_2;
 
     public static void init() {
         GTB_MULTIBLOCK_CASING = new GTBMultiblockCasing();
         GTB_MULTIBLOCK_CASING.setRegistryName("gtb_multiblock_casing");
 
+        GTB_EXPLOSIVE = new GTBExplosive();
+        GTB_EXPLOSIVE.setRegistryName("gtb_explosive");
+
         GTB_MULTIBLOCK_ACTIVE_CASING = new GTBMultiblockActiveCasing();
         GTB_MULTIBLOCK_ACTIVE_CASING.setRegistryName("gtb_multiblock_active_casing");
+
+        GTB_BLOCK_WIRE_COIL = new GTBBlockWireCoil();
+        GTB_BLOCK_WIRE_COIL.setRegistryName("gtb_wire_coil");
+
+        GTB_BLOCK_WIRE_COIL_2 = new GTBBlockWireCoil2();
+        GTB_BLOCK_WIRE_COIL_2.setRegistryName("gtb_wire_coil_2");
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerItemModels() {
         registerItemModel(GTB_MULTIBLOCK_CASING);
+        registerItemModel(GTB_EXPLOSIVE);
         GTB_MULTIBLOCK_ACTIVE_CASING.onModelRegister();
     }
 

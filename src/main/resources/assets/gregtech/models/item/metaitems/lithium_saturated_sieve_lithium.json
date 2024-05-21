@@ -1,0 +1,7 @@
+
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gtb:items/metaitems/lithium_saturated_sieve_lithium"
+  }
+}
