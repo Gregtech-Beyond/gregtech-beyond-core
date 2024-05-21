@@ -2,7 +2,6 @@ package gtb.api.capabilites.impl;
 
 import static gtb.api.utils.NBTKeys.KEV_KEY;
 
-import gtb.api.capabilites.interfaces.containers.ContainerNames;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.common.capabilities.Capability;
@@ -14,6 +13,7 @@ import gregtech.api.metatileentity.MTETrait;
 import gregtech.api.metatileentity.MetaTileEntity;
 
 import gtb.api.capabilites.GTBTileCapabilities;
+import gtb.api.capabilites.interfaces.containers.ContainerNames;
 import gtb.api.capabilites.interfaces.containers.IKevContainer;
 import lombok.Getter;
 

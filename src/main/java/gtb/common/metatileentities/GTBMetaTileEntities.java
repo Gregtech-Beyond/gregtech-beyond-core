@@ -9,6 +9,7 @@ import gregtech.api.util.GTUtility;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
+import gtb.common.metatileentities.multiblockpart.MetaTileEntityKevHatch;
 import gtb.common.metatileentities.multiblocks.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -32,6 +33,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityFischerTropschReactor FISCHER_TROPSCH_REACTOR;
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
+    public static MetaTileEntityKevHatch KEV_INPUT_HATCH;
+    public static MetaTileEntityKevHatch KEV_OUTPUT_HATCH;
 
     public static void init() {
         // Multiblocks
@@ -62,5 +65,7 @@ public final class GTBMetaTileEntities {
 
         registerSimpleMetaTileEntity(DEHYDRATORS, 4030, "dehydrator", GTBRecipeMaps.DEHYDRATOR,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+        KEV_OUTPUT_HATCH = registerMetaTileEntity(4035, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), false));
+        KEV_INPUT_HATCH = registerMetaTileEntity(4036, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), true));
     }
 }
