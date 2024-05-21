@@ -25,7 +25,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         CHEMICAL_BATH_RECIPES.recipeBuilder()
-                .output(MetaItems.PETRI_DISH)
+                .input(MetaItems.PETRI_DISH)
                 .output(STERILIZED_PETRI_DISH)
                 .fluidInputs(HundredEthanol.getFluid(1000))
                 .duration(200)
