@@ -534,16 +534,18 @@ public class GTBFirstDegreeMaterials {
         FullerenePolymerMatrix = new Material.Builder(getMaterialsId(), gregtechId("fullerene_polymer_matrix"))
                 .fluid()
                 .dust()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .ingot()
+                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
                 .color(0x313031)
-                .build().setFormula("HCl", true);
+                .build().setFormula("PdFeC153C36NO2", true);
 
         FullerenePolymerTetrix = new Material.Builder(getMaterialsId(), gregtechId("fullerene_polymer_tetrix"))
                 .fluid()
                 .dust()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .ingot()
+                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
                 .color(0x1D181E)
-                .build().setFormula("HCl", true);
+                .build().setFormula("C61HRhNO2", true);
 
         Tetrapropylammoniumbromide = new Material.Builder(getMaterialsId(), gregtechId("tetrapropylammoniumbromide"))
                 .fluid()
