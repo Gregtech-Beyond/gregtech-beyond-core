@@ -6,11 +6,12 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.common.items.MetaItems;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
 
 public final class PlatinumLine {
 
@@ -156,7 +157,6 @@ public final class PlatinumLine {
                 .output(dust, PalladiumMetallicPowder, 1)
                 .duration(200).EUt(12).buildAndRegister();
 
-
         GTRecipeHandler.removeRecipesByInputs(CENTRIFUGE_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, PlatinumGroupSludge, 6) },
@@ -248,7 +248,5 @@ public final class PlatinumLine {
                 .EUt(30)
                 .duration(500)
                 .buildAndRegister();
-
-
     }
 }
