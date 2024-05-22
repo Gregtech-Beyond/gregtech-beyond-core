@@ -783,6 +783,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("(C2H5)2O", true);
 
         PhosphorusTrichloride = new Material.Builder(getMaterialsId(), gregtechId("phosphorus_trichloride"))
+                .fluid()
                 .dust()
                 .color(0xEF9A9A)
                 .build().setFormula("PCl3", true);
