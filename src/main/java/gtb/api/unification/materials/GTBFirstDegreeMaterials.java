@@ -802,6 +802,8 @@ public class GTBFirstDegreeMaterials {
 
         Grisium = new Material.Builder(getMaterialsId(), gregtechId("grisium"))
                 .fluid()
+                .dust()
+                .ingot()
                 .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
                 .color(0x575979)
                 .build().setFormula("Ti9C9K9Li9S9H5", true);
@@ -835,18 +837,18 @@ public class GTBFirstDegreeMaterials {
         StyreneButadieneSolution = new Material.Builder(getMaterialsId(), gregtechId("styrene_butadiene_solution"))
                 .fluid()
                 .color(0xCD846D)
-                .build().setFormula("ZrO2?", true);
+                .build().setFormula("(C8H8)(C4H6)(C2H6O)", true);
 
         nButyllithium = new Material.Builder(getMaterialsId(), gregtechId("n_butyllithium"))
                 .fluid()
                 .color(0x64817C)
-                .build().setFormula("ZrO2?", true);
+                .build().setFormula("C4H9Li", true);
 
         PolymerizedStyreneButadieneSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("polymerized_styrene_butadiene_solution"))
                         .fluid()
                         .color(0x454545)
-                        .build().setFormula("ZrO2?", true);
+                        .build();
 
         TriethylAluminium = new Material.Builder(getMaterialsId(),
                 gregtechId("triethylaluminium"))
@@ -858,7 +860,7 @@ public class GTBFirstDegreeMaterials {
                 gregtechId("trimethylaluminium"))
                         .fluid()
                         .color(0x0097A7)
-                        .build().setFormula("ZrO2?", true);
+                        .build().setFormula("Al(CH3)3", true);
 
         OneButane = new Material.Builder(getMaterialsId(),
                 gregtechId("one_butane"))
