@@ -870,9 +870,9 @@ public class GTBFirstDegreeMaterials {
 
         PlatinumMetallicPowder = new Material.Builder(getMaterialsId(),
                 gregtechId("platinum_metallic_powder"))
-                .dust()
-                .color(0xFAD28F)
-                .build().setFormula("Pt?", true);
+                        .dust()
+                        .color(0xFAD28F)
+                        .build().setFormula("Pt?", true);
 
         CrudeRhodiumMetal = new Material.Builder(getMaterialsId(), gregtechId("crude_rhodium_metal"))
                 .dust()
@@ -899,12 +899,120 @@ public class GTBFirstDegreeMaterials {
                 .color(0xFAD28F)
                 .build().setFormula("RhN", true);
 
-        RhodiumFilterCakeSolution = new Material.Builder(getMaterialsId(), gregtechId("rhodium_filter_cake"))
+        RhodiumFilterCakeSolution = new Material.Builder(getMaterialsId(), gregtechId("rhodium_filter_cake_solution"))
                 .fluid()
                 .color(0xFAD28F)
                 .build().setFormula("Rh", true);
 
+        // fluid
+        ThionylChloride = new Material.Builder(getMaterialsId(), gregtechId("thionyl_chloride")).fluid().color(0x79A29F)
+                .build().setFormula("SOCl2", true);
+        SuccinicAcid = new Material.Builder(getMaterialsId(), gregtechId("succinic_acid")).fluid().color(0xEDCD3B)
+                .build().setFormula("C4H6O4", true);
+        EthylBenzene = new Material.Builder(getMaterialsId(), gregtechId("ethyl_benzene")).fluid().color(0x7D7C79)
+                .build().setFormula("C8H10", true);
+        Naphthaldehyde = new Material.Builder(getMaterialsId(), gregtechId("naphthal_dehyde")).fluid().color(0xF3D036)
+                .build().setFormula("C10H7CHO", true);
+        HydrobromicAcid = new Material.Builder(getMaterialsId(), gregtechId("hydrobromic_acid")).fluid().color(0xE89089)
+                .build().setFormula("HBr", true);
+        SodiumCyanide = new Material.Builder(getMaterialsId(), gregtechId("sodium_cyanide")).fluid().color(0x3F51B5)
+                .build().setFormula("NaCN", true);
+        HydrogenCyanide = new Material.Builder(getMaterialsId(), gregtechId("hydrogen_cyanide")).fluid().color(0xA4ABD2)
+                .build().setFormula("HCN", true);
+        Dimethylsulfide = new Material.Builder(getMaterialsId(), gregtechId("dimethyl_sulfide")).fluid().color(0xCD9ED4)
+                .build().setFormula("C2H6S", true);
+        Methylamine = new Material.Builder(getMaterialsId(), gregtechId("methylamine")).fluid().color(0x9C53A8).build()
+                .setFormula("CH3NH2", true);
+        Ferrocenylfulleropyrrolidine = new Material.Builder(getMaterialsId(),
+                gregtechId("ferrocenylfulleropyrrolidine")).fluid().color(0x151415).build().setFormula("RhN", true);
+        Iron2Chloride = new Material.Builder(getMaterialsId(), gregtechId("iron_2_chloride")).fluid().color(0x494553)
+                .build().setFormula("FeCl2", true);
+        AcryloNitrile = new Material.Builder(getMaterialsId(), gregtechId("acrylo_nitrile")).fluid().color(0xC9C6A5)
+                .build().setFormula("C3H3N", true);
+        HydroiodicAcid = new Material.Builder(getMaterialsId(), gregtechId("hydroiodic_acid")).fluid().color(0x666CA5)
+                .build().setFormula("HI", true);
+        Hydrazine = new Material.Builder(getMaterialsId(), gregtechId("hydrazine")).fluid().color(0x7DB3E3).build()
+                .setFormula("N2H4", true);
+        BenzoylPeroxide = new Material.Builder(getMaterialsId(), gregtechId("benzyol_peroxide")).fluid().color(0x31516D)
+                .build().setFormula("C14H10O4", true);
+        BenzoylChloride = new Material.Builder(getMaterialsId(), gregtechId("benzyol_chloride")).fluid().color(0x324834)
+                .build().setFormula("C7H5ClO", true);
+        IronChloride = new Material.Builder(getMaterialsId(), gregtechId("iron_chloride")).fluid().color(0x2A5170)
+                .build().setFormula("FeCl", true);
+        Dichloromethane = new Material.Builder(getMaterialsId(), gregtechId("dichloromethane")).fluid().color(0x725E76)
+                .build().setFormula("CH2Cl2", true);
+        Dimethylaminopyridine = new Material.Builder(getMaterialsId(), gregtechId("dimethylaminopyridine")).fluid()
+                .color(0xFFA000).build().setFormula("C7H10N2", true);
+        Pyridine = new Material.Builder(getMaterialsId(), gregtechId("pyridine")).fluid().color(0xFE9F01).build()
+                .setFormula("C5H5N", true);
+        Diisopropylcarbodiimide = new Material.Builder(getMaterialsId(), gregtechId("diisopropylcarbodiimide")).fluid()
+                .color(0xD32F2F).build().setFormula(" (CH3)2CHN=C=NCH(CH3)2", true);
+        IsopropylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("isopropyl_alcohol")).fluid()
+                .color(0xA4B1A5).build().setFormula("C3H8O", true);
+        Silvertetrafluoroborate = new Material.Builder(getMaterialsId(), gregtechId("silvertetrafluoroborate")).fluid()
+                .color(0xDADBDA).build().setFormula("AgBF4", true);
+        TrimethyltinChloride = new Material.Builder(getMaterialsId(), gregtechId("trimethyl_tin_chloride")).fluid()
+                .color(0x7986CB).build().setFormula("C3H9SnCl", true);
+        Phenylpentanoicacid = new Material.Builder(getMaterialsId(), gregtechId("phenylpentanoicacid")).fluid()
+                .color(0xFCF2DC).build().setFormula("C11H14O2", true);
 
+        // dusts
+        Fullerene = new Material.Builder(getMaterialsId(), gregtechId("fullerene")).dust().color(0xF9D16E).build()
+                .setFormula("C60", true);
+        TiAlChloride = new Material.Builder(getMaterialsId(), gregtechId("ti_al_chloride")).dust().color(0x1E88E5)
+                .build().setFormula("TiAlCl3", true);
+        UnfoldedFullerene = new Material.Builder(getMaterialsId(), gregtechId("unfolded_fullerene")).dust()
+                .color(0x4527A0).build().setFormula("C60", true);
+        Succinimide = new Material.Builder(getMaterialsId(), gregtechId("succinimide")).dust().color(0x163217).build()
+                .setFormula("C4H5NO2", true);
+        PotassiumBromide = new Material.Builder(getMaterialsId(), gregtechId("potassium_bromide")).dust()
+                .color(0xDEBDBD).build().setFormula("KBr", true);
+        Benzophenanthrenylacetonitrile = new Material.Builder(getMaterialsId(),
+                gregtechId("benzophenanthrenylacetonitrile")).dust().color(0xC62828).build().setFormula("?", true);
+        Bromosuccinimide = new Material.Builder(getMaterialsId(), gregtechId("bromosuccinimide")).dust().color(0x315458)
+                .build().setFormula("C4H4BrNO2", true);
+        PotassiumCyanide = new Material.Builder(getMaterialsId(), gregtechId("potassium_cyanide")).dust()
+                .color(0xFFCA28).build().setFormula("KCN", true);
+        Methylbenzophenanthrene = new Material.Builder(getMaterialsId(), gregtechId("methylbenzophenanthrene")).dust()
+                .color(0x327F89).build().setFormula("RhN", true);
+        TinChloride = new Material.Builder(getMaterialsId(), gregtechId("tin_chloride")).dust().color(0x9A8FBA).build()
+                .setFormula("TnCl", true);
+        DisodiumPhosphate = new Material.Builder(getMaterialsId(), gregtechId("disodium_phosphate")).dust()
+                .color(0x3A77AD).build().setFormula("Na2HPO4", true);
+        Cyanonaphthalene = new Material.Builder(getMaterialsId(), gregtechId("cyanonaphthalene")).dust().color(0x554B67)
+                .build().setFormula("C10H7CN", true);
+        SodiumBromide = new Material.Builder(getMaterialsId(), gregtechId("sodium_bromide")).dust().color(0x837798)
+                .build().setFormula("NaBr", true);
+        PotassiumPermanganate = new Material.Builder(getMaterialsId(), gregtechId("potassium_permanganate")).dust()
+                .color(0xE6EE9C).build().setFormula("KMnO4", true);
+        PdFullereneMatrix = new Material.Builder(getMaterialsId(), gregtechId("palladium_fullerene_matrix")).dust()
+                .color(0x4527A0).build().setFormula("RhN", true);
+        AluminoSilicateWool = new Material.Builder(getMaterialsId(), gregtechId("alumino_silicate_wool")).dust()
+                .color(0x4DD0E1).build().setFormula("RhN", true);
+        Sarcosine = new Material.Builder(getMaterialsId(), gregtechId("sarcosine")).dust().color(0x3D8540).build()
+                .setFormula("C3H7NO2", true);
+        Ferrocene = new Material.Builder(getMaterialsId(), gregtechId("ferrocene")).dust().color(0xD1C4E9).build()
+                .setFormula("C10H10Fe", true);
+        PdIrReOCeOS = new Material.Builder(getMaterialsId(), gregtechId("pd_ir_re_o_ce_o_s")).dust().color(0xF9C528)
+                .build().setFormula("RhN", true);
+        LithiumAluminiumHydride = new Material.Builder(getMaterialsId(), gregtechId("lithium_aluminium_hydride")).dust()
+                .color(0xFF5722).build().setFormula("LiAlH4", true);
+        PCBS = new Material.Builder(getMaterialsId(), gregtechId("pcbs")).dust().color(0x113B61).build()
+                .setFormula("RhN", true);
+        Phosgene = new Material.Builder(getMaterialsId(), gregtechId("phosgene")).dust().color(0x2E7D32).build()
+                .setFormula("COCl2", true);
+        SilverOxide = new Material.Builder(getMaterialsId(), gregtechId("silver_oxide")).dust().color(0xB5B4B7).build()
+                .setFormula("AgO2", true);
+        BoronFluoride = new Material.Builder(getMaterialsId(), gregtechId("boron_fluoride")).dust().color(0x170E32)
+                .build().setFormula("BoF2", true);
+        SilverChloride = new Material.Builder(getMaterialsId(), gregtechId("silver_chloride")).dust().color(0x2A632D)
+                .build().setFormula("AgCl", true);
+        PCBA = new Material.Builder(getMaterialsId(), gregtechId("pcba")).dust().color(0x8E711A).build()
+                .setFormula("RhN", true);
+        LithiumIodide = new Material.Builder(getMaterialsId(), gregtechId("lithium_iodide")).dust().color(0xDEBDBD)
+                .build().setFormula("LiI", true);
+        AluminiumHydride = new Material.Builder(getMaterialsId(), gregtechId("aluminium_hydride")).dust()
+                .color(0x98BEE0).build().setFormula("AlH4", true);
     }
 
     private static int getMaterialsId() {

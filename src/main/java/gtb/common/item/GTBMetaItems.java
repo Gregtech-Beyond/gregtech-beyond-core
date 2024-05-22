@@ -182,6 +182,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem LITHIUM_SIEVE;
     public static MetaItem<?>.MetaValueItem LITHIUM_SATURATED_LITHIUM_SIEVE;
     public static MetaItem<?>.MetaValueItem LASER_ASSEMBLY;
+    public static MetaItem<?>.MetaValueItem UVA_HALIDE_LAMP;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
