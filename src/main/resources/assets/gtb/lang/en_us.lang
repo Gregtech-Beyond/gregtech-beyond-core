@@ -352,6 +352,18 @@ metaitem.nak_coolant_cell.name=NaK Coolant Cell
 
 #Materials
 
+gregtech.material.one_butane.name=1-Butane
+gregtech.material.triethylaluminium.name=Triethylaluminium
+gregtech.material.trimethylaluminium.name=Trimethylaluminium
+gregtech.material.polymerized_styrene_butadiene_solution.name=Polymerized Styrene Butadiene Solution
+gregtech.material.n_butyllithium.name=n-Butyllithium
+gregtech.material.styrene_butadiene_solution.name=Styrene Butadiene Solution
+gregtech.material.zirconium_dioxde_solution.name=Zirconium Dioxide Solution
+gregtech.material.zirconium_chloride.name=Zirconium Chloride
+gregtech.material.grisium.name=Grisium
+gregtech.material.recrystallized_zirconium_dioxide.name=Recrystallized Zirconium Dioxide
+gregtech.material.methyl_aluminoxane.name=Methyl Aluminoxane
+gregtech.material.nitrogenized_caprolactam.name=Nitrogenized Caprolactam
 gregtech.material.iodine_slurry=Iodine Slurry
 gregtech.material.boron_free_solution=Boron Free Solution
 gregtech.material.brominated_brine=Brominated Brine
