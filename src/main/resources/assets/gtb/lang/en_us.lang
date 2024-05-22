@@ -54,8 +54,8 @@ recipemap.chemical_plant.name=Chemical Plant
 recipemap.clarifier.name=Clarification
 recipemap.froth_flotation_unit.name=Froth Flotation
 recipemap.digester.name=Digestion
-
-
+recipemap.polymerization_tank.name=Polymerization
+recipemap.thermal_press.name=Thermal Press
 
 
 
@@ -154,6 +154,8 @@ gtb.machine.digester.name=Digester
 gtb.machine.froth_flotation_unit.name=Froth Flotation Unit
 gtb.machine.clarifier.name=Clarifier
 gtb.machine.chemical_plant.name=Chemical Plant
+gtb.machine.polymerization_tank.name=Polymerization Tank
+gtb.machine.thermal_press.name=Thermal Press
 
 # MetaItems
 
@@ -352,18 +354,18 @@ metaitem.nak_coolant_cell.name=NaK Coolant Cell
 
 #Materials
 
-gregtech.material.one_butane.name=1-Butane
-gregtech.material.triethylaluminium.name=Triethylaluminium
-gregtech.material.trimethylaluminium.name=Trimethylaluminium
-gregtech.material.polymerized_styrene_butadiene_solution.name=Polymerized Styrene Butadiene Solution
-gregtech.material.n_butyllithium.name=n-Butyllithium
-gregtech.material.styrene_butadiene_solution.name=Styrene Butadiene Solution
-gregtech.material.zirconium_dioxde_solution.name=Zirconium Dioxide Solution
-gregtech.material.zirconium_chloride.name=Zirconium Chloride
-gregtech.material.grisium.name=Grisium
-gregtech.material.recrystallized_zirconium_dioxide.name=Recrystallized Zirconium Dioxide
-gregtech.material.methyl_aluminoxane.name=Methyl Aluminoxane
-gregtech.material.nitrogenized_caprolactam.name=Nitrogenized Caprolactam
+gregtech.material.one_butane=1-Butane
+gregtech.material.triethylaluminium=Triethylaluminium
+gregtech.material.trimethylaluminium=Trimethylaluminium
+gregtech.material.polymerized_styrene_butadiene_solution=Polymerized Styrene Butadiene Solution
+gregtech.material.n_butyllithium=n-Butyllithium
+gregtech.material.styrene_butadiene_solution=Styrene Butadiene Solution
+gregtech.material.zirconium_dioxide_solution=Zirconium Dioxide Solution
+gregtech.material.zirconium_chloride=Zirconium Chloride
+gregtech.material.grisium=Grisium
+gregtech.material.recrystallized_zirconium_dioxide=Recrystallized Zirconium Dioxide
+gregtech.material.methyl_aluminoxane=Methyl Aluminoxane
+gregtech.material.nitrogenized_caprolactam=Nitrogenized Caprolactam
 gregtech.material.iodine_slurry=Iodine Slurry
 gregtech.material.boron_free_solution=Boron Free Solution
 gregtech.material.brominated_brine=Brominated Brine
@@ -399,21 +401,7 @@ gregtech.material.ziegler_natta_catalyst=Ziegler Natta Catalyst
 gregtech.material.pre_polymerized_caprolactam=Pre-Polymerized Caprolactam
 gregtech.material.phosphorus_trichloride=Phosphorus Trichloride
 gregtech.material.polybenzimidazole_pre_polymer_foam=Polybenzimidazole Pre-Polymer Foam
-
 gregtech.material.benzyl_bromide=α-Bromtoluol
-gregtech.material.damp_bromine=Damp Bromine
-gregtech.material.brominated_brine=Brominated Brine
-gregtech.material.salt_free_brine=Salt Free Brine
-gregtech.material.boron_free_solution=Boron Free Solution
-gregtech.material.potassium_magnesium_salts=Potassium Magnesium Salts
-gregtech.material.sodium_salts=Sodium Salts
-gregtech.material.calcium_salts=Calcium Salts
-gregtech.material.lithium_chloride_solution=Lithium Chloride Solution
-gregtech.material.iodized_brine=Iodized Brine
-gregtech.material.iodine_slurry=Iodine Slurry
-gregtech.material.brine=Brine
-gregtech.material.crude_bromine_solution=Crude Bromine Solution
-gregtech.material.concentrated_brine=Concentrated Brine
 gregtech.material.iso_octane=Iso Octane
 gregtech.material.tributylamine=Tributylamine
 gregtech.material.carbon_sulfide=Carbon Sulfide
