@@ -106,7 +106,9 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
-
+    public static Material UrethanePrePolymer;
+    public static Material Polyurethane;
+    public static Material TolueneDiisocyanate;
     public static Material Dimethylsiloxane;
     public static Material Rhodium_III_Chloride;
     public static Material HydrofluoricMethane;

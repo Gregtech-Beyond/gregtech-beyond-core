@@ -939,9 +939,22 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("Rh3(Cl2)", true);
 
         Dimethylsiloxane = new Material.Builder(getMaterialsId(), gregtechId("dimethylsiloxane"))
+                .fluid()
+                .color(0xAB9E7F)
+                .build().setFormula("Si(CH3)2O", true);
+
+        UrethanePrePolymer = new Material.Builder(getMaterialsId(), gregtechId("urethane_pre_polymer"))
                 .dust()
                 .color(0xAB9E7F)
                 .build().setFormula("Si(CH3)2O", true);
+
+        Polyurethane = new Material.Builder(getMaterialsId(), gregtechId("polyurethane"))
+                .fluid()
+                .dust()
+                .ingot()
+                .flags(MaterialFlags.GENERATE_PLATE)
+                .color(0xAB9E7F)
+                .build().setFormula("C17H16N2O2", true);
 
 
         // fluid
