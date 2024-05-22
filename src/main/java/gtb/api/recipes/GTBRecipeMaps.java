@@ -111,4 +111,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> POLYMERIZATION_TANK = new RecipeMap<>("polymerization_tank",
             2, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> THERMAL_PRESS = new RecipeMap<>("thermal_press",
+            4, 2, 2, 2, new SimpleRecipeBuilder(), false);
 }
