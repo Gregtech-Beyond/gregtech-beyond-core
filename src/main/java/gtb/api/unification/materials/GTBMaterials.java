@@ -106,6 +106,10 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+    public static Material OneButane;
+    public static Material PolymerizedStyreneButadieneSolution;
+    public static Material nButyllithium;
+    public static Material StyreneButadieneSolution;
     public static Material ZirconiumDioxideSolution;
     public static Material ZirconiumChloride;
     public static Material TrimethylAluminium;
