@@ -803,34 +803,68 @@ public class GTBFirstDegreeMaterials {
         Grisium = new Material.Builder(getMaterialsId(), gregtechId("grisium"))
                 .fluid()
                 .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
-                .color(0xF9A825)
+                .color(0x575979)
                 .build().setFormula("Ti9C9K9Li9S9H5", true);
 
         SodiumSulfideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
                 .fluid()
-                .color(0xF9A825)
+                .color(0xC1A86B)
                 .build().setFormula("Na2S(H2O)", true);
 
         MethylAluminoxane = new Material.Builder(getMaterialsId(), gregtechId("methyl_aluminoxane"))
                 .dust()
-                .color(0xF9A825)
+                .color(0x508B91)
                 .build().setFormula("AlCH30", true);
 
-        RecrystallizedZirconiumDioxide = new Material.Builder(getMaterialsId(), gregtechId("recrystallized_zirconium_dioxide"))
-                .dust()
-                .color(0xF9A825)
-                .build().setFormula("Zr*O2", true);
+        RecrystallizedZirconiumDioxide = new Material.Builder(getMaterialsId(),
+                gregtechId("recrystallized_zirconium_dioxide"))
+                        .dust()
+                        .color(0xAA245F)
+                        .build().setFormula("Zr*O2", true);
 
         ZirconiumChloride = new Material.Builder(getMaterialsId(), gregtechId("zirconium_chlorine"))
-                .dust()
-                .color(0xF9A825)
+                .fluid()
+                .color(0x5A8882)
                 .build().setFormula("ZrCl", true);
 
         ZirconiumDioxideSolution = new Material.Builder(getMaterialsId(), gregtechId("zirconium_dioxide_solution"))
-                .dust()
-                .color(0xF9A825)
-                .build().setFormula("ZrCl?", true);
+                .fluid()
+                .color(0xAD1457)
+                .build().setFormula("ZrO2?", true);
 
+        StyreneButadieneSolution = new Material.Builder(getMaterialsId(), gregtechId("styrene_butadiene_solution"))
+                .fluid()
+                .color(0xCD846D)
+                .build().setFormula("ZrO2?", true);
+
+        nButyllithium = new Material.Builder(getMaterialsId(), gregtechId("n_butyllithium"))
+                .fluid()
+                .color(0x64817C)
+                .build().setFormula("ZrO2?", true);
+
+        PolymerizedStyreneButadieneSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("polymerized_styrene_butadiene_solution"))
+                        .fluid()
+                        .color(0x454545)
+                        .build().setFormula("ZrO2?", true);
+
+        TriethylAluminium = new Material.Builder(getMaterialsId(),
+                gregtechId("triethylaluminium"))
+                        .fluid()
+                        .color(0x4780B9)
+                        .build().setFormula("Al2(C2H5)6", true);
+
+        TrimethylAluminium = new Material.Builder(getMaterialsId(),
+                gregtechId("trimethylaluminium"))
+                        .fluid()
+                        .color(0x0097A7)
+                        .build().setFormula("ZrO2?", true);
+
+        OneButane = new Material.Builder(getMaterialsId(),
+                gregtechId("one_butane"))
+                        .fluid()
+                        .color(0x995C57)
+                        .build().setFormula("C4H9", true);
     }
 
     private static int getMaterialsId() {
