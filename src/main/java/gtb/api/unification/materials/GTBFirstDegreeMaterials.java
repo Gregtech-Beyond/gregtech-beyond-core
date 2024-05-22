@@ -908,6 +908,37 @@ public class GTBFirstDegreeMaterials {
                 .color(0xFAD28F)
                 .build().setFormula("Rh", true);
 
+        FluorohydrideAmmoniumCarbama = new Material.Builder(getMaterialsId(), gregtechId("fluorohydride_ammonium_carbama"))
+                .fluid()
+                .color(0x729A74)
+                .build().setFormula("Rh", true);
+
+        HydrogenatedCarbontetrafluoride = new Material.Builder(getMaterialsId(), gregtechId("hydrogenated_carbon_tetrafluoride"))
+                .fluid()
+                .color(0x788C79)
+                .build().setFormula("HCF4", true);
+
+        PCBB = new Material.Builder(getMaterialsId(), gregtechId("pcbb"))
+                .fluid()
+                .color(0x3C2A51)
+                .build().setFormula("pcbb", true);
+
+        Rhodium_II_Acetate = new Material.Builder(getMaterialsId(), gregtechId("rhodium_ii_acetate"))
+                .dust()
+                .color(0xAB9E7F)
+                .build().setFormula("Rh2(OOCCH3)4", true);
+
+        HydrofluoricMethane = new Material.Builder(getMaterialsId(), gregtechId("hydrofluoric_methane"))
+                .fluid()
+                .color(0xAB9E7F)
+                .build().setFormula("HF(CH4)", true);
+
+        Rhodium_III_Chloride = new Material.Builder(getMaterialsId(), gregtechId("rhodium_iii_chloride"))
+                .dust()
+                .color(0xAB9E7F)
+                .build().setFormula("Rh3(Cl2)", true);
+
+
         // fluid
         ThionylChloride = new Material.Builder(getMaterialsId(), gregtechId("thionyl_chloride")).fluid().color(0x79A29F)
                 .build().setFormula("SOCl2", true);

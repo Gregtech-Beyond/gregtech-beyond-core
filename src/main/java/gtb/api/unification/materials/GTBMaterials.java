@@ -106,6 +106,12 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+    public static Material Rhodium_III_Chloride;
+    public static Material HydrofluoricMethane;
+    public static Material Rhodium_II_Acetate;
+    public static Material PCBB;
+    public static Material HydrogenatedCarbontetrafluoride;
+    public static Material FluorohydrideAmmoniumCarbama;
     public static Material TrimethyltinChloride;
     public static Material Phenylpentanoicacid;
     public static Material AluminiumHydride;
