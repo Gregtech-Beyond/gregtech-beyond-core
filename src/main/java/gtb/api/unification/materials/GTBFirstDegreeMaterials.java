@@ -994,23 +994,23 @@ public class GTBFirstDegreeMaterials {
                 .color(0x4DD0E1).build().setFormula("RhN", true);
         Sarcosine = new Material.Builder(getMaterialsId(), gregtechId("sarcosine")).dust().color(0x3D8540).build()
                 .setFormula("C3H7NO2", true);
-        Ferrocene = new Material.Builder(getMaterialsId(), gregtechId("ferrocene")).dust().color(0xD1C4E9).build()
+        Ferrocene = new Material.Builder(getMaterialsId(), gregtechId("ferrocene")).fluid().color(0xD1C4E9).build()
                 .setFormula("C10H10Fe", true);
         PdIrReOCeOS = new Material.Builder(getMaterialsId(), gregtechId("pd_ir_re_o_ce_o_s")).dust().color(0xF9C528)
                 .build().setFormula("RhN", true);
         LithiumAluminiumHydride = new Material.Builder(getMaterialsId(), gregtechId("lithium_aluminium_hydride")).dust()
                 .color(0xFF5722).build().setFormula("LiAlH4", true);
-        PCBS = new Material.Builder(getMaterialsId(), gregtechId("pcbs")).dust().color(0x113B61).build()
+        PCBS = new Material.Builder(getMaterialsId(), gregtechId("pcbs")).fluid().color(0x113B61).build()
                 .setFormula("RhN", true);
-        Phosgene = new Material.Builder(getMaterialsId(), gregtechId("phosgene")).dust().color(0x2E7D32).build()
+        Phosgene = new Material.Builder(getMaterialsId(), gregtechId("phosgene")).fluid().color(0x2E7D32).build()
                 .setFormula("COCl2", true);
         SilverOxide = new Material.Builder(getMaterialsId(), gregtechId("silver_oxide")).dust().color(0xB5B4B7).build()
                 .setFormula("AgO2", true);
-        BoronFluoride = new Material.Builder(getMaterialsId(), gregtechId("boron_fluoride")).dust().color(0x170E32)
+        BoronFluoride = new Material.Builder(getMaterialsId(), gregtechId("boron_fluoride")).fluid().color(0x170E32)
                 .build().setFormula("BoF2", true);
         SilverChloride = new Material.Builder(getMaterialsId(), gregtechId("silver_chloride")).dust().color(0x2A632D)
                 .build().setFormula("AgCl", true);
-        PCBA = new Material.Builder(getMaterialsId(), gregtechId("pcba")).dust().color(0x8E711A).build()
+        PCBA = new Material.Builder(getMaterialsId(), gregtechId("pcba")).fluid().color(0x8E711A).build()
                 .setFormula("RhN", true);
         LithiumIodide = new Material.Builder(getMaterialsId(), gregtechId("lithium_iodide")).dust().color(0xDEBDBD)
                 .build().setFormula("LiI", true);
