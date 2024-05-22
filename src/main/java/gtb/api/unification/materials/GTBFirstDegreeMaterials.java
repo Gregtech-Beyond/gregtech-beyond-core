@@ -649,6 +649,7 @@ public class GTBFirstDegreeMaterials {
 
         Triphenylphosphine = new Material.Builder(getMaterialsId(), gregtechId("triphenylphosphine"))
                 .fluid()
+                .dust()
                 .color(0x333537)
                 .build().setFormula("(C6H5)3P", true);
 
