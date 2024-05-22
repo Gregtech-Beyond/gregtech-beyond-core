@@ -926,5 +926,48 @@ public class PolymerizationRework {
                 .EUt(80)
                 .buildAndRegister();
 
+        //Polystyrene
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .fluidInputs(Styrene.getFluid(1000))
+                .fluidOutputs(Polystyrene.getFluid(1000))
+                .fluidInputs(Air.getFluid(1000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .fluidInputs(Styrene.getFluid(1000))
+                .fluidOutputs(Polystyrene.getFluid(1000))
+                .fluidInputs(Oxygen.getFluid(1000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .fluidInputs(Styrene.getFluid(1000))
+                .fluidOutputs(Polystyrene.getFluid(4000))
+                .notConsumable(dust, KaminskyCatalyst)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .fluidInputs(Styrene.getFluid(1000))
+                .fluidOutputs(Polystyrene.getFluid(2000))
+                .notConsumable(dust, PhilipsCatalyst)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .fluidInputs(Styrene.getFluid(1000))
+                .fluidOutputs(Polystyrene.getFluid(3000))
+                .notConsumable(dust, ZieglerNattaCatalyst)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+
     }
 }

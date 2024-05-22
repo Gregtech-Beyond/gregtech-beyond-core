@@ -956,6 +956,14 @@ public class GTBFirstDegreeMaterials {
                 .color(0xAB9E7F)
                 .build().setFormula("C17H16N2O2", true);
 
+        Polystyrene = new Material.Builder(getMaterialsId(), gregtechId("polystyrene"))
+                .fluid()
+                .dust()
+                .ingot()
+                .flags(MaterialFlags.GENERATE_PLATE)
+                .color(0xAB9E7F)
+                .build().setFormula("C17H16N2O2", true);
+
 
         // fluid
         ThionylChloride = new Material.Builder(getMaterialsId(), gregtechId("thionyl_chloride")).fluid().color(0x79A29F)

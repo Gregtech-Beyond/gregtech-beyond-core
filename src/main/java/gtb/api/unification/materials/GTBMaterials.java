@@ -106,6 +106,7 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+    public static Material Polystyrene;
     public static Material UrethanePrePolymer;
     public static Material Polyurethane;
     public static Material TolueneDiisocyanate;
