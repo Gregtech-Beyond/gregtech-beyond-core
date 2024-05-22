@@ -336,17 +336,27 @@ metaitem.sterilized_syringe.name=Sterilized Syringe
 metaitem.sheep_blood_syringe.name=Sheep Blood Syringe
 metaitem.lithium_sieve.name=Lithium Sieve
 metaitem.cotton.name=Cotton
-metaitem.lithium_saturated_sieve_lithum.name=Lithium Saturated Lithium Sieve
+metaitem.lithium_saturated_sieve_lithium.name=Lithium Saturated Lithium Sieve
 metaitem.boron_saturated_yarn.name=Boron Saturated Yarn
 metaitem.boron_retaining_yarn.name=Boron Retaining Yarn
 metaitem.coolant_cell.name=Coolant Cell
 metaitem.nak_coolant_cell.name=NaK Coolant Cell
+metaitem.uva_halide_lamp.name=UVA Halide Lamp
+metaitem.uva_lamp_core.name=UVA Lamp Core
 
 
 
 
 
 #Materials
+gregtech.material.trimethyl_tin_chloride=Trimethyl Tin Chloride
+gregtech.material.benzyol_peroxide=Benzyol Peroxide
+gregtech.material.benzyol_chloride=Benzyol Chloride
+gregtech.material.iron_2_chloride=Iron II Chloride
+gregtech.material.dimethyl_sulfide=Dimethyl Sulfide
+gregtech.material.napthal_dehyde=Napthal Dehyde
+gregtech.material.zirconium_chlorine=Zirconium Chloride
+gregtech.material.bio_plastic=Bio Plastic
 gregtech.material.trimethyltin_chloride=Trimethyltin Chloride
 gregtech.material.phenylpentanoicacid=Phenylpentanoicacid
 gregtech.material.aluminium_hydride=Aluminium Hydride
