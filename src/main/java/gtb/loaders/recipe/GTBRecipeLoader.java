@@ -15,6 +15,8 @@ public final class GTBRecipeLoader {
         RecipeMaps.MIXER_RECIPES.setMaxFluidInputs(4);
         RecipeMaps.EXTRACTOR_RECIPES.setMaxInputs(2);
         RecipeMaps.CHEMICAL_RECIPES.setMaxOutputs(3);
+        RecipeMaps.LASER_ENGRAVER_RECIPES.setMaxFluidOutputs(1);
+        RecipeMaps.LASER_ENGRAVER_RECIPES.setMaxFluidInputs(1);
 
         AlcoholLine.init();
         Catalysts.init();
