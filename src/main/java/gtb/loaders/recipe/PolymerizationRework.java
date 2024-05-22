@@ -968,6 +968,21 @@ public class PolymerizationRework {
                 .EUt(80)
                 .buildAndRegister();
 
+        //Polyvinyl Butyral Line
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .fluidInputs(PolyvinylAcetate.getFluid(144))
+                .fluidInputs(Butyraldehyde.getFluid(255))
+                .fluidOutputs(PolyvinylButyral.getFluid(144))
+                .notConsumable(dust, ZieglerNattaCatalyst)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new FluidStack[] {PolyvinylAcetate.getFluid(144),Butyraldehyde.getFluid(250) });
+
+        
 
     }
 }
