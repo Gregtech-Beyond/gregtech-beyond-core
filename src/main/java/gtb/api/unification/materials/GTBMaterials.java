@@ -106,6 +106,8 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+
+    public static Material Dimethylsiloxane;
     public static Material Rhodium_III_Chloride;
     public static Material HydrofluoricMethane;
     public static Material Rhodium_II_Acetate;

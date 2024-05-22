@@ -938,6 +938,11 @@ public class GTBFirstDegreeMaterials {
                 .color(0xAB9E7F)
                 .build().setFormula("Rh3(Cl2)", true);
 
+        Dimethylsiloxane = new Material.Builder(getMaterialsId(), gregtechId("dimethylsiloxane"))
+                .dust()
+                .color(0xAB9E7F)
+                .build().setFormula("Si(CH3)2O", true);
+
 
         // fluid
         ThionylChloride = new Material.Builder(getMaterialsId(), gregtechId("thionyl_chloride")).fluid().color(0x79A29F)
