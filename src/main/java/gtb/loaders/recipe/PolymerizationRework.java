@@ -330,7 +330,10 @@ public class PolymerizationRework {
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(dust, RawStyreneButadieneRubber, 9),
-                        OreDictUnifier.get(dust, Sulfur)});
+                        OreDictUnifier.get(dust, Sulfur) });
 
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(dust, RawStyreneButadieneRubber, 9),
+                        OreDictUnifier.get(dust, Sulfur) });
     }
 }
