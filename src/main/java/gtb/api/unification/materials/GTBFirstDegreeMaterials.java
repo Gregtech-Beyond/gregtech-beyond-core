@@ -910,7 +910,7 @@ public class GTBFirstDegreeMaterials {
         // fluid
         ThionylChloride = new Material.Builder(getMaterialsId(), gregtechId("thionyl_chloride")).fluid().color(0x79A29F)
                 .build().setFormula("SOCl2", true);
-        SuccinicAcid = new Material.Builder(getMaterialsId(), gregtechId("succinic_acid")).fluid().color(0xEDCD3B)
+        SuccinicAcid = new Material.Builder(getMaterialsId(), gregtechId("succinic_acid")).dust().color(0xEDCD3B)
                 .build().setFormula("C4H6O4", true);
         EthylBenzene = new Material.Builder(getMaterialsId(), gregtechId("ethyl_benzene")).fluid().color(0x7D7C79)
                 .build().setFormula("C8H10", true);
