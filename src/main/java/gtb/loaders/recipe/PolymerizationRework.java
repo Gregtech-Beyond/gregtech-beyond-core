@@ -259,12 +259,78 @@ public class PolymerizationRework {
                 .EUt(670)
                 .buildAndRegister();
 
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Ethanol.getFluid(1000))
+                .fluidInputs(Butadiene.getFluid(3000))
+                .fluidInputs(Styrene.getFluid(1000))
+                .fluidOutputs(StyreneButadieneSolution.getFluid(5000))
+                .duration(800)
+                .EUt(640)
+                .buildAndRegister();
 
+        DEHYDRATOR.recipeBuilder()
+                .fluidInputs(PolymerizedStyreneButadieneSolution.getFluid(5000))
+                .fluidOutputs(DilutedSulfuricAcid.getFluid(1000))
+                .output(dust, RawStyreneButadieneRubber, 12)
+                .duration(1200)
+                .EUt(20)
+                .buildAndRegister();
 
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new FluidStack[] { Air.getFluid(15000),
+                        Styrene.getFluid(1000),
+                        Butadiene.getFluid(3000) });
 
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new FluidStack[] { Oxygen.getFluid(15000),
+                        Styrene.getFluid(1000),
+                        Butadiene.getFluid(3000) });
 
+        POLYMERIZATION_TANK.recipeBuilder()
+                .fluidInputs(StyreneButadieneSolution.getFluid(1000))
+                .notConsumable(nButyllithium.getFluid(50))
+                .fluidOutputs(PolymerizedStyreneButadieneSolution.getFluid(1000))
+                .duration(120)
+                .EUt(90)
+                .buildAndRegister();
 
+        THERMAL_PRESS.recipeBuilder()
+                .input(dust, RawStyreneButadieneRubber, 4)
+                .input(dust, Sulfur)
+                .notConsumable(dust, Zincite)
+                .output(ingot, StyreneButadieneRubber, 4)
+                .duration(900)
+                .EUt(270)
+                .buildAndRegister();
 
+        THERMAL_PRESS.recipeBuilder()
+                .input(dust, RawStyreneButadieneRubber, 4)
+                .input(dust, Sulfur)
+                .notConsumable(dust, Magnesia)
+                .output(ingot, StyreneButadieneRubber, 4)
+                .duration(900)
+                .EUt(270)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(NButanol.getFluid(1000))
+                .fluidInputs(Hydrogen.getFluid(1000))
+                .fluidOutputs(OneButane.getFluid(1000))
+                .duration(120)
+                .EUt(90)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(OneButane.getFluid(1000))
+                .input(dust, Lithium)
+                .fluidOutputs(nButyllithium.getFluid(1000))
+                .duration(201)
+                .EUt(700)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(dust, RawStyreneButadieneRubber, 9),
+                        OreDictUnifier.get(dust, Sulfur)});
 
     }
 }

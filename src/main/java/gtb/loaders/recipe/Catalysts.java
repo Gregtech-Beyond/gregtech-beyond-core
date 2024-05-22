@@ -1,6 +1,5 @@
 package gtb.loaders.recipe;
 
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -103,7 +102,7 @@ public class Catalysts {
                 .EUt(300)
                 .buildAndRegister();
 
-        //Philips Catalyst
+        // Philips Catalyst
 
         ALLOY_SMELTER_RECIPES.recipeBuilder()
                 .input(dust, SiliconDioxide, 3)
@@ -113,7 +112,7 @@ public class Catalysts {
                 .EUt(12)
                 .buildAndRegister();
 
-        //Ziegler Natta Catalyst
+        // Ziegler Natta Catalyst
 
         MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(TitaniumTetrachloride.getFluid(1000))
@@ -131,7 +130,7 @@ public class Catalysts {
                 .EUt(90)
                 .buildAndRegister();
 
-        //Kaminsky Catalyst
+        // Kaminsky Catalyst
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .notConsumable(Toluene.getFluid(1000))
@@ -182,7 +181,5 @@ public class Catalysts {
                 .duration(500)
                 .EUt(670)
                 .buildAndRegister();
-
-
     }
 }
