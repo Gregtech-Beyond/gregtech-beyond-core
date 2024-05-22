@@ -867,6 +867,44 @@ public class GTBFirstDegreeMaterials {
                         .fluid()
                         .color(0x995C57)
                         .build().setFormula("C4H9", true);
+
+        PlatinumMetallicPowder = new Material.Builder(getMaterialsId(),
+                gregtechId("platinum_metallic_powder"))
+                .dust()
+                .color(0xFAD28F)
+                .build().setFormula("Pt?", true);
+
+        CrudeRhodiumMetal = new Material.Builder(getMaterialsId(), gregtechId("crude_rhodium_metal"))
+                .dust()
+                .color(0xFAD28F)
+                .build().setFormula("Rh?", true);
+
+        RhodiumSalt = new Material.Builder(getMaterialsId(), gregtechId("rhodium_salt"))
+                .dust()
+                .color(0xFAD28F)
+                .build().setFormula("Rh?", true);
+
+        RhodiumSaltSolution = new Material.Builder(getMaterialsId(), gregtechId("rhodium_salt_solution"))
+                .fluid()
+                .color(0xFAD28F)
+                .build().setFormula("Rh?", true);
+
+        RhodiumNitrate = new Material.Builder(getMaterialsId(), gregtechId("rhodium_nitrate"))
+                .dust()
+                .color(0xFAD28F)
+                .build().setFormula("RhN", true);
+
+        RhodiumFilterCake = new Material.Builder(getMaterialsId(), gregtechId("rhodium_filter_cake"))
+                .dust()
+                .color(0xFAD28F)
+                .build().setFormula("RhN", true);
+
+        RhodiumFilterCakeSolution = new Material.Builder(getMaterialsId(), gregtechId("rhodium_filter_cake"))
+                .fluid()
+                .color(0xFAD28F)
+                .build().setFormula("Rh", true);
+
+
     }
 
     private static int getMaterialsId() {

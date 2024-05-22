@@ -106,6 +106,14 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+
+    public static Material RhodiumFilterCakeSolution;
+    public static Material RhodiumNitrate;
+    public static Material RhodiumFilterCake;
+    public static Material RhodiumSaltSolution;
+    public static Material RhodiumSalt;
+    public static Material CrudeRhodiumMetal;
+    public static Material PlatinumMetallicPowder;
     public static Material OneButane;
     public static Material PolymerizedStyreneButadieneSolution;
     public static Material nButyllithium;
