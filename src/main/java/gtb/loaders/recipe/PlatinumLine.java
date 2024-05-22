@@ -248,5 +248,11 @@ public final class PlatinumLine {
                 .EUt(30)
                 .duration(500)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(CENTRIFUGE_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, IridiumMetalResidue, 5) });
+
+
     }
 }
