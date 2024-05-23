@@ -131,5 +131,13 @@ public class OrganicChemistry {
                 .duration(200)
                 .EUt(800)
                 .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Boron)
+                .fluidInputs(Fluorine.getFluid(2000))
+                .fluidOutputs(BoronFluoride.getFluid(3000))
+                .duration(212)
+                .EUt(78)
+                .buildAndRegister();
     }
 }

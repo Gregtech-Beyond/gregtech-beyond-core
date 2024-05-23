@@ -106,6 +106,43 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+    public static Material AmineMixture;
+    public static Material Trimethylamine;
+    public static Material SodiumPhosphotungstate;
+    public static Material AmmoniumPersulfate;
+    public static Material CetaneTrimethylAmmoniumBromide;
+    public static Material Oct_1_ene;
+    public static Material SodiumPhosphomolybdate;
+    public static Material DehydrogenationCatalyst;
+    public static Material BerylliumFluoride;
+    public static Material Mercaptophenol;
+    public static Material ChlorodiisopropylPhosphine;
+    public static Material IridiumCyclooctadienylChlorideDimer;
+    public static Material Cyclooctadiene;
+    public static Material ParaXylene;
+    public static Material Dibromomethylbenzene;
+    public static Material Terephthalaldehyde;
+    public static Material AuPdCCatalyst;
+    public static Material PdCCatalyst;
+    public static Material Isochloropropane;
+    public static Material Resorcinol;
+    public static Material SodiumAcetate;
+    public static Material Dinitrodipropanyloxybenzene;
+    public static Material SodiumOxide;
+    public static Material PreZylon;
+    public static Material Zylon;
+    public static Material OrthoXyleneZeoliteMixture;
+    public static Material OrthoXylene;
+    public static Material NitrogenPentoxide;
+    public static Material LithiumPeroxideSolution;
+    public static Material LithiumCarbonateSolution;
+    public static Material TitaniumNitrate;
+    public static Material PolystyreneNanoParticles;
+    public static Material LithiumTitanate;
+    public static Material SodiumFluoride;
+    public static Material PotassiumFluoride;
+    public static Material PotassiumSulfate;
+    public static Material MagnesiumSulfate;
     public static Material Polystyrene;
     public static Material UrethanePrePolymer;
     public static Material Polyurethane;

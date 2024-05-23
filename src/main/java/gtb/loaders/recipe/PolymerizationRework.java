@@ -980,5 +980,191 @@ public class PolymerizationRework {
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new FluidStack[] { PolyvinylAcetate.getFluid(144), Butyraldehyde.getFluid(250) });
+
+        // Polystyrene Nanoparticles
+        MIXER_RECIPES.recipeBuilder().duration(160).EUt(960)
+                .notConsumable(dust, Nickel)
+                .fluidInputs(Methanol.getFluid(1000))
+                .fluidInputs(Ammonia.getFluid(1000))
+                .fluidOutputs(AmineMixture.getFluid(2000))
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder().duration(200).EUt(480)
+                .fluidInputs(AmineMixture.getFluid(2000))
+                .fluidOutputs(Trimethylamine.getFluid(500))
+                .fluidOutputs(Dimethylamine.getFluid(800))
+                .fluidOutputs(Methylamine.getFluid(700))
+                .buildAndRegister();
+
+        DEHYDRATOR.recipeBuilder().duration(180).EUt(1920)
+                .fluidInputs(SodiumTungstate.getFluid(12000))
+                .fluidInputs(PhosphoricAcid.getFluid(1000))
+                .output(dust, SodiumPhosphotungstate, 56)
+                .output(dust, SodiumHydroxide, 3)
+                .output(dust, SodiumOxide, 30)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder().duration(160).EUt(480)
+                .fluidInputs(Propene.getFluid(1000))
+                .fluidInputs(Water.getFluid(1000))
+                .fluidOutputs(IsopropylAlcohol.getFluid(1000))
+                .notConsumable(dust, SodiumPhosphomolybdate)
+                .notConsumable(dust, SodiumPhosphotungstate)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder().duration(100).EUt(120)
+                .input(dust, IridiumChloride, 8)
+                .fluidInputs(Cyclooctadiene.getFluid(2000))
+                .output(dust, IridiumCyclooctadienylChlorideDimer, 44)
+                .fluidOutputs(Chlorine.getFluid(4000))
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder().duration(140).EUt(500)
+                .input(dust, Lithium, 4)
+                .fluidInputs(Water.getFluid(2000))
+                .fluidInputs(PhosphorusTrichloride.getFluid(1000))
+                .fluidInputs(IsopropylAlcohol.getFluid(2000))
+                .output(dust, LithiumChloride, 4)
+                .fluidOutputs(LithiumHydroxideSolution.getFluid(2000))
+                .fluidOutputs(ChlorodiisopropylPhosphine.getFluid(1000))
+                .buildAndRegister();
+
+        LARGE_CHEMICAL_RECIPES.recipeBuilder().duration(200).EUt(1200)
+                .input(dust, IridiumCyclooctadienylChlorideDimer, 22)
+                .fluidInputs(ChlorodiisopropylPhosphine.getFluid(2000))
+                .fluidInputs(Mercaptophenol.getFluid(1000))
+                .notConsumable(dust, BerylliumFluoride)
+                .output(dust, DehydrogenationCatalyst, 56)
+                .fluidOutputs(Cyclooctadiene.getFluid(2000))
+                .fluidOutputs(HydrochloricAcid.getFluid(2000))
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder().duration(190).EUt(120)
+                .notConsumable(dust, DehydrogenationCatalyst)
+                .fluidInputs(Butene.getFluid(1000))
+                .fluidInputs(Octane.getFluid(1000))
+                .fluidOutputs(Butane.getFluid(1000))
+                .fluidOutputs(Oct_1_ene.getFluid(1000))
+                .buildAndRegister();
+
+        LARGE_CHEMICAL_RECIPES.recipeBuilder().duration(300).EUt(480)
+                .fluidInputs(Trimethylamine.getFluid(1000))
+                .fluidInputs(Bromine.getFluid(1000))
+                .fluidInputs(Octane.getFluid(1000))
+                .fluidInputs(Oct_1_ene.getFluid(1000))
+                .fluidOutputs(CetaneTrimethylAmmoniumBromide.getFluid(1000))
+                .fluidOutputs(Hydrogen.getFluid(1000))
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Styrene.getFluid(1000))
+                .fluidInputs(CetaneTrimethylAmmoniumBromide.getFluid(20))
+                .notConsumable(dust, AmmoniumPersulfate)
+                .output(dust, PolystyreneNanoParticles)
+                .EUt(480)
+                .duration(50)
+                .buildAndRegister();
+        // Zylon
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(OrthoXylene.getFluid(1000))
+                .input(dust, Zeolite)
+                .fluidOutputs(OrthoXyleneZeoliteMixture.getFluid(1000))
+                .EUt(480)
+                .duration(50)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(OrthoXyleneZeoliteMixture.getFluid(1000))
+                .output(dust, Zeolite)
+                .fluidOutputs(ParaXylene.getFluid(1000))
+                .EUt(480)
+                .duration(100)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(ParaXylene.getFluid(1000))
+                .fluidInputs(Oxygen.getFluid(1000))
+                .fluidInputs(Bromine.getFluid(2000))
+                .fluidOutputs(Dibromomethylbenzene.getFluid(1000))
+                .fluidOutputs(Water.getFluid(1000))
+                .EUt(7680)
+                .duration(150)
+                .buildAndRegister();
+
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Dibromomethylbenzene.getFluid(1000))
+                .fluidInputs(SulfuricAcid.getFluid(1000))
+                .fluidOutputs(Bromine.getFluid(2000))
+                .fluidOutputs(HydrogenSulfide.getFluid(1000))
+                .fluidOutputs(HydrogenPeroxide.getFluid(1000))
+                .output(dust, Terephthalaldehyde, 16)
+                .EUt(7680)
+                .duration(50)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Gold)
+                .input(dust, PdCCatalyst, 2)
+                .output(dust, AuPdCCatalyst, 3)
+                .EUt(2000000)
+                .duration(60)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(HydrochloricAcid.getFluid(1000))
+                .fluidInputs(Propene.getFluid(1000))
+                .fluidOutputs(Isochloropropane.getFluid(1000))
+                .EUt(480)
+                .duration(110)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Ethenone.getFluid(1000))
+                .fluidInputs(AceticAcid.getFluid(1000))
+                .fluidOutputs(AceticAnhydride.getFluid(1000))
+                .EUt(480)
+                .duration(80)
+                .buildAndRegister();
+
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Resorcinol.getFluid(1000))
+                .fluidInputs(Isochloropropane.getFluid(1000))
+                .fluidInputs(AceticAnhydride.getFluid(1000))
+                .fluidInputs(NitricAcid.getFluid(1000))
+                .fluidInputs(Propene.getFluid(1000))
+                .input(dust, SodiumOxide, 3)
+                .fluidOutputs(Dinitrodipropanyloxybenzene.getFluid(1000))
+                .fluidOutputs(AceticAcid.getFluid(1000))
+                .fluidOutputs(SodiumAcetate.getFluid(1000))
+                .output(dust, Salt, 2)
+                .EUt(7680)
+                .duration(50)
+                .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder().duration(80).EUt(120)
+                .fluidInputs(SodiumAcetate.getFluid(1000))
+                .output(dust, SodiumHydroxide, 3)
+                .fluidOutputs(Ethenone.getFluid(1000))
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Dinitrodipropanyloxybenzene.getFluid(1000))
+                .input(dust, Terephthalaldehyde, 16)
+                .notConsumable(dust, AuPdCCatalyst)
+                .output(dust, PreZylon)
+                .fluidOutputs(Oxygen.getFluid(6000))
+                .EUt(1966080)
+                .duration(50)
+                .buildAndRegister();
+
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, PreZylon)
+                .fluidOutputs(Propane.getFluid(2000))
+                .output(dust, Zylon)
+                .EUt(120)
+                .duration(16000)
+                .blastFurnaceTemp(10000)
+                .buildAndRegister();
     }
 }
