@@ -6,7 +6,10 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
 import static gtb.common.item.GTBMetaItems.*;
+
+import gtb.common.block.GTBMetaBlocks;
 
 public class Catalysts {
 
@@ -180,6 +183,24 @@ public class Catalysts {
                 .output(dust, RecrystallizedZirconiumDioxide, 2)
                 .duration(500)
                 .EUt(670)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(Polystyrene.getFluid(144))
+                .input(wireFine, Gold)
+                .input(dust, Glucose)
+                .output(BORON_RETAINING_YARN)
+                .duration(120)
+                .EUt(80)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, FullerenePolymerTetrix, 6)
+                .input(frameGt, FullerenePolymerMatrix)
+                .circuitMeta(6)
+                .outputs(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(FULLERENE_POLYMER_TETRIX_CASING))
+                .duration(200)
+                .EUt(800)
                 .buildAndRegister();
     }
 }
