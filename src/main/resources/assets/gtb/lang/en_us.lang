@@ -349,6 +349,33 @@ metaitem.uva_lamp_core.name=UVA Lamp Core
 
 
 #Materials
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+gregtech.material.fluorohydride_ammonium_carbama=Fluorohydride Ammonium Carbama
+gregtech.material.hydrogenated_carbon_tetrafluoride=Hydrogenated Carbon Tetrafluoride
+gregtech.material.hydrofluoric_methane=Hydrofluoric Methane
+gregtech.material.dimethylsiloxane=Dimethylsiloxane
+gregtech.material.urethane_pre_polymer=Urethane Pre-Polymer
+gregtech.material.pcbb=PCBB
+gregtech.material.polyurethane=Polyurethane
+gregtech.material.rhodium_iii_chloride=Rhodium III Chloride
+gregtech.material.rhodium_ii_acetate=Rhodium II Acetate
+gregtech.material.palladium_fullerene_matrix=Palladium Fullerene Matrix
+gregtech.material.polystyrene=Polystyrene
+gregtech.material.toluene_diiscocyanate=Toluene Diiscocyanate
 gregtech.material.trimethyl_tin_chloride=Trimethyl Tin Chloride
 gregtech.material.benzyol_peroxide=Benzyol Peroxide
 gregtech.material.benzyol_chloride=Benzyol Chloride
@@ -382,7 +409,7 @@ gregtech.material.hydroiodic_acid=Hydroiodic Acid
 gregtech.material.acrylo_nitrile=Acrylo Nitrile
 gregtech.material.lithium_aluminium_hydride=Lithium Aluminium Hydride
 gregtech.material.iron2_chloride=Iron2Chloride
-gregtech.material.pd_ir_re_o_ce_os=Pd Ir Re OCe OS
+gregtech.material.pd_ir_re_o_ce_o_s=PdIrReOCeOs Catalyst
 gregtech.material.ferrocene=Ferrocene
 gregtech.material.sarcosine=Sarcosine
 gregtech.material.ferrocenylfulleropyrrolidine=Ferrocenylfulleropyrrolidine
