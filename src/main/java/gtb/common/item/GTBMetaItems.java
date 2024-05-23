@@ -185,6 +185,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem UVA_HALIDE_LAMP;
     public static MetaItem<?>.MetaValueItem LITHIUM_FOAM_BASE;
     public static MetaItem<?>.MetaValueItem ALUMINO_SILICATE_WOOL_SHEET;
+    public static MetaItem<?>.MetaValueItem ROTARRY_SPINNING_WHISKER;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);

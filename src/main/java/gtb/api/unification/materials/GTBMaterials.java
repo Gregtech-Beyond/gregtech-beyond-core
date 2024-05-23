@@ -106,6 +106,16 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+    public static Material Nomex;
+    public static Material IsophthalicAcid;
+    public static Material IsophthaloylChloride;
+    public static Material OneThreeDinitrobenzene;
+    public static Material ActivatedRaneyNickel;
+    public static Material RaneyNickel;
+    public static Material mPhenyleneDiamine;
+    public static Material SodiumAluminate;
+    public static Material DinitrobenzeneMixture;
+    public static Material NomexPolymerizationBase;
     public static Material PolymerizationReadyZylon;
     public static Material AmineMixture;
     public static Material Trimethylamine;

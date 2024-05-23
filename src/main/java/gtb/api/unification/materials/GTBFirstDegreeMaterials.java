@@ -1111,9 +1111,53 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0x252525).build().setFormula("C8H12", true);
 
+        IsophthalicAcid = new Material.Builder(getMaterialsId(), gregtechId("isophthalic_acid"))
+                .dust()
+                .color(0x7DB880).build().setFormula("C8H6O4", true);
+
+        IsophthaloylChloride = new Material.Builder(getMaterialsId(), gregtechId("isophthaloyl_chloride"))
+                .dust()
+                .color(0x495749).build().setFormula("C8H4Cl2O2", true);
+
+        OneThreeDinitrobenzene = new Material.Builder(getMaterialsId(), gregtechId("one_three_dinitrobenzene"))
+                .dust()
+                .color(0x67697B).build().setFormula("C6H4N2O4", true);
+
+        ActivatedRaneyNickel = new Material.Builder(getMaterialsId(), gregtechId("activated_raney_nickel"))
+                .dust()
+                .color(0xCCCDD5).build().setFormula("AlNi", true);
+
+        RaneyNickel = new Material.Builder(getMaterialsId(), gregtechId("raney_nickel"))
+                .dust()
+                .color(0x94959F).build().setFormula("AlNi", true);
+
+        mPhenyleneDiamine = new Material.Builder(getMaterialsId(), gregtechId("m_phenyl_diamine"))
+                .dust()
+                .color(0x658BB2).build().setFormula("C6H8N2", true);
+
+        SodiumAluminate = new Material.Builder(getMaterialsId(), gregtechId("sodium_aluminate"))
+                .dust()
+                .color(0xAECDAF).build().setFormula("NaAlO2", true);
+
+        DinitrobenzeneMixture = new Material.Builder(getMaterialsId(), gregtechId("dinitrobenzene_mixture"))
+                .dust()
+                .color(0x599B5D).build();
+
+        NomexPolymerizationBase = new Material.Builder(getMaterialsId(), gregtechId("nomex_polymerization_base"))
+                .fluid()
+                .color(0x791BFF).build();
+
         PolymerizationReadyZylon = new Material.Builder(getMaterialsId(), gregtechId("polymerization_ready_zylon"))
                 .dust()
-                .color(0xD2A842).build().setFormula("BeF2", true);
+                .color(0xD2A842).build();
+
+        Nomex = new Material.Builder(getMaterialsId(), gregtechId("nomex"))
+                .fluid()
+                .dust()
+                .ingot()
+                .flags(MaterialFlags.GENERATE_PLATE)
+                .color(0x584643)
+                .build().setFormula("[COC6H4CONHC6H4NH]n", true);
         // fluid
         ThionylChloride = new Material.Builder(getMaterialsId(), gregtechId("thionyl_chloride")).fluid().color(0x79A29F)
                 .build().setFormula("SOCl2", true);

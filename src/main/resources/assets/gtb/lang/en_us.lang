@@ -343,7 +343,7 @@ metaitem.coolant_cell.name=Coolant Cell
 metaitem.nak_coolant_cell.name=NaK Coolant Cell
 metaitem.uva_halide_lamp.name=UVA Halide Lamp
 metaitem.uva_lamp_core.name=UVA Lamp Core
-
+metaitem.rotarry_spinning_whisker.name=Rotarry Spinning Whisker
 
 
 
@@ -359,8 +359,8 @@ metaitem.uva_lamp_core.name=UVA Lamp Core
 
 
 
-
-
+gregtech.material.nomex_polymerization_base=Nomex Polymerization Base
+gregtech.material.nomex=Nomex
 gregtech.material.cyclooctadiene=Cyclooctadiene
 gregtech.material.isochloropropane=Isochloropropane
 gregtech.material.resorcinol=Resorcinol
