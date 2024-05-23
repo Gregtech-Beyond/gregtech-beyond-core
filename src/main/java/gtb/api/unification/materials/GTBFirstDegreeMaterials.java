@@ -789,6 +789,12 @@ public class GTBFirstDegreeMaterials {
                 .color(0xEF9A9A)
                 .build().setFormula("PCl3", true);
 
+        TolueneDiisocyanate = new Material.Builder(getMaterialsId(), gregtechId("tolunene_diisocyanate"))
+                .fluid()
+                .dust()
+                .color(0xEF9A9A)
+                .build().setFormula("C9H6N2O2", true);
+
         TriarylPhosphineSolution = new Material.Builder(getMaterialsId(), gregtechId("triaryl_phosphine_solution"))
                 .fluid()
                 .color(0xEF9A9A)
@@ -908,15 +914,17 @@ public class GTBFirstDegreeMaterials {
                 .color(0xFAD28F)
                 .build().setFormula("Rh", true);
 
-        FluorohydrideAmmoniumCarbama = new Material.Builder(getMaterialsId(), gregtechId("fluorohydride_ammonium_carbama"))
-                .fluid()
-                .color(0x729A74)
-                .build().setFormula("Rh", true);
+        FluorohydrideAmmoniumCarbama = new Material.Builder(getMaterialsId(),
+                gregtechId("fluorohydride_ammonium_carbama"))
+                        .fluid()
+                        .color(0x729A74)
+                        .build().setFormula("FH(NH3)N2O", true);
 
-        HydrogenatedCarbontetrafluoride = new Material.Builder(getMaterialsId(), gregtechId("hydrogenated_carbon_tetrafluoride"))
-                .fluid()
-                .color(0x788C79)
-                .build().setFormula("HCF4", true);
+        HydrogenatedCarbontetrafluoride = new Material.Builder(getMaterialsId(),
+                gregtechId("hydrogenated_carbon_tetrafluoride"))
+                        .fluid()
+                        .color(0x788C79)
+                        .build().setFormula("HCF4", true);
 
         PCBB = new Material.Builder(getMaterialsId(), gregtechId("pcbb"))
                 .fluid()
@@ -930,22 +938,22 @@ public class GTBFirstDegreeMaterials {
 
         HydrofluoricMethane = new Material.Builder(getMaterialsId(), gregtechId("hydrofluoric_methane"))
                 .fluid()
-                .color(0xAB9E7F)
+                .color(0xB26F8C)
                 .build().setFormula("HF(CH4)", true);
 
         Rhodium_III_Chloride = new Material.Builder(getMaterialsId(), gregtechId("rhodium_iii_chloride"))
                 .dust()
-                .color(0xAB9E7F)
+                .color(0xD8AD41)
                 .build().setFormula("Rh3(Cl2)", true);
 
         Dimethylsiloxane = new Material.Builder(getMaterialsId(), gregtechId("dimethylsiloxane"))
                 .fluid()
-                .color(0xAB9E7F)
+                .color(0xB1ABAD)
                 .build().setFormula("Si(CH3)2O", true);
 
         UrethanePrePolymer = new Material.Builder(getMaterialsId(), gregtechId("urethane_pre_polymer"))
-                .dust()
-                .color(0xAB9E7F)
+                .fluid()
+                .color(0xB0C5C8)
                 .build().setFormula("Si(CH3)2O", true);
 
         Polyurethane = new Material.Builder(getMaterialsId(), gregtechId("polyurethane"))
@@ -953,7 +961,7 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .ingot()
                 .flags(MaterialFlags.GENERATE_PLATE)
-                .color(0xAB9E7F)
+                .color(0x809A9D)
                 .build().setFormula("C17H16N2O2", true);
 
         Polystyrene = new Material.Builder(getMaterialsId(), gregtechId("polystyrene"))
@@ -961,9 +969,8 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .ingot()
                 .flags(MaterialFlags.GENERATE_PLATE)
-                .color(0xAB9E7F)
-                .build().setFormula("C17H16N2O2", true);
-
+                .color(0x584643)
+                .build().setFormula("C8H8", true);
 
         // fluid
         ThionylChloride = new Material.Builder(getMaterialsId(), gregtechId("thionyl_chloride")).fluid().color(0x79A29F)
@@ -1055,7 +1062,7 @@ public class GTBFirstDegreeMaterials {
         Ferrocene = new Material.Builder(getMaterialsId(), gregtechId("ferrocene")).fluid().color(0xD1C4E9).build()
                 .setFormula("C10H10Fe", true);
         PdIrReOCeOS = new Material.Builder(getMaterialsId(), gregtechId("pd_ir_re_o_ce_o_s")).dust().color(0xF9C528)
-                .build().setFormula("RhN", true);
+                .build().setFormula("PdIrReOCeOS", true);
         LithiumAluminiumHydride = new Material.Builder(getMaterialsId(), gregtechId("lithium_aluminium_hydride")).dust()
                 .color(0xFF5722).build().setFormula("LiAlH4", true);
         PCBS = new Material.Builder(getMaterialsId(), gregtechId("pcbs")).fluid().color(0x113B61).build()
