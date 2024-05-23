@@ -127,6 +127,24 @@ gtb.machine.ion_implanter.luv.name=Elite Ion Implanter Unit II
 gtb.machine.ion_implanter.zpm.name=Elite Ion Implanter Unit III
 gtb.machine.ion_implanter.uv.name=Ultimate Ion Implanter Unit
 
+gtb.machine.kev_output_hatch_iv.name=IV kEv Output Hatch
+gtb.machine.kev_output_hatch_luv.name=LuV kEv Output Hatch
+gtb.machine.kev_output_hatch_zpm.name=ZPM kEv Output Hatch
+gtb.machine.kev_output_hatch_uv.name=UV kEv Output Hatch
+gtb.machine.kev_output_hatch_uhv.name=UHV kEv Output Hatch
+gtb.machine.kev_output_hatch_uev.name=UEV kEv Output Hatch
+gtb.machine.kev_output_hatch_uiv.name=UIV kEv Output Hatch
+gtb.machine.kev_output_hatch_uxv.name=UXV kEv Output Hatch
+
+gtb.machine.kev_input_hatch_iv.name=IV kEv Input Hatch
+gtb.machine.kev_input_hatch_luv.name=LuV kEv Input Hatch
+gtb.machine.kev_input_hatch_zpm.name=ZPM kEv Input Hatch
+gtb.machine.kev_input_hatch_uv.name=UV kEv Input Hatch
+gtb.machine.kev_input_hatch_uhv.name=UHV kEv Input Hatch
+gtb.machine.kev_input_hatch_uev.name=UEV kEv Input Hatch
+gtb.machine.kev_input_hatch_uiv.name=UIV kEv Input Hatch
+gtb.machine.kev_input_hatch_uxv.name=UXV kEv Input Hatch
+
 
 
 # Multiblock machine controllers
@@ -658,3 +676,8 @@ gregtech.material.linoleic_acid=Linoleic Acid
 
 gtb.recipe.KEV=Neutron Kinetic Energy: %d KeV
 gtb.recipe.KEV_OUTPUT=Outputs %d KeV
+
+# Behaviors
+
+behavior.tricorder.kev=%d kEv
+behavior.tricorder.max_kev=%d max kEv

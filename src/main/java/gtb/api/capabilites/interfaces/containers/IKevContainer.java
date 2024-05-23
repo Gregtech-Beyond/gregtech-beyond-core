@@ -6,5 +6,7 @@ public interface IKevContainer {
 
     void setKev(int kev);
 
+    int getMaxKev();
+
     void resetContainer();
 }

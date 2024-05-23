@@ -16,14 +16,18 @@ import gtb.api.capabilites.GTBTileCapabilities;
 import gtb.api.capabilites.interfaces.containers.ContainerNames;
 import gtb.api.capabilites.interfaces.containers.IKevContainer;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class KevContainer extends MTETrait implements IKevContainer {
 
     private int kev;
+    private final int maxKev;
 
-    public KevContainer(MetaTileEntity metaTileEntity) {
+    public KevContainer(MetaTileEntity metaTileEntity, int maxKev) {
         super(metaTileEntity);
+        this.maxKev = maxKev;
         this.kev = 0;
     }
 

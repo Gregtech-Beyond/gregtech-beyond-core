@@ -5,12 +5,16 @@ import java.util.List;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.common.capabilities.Capability;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import gregtech.api.GTValues;
 import gregtech.api.gui.ModularUI;
+import gregtech.api.metatileentity.IDataInfoProvider;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockAbilityPart;
@@ -26,22 +30,25 @@ import gtb.api.capabilites.GTBTileCapabilities;
 import gtb.api.capabilites.impl.KevContainer;
 import gtb.api.capabilites.interfaces.containers.IKevContainer;
 import gtb.api.render.GTBTextures;
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 
 public class MetaTileEntityKevHatch extends MetaTileEntityMultiblockPart
-                                    implements IMultiblockAbilityPart<IKevContainer> {
+                                    implements IMultiblockAbilityPart<IKevContainer>, IDataInfoProvider {
 
-    private final IKevContainer kevMachine;
+    private final IKevContainer kevContainer;
+    private final int tier;
     private final boolean isInput;
 
-    public MetaTileEntityKevHatch(ResourceLocation metaTileEntityId, boolean isInput) {
-        super(metaTileEntityId, 0);
-        this.kevMachine = new KevContainer(this);
+    public MetaTileEntityKevHatch(ResourceLocation metaTileEntityId, int tier, boolean isInput) {
+        super(metaTileEntityId, tier);
+        this.kevContainer = new KevContainer(this, (int) GTValues.V[tier - 3]);
+        this.tier = tier;
         this.isInput = isInput;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityKevHatch(metaTileEntityId, isInput);
+        return new MetaTileEntityKevHatch(metaTileEntityId, tier, isInput);
     }
 
     @Override
@@ -67,15 +74,24 @@ public class MetaTileEntityKevHatch extends MetaTileEntityMultiblockPart
 
     @Override
     public void registerAbilities(List<IKevContainer> abilityList) {
-        abilityList.add(this.kevMachine);
+        abilityList.add(this.kevContainer);
     }
 
     @Override
     @Nullable
     public <T> T getCapability(@NotNull Capability<T> capability, EnumFacing side) {
         if (capability.equals(GTBTileCapabilities.CAPABILITY_KEV_CONTAINER)) {
-            return GTBTileCapabilities.CAPABILITY_KEV_CONTAINER.cast(this.kevMachine);
+            return GTBTileCapabilities.CAPABILITY_KEV_CONTAINER.cast(this.kevContainer);
         }
         return super.getCapability(capability, side);
+    }
+
+    @NotNull
+    @Override
+    public List<ITextComponent> getDataInfo() {
+        List<ITextComponent> list = new ObjectArrayList<>();
+        list.add(new TextComponentTranslation("behavior.tricorder.kev", kevContainer.getKev()));
+        list.add(new TextComponentTranslation("behavior.tricorder.max_kev", kevContainer.getMaxKev()));
+        return list;
     }
 }
