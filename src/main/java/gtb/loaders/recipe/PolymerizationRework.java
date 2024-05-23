@@ -568,7 +568,7 @@ public class PolymerizationRework {
                 .fluidInputs(Chloroform.getFluid(1000))
                 .fluidInputs(Ferrocene.getFluid(1000))
                 .notConsumable(TitaniumTetrachloride.getFluid(1000))
-                .notConsumable(dust, Toluene)
+                .notConsumable(GELLED_TOLUENE)
                 .output(dust, Salt, 6)
                 .fluidOutputs(Ferrocenylfulleropyrrolidine.getFluid(1000))
                 .fluidOutputs(CarbonDioxide.getFluid(1000))
