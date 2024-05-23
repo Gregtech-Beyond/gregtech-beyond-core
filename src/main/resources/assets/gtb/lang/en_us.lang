@@ -344,21 +344,22 @@ metaitem.nak_coolant_cell.name=NaK Coolant Cell
 metaitem.uva_halide_lamp.name=UVA Halide Lamp
 metaitem.uva_lamp_core.name=UVA Lamp Core
 metaitem.rotarry_spinning_whisker.name=Rotarry Spinning Whisker
-
+metaitem.lithium_foam_base.name=Lithium Foam Base
+metaitem.alumino_silicate_wool_sheet.name=Alumino Silicate Wool Sheet
 
 
 
 #Materials
 
-
-
-
-
-
-
-
-
-
+gregtech.material.isophthalic_acid=Isophthalic Acid
+gregtech.material.isophthaloyl_chloride=Isophthaloyl Chloride
+gregtech.material.polymerization_ready_zylon=Polymerization Ready Zylon
+gregtech.material.one_three_dinitobenzene=1,3-Dinitrobenzene
+gregtech.material.activated_raney_nickel=Activated Raney Nickel
+gregtech.material.raney_nickel=Raney Nickel
+gregtech.material.m_phenyl_diamine=m-Phenyldiamine
+gregtech.material.sodium_aluminate=Sodium Aluminate
+gregtech.material.dinitrobenzene_mixture=Dinitrobenzene Mixture
 gregtech.material.nomex_polymerization_base=Nomex Polymerization Base
 gregtech.material.nomex=Nomex
 gregtech.material.cyclooctadiene=Cyclooctadiene
@@ -371,10 +372,10 @@ gregtech.material.cetane_trimethyl_ammonium_bromide=Cetane Trimethyl Ammonium Br
 gregtech.material.dinitrodipropanyloxybenzene=Dinitrodipropanyloxybenzene
 gregtech.material.lithium_titanate=Lithium Titanate
 gregtech.material.lithium_carbonate_solution=Lithium Carbonate
-gregtech.material.lithium_peroxide=Lithium Peroxide
+gregtech.material.lithium_peroxide_solution=Lithium Peroxide Solution
 gregtech.material.nitrogen_pentoxide=Nitrogen Pentoxide
 gregtech.material.oct_1_ene=Oct-1-ene
-gregtech.material.mercaptorphenol=Mercaptophenol
+gregtech.material.mercaptophenol=Mercaptophenol
 gregtech.material.ortho_xylene=Ortho-Xylene
 gregtech.material.ortho_xylene_zeolite_mixture=Ortho-Xylene Zelite Mixture
 gregtech.material.chlorodiisopropyl_phosphine=Chlorodiisopropyl Phosphine
