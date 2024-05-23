@@ -252,7 +252,5 @@ public final class PlatinumLine {
         GTRecipeHandler.removeRecipesByInputs(CENTRIFUGE_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, IridiumMetalResidue, 5) });
-
-
     }
 }

@@ -752,7 +752,7 @@ public class PolymerizationRework {
                 .duration(40)
                 .buildAndRegister();
 
-        //Fullerene Polymer Tetrix
+        // Fullerene Polymer Tetrix
 
         CHEMICAL_PLANT.recipeBuilder()
                 .fluidInputs(Ferrocene.getFluid(1000))
@@ -775,7 +775,7 @@ public class PolymerizationRework {
                 .EUt(900)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(HydrofluoricMethane.getFluid(1000))
                 .fluidInputs(NitricOxide.getFluid(1000))
                 .fluidOutputs(CarbonDioxide.getFluid(1000))
@@ -811,15 +811,14 @@ public class PolymerizationRework {
                 .EUt(800)
                 .buildAndRegister();
 
-
-        //Polydimethylsiloxane
+        // Polydimethylsiloxane
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(dust, Polydimethylsiloxane, 9),
                         OreDictUnifier.get(dust, Sulfur) });
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
-                new FluidStack[] {Water.getFluid(1000),Dimethyldichlorosilane.getFluid(1000) });
+                new FluidStack[] { Water.getFluid(1000), Dimethyldichlorosilane.getFluid(1000) });
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(1000))
@@ -862,7 +861,7 @@ public class PolymerizationRework {
                 .duration(100)
                 .buildAndRegister();
 
-        //Polyurethane
+        // Polyurethane
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(TolueneDiisocyanate.getFluid(1000))
@@ -926,7 +925,7 @@ public class PolymerizationRework {
                 .EUt(80)
                 .buildAndRegister();
 
-        //Polystyrene
+        // Polystyrene
 
         POLYMERIZATION_TANK.recipeBuilder()
                 .fluidInputs(Styrene.getFluid(1000))
@@ -968,7 +967,7 @@ public class PolymerizationRework {
                 .EUt(80)
                 .buildAndRegister();
 
-        //Polyvinyl Butyral Line
+        // Polyvinyl Butyral Line
 
         POLYMERIZATION_TANK.recipeBuilder()
                 .fluidInputs(PolyvinylAcetate.getFluid(144))
@@ -980,9 +979,6 @@ public class PolymerizationRework {
                 .buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
-                new FluidStack[] {PolyvinylAcetate.getFluid(144),Butyraldehyde.getFluid(250) });
-
-        
-
+                new FluidStack[] { PolyvinylAcetate.getFluid(144), Butyraldehyde.getFluid(250) });
     }
 }
