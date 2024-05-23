@@ -1242,7 +1242,7 @@ public class PolymerizationRework {
                 .fluidInputs(Water.getFluid(6000))
                 .fluidOutputs(Hydrogen.getFluid(6000))
                 .output(dust, SodiumAluminate, 20)
-                .output(dust, ActivatedRaneyNickel, 2)
+                .output(dust, ActivatedRaneyNickel, 4)
                 .duration(900)
                 .EUt(700)
                 .buildAndRegister();
