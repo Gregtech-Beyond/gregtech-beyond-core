@@ -123,5 +123,13 @@ public class OrganicChemistry {
                 .duration(120)
                 .EUt(600)
                 .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, PotassiumBromide, 2)
+                .output(dust, Potassium)
+                .fluidOutputs(Bromine.getFluid(1000))
+                .duration(200)
+                .EUt(800)
+                .buildAndRegister();
     }
 }
