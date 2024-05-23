@@ -1110,6 +1110,10 @@ public class GTBFirstDegreeMaterials {
         Cyclooctadiene = new Material.Builder(getMaterialsId(), gregtechId("cyclooctadiene"))
                 .fluid()
                 .color(0x252525).build().setFormula("C8H12", true);
+
+        PolymerizationReadyZylon = new Material.Builder(getMaterialsId(), gregtechId("polymerization_ready_zylon"))
+                .dust()
+                .color(0xD2A842).build().setFormula("BeF2", true);
         // fluid
         ThionylChloride = new Material.Builder(getMaterialsId(), gregtechId("thionyl_chloride")).fluid().color(0x79A29F)
                 .build().setFormula("SOCl2", true);

@@ -1161,10 +1161,52 @@ public class PolymerizationRework {
         BLAST_RECIPES.recipeBuilder()
                 .input(dust, PreZylon)
                 .fluidOutputs(Propane.getFluid(2000))
-                .output(dust, Zylon)
+                .output(dust, PolymerizationReadyZylon)
                 .EUt(120)
                 .duration(16000)
                 .blastFurnaceTemp(10000)
                 .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .input(dust, PolymerizationReadyZylon)
+                .output(dust, Zylon)
+                .fluidInputs(Air.getFluid(1000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .input(dust, PolymerizationReadyZylon)
+                .output(dust, Zylon)
+                .fluidInputs(Oxygen.getFluid(1000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .input(dust, PolymerizationReadyZylon)
+                .output(dust, Zylon)
+                .notConsumable(dust, KaminskyCatalyst)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .input(dust, PolymerizationReadyZylon)
+                .output(dust, Zylon)
+                .notConsumable(dust, PhilipsCatalyst)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        POLYMERIZATION_TANK.recipeBuilder()
+                .input(dust, PolymerizationReadyZylon)
+                .output(dust, Zylon)
+                .notConsumable(dust, ZieglerNattaCatalyst)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+
     }
 }

@@ -106,6 +106,7 @@ public class GTBMaterials {
     // Element Materials
 
     // FD Materials
+    public static Material PolymerizationReadyZylon;
     public static Material AmineMixture;
     public static Material Trimethylamine;
     public static Material SodiumPhosphotungstate;
