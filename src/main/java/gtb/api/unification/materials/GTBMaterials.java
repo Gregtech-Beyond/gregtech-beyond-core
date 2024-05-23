@@ -105,7 +105,14 @@ public class GTBMaterials {
 
     // Element Materials
     // FD Materials
-
+    public static Material WaelzOxide;
+    public static Material WaelzSlag;
+    public static Material ImpureGermaniumDioxide;
+    public static Material RoastedSphalerite;
+    public static Material ZincRichSphalerite;
+    public static Material GermaniumTetrachloride;
+    public static Material GermaniumDioxide;
+    public static Material ZincOxide;
     public static Material CarbonSulfide;
     public static Material Tributylamine;
     public static Material IsoOctane;
