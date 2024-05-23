@@ -9,6 +9,10 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 import static net.minecraft.init.Items.*;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.common.items.MetaItems;
 
 public class BiologyLines {
@@ -25,7 +29,7 @@ public class BiologyLines {
                 .buildAndRegister();
 
         CHEMICAL_BATH_RECIPES.recipeBuilder()
-                .output(MetaItems.PETRI_DISH)
+                .input(MetaItems.PETRI_DISH)
                 .output(STERILIZED_PETRI_DISH)
                 .fluidInputs(HundredEthanol.getFluid(1000))
                 .duration(200)
@@ -772,5 +776,13 @@ public class BiologyLines {
                 .duration(400)
                 .EUt(1200)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
+                new ItemStack[] { SHAPE_MOLD_CREDIT.getStackForm() },
+                new FluidStack[] { Polytetrafluoroethylene.getFluid(36) });
+
+        GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
+                new ItemStack[] { SHAPE_MOLD_CREDIT.getStackForm() },
+                new FluidStack[] { Polybenzimidazole.getFluid(18) });
     }
 }

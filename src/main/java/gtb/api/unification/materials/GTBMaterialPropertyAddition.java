@@ -21,5 +21,6 @@ public class GTBMaterialPropertyAddition {
         Mica.addFlags(MaterialFlags.GENERATE_FOIL);
         BorosilicateGlass.addFlags(MaterialFlags.GENERATE_PLATE);
         Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
+        AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
     }
 }

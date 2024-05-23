@@ -3,8 +3,14 @@ package gtb.loaders.recipe;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
 import gregtech.common.items.MetaItems;
 
 public final class PlatinumLine {
@@ -109,6 +115,13 @@ public final class PlatinumLine {
                 .output(dust, PlatinumRaw, 2)
                 .duration(400).EUt(80).buildAndRegister();
 
+        SIFTER_RECIPES.recipeBuilder()
+                .input(dust, PlatinumSalt)
+                .output(dust, PlatinumMetallicPowder)
+                .duration(129)
+                .EUt(80)
+                .buildAndRegister();
+
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(PalladiumExtract.getFluid(1000))
                 .fluidOutputs(PlatinumExtractionMixture.getFluid(1000))
@@ -143,5 +156,101 @@ public final class PlatinumLine {
                 .input(dust, PalladiumSalt, 1)
                 .output(dust, PalladiumMetallicPowder, 1)
                 .duration(200).EUt(12).buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(CENTRIFUGE_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, PlatinumGroupSludge, 6) },
+                new FluidStack[] { AquaRegia.getFluid(1200) });
+
+        BLAST_RECIPES.recipeBuilder()
+                .fluidInputs(AquaRegia.getFluid(1000))
+                .input(dust, PlatinumMetallicPowder, 3)
+                .fluidOutputs(PlatinumSolution.getFluid(1000))
+                .blastFurnaceTemp(1900)
+                .duration(700)
+                .EUt(120)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
+                new FluidStack[] { RhodiumSulfate.getFluid(1000) });
+
+        DEHYDRATOR.recipeBuilder()
+                .fluidInputs(RhodiumSulfateSolution.getFluid(1000))
+                .input(dust, Zinc)
+                .output(dust, ZincSulfide, 6)
+                .output(dust, CrudeRhodiumMetal, 2)
+                .EUt(30)
+                .duration(300)
+                .buildAndRegister();
+
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, CrudeRhodiumMetal, 2)
+                .input(dust, Salt, 2)
+                .output(dust, RhodiumSalt, 3)
+                .blastFurnaceTemp(775)
+                .EUt(120)
+                .duration(300)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, RhodiumSalt, 3)
+                .fluidInputs(Chlorine.getFluid(1000))
+                .fluidOutputs(RhodiumSaltSolution.getFluid(1000))
+                .EUt(30)
+                .duration(30)
+                .buildAndRegister();
+
+        // 2Na + 2HNO3 + O -> 2NaNO3 + H2O
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(dust, Sodium, 2)
+                .fluidInputs(NitricAcid.getFluid(2000))
+                .fluidInputs(Oxygen.getFluid(1000))
+                .output(dust, SodiumNitrate, 10)
+                .fluidOutputs(Water.getFluid(1000))
+                .EUt(60)
+                .duration(8)
+                .buildAndRegister();
+
+        // Rh(NaCl)2Cl + NaNO3 + 2NO2 + 2O -> 3NaCl + Rh(NH3)3
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(RhodiumSaltSolution.getFluid(1000))
+                .fluidInputs(NitrogenDioxide.getFluid(2000))
+                .fluidInputs(Oxygen.getFluid(2000))
+                .input(dust, SodiumNitrate, 5)
+                .output(dust, Salt, 6)
+                .output(dust, RhodiumNitrate, 13)
+                .EUt(30)
+                .duration(300)
+                .buildAndRegister();
+
+        // Rh(NH3)3 -> Rh(NH3)3
+        SIFTER_RECIPES.recipeBuilder()
+                .input(dust, RhodiumNitrate, 13)
+                .chancedOutput(OreDictUnifier.get(dust, RhodiumFilterCake, 2), 9500, 0)
+                .EUt(30)
+                .duration(600)
+                .buildAndRegister();
+
+        // Rh(NH3)3 + 2H2O -> Rh(NH3)3(H2O)2
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, RhodiumFilterCake, 2)
+                .fluidInputs(Water.getFluid(2000))
+                .fluidOutputs(RhodiumFilterCakeSolution.getFluid(1000))
+                .EUt(30)
+                .duration(300)
+                .buildAndRegister();
+
+        // Rh(NH3)2(H2O)2 -> Rh + 2NH3 + 2H2O (H2O lost to dehydrator)
+        DEHYDRATOR.recipeBuilder()
+                .fluidInputs(RhodiumFilterCakeSolution.getFluid(1000))
+                .output(dust, Rhodium)
+                .fluidOutputs(Ammonia.getFluid(2000))
+                .EUt(30)
+                .duration(500)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(CENTRIFUGE_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, IridiumMetalResidue, 5) });
     }
 }
