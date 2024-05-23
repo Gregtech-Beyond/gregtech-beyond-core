@@ -222,6 +222,9 @@ public class GTBFirstDegreeMaterials {
 
         Polyetheretherketone = new Material.Builder(getMaterialsId(), gregtechId("polyetheretherketone"))
                 .fluid()
+                .dust()
+                .ingot()
+                .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0x9DD6D0)
                 .build().setFormula("C20H12O3", true);
 
@@ -1104,7 +1107,7 @@ public class GTBFirstDegreeMaterials {
 
         IridiumCyclooctadienylChlorideDimer = new Material.Builder(getMaterialsId(),
                 gregtechId("iridium_cyclooctadienyl_chloride_dimer"))
-                        .fluid()
+                        .dust()
                         .color(0x00897B).build().setFormula("C16H24Cl2Ir2", true);
 
         Cyclooctadiene = new Material.Builder(getMaterialsId(), gregtechId("cyclooctadiene"))
