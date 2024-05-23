@@ -105,6 +105,10 @@ public class GTBMaterials {
 
     // Element Materials
     // FD Materials
+
+    public static Material PerrhenicAcid;
+    public static Material AmmoniumPerrhenate;
+    public static Material MolybdenumTrioxide;
     public static Material ThalliumSulfate;
     public static Material MagnesiumChlorideSolution;
     public static Material DilutedRubidiumSolution;
@@ -250,6 +254,7 @@ public class GTBMaterials {
     public static Material BoronFreeSolution;
     public static Material Grisium;
     public static Material SodiumSulfideSolution;
+    public static Material LeadChloride;
 
     // SD Materials
     public static Material CalciumSalts;
@@ -325,6 +330,8 @@ public class GTBMaterials {
     public static Material SlackWax;
     public static Material AlkylatedNaturalGas;
     public static Material Syngas;
+    public static Material MolybdenumFlue;
+    public static Material TraceRheniumFlue;
 
     // Organic Chemistry Materials
     public static Material FormicAcid;
