@@ -789,7 +789,7 @@ public class GTBFirstDegreeMaterials {
                 .color(0xEF9A9A)
                 .build().setFormula("PCl3", true);
 
-        TolueneDiisocyanate = new Material.Builder(getMaterialsId(), gregtechId("tolunene_diisocyanate"))
+        TolueneDiisocyanate = new Material.Builder(getMaterialsId(), gregtechId("toluene_diisocyanate"))
                 .fluid()
                 .dust()
                 .color(0xEF9A9A)
