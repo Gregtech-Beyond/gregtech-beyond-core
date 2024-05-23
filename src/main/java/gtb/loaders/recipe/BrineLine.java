@@ -208,5 +208,13 @@ public class BrineLine {
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(LITHIUM_FOAM_BASE)
+                .fluidInputs(Nomex.getFluid(1000))
+                .output(LITHIUM_SIEVE)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
     }
 }
