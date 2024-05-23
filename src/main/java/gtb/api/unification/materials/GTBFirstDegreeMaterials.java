@@ -755,8 +755,64 @@ public class GTBFirstDegreeMaterials {
                 .color(0x666666)
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(GermaniumDioxide, 1)
+                .build().setFormula("GeO2?", true);
+
+        WaelzOxide = new Material.Builder(getMaterialsId(), gregtechId("waelz_oxide"))
+                .dust()
+                .color(0xB8B8B8)
+                .iconSet(MaterialIconSet.FINE)
+                .components(Zinc, 1, GermaniumDioxide, 1)
+                .build();
+
+        HeavyAlkaliChlorideSolution = new Material.Builder(getMaterialsId(), gregtechId("heavy_alkali_chloride_solution"))
+                .fluid()
+                .color(0x8F5353)
+                .components(Rubidium, 1, Caesium, 2, Chlorine, 6, Water, 2)
                 .build()
-                .setFormula("GeO2?", true);
+                .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
+
+        StannicChloride = new Material.Builder(getMaterialsId(), gregtechId("stannic_chloride"))
+                .fluid()
+                .color(0x33BBF5)
+                .components(Tin, 1, Chlorine, 4)
+                .build();
+
+        RubidiumChlorostannate = new Material.Builder(getMaterialsId(), gregtechId("rubidium_chlorostannate"))
+                .dust()
+                .color(0xBD888A)
+                .iconSet(MaterialIconSet.METALLIC)
+                .components(Rubidium, 2, Tin, 1, Chlorine, 6)
+                .build();
+
+        CaesiumChlorostannate = new Material.Builder(getMaterialsId(), gregtechId("caesium_chlorostannate"))
+                .dust()
+                .color(0xBDAD88)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Caesium, 2, Tin, 1, Chlorine, 6)
+                .build();
+
+        TinFourChloride = new Material.Builder(getMaterialsId(), gregtechId("tin_four_chloride"))
+                .dust()
+                .color(0xA9C6DE)
+                .build().setFormula("SnCl2", true);
+
+        DilutedCaesiumSolution = new Material.Builder(getMaterialsId(), gregtechId("diluted_caesium_solution"))
+                .fluid()
+                .color(0x302C2B)
+                .build().setFormula("Cs(H2O)", true);
+
+        DilutedRubidiumSolution = new Material.Builder(getMaterialsId(), gregtechId("diluted_rubidium_solution"))
+                .fluid()
+                .color(0xB71C1C)
+                .build().setFormula("Rb(H2O)", true);
+
+        MagnesiumChlorideSolution = new Material.Builder(getMaterialsId(), gregtechId("magnesium_chloride_solution"))
+                .fluid()
+                .color(0xBA68C8)
+                .build().setFormula("(MgCl)(H2O)", true);
+
+
+
 
 
     }

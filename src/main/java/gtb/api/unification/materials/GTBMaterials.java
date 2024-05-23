@@ -105,6 +105,16 @@ public class GTBMaterials {
 
     // Element Materials
     // FD Materials
+
+    public static Material MagnesiumChlorideSolution;
+    public static Material DilutedRubidiumSolution;
+    public static Material DilutedCaesiumSolution;
+    public static Material Alumina;
+    public static Material StannicChloride;
+    public static Material RubidiumChlorostannate;
+    public static Material CaesiumChlorostannate;
+    public static Material HeavyAlkaliChlorideSolution;
+    public static Material TinFourChloride;
     public static Material WaelzOxide;
     public static Material WaelzSlag;
     public static Material ImpureGermaniumDioxide;
