@@ -2,6 +2,7 @@ package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.DECOMPOSITION_BY_ELECTROLYZING;
+import static gregtech.api.unification.material.info.MaterialFlags.DISABLE_DECOMPOSITION;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
@@ -702,35 +703,41 @@ public class GTBFirstDegreeMaterials {
         SodiumSulfideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfide_solution"))
                 .fluid()
                 .color(0xF9A825)
+                .flags(DISABLE_DECOMPOSITION)
                 .build().setFormula("Na2S(H2O)", true);
 
         ZincOxide = new Material.Builder(getMaterialsId(), gregtechId("zinc_oxide"))
                 .dust()
                 .color(0xB85C34)
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Zinc, 1, Oxygen, 1)
                 .build();
 
         GermaniumTetrachloride = new Material.Builder(getMaterialsId(), gregtechId("germanium_tetrachloride"))
                 .fluid()
                 .color(0x787878)
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Germanium, 1, Chlorine, 4)
                 .build();
 
         GermaniumDioxide = new Material.Builder(getMaterialsId(), gregtechId("germanium_dioxide"))
                 .dust()
                 .color(0x666666)
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Germanium, 1, Oxygen, 2)
                 .build();
 
         RoastedSphalerite = new Material.Builder(getMaterialsId(), gregtechId("roasted_sphalerite"))
                 .dust()
                 .color(0x666666)
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Germanium, 1, Oxygen, 2)
                 .build();
 
         RoastedSphalerite = new Material.Builder(getMaterialsId(), gregtechId("roasted_sphalerite"))
                 .dust()
                 .color(0xAC8B5C)
+                .flags(DISABLE_DECOMPOSITION)
                 .iconSet(MaterialIconSet.FINE)
                 .components(Gallium, 1, GermaniumDioxide, 1)
                 .build();
@@ -738,6 +745,7 @@ public class GTBFirstDegreeMaterials {
         WaelzOxide = new Material.Builder(getMaterialsId(), gregtechId("waelz_oxide"))
                 .dust()
                 .color(0xB8B8B8)
+                .flags(DISABLE_DECOMPOSITION)
                 .iconSet(MaterialIconSet.FINE)
                 .components(Zinc, 1, GermaniumDioxide, 1)
                 .build();
@@ -746,6 +754,7 @@ public class GTBFirstDegreeMaterials {
         WaelzSlag = new Material.Builder(getMaterialsId(), gregtechId("waelz_slag"))
                 .dust()
                 .color(0xAC8B5C)
+                .flags(DISABLE_DECOMPOSITION)
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(Gallium, 1, Zinc, 1, Sulfur, 1, Oxygen, 4)
                 .build();
@@ -753,6 +762,7 @@ public class GTBFirstDegreeMaterials {
         ImpureGermaniumDioxide = new Material.Builder(getMaterialsId(), gregtechId("impure_germanium_dioxide"))
                 .dust()
                 .color(0x666666)
+                .flags(DISABLE_DECOMPOSITION)
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(GermaniumDioxide, 1)
                 .build().setFormula("GeO2?", true);
@@ -760,6 +770,7 @@ public class GTBFirstDegreeMaterials {
         WaelzOxide = new Material.Builder(getMaterialsId(), gregtechId("waelz_oxide"))
                 .dust()
                 .color(0xB8B8B8)
+                .flags(DISABLE_DECOMPOSITION)
                 .iconSet(MaterialIconSet.FINE)
                 .components(Zinc, 1, GermaniumDioxide, 1)
                 .build();
@@ -767,6 +778,7 @@ public class GTBFirstDegreeMaterials {
         HeavyAlkaliChlorideSolution = new Material.Builder(getMaterialsId(), gregtechId("heavy_alkali_chloride_solution"))
                 .fluid()
                 .color(0x8F5353)
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Rubidium, 1, Caesium, 2, Chlorine, 6, Water, 2)
                 .build()
                 .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
@@ -774,12 +786,14 @@ public class GTBFirstDegreeMaterials {
         StannicChloride = new Material.Builder(getMaterialsId(), gregtechId("stannic_chloride"))
                 .fluid()
                 .color(0x33BBF5)
+                .flags(DISABLE_DECOMPOSITION)
                 .components(Tin, 1, Chlorine, 4)
                 .build();
 
         RubidiumChlorostannate = new Material.Builder(getMaterialsId(), gregtechId("rubidium_chlorostannate"))
                 .dust()
                 .color(0xBD888A)
+                .flags(DISABLE_DECOMPOSITION)
                 .iconSet(MaterialIconSet.METALLIC)
                 .components(Rubidium, 2, Tin, 1, Chlorine, 6)
                 .build();
@@ -787,31 +801,42 @@ public class GTBFirstDegreeMaterials {
         CaesiumChlorostannate = new Material.Builder(getMaterialsId(), gregtechId("caesium_chlorostannate"))
                 .dust()
                 .color(0xBDAD88)
+                .flags(DISABLE_DECOMPOSITION)
                 .iconSet(MaterialIconSet.SHINY)
                 .components(Caesium, 2, Tin, 1, Chlorine, 6)
                 .build();
 
         TinFourChloride = new Material.Builder(getMaterialsId(), gregtechId("tin_four_chloride"))
                 .dust()
+                .flags(DISABLE_DECOMPOSITION)
                 .color(0xA9C6DE)
                 .build().setFormula("SnCl2", true);
 
         DilutedCaesiumSolution = new Material.Builder(getMaterialsId(), gregtechId("diluted_caesium_solution"))
                 .fluid()
+                .flags(DISABLE_DECOMPOSITION)
                 .color(0x302C2B)
                 .build().setFormula("Cs(H2O)", true);
 
         DilutedRubidiumSolution = new Material.Builder(getMaterialsId(), gregtechId("diluted_rubidium_solution"))
                 .fluid()
+                .flags(DISABLE_DECOMPOSITION)
                 .color(0xB71C1C)
                 .build().setFormula("Rb(H2O)", true);
 
         MagnesiumChlorideSolution = new Material.Builder(getMaterialsId(), gregtechId("magnesium_chloride_solution"))
                 .fluid()
+                .flags(DISABLE_DECOMPOSITION)
                 .color(0xBA68C8)
                 .build().setFormula("(MgCl)(H2O)", true);
 
-
+        ThalliumSulfate = new Material.Builder(getMaterialsId(), gregtechId("thallium_sulfate"))
+                .dust()
+                .color(0x9C222C)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Thallium, 2, Sulfur, 1, Oxygen, 4)
+                .build();
 
 
 

@@ -105,7 +105,7 @@ public class GTBMaterials {
 
     // Element Materials
     // FD Materials
-
+    public static Material ThalliumSulfate;
     public static Material MagnesiumChlorideSolution;
     public static Material DilutedRubidiumSolution;
     public static Material DilutedCaesiumSolution;
