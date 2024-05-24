@@ -41,6 +41,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityFrothFlotationUnit FROTH_FLOTATION_UNIT;
     public static MetaTileEntityDigester DIGESTER;
     public static MetaTileEntityChemicalPlant CHEMICAL_PLANT;
+    public static MetaTileEntityPolymerizationTank POLYMERIZATION_TANK;
+    public static MetaTileEntityThermalPress THERMAL_PRESS;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -90,6 +92,10 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityDigester(gtb("digester")));
         NANOSCALE_FABRICATOR = registerMetaTileEntity(3023,
                 new MetaTileEntityNanoscaleFabricator(gtb("nanoscale_fabricator")));
+        POLYMERIZATION_TANK = registerMetaTileEntity(3024,
+                new MetaTileEntityPolymerizationTank(gtb("polymerization_tank")));
+        THERMAL_PRESS = registerMetaTileEntity(3025,
+                new MetaTileEntityThermalPress(gtb("thermal_press")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

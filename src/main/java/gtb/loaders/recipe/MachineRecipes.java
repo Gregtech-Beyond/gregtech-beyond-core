@@ -101,7 +101,8 @@ public class MachineRecipes {
                 'P', ELECTRIC_PUMP_EV.getStackForm());
 
         registerMachineRecipe(GTBMetaTileEntities.ROTARY_EVAPORATOR,
-                "PRP", "CMC", "PRP",
+                "MRM", "CMC", "PRP",
+                'M', MOTOR,
                 'R', ROTOR,
                 'C', CIRCUIT,
                 'P', PUMP,
@@ -133,15 +134,6 @@ public class MachineRecipes {
                 'M', MOTOR,
                 'P', PUMP,
                 'K', CABLE);
-
-        registerMachineRecipe(GTBMetaTileEntities.ROTARY_EVAPORATOR,
-                "PRP",
-                "CMC",
-                "PRP",
-                'C', CIRCUIT,
-                'M', HULL,
-                'R', ROTOR,
-                'P', PUMP);
 
         registerMachineRecipe(GTBMetaTileEntities.MICROSCOPE,
                 "MSM",

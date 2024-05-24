@@ -195,5 +195,9 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.SOY_BEAN = addItem(178, "soy_bean");
         GTBMetaItems.CUPRIAVIDUS_NECATOR_CULTURE = addItem(180, "cupriavidus_necator_culture");
         GTBMetaItems.PAD_PETRI_DISH = addItem(182, "pad_petri_dish");
+        GTBMetaItems.UVA_HALIDE_LAMP = addItem(183, "uva_halide_lamp");
+        GTBMetaItems.LITHIUM_FOAM_BASE = addItem(184, "lithium_foam_base");
+        GTBMetaItems.ALUMINO_SILICATE_WOOL_SHEET = addItem(185, "alumino_silicate_wool_sheet");
+        GTBMetaItems.ROTARRY_SPINNING_WHISKER = addItem(186, "rotarry_spinning_whisker");
     }
 }

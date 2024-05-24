@@ -139,5 +139,82 @@ public class BrineLine {
                 .duration(102)
                 .EUt(800)
                 .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .input(dust, PotassiumMagnesiumSalts, 15)
+                .output(dust, RockSalt, 2)
+                .output(dust, MagnesiumSulfate, 6)
+                .output(dust, PotassiumSulfate, 7)
+                .chancedOutput(dust, PotassiumFluoride, 1, 880, 0)
+                .duration(200)
+                .EUt(800)
+                .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, PotassiumSulfate, 7)
+                .output(dust, Potassium, 2)
+                .output(dust, Sulfur)
+                .fluidOutputs(Oxygen.getFluid(4000))
+                .duration(800)
+                .EUt(12)
+                .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, MagnesiumSulfate, 6)
+                .output(dust, Magnesium)
+                .output(dust, Sulfur)
+                .fluidOutputs(Oxygen.getFluid(4000))
+                .duration(800)
+                .EUt(12)
+                .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, PotassiumFluoride, 2)
+                .output(dust, Potassium)
+                .fluidOutputs(Fluorine.getFluid(1000))
+                .duration(800)
+                .EUt(12)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .input(dust, SodiumSalts, 2)
+                .output(dust, Salt, 2)
+                .chancedOutput(dust, SodiumFluoride, 1, 33, 1)
+                .duration(200)
+                .EUt(60)
+                .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, SodiumFluoride, 2)
+                .output(dust, Sodium)
+                .fluidOutputs(Fluorine.getFluid(1000))
+                .duration(60)
+                .EUt(80)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .input(dust, CalciumSalts, 13)
+                .output(dust, Gypsum, 8)
+                .output(dust, Calcite, 5)
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(dust, LithiumTitanate, 2)
+                .input(plate, Polyetheretherketone)
+                .input(dust, PolystyreneNanoParticles, 2)
+                .output(LITHIUM_FOAM_BASE)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .input(LITHIUM_FOAM_BASE)
+                .fluidInputs(Nomex.getFluid(1000))
+                .output(LITHIUM_SIEVE)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
     }
 }

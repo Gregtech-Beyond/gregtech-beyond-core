@@ -3,7 +3,13 @@ package gtb.loaders.recipe;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.items.MetaItems.*;
+import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
+import static gtb.common.item.GTBMetaItems.*;
+
+import gtb.common.block.GTBMetaBlocks;
 
 public class Catalysts {
 
@@ -82,6 +88,119 @@ public class Catalysts {
                 .duration(1200)
                 .blastFurnaceTemp(1290)
                 .EUt(660)
+                .buildAndRegister();
+
+        CANNER_RECIPES.recipeBuilder()
+                .fluidInputs(SodiumPotassium.getFluid(1000))
+                .input(COOLANT_CELL)
+                .output(NAK_COOLANT_CELL)
+                .duration(120)
+                .EUt(800)
+                .buildAndRegister();
+
+        BENDER_RECIPES.recipeBuilder()
+                .input(FLUID_CELL)
+                .output(COOLANT_CELL)
+                .duration(120)
+                .EUt(300)
+                .buildAndRegister();
+
+        // Philips Catalyst
+
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .input(dust, SiliconDioxide, 3)
+                .input(dust, ChromiumTrioxide, 4)
+                .output(dust, PhilipsCatalyst, 7)
+                .duration(200)
+                .EUt(12)
+                .buildAndRegister();
+
+        // Ziegler Natta Catalyst
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(TitaniumTetrachloride.getFluid(1000))
+                .fluidInputs(TriethylAluminium.getFluid(1000))
+                .output(dust, ZieglerNattaCatalyst, 2)
+                .duration(120)
+                .EUt(80)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Ethylene.getFluid(3000))
+                .input(dust, Aluminium)
+                .fluidOutputs(TriethylAluminium.getFluid(1000))
+                .duration(120)
+                .EUt(90)
+                .buildAndRegister();
+
+        // Kaminsky Catalyst
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .notConsumable(Toluene.getFluid(1000))
+                .input(dust, MethylAluminoxane)
+                .input(dust, RecrystallizedZirconiumDioxide, 6)
+                .output(dust, KaminskyCatalyst)
+                .duration(200)
+                .EUt(900)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Methane.getFluid(1000))
+                .fluidOutputs(TrimethylAluminium.getFluid(1000))
+                .input(dust, Aluminium)
+                .EUt(120)
+                .duration(120)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Water.getFluid(1000))
+                .fluidInputs(TrimethylAluminium.getFluid(1000))
+                .fluidOutputs(Methane.getFluid(2000))
+                .output(dust, MethylAluminoxane)
+                .EUt(120)
+                .duration(120)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Chlorine.getFluid(1000))
+                .input(dust, Zirconium)
+                .fluidOutputs(ZirconiumChloride.getFluid(1000))
+                .duration(120)
+                .EUt(800)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(ZirconiumChloride.getFluid(1000))
+                .fluidInputs(Water.getFluid(1000))
+                .fluidOutputs(ZirconiumDioxideSolution.getFluid(1000))
+                .fluidOutputs(HydrogenChloride.getFluid(1000))
+                .duration(200)
+                .EUt(600)
+                .buildAndRegister();
+
+        CRYSTALLIZATION.recipeBuilder()
+                .fluidInputs(ZirconiumDioxideSolution.getFluid(1000))
+                .output(dust, RecrystallizedZirconiumDioxide, 2)
+                .duration(500)
+                .EUt(670)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(Polystyrene.getFluid(144))
+                .input(wireFine, Gold)
+                .input(dust, Glucose)
+                .output(BORON_RETAINING_YARN)
+                .duration(120)
+                .EUt(80)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(plate, FullerenePolymerTetrix, 6)
+                .input(frameGt, FullerenePolymerMatrix)
+                .circuitMeta(6)
+                .outputs(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(FULLERENE_POLYMER_TETRIX_CASING))
+                .duration(200)
+                .EUt(800)
                 .buildAndRegister();
     }
 }
