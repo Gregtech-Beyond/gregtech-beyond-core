@@ -24,6 +24,7 @@ public final class GTBMetaBlocks {
     public static GTBExplosive GTB_EXPLOSIVE;
     public static GTBBlockWireCoil GTB_BLOCK_WIRE_COIL;
     public static GTBBlockWireCoil2 GTB_BLOCK_WIRE_COIL_2;
+    public static BlockCrucible BLOCK_CRUICIBLE;
 
     public static void init() {
         GTB_MULTIBLOCK_CASING = new GTBMultiblockCasing();
@@ -40,6 +41,10 @@ public final class GTBMetaBlocks {
 
         GTB_BLOCK_WIRE_COIL_2 = new GTBBlockWireCoil2();
         GTB_BLOCK_WIRE_COIL_2.setRegistryName("gtb_wire_coil_2");
+
+        BLOCK_CRUICIBLE = new BlockCrucible();
+        BLOCK_CRUICIBLE.setRegistryName("block_cruicible");
+
     }
 
     @SideOnly(Side.CLIENT)
