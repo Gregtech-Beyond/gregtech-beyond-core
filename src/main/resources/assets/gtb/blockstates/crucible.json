@@ -1,33 +1,34 @@
+
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "gtb:crucible",
+    "model": "gcys:crucible",
     "textures": {
       "all": "gregtech:blocks/rendering_error"
     }
   },
   "variants": {
     "variant": {
-      "quartz_crucible": {
-        "model": "gtb:crucible",
+      "quartz": {
+        "model": "gcys:crucible",
         "textures": {
           "all": "gregtech:blocks/crucible/quartz_crucible"
         }
       },
-      "tungsten_crucible": {
-        "model": "gtb:crucible",
+      "tungsten": {
+        "model": "gcys:crucible",
         "textures": {
           "all": "gregtech:blocks/crucible/tungsten_crucible"
         }
       },
-      "graphite_crucible": {
-        "model": "gtb:crucible",
+      "graphite": {
+        "model": "gcys:crucible",
         "textures": {
           "all": "gregtech:blocks/crucible/graphite_crucible"
         }
       },
-      "boron_nitride_crucible": {
-        "model": "gtb:crucible",
+      "boron_nitride": {
+        "model": "gcys:crucible",
         "textures": {
           "all": "gregtech:blocks/crucible/boron_nitride_crucible"
         }
