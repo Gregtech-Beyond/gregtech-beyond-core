@@ -112,4 +112,9 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> MOLECULAR_BEAM_RECIPES = new RecipeMap<>(
             "molecular_beam_recipes",
             4, 1, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> HIGH_TEMP_DISTILLATION = new RecipeMap<>(
+            "high_temp_distillation",
+            1, 1, 1, 12, new SimpleRecipeBuilder(), false);
+
 }

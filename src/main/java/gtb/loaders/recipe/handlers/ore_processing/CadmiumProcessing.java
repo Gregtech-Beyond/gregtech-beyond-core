@@ -25,5 +25,24 @@ public class CadmiumProcessing {
                 .output(ingot, Zinc)
                 .EUt(80)
                 .buildAndRegister();
+
+        HIGH_TEMP_DISTILLATION.recipeBuilder()
+                .fluidInputs(CrudeZinc.getFluid(1728))
+                .fluidOutputs(CadmiumRichZinc.getFluid(1728))
+                .fluidOutputs(Copper.getFluid(48))
+                .fluidOutputs(Lead.getFluid(36))
+                .fluidOutputs(Tin.getFluid(16))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        HIGH_TEMP_DISTILLATION.recipeBuilder()
+                .fluidInputs(CadmiumRichZinc.getFluid(1728))
+                .fluidOutputs(Zinc.getFluid(1728))
+                .fluidOutputs(Cadmium.getFluid(144))
+                .duration(80)
+                .EUt(120)
+                .buildAndRegister();
+
     }
 }

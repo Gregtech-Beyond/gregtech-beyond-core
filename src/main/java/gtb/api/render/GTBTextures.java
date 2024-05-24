@@ -25,6 +25,8 @@ public final class GTBTextures {
             "machines/dehydrator");
     public static OrientedOverlayRenderer NANOSCALE_FABRICATOR_OVERLAY = new OrientedOverlayRenderer(
             "machines/nanoscale_fabricator");
+    public static SimpleOverlayRenderer SILICON_CARBIDE_CASING = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing/silicon_carbide_casing");
 
     private GTBTextures() {}
 

@@ -271,6 +271,7 @@ public class GTBMaterials {
 
     // Unknown Materials
 
+    public static Material CadmiumRichZinc;
     public static Material CrudeZinc;
     public static Material ConcentratedBrine;
     public static Material DampBromine;

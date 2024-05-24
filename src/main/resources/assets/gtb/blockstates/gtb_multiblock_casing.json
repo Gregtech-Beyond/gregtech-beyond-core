@@ -26,6 +26,12 @@
           "all": "gregtech:blocks/gtb_multiblock_casing/quantum_casing"
         }
       },
+      "silicon_carbide_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/silicon_carbide_casing"
+        }
+      },
       "quantum_glass": {
         "model": "minecraft:cube_all",
         "textures": {

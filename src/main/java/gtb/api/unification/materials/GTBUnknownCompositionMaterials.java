@@ -326,6 +326,13 @@ public class GTBUnknownCompositionMaterials {
                 .fluid()
                 .color(0xF3F3F3)
                 .build();
+
+        CadmiumRichZinc = new Material.Builder(getMaterialsId(), gregtechId("cadmium_rich_zinc"))
+                .fluid()
+                .color(0x7A787B)
+                .build();
+
+
     }
 
     private static int getMaterialsId() {

@@ -843,6 +843,8 @@ public class GTBFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(Lead, 1, Chlorine, 2)
                 .build();
+
+
     }
 
     private static int getMaterialsId() {
