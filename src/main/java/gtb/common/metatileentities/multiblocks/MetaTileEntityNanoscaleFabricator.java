@@ -1,5 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
+import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -8,9 +10,6 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.BlockCrucible;
-import gtb.common.block.blocks.GTBMultiblockCasing;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
@@ -33,7 +32,7 @@ import gregtech.api.pattern.*;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.recipeproperties.TemperatureProperty;
 import gregtech.api.util.BlockInfo;
-import gregtech.api.util.GTUtility;
+import gregtech.api.util.TextFormattingUtil;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockGlassCasing;
@@ -41,11 +40,15 @@ import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityItemBus;
 
-import gregicality.multiblocks.api.render.GCYMTextures;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks;
-import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
+import gregicality.multiblocks.api.render.GCYMTextures.*;
+import gregicality.multiblocks.common.block.GCYMMetaBlocks.*;
+import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing.*;
 
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.BlockCrucible;
+import gtb.common.metatileentities.GTBMetaTileEntities;
 
 public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockController { // TODO Pressure for this machine
 
@@ -88,7 +91,7 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
                 .where('C', states(getNonconductingState()).or(cruciblePredicate()))
                 .where('A',
                         states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
-                                .getState(GTBMultiblockCasing.CasingType.ADVANCED_SUBSTRATE)))
+                                .getState(ADVANCED_SUBSTRATE)))
                 .where('#', air())
                 .where(' ', any())
                 .build();
@@ -116,7 +119,7 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
             return false;
         }, () -> Arrays.stream(BlockCrucible.CrucibleType.values())
                 .sorted(Comparator.comparingInt(BlockCrucible.CrucibleType::getTemperature))
-                .map(type -> new BlockInfo(GCYSMetaBlocks.CRUCIBLE.getState(type), null))
+                .map(type -> new BlockInfo(GTBMetaBlocks.BLOCK_CRUICIBLE.getState(type), null))
                 .toArray(BlockInfo[]::new));
     }
 
@@ -147,14 +150,14 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
     @Nonnull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return GCYSTextures.NANOSCALE_FABRICATOR_OVERLAY;
+        return GTBTextures.NANOSCALE_FABRICATOR_OVERLAY;
     }
 
     @Override
     protected void addDisplayText(List<ITextComponent> textList) {
         if (isStructureFormed()) {
             textList.add(new TextComponentTranslation("gregtech.multiblock.blast_furnace.max_temperature",
-                    TextFormatting.RED + GTUtility.formatNumbers(temperature) + "K"));
+                    TextFormatting.RED + TextFormattingUtil.formatNumbers(temperature) + "K"));
         }
         super.addDisplayText(textList);
     }
@@ -178,7 +181,7 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
                 .aisle(" XXXXXXX ", " X     X ", " X     X ", " XXGGGXX ")
                 .aisle("  XXXXX  ", "  FX XO  ", "  LXXXX  ", "  XMSEX  ")
                 .aisle("   TTT   ", "   TIT   ", "   TCT   ", "         ")
-                .where('S', GCYSMetaTileEntities.NANOSCALE_FABRICATOR, EnumFacing.SOUTH)
+                .where('S', GTBMetaTileEntities.NANOSCALE_FABRICATOR, EnumFacing.SOUTH)
                 .where('X',
                         GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING
                                 .getState(BlockLargeMultiblockCasing.CasingType.ENGRAVER_CASING))
@@ -187,8 +190,8 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
                                 .getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING))
                 .where('G', MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.LAMINATED_GLASS))
                 .where('J',
-                        GCYSMetaBlocks.MULTIBLOCK_CASING
-                                .getState(BlockGCYSMultiblockCasing.CasingType.ADVANCED_SUBSTRATE))
+                        GTBMetaBlocks.GTB_MULTIBLOCK_CASING
+                                .getState(ADVANCED_SUBSTRATE))
                 .where('I', MetaTileEntities.ITEM_IMPORT_BUS[GTValues.ULV], EnumFacing.SOUTH)
                 .where('N', MetaTileEntities.ITEM_IMPORT_BUS[GTValues.ULV], EnumFacing.WEST)
                 .where('P', MetaTileEntities.ITEM_IMPORT_BUS[GTValues.ULV], EnumFacing.NORTH)
@@ -203,11 +206,11 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
         if (ConfigHolder.machines.enableMaintenance)
             builder.where('M', MetaTileEntities.MAINTENANCE_HATCH, EnumFacing.SOUTH);
         else
-            builder.where('M', GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING
+            builder.where('M', GCYM.LARGE_MULTIBLOCK_CASING
                     .getState(BlockLargeMultiblockCasing.CasingType.ENGRAVER_CASING));
 
         for (BlockCrucible.CrucibleType crucibleType : BlockCrucible.CrucibleType.values()) {
-            shapeInfos.add(builder.where('C', GCYSMetaBlocks.CRUCIBLE.getState(crucibleType)).build());
+            shapeInfos.add(builder.where('C', GTBMetaBlocks.BLOCK_CRUICIBLE.getState(crucibleType)).build());
         }
 
         return shapeInfos;
@@ -223,7 +226,7 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
         @Override
         protected boolean checkRecipe(@Nonnull Recipe recipe) {
             int delta = temperature - recipe.getProperty(TemperatureProperty.getInstance(), 0);
-            return GTUtility.isBetweenInclusive(0, 250, delta);
+            return isBetweenInclusive(0, 250, delta);
         }
     }
 }

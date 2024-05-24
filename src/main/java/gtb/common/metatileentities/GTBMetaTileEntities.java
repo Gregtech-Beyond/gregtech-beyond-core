@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBMetaTileEntities {
 
+    public static MetaTileEntityNanoscaleFabricator NANOSCALE_FABRICATOR;
     public static MetaTileEntityWaterTank WATER_TANK;
     public static MetaTileEntitySolarThermalConcentrator SOLAR_THERMAL_CONCENTRATOR;
     public static MetaTileEntityBacterialVat BACTERIAL_VAT;
@@ -87,6 +88,8 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityFrothFlotationUnit(gtb("froth_flotation_unit")));
         DIGESTER = registerMetaTileEntity(3022,
                 new MetaTileEntityDigester(gtb("digester")));
+        NANOSCALE_FABRICATOR = registerMetaTileEntity(3023,
+                new MetaTileEntityNanoscaleFabricator(gtb("nanoscale_fabricator")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

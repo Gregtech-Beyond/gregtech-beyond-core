@@ -44,7 +44,6 @@ public final class GTBMetaBlocks {
 
         BLOCK_CRUICIBLE = new BlockCrucible();
         BLOCK_CRUICIBLE.setRegistryName("block_cruicible");
-
     }
 
     @SideOnly(Side.CLIENT)
