@@ -108,4 +108,8 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> DIGESTER = new RecipeMap<>("digester",
             4, 4, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> MOLECULAR_BEAM_RECIPES = new RecipeMap<>(
+            "molecular_beam_recipes",
+            4, 1, 2, 1, new SimpleRecipeBuilder(), false);
 }

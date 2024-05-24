@@ -270,6 +270,8 @@ public class GTBMaterials {
     public static Material UEVSuperconductor;
 
     // Unknown Materials
+
+    public static Material CrudeZinc;
     public static Material ConcentratedBrine;
     public static Material DampBromine;
     public static Material IodineSlurry;

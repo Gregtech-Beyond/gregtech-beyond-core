@@ -114,7 +114,6 @@ public class GTBSecondDegreeMaterials {
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(GermaniumDioxide, 1)
                 .build().setFormula("GeO2?", true);
-
     }
 
     private static int getMaterialsId() {

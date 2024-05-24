@@ -1,15 +1,10 @@
 package gtb.api.unification.materials;
 
-import static gregtech.api.fluids.FluidState.GAS;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
-import gregtech.api.fluids.FluidState;
-import gregtech.api.unification.material.Material;
-
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
-import net.minecraftforge.fluids.Fluid;
 
 public class GTBUnknownCompositionMaterials {
 
@@ -321,11 +316,16 @@ public class GTBUnknownCompositionMaterials {
                 .color(0x292B2C)
                 .build();
 
-        MolybdenumFlue = new Material.Builder(getMaterialsId(), gregtechId("molybdenum_flue")).fluid().color(0x39194A).build();
+        MolybdenumFlue = new Material.Builder(getMaterialsId(), gregtechId("molybdenum_flue")).fluid().color(0x39194A)
+                .build();
 
-        TraceRheniumFlue = new Material.Builder(getMaterialsId(), gregtechId("trace_rhenium_flue")).fluid().color(0x96D6D5).build();
+        TraceRheniumFlue = new Material.Builder(getMaterialsId(), gregtechId("trace_rhenium_flue")).fluid()
+                .color(0x96D6D5).build();
 
-
+        CrudeZinc = new Material.Builder(getMaterialsId(), gregtechId("crude_zinc"))
+                .fluid()
+                .color(0xF3F3F3)
+                .build();
     }
 
     private static int getMaterialsId() {

@@ -1,13 +1,11 @@
 package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.material.info.MaterialFlags.DECOMPOSITION_BY_ELECTROLYZING;
 import static gregtech.api.unification.material.info.MaterialFlags.DISABLE_DECOMPOSITION;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
 import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.info.MaterialIconSet;
 
@@ -734,7 +732,7 @@ public class GTBFirstDegreeMaterials {
                 .components(Germanium, 1, Oxygen, 2)
                 .build();
 
-        //TODO move to first degree
+        // TODO move to first degree
         WaelzSlag = new Material.Builder(getMaterialsId(), gregtechId("waelz_slag"))
                 .dust()
                 .color(0xAC8B5C)
@@ -751,13 +749,14 @@ public class GTBFirstDegreeMaterials {
                 .components(Zinc, 1, GermaniumDioxide, 1)
                 .build();
 
-        HeavyAlkaliChlorideSolution = new Material.Builder(getMaterialsId(), gregtechId("heavy_alkali_chloride_solution"))
-                .fluid()
-                .color(0x8F5353)
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Rubidium, 1, Caesium, 2, Chlorine, 6, Water, 2)
-                .build()
-                .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
+        HeavyAlkaliChlorideSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("heavy_alkali_chloride_solution"))
+                        .fluid()
+                        .color(0x8F5353)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .components(Rubidium, 1, Caesium, 2, Chlorine, 6, Water, 2)
+                        .build()
+                        .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
 
         StannicChloride = new Material.Builder(getMaterialsId(), gregtechId("stannic_chloride"))
                 .fluid()
@@ -844,8 +843,6 @@ public class GTBFirstDegreeMaterials {
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(Lead, 1, Chlorine, 2)
                 .build();
-
-
     }
 
     private static int getMaterialsId() {

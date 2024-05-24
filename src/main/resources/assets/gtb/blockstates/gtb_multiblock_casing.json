@@ -38,6 +38,18 @@
           "all": "gregtech:blocks/gtb_multiblock_casing/steel_bordered_wooden_casing"
         }
       },
+      "advanced_substrate": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/advanced_substrate"
+        }
+      },
+      "engraver_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/engraver_casing"
+        }
+      },
       "vacuum_furnace_casing": {
         "model": "minecraft:cube_all",
         "textures": {
