@@ -19,7 +19,6 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockAbilityPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
-import gregtech.client.renderer.texture.Textures;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiblockPart;
 
 import codechicken.lib.render.CCRenderState;
@@ -61,9 +60,9 @@ public class MetaTileEntityKevHatch extends MetaTileEntityMultiblockPart
         super.renderMetaTileEntity(renderState, translation, pipeline);
         GTBTextures.KEV_MULTIBLOCK_HATCH.render(renderState, translation, pipeline);
         if (isInput) {
-            Textures.PIPE_IN_OVERLAY.renderSided(getFrontFacing(), renderState, translation, pipeline);
+            GTBTextures.KEV_HATCH_INPUT_OVERLAY.renderSided(getFrontFacing(), renderState, translation, pipeline);
         } else {
-            Textures.PIPE_OUT_OVERLAY.renderSided(getFrontFacing(), renderState, translation, pipeline);
+            GTBTextures.KEV_HATCH_OUTPUT_OVERLAY.renderSided(getFrontFacing(), renderState, translation, pipeline);
         }
     }
 

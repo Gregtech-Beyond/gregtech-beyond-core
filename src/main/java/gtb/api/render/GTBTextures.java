@@ -21,6 +21,10 @@ public final class GTBTextures {
             "gtb_multiblock_casing/biologically_sterile_casing");
     public static final SimpleOverlayRenderer KEV_MULTIBLOCK_HATCH = new SimpleOverlayRenderer(
             "hatches/kev_multiblock_hatch/cube_all");
+    public static SimpleOverlayRenderer KEV_HATCH_OUTPUT_OVERLAY = new SimpleOverlayRenderer(
+            "hatches/kev_multiblock_hatch/output_overlay");
+    public static SimpleOverlayRenderer KEV_HATCH_INPUT_OVERLAY = new SimpleOverlayRenderer(
+            "hatches/kev_multiblock_hatch/input_overlay");
     public static final OrientedOverlayRenderer CRYSTALLIZER_OVERLAY = new OrientedOverlayRenderer(
             "machines/crystallizer");
     public static OrientedOverlayRenderer DEHYDRATOR_OVERLAY = new OrientedOverlayRenderer(
