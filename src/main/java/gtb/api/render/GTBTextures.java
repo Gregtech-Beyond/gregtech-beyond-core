@@ -23,6 +23,8 @@ public final class GTBTextures {
             "machines/crystallizer");
     public static OrientedOverlayRenderer DEHYDRATOR_OVERLAY = new OrientedOverlayRenderer(
             "machines/dehydrator");
+    public static SimpleOverlayRenderer NANOSCALE_FABRICATOR_OVERLAY = new SimpleOverlayRenderer(
+            "multiblocks/nanoscale_fabricator_overlay");
 
     private GTBTextures() {}
 

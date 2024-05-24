@@ -209,7 +209,7 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
         if (ConfigHolder.machines.enableMaintenance)
             builder.where('M', MetaTileEntities.MAINTENANCE_HATCH, EnumFacing.SOUTH);
         else
-            builder.where('M', GCYM.LARGE_MULTIBLOCK_CASING
+            builder.where('M', GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING
                     .getState(BlockLargeMultiblockCasing.CasingType.ENGRAVER_CASING));
 
         for (BlockCrucible.CrucibleType crucibleType : BlockCrucible.CrucibleType.values()) {
