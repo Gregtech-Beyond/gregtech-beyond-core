@@ -654,3 +654,7 @@ gregtech.material.acetic_anhydride=Acetic Anhydirde
 gregtech.material.blood_cells=Blood Cells
 gregtech.material.blood_plasma=Blood
 gregtech.material.linoleic_acid=Linoleic Acid
+
+# Tooltips
+
+gtb.multiblock.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.

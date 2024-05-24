@@ -14,6 +14,8 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
+import org.jetbrains.annotations.NotNull;
+
 import gregtech.api.block.VariantBlock;
 import gregtech.api.util.TextFormattingUtil;
 
@@ -30,7 +32,7 @@ public class BlockCrucible extends VariantBlock<BlockCrucible.CrucibleType> {
     }
 
     @Override
-    public void addInformation(@Nonnull ItemStack stack, @Nullable World world, List<String> tooltip,
+    public void addInformation(@Nonnull ItemStack stack, @Nullable World world, @NotNull List<String> tooltip,
                                @Nonnull ITooltipFlag advanced) {
         super.addInformation(stack, world, tooltip, advanced);
         tooltip.add(I18n.format("gregtech.multiblock.blast_furnace.max_temperature",
@@ -39,10 +41,10 @@ public class BlockCrucible extends VariantBlock<BlockCrucible.CrucibleType> {
 
     public enum CrucibleType implements IStringSerializable {
 
-        QUARTZ_CRUCIBLE("quartz", 2482),
-        TUNGSTEN_CRUCIBLE("tungsten", 3695),
-        GRAPHITE_CRUCIBLE("graphite", 4750),
-        BORON_NITRIDE_CRUCIBLE("boron_nitride", 5328);
+        QUARTZ_CRUCIBLE("quartz_crucible", 2482),
+        TUNGSTEN_CRUCIBLE("tungsten_crucible", 3695),
+        GRAPHITE_CRUCIBLE("graphite_crucible", 4750),
+        BORON_NITRIDE_CRUCIBLE("boron_nitride_crucible", 5328);
 
         private final String name;
         private final int temperature;

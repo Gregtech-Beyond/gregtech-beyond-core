@@ -31,6 +31,8 @@ import gregtech.client.utils.TooltipHelper;
 import gregtech.common.ConfigHolder;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityMultiSmelter;
 
+import lombok.Getter;
+
 public class GTBBlockWireCoil extends VariantActiveBlock<GTBBlockWireCoil.GTBCoilType> {
 
     public GTBBlockWireCoil() {
@@ -94,6 +96,7 @@ public class GTBBlockWireCoil extends VariantActiveBlock<GTBBlockWireCoil.GTBCoi
         return ConfigHolder.client.coilsActiveEmissiveTextures;
     }
 
+    @Getter
     public enum GTBCoilType implements IStringSerializable, IHeatingCoilBlockStats {
 
         HSS_S("hss_s", 6300, 4, 4, 4, HSSS),
@@ -119,38 +122,6 @@ public class GTBBlockWireCoil extends VariantActiveBlock<GTBBlockWireCoil.GTBCoi
             this.energyDiscount = energyDiscount;
             this.tier = tier;
             this.material = material;
-        }
-
-        @NotNull
-        @Override
-        public String getName() {
-            return this.name;
-        }
-
-        @Override
-        public int getCoilTemperature() {
-            return coilTemperature;
-        }
-
-        @Override
-        public int getLevel() {
-            return level;
-        }
-
-        @Override
-        public int getEnergyDiscount() {
-            return energyDiscount;
-        }
-
-        @Override
-        public int getTier() {
-            return this.tier;
-        }
-
-        @Nullable
-        @Override
-        public Material getMaterial() {
-            return material;
         }
 
         @NotNull

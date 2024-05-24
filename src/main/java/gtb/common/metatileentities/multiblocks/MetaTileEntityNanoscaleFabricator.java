@@ -123,7 +123,7 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
             return false;
         }, () -> Arrays.stream(BlockCrucible.CrucibleType.values())
                 .sorted(Comparator.comparingInt(BlockCrucible.CrucibleType::getTemperature))
-                .map(type -> new BlockInfo(GTBMetaBlocks.BLOCK_CRUICIBLE.getState(type), null))
+                .map(type -> new BlockInfo(GTBMetaBlocks.BLOCK_CRUCIBLE.getState(type), null))
                 .toArray(BlockInfo[]::new));
     }
 
@@ -166,7 +166,8 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World player, @NotNull List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World player, @NotNull List<String> tooltip,
+                               boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
         tooltip.add(I18n.format("gtb.multiblock.nanoscale_fabricator.tooltip.1"));
     }
@@ -213,7 +214,7 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
                     .getState(BlockLargeMultiblockCasing.CasingType.ENGRAVER_CASING));
 
         for (BlockCrucible.CrucibleType crucibleType : BlockCrucible.CrucibleType.values()) {
-            shapeInfos.add(builder.where('C', GTBMetaBlocks.BLOCK_CRUICIBLE.getState(crucibleType)).build());
+            shapeInfos.add(builder.where('C', GTBMetaBlocks.BLOCK_CRUCIBLE.getState(crucibleType)).build());
         }
 
         return shapeInfos;
