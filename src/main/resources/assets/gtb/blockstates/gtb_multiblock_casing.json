@@ -32,12 +32,6 @@
           "all" : "gregtech:blocks/gtb_multiblock_casing/silicon_carbide_casing"
         }
       },
-      "substrate_casing" : {
-        "model" : "minecraft:cube_all",
-        "textures" : {
-          "all" : "gregtech:blocks/gtb_multiblock_casing/substrate_casing"
-        }
-      },
       "nonconducting_casing" : {
         "model" : "minecraft:cube_all",
         "textures" : {
@@ -56,22 +50,10 @@
           "all" : "gregtech:blocks/gtb_multiblock_casing/steel_bordered_wooden_casing"
         }
       },
-      "advanced_substrate" : {
-        "model" : "minecraft:cube_all",
-        "textures" : {
-          "all" : "gregtech:blocks/gtb_multiblock_casing/advanced_substrate"
-        }
-      },
       "engraver_casing" : {
         "model" : "minecraft:cube_all",
         "textures" : {
           "all" : "gregtech:blocks/gtb_multiblock_casing/engraver_casing"
-        }
-      },
-      "advanced_substrate_casing" : {
-        "model" : "minecraft:cube_all",
-        "textures" : {
-          "all" : "gregtech:blocks/gtb_multiblock_casing/advanced_substrate_casing"
         }
       },
       "vacuum_furnace_casing" : {
@@ -92,24 +74,20 @@
           "all" : "gregtech:blocks/gtb_multiblock_casing/fullerene_polymer_tetrix_casing"
         }
       },
-      "variants" : {
-        "variant" : {
-          "substrate" : {
-            "model" : "minecraft:cube_bottom_top",
-            "textures" : {
-              "top" : "gregtech:blocks/casings/solid/substrate_top",
-              "side" : "gregtech:blocks/casings/solid/substrate_side",
-              "bottom" : "#side"
-            }
-          },
-          "advanced_substrate" : {
-            "model" : "minecraft:cube_bottom_top",
-            "textures" : {
-              "top" : "gregtech:blocks/casings/solid/advanced_substrate_top",
-              "side" : "gregtech:blocks/casings/solid/substrate_side",
-              "bottom" : "#side"
-            }
-          }
+      "substrate_casing" : {
+        "model" : "minecraft:cube_bottom_top",
+        "textures" : {
+          "top" : "gregtech:blocks/gtb_multiblock_casing/substrate_casing_top",
+          "side" : "gregtech:blocks/gtb_multiblock_casing/substrate_casing_side",
+          "bottom" : "#side"
+        }
+      },
+      "advanced_substrate_casing" : {
+        "model" : "minecraft:cube_bottom_top",
+        "textures" : {
+          "top" : "gregtech:blocks/gtb_multiblock_casing/advanced_substrate_casing_top",
+          "side" : "gregtech:blocks/gtb_multiblock_casing/substrate_casing_side",
+          "bottom" : "#side"
         }
       }
     }
