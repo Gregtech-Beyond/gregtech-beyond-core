@@ -1,6 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
-import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
+import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.ADVANCED_SUBSTRATE;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,9 +10,6 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import gregicality.multiblocks.api.render.GCYMTextures;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks;
-import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
@@ -24,6 +21,8 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+
+import org.jetbrains.annotations.NotNull;
 
 import gregtech.api.GTValues;
 import gregtech.api.capability.impl.MultiblockRecipeLogic;
@@ -43,17 +42,18 @@ import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityItemBus;
 
-import gregicality.multiblocks.api.render.GCYMTextures.*;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks.*;
-import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing.*;
+import gregicality.multiblocks.api.render.GCYMTextures;
+import gregicality.multiblocks.common.block.GCYMMetaBlocks;
+import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
+import gtb.api.utils.IsBetweenUtils;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.BlockCrucible;
 import gtb.common.metatileentities.GTBMetaTileEntities;
 
-public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockController { // TODO Pressure for this machine
+public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockController {
 
     private int temperature;
 
@@ -68,6 +68,7 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
     }
 
     @Override
+    @NotNull
     protected BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
                 .aisle("   TTT   ", "   TIT   ", "   TCT   ", "         ")
@@ -146,7 +147,6 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
                 ((MetaTileEntityItemBus) iMultiblockPart).getExportItems().getSlots() == 0) {
             return GCYMTextures.NONCONDUCTING_CASING;
         }
-
         return GCYMTextures.ENGRAVER_CASING;
     }
 
@@ -166,9 +166,9 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
     }
 
     @Override
-    public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, boolean advanced) {
+    public void addInformation(ItemStack stack, @Nullable World player, @NotNull List<String> tooltip, boolean advanced) {
         super.addInformation(stack, player, tooltip, advanced);
-        tooltip.add(I18n.format("gcys.multiblock.nanoscale_fabricator.tooltip.1"));
+        tooltip.add(I18n.format("gtb.multiblock.nanoscale_fabricator.tooltip.1"));
     }
 
     @Override
@@ -227,9 +227,9 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
         }
 
         @Override
-        protected boolean checkRecipe(@Nonnull Recipe recipe) {
+        public boolean checkRecipe(@Nonnull Recipe recipe) {
             int delta = temperature - recipe.getProperty(TemperatureProperty.getInstance(), 0);
-            return isBetweenInclusive(0, 250, delta);
+            return IsBetweenUtils.isBetweenInclusive(0, 250, delta);
         }
     }
 }
