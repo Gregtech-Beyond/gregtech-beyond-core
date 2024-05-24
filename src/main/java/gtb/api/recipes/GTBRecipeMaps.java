@@ -75,7 +75,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ELECTROLYTIC_CELL = new RecipeMap<>(
             "electrolytic_cell",
-            2, 4, 2, 6, new SimpleRecipeBuilder(), false);
+            3, 4, 2, 6, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ROTARY_EVAPORATOR = new RecipeMap<>(
             "rotary_evaporator",
