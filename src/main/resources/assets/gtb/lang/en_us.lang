@@ -351,6 +351,33 @@ metaitem.alumino_silicate_wool_sheet.name=Alumino Silicate Wool Sheet
 
 #Materials
 
+material.zinc_oxide=Zinc Oxide
+material.germanium_tetrachloride=Germanium Tetrachloride
+material.germanium_dioxide=Germanium Dioxide
+material.silicon_tetrachloride=Silicon Tetrachl
+material.aniline=Aniline
+material.acetic_anhydride=Acetic Anhydride
+material.para_xylene=Para-Xylene
+material.durene=Durene
+material.pyromellitic_dianhydride=Pyromellitic Dianhydride
+material.aminophenol=4-Aminophenol
+material.dimethylformamide=Dimethylformamide
+material.oxydianiline=4,4'-Oxydianiline
+material.kapton_k=Kapton K
+material.biphenyl_tetracarboxylic_acid_dianhydride=Biphenyl-Tetracarboxylic Acid Dianhydride
+material.nitroaniline=4-Nitroaniline
+material.para_phenylenediamine=Para-Phenylenediamine
+material.kapton_e=Kapton E
+material.methylamine=Methylamine
+material.trimethylamine=Trimethylamine
+material.bistrichloromethylbenzene=1,4-Bis(trichloromethyl)benzene
+material.tetrabromoethane=Tetrabromoethane
+material.terephthalic_acid=Terephthalic Acid
+material.terephthaloyl_chloride=Terephthaloyl Chloride
+material.butanediol=Butanediol
+material.gamma_butyrolactone=Gamma-Butyrolactone
+material.n_methyl_pyrrolidone=N-Methyl-2-Pyrrolidone
+material.kevlar=Kevlar
 gregtech.material.isophthalic_acid=Isophthalic Acid
 gregtech.material.isophthaloyl_chloride=Isophthaloyl Chloride
 gregtech.material.polymerization_ready_zylon=Polymerization Ready Zylon
