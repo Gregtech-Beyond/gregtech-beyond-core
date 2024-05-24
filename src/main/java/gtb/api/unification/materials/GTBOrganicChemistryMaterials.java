@@ -81,7 +81,7 @@ public class GTBOrganicChemistryMaterials {
                 .components(Carbon, 5, Hydrogen, 9, Nitrogen, 1, Oxygen, 1)
                 .build();
 
-        Kevlar = new Material.Builder(getMaterialsId(), gregtechId( "kevlar"))
+        Kevlar = new Material.Builder(getMaterialsId(), gregtechId("kevlar"))
                 .ingot().fluid()
                 .color(0xF0F078)
                 .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
@@ -107,6 +107,81 @@ public class GTBOrganicChemistryMaterials {
                 .build()
                 .setFormula("(C6H4)2(CO)2(NH)2", true);
 
+        Durene = new Material.Builder(getMaterialsId(), gregtechId("durene"))
+                .dust()
+                .color(0x336040)
+                .iconSet(MaterialIconSet.FINE)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 10, Hydrogen, 14)
+                .build()
+                .setFormula("C6H2(CH3)4", true);
+
+        PyromelliticDianhydride = new Material.Builder(getMaterialsId(), gregtechId("pyromellitic_dianhydride")) // TODO
+                                                                                                                 // PDMA
+                                                                                                                 // Tooltip
+                .dust()
+                .color(0xF0EAD6)
+                .iconSet(MaterialIconSet.ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 10, Hydrogen, 2, Oxygen, 6)
+                .build()
+                .setFormula("C6H2(C2O3)2", true);
+
+        Aminophenol = new Material.Builder(getMaterialsId(), gregtechId("aminophenol"))
+                .fluid()
+                .color(0xFF7F50)
+                .components(Carbon, 6, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
+                .build()
+                .setFormula("HOC6H4NH2", true);
+
+        Dimethylformamide = new Material.Builder(getMaterialsId(), gregtechId("dimethylformamide")) // TODO DMF Tooltip
+                .fluid()
+                .color(0x42BDFF)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 3, Hydrogen, 7, Nitrogen, 1, Oxygen, 1)
+                .build()
+                .setFormula("(CH3)2NC(O)H", true);
+
+        Oxydianiline = new Material.Builder(getMaterialsId(), gregtechId("oxydianiline"))
+                .dust()
+                .color(0xF0E130)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Carbon, 12, Hydrogen, 12, Nitrogen, 2, Oxygen, 1)
+                .build()
+                .setFormula("O(C6H4NH2)2", true);
+
+        KaptonK = new Material.Builder(getMaterialsId(), gregtechId("kapton_k"))
+                .ingot().fluid()
+                .color(0xFFCE52)
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL)
+                .components(Carbon, 12, Hydrogen, 12, Nitrogen, 2, Oxygen, 1)
+                .build()
+                .setFormula("(C7H2N2O4)(O(C6H4)2)", true);
+
+        BiphenylTetracarboxylicAcidDianhydride = new Material.Builder(getMaterialsId(),
+                gregtechId("biphenyl_tetracarboxylic_acid_dianhydride"))
+                        .dust()
+                        .color(0xFF7F50)
+                        .flags(DISABLE_DECOMPOSITION)
+                        .components(Carbon, 16, Hydrogen, 6, Oxygen, 6)
+                        .build()
+                        .setFormula("(C8H3O3)2", true);
+
+        Nitroaniline = new Material.Builder(getMaterialsId(), gregtechId("nitroaniline"))
+                .fluid()
+                .color(0x2A6E68)
+                .components(Carbon, 6, Hydrogen, 6, Nitrogen, 2, Oxygen, 2)
+                .build()
+                .setFormula("H2NC6H4NO2", true);
+
+        KaptonE = new Material.Builder(getMaterialsId(), gregtechId("kapton_e"))
+                .ingot()
+                .fluid()
+                .color(0xFFDF8C)
+                .flags(DISABLE_DECOMPOSITION, GENERATE_PLATE, NO_SMASHING, NO_SMELTING, GENERATE_FOIL)
+                .components(Carbon, 12, Hydrogen, 12, Nitrogen, 2, Oxygen, 1)
+                .build()
+                .setFormula("O(C6H4NH2)2", true);
     }
 
     private static int getMaterialsId() {

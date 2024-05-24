@@ -407,6 +407,11 @@ public class GTBMaterials {
     public static Material Grisium;
     public static Material SodiumSulfideSolution;
     public static Material LeadChloride;
+    public static Material SodiumTellurite;
+    public static Material TelluriumDioxide;
+    public static Material SeleniumDioxide;
+    public static Material SelenousAcid;
+    public static Material ChalcogenAnodeMud;
 
     // SD Materials
     public static Material CalciumSalts;
@@ -489,6 +494,17 @@ public class GTBMaterials {
     public static Material TraceRheniumFlue;
 
     // Organic Chemistry Materials
+    public static Material BlueVitriol;
+    public static Material KaptonE;
+    public static Material KaptonK;
+    public static Material Nitroaniline;
+    public static Material Dimethylformamide;
+    public static Material Aminophenol;
+    public static Material BiphenylTetracarboxylicAcidDianhydride;
+    public static Material Oxydianiline;
+    public static Material PyromelliticDianhydride;
+    public static Material PhthalicAnhydride;
+    public static Material Durene;
     public static Material FormicAcid;
     public static Material SodiumFormate;
     public static Material Tripropylamine;

@@ -1,5 +1,7 @@
 package gtb.api.unification.materials;
 
+import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.material.info.MaterialIconSet.FINE;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
@@ -331,11 +333,15 @@ public class GTBUnknownCompositionMaterials {
                 .color(0x292B2C)
                 .build();
 
-        MolybdenumFlue = new Material.Builder(getMaterialsId(), gregtechId("molybdenum_flue")).fluid().color(0x39194A)
+        MolybdenumFlue = new Material.Builder(getMaterialsId(), gregtechId("molybdenum_flue"))
+                .fluid()
+                .color(0x39194A)
                 .build();
 
-        TraceRheniumFlue = new Material.Builder(getMaterialsId(), gregtechId("trace_rhenium_flue")).fluid()
-                .color(0x96D6D5).build();
+        TraceRheniumFlue = new Material.Builder(getMaterialsId(), gregtechId("trace_rhenium_flue"))
+                .fluid()
+                .color(0x96D6D5)
+                .build();
 
         CrudeZinc = new Material.Builder(getMaterialsId(), gregtechId("crude_zinc"))
                 .fluid()
@@ -347,7 +353,15 @@ public class GTBUnknownCompositionMaterials {
                 .color(0x7A787B)
                 .build();
 
+        ChalcogenAnodeMud = new Material.Builder(getMaterialsId(), gregtechId("chalcogen_anode_mud"))
+                .dust().color(0x8A3324)
+                .iconSet(FINE)
+                .build();
 
+        BlueVitriol = new Material.Builder(getMaterialsId(), gregtechId("blue_vitriol"))
+                .fluid()
+                .color(0x1565C0)
+                .build();
     }
 
     private static int getMaterialsId() {

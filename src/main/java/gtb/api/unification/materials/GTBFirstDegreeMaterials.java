@@ -1422,6 +1422,38 @@ public class GTBFirstDegreeMaterials {
                 .color(0x737373).build().setFormula("KF", true);
         SodiumFluoride = new Material.Builder(getMaterialsId(), gregtechId("sodium_fluoride")).dust()
                 .color(0x265583).build().setFormula("NaF", true);
+
+        SodiumTellurite = new Material.Builder(getMaterialsId(), gregtechId("sodium_tellurite"))
+                .dust()
+                .color(0xC6C9BE)
+                .iconSet(MaterialIconSet.ROUGH)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Sodium, 2, Tellurium, 1, Oxygen, 3)
+                .build();
+
+        TelluriumDioxide = new Material.Builder(getMaterialsId(), gregtechId("tellurium_dioxide"))
+                .dust()
+                .color(0xE3DDB8)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Tellurium, 1, Oxygen, 2)
+                .build();
+
+        SeleniumDioxide = new Material.Builder(getMaterialsId(), gregtechId("selenium_dioxide"))
+                .dust()
+                .color(0xE0DDD8)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Selenium, 1, Oxygen, 2)
+                .build();
+
+        SelenousAcid = new Material.Builder(getMaterialsId(), gregtechId("selenous_acid"))
+                .dust()
+                .color(0xE0E083)
+                .iconSet(MaterialIconSet.SHINY)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Hydrogen, 2, Selenium, 1, Oxygen, 3)
+                .build();
     }
 
     private static int getMaterialsId() {
