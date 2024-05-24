@@ -2,6 +2,7 @@ package gtb.loaders.recipe;
 
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
+
 import gtb.loaders.recipe.handlers.ore_processing.*;
 
 public final class GTBRecipeLoader {
@@ -20,6 +21,7 @@ public final class GTBRecipeLoader {
         RecipeMaps.LASER_ENGRAVER_RECIPES.setMaxFluidInputs(1);
         RecipeMaps.LARGE_CHEMICAL_RECIPES.setMaxInputs(4);
 
+        SeleniumTelluriumProcessing.init();
         AlcoholLine.init();
         CadmiumProcessing.init();
         GermaniumProcessing.init();
