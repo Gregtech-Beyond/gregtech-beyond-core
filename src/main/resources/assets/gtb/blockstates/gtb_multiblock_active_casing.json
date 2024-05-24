@@ -10,7 +10,7 @@
     "active=true,variant=field_generator_casing": {
       "model": "minecraft:cube_all",
       "textures": {
-        "all": "gregtech:blocks/gtb_multiblocks_active_casing/dimensional_casing_on"
+        "all": "gregtech:blocks/gtb_multiblocks_active_casing/field_generator_casing_on"
       }
     },
     "active=false,variant=dimensional_casing": {
