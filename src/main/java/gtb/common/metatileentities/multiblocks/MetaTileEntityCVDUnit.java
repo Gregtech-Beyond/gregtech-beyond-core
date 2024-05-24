@@ -1,11 +1,9 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregicality.multiblocks.api.render.GCYMTextures;
-import gregicality.multiblocks.common.block.GCYMMetaBlocks;
-import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
-import gregtech.client.renderer.texture.cube.SimpleOverlayRenderer;
-import gtb.api.render.GTBTextures;
-import gtb.common.block.GTBMetaBlocks;
+import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 
@@ -16,13 +14,16 @@ import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.client.renderer.ICubeRenderer;
+import gregtech.client.renderer.texture.cube.SimpleOverlayRenderer;
 import gregtech.common.blocks.*;
 
+import gregicality.multiblocks.api.render.GCYMTextures;
+import gregicality.multiblocks.common.block.GCYMMetaBlocks;
+import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
+
 import gtb.api.recipes.GTBRecipeMaps;
-
-import javax.annotation.Nonnull;
-
-import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.SUBSTRATE_CASING;
+import gtb.api.render.GTBTextures;
+import gtb.common.block.GTBMetaBlocks;
 
 public class MetaTileEntityCVDUnit extends RecipeMapMultiblockController {
 
@@ -49,11 +50,12 @@ public class MetaTileEntityCVDUnit extends RecipeMapMultiblockController {
     }
 
     private static IBlockState getCasingState() {
-        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING);
+        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING
+                .getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING);
     }
 
     private static IBlockState getSubstrateState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(SUBSTRATE_CASING);
+        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(SUBSTRATE);
     }
 
     private static IBlockState getGlassState() {

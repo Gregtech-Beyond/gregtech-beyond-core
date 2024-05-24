@@ -43,6 +43,5 @@ public class CadmiumProcessing {
                 .duration(80)
                 .EUt(120)
                 .buildAndRegister();
-
     }
 }

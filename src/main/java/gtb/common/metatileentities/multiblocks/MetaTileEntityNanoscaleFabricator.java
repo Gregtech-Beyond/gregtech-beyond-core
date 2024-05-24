@@ -67,7 +67,6 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
         return new MetaTileEntityNanoscaleFabricator(metaTileEntityId);
     }
 
-
     @Override
     @NotNull
     protected BlockPattern createStructurePattern() {

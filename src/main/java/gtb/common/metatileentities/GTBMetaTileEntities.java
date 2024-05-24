@@ -43,6 +43,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityChemicalPlant CHEMICAL_PLANT;
     public static MetaTileEntityPolymerizationTank POLYMERIZATION_TANK;
     public static MetaTileEntityThermalPress THERMAL_PRESS;
+    public static MetaTileEntityHighTemperatureDistillationTower HIGH_TEMP_DISTILLATION_TOWER;
+    public static MetaTileEntityCVDUnit LARGE_CVD_UNIT;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -96,6 +98,10 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityPolymerizationTank(gtb("polymerization_tank")));
         THERMAL_PRESS = registerMetaTileEntity(3025,
                 new MetaTileEntityThermalPress(gtb("thermal_press")));
+        HIGH_TEMP_DISTILLATION_TOWER = registerMetaTileEntity(3026,
+                new MetaTileEntityHighTemperatureDistillationTower(gtb("high_temp_distillation_tower")));
+        LARGE_CVD_UNIT = registerMetaTileEntity(3027,
+                new MetaTileEntityCVDUnit(gtb("large_cvd_unit")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
