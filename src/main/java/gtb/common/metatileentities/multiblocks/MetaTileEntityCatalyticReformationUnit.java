@@ -42,21 +42,19 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~F~F~F~", "~~~~~~~", "~F~F~F~")
-                .aisle("~CCCCC~", "~CCCCC~", "~CCSCC~")
-                .aisle("~CCCCC~", "PC~~~CP", "~CCCCC~")
-                .aisle("~CCCCC~", "PCCCCCP", "~CCCCC~")
-                .aisle("~~~~~~~", "PPP~PPP", "~~~~~~~")
+                .aisle("F   F", "XXXPX", "XXXPX", "XXXPX")
+                .aisle("     ", "XXXPX", "X###X", "XXXPX")
+                .aisle("F   F", "XXXPX", "XSXPX", "XXXPX")
                 .where('S', selfPredicate())
-                .where('~', any())
-                .where('C', states(getCasingState())
+                .where('#', any())
+                .where('X', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
-                .where('F', frames(Materials.Steel))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                .where('F', frames(Materials.Titanium))
+                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TITANIUM_PIPE)))
                 .build();
     }
 
