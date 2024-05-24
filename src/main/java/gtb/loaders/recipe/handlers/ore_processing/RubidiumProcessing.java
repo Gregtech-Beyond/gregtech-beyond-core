@@ -6,6 +6,7 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.api.unification.materials.GTBMaterials.Rubidium;
 
 public class RubidiumProcessing {
 

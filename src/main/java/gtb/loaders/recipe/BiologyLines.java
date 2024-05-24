@@ -260,7 +260,7 @@ public class BiologyLines {
                 .duration(800)
                 .EUt(120)
                 .buildAndRegister();
-        
+
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(Nonoxynol_9_Solution.getFluid(2000))
                 .fluidOutputs(Nonoxynol_9.getFluid(500))

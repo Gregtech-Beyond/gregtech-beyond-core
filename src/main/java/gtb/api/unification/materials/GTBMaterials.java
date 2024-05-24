@@ -104,6 +104,9 @@ public class GTBMaterials {
     public static Material Xerizin;
 
     // Element Materials
+    public static Material Rubidium;
+
+    // FD Materials
 
     public static Material PerrhenicAcid;
     public static Material AmmoniumPerrhenate;
@@ -126,8 +129,6 @@ public class GTBMaterials {
     public static Material GermaniumTetrachloride;
     public static Material GermaniumDioxide;
     public static Material ZincOxide;
-
-    // FD Materials
     public static Material Nomex;
     public static Material IsophthalicAcid;
     public static Material IsophthaloylChloride;

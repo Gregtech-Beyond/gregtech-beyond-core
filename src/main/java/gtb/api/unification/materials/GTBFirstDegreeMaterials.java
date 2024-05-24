@@ -4,6 +4,7 @@ import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.DISABLE_DECOMPOSITION;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.api.unification.materials.GTBMaterials.Rubidium;
 
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialFlags;
@@ -634,13 +635,6 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0x333537)
                 .build().setFormula("O3", true);
-
-        Adamantium = new Material.Builder(getMaterialsId(), gregtechId("adamantium"))
-                .fluid()
-                .dust()
-                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME)
-                .color(0x333537)
-                .build().setFormula("Ad", true);
 
         FluorodarmstadticAcid = new Material.Builder(getMaterialsId(), gregtechId("fluorodarmstadtic_acid"))
                 .fluid()
