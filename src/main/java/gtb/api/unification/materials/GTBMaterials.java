@@ -492,6 +492,17 @@ public class GTBMaterials {
     public static Material FormicAcid;
     public static Material SodiumFormate;
     public static Material Tripropylamine;
+    public static Material Bistrichloromethylbenzene;
+    public static Material Tetrabromoethane;
+    public static Material Butanediol;
+    public static Material GammaButyrolactone;
+    public static Material NMethylPyrrolidone;
+    public static Material TerephthalicAcid;
+    public static Material TerephthaloylChloride;
+    public static Material ParaPhenylenediamine;
+    public static Material Kevlar;
+    public static Material KevlarConcentrate;
+    public static Material KevlarBlend;
 
     // Fantasy Materials
     public static Material AwakenedDraconium;
