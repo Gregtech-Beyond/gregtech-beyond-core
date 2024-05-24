@@ -42,6 +42,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityFrothFlotationUnit FROTH_FLOTATION_UNIT;
     public static MetaTileEntityDigester DIGESTER;
     public static MetaTileEntityChemicalPlant CHEMICAL_PLANT;
+    public static MetaTileEntityKevGenerator KEV_GENERATOR;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -91,6 +92,7 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityFrothFlotationUnit(gtb("froth_flotation_unit")));
         DIGESTER = registerMetaTileEntity(3022,
                 new MetaTileEntityDigester(gtb("digester")));
+        KEV_GENERATOR = registerMetaTileEntity(3023, new MetaTileEntityKevGenerator(gtb("kev_generator")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

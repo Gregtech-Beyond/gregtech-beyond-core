@@ -68,7 +68,7 @@ public class MetaTileEntityKevHatch extends MetaTileEntityMultiblockPart
 
     @Override
     public MultiblockAbility<IKevContainer> getAbility() {
-        return GTBMultiblockAbility.KEY_CONTAINER;
+        return this.isInput ? GTBMultiblockAbility.KEY_CONTAINER_INPUT : GTBMultiblockAbility.KEY_CONTAINER_OUTPUT;
     }
 
     @Override

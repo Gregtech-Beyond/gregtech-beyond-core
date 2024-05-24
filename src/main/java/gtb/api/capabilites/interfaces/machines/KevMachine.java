@@ -7,5 +7,5 @@ import gtb.api.capabilites.interfaces.containers.IKevContainer;
 public interface KevMachine {
 
     @Nullable
-    IKevContainer getKevContainer();
+    IKevContainer getIKevContainer();
 }

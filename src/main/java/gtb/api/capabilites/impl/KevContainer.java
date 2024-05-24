@@ -15,11 +15,10 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import gtb.api.capabilites.GTBTileCapabilities;
 import gtb.api.capabilites.interfaces.containers.ContainerNames;
 import gtb.api.capabilites.interfaces.containers.IKevContainer;
+import gtb.api.utils.GTBLog;
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
-@Setter
 public class KevContainer extends MTETrait implements IKevContainer {
 
     private int kev;
@@ -40,7 +39,7 @@ public class KevContainer extends MTETrait implements IKevContainer {
     @NotNull
     @Override
     public String getName() {
-        return ContainerNames.KEV_CONTAINER_NAME.name();
+        return ContainerNames.KEV_CONTAINER.name();
     }
 
     @Nullable
@@ -79,5 +78,17 @@ public class KevContainer extends MTETrait implements IKevContainer {
     @Override
     public void resetContainer() {
         this.setKev(0);
+    }
+
+    @Override
+    public boolean canChangeKev(int valueToAdd) {
+        int additionResult = this.getKev() + valueToAdd;
+        return additionResult >= minKev && additionResult <= this.getMaxKev();
+    }
+
+    @Override
+    public void changeKev(int valueToAdd) {
+        this.setKev(this.kev + valueToAdd);
+        GTBLog.logger.info("has Changed");
     }
 }

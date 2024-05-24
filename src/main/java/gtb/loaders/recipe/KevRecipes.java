@@ -10,7 +10,7 @@ public class KevRecipes {
     public static void init() {
         GTBRecipeMaps.KEV_TEST.recipeBuilder()
                 .KeV(25)
-                .EUt(100)
+                .EUt(20)
                 .duration(300)
                 .input(OrePrefix.ingot, Materials.Steel)
                 .output(OrePrefix.ingot, Materials.SteelMagnetic)
@@ -18,7 +18,7 @@ public class KevRecipes {
 
         GTBRecipeMaps.KEV_SUPPLY.recipeBuilder()
                 .EUt(100)
-                .duration(300)
+                .duration(20)
                 .input(OrePrefix.ingot, Materials.Steel)
                 .outputKeV(25)
                 .buildAndRegister();
