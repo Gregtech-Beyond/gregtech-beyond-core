@@ -1,4 +1,5 @@
 package gtb.loaders.recipe.handlers.ore_processing;
+
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -8,8 +9,7 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 
 public class MolybdenumProcessing {
 
-    public static void init(){
-
+    public static void init() {
         // MoS2 + 9O -> MoO3 + 2SO2 + ReO2
         ROASTER.recipeBuilder()
                 .input(dust, Molybdenite, 3)
@@ -86,6 +86,5 @@ public class MolybdenumProcessing {
                 .output(dust, AmmoniumChloride, 2)
                 .fluidOutputs(SulfuricAcid.getFluid(1000))
                 .duration(100).EUt(VA[EV]).buildAndRegister();
-
     }
 }

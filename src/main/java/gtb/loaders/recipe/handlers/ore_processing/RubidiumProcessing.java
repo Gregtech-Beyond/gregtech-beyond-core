@@ -89,6 +89,5 @@ public class RubidiumProcessing {
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
-
     }
 }
