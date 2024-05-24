@@ -8,6 +8,7 @@ import gregtech.api.unification.material.properties.*;
 public class GTBMaterialPropertyAddition {
 
     public static void init() {
+        Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Bromine.setProperty(PropertyKey.FLUID, new FluidProperty());
         PhosphorusPentoxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         SodiumSulfide.setProperty(PropertyKey.FLUID, new FluidProperty());
