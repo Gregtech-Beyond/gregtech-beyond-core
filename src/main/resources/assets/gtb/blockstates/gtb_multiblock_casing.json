@@ -32,6 +32,18 @@
           "all": "gregtech:blocks/gtb_multiblock_casing/silicon_carbide_casing"
         }
       },
+      "substrate_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/substrate_casing"
+        }
+      },
+      "nonconducting_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/gtb_multiblock_casing/nonconducting_casing"
+        }
+      },
       "quantum_glass": {
         "model": "minecraft:cube_all",
         "textures": {
