@@ -771,6 +771,7 @@ public class BiologyLines {
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Acetylene.getFluid(1000))
                 .circuitMeta(1)
+                .notConsumable(dust, Copper)
                 .fluidInputs(Formaldehyde.getFluid(1000))
                 .fluidOutputs(OneFourButynediol.getFluid(1000))
                 .duration(400)
