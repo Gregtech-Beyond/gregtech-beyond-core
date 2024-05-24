@@ -23,7 +23,6 @@ public final class GTBMetaBlocks {
     public static GTBMultiblockActiveCasing GTB_MULTIBLOCK_ACTIVE_CASING;
     public static GTBExplosive GTB_EXPLOSIVE;
     public static GTBBlockWireCoil GTB_BLOCK_WIRE_COIL;
-    public static GTBBlockWireCoil2 GTB_BLOCK_WIRE_COIL_2;
     public static BlockCrucible BLOCK_CRUCIBLE;
 
     public static void init() {
@@ -39,9 +38,6 @@ public final class GTBMetaBlocks {
         GTB_BLOCK_WIRE_COIL = new GTBBlockWireCoil();
         GTB_BLOCK_WIRE_COIL.setRegistryName("gtb_wire_coil");
 
-        GTB_BLOCK_WIRE_COIL_2 = new GTBBlockWireCoil2();
-        GTB_BLOCK_WIRE_COIL_2.setRegistryName("gtb_wire_coil_2");
-
         BLOCK_CRUCIBLE = new BlockCrucible();
         BLOCK_CRUCIBLE.setRegistryName("crucible");
     }
@@ -52,7 +48,6 @@ public final class GTBMetaBlocks {
         registerItemModel(GTB_EXPLOSIVE);
         registerItemModel(GTB_MULTIBLOCK_ACTIVE_CASING);
         registerItemModel(GTB_BLOCK_WIRE_COIL);
-        registerItemModel(GTB_BLOCK_WIRE_COIL_2);
         registerItemModel(BLOCK_CRUCIBLE);
         GTB_MULTIBLOCK_ACTIVE_CASING.onModelRegister();
     }

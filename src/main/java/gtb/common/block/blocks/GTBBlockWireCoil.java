@@ -31,7 +31,9 @@ import gregtech.client.utils.TooltipHelper;
 import gregtech.common.ConfigHolder;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityMultiSmelter;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 
 public class GTBBlockWireCoil extends VariantActiveBlock<GTBBlockWireCoil.GTBCoilType> {
 
@@ -97,8 +99,14 @@ public class GTBBlockWireCoil extends VariantActiveBlock<GTBBlockWireCoil.GTBCoi
     }
 
     @Getter
+    @ToString
+    @AllArgsConstructor
     public enum GTBCoilType implements IStringSerializable, IHeatingCoilBlockStats {
 
+        TEMPORALLYCONSTRAINEDANTIMATTER("temporally_constrained_anti_matter", 16200, 512, 256, 9,
+                TemporallyConstrainedAntiMatter),
+        CATACLYSMINDUCEDMIXEDMATTER("cataclysm_induced_mixed_matter", 17100, 1024, 4096, 9,
+                CataclysmInducedMixedMatter),
         HSS_S("hss_s", 6300, 4, 4, 4, HSSS),
         NAQUADAH_ALLOY("naquadah_alloy", 8100, 8, 4, 5, NaquadahAlloy),
         AWAKENED_DRACONIUM("awakened_draconium", 9900, 8, 8, 6, AwakenedDraconium),
@@ -114,20 +122,5 @@ public class GTBBlockWireCoil extends VariantActiveBlock<GTBBlockWireCoil.GTBCoi
         private final int energyDiscount;
         private final int tier;
         private final Material material;
-
-        GTBCoilType(String name, int coilTemperature, int level, int energyDiscount, int tier, Material material) {
-            this.name = name;
-            this.coilTemperature = coilTemperature;
-            this.level = level;
-            this.energyDiscount = energyDiscount;
-            this.tier = tier;
-            this.material = material;
-        }
-
-        @NotNull
-        @Override
-        public String toString() {
-            return getName();
-        }
     }
 }

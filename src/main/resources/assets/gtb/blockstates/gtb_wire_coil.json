@@ -1,0 +1,122 @@
+{
+  "forge_marker": 1,
+  "variants": {
+
+    "active=false,variant=temporally_constrained_anti_matter": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/temporally_constrained_anti_matter"
+      }
+    },
+    "active=true,variant=temporally_constrained_anti_matter": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/temporally_constrained_anti_matter_on"
+      }
+    },
+
+    "active=false,variant=hss_s": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/hss_s"
+      }
+    },
+    "active=true,variant=hss_s": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/hss_s_on"
+      }
+    },
+
+    "active=false,variant=naquadah_alloy": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/naquadah_alloy"
+      }
+    },
+    "active=true,variant=naquadah_alloy": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/naquadah_alloy_on"
+      }
+    },
+
+    "active=false,variant=awakened_draconium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/awakened_draconium"
+      }
+    },
+    "active=true,variant=awakened_draconium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/awakened_draconium_on"
+      }
+    },
+
+    "active=false,variant=adamantium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/adamantium"
+      }
+    },
+    "active=true,variant=adamantium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/adamantium_on"
+      }
+    },
+
+    "active=false,variant=pikyonium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/pikyonium"
+      }
+    },
+    "active=true,variant=pikyonium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/pikyonium_on"
+      }
+    },
+
+    "active=false,variant=comsic_neutronium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/comsic_neutronium"
+      }
+    },
+    "active=true,variant=comsic_neutronium": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/comsic_neutronium_on"
+      }
+    },
+
+    "active=false,variant=infinity": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/infinity"
+      }
+    },
+    "active=true,variant=infinity": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/infinity_on"
+      }
+    },
+
+    "active=false,variant=eternal": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/eternal"
+      }
+    },
+    "active=true,variant=eternal": {
+      "model": "minecraft:cube_all",
+      "textures": {
+        "all": "gregtech:blocks/gtb_wire_coil/eternal_on"
+      }
+    }
+  }
+}

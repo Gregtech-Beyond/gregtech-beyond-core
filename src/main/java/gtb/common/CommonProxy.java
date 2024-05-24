@@ -48,7 +48,6 @@ public class CommonProxy {
         registry.register(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING);
         registry.register(GTBMetaBlocks.GTB_EXPLOSIVE);
         registry.register(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL);
-        registry.register(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL_2);
         registry.register(GTBMetaBlocks.BLOCK_CRUCIBLE);
     }
 
@@ -61,7 +60,6 @@ public class CommonProxy {
         registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL, VariantItemBlock::new));
-        registry.register(createItemBlock(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL_2, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.BLOCK_CRUCIBLE, VariantItemBlock::new));
     }
 
