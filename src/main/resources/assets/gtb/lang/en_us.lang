@@ -56,11 +56,13 @@ recipemap.froth_flotation_unit.name=Froth Flotation
 recipemap.digester.name=Digestion
 recipemap.polymerization_tank.name=Polymerization
 recipemap.thermal_press.name=Thermal Press
-
-
-
-
-
+recipemap.phase_separator.name=Phase Separation
+recipemap.cryogenic_distillation_plant.name=Cryogenic Distillation
+recipemap.rare_gas_stripping_column.name=Rare Gas Stripping
+recipemap.crystallization.name=Crystallization
+recipemap.condensation_unit.name=Condensation
+recipemap.engraving_unit.name=Superfluid Engraving
+recipemap.pressure_swing_adsorber.name=Pressure Swing Adsorption
 
 # Singleblock machinery
 
@@ -156,6 +158,11 @@ gtb.machine.clarifier.name=Clarifier
 gtb.machine.chemical_plant.name=Chemical Plant
 gtb.machine.polymerization_tank.name=Polymerization Tank
 gtb.machine.thermal_press.name=Thermal Press
+gtb.machine.phase_separator.name=Phase Separator
+gtb.machine.cryogenic_distillation_plant.name=Cryogenic Distillation Plant
+gtb.machine.rare_gas_stripping_column.name=Rare Gas Stripping Column
+gtb.machine.condensation_unit.name=Condensation Unit
+gtb.machine.pressure_swing_adsorber.name=Pressue Swing Adsorber
 
 # MetaItems
 
@@ -824,3 +831,29 @@ gregtech.material.acetic_anhydride=Acetic Anhydirde
 gregtech.material.blood_cells=Blood Cells
 gregtech.material.blood_plasma=Blood
 gregtech.material.linoleic_acid=Linoleic Acid
+gregtech.material.cold_air=Cold Air
+gregtech.material.supercooled_liquid_nitrogen=Supercooled Liquid Nitrogen
+gregtech.material.untreated_liquid_oxygen=Untreated Liquid Oxygen
+gregtech.material.cold_waste_gaseous_nitrogen=Cold Waste Gaseous Nitrogen
+gregtech.material.cold_gaseous_nitrogen=Cold Gaseous Nitrogen
+gregtech.material.argon_rich_gas=Argon Rich Gas
+gregtech.material.crude_argon_vapor=Crude Argon Vapor
+gregtech.material.supercooled_oxygen=Supercooled Oxygen
+gregtech.material.liquid_waste_nitrogen=Liquid Waste Nitrogen
+gregtech.material.rare_gas_rich_gaseous_nitrogen=Rare Gas Rich Gaseous Nitrogen
+gregtech.material.rare_gas_mixture=Rare Gas Mixture
+gregtech.material.liquid_krypton=Liquid Krypton
+gregtech.material.nitrogen_stripped_rare_gas_mixture=Nitrogen Stripped Rare Gas Mixture
+gregtech.material.crude_krypton=Crude Krypton
+gregtech.material.crude_neon=Crude Neon
+gregtech.material.crude_helium=Crude Helium
+gregtech.material.crude_xenon=Crude Xenon
+gregtech.material.crude_argon=Crude Argon
+gregtech.material.partially_liquid_krypton=Partially Liquid Krypton
+gregtech.material.partially_liquid_neon=Partially Liquid Neon
+gregtech.material.partially_liquid_helium=Partially Liquid Helium
+gregtech.material.partially_liquid_xenon=Partially Liquid Xenon
+gregtech.material.partially_liquid_argon=Partially Liquid Argon
+gregtech.material.liquid_argon=Liquid Argon
+gregtech.material.liquid_neon=Liquid Neon
+gregtech.material.cold_gaseous_oxygen=Cold Gaseous Oxygen

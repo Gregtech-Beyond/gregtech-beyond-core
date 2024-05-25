@@ -399,6 +399,34 @@ public class GTBMaterials {
     public static Material UEVSuperconductor;
 
     // Unknown Materials
+    public static Material LiquidOxygen;
+    public static Material ColdAir;
+    public static Material SupercooledLiquidNitrogen;
+    public static Material UntreatedLiquidOxygen;
+    public static Material ColdWasteGasouesNitrogen;
+    public static Material ColdGasouesNitrogen;
+    public static Material ArgonRichGas;
+    public static Material CrudeArgonVapor;
+    public static Material SupercooledOxygen;
+    public static Material LiquidWasteNitrogen;
+    public static Material RareGasRichGaseousNitrogen;
+    public static Material RareGasMixture;
+    public static Material LiquidKrypton;
+    public static Material NitrogenStrippedRareGasMixture;
+    public static Material CrudeKrypton;
+    public static Material CrudeNeon;
+    public static Material CrudeHelium;
+    public static Material CrudeXenon;
+    public static Material CrudeArgon;
+    public static Material PartiallyLiquidKrypton;
+    public static Material PartiallyLiquidNeon;
+    public static Material PartiallyLiquidHelium;
+    public static Material PartiallyLiquidXenon;
+    public static Material PartiallyLiquidArgon;
+    public static Material LiquidArgon;
+    public static Material LiquidNeon;
+    public static Material ColdGaseousOxygen;
+
     public static Material ConcentratedBrine;
     public static Material DampBromine;
     public static Material IodineSlurry;
