@@ -134,7 +134,75 @@ public class CryogenicAirDistillation {
                 .EUt(70)
                 .buildAndRegister();
 
-        
+       PRESSURE_SWING_ADSORBER.recipeBuilder()
+               .fluidInputs(Syngas.getFluid(10000))
+               .fluidOutputs(Hydrogen.getFluid(6000))
+               .fluidOutputs(CarbonMonoxide.getFluid(4000))
+               .duration(400)
+               .EUt(80)
+               .buildAndRegister();
+
+       PRESSURE_SWING_ADSORBER.recipeBuilder()
+               .fluidInputs(Air.getFluid(10000))
+               .fluidOutputs(Nitrogen.getFluid(7780))
+               .fluidOutputs(Oxygen.getFluid(2200))
+               .duration(400)
+               .EUt(120)
+               .buildAndRegister();
+
+       PRESSURE_SWING_ADSORBER.recipeBuilder()
+               .fluidInputs(SaltWater.getFluid(1000))
+               .fluidOutputs(Water.getFluid(1000))
+               .output(dust, Salt, 4)
+               .duration(160)
+               .EUt(70)
+               .buildAndRegister();
+
+       RARE_GAS_STRIPPING_COLUMN.recipeBuilder()
+               .fluidInputs(CrudeArgonVapor.getFluid(1000))
+               .fluidInputs(LiquidOxygen.getFluid(1000))
+               .fluidInputs(LiquidNitrogen.getFluid(1000))
+               .fluidOutputs(Oxygen.getFluid(1000))
+               .fluidOutputs(RareGasRichGaseousNitrogen.getFluid(2000))
+               .duration(800)
+               .EUt(90)
+               .buildAndRegister();
+
+       CONDENSATION_UNIT.recipeBuilder()
+               .fluidInputs(RareGasRichGaseousNitrogen.getFluid(1000))
+               .fluidOutputs(CrudeKrypton.getFluid(100))
+               .fluidOutputs(ColdGaseousOxygen.getFluid(200))
+               .fluidOutputs(RareGasMixture.getFluid(700))
+               .duration(200)
+               .EUt(80)
+               .buildAndRegister();
+
+       CONDENSATION_UNIT.recipeBuilder()
+               .fluidInputs(RareGasMixture.getFluid(1000))
+               .fluidInputs(LiquidNitrogen.getFluid(500))
+               .fluidOutputs(Nitrogen.getFluid(1000))
+               .fluidOutputs(NitrogenStrippedRareGasMixture.getFluid(500))
+               .duration(200)
+               .EUt(80)
+               .buildAndRegister();
+
+       CONDENSATION_UNIT.recipeBuilder()
+               .fluidInputs(CrudeArgonVapor.getFluid(1000))
+               .fluidInputs(SupercooledOxygen.getFluid(1000))
+               .fluidOutputs(CrudeArgon.getFluid(200))
+               .fluidOutputs(LiquidOxygen.getFluid(1800))
+               .duration(200)
+               .EUt(80)
+               .buildAndRegister();
+
+       CONDENSATION_UNIT.recipeBuilder()
+                .fluidInputs(ColdWasteGasouesNitrogen.getFluid(1000))
+                .fluidOutputs(LiquidWasteNitrogen.getFluid(1000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+
 
     }
 }
