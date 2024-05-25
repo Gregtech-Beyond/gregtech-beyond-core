@@ -118,6 +118,19 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> CONDENSATION_UNIT = new RecipeMap<>("condensation_unit",
             1, 0, 2, 4, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> CRYOGENIC_DISTILLATION_PLANT = new RecipeMap<>("cryogenic_distillation_plant",
+            1, 0, 9, 9, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> PRESSURE_SWING_ADSORBER = new RecipeMap<>("pressure_swing_adsorber",
+            1, 1, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> RARE_GAS_STRIPPING_COLUMN = new RecipeMap<>("rare_gas_stripping_column",
+            0, 0, 3, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> PHASE_SEPARATOR = new RecipeMap<>("phase_separator",
+            0, 0, 1, 3, new SimpleRecipeBuilder(), false);
+
+
 
 
 

@@ -1,7 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -16,23 +15,22 @@ import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
+import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.*;
+import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.MetaBlocks;
+
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
-import static gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType.*;
 
+public class MetaTileEntityRareGasStrippingColumn extends RecipeMapMultiblockController {
 
-public class MetaTileEntityCondensationUnit extends RecipeMapMultiblockController {
-
-    public MetaTileEntityCondensationUnit(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CONDENSATION_UNIT);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
+    public MetaTileEntityRareGasStrippingColumn(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.RARE_GAS_STRIPPING_COLUMN);
         initializeAbilities();
     }
 
@@ -43,21 +41,18 @@ public class MetaTileEntityCondensationUnit extends RecipeMapMultiblockControlle
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCCCC","CCCCC","CCCCC","CCCCC","CCCCC")
-                .aisle("CCCCC","C~P~C","CPPPC","C~P~C","CCSCC")
-                .aisle("CCCCC","CGGGC","CGGGC","CGGGC","CCCCC")
+                .aisle("F~F~F~F","~~~~~~~","F~F~F~F")
+                .aisle("CCCCCCC","CCCCCCC","CCCCCCC")
+                .aisle("CCCCCCC","C~~~~~C","CCCSCCC")
+                .aisle("CCCCCCC","CCCCCCC","CCCCCCC")
                 .where('S', selfPredicate())
-                .where('G',
-                        states(MetaBlocks.MULTIBLOCK_CASING
-                                .getState(BlockMultiblockCasing.MultiblockCasingType.GRATE_CASING)))
                 .where('~', any())
                 .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(4, 1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMaxGlobalLimited(4, 1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMaxGlobalLimited(4, 1))
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(4, 1)))
-                .where('G', states(Blocks.GLASS.getDefaultState()))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState(STEEL_PIPE)))
+                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
                 .build();
     }
 
@@ -83,11 +78,11 @@ public class MetaTileEntityCondensationUnit extends RecipeMapMultiblockControlle
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.ELECTROLYZER_OVERLAY;
+        return Textures.MACERATOR_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityCondensationUnit(metaTileEntityId);
+        return new MetaTileEntityRareGasStrippingColumn(metaTileEntityId);
     }
 }
