@@ -56,11 +56,13 @@ recipemap.froth_flotation_unit.name=Froth Flotation
 recipemap.digester.name=Digestion
 recipemap.polymerization_tank.name=Polymerization
 recipemap.thermal_press.name=Thermal Press
-
-
-
-
-
+recipemap.phase_separator.name=Phase Separation
+recipemap.cryogenic_distillation_plant.name=Cryogenic Distillation
+recipemap.rare_gas_stripping_column.name=Rare Gas Stripping
+recipemap.crystallization.name=Crystallization
+recipemap.condensation_unit.name=Condensation
+recipemap.engraving_unit.name=Superfluid Engraving
+recipemap.pressure_swing_adsorber.name=Pressure Swing Adsorption
 
 # Singleblock machinery
 
@@ -156,6 +158,11 @@ gtb.machine.clarifier.name=Clarifier
 gtb.machine.chemical_plant.name=Chemical Plant
 gtb.machine.polymerization_tank.name=Polymerization Tank
 gtb.machine.thermal_press.name=Thermal Press
+gtb.machine.phase_separator.name=Phase Separator
+gtb.machine.cryogenic_distillation_plant.name=Cryogenic Distillation Plant
+gtb.machine.rare_gas_stripping_column.name=Rare Gas Stripping Column
+gtb.machine.condensation_unit.name=Condensation Unit
+gtb.machine.pressure_swing_adsorber.name=Pressue Swing Adsorber
 
 # MetaItems
 
