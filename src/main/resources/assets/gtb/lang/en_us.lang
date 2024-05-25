@@ -57,7 +57,7 @@ recipemap.digester.name=Digestion
 recipemap.polymerization_tank.name=Polymerization
 recipemap.thermal_press.name=Thermal Press
 recipemap.nanoscale_fabricator.name=Nanoscale Fabricatopm
-
+recipemap.high_temp_distillation_tower.name=High Temperature Distillation
 
 
 
@@ -130,7 +130,8 @@ gtb.machine.ion_implanter.uv.name=Ultimate Ion Implanter Unit
 
 
 # Multiblock machine controllers
-
+gtb.machine.large_cvd_unit.name=Large CVD Unit
+gtb.machine.high_temp_distillation_tower.name=High Temperature Distillation
 gtb.machine.nanoscale_fabricator.name=Nanoscale Fabricator
 gtb.machine.water_tank.name=Water Tank
 gtb.machine.vacuum_furnace.name=Vacuum Furnace
