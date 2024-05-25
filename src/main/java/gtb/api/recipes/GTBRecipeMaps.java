@@ -114,4 +114,11 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> THERMAL_PRESS = new RecipeMap<>("thermal_press",
             4, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CONDENSATION_UNIT = new RecipeMap<>("condensation_unit",
+            1, 0, 2, 4, new SimpleRecipeBuilder(), false);
+
+
+
+
 }
