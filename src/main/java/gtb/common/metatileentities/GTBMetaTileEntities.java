@@ -2,11 +2,9 @@ package gtb.common.metatileentities;
 
 import static gregtech.common.metatileentities.MetaTileEntities.*;
 import static gtb.api.utils.GTBUtil.gtb;
-
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.texture.Textures;
-
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
@@ -45,6 +43,11 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityThermalPress THERMAL_PRESS;
     public static MetaTileEntityHighTemperatureDistillationTower HIGH_TEMP_DISTILLATION_TOWER;
     public static MetaTileEntityCVDUnit LARGE_CVD_UNIT;
+    public static MetaTileEntityCryogenicDistillationPlant CRYOGENIC_DISTILLATION_PLANT;
+    public static MetaTileEntityCondensationUnit CONDENSATION_UNIT;
+    public static MetaTileEntityRareGasStrippingColumn RARE_GAS_STRIPPING_COLUMN;
+    public static MetaTileEntityPressureSwingAdsorber PRESSURE_SWING_ADSORBER;
+    public static MetaTileEntityPhaseSeparator PHASE_SEPARATOR;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];

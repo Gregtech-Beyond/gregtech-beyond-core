@@ -22,6 +22,7 @@ public final class GTBRecipeLoader {
         RecipeMaps.LARGE_CHEMICAL_RECIPES.setMaxInputs(4);
 
         SeleniumTelluriumProcessing.init();
+        CryogenicAirDistillation.init();
         AlcoholLine.init();
         CadmiumProcessing.init();
         GermaniumProcessing.init();

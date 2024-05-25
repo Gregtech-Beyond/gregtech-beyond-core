@@ -362,6 +362,143 @@ public class GTBUnknownCompositionMaterials {
                 .fluid()
                 .color(0x1565C0)
                 .build();
+
+        ColdAir = new Material.Builder(getMaterialsId(), gregtechId("cold_air"))
+                .fluid()
+                .color(0xBBDEFB)
+                .build();
+
+        SupercooledLiquidNitrogen = new Material.Builder(getMaterialsId(), gregtechId("supercoold_liquid_nitrogen"))
+                .fluid()
+                .color(0x4FC3F7)
+                .build();
+
+        UntreatedLiquidOxygen = new Material.Builder(getMaterialsId(), gregtechId("untreated_liquid_oxygen"))
+                .fluid()
+                .color(0x6CA4BE)
+                .build();
+
+        ColdWasteGasouesNitrogen = new Material.Builder(getMaterialsId(), gregtechId("cold_waste_gaseous_nitrogen"))
+                .fluid()
+                .color(0x5C7884)
+                .build();
+
+        ColdGasouesNitrogen = new Material.Builder(getMaterialsId(), gregtechId("cold_gaseous_nitrogen"))
+                .fluid()
+                .color(0x5C7884)
+                .build();
+
+        ArgonRichGas = new Material.Builder(getMaterialsId(), gregtechId("argon_rich_gas"))
+                .fluid()
+                .color(0x6B976D)
+                .build();
+
+        CrudeArgonVapor = new Material.Builder(getMaterialsId(), gregtechId("crude_argon_vapor"))
+                .fluid()
+                .color(0x388E3C)
+                .build();
+
+        SupercooledOxygen = new Material.Builder(getMaterialsId(), gregtechId("supercooled_oxygen"))
+                .fluid()
+                .color(0x32312F)
+                .build();
+
+        LiquidWasteNitrogen = new Material.Builder(getMaterialsId(), gregtechId("liquid_waste_nitrogen"))
+                .fluid()
+                .color(0x29B6F6)
+                .build();
+
+        RareGasRichGaseousNitrogen = new Material.Builder(getMaterialsId(),
+                gregtechId("rare_gas_rich_gaseous_nitrogen"))
+                        .fluid()
+                        .color(0x7E57C2)
+                        .build();
+
+        RareGasMixture = new Material.Builder(getMaterialsId(), gregtechId("rare_gas_mixture"))
+                .fluid()
+                .color(0x8F78B6)
+                .build();
+
+        LiquidKrypton = new Material.Builder(getMaterialsId(), gregtechId("liquid_krypton"))
+                .fluid()
+                .color(0x0277BD)
+                .build();
+
+        NitrogenStrippedRareGasMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("nitrogen_stripped_rare_gas_mixture"))
+                        .fluid()
+                        .color(0x7B1FA2)
+                        .build();
+
+        CrudeKrypton = new Material.Builder(getMaterialsId(), gregtechId("crude_krypton"))
+                .fluid()
+                .color(0x81C784)
+                .build();
+
+        CrudeNeon = new Material.Builder(getMaterialsId(), gregtechId("crude_neon"))
+                .fluid()
+                .color(0xF9A825)
+                .build();
+
+        CrudeHelium = new Material.Builder(getMaterialsId(), gregtechId("crude_helium"))
+                .fluid()
+                .color(0xDCE775)
+                .build();
+
+        CrudeXenon = new Material.Builder(getMaterialsId(), gregtechId("crude_xenon"))
+                .fluid()
+                .color(0xD32F2F)
+                .build();
+
+        CrudeArgon = new Material.Builder(getMaterialsId(), gregtechId("crude_argon"))
+                .fluid()
+                .color(0x9CCC65)
+                .build();
+
+        PartiallyLiquidKrypton = new Material.Builder(getMaterialsId(), gregtechId("partially_liquid_krypton"))
+                .fluid()
+                .color(0x81C784)
+                .build();
+
+        PartiallyLiquidNeon = new Material.Builder(getMaterialsId(), gregtechId("partially_liquid_neon"))
+                .fluid()
+                .color(0xF9A825)
+                .build();
+
+        PartiallyLiquidHelium = new Material.Builder(getMaterialsId(), gregtechId("partially_liquid_helium"))
+                .fluid()
+                .color(0xDCE775)
+                .build();
+
+        PartiallyLiquidXenon = new Material.Builder(getMaterialsId(), gregtechId("partially_liquid_xenon"))
+                .fluid()
+                .color(0xD32F2F)
+                .build();
+
+        PartiallyLiquidArgon = new Material.Builder(getMaterialsId(), gregtechId("partially_liquid_argon"))
+                .fluid()
+                .color(0x9CCC65)
+                .build();
+
+        LiquidArgon = new Material.Builder(getMaterialsId(), gregtechId("liquid_argon"))
+                .fluid()
+                .color(0x689F38)
+                .build();
+
+        LiquidNeon = new Material.Builder(getMaterialsId(), gregtechId("liquid_neon"))
+                .fluid()
+                .color(0xFF8F00)
+                .build();
+
+        ColdGaseousOxygen = new Material.Builder(getMaterialsId(), gregtechId("cold_gaseous_oxygen"))
+                .fluid()
+                .color(0xFF8F00)
+                .build();
+
+        LiquidOxygen = new Material.Builder(getMaterialsId(), gregtechId("liquid_oxygen"))
+                .fluid()
+                .color(0x2196F3)
+                .build();
     }
 
     private static int getMaterialsId() {
