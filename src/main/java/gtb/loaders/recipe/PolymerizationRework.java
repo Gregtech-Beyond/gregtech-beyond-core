@@ -1398,7 +1398,7 @@ public class PolymerizationRework {
                 .input(dust, KevlarConcentrate)
                 .output(dust, KevlarBlend)
                 .EUt(2000)
-                .EUt(800)
+                .duration(800)
                 .buildAndRegister();
 
         POLYMERIZATION_TANK.recipeBuilder()
