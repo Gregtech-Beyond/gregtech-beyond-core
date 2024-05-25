@@ -44,6 +44,9 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityThermalPress THERMAL_PRESS;
     public static MetaTileEntityCryogenicDistillationPlant CRYOGENIC_DISTILLATION_PLANT;
     public static MetaTileEntityCondensationUnit CONDENSATION_UNIT;
+    public static MetaTileEntityRareGasStrippingColumn RARE_GAS_STRIPPING_COLUMN;
+    public static MetaTileEntityPressureSwingAdsorber PRESSURE_SWING_ADSORBER;
+    public static MetaTileEntityPhaseSeparator PHASE_SEPARATOR;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -99,6 +102,12 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityCondensationUnit(gtb("condensation_unit")));
         CRYOGENIC_DISTILLATION_PLANT = registerMetaTileEntity(3026,
                 new MetaTileEntityCryogenicDistillationPlant(gtb("cryogenic_distillation_plant")));
+        RARE_GAS_STRIPPING_COLUMN = registerMetaTileEntity(3027,
+                new MetaTileEntityRareGasStrippingColumn(gtb("rare_gas_stripping_column")));
+        PRESSURE_SWING_ADSORBER = registerMetaTileEntity(3028,
+                new MetaTileEntityPressureSwingAdsorber(gtb("pressure_swing_adsorber")));
+        PHASE_SEPARATOR = registerMetaTileEntity(3029,
+                new MetaTileEntityPhaseSeparator(gtb("phase_separator")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

@@ -64,7 +64,7 @@ public class CryogenicAirDistillation {
         CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
                 .fluidInputs(LiquidNitrogen.getFluid(200))
                 .fluidInputs(ColdGaseousOxygen.getFluid(200))
-                .fluidInputs(CrudeXenon.getFluid(1000))
+                .fluidInputs(CrudeKrypton.getFluid(1000))
                 .fluidOutputs(ColdGasouesNitrogen.getFluid(200))
                 .fluidOutputs(LiquidOxygen.getFluid(200))
                 .fluidOutputs(PartiallyLiquidKrypton.getFluid(1000))
