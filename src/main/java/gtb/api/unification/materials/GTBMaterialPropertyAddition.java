@@ -8,6 +8,7 @@ import gregtech.api.unification.material.properties.*;
 public class GTBMaterialPropertyAddition {
 
     public static void init() {
+        Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Bromine.setProperty(PropertyKey.FLUID, new FluidProperty());
         PhosphorusPentoxide.setProperty(PropertyKey.FLUID, new FluidProperty());
         SodiumSulfide.setProperty(PropertyKey.FLUID, new FluidProperty());
@@ -22,5 +23,7 @@ public class GTBMaterialPropertyAddition {
         BorosilicateGlass.addFlags(MaterialFlags.GENERATE_PLATE);
         Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
         AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
+        // Graphene.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Mica.setProperty(PropertyKey.INGOT, new IngotProperty());
     }
 }

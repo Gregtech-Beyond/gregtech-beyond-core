@@ -24,6 +24,7 @@ import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing;
 
@@ -66,7 +67,7 @@ public class MetaTileEntityBioReactor extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.ROBUST_TUNGSTENSTEEL_CASING;
+        return GTBTextures.BIOLOGICALLY_STERILE_CASING;
     }
 
     @Override

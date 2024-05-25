@@ -75,7 +75,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ELECTROLYTIC_CELL = new RecipeMap<>(
             "electrolytic_cell",
-            2, 4, 2, 6, new SimpleRecipeBuilder(), false);
+            3, 4, 2, 6, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ROTARY_EVAPORATOR = new RecipeMap<>(
             "rotary_evaporator",
@@ -108,6 +108,14 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> DIGESTER = new RecipeMap<>("digester",
             4, 4, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> MOLECULAR_BEAM_RECIPES = new RecipeMap<>(
+            "molecular_beam_recipes",
+            4, 1, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> HIGH_TEMP_DISTILLATION = new RecipeMap<>(
+            "high_temp_distillation",
+            1, 1, 1, 12, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> POLYMERIZATION_TANK = new RecipeMap<>("polymerization_tank",
             2, 2, 2, 2, new SimpleRecipeBuilder(), false);

@@ -2,11 +2,9 @@ package gtb.common.metatileentities;
 
 import static gregtech.common.metatileentities.MetaTileEntities.*;
 import static gtb.api.utils.GTBUtil.gtb;
-
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.texture.Textures;
-
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
@@ -17,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBMetaTileEntities {
 
+    public static MetaTileEntityNanoscaleFabricator NANOSCALE_FABRICATOR;
     public static MetaTileEntityWaterTank WATER_TANK;
     public static MetaTileEntitySolarThermalConcentrator SOLAR_THERMAL_CONCENTRATOR;
     public static MetaTileEntityBacterialVat BACTERIAL_VAT;
@@ -42,6 +41,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityChemicalPlant CHEMICAL_PLANT;
     public static MetaTileEntityPolymerizationTank POLYMERIZATION_TANK;
     public static MetaTileEntityThermalPress THERMAL_PRESS;
+    public static MetaTileEntityHighTemperatureDistillationTower HIGH_TEMP_DISTILLATION_TOWER;
+    public static MetaTileEntityCVDUnit LARGE_CVD_UNIT;
     public static MetaTileEntityCryogenicDistillationPlant CRYOGENIC_DISTILLATION_PLANT;
     public static MetaTileEntityCondensationUnit CONDENSATION_UNIT;
     public static MetaTileEntityRareGasStrippingColumn RARE_GAS_STRIPPING_COLUMN;
@@ -94,20 +95,16 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityFrothFlotationUnit(gtb("froth_flotation_unit")));
         DIGESTER = registerMetaTileEntity(3022,
                 new MetaTileEntityDigester(gtb("digester")));
-        POLYMERIZATION_TANK = registerMetaTileEntity(3023,
+        NANOSCALE_FABRICATOR = registerMetaTileEntity(3023,
+                new MetaTileEntityNanoscaleFabricator(gtb("nanoscale_fabricator")));
+        POLYMERIZATION_TANK = registerMetaTileEntity(3024,
                 new MetaTileEntityPolymerizationTank(gtb("polymerization_tank")));
-        THERMAL_PRESS = registerMetaTileEntity(3024,
+        THERMAL_PRESS = registerMetaTileEntity(3025,
                 new MetaTileEntityThermalPress(gtb("thermal_press")));
-        CONDENSATION_UNIT = registerMetaTileEntity(3025,
-                new MetaTileEntityCondensationUnit(gtb("condensation_unit")));
-        CRYOGENIC_DISTILLATION_PLANT = registerMetaTileEntity(3026,
-                new MetaTileEntityCryogenicDistillationPlant(gtb("cryogenic_distillation_plant")));
-        RARE_GAS_STRIPPING_COLUMN = registerMetaTileEntity(3027,
-                new MetaTileEntityRareGasStrippingColumn(gtb("rare_gas_stripping_column")));
-        PRESSURE_SWING_ADSORBER = registerMetaTileEntity(3028,
-                new MetaTileEntityPressureSwingAdsorber(gtb("pressure_swing_adsorber")));
-        PHASE_SEPARATOR = registerMetaTileEntity(3029,
-                new MetaTileEntityPhaseSeparator(gtb("phase_separator")));
+        HIGH_TEMP_DISTILLATION_TOWER = registerMetaTileEntity(3026,
+                new MetaTileEntityHighTemperatureDistillationTower(gtb("high_temp_distillation_tower")));
+        LARGE_CVD_UNIT = registerMetaTileEntity(3027,
+                new MetaTileEntityCVDUnit(gtb("large_cvd_unit")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

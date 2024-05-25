@@ -1,11 +1,14 @@
 package gtb.api.unification.materials;
 
 import static gregtech.api.fluids.attribute.FluidAttributes.ACID;
+import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.material.info.MaterialFlags.DISABLE_DECOMPOSITION;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
+import gregtech.api.unification.material.info.MaterialIconSet;
 
 public class GTBSecondDegreeMaterials {
 
@@ -86,6 +89,38 @@ public class GTBSecondDegreeMaterials {
                 .fluid()
                 .color(0xc293e6)
                 .build().setFormula("LiCl(H2O)", true);
+
+        RoastedSphalerite = new Material.Builder(getMaterialsId(), gregtechId("roasted_sphalerite"))
+                .dust()
+                .color(0xAC8B5C)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(MaterialIconSet.FINE)
+                .components(Gallium, 1, GermaniumDioxide, 1)
+                .build();
+
+        WaelzOxide = new Material.Builder(getMaterialsId(), gregtechId("waelz_oxide"))
+                .dust()
+                .color(0xB8B8B8)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(MaterialIconSet.FINE)
+                .components(Zinc, 1, GermaniumDioxide, 1)
+                .build();
+
+        ImpureGermaniumDioxide = new Material.Builder(getMaterialsId(), gregtechId("impure_germanium_dioxide"))
+                .dust()
+                .color(0x666666)
+                .flags(DISABLE_DECOMPOSITION)
+                .iconSet(MaterialIconSet.ROUGH)
+                .components(GermaniumDioxide, 1)
+                .build().setFormula("GeO2?", true);
+
+        ZincRichSphalerite = new Material.Builder(getMaterialsId(), gregtechId("zinc_rich_sphalerite"))
+                .dust()
+                .color(0xABA3A3)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Sphalerite, 1, Zinc, 2)
+                .build();
     }
 
     private static int getMaterialsId() {

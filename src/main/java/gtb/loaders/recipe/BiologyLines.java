@@ -261,15 +261,6 @@ public class BiologyLines {
                 .EUt(120)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(HydrochloricAcid.getFluid(100))
-                .fluidInputs(Milk.getFluid(1000))
-                .fluidOutputs(Peptone.getFluid(1000))
-                .notConsumable(Nonoxynol_9.getFluid(1000))
-                .duration(90)
-                .EUt(120)
-                .buildAndRegister();
-
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(Nonoxynol_9_Solution.getFluid(2000))
                 .fluidOutputs(Nonoxynol_9.getFluid(500))
@@ -601,6 +592,7 @@ public class BiologyLines {
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .notConsumable(Trypsin.getFluid(100))
+                .notConsumable(Nonoxynol_9.getFluid(20))
                 .fluidInputs(PeptoneMixture.getFluid(1000))
                 .fluidOutputs(Peptone.getFluid(500))
                 .fluidOutputs(Water.getFluid(500))
@@ -771,6 +763,7 @@ public class BiologyLines {
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Acetylene.getFluid(1000))
                 .circuitMeta(1)
+                .notConsumable(dust, Copper)
                 .fluidInputs(Formaldehyde.getFluid(1000))
                 .fluidOutputs(OneFourButynediol.getFluid(1000))
                 .duration(400)

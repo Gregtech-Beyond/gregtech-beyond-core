@@ -104,8 +104,31 @@ public class GTBMaterials {
     public static Material Xerizin;
 
     // Element Materials
+    public static Material Rubidium;
 
     // FD Materials
+
+    public static Material PerrhenicAcid;
+    public static Material AmmoniumPerrhenate;
+    public static Material MolybdenumTrioxide;
+    public static Material ThalliumSulfate;
+    public static Material MagnesiumChlorideSolution;
+    public static Material DilutedRubidiumSolution;
+    public static Material DilutedCaesiumSolution;
+    public static Material Alumina;
+    public static Material StannicChloride;
+    public static Material RubidiumChlorostannate;
+    public static Material CaesiumChlorostannate;
+    public static Material HeavyAlkaliChlorideSolution;
+    public static Material TinFourChloride;
+    public static Material WaelzOxide;
+    public static Material WaelzSlag;
+    public static Material ImpureGermaniumDioxide;
+    public static Material RoastedSphalerite;
+    public static Material ZincRichSphalerite;
+    public static Material GermaniumTetrachloride;
+    public static Material GermaniumDioxide;
+    public static Material ZincOxide;
     public static Material Nomex;
     public static Material IsophthalicAcid;
     public static Material IsophthaloylChloride;
@@ -254,7 +277,6 @@ public class GTBMaterials {
     public static Material ChloroSilane;
     public static Material PhenyleneSulfidePrePolymerMixture;
     public static Material SodiumSulfideDichloroBenzeneMixture;
-    public static Material SodiumSulfideSolution;
     public static Material PhilipsCatalyst;
     public static Material KaminskyCatalyst;
     public static Material ZieglerNattaCatalyst;
@@ -384,6 +406,13 @@ public class GTBMaterials {
     public static Material LithiumChlorideSolution;
     public static Material BoronFreeSolution;
     public static Material Grisium;
+    public static Material SodiumSulfideSolution;
+    public static Material LeadChloride;
+    public static Material SodiumTellurite;
+    public static Material TelluriumDioxide;
+    public static Material SeleniumDioxide;
+    public static Material SelenousAcid;
+    public static Material ChalcogenAnodeMud;
 
     // SD Materials
     public static Material CalciumSalts;
@@ -399,6 +428,8 @@ public class GTBMaterials {
     public static Material UEVSuperconductor;
 
     // Unknown Materials
+    public static Material CadmiumRichZinc;
+    public static Material CrudeZinc;
     public static Material LiquidOxygen;
     public static Material ColdAir;
     public static Material SupercooledLiquidNitrogen;
@@ -426,7 +457,6 @@ public class GTBMaterials {
     public static Material LiquidArgon;
     public static Material LiquidNeon;
     public static Material ColdGaseousOxygen;
-
     public static Material ConcentratedBrine;
     public static Material DampBromine;
     public static Material IodineSlurry;
@@ -487,11 +517,35 @@ public class GTBMaterials {
     public static Material SlackWax;
     public static Material AlkylatedNaturalGas;
     public static Material Syngas;
+    public static Material MolybdenumFlue;
+    public static Material TraceRheniumFlue;
 
     // Organic Chemistry Materials
+    public static Material BlueVitriol;
+    public static Material KaptonE;
+    public static Material KaptonK;
+    public static Material Nitroaniline;
+    public static Material Dimethylformamide;
+    public static Material Aminophenol;
+    public static Material BiphenylTetracarboxylicAcidDianhydride;
+    public static Material Oxydianiline;
+    public static Material PyromelliticDianhydride;
+    public static Material PhthalicAnhydride;
+    public static Material Durene;
     public static Material FormicAcid;
     public static Material SodiumFormate;
     public static Material Tripropylamine;
+    public static Material Bistrichloromethylbenzene;
+    public static Material Tetrabromoethane;
+    public static Material Butanediol;
+    public static Material GammaButyrolactone;
+    public static Material NMethylPyrrolidone;
+    public static Material TerephthalicAcid;
+    public static Material TerephthaloylChloride;
+    public static Material ParaPhenylenediamine;
+    public static Material Kevlar;
+    public static Material KevlarConcentrate;
+    public static Material KevlarBlend;
 
     // Fantasy Materials
     public static Material AwakenedDraconium;
