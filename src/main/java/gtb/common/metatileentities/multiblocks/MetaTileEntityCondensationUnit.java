@@ -1,5 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
+import static gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType.*;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -20,13 +22,12 @@ import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.*;
+
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
-import static gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType.*;
-
 
 public class MetaTileEntityCondensationUnit extends RecipeMapMultiblockController {
 
@@ -43,9 +44,9 @@ public class MetaTileEntityCondensationUnit extends RecipeMapMultiblockControlle
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCCCC","CCCCC","CCCCC","CCCCC","CCCCC")
-                .aisle("CCCCC","C~P~C","CPPPC","C~P~C","CCSCC")
-                .aisle("CCCCC","CGGGC","CGGGC","CGGGC","CCCCC")
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
+                .aisle("CCCCC", "C~P~C", "CPPPC", "C~P~C", "CCSCC")
+                .aisle("CCCCC", "CGGGC", "CGGGC", "CGGGC", "CCCCC")
                 .where('S', selfPredicate())
                 .where('G',
                         states(MetaBlocks.MULTIBLOCK_CASING

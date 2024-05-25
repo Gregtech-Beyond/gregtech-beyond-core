@@ -15,7 +15,6 @@ import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
@@ -41,9 +40,9 @@ public class MetaTileEntityPressureSwingAdsorber extends RecipeMapMultiblockCont
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCC","CCC","CCC","CSC")
-                .aisle("CCC","C~C","C~C","CCC")
-                .aisle("CCC","CCC","CCC","CCC")
+                .aisle("CCC", "CCC", "CCC", "CSC")
+                .aisle("CCC", "C~C", "C~C", "CCC")
+                .aisle("CCC", "CCC", "CCC", "CCC")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())

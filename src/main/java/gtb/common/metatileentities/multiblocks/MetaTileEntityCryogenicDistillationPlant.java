@@ -1,7 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.common.blocks.BlockMetalCasing;
-import gregtech.common.blocks.MetaBlocks;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -20,6 +18,8 @@ import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiFluidHatch;
 
 import codechicken.lib.render.CCRenderState;
@@ -27,10 +27,6 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
-import gtb.api.render.GTBTextures;
-import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.GTBMultiblockCasing;
-
 
 public class MetaTileEntityCryogenicDistillationPlant extends RecipeMapMultiblockController {
 
@@ -60,40 +56,39 @@ public class MetaTileEntityCryogenicDistillationPlant extends RecipeMapMultibloc
                         .or(metaTileEntities(MultiblockAbility.REGISTRY.get(MultiblockAbility.EXPORT_FLUIDS).stream()
                                 .filter(mte -> !(mte instanceof MetaTileEntityMultiFluidHatch))
                                 .toArray(MetaTileEntity[]::new))
-                                .setMinLayerLimited(1).setMaxLayerLimited(1))
+                                        .setMinLayerLimited(1).setMaxLayerLimited(1))
                         .or(autoAbilities(true, false)))
                 .where('#', air())
                 .build();
-
     }
 
-@Override
-        public TraceabilityPredicate autoAbilities() {
-            return autoAbilities(false, false, true, false, false, true, false);
-        }
-
-        @SideOnly(Side.CLIENT)
-        @Override
-        public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-            return Textures.CLEAN_STAINLESS_STEEL_CASING;
-        }
-
-        @Override
-        public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
-            super.renderMetaTileEntity(renderState, translation, pipeline);
-            getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(),
-                    recipeMapWorkable.isActive(), recipeMapWorkable.isWorkingEnabled());
-        }
-
-        @SideOnly(Side.CLIENT)
-        @NotNull
-        @Override
-        protected ICubeRenderer getFrontOverlay() {
-            return Textures.BLOWER_OVERLAY;
-        }
-
-        @Override
-        public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-            return new MetaTileEntityCryogenicDistillationPlant(metaTileEntityId);
-        }
+    @Override
+    public TraceabilityPredicate autoAbilities() {
+        return autoAbilities(false, false, true, false, false, true, false);
     }
+
+    @SideOnly(Side.CLIENT)
+    @Override
+    public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
+        return Textures.CLEAN_STAINLESS_STEEL_CASING;
+    }
+
+    @Override
+    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
+        super.renderMetaTileEntity(renderState, translation, pipeline);
+        getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(),
+                recipeMapWorkable.isActive(), recipeMapWorkable.isWorkingEnabled());
+    }
+
+    @SideOnly(Side.CLIENT)
+    @NotNull
+    @Override
+    protected ICubeRenderer getFrontOverlay() {
+        return Textures.BLOWER_OVERLAY;
+    }
+
+    @Override
+    public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
+        return new MetaTileEntityCryogenicDistillationPlant(metaTileEntityId);
+    }
+}

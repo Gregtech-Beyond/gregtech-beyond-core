@@ -19,7 +19,6 @@ public final class GTBRecipeLoader {
         RecipeMaps.LASER_ENGRAVER_RECIPES.setMaxFluidInputs(1);
         RecipeMaps.LARGE_CHEMICAL_RECIPES.setMaxInputs(4);
 
-
         CryogenicAirDistillation.init();
         AlcoholLine.init();
         Catalysts.init();

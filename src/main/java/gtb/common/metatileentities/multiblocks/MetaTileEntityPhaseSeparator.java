@@ -41,9 +41,9 @@ public class MetaTileEntityPhaseSeparator extends RecipeMapMultiblockController 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("FCF","~C~","~C~","~C~","FCF")
-                .aisle("CCC","C~C","C~C","C~C","CSC")
-                .aisle("~C~","~C~","~C~","~C~","~C~")
+                .aisle("FCF", "~C~", "~C~", "~C~", "FCF")
+                .aisle("CCC", "C~C", "C~C", "C~C", "CSC")
+                .aisle("~C~", "~C~", "~C~", "~C~", "~C~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())

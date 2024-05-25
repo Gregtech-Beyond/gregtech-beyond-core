@@ -376,10 +376,11 @@ public class GTBUnknownCompositionMaterials {
                 .color(0x29B6F6)
                 .build();
 
-        RareGasRichGaseousNitrogen = new Material.Builder(getMaterialsId(), gregtechId("rare_gas_rich_gaseous_nitrogen"))
-                .fluid()
-                .color(0x7E57C2)
-                .build();
+        RareGasRichGaseousNitrogen = new Material.Builder(getMaterialsId(),
+                gregtechId("rare_gas_rich_gaseous_nitrogen"))
+                        .fluid()
+                        .color(0x7E57C2)
+                        .build();
 
         RareGasMixture = new Material.Builder(getMaterialsId(), gregtechId("rare_gas_mixture"))
                 .fluid()
@@ -391,10 +392,11 @@ public class GTBUnknownCompositionMaterials {
                 .color(0x0277BD)
                 .build();
 
-        NitrogenStrippedRareGasMixture = new Material.Builder(getMaterialsId(), gregtechId("nitrogen_stripped_rare_gas_mixture"))
-                .fluid()
-                .color(0x7B1FA2)
-                .build();
+        NitrogenStrippedRareGasMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("nitrogen_stripped_rare_gas_mixture"))
+                        .fluid()
+                        .color(0x7B1FA2)
+                        .build();
 
         CrudeKrypton = new Material.Builder(getMaterialsId(), gregtechId("crude_krypton"))
                 .fluid()
@@ -465,13 +467,6 @@ public class GTBUnknownCompositionMaterials {
                 .fluid()
                 .color(0x2196F3)
                 .build();
-
-
-
-
-
-
-
     }
 
     private static int getMaterialsId() {
