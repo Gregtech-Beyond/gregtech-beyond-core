@@ -33,7 +33,6 @@ public class GTBElementMaterials {
                 .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME)
                 .color(0x6D6969)
                 .build().setFormula("Re", true);
-
     }
 
     private static int getMaterialsId() {

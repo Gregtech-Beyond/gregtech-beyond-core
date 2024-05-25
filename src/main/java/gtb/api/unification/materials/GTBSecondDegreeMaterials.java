@@ -1,8 +1,7 @@
 package gtb.api.unification.materials;
 
 import static gregtech.api.fluids.attribute.FluidAttributes.ACID;
-import static gregtech.api.unification.material.Materials.Gallium;
-import static gregtech.api.unification.material.Materials.Zinc;
+import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.DISABLE_DECOMPOSITION;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
@@ -114,6 +113,14 @@ public class GTBSecondDegreeMaterials {
                 .iconSet(MaterialIconSet.ROUGH)
                 .components(GermaniumDioxide, 1)
                 .build().setFormula("GeO2?", true);
+
+        ZincRichSphalerite = new Material.Builder(getMaterialsId(), gregtechId("zinc_rich_sphalerite"))
+                .dust()
+                .color(0xABA3A3)
+                .iconSet(MaterialIconSet.METALLIC)
+                .flags(DISABLE_DECOMPOSITION)
+                .components(Sphalerite, 1, Zinc, 2)
+                .build();
     }
 
     private static int getMaterialsId() {
