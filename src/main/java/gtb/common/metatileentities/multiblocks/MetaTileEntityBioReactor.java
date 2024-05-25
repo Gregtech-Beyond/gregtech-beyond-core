@@ -1,5 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gtb.api.render.GTBTextures;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -66,7 +67,7 @@ public class MetaTileEntityBioReactor extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.ROBUST_TUNGSTENSTEEL_CASING;
+        return GTBTextures.BIOLOGICALLY_STERILE_CASING;
     }
 
     @Override
