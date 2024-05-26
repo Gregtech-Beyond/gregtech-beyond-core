@@ -1455,12 +1455,12 @@ public class GTBFirstDegreeMaterials {
 
         CalcinatedSiliconDioxide = new Material.Builder(getMaterialsId(), gregtechId("calcinated_silicon_dioxide"))
                 .dust()
-                .color(0xCEABAB).build().setFormula("AgBr", true);
+                .color(0xCEABAB).build().setFormula("(SiO2)?", true);
 
         CalcinatedResidues = new Material.Builder(getMaterialsId(), gregtechId("calcinated_residues"))
                 .dust()
                 .fluid()
-                .color(0x7A3926).build().setFormula("AgBr", true);
+                .color(0x7A3926).build().setFormula("(SiO2)??", true);
 
         CalciumDioxide = new Material.Builder(getMaterialsId(), gregtechId("calcium_dioxide"))
                 .dust()
