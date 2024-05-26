@@ -9,6 +9,8 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
 import static gtb.common.item.GTBMetaItems.*;
 
+import gregtech.api.unification.material.Materials;
+
 import gtb.common.block.GTBMetaBlocks;
 
 public class Catalysts {
@@ -163,7 +165,7 @@ public class Catalysts {
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Chlorine.getFluid(1000))
-                .input(dust, Zirconium)
+                .input(dust, Materials.Zirconium)
                 .fluidOutputs(ZirconiumChloride.getFluid(1000))
                 .duration(120)
                 .EUt(800)
