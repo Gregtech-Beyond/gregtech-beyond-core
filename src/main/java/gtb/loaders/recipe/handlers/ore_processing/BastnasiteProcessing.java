@@ -272,5 +272,6 @@ public class BastnasiteProcessing {
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Bastnasite, 6) });
+        
     }
 }
