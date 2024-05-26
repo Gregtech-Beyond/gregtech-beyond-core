@@ -20,6 +20,8 @@ public final class GTBRecipeLoader {
         RecipeMaps.LASER_ENGRAVER_RECIPES.setMaxFluidOutputs(1);
         RecipeMaps.LASER_ENGRAVER_RECIPES.setMaxFluidInputs(1);
         RecipeMaps.LARGE_CHEMICAL_RECIPES.setMaxInputs(4);
+        RecipeMaps.SIFTER_RECIPES.setMaxFluidInputs(1);
+        RecipeMaps.SIFTER_RECIPES.setMaxFluidOutputs(1);
 
         SeleniumTelluriumProcessing.init();
         CryogenicAirDistillation.init();
@@ -47,5 +49,6 @@ public final class GTBRecipeLoader {
         MachineRecipes.init();
         BrineLine.init();
         PolymerizationRework.init();
+        BastnasiteProcessing.init();
     }
 }

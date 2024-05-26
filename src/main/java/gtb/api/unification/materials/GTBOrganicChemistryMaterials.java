@@ -98,6 +98,15 @@ public class GTBOrganicChemistryMaterials {
                 .build()
                 .setFormula("(C6H4)2(CO)2(NH)2", true);
 
+        PurifiedKevlarConcentrate = new Material.Builder(getMaterialsId(), gregtechId("purified_kevlar_concentrate"))
+                .dust()
+                .fluid()
+                .color(0xcfc532)
+                .iconSet(MaterialIconSet.SHINY)
+                .components(Carbon, 14, Hydrogen, 10, Nitrogen, 2, Oxygen, 2)
+                .build()
+                .setFormula("((C6H4)2(CO)2(NH)2)+", true);
+
         KevlarBlend = new Material.Builder(getMaterialsId(), gregtechId("kevlar_blend"))
                 .dust()
                 .fluid()
