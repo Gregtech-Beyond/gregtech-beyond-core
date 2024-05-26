@@ -4,6 +4,7 @@ import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
 
 import gtb.loaders.recipe.handlers.ore_processing.*;
+import gtb.loaders.recipe.polymerLines.*;
 
 public final class GTBRecipeLoader {
 
@@ -23,6 +24,27 @@ public final class GTBRecipeLoader {
         RecipeMaps.SIFTER_RECIPES.setMaxFluidInputs(1);
         RecipeMaps.SIFTER_RECIPES.setMaxFluidOutputs(1);
 
+
+
+        FullerenePolymerTetrixLine.init();
+        FullerenePolymerMatrixLine.init();
+        KaptonLine.init();
+        KevlarLine.init();
+        NomexLine.init();
+        PolybenzimidazoleLine.init();
+        PolycaprolactamLine.init();
+        PolydimethylsiloxaneLine.init();
+        PolyethyleneLine.init();
+        PolyphenyleneSulfideLine.init();
+        PolystyreneLine.init();
+        PolystyreneNanoparticlesLine.init();
+        PolytetrafluoroethyleneLine.init();
+        PolyurethaneLine.init();
+        PolyvinylAcetateLine.init();
+        PolyvinylButyralLine.init();
+        PolyvinylChlorideLine.init();
+        StyreneButadieneRubberLine.init();
+        ZylonLine.init();
         SeleniumTelluriumProcessing.init();
         CryogenicAirDistillation.init();
         AlcoholLine.init();
@@ -48,7 +70,6 @@ public final class GTBRecipeLoader {
         DamascusSteelLine.init();
         MachineRecipes.init();
         BrineLine.init();
-        PolymerizationRework.init();
         BastnasiteProcessing.init();
     }
 }
