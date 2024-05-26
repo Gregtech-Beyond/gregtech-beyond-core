@@ -106,11 +106,53 @@ public class GTBMaterials {
     // Element Materials
     public static Material Rubidium;
     public static Material Holmium;
-    // FD Materials
 
+    // FD Materials
+    public static Material Tetradecanol;
+    public static Material MethylIsobutylCarbonyl;
+    public static Material AmidoEthylAlkylImidazole;
+    public static Material DiacetoneAlcohol;
+    public static Material Octanol;
+    public static Material PalmaticAcid;
+    public static Material ZieglerAlfolMixture;
+    public static Material Dodecanol;
+    public static Material MonaziteSolution;
+    public static Material MuddyMonaziteSolution;
+    public static Material Decanol;
+    public static Material Hexanol;
+    public static Material CaprylicAcid;
+    public static Material MonaziteOreByproductSlurry;
+    public static Material ImpureMonaziteOreByproductSlurry;
+    public static Material MuddyMonaziteOreByproducts;
+    public static Material DilutedCeriumFiltrate;
+    public static Material CeriumOxideFiltrate;
+    public static Material CooledRareEarthFiltrate;
+    public static Material NeutralizedRareEarthFiltrate;
+    public static Material RareEarthFiltrate;
+    public static Material DilutedMonaziteSulfide;
+    public static Material MonaziteSulfide;
+    public static Material ZincChloride;
+    public static Material ThoriumPhosphateCakeDust;
+    public static Material DriedMonaziteFiltrate;
+    public static Material EuropiumOxide;
+    public static Material ThoriumConcentrate;
+    public static Material AluminiumHydroxide;
+    public static Material GadoliniumOxide;
+    public static Material MonaziteRarerEarthFiltrate;
+    public static Material ChlorinatedMonaziteFiltrate;
+    public static Material HafniumOxide;
+    public static Material HafniumZirconiumSlag;
+    public static Material WetHafniumZirconiumBlend;
+    public static Material SaturatedChlorinatedMonaziteFiltrate;
+    public static Material RoastedHafniumZirconiumSlag;
+    public static Material ZirconiumOxide;
     public static Material CeriumOxide;
+    public static Material RutherfordiumOxide;
+    public static Material ThoriumPhosphateCake;
+    public static Material UraniumFiltrate;
     public static Material DilutedCeriumSolution;
     public static Material CeriumSolution;
+    public static Material Hexadecanol;
     public static Material CalcinatedBastnasite;
     public static Material CalcinatedSiliconDioxide;
     public static Material CalcinatedResidues;
@@ -582,6 +624,7 @@ public class GTBMaterials {
     public static Material Kevlar;
     public static Material KevlarConcentrate;
     public static Material KevlarBlend;
+    public static Material PurifiedKevlarConcentrate;
 
     // Fantasy Materials
     public static Material AwakenedDraconium;
