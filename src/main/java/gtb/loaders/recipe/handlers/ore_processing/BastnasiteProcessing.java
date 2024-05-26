@@ -136,6 +136,39 @@ public class BastnasiteProcessing {
                 .EUt(8000)
                 .buildAndRegister();
 
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(AcidicCeriumBasedMud.getFluid(1000))
+                .fluidInputs(PotassiumHydroxide.getFluid(432))
+                .output(dust, Potassium, 2)
+                .fluidOutputs(CeriumSolution.getFluid(1000))
+                .duration(200)
+                .EUt(800)
+                .buildAndRegister();
+
+        DILUTION_TANK.recipeBuilder()
+                .fluidInputs(CeriumSolution.getFluid(1000))
+                .fluidInputs(DistilledWater.getFluid(1000))
+                .fluidOutputs(DilutedCeriumSolution.getFluid(2000))
+                .EUt(500)
+                .duration(800)
+                .buildAndRegister();
+
+        SIFTER_RECIPES.recipeBuilder()
+                .fluidInputs(DilutedCeriumSolution.getFluid(1000))
+                .output(dust, CeriumOxide, 2)
+                .fluidOutputs(Water.getFluid(1000))
+                .duration(1000)
+                .EUt(900)
+                .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, CeriumOxide, 3)
+                .output(dust, Cerium)
+                .fluidOutputs(Oxygen.getFluid(2000))
+                .duration(1200)
+                .EUt(70)
+                .buildAndRegister();
+
         DRYER.recipeBuilder()
                 .fluidInputs(BastnasiteRarerEarthOxidesMixture.getFluid(1000))
                 .output(dust, DriedBastnasiteRarerEarthOxidesPulp, 1)
@@ -272,6 +305,6 @@ public class BastnasiteProcessing {
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Bastnasite, 6) });
-        
+
     }
 }

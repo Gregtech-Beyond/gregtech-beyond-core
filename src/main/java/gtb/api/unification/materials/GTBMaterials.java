@@ -108,6 +108,9 @@ public class GTBMaterials {
     public static Material Holmium;
     // FD Materials
 
+    public static Material CeriumOxide;
+    public static Material DilutedCeriumSolution;
+    public static Material CeriumSolution;
     public static Material CalcinatedBastnasite;
     public static Material CalcinatedSiliconDioxide;
     public static Material CalcinatedResidues;

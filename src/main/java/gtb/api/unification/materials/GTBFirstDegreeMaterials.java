@@ -1591,6 +1591,19 @@ public class GTBFirstDegreeMaterials {
         DilutedAquaRegia = new Material.Builder(getMaterialsId(), gregtechId("diluted_aqua_regia"))
                 .fluid()
                 .color(0xB27743).build().setFormula("(HNO3)(HCl)2", true);
+
+        CeriumSolution = new Material.Builder(getMaterialsId(), gregtechId("cerium_solution"))
+                .fluid()
+                .color(0xABB59E).build().setFormula("Ce?", true);
+
+        DilutedCeriumSolution = new Material.Builder(getMaterialsId(), gregtechId("diluted_cerium_solution"))
+                .fluid()
+                .color(0x677753).build().setFormula("Ce?(H2O)2", true);
+
+        CeriumOxide = new Material.Builder(getMaterialsId(), gregtechId("cerium_oxide"))
+                .dust()
+                .color(0x677753).build().setFormula("CeO2", true);
+
     }
 
     private static int getMaterialsId() {
