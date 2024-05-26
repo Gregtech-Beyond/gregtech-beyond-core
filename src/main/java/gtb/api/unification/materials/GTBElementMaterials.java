@@ -1,6 +1,6 @@
 package gtb.api.unification.materials;
 
-import static gregtech.api.unification.material.Materials.Rhenium;
+import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
@@ -20,13 +20,6 @@ public class GTBElementMaterials {
                 .color(0x333537)
                 .build().setFormula("Ad", true);
 
-        Rubidium = new Material.Builder(getMaterialsId(), gregtechId("rubidiium"))
-                .fluid()
-                .dust()
-                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME)
-                .color(0xB71C1C)
-                .build().setFormula("Rb", true);
-
         Rhenium = new Material.Builder(getMaterialsId(), gregtechId("rhenium"))
                 .fluid()
                 .dust()
@@ -34,12 +27,19 @@ public class GTBElementMaterials {
                 .color(0x6D6969)
                 .build().setFormula("Re", true);
 
-        Holmium = new Material.Builder(getMaterialsId(), gregtechId("holmium"))
+        Gadolinium = new Material.Builder(getMaterialsId(), gregtechId("gadolinium"))
                 .fluid()
                 .dust()
                 .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME)
-                .color(0x543776)
-                .build().setFormula("Ho", true);
+                .color(0xFF9800)
+                .build().setFormula("Gd", true);
+
+        Hafnium = new Material.Builder(getMaterialsId(), gregtechId("hafnium"))
+                .fluid()
+                .dust()
+                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME)
+                .color(0xFF9800)
+                .build().setFormula("Hf", true);
     }
 
     private static int getMaterialsId() {
