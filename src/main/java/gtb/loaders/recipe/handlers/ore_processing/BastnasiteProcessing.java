@@ -2,10 +2,10 @@ package gtb.loaders.recipe.handlers.ore_processing;
 
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
+import static gregtech.api.unification.material.Materials.Holmium;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
-import static gtb.api.unification.materials.GTBMaterials.Holmium;
 
 import net.minecraft.item.ItemStack;
 
@@ -249,7 +249,7 @@ public class BastnasiteProcessing {
                 .buildAndRegister();
 
         BLAST_RECIPES.recipeBuilder()
-                .input(dust, HolmiumFluoride)
+                .input(dust, HolmiumFluoride, 2)
                 .input(dust, Calcium)
                 .output(dust, Holmium)
                 .output(dust, CalciumFluoride)
@@ -261,14 +261,6 @@ public class BastnasiteProcessing {
         ELECTROLYZER_RECIPES.recipeBuilder()
                 .input(dust, CalciumFluoride, 3)
                 .output(dust, Calcium)
-                .fluidOutputs(Fluorine.getFluid(2000))
-                .duration(180)
-                .EUt(90)
-                .buildAndRegister();
-
-        ELECTROLYZER_RECIPES.recipeBuilder()
-                .input(dust, HolmiumFluoride, 3)
-                .output(dust, Holmium)
                 .fluidOutputs(Fluorine.getFluid(2000))
                 .duration(180)
                 .EUt(90)
@@ -305,6 +297,5 @@ public class BastnasiteProcessing {
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Bastnasite, 6) });
-
     }
 }
