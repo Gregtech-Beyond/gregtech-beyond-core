@@ -2,9 +2,11 @@ package gtb.common.metatileentities;
 
 import static gregtech.common.metatileentities.MetaTileEntities.*;
 import static gtb.api.utils.GTBUtil.gtb;
+
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.texture.Textures;
+
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
@@ -56,6 +58,7 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] ROASTER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] MICROSCOPE = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ROTARY_EVAPORATOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] DRYER = new SimpleMachineMetaTileEntity[15];
 
     public static void init() {
         // Multiblocks
@@ -105,6 +108,16 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityHighTemperatureDistillationTower(gtb("high_temp_distillation_tower")));
         LARGE_CVD_UNIT = registerMetaTileEntity(3027,
                 new MetaTileEntityCVDUnit(gtb("large_cvd_unit")));
+        CONDENSATION_UNIT = registerMetaTileEntity(3028,
+                new MetaTileEntityCondensationUnit(gtb("condensation_unit")));
+        CRYOGENIC_DISTILLATION_PLANT = registerMetaTileEntity(3029,
+                new MetaTileEntityCryogenicDistillationPlant(gtb("cryogenic_distillation_plant")));
+        RARE_GAS_STRIPPING_COLUMN = registerMetaTileEntity(3030,
+                new MetaTileEntityRareGasStrippingColumn(gtb("rare_gas_stripping_column")));
+        PRESSURE_SWING_ADSORBER = registerMetaTileEntity(3031,
+                new MetaTileEntityPressureSwingAdsorber(gtb("pressure_swing_adsorber")));
+        PHASE_SEPARATOR = registerMetaTileEntity(3032,
+                new MetaTileEntityPhaseSeparator(gtb("phase_separator")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -133,6 +146,9 @@ public final class GTBMetaTileEntities {
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(ROASTER, 4130, "roaster", GTBRecipeMaps.ROASTER,
+                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(DRYER, 4150, "dryer", GTBRecipeMaps.DRYER,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }

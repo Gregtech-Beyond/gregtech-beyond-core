@@ -140,4 +140,10 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> PHASE_SEPARATOR = new RecipeMap<>("phase_separator",
             0, 0, 1, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DISSOLUTION_TANK = new RecipeMap<>("dissolution_tank",
+            1, 4, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> DRYER = new RecipeMap<>("dryer",
+            1, 4, 2, 1, new SimpleRecipeBuilder(), false);
 }

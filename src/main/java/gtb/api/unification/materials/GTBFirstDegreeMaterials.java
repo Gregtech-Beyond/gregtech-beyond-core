@@ -1448,6 +1448,149 @@ public class GTBFirstDegreeMaterials {
                 .flags(DISABLE_DECOMPOSITION)
                 .components(Hydrogen, 2, Selenium, 1, Oxygen, 3)
                 .build();
+
+        CalcinatedBastnasite = new Material.Builder(getMaterialsId(), gregtechId("calcinated_bastnasite"))
+                .dust()
+                .color(0x944C36).build().setFormula("?", true);
+
+        CalcinatedSiliconDioxide = new Material.Builder(getMaterialsId(), gregtechId("calcinated_silicon_dioxide"))
+                .dust()
+                .color(0xCEABAB).build().setFormula("AgBr", true);
+
+        CalcinatedResidues = new Material.Builder(getMaterialsId(), gregtechId("calcinated_residues"))
+                .dust()
+                .fluid()
+                .color(0x7A3926).build().setFormula("AgBr", true);
+
+        CalciumDioxide = new Material.Builder(getMaterialsId(), gregtechId("calcium_dioxide"))
+                .dust()
+                .color(0xBA421D).build().setFormula("AgBr", true);
+
+        DeoxygenationCatalyst = new Material.Builder(getMaterialsId(), gregtechId("deoxygenation_catalyst"))
+                .dust()
+                .color(0x858EC2).build().setFormula("AgBr", true);
+
+        BastnasiteOxideComposite = new Material.Builder(getMaterialsId(), gregtechId("bastnasite_oxide_composite"))
+                .dust()
+                .color(0x937971).build().setFormula("AgBr", true);
+
+        SodiumNitride = new Material.Builder(getMaterialsId(), gregtechId("sodium_nitride"))
+                .dust()
+                .color(0x2B4F77).build().setFormula("AgBr", true);
+
+        BastnasiteByProducts = new Material.Builder(getMaterialsId(), gregtechId("bastnasite_byproducts"))
+                .dust()
+                .color(0x895E47).build().setFormula("AgBr", true);
+
+        SamaricRareEarthConcentrate = new Material.Builder(getMaterialsId(),
+                gregtechId("samaric_rare_earth_concentrate"))
+                        .dust()
+                        .color(0xCFC182).build().setFormula("AgBr", true);
+
+        HydrogenationCatalyst = new Material.Builder(getMaterialsId(), gregtechId("hydrogenation_catalyst"))
+                .dust()
+                .color(0xB68AC1).build().setFormula("AgBr", true);
+
+        NeodymiumRareEarthConcentrate = new Material.Builder(getMaterialsId(),
+                gregtechId("neodymium_rare_earth_concentrate"))
+                        .dust()
+                        .color(0x686569).build().setFormula("NdO2???", true);
+
+        NeodymiumOxide = new Material.Builder(getMaterialsId(), gregtechId("neodymium_oxide"))
+                .dust()
+                .color(0x4D4B4D).build().setFormula("NdO2", true);
+
+        LanthanumOxide = new Material.Builder(getMaterialsId(), gregtechId("lanthanum_oxide"))
+                .dust()
+                .color(0x667B78).build().setFormula("LaO2", true);
+
+        SamariumRareEarthConcentrate = new Material.Builder(getMaterialsId(),
+                gregtechId("samarium_rare_earth_concentrate"))
+                        .dust()
+                        .color(0xC4C3BB).build().setFormula("SmO?", true);
+
+        SamariumOxide = new Material.Builder(getMaterialsId(), gregtechId("samarium_oxide"))
+                .dust()
+                .color(0xB2B1A2).build().setFormula("SmO2", true);
+
+        HolmiumOxide = new Material.Builder(getMaterialsId(), gregtechId("holmium_oxide"))
+                .dust()
+                .color(0x351958).build().setFormula("HoO2", true);
+
+        HolmiumFluoride = new Material.Builder(getMaterialsId(), gregtechId("holmium_fluoride"))
+                .dust()
+                .color(0x654788).build().setFormula("HoF2", true);
+
+        CalciumFluoride = new Material.Builder(getMaterialsId(), gregtechId("calcium_fluoride"))
+                .dust()
+                .color(0xACBFBD).build().setFormula("CaF2", true);
+
+        MuddyBastnasiteSolution = new Material.Builder(getMaterialsId(), gregtechId("muddy_bastnasite_solution"))
+                .fluid()
+                .color(0x926F64).build();
+
+        MuddyWater = new Material.Builder(getMaterialsId(), gregtechId("muddy_water"))
+                .fluid()
+                .color(0x6D4C41).build().setFormula("(H2O)?", true);
+
+        ConditionedBastnasiteMud = new Material.Builder(getMaterialsId(), gregtechId("conditioned_bastnasite_mud"))
+                .fluid()
+                .color(0x5B210F).build().setFormula("AgBr", true);
+
+        DilutedBastnasiteMud = new Material.Builder(getMaterialsId(), gregtechId("diluted_bastnasite_mud"))
+                .fluid()
+                .color(0x973314).build().setFormula("AgBr", true);
+
+        FilteredBastnasiteMud = new Material.Builder(getMaterialsId(), gregtechId("filtered_bastnasite_mud"))
+                .fluid()
+                .color(0xAB7564).build().setFormula("AgBr", true);
+
+        BastnasiteConcentrate = new Material.Builder(getMaterialsId(), gregtechId("bastnasite_concentrate"))
+                .fluid()
+                .color(0xD38973).build().setFormula("AgBr", true);
+
+        CeriumRichBastnasiteConcentrate = new Material.Builder(getMaterialsId(),
+                gregtechId("cerium_rich_bastnasite_concentrate"))
+                        .fluid()
+                        .color(0x6D2712).build().setFormula("AgBr", true);
+
+        AcidicBastnasiteConcentrate = new Material.Builder(getMaterialsId(),
+                gregtechId("acidic_bastnasite_concentrate"))
+                        .fluid()
+                        .color(0xAF662E).build().setFormula("AgBr", true);
+
+        AcidicCeriumBasedMud = new Material.Builder(getMaterialsId(), gregtechId("acidic_cerium_based_mud"))
+                .fluid()
+                .color(0x984A0F).build().setFormula("Ce?", true);
+
+        BastnasiteRarerEarthOxidesMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("bastnasite_rarer_earth_oxides_mixture"))
+                        .fluid()
+                        .color(0x826D67).build().setFormula("AgBr", true);
+
+        DriedBastnasiteRarerEarthOxidesPulp = new Material.Builder(getMaterialsId(),
+                gregtechId("dried_bastnasite_rarer_earth_oxides_pulp"))
+                        .fluid()
+                        .color(0x4E1B0C).build().setFormula("AgBr", true);
+
+        BastnasiteRarerEarthOxidesEmulsion = new Material.Builder(getMaterialsId(),
+                gregtechId("bastnasite_rarer_earth_oxides_emulsion"))
+                        .fluid()
+                        .color(0x8E6254).build().setFormula("AgBr", true);
+
+        BastnasiteRarerEarthOxidesSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("bastnasite_rarer_earth_oxides_solution"))
+                        .fluid()
+                        .color(0x66210C).build().setFormula("AgBr", true);
+
+        SamariumReducedRarerEarthOxides = new Material.Builder(getMaterialsId(),
+                gregtechId("samarium_reduced_rarer_earth_oxides"))
+                        .fluid()
+                        .color(0x623324).build().setFormula("AgBr", true);
+
+        DilutedAquaRegia = new Material.Builder(getMaterialsId(), gregtechId("diluted_aqua_regia"))
+                .fluid()
+                .color(0xB27743).build().setFormula("(HNO3)(HCl)2", true);
     }
 
     private static int getMaterialsId() {

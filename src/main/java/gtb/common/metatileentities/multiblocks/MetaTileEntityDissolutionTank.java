@@ -27,10 +27,10 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityDilutionTank extends RecipeMapMultiblockController {
+public class MetaTileEntityDissolutionTank extends RecipeMapMultiblockController {
 
-    public MetaTileEntityDilutionTank(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.DILUTION_TANK);
+    public MetaTileEntityDissolutionTank(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.DISSOLUTION_TANK);
         initializeAbilities();
     }
 
@@ -41,13 +41,15 @@ public class MetaTileEntityDilutionTank extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("F~F", "~~~", "F~F")
-                .aisle("CCC", "CCC", "CSC")
-                .aisle("GGG", "G~G", "GGG")
-                .aisle("GGG", "G~G", "GGG")
-                .aisle("GGG", "G~G", "GGG")
-                .aisle("CCC", "CCC", "CCC")
-                .aisle("~C~", "CCC", "~C~")
+                .aisle("F~~~F", "~~~~~", "~~~~~", "~~~~~", "F~~~F")
+                .aisle("FFFFF", "F~~~F", "F~~~F", "F~~~F", "FFFFF")
+                .aisle("FCCCF", "CCCCC", "CCCCC", "CCCCC", "FCCCF")
+                .aisle("CCCCC", "C~~~C", "C~~~C", "C~~~C", "CCSCC")
+                .aisle("CGGGC", "G~~~G", "G~~~G", "G~~~G", "CGGGC")
+                .aisle("CGGGC", "G~~~G", "G~~~G", "G~~~G", "CGGGC")
+                .aisle("CGGGC", "G~~~G", "G~~~G", "G~~~G", "CGGGC")
+                .aisle("CGGGC", "G~~~G", "G~~~G", "G~~~G", "CGGGC")
+                .aisle("~CCC~", "CCCCC", "CCCCC", "CCCCC", "~CCC~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
@@ -80,11 +82,11 @@ public class MetaTileEntityDilutionTank extends RecipeMapMultiblockController {
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.PRIMITIVE_BLAST_FURNACE_OVERLAY;
+        return Textures.LATHE_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityDilutionTank(metaTileEntityId);
+        return new MetaTileEntityDissolutionTank(metaTileEntityId);
     }
 }

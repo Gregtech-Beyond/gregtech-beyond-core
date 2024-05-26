@@ -105,9 +105,42 @@ public class GTBMaterials {
 
     // Element Materials
     public static Material Rubidium;
-
+    public static Material Holmium;
     // FD Materials
 
+    public static Material CalcinatedBastnasite;
+    public static Material CalcinatedSiliconDioxide;
+    public static Material CalcinatedResidues;
+    public static Material CalciumDioxide;
+    public static Material DeoxygenationCatalyst;
+    public static Material BastnasiteOxideComposite;
+    public static Material SodiumNitride;
+    public static Material BastnasiteByProducts;
+    public static Material SamaricRareEarthConcentrate;
+    public static Material HydrogenationCatalyst;
+    public static Material NeodymiumRareEarthConcentrate;
+    public static Material NeodymiumOxide;
+    public static Material LanthanumOxide;
+    public static Material SamariumRareEarthConcentrate;
+    public static Material SamariumOxide;
+    public static Material HolmiumOxide;
+    public static Material HolmiumFluoride;
+    public static Material CalciumFluoride;
+    public static Material MuddyBastnasiteSolution;
+    public static Material MuddyWater;
+    public static Material ConditionedBastnasiteMud;
+    public static Material DilutedBastnasiteMud;
+    public static Material FilteredBastnasiteMud;
+    public static Material BastnasiteConcentrate;
+    public static Material CeriumRichBastnasiteConcentrate;
+    public static Material AcidicBastnasiteConcentrate;
+    public static Material AcidicCeriumBasedMud;
+    public static Material BastnasiteRarerEarthOxidesMixture;
+    public static Material DriedBastnasiteRarerEarthOxidesPulp;
+    public static Material BastnasiteRarerEarthOxidesEmulsion;
+    public static Material BastnasiteRarerEarthOxidesSolution;
+    public static Material SamariumReducedRarerEarthOxides;
+    public static Material DilutedAquaRegia;
     public static Material PerrhenicAcid;
     public static Material AmmoniumPerrhenate;
     public static Material MolybdenumTrioxide;
