@@ -277,6 +277,10 @@ public class GTBMaterials {
     public static Material Silvertetrafluoroborate;
     public static Material BoronOxide;
     public static Material Phosgene;
+    public static Material PiranhaSolution;
+    public static Material Anthracene;
+    public static Material Ethylanthrahydroquinone;
+    public static Material Ethylanthraquinone;
     public static Material IsopropylAlcohol;
     public static Material Diisopropylcarbodiimide;
     public static Material Pyridine;

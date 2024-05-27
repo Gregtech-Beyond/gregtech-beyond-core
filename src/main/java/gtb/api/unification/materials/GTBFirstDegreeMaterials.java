@@ -1163,6 +1163,23 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0xD7D6D6)
                 .build().setFormula("KClMgSO4K2SO4KF", true);
+
+        Anthracene = new Material.Builder(getMaterialsId(), gregtechId("anthracene"))
+                .fluid()
+                .color(0xBFBEBE).build().setFormula("C14H10", true);
+
+        Ethylanthrahydroquinone = new Material.Builder(getMaterialsId(), gregtechId("ethylanthrahydroquinone"))
+                .fluid()
+                .color(0xFDD835).build().setFormula("(C16H12O2)H2", true);
+
+        Ethylanthraquinone = new Material.Builder(getMaterialsId(), gregtechId("ethylanthraquinone"))
+                .fluid()
+                .color(0xFFEB3B).build().setFormula("(C16H12O2)", true);
+
+        PiranhaSolution = new Material.Builder(getMaterialsId(), gregtechId("piranha_solution"))
+                .fluid()
+                .color(0x4A148C).build().setFormula("(C16H12O2)", true);
+
     }
 
     private static int getMaterialsId() {

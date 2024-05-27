@@ -777,5 +777,21 @@ public class BiologyLines {
         GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
                 new ItemStack[] { SHAPE_MOLD_CREDIT.getStackForm() },
                 new FluidStack[] { Polybenzimidazole.getFluid(18) });
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(SulfuricAcid.getFluid(1000))
+                .fluidInputs(HydrogenPeroxide.getFluid(1000))
+                .fluidOutputs(PiranhaSolution.getFluid(1000))
+                .duration(200)
+                .EUt(700)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(PiranhaSolution.getFluid(100))
+                .input(CONTAMINATED_STERILIZED_PETRI_DISH)
+                .output(MetaItems.PETRI_DISH)
+                .duration(800)
+                .EUt(900)
+                .buildAndRegister();
     }
 }

@@ -174,7 +174,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(158, "highly_forged_damascus_steel_assembly");
         GTBMetaItems.HOT_HIGHLY_FORGED_DAMASCUS_STEEL_ASSEMBLY = addItem(159,
                 "hot_highly_forged_damascus_steel_assembly");
-        GTBMetaItems.PETRI_DISH = addItem(160, "petri_dish");
         GTBMetaItems.STERILIZED_PETRI_DISH = addItem(161, "sterilized_petri_dish");
         GTBMetaItems.PLUS_STERILIZED_PETRI_DISH = addItem(162, "plus_sterilized_petri_dish");
         GTBMetaItems.CONTAMINATED_STERILIZED_PETRI_DISH = addItem(163, "contaminated_sterilized_petri_dish");
