@@ -74,7 +74,7 @@ public class KevlarLine {
 
         // C4H10O2 -> C4H6O2 + 4H (4H lost)
         BREWING_RECIPES.recipeBuilder()
-                .input(dust, Copper)
+                .notConsumable(dust, Copper)
                 .fluidInputs(Butanediol.getFluid(1000))
                 .fluidOutputs(GammaButyrolactone.getFluid(1000))
                 .duration(120)
@@ -120,7 +120,7 @@ public class KevlarLine {
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(KevlarConcentrate.getFluid(2000))
                 .fluidOutputs(HydrochloricAcid.getFluid(1000))
-                .output(dust, KevlarConcentrate)
+                .output(dust, PurifiedKevlarConcentrate, 2)
                 .EUt(590)
                 .duration(80)
                 .buildAndRegister();
