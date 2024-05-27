@@ -12,6 +12,7 @@ import static gtb.common.item.GTBMetaItems.*;
 import gregtech.api.unification.material.Materials;
 
 import gtb.common.block.GTBMetaBlocks;
+import gtb.common.item.GTBMetaItems;
 
 public class Catalysts {
 
@@ -203,6 +204,16 @@ public class Catalysts {
                 .outputs(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(FULLERENE_POLYMER_TETRIX_CASING))
                 .duration(200)
                 .EUt(800)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(Nomex.getFluid(1000))
+                .input(gem, ChromaticGlass)
+                .input(stick, StainlessSteel, 2)
+                .input(foil , Polytetrafluoroethylene, 4)
+                .output(CHROMATIC_GLASS_FIBER)
+                .duration(200)
+                .EUt(700)
                 .buildAndRegister();
     }
 }
