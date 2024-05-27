@@ -1673,7 +1673,7 @@ public class Photolithography {
                         QUANTUM_EYE.getStackForm(2) },
                 new FluidStack[] { GalliumArsenide.getFluid(288) });
 
-        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+          GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { NANO_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1),
                         OreDictUnifier.get(dust, IndiumGalliumPhosphide, 1) },
                 new FluidStack[] { Radon.getFluid(50) });
@@ -1810,5 +1810,4 @@ public class Photolithography {
                 .EUt(8)
                 .buildAndRegister();
     }
-
 }

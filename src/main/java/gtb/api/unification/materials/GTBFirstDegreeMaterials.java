@@ -1179,7 +1179,6 @@ public class GTBFirstDegreeMaterials {
         PiranhaSolution = new Material.Builder(getMaterialsId(), gregtechId("piranha_solution"))
                 .fluid()
                 .color(0x4A148C).build().setFormula("(C16H12O2)", true);
-
     }
 
     private static int getMaterialsId() {
