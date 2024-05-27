@@ -1,5 +1,6 @@
 package gtb.api.recipes;
 
+import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
@@ -146,4 +147,18 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> DRYER = new RecipeMap<>("dryer",
             1, 4, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> BURNER_REACTOR = new RecipeMap<>("burner_reactor",
+            2, 2, 2, 1, new SimpleRecipeBuilder(), false);
+
+
+
+
+
+
+
+
+
+
+
 }
