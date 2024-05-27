@@ -69,6 +69,5 @@ public final class GTBRecipeLoader {
         MachineRecipes.init();
         BrineLine.init();
         BastnasiteProcessing.init();
-
     }
 }

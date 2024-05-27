@@ -149,7 +149,5 @@ public class OrganicChemistry {
                 .duration(200)
                 .EUt(780)
                 .buildAndRegister();
-
-
     }
 }

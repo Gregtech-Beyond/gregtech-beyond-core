@@ -166,7 +166,7 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .ingot()
                 .flags(MaterialFlags.GENERATE_PLATE)
-                .color(0x9DD6D0)
+                .color(0x000F15)
                 .build().setFormula("C20H12O3", true);
 
         EthyleneOxide = new Material.Builder(getMaterialsId(), gregtechId("ethylene_oxide"))

@@ -6,12 +6,9 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static gtb.common.item.GTBMetaItems.*;
 
-
 public class Electronics {
 
-    public static void init()  {
-
-
+    public static void init() {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(plate, Polybenzimidazole)
                 .input(ELECTRIC_MOTOR_HV)
@@ -21,6 +18,5 @@ public class Electronics {
                 .duration(2000)
                 .EUt(700)
                 .buildAndRegister();
-
     }
 }
