@@ -139,5 +139,17 @@ public class OrganicChemistry {
                 .duration(212)
                 .EUt(78)
                 .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Chloroform.getFluid(1000))
+                .input(dust, SodiumHydroxide, 4)
+                .output(dust, SodiumFormate)
+                .output(dust, Salt, 3)
+                .fluidOutputs(Water.getFluid(2000))
+                .duration(200)
+                .EUt(780)
+                .buildAndRegister();
+
+
     }
 }
