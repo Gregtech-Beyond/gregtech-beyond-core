@@ -174,17 +174,17 @@ public class GTBFirstDegreeMaterials {
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
 
-        HundredMethanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_methanol"))
+        Methanol_100 = new Material.Builder(getMaterialsId(), gregtechId("methanol_100"))
                 .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
 
-        HundredButanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_butanol"))
+        Butanol_100 = new Material.Builder(getMaterialsId(), gregtechId("butanol_100"))
                 .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);
 
-        HundredEthanol = new Material.Builder(getMaterialsId(), gregtechId("hundred_ethanol"))
+        Ethanol_100 = new Material.Builder(getMaterialsId(), gregtechId("ethanol_100"))
                 .fluid()
                 .color(0x9DD6D0)
                 .build().setFormula("C2H4O", true);

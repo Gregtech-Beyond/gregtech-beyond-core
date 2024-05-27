@@ -31,7 +31,7 @@ public class BiologyLines {
         CHEMICAL_BATH_RECIPES.recipeBuilder()
                 .input(MetaItems.PETRI_DISH)
                 .output(STERILIZED_PETRI_DISH)
-                .fluidInputs(HundredEthanol.getFluid(1000))
+                .fluidInputs(Ethanol_100.getFluid(1000))
                 .duration(200)
                 .EUt(12)
                 .buildAndRegister();
@@ -39,8 +39,8 @@ public class BiologyLines {
         CHEMICAL_BATH_RECIPES.recipeBuilder()
                 .input(STERILIZED_PETRI_DISH)
                 .output(PLUS_STERILIZED_PETRI_DISH)
-                .fluidInputs(HundredButanol.getFluid(1000))
-                .fluidInputs(HundredMethanol.getFluid(1000))
+                .fluidInputs(Butanol_100.getFluid(1000))
+                .fluidInputs(Methanol_100.getFluid(1000))
                 .duration(200)
                 .EUt(12)
                 .buildAndRegister();
@@ -461,8 +461,8 @@ public class BiologyLines {
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .input(SYRINGE)
-                .fluidInputs(HundredButanol.getFluid(1000))
-                .fluidInputs(HundredMethanol.getFluid(1000))
+                .fluidInputs(Butanol_100.getFluid(1000))
+                .fluidInputs(Methanol_100.getFluid(1000))
                 .output(STERILIZED_SYRINGE)
                 .duration(120)
                 .EUt(90)
