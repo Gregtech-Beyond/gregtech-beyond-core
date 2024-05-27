@@ -1800,5 +1800,15 @@ public class Photolithography {
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Chlorine.getFluid(1000))
+                .fluidInputs(Hydrogen.getFluid(1000))
+                .circuitMeta(3)
+                .fluidOutputs(HydrogenChloride.getFluid(2000))
+                .duration(500)
+                .EUt(8)
+                .buildAndRegister();
     }
+
 }
