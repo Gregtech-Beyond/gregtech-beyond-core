@@ -149,5 +149,16 @@ public class OrganicChemistry {
                 .duration(200)
                 .EUt(780)
                 .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(HydrogenChloride.getFluid(3000))
+                .input(dust, Phosphorus)
+                .fluidInputs(Oxygen.getFluid(1000))
+                .fluidOutputs(Water.getFluid(2000))
+                .output(dust, PhosphorusTrichloride, 3)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
     }
 }
