@@ -72,9 +72,9 @@ public class GTBMaterials {
     public static Material DepletedBacterialGrowthMedium;
     public static Material BasicFibroblastGrowthMedium;
     public static Material EpidermalGrowthFactor;
-    public static Material HundredEthanol;
-    public static Material HundredMethanol;
-    public static Material HundredButanol;
+    public static Material Ethanol_100;
+    public static Material Methanol_100;
+    public static Material Butanol_100;
     public static Material Cuproquin;
     public static Material Sulfanilamide;
     public static Material AcetylsulfanilylChloride;
