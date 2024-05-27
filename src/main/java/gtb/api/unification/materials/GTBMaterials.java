@@ -103,11 +103,34 @@ public class GTBMaterials {
     public static Material SheepBlood;
     public static Material Xerizin;
 
+
+    public static Material RarestEarthMixture;
+    public static Material RarerEarthConcentrate;
+    public static Material PurifiedScandiumLeachResidues;
+    public static Material ExquisiteScandiumLeachResidues;
+    public static Material LanthanumLeachSolution;
+    public static Material LanthanumLeachEmulsion;
+    public static Material REEGroupMud;
+    public static Material SulfuricResidues;
+    public static Material Cryolite;
+    public static Material GadoliniumLeach;
+    public static Material RoastedGadoliniteLeachSolution;
+    public static Material GadoliniumSolution;
+    public static Material GadoliniteLeachSolution;
+    public static Material CooledGadoliniteLeachSolution;
+    public static Material DysprosiumOxideSolution;
+    public static Material YttriumOxide;
+    public static Material ErbiumOxide;
+    public static Material DysprosiumOxide;
+    public static Material ScandiumOxide;
+
+
     // Element Materials
     public static Material Rubidium;
     public static Material Holmium;
 
     // FD Materials
+    public static Material Gadolinite;
     public static Material Tetradecanol;
     public static Material MethylIsobutylCarbonyl;
     public static Material AmidoEthylAlkylImidazole;

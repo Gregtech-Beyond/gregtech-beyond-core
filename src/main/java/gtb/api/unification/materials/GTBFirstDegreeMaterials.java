@@ -1179,6 +1179,87 @@ public class GTBFirstDegreeMaterials {
         PiranhaSolution = new Material.Builder(getMaterialsId(), gregtechId("piranha_solution"))
                 .fluid()
                 .color(0x4A148C).build().setFormula("(C16H12O2)", true);
+
+        Gadolinite = new Material.Builder(getMaterialsId(), gregtechId("gadolinite"))
+                .dust()
+                .fluid()
+                .ingot()
+                .ore()
+                .color(0x4A148C).build().setFormula("GdS3O2", true);
+
+        ScandiumOxide = new Material.Builder(getMaterialsId(), gregtechId("scandium_oxide"))
+                .dust()
+                .color(0xF4511E).build().setFormula("ScO2", true);
+
+        DysprosiumOxide = new Material.Builder(getMaterialsId(), gregtechId("dysprosium_oxide"))
+                .dust()
+                .color(0x00ACC1).build().setFormula("DsO2", true);
+
+        ErbiumOxide = new Material.Builder(getMaterialsId(), gregtechId("erbium_oxide"))
+                .dust()
+                .color(0x3949AB).build().setFormula("ErO2", true);
+
+        YttriumOxide = new Material.Builder(getMaterialsId(), gregtechId("yttrium_oxide"))
+                .dust()
+                .color(0x81B384).build().setFormula("YtO2", true);
+
+        DysprosiumOxideSolution = new Material.Builder(getMaterialsId(), gregtechId("dysprosium_oxide_solution"))
+                .fluid()
+                .color(0xB0A19B).build().setFormula("(C16H12O2)", true);
+
+        RarestEarthMixture = new Material.Builder(getMaterialsId(), gregtechId("rarer_earth_concentrate"))
+                .fluid()
+                .color(0x6A3F32).build().setFormula("(C16H12O2)", true);
+
+        PurifiedScandiumLeachResidues = new Material.Builder(getMaterialsId(), gregtechId("purified_scandium_leach_residues"))
+                .fluid()
+                .color(0x7E57C2).build().setFormula("(C16H12O2)", true);
+
+        ExquisiteScandiumLeachResidues = new Material.Builder(getMaterialsId(), gregtechId("exquisite_scandium_leach_solution"))
+                .fluid()
+                .color(0x58447B).build().setFormula("(C16H12O2)", true);
+
+        LanthanumLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("lanthanum_leach_solution"))
+                .fluid()
+                .color(0x413061).build().setFormula("(C16H12O2)", true);
+
+        LanthanumLeachEmulsion = new Material.Builder(getMaterialsId(), gregtechId("lanthanum_leach_emulsion"))
+                .fluid()
+                .color(0x494353).build().setFormula("(C16H12O2)", true);
+
+        REEGroupMud = new Material.Builder(getMaterialsId(), gregtechId("ree_group_mud"))
+                .fluid()
+                .color(0x3A1A11).build().setFormula("(C16H12O2)", true);
+
+        SulfuricResidues = new Material.Builder(getMaterialsId(), gregtechId("sulfuric_residues"))
+                .fluid()
+                .color(0xFDD835).build().setFormula("(C16H12O2)", true);
+
+        Cryolite = new Material.Builder(getMaterialsId(), gregtechId("cryolite"))
+                .fluid()
+                .color(0x82A6C4).build().setFormula("(C16H12O2)", true);
+
+        GadoliniumLeach = new Material.Builder(getMaterialsId(), gregtechId("gadolinium_leach"))
+                .fluid()
+                .color(0xEEDBDB).build().setFormula("(C16H12O2)", true);
+
+        RoastedGadoliniteLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("roasted_gadolinite_leach_solution"))
+                .fluid()
+                .color(0x5A4F4D).build().setFormula("(C16H12O2)", true);
+
+        GadoliniumSolution = new Material.Builder(getMaterialsId(), gregtechId("gadolinium_solution"))
+                .fluid()
+                .color(0x6D4C41).build().setFormula("(C16H12O2)", true);
+
+        CooledGadoliniteLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("cooled_gadolinite_leach_solution"))
+                .fluid()
+                .color(0x8D6E63).build().setFormula("(C16H12O2)", true);
+
+        GadoliniteLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("gadolinite_leach_solution"))
+                .fluid()
+                .color(0x605856).build().setFormula("(C16H12O2)", true);
+
+
     }
 
     private static int getMaterialsId() {
