@@ -43,7 +43,7 @@ public class PolybenzimidazoleLine {
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(PolybenzimidazoleSolution.getFluid(1000))
                 .fluidOutputs(Water.getFluid(1000))
-                .output(dust, Polybenzimidazole)
+                .output(dust, Polybenzimidazole, 7)
                 .duration(120)
                 .EUt(700)
                 .buildAndRegister();
