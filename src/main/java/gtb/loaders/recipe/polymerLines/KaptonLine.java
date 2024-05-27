@@ -1,4 +1,5 @@
 package gtb.loaders.recipe.polymerLines;
+
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.MarkerMaterials.Color.*;
@@ -9,20 +10,9 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ingredients.IntCircuitIngredient;
-import gregtech.api.unification.OreDictUnifier;
-
-
 public class KaptonLine {
 
-    public static void init(){
-
-
-
+    public static void init() {
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(ParaXylene.getFluid(1000))
                 .fluidInputs(Chloromethane.getFluid(2000))
@@ -98,23 +88,5 @@ public class KaptonLine {
                 .fluidInputs(KaptonK.getFluid(L))
                 .fluidOutputs(KaptonE.getFluid(L))
                 .duration(30).EUt(VA[ZPM]).buildAndRegister();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

@@ -7,7 +7,8 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
 public class PolyurethaneLine {
-    public static void init(){
+
+    public static void init() {
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(TolueneDiisocyanate.getFluid(1000))
                 .fluidInputs(EthyleneGlycol.getFluid(1000))

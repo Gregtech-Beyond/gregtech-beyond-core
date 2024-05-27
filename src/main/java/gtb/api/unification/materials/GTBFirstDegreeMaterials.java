@@ -15,7 +15,6 @@ public class GTBFirstDegreeMaterials {
     private static final int END_ID = startId + 500;;
 
     public static void register() {
-
         PotassiumDisulfate = new Material.Builder(getMaterialsId(), gregtechId("potassium_disulfate"))
                 .dust()
                 .color(0xD84315)
@@ -866,7 +865,6 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0x827717).build().setFormula("C2H6OS", true);
 
-
         IridiumCyclooctadienylChlorideDimer = new Material.Builder(getMaterialsId(),
                 gregtechId("iridium_cyclooctadienyl_chloride_dimer"))
                         .dust()
@@ -1165,7 +1163,6 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0xD7D6D6)
                 .build().setFormula("KClMgSO4K2SO4KF", true);
-
     }
 
     private static int getMaterialsId() {

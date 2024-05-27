@@ -1,19 +1,18 @@
 package gtb.loaders.recipe.polymerLines;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import net.minecraftforge.fluids.FluidStack;
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+
 public class PolybenzimidazoleLine {
 
-    public static void init(){
-
-
+    public static void init() {
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new FluidStack[] { Diaminobenzidine.getFluid(1000),
                         DiphenylIsophtalate.getFluid(1000) });
@@ -57,6 +56,5 @@ public class PolybenzimidazoleLine {
                 .duration(120)
                 .EUt(700)
                 .buildAndRegister();
-
     }
 }

@@ -10,19 +10,11 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ingredients.IntCircuitIngredient;
-import gregtech.api.unification.OreDictUnifier;
-
-
 public class KevlarLine {
 
     // Kevlar
     public static void init() {
-    // C6H4(CH3)2 + 6O -> C6H4(CO2H)2 + 2H2O
+        // C6H4(CH3)2 + 6O -> C6H4(CO2H)2 + 2H2O
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(ParaXylene.getFluid(1000))
                 .fluidInputs(Chlorine.getFluid(6000))
@@ -32,10 +24,10 @@ public class KevlarLine {
                 .EUt(VA[EV])
                 .buildAndRegister();
 
-    // Amoco Process for Terephthalic Acid
+        // Amoco Process for Terephthalic Acid
 
-    // 4Br + C2H2 -> C2H2Br4
-    // TODO Vacuum
+        // 4Br + C2H2 -> C2H2Br4
+        // TODO Vacuum
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Bromine.getFluid(4000))
                 .fluidInputs(Acetylene.getFluid(1000))
@@ -44,7 +36,7 @@ public class KevlarLine {
                 .EUt(VA[LV])
                 .buildAndRegister();
 
-    // C6H4(CH3)2 + 6O -> C6H4(CO2H)2 + 2H2O
+        // C6H4(CH3)2 + 6O -> C6H4(CO2H)2 + 2H2O
         LARGE_CHEMICAL_RECIPES.recipeBuilder() // TODO corrosion proof reactor
                 .notConsumable(foil, Titanium, 10)
                 .notConsumable(dust, Manganese)
@@ -59,7 +51,7 @@ public class KevlarLine {
                 .EUt(VA[ZPM])
                 .buildAndRegister();
 
-    // C6H4(CCl3)2 + C6H4(CO2H)2 -> 2 C6H4(COCl)2 + 2 HCl
+        // C6H4(CCl3)2 + C6H4(CO2H)2 -> 2 C6H4(COCl)2 + 2 HCl
         CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, TerephthalicAcid, 3)
                 .fluidInputs(Bistrichloromethylbenzene.getFluid(1000))
@@ -69,7 +61,7 @@ public class KevlarLine {
                 .EUt(240)
                 .buildAndRegister();
 
-    // C4H8 + HClO + H2O -> C4H10O2 + HCl
+        // C4H8 + HClO + H2O -> C4H10O2 + HCl
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Butene.getFluid(1000))
                 .fluidInputs(HypochlorousAcid.getFluid(1000))
@@ -80,7 +72,7 @@ public class KevlarLine {
                 .EUt(VA[HV])
                 .buildAndRegister();
 
-    // C4H10O2 -> C4H6O2 + 4H (4H lost)
+        // C4H10O2 -> C4H6O2 + 4H (4H lost)
         BREWING_RECIPES.recipeBuilder()
                 .input(dust, Copper)
                 .fluidInputs(Butanediol.getFluid(1000))
@@ -89,7 +81,7 @@ public class KevlarLine {
                 .EUt(VA[EV])
                 .buildAndRegister();
 
-    // CH3NH2 + C4H6O2 -> C5H9NO + H2O
+        // CH3NH2 + C4H6O2 -> C5H9NO + H2O
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Methylamine.getFluid(1000))
                 .fluidInputs(GammaButyrolactone.getFluid(1000))
@@ -99,14 +91,14 @@ public class KevlarLine {
                 .EUt(VA[IV])
                 .buildAndRegister();
 
-    // Ca + 2Cl -> CaCl2
+        // Ca + 2Cl -> CaCl2
         CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, Calcium)
                 .fluidInputs(Chlorine.getFluid(2000))
                 .output(dust, CalciumChloride, 3)
                 .duration(80).EUt(VA[LV]).buildAndRegister();
 
-    // C6H4(NH2)2 + C6H4(COCl)2 -> [-CO-C6H4-CO-NH-C6H4-NH-]n + 2HCl
+        // C6H4(NH2)2 + C6H4(COCl)2 -> [-CO-C6H4-CO-NH-C6H4-NH-]n + 2HCl
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, CalciumChloride)
                 .input(dust, ParaPhenylenediamine, 8)
@@ -180,4 +172,5 @@ public class KevlarLine {
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
-}}
+    }
+}

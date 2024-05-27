@@ -1,4 +1,5 @@
 package gtb.loaders.recipe.polymerLines;
+
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -8,7 +9,6 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 public class PolystyreneNanoparticlesLine {
 
     public static void init() {
-
         MIXER_RECIPES.recipeBuilder().duration(160).EUt(960)
                 .notConsumable(dust, Nickel)
                 .fluidInputs(Methanol.getFluid(1000))
@@ -91,12 +91,5 @@ public class PolystyreneNanoparticlesLine {
                 .EUt(480)
                 .duration(50)
                 .buildAndRegister();
-
-
-
-
-
-
-
     }
 }

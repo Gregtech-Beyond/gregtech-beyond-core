@@ -1,20 +1,20 @@
 package gtb.loaders.recipe.polymerLines;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.unification.OreDictUnifier;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
+
 public class StyreneButadieneRubberLine {
 
-    public static void init(){
-
+    public static void init() {
         MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(Ethanol.getFluid(1000))
                 .fluidInputs(Butadiene.getFluid(3000))
@@ -75,7 +75,5 @@ public class StyreneButadieneRubberLine {
         GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(dust, RawStyreneButadieneRubber, 9),
                         OreDictUnifier.get(dust, Sulfur) });
-
-
     }
 }

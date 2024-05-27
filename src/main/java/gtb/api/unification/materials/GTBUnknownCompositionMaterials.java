@@ -579,15 +579,15 @@ public class GTBUnknownCompositionMaterials {
 
         PolybenzimidazolePrePolymerFoam = new Material.Builder(getMaterialsId(),
                 gregtechId("polybenzimidazole_pre_polymer_foam"))
-                .dust()
-                .color(0x2B2B2B)
-                .build().setFormula("?", true);
+                        .dust()
+                        .color(0x2B2B2B)
+                        .build().setFormula("?", true);
 
         ImpurePolybenzimidazoleSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("impure_polybenzimidazole_solution"))
-                .fluid()
-                .color(0x353637)
-                .build().setFormula("?", true);
+                        .fluid()
+                        .color(0x353637)
+                        .build().setFormula("?", true);
 
         PolybenzimidazoleSolution = new Material.Builder(getMaterialsId(), gregtechId("polybenzimidazole_solution"))
                 .fluid()
@@ -601,15 +601,15 @@ public class GTBUnknownCompositionMaterials {
 
         PhenyleneSulfidePrePolymerMixture = new Material.Builder(getMaterialsId(),
                 gregtechId("phenylene_sulfide_pre_polymer_mixture"))
-                .fluid()
-                .color(0x565453)
-                .build().setFormula("?", true);
+                        .fluid()
+                        .color(0x565453)
+                        .build().setFormula("?", true);
 
         PlatinumMetallicPowder = new Material.Builder(getMaterialsId(),
                 gregtechId("platinum_metallic_powder"))
-                .dust()
-                .color(0xFAD28F)
-                .build().setFormula("Pt?", true);
+                        .dust()
+                        .color(0xFAD28F)
+                        .build().setFormula("Pt?", true);
 
         CrudeRhodiumMetal = new Material.Builder(getMaterialsId(), gregtechId("crude_rhodium_metal"))
                 .dust()
@@ -646,8 +646,8 @@ public class GTBUnknownCompositionMaterials {
 
         SamariumRareEarthConcentrate = new Material.Builder(getMaterialsId(),
                 gregtechId("samarium_rare_earth_concentrate"))
-                .dust()
-                .color(0xC4C3BB).build().setFormula("SmO?", true);
+                        .dust()
+                        .color(0xC4C3BB).build().setFormula("SmO?", true);
 
         BastnasiteConcentrate = new Material.Builder(getMaterialsId(), gregtechId("bastnasite_concentrate"))
                 .fluid()
@@ -655,13 +655,13 @@ public class GTBUnknownCompositionMaterials {
 
         CeriumRichBastnasiteConcentrate = new Material.Builder(getMaterialsId(),
                 gregtechId("cerium_rich_bastnasite_concentrate"))
-                .fluid()
-                .color(0x6D2712).build();
+                        .fluid()
+                        .color(0x6D2712).build();
 
         AcidicBastnasiteConcentrate = new Material.Builder(getMaterialsId(),
                 gregtechId("acidic_bastnasite_concentrate"))
-                .fluid()
-                .color(0xAF662E).build();
+                        .fluid()
+                        .color(0xAF662E).build();
 
         AcidicCeriumBasedMud = new Material.Builder(getMaterialsId(), gregtechId("acidic_cerium_based_mud"))
                 .fluid()
@@ -669,28 +669,28 @@ public class GTBUnknownCompositionMaterials {
 
         BastnasiteRarerEarthOxidesMixture = new Material.Builder(getMaterialsId(),
                 gregtechId("bastnasite_rarer_earth_oxides_mixture"))
-                .fluid()
-                .color(0x826D67).build();
+                        .fluid()
+                        .color(0x826D67).build();
 
         DriedBastnasiteRarerEarthOxidesPulp = new Material.Builder(getMaterialsId(),
                 gregtechId("dried_bastnasite_rarer_earth_oxides_pulp"))
-                .fluid()
-                .color(0x4E1B0C).build();
+                        .fluid()
+                        .color(0x4E1B0C).build();
 
         BastnasiteRarerEarthOxidesEmulsion = new Material.Builder(getMaterialsId(),
                 gregtechId("bastnasite_rarer_earth_oxides_emulsion"))
-                .fluid()
-                .color(0x8E6254).build();
+                        .fluid()
+                        .color(0x8E6254).build();
 
         BastnasiteRarerEarthOxidesSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("bastnasite_rarer_earth_oxides_solution"))
-                .fluid()
-                .color(0x66210C).build();
+                        .fluid()
+                        .color(0x66210C).build();
 
         SamariumReducedRarerEarthOxides = new Material.Builder(getMaterialsId(),
                 gregtechId("samarium_reduced_rarer_earth_oxides"))
-                .fluid()
-                .color(0x623324).build();
+                        .fluid()
+                        .color(0x623324).build();
 
         CeriumSolution = new Material.Builder(getMaterialsId(), gregtechId("cerium_solution"))
                 .fluid()
@@ -714,13 +714,13 @@ public class GTBUnknownCompositionMaterials {
 
         ChlorinatedMonaziteFiltrate = new Material.Builder(getMaterialsId(),
                 gregtechId("chlorinated_monazite_filtrate"))
-                .dust()
-                .color(0x345727).build().setFormula("?", true);
+                        .dust()
+                        .color(0x345727).build().setFormula("?", true);
 
         SaturatedChlorinatedMonaziteFiltrate = new Material.Builder(getMaterialsId(),
                 gregtechId("saturated_chlorinated_monazite_filtrate"))
-                .dust()
-                .color(0x00695C).build().setFormula("?", true);
+                        .dust()
+                        .color(0x00695C).build().setFormula("?", true);
 
         MonaziteSulfide = new Material.Builder(getMaterialsId(), gregtechId("monazite_sulfide"))
                 .dust()
@@ -744,8 +744,8 @@ public class GTBUnknownCompositionMaterials {
 
         ImpureMonaziteOreByproductSlurry = new Material.Builder(getMaterialsId(),
                 gregtechId("impure_monazite_ore_byproduct_slurry"))
-                .fluid()
-                .color(0x33691E).build().setFormula("?2", true);
+                        .fluid()
+                        .color(0x33691E).build().setFormula("?2", true);
 
         MuddyMonaziteOreByproducts = new Material.Builder(getMaterialsId(), gregtechId("muddy_monazite_ore_byproducts"))
                 .fluid()
@@ -761,8 +761,8 @@ public class GTBUnknownCompositionMaterials {
 
         NeutralizedRareEarthFiltrate = new Material.Builder(getMaterialsId(),
                 gregtechId("neutralized_rare_earth_filtrate"))
-                .fluid()
-                .color(0x7F5E54).build().setFormula("?", true);
+                        .fluid()
+                        .color(0x7F5E54).build().setFormula("?", true);
 
         MonaziteSulfide = new Material.Builder(getMaterialsId(), gregtechId("monazite_sulfide"))
                 .fluid()
@@ -806,9 +806,9 @@ public class GTBUnknownCompositionMaterials {
 
         NaquadahRichSterileGrowthMedium = new Material.Builder(getMaterialsId(),
                 gregtechId("naquadah_rich_sterile_growth_medium"))
-                .fluid()
-                .color(0x272529)
-                .build();
+                        .fluid()
+                        .color(0x272529)
+                        .build();
 
         MuddyBastnasiteSolution = new Material.Builder(getMaterialsId(), gregtechId("muddy_bastnasite_solution"))
                 .fluid()
@@ -836,9 +836,9 @@ public class GTBUnknownCompositionMaterials {
 
         PolymerizedStyreneButadieneSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("polymerized_styrene_butadiene_solution"))
-                .fluid()
-                .color(0x454545)
-                .build();
+                        .fluid()
+                        .color(0x454545)
+                        .build();
 
         DinitrobenzeneMixture = new Material.Builder(getMaterialsId(), gregtechId("dinitrobenzene_mixture"))
                 .dust()
@@ -851,28 +851,6 @@ public class GTBUnknownCompositionMaterials {
         PolymerizationReadyZylon = new Material.Builder(getMaterialsId(), gregtechId("polymerization_ready_zylon"))
                 .dust()
                 .color(0xD2A842).build();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     private static int getMaterialsId() {

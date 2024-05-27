@@ -24,8 +24,6 @@ public final class GTBRecipeLoader {
         RecipeMaps.SIFTER_RECIPES.setMaxFluidInputs(1);
         RecipeMaps.SIFTER_RECIPES.setMaxFluidOutputs(1);
 
-
-
         FullerenePolymerTetrixLine.init();
         FullerenePolymerMatrixLine.init();
         KaptonLine.init();

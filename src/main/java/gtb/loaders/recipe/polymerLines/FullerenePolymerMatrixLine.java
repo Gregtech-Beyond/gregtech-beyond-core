@@ -11,9 +11,7 @@ import static gtb.common.item.GTBMetaItems.UVA_HALIDE_LAMP;
 
 public class FullerenePolymerMatrixLine {
 
-    public static void init(){
-
-
+    public static void init() {
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Naphthalene.getFluid(1000))
                 .fluidInputs(SodiumCyanide.getFluid(1000))
@@ -444,10 +442,5 @@ public class FullerenePolymerMatrixLine {
                 .duration(201)
                 .EUt(700)
                 .buildAndRegister();
-
-
-
-
-
     }
 }

@@ -1,20 +1,20 @@
 package gtb.loaders.recipe.polymerLines;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ingredients.IntCircuitIngredient;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ingredients.IntCircuitIngredient;
+
 public class PolytetrafluoroethyleneLine {
 
-    public static void init(){
-
+    public static void init() {
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(1) },
                 new FluidStack[] { Tetrafluoroethylene.getFluid(144),
@@ -53,6 +53,5 @@ public class PolytetrafluoroethyleneLine {
                 .fluidInputs(Air.getFluid(1000)).fluidOutputs(Polytetrafluoroethylene.getFluid(144)).duration(120)
                 .EUt(670)
                 .buildAndRegister();
-
     }
 }

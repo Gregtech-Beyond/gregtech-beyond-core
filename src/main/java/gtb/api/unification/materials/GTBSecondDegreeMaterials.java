@@ -126,9 +126,8 @@ public class GTBSecondDegreeMaterials {
 
         RoastedHafniumZirconiumSlag = new Material.Builder(getMaterialsId(),
                 gregtechId("roasted_hafnium_zirconium_slag"))
-                .dust()
-                .color(0x5D3017).build().setFormula("(HfO2)(ZrO2)", true);
-
+                        .dust()
+                        .color(0x5D3017).build().setFormula("(HfO2)(ZrO2)", true);
 
         Rhodium_II_Acetate = new Material.Builder(getMaterialsId(), gregtechId("rhodium_ii_acetate"))
                 .dust()
@@ -213,15 +212,15 @@ public class GTBSecondDegreeMaterials {
 
         TriethylAluminium = new Material.Builder(getMaterialsId(),
                 gregtechId("triethylaluminium"))
-                .fluid()
-                .color(0x4780B9)
-                .build().setFormula("Al2(C2H5)6", true);
+                        .fluid()
+                        .color(0x4780B9)
+                        .build().setFormula("Al2(C2H5)6", true);
 
         TrimethylAluminium = new Material.Builder(getMaterialsId(),
                 gregtechId("trimethylaluminium"))
-                .fluid()
-                .color(0x0097A7)
-                .build().setFormula("Al(CH3)3", true);
+                        .fluid()
+                        .color(0x0097A7)
+                        .build().setFormula("Al(CH3)3", true);
 
         TriarylPhosphineSolution = new Material.Builder(getMaterialsId(), gregtechId("triaryl_phosphine_solution"))
                 .fluid()
@@ -230,10 +229,10 @@ public class GTBSecondDegreeMaterials {
 
         HeavyAlkaliChlorideSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("heavy_alkali_chloride_solution"))
-                .fluid()
-                .color(0x8F5353)
-                .build()
-                .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
+                        .fluid()
+                        .color(0x8F5353)
+                        .build()
+                        .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
 
         TriarylPhosphine = new Material.Builder(getMaterialsId(), gregtechId("triaryl_phosphine"))
                 .fluid()
@@ -363,8 +362,8 @@ public class GTBSecondDegreeMaterials {
 
         SamaricRareEarthConcentrate = new Material.Builder(getMaterialsId(),
                 gregtechId("samaric_rare_earth_concentrate"))
-                .dust()
-                .color(0xCFC182).build();
+                        .dust()
+                        .color(0xCFC182).build();
 
         DeoxygenationCatalyst = new Material.Builder(getMaterialsId(), gregtechId("deoxygenation_catalyst"))
                 .dust()
@@ -380,15 +379,8 @@ public class GTBSecondDegreeMaterials {
 
         NeodymiumRareEarthConcentrate = new Material.Builder(getMaterialsId(),
                 gregtechId("neodymium_rare_earth_concentrate"))
-                .dust()
-                .color(0x686569).build().setFormula("NdO2???", true);
-
-
-
-
-
-
-
+                        .dust()
+                        .color(0x686569).build().setFormula("NdO2???", true);
     }
 
     private static int getMaterialsId() {
