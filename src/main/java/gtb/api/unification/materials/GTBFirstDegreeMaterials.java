@@ -105,7 +105,7 @@ public class GTBFirstDegreeMaterials {
         NButanol = new Material.Builder(getMaterialsId(), gregtechId("nbutanol"))
                 .fluid()
                 .color(0xC87A7A)
-                .build().setFormula("CH10O", true);
+                .build().setFormula("C4H10O", true);
 
         IsoamylAlcohol = new Material.Builder(getMaterialsId(), gregtechId("isoamyl_alcohol"))
                 .fluid()
@@ -176,18 +176,18 @@ public class GTBFirstDegreeMaterials {
 
         Methanol_100 = new Material.Builder(getMaterialsId(), gregtechId("methanol_100"))
                 .fluid()
-                .color(0x9DD6D0)
-                .build().setFormula("C2H4O", true);
+                .color(0x888144)
+                .build().setFormula("CH4O", true);
 
         Butanol_100 = new Material.Builder(getMaterialsId(), gregtechId("butanol_100"))
                 .fluid()
-                .color(0x9DD6D0)
-                .build().setFormula("C2H4O", true);
+                .color(0xDD6565)
+                .build().setFormula("C4H10O", true);
 
         Ethanol_100 = new Material.Builder(getMaterialsId(), gregtechId("ethanol_100"))
                 .fluid()
-                .color(0x9DD6D0)
-                .build().setFormula("C2H4O", true);
+                .color(0xFF6F00)
+                .build().setFormula("C2H6O", true);
 
         ActivatedCarbon = new Material.Builder(getMaterialsId(), gregtechId("activated_carbon"))
                 .fluid()
