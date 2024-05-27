@@ -9,7 +9,6 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 import static net.minecraft.init.Items.*;
 
-import gregtech.api.unification.OreDictUnifier;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
@@ -796,12 +795,11 @@ public class BiologyLines {
                 .buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
-                new ItemStack[]{SHAPE_MOLD_CYLINDER.getStackForm(1)},
+                new ItemStack[] { SHAPE_MOLD_CYLINDER.getStackForm(1) },
                 new FluidStack[] { Polytetrafluoroethylene.getFluid(36) });
 
         GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
-                new ItemStack[]{SHAPE_MOLD_CYLINDER.getStackForm(1)},
+                new ItemStack[] { SHAPE_MOLD_CYLINDER.getStackForm(1) },
                 new FluidStack[] { Polybenzimidazole.getFluid(18) });
-
     }
 }
