@@ -245,6 +245,5 @@ public class CryogenicAirDistillation {
                 .duration(800)
                 .EUt(8)
                 .buildAndRegister();
-
     }
 }

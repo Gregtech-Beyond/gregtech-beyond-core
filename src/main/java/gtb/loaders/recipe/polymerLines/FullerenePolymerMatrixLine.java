@@ -392,7 +392,7 @@ public class FullerenePolymerMatrixLine {
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(CarbonMonoxide.getFluid(1000))
                 .fluidInputs(Chlorine.getFluid(2000))
-                .notConsumable(dust, Carbon)
+                .notConsumable(dust, ActivatedCarbon)
                 .fluidOutputs(Phosgene.getFluid(1000))
                 .EUt(1920)
                 .duration(400)
@@ -441,6 +441,13 @@ public class FullerenePolymerMatrixLine {
                 .fluidOutputs(nButyllithium.getFluid(1000))
                 .duration(201)
                 .EUt(700)
+                .buildAndRegister();
+
+        VACUUM_DISTILLATION_TOWER.recipeBuilder()
+                .input(dust, Carbon)
+                .output(dust, ActivatedCarbon)
+                .duration(200)
+                .EUt(822)
                 .buildAndRegister();
     }
 }
