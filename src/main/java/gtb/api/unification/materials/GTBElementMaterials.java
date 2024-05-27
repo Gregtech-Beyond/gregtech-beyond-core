@@ -33,13 +33,6 @@ public class GTBElementMaterials {
                 .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME)
                 .color(0xFF9800)
                 .build().setFormula("Gd", true);
-
-        Hafnium = new Material.Builder(getMaterialsId(), gregtechId("hafnium"))
-                .fluid()
-                .dust()
-                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME)
-                .color(0xFF9800)
-                .build().setFormula("Hf", true);
     }
 
     private static int getMaterialsId() {

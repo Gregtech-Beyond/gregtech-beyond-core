@@ -196,5 +196,54 @@ public class CryogenicAirDistillation {
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
+
+        PHASE_SEPARATOR.recipeBuilder()
+                .fluidInputs(LiquidHelium.getFluid(1000))
+                .fluidOutputs(Helium.getFluid(1000))
+                .duration(800)
+                .EUt(8)
+                .buildAndRegister();
+
+        PHASE_SEPARATOR.recipeBuilder()
+                .fluidInputs(LiquidArgon.getFluid(1000))
+                .fluidOutputs(Argon.getFluid(1000))
+                .duration(800)
+                .EUt(8)
+                .buildAndRegister();
+
+        PHASE_SEPARATOR.recipeBuilder()
+                .fluidInputs(LiquidXenon.getFluid(1000))
+                .fluidOutputs(Xenon.getFluid(1000))
+                .duration(800)
+                .EUt(8)
+                .buildAndRegister();
+
+        PHASE_SEPARATOR.recipeBuilder()
+                .fluidInputs(LiquidNeon.getFluid(1000))
+                .fluidOutputs(Neon.getFluid(1000))
+                .duration(800)
+                .EUt(8)
+                .buildAndRegister();
+
+        PHASE_SEPARATOR.recipeBuilder()
+                .fluidInputs(LiquidKrypton.getFluid(1000))
+                .fluidOutputs(Krypton.getFluid(1000))
+                .duration(800)
+                .EUt(8)
+                .buildAndRegister();
+
+        PHASE_SEPARATOR.recipeBuilder()
+                .fluidInputs(LiquidNitrogen.getFluid(1000))
+                .fluidOutputs(Nitrogen.getFluid(1000))
+                .duration(800)
+                .EUt(8)
+                .buildAndRegister();
+
+        PHASE_SEPARATOR.recipeBuilder()
+                .fluidInputs(LiquidOxygen.getFluid(1000))
+                .fluidOutputs(Oxygen.getFluid(1000))
+                .duration(800)
+                .EUt(8)
+                .buildAndRegister();
     }
 }

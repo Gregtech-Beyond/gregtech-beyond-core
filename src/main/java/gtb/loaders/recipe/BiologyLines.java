@@ -31,7 +31,7 @@ public class BiologyLines {
         CHEMICAL_BATH_RECIPES.recipeBuilder()
                 .input(MetaItems.PETRI_DISH)
                 .output(STERILIZED_PETRI_DISH)
-                .fluidInputs(HundredEthanol.getFluid(1000))
+                .fluidInputs(Ethanol_100.getFluid(1000))
                 .duration(200)
                 .EUt(12)
                 .buildAndRegister();
@@ -39,8 +39,8 @@ public class BiologyLines {
         CHEMICAL_BATH_RECIPES.recipeBuilder()
                 .input(STERILIZED_PETRI_DISH)
                 .output(PLUS_STERILIZED_PETRI_DISH)
-                .fluidInputs(HundredButanol.getFluid(1000))
-                .fluidInputs(HundredMethanol.getFluid(1000))
+                .fluidInputs(Butanol_100.getFluid(1000))
+                .fluidInputs(Methanol_100.getFluid(1000))
                 .duration(200)
                 .EUt(12)
                 .buildAndRegister();
@@ -461,8 +461,8 @@ public class BiologyLines {
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .input(SYRINGE)
-                .fluidInputs(HundredButanol.getFluid(1000))
-                .fluidInputs(HundredMethanol.getFluid(1000))
+                .fluidInputs(Butanol_100.getFluid(1000))
+                .fluidInputs(Methanol_100.getFluid(1000))
                 .output(STERILIZED_SYRINGE)
                 .duration(120)
                 .EUt(90)
@@ -776,6 +776,30 @@ public class BiologyLines {
 
         GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
                 new ItemStack[] { SHAPE_MOLD_CREDIT.getStackForm() },
+                new FluidStack[] { Polybenzimidazole.getFluid(18) });
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(SulfuricAcid.getFluid(1000))
+                .fluidInputs(HydrogenPeroxide.getFluid(1000))
+                .fluidOutputs(PiranhaSolution.getFluid(1000))
+                .duration(200)
+                .EUt(700)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(PiranhaSolution.getFluid(100))
+                .input(CONTAMINATED_STERILIZED_PETRI_DISH)
+                .output(MetaItems.PETRI_DISH)
+                .duration(800)
+                .EUt(900)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
+                new ItemStack[] { SHAPE_MOLD_CYLINDER.getStackForm(1) },
+                new FluidStack[] { Polytetrafluoroethylene.getFluid(36) });
+
+        GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
+                new ItemStack[] { SHAPE_MOLD_CYLINDER.getStackForm(1) },
                 new FluidStack[] { Polybenzimidazole.getFluid(18) });
     }
 }
