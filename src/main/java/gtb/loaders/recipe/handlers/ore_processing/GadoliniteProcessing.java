@@ -1,8 +1,5 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
-
-import gtb.loaders.recipe.HydrogenPeroxideLine;
-
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -11,12 +8,9 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
-
 public class GadoliniteProcessing {
 
     public static void init() {
-
-
         DIGESTER.recipeBuilder()
                 .input(dust, Gadolinite, 1)
                 .fluidInputs(SulfuricAcid.getFluid(1000))
@@ -194,11 +188,5 @@ public class GadoliniteProcessing {
                 .duration(900)
                 .EUt(80)
                 .buildAndRegister();
-
-
-
-
-
-
     }
 }
