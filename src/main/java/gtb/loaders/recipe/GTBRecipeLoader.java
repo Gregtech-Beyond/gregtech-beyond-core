@@ -70,5 +70,6 @@ public final class GTBRecipeLoader {
         BrineLine.init();
         BastnasiteProcessing.init();
         HydrogenPeroxideLine.init();
+        GadoliniteProcessing.init();
     }
 }
