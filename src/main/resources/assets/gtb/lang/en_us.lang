@@ -22,49 +22,59 @@ tile.gtb_wire_coil.eternal.name=Eternal Coil Block
 tile.gtb_wire_coil_2.temporally_constrained_anti_matter.name=Temporally Constrained Anti-Matter Coil Block
 tile.gtb_wire_coil_2.cataclysm_induced_mixed_matter.name=Cataclysm Induced Mixed-Matter Coil Block
 tile.gtb_multiblock_casing.basic_structural_casing.name=Basic Structural Casing
-
+tile.cruicible.boron_nitride_cruicible.name=Boron Nitride Cruicible
+tile.cruicible.graphite_cruicible.name=Graphite Cruicible
+tile.cruicible.tungsten_cruicible.name=Tungsten Cruicible
+tile.cruicible.quartz_cruicible.name=Quartz Cruicible
+tile.gtb_multiblock_casing.silicon_carbide_casing.name=Silicon Carbide Casing
+tile.gtb_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Casing
+tile.gtb_multiblock_casing.substrate_casing.name=Substrate Casing
+tile.cooling_coil.silver_alloy.name=Silver Alloy Cooling Coil
 
 # Recipemaps
-recipemap.water_tank.name=Water Collection
-recipemap.vacuum_furnace.name=Vacuum Smelting
-recipemap.vacuum_distillation_tower.name=Vacuum Distillation
-recipemap.solid_fuel_generator.name=Solid Fuel Generation
-recipemap.solar_thermal_concentrator.name=Solar Thermal Concentration
-recipemap.fermentation_vat.name=Fermentation
-recipemap.dilution_tank.name=Dilution
-recipemap.coker.name=Coking
-recipemap.catalytic_reformation_unit.name=Catalytic Reforming
-recipemap.black_hole_compressor.name=Black Hole Compression
-recipemap.bedrock_pump.name=Bedrock Pumping
-recipemap.bacterial_vat.name=Bacterial Vat
-recipemap.astro_mining_station.name=Astro Mining
-recipemap.fischer_tropsch_reactor.name=Fischer Tropsch Reaction
-recipemap.dehydrator.name=Dehydration
-recipemap.crystallizer.name=Crystallization
-recipemap.cvd_unit.name=Continous Vapour Deposition
-recipemap.ion_implanter.name=Ion Implantation
-recipemap.roaster.name=Roasting
-recipemap.rotary_evaporator.name=Rotary Evaporation
-recipemap.bio_reactor.name=Bio Reactor
-recipemap.textile_factory.name=Textile Factory
-recipemap.electrolytic_cell.name=Advanced Electrolysis
-recipemap.neutron_accelerator.name=Neutron Acceleration
-recipemap.microscope.name=Microscope
-recipemap.chemical_plant.name=Chemical Plant
-recipemap.clarifier.name=Clarification
-recipemap.froth_flotation_unit.name=Froth Flotation
-recipemap.digester.name=Digestion
-recipemap.polymerization_tank.name=Polymerization
-recipemap.thermal_press.name=Thermal Press
-recipemap.nanoscale_fabricator.name=Nanoscale Fabricatopm
-recipemap.high_temp_distillation_tower.name=High Temperature Distillation
-recipemap.phase_separator.name=Phase Separation
-recipemap.cryogenic_distillation_plant.name=Cryogenic Distillation
-recipemap.rare_gas_stripping_column.name=Rare Gas Stripping
-recipemap.crystallization.name=Crystallization
-recipemap.condensation_unit.name=Condensation
-recipemap.engraving_unit.name=Superfluid Engraving
-recipemap.pressure_swing_adsorber.name=Pressure Swing Adsorption
+recipemap.water_tank_recipes.name=Water Collection
+recipemap.vacuum_furnace_recipes.name=Vacuum Smelting
+recipemap.vacuum_distillation_tower_recipes.name=Vacuum Distillation
+recipemap.solid_fuel_generator_recipes.name=Solid Fuel Generation
+recipemap.solar_thermal_concentrator_recipes.name=Solar Thermal Concentration
+recipemap.fermentation_vat_recipes.name=Fermentation
+recipemap.dilution_tank_recipes.name=Dilution
+recipemap.coker_recipes.name=Coking
+recipemap.catalytic_reformation_unit_recipes.name=Catalytic Reforming
+recipemap.black_hole_compressor_recipes.name=Black Hole Compression
+recipemap.bedrock_pump_recipes.name=Bedrock Pumping
+recipemap.bacterial_vat_recipes.name=Bacterial Vat
+recipemap.astro_mining_station_recipes.name=Astro Mining
+recipemap.fischer_tropsch_reactor_recipes.name=Fischer Tropsch Reaction
+recipemap.dehydrator_recipes.name=Dehydration
+recipemap.crystallizer_recipes.name=Crystallization
+recipemap.cvd_unit_recipes.name=Continous Vapour Deposition
+recipemap.ion_implanter_recipes.name=Ion Implantation
+recipemap.roaster_recipes.name=Roasting
+recipemap.rotary_evaporator_recipes.name=Rotary Evaporation
+recipemap.bio_reactor_recipes.name=Bio Reactor
+recipemap.textile_factory_recipes.name=Textile Factory
+recipemap.electrolytic_cell_recipes.name=Advanced Electrolysis
+recipemap.neutron_accelerator_recipes.name=Neutron Acceleration
+recipemap.microscope_recipes.name=Microscope
+recipemap.chemical_plant_recipes.name=Chemical Plant
+recipemap.clarifier_recipes.name=Clarification
+recipemap.froth_flotation_unit_recipes.name=Froth Flotation
+recipemap.digester_recipes.name=Digestion
+recipemap.polymerization_tank_recipes.name=Polymerization
+recipemap.thermal_press_recipes.name=Thermal Press
+recipemap.nanoscale_fabricator_recipes.name=Nanoscale Fabricatopm
+recipemap.high_temp_distillation_tower_recipes.name=High Temperature Distillation
+recipemap.phase_separator_recipes.name=Phase Separation
+recipemap.cryogenic_distillation_plant_recipes.name=Cryogenic Distillation
+recipemap.rare_gas_stripping_column_recipes.name=Rare Gas Stripping
+recipemap.crystallization_recipes.name=Crystallization
+recipemap.condensation_unit_recipes.name=Condensation
+recipemap.engraving_unit_recipes.name=Superfluid Engraving
+recipemap.pressure_swing_adsorber_recipes.name=Pressure Swing Adsorption
+recipemap.dilution_refrigerator_recipes.name=Dilution Refrigeration
+recipemap.burner_reactor_recipes.name=Burner Reaction
+recipemap.dissolution_tank_recipes.name=Dissolution
 
 # Singleblock machinery
 
@@ -131,9 +141,21 @@ gtb.machine.ion_implanter.luv.name=Elite Ion Implanter Unit II
 gtb.machine.ion_implanter.zpm.name=Elite Ion Implanter Unit III
 gtb.machine.ion_implanter.uv.name=Ultimate Ion Implanter Unit
 
+gtb.machine.dryer.lv.name=Basic Dryer Unit
+gtb.machine.dryer.mv.name=Advanced Dryer Unit
+gtb.machine.dryer.hv.name=Advanced Dryer Unit II
+gtb.machine.dryer.ev.name=Advanced Dryer Unit III
+gtb.machine.dryer.iv.name=Elite Dryer Unit
+gtb.machine.dryer.luv.name=Elite Dryer Unit II
+gtb.machine.dryer.zpm.name=Elite Dryer Unit III
+gtb.machine.dryer.uv.name=Ultimate Dryer Unit
+
 
 
 # Multiblock machine controllers
+
+gtb.machine.dissolution_tank.name=Dissolution Tank
+gtb.machine.burner_reactor.name=Burner Reactor
 gtb.machine.large_cvd_unit.name=Large CVD Unit
 gtb.machine.high_temp_distillation_tower.name=High Temperature Distillation
 gtb.machine.nanoscale_fabricator.name=Nanoscale Fabricator
@@ -167,6 +189,7 @@ gtb.machine.cryogenic_distillation_plant.name=Cryogenic Distillation Plant
 gtb.machine.rare_gas_stripping_column.name=Rare Gas Stripping Column
 gtb.machine.condensation_unit.name=Condensation Unit
 gtb.machine.pressure_swing_adsorber.name=Pressue Swing Adsorber
+gtb.machine.dilution_refrigerator.name=Dilution Refrigerator
 
 # MetaItems
 
@@ -357,16 +380,23 @@ metaitem.uva_lamp_core.name=UVA Lamp Core
 metaitem.rotarry_spinning_whisker.name=Rotarry Spinning Whisker
 metaitem.lithium_foam_base.name=Lithium Foam Base
 metaitem.alumino_silicate_wool_sheet.name=Alumino Silicate Wool Sheet
+metaitem.chromatic_glass_fiber.name=Chromatic Glass Fiber
+metaitem.saturated_chromatic_glass_fiber.name=Saturated Chromatic Glass Fiber
 
 
 
 #Materials
 
-
+gregtech.material.yttrium_oxide.name=Yttrium Oxide
+gregtech.material.erbium_oxide.name=Erbium Oxide
+gregtech.material.dysprosium_oxide.name=Dysprosium Oxide
+gregtech.material.scandium_oxide.name=Scandium Oxide
+gregtech.material.cerium_oxide.name=Cerium Oxide
+gregtech.material.tin_four_chloride.name=Tin IV Chloride
 gregtech.material.rarer_earth_mixture=Rarer Earth Mixture
 gregtech.material.purified_kevlar_concentrate=Purified Kevlar Concentrate
 gregtech.material.purified_scandium_leach_residues=Purified Scandium Leach Residues
-gregtech.material.exquisite_scandium_leach_residues=Exquisite Scandium Leach Residues
+gregtech.material.exquisite_scandium_leach_solution=Exquisite Scandium Leach Residues
 gregtech.material.lanthanum_leach_solution=Lanthanum Leach Solution
 gregtech.material.lanthanum_leach_emulsion=Lanthanum Leach Emulsion
 gregtech.material.ree_group_mud=REE-Group Mud
@@ -427,13 +457,13 @@ gregtech.material.diluted_caesium_solution=Diluted Caesium Solution
 gregtech.material.blue_vitriol=Blue Vitriol
 gregtech.material.cadmium_rich_zinc=Cadmium Rich Zinc
 gregtech.material.crude_zinc=Crude Zinc
-gregtech.material.trace_rhenium_fluee=Trace Rhenium Flue
+gregtech.material.trace_rhenium_flue=Trace Rhenium Flue
 gregtech.material.zinc_oxide=Zinc Oxide
 gregtech.material.germanium_tetrachloride=Germanium Tetrachloride
 gregtech.material.germanium_dioxide=Germanium Dioxide
 gregtech.material.silicon_tetrachloride=Silicon Tetrachl
 gregtech.material.durene=Durene
-gregtech.gregtech.material.pyromellitic_dianhydride=Pyromellitic Dianhydride
+gregtech.material.pyromellitic_dianhydride=Pyromellitic Dianhydride
 gregtech.material.aminophenol=4-Aminophenol
 gregtech.material.dimethylformamide=Dimethylformamide
 gregtech.material.oxydianiline=4,4'-Oxydianiline
