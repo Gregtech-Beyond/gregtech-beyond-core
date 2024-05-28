@@ -1,6 +1,5 @@
 package gtb.api.recipes;
 
-import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
@@ -129,7 +128,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> CRYOGENIC_DISTILLATION_PLANT = new RecipeMap<>(
             "cryogenic_distillation_plant",
-            1, 0, 9, 9, new SimpleRecipeBuilder(), false);
+            1, 1, 9, 9, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> PRESSURE_SWING_ADSORBER = new RecipeMap<>(
             "pressure_swing_adsorber",
@@ -151,14 +150,9 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> BURNER_REACTOR = new RecipeMap<>("burner_reactor",
             2, 2, 2, 1, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> DILUTION_REFRIGERATOR = new RecipeMap<>("dilution_refrigerator",
+            2, 2, 2, 3, new SimpleRecipeBuilder(), false);
 
-
-
-
-
-
-
-
-
-
+    public static final RecipeMap<SimpleRecipeBuilder> SINTERING_OVEN = new RecipeMap<>("sintering_oven",
+            2, 2, 2, 2, new SimpleRecipeBuilder(), false);
 }
