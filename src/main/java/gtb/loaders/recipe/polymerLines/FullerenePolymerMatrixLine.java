@@ -378,9 +378,10 @@ public class FullerenePolymerMatrixLine {
                 .duration(100)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Ammonia.getFluid(2000))
                 .fluidInputs(Phosgene.getFluid(1000))
+                .notConsumable(Silvertetrafluoroborate.getFluid(1000))
                 .fluidInputs(IsopropylAlcohol.getFluid(2000))
                 .notConsumable(dust, Triphenylphosphine, 1)
                 .fluidOutputs(DilutedHydrochloricAcid.getFluid(4000))
