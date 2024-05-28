@@ -31,7 +31,7 @@ import gtb.common.block.blocks.GTBMultiblockCasing;
 public class MetaTileEntityBioReactor extends RecipeMapMultiblockController {
 
     public MetaTileEntityBioReactor(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.BIO_REACTOR);
+        super(metaTileEntityId, GTBRecipeMaps.BIO_REACTOR_RECIPES);
         initializeAbilities();
     }
 

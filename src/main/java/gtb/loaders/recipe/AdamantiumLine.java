@@ -13,7 +13,7 @@ import gtb.common.item.GTBMetaItems;
 public final class AdamantiumLine {
 
     public static void init() {
-        BEDROCK_PUMP.recipeBuilder()
+        BEDROCK_PUMP_RECIPES.recipeBuilder()
                 .fluidOutputs(BedrockContaminatedOil.getFluid(12))
                 .duration(9000)
                 .EUt(7000)
@@ -40,7 +40,7 @@ public final class AdamantiumLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        FROTH_FLOTATION_UNIT.recipeBuilder()
+        FROTH_FLOTATION_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(16000))
                 .fluidInputs(Perfluorotributylamine.getFluid(100))
                 .notConsumable(dust, SodiumIsobutylXanthate)
@@ -51,7 +51,7 @@ public final class AdamantiumLine {
                 .EUt(7800)
                 .buildAndRegister();
 
-        CLARIFIER.recipeBuilder()
+        CLARIFIER_RECIPES.recipeBuilder()
                 .fluidInputs(BedrockSlurry.getFluid(1000))
                 .fluidOutputs(PurifiedBedrockSlurry.getFluid(900))
                 .fluidOutputs(WasteWater.getFluid(100))
@@ -119,7 +119,7 @@ public final class AdamantiumLine {
                 .duration(70)
                 .buildAndRegister();
 
-        CHEMICAL_PLANT.recipeBuilder()
+        CHEMICAL_PLANT_RECIPES.recipeBuilder()
                 .notConsumable(dust, DarmstadtiumCatalyst)
                 .input(dust, Tungsten, 2)
                 .output(dust, TungstenTrioxide, 6)
@@ -131,7 +131,7 @@ public final class AdamantiumLine {
                 .EUt(400)
                 .buildAndRegister();
 
-        CHEMICAL_PLANT.recipeBuilder()
+        CHEMICAL_PLANT_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(2000))
                 .fluidInputs(Fluorine.getFluid(1000))
                 .fluidInputs(AntimonyPentafluoride.getFluid(1000))
@@ -149,7 +149,7 @@ public final class AdamantiumLine {
                 .duration(120)
                 .buildAndRegister();
 
-        CHEMICAL_PLANT.recipeBuilder()
+        CHEMICAL_PLANT_RECIPES.recipeBuilder()
                 .fluidInputs(AdamantiumPhosphorusHydrogenPlasma.getPlasma(2000))
                 .output(dust, Phosphorus)
                 .output(dust, AdamantiumPentoxide, 2)
@@ -197,7 +197,7 @@ public final class AdamantiumLine {
                 .EUt(800)
                 .buildAndRegister();
 
-        DIGESTER.recipeBuilder()
+        DIGESTER_RECIPES.recipeBuilder()
                 .fluidInputs(MithrilFluoride.getFluid(1000))
                 .input(dust, Lithium)
                 .output(dust, LithiumFluoride)
@@ -223,7 +223,7 @@ public final class AdamantiumLine {
                 .EUt(790)
                 .buildAndRegister();
 
-        NEUTRON_ACCELERATOR.recipeBuilder()
+        NEUTRON_ACCELERATOR_RECIPES.recipeBuilder()
                 .input(dust, ExcitedRoughenMithril)
                 .output(dustSmall, Potassium)
                 .output(dustTiny, Naquadah)

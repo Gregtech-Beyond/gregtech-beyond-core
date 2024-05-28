@@ -1,6 +1,5 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
-import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -11,7 +10,7 @@ import static gtb.common.item.GTBMetaItems.*;
 public class GadoliniteProcessing {
 
     public static void init() {
-        DIGESTER.recipeBuilder()
+        DIGESTER_RECIPES.recipeBuilder()
                 .input(dust, Gadolinite, 1)
                 .fluidInputs(SulfuricAcid.getFluid(1000))
                 .fluidOutputs(GadoliniteLeachSolution.getFluid(1000))
@@ -19,7 +18,7 @@ public class GadoliniteProcessing {
                 .EUt(800)
                 .buildAndRegister();
 
-        DILUTION_REFRIGERATOR.recipeBuilder()
+        DILUTION_REFRIGERATOR_RECIPES.recipeBuilder()
                 .fluidInputs(GadoliniteLeachSolution.getFluid(1000))
                 .fluidInputs(Ice.getFluid(1000))
                 .fluidOutputs(CooledGadoliniteLeachSolution.getFluid(1000))
@@ -28,7 +27,7 @@ public class GadoliniteProcessing {
                 .EUt(120)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(1000))
                 .fluidInputs(CooledGadoliniteLeachSolution.getFluid(1000))
                 .notConsumable(dust, WroughtIron)
@@ -46,7 +45,7 @@ public class GadoliniteProcessing {
                 .EUt(700)
                 .buildAndRegister();
 
-        ELECTROLYTIC_CELL.recipeBuilder()
+        ELECTROLYTIC_CELL_RECIPES.recipeBuilder()
                 .fluidInputs(GadoliniumLeach.getFluid(1000))
                 .notConsumable(Cryolite.getFluid(100))
                 .fluidOutputs(GadoliniumSolution.getFluid(600))
@@ -57,7 +56,7 @@ public class GadoliniteProcessing {
                 .EUt(600)
                 .buildAndRegister();
 
-        CRYOGENIC_DISTILLATION_PLANT.recipeBuilder()
+        CRYOGENIC_DISTILLATION_PLANT_RECIPES.recipeBuilder()
                 .fluidInputs(SulfuricResidues.getFluid(1000))
                 .fluidOutputs(LiquidAir.getFluid(1000))
                 .output(dust, Sulfur)
@@ -74,7 +73,7 @@ public class GadoliniteProcessing {
                 .EUt(700)
                 .buildAndRegister();
 
-        DILUTION_REFRIGERATOR.recipeBuilder()
+        DILUTION_REFRIGERATOR_RECIPES.recipeBuilder()
                 .fluidInputs(REEGroupMud.getFluid(1000))
                 .fluidInputs(AquaRegia.getFluid(1000))
                 .fluidOutputs(DilutedAquaRegia.getFluid(2000))
@@ -92,7 +91,7 @@ public class GadoliniteProcessing {
                 .EUt(700)
                 .buildAndRegister();
 
-        DISSOLUTION_TANK.recipeBuilder()
+        DISSOLUTION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(LanthanumLeachSolution.getFluid(1000))
                 .fluidInputs(DistilledWater.getFluid(2000))
                 .output(dust, Sodium, 3)
@@ -103,7 +102,7 @@ public class GadoliniteProcessing {
                 .EUt(800)
                 .buildAndRegister();
 
-        BURNER_REACTOR.recipeBuilder()
+        BURNER_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(1000))
                 .fluidInputs(ExquisiteScandiumLeachResidues.getFluid(1000))
                 .notConsumable(CHROMATIC_GLASS_FIBER)
@@ -139,7 +138,7 @@ public class GadoliniteProcessing {
                 .EUt(120)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(RarerEarthConcentrate.getFluid(1000))
                 .fluidInputs(Oxygen.getFluid(1000))
                 .fluidOutputs(Water.getFluid(1600))
@@ -148,7 +147,7 @@ public class GadoliniteProcessing {
                 .EUt(700)
                 .buildAndRegister();
 
-        BURNER_REACTOR.recipeBuilder()
+        BURNER_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(RarestEarthMixture.getFluid(1000))
                 .output(dust, ErbiumOxide, 2)
                 .output(dust, CeriumOxide, 2)

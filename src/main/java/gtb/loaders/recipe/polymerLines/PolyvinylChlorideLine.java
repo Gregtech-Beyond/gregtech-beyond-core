@@ -28,15 +28,20 @@ public class PolyvinylChlorideLine {
                 new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(2) }, new FluidStack[] {
                         Oxygen.getFluid(7500), VinylChloride.getFluid(2160), TitaniumTetrachloride.getFluid(100) });
 
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Air.getFluid(1000)).fluidInputs(VinylChloride.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(Air.getFluid(1000))
+                .fluidInputs(VinylChloride.getFluid(144))
                 .fluidOutputs(PolyvinylChloride.getFluid(144)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Oxygen.getFluid(1000)).fluidInputs(VinylChloride.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(Oxygen.getFluid(1000))
+                .fluidInputs(VinylChloride.getFluid(144))
                 .fluidOutputs(PolyvinylChloride.getFluid(144)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, KaminskyCatalyst).fluidInputs(VinylChloride.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, KaminskyCatalyst)
+                .fluidInputs(VinylChloride.getFluid(144))
                 .fluidOutputs(PolyvinylChloride.getFluid(576)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, PhilipsCatalyst).fluidInputs(VinylChloride.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, PhilipsCatalyst)
+                .fluidInputs(VinylChloride.getFluid(144))
                 .fluidOutputs(PolyvinylChloride.getFluid(288)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, ZieglerNattaCatalyst).fluidInputs(VinylChloride.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, ZieglerNattaCatalyst)
+                .fluidInputs(VinylChloride.getFluid(144))
                 .fluidOutputs(PolyvinylChloride.getFluid(432)).duration(500).EUt(800).buildAndRegister();
     }
 }

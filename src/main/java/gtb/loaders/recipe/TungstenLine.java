@@ -12,7 +12,7 @@ import gregtech.api.unification.OreDictUnifier;
 public class TungstenLine {
 
     public static void init() {
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .input(dust, TungsticAcid, 7)
                 .output(dust, TungstenTrioxide, 4)
                 .duration(200)

@@ -32,7 +32,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityCondensationUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityCondensationUnit(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CONDENSATION_UNIT);
+        super(metaTileEntityId, GTBRecipeMaps.CONDENSATION_UNIT_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

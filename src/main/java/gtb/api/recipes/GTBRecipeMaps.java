@@ -9,150 +9,167 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
 
-    public static final RecipeMap<NoEnergyRecipeBuilder> WATER_TANK = new RecipeMap<>("water_tank",
+    public static final RecipeMap<NoEnergyRecipeBuilder> WATER_TANK_RECIPES = new RecipeMap<>("water_tank_recipes",
             1, 0, 0, 1, new NoEnergyRecipeBuilder(), false);
 
-    public static final RecipeMap<NoEnergyRecipeBuilder> SOLAR_THERMAL_CONCENTRATOR = new RecipeMap<>(
-            "solar_thermal_concentrator",
+    public static final RecipeMap<NoEnergyRecipeBuilder> SOLAR_THERMAL_CONCENTRATOR_RECIPES = new RecipeMap<>(
+            "solar_thermal_concentrator_recipes",
             1, 0, 1, 1, new NoEnergyRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> ASTRO_MINING_STATION = new RecipeMap<>("astro_mining_station",
+    public static final RecipeMap<SimpleRecipeBuilder> ASTRO_MINING_STATION_RECIPES = new RecipeMap<>(
+            "astro_mining_station_recipes",
             4, 9, 1, 0, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_FURNACE = new RecipeMap<>("vacuum_furnace",
+    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_FURNACE_RECIPES = new RecipeMap<>(
+            "vacuum_furnace_recipes",
             1, 1, 0, 0, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> BACTERIAL_VAT = new RecipeMap<>("bacterial_vat",
+    public static final RecipeMap<SimpleRecipeBuilder> BACTERIAL_VAT_RECIPES = new RecipeMap<>("bacterial_vat_recipes",
             1, 1, 0, 0, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> BEDROCK_PUMP = new RecipeMap<>("bedrock_pump",
+    public static final RecipeMap<SimpleRecipeBuilder> BEDROCK_PUMP_RECIPES = new RecipeMap<>("bedrock_pump_recipes",
             1, 0, 0, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> BLACK_HOLE_COMPRESSOR = new RecipeMap<>("black_hole_compressor",
+    public static final RecipeMap<SimpleRecipeBuilder> BLACK_HOLE_COMPRESSOR_RECIPES = new RecipeMap<>(
+            "black_hole_compressor_recipes",
             2, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CATALYTIC_REFORMATION_UNIT = new RecipeMap<>(
-            "catalytic_reformation_unit",
+    public static final RecipeMap<SimpleRecipeBuilder> CATALYTIC_REFORMATION_UNIT_RECIPES = new RecipeMap<>(
+            "catalytic_reformation_unit_recipes",
             1, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> SOLID_FUEL_GENERATOR = new RecipeMap<>("solid_fuel_generator",
+    public static final RecipeMap<SimpleRecipeBuilder> SOLID_FUEL_GENERATOR_RECIPES = new RecipeMap<>(
+            "solid_fuel_generator_recipes",
             2, 0, 1, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> COKER = new RecipeMap<>("coker",
+    public static final RecipeMap<SimpleRecipeBuilder> COKER_RECIPES = new RecipeMap<>("coker_recipes",
             1, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_DISTILLATION_TOWER = new RecipeMap<>(
-            "vacuum_distillation_tower",
+    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_DISTILLATION_TOWER_RECIPES = new RecipeMap<>(
+            "vacuum_distillation_tower_recipes",
             1, 3, 1, 5, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> DILUTION_TANK = new RecipeMap<>("dilution_tank",
+    public static final RecipeMap<SimpleRecipeBuilder> DILUTION_TANK_RECIPES = new RecipeMap<>("dilution_tank_recipes",
             1, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> FERMENTATION_VAT = new RecipeMap<>("fermentation_vat",
+    public static final RecipeMap<SimpleRecipeBuilder> FERMENTATION_VAT_RECIPES = new RecipeMap<>(
+            "fermentation_vat_recipes",
             2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> NEUTRON_ACCELERATOR = new RecipeMap<>("neutron_accelerator",
+    public static final RecipeMap<SimpleRecipeBuilder> NEUTRON_ACCELERATOR_RECIPES = new RecipeMap<>(
+            "neutron_accelerator_recipes",
             2, 3, 2, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> FISCHER_TROPSCH_REACTOR = new RecipeMap<>(
-            "fischer_tropsch_reactor",
+    public static final RecipeMap<SimpleRecipeBuilder> FISCHER_TROPSCH_REACTOR_RECIPES = new RecipeMap<>(
+            "fischer_tropsch_reactor_recipes",
             2, 1, 2, 9, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION = new RecipeMap<>("crystallization",
+    public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION_RECIPES = new RecipeMap<>(
+            "crystallization_recipes",
             3, 3, 3, 3, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR = new RecipeMap<>(
-            "dehydrator",
+    public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR_RECIPES = new RecipeMap<>(
+            "dehydrator_recipes",
             3, 3, 3, 3, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> MICROSCOPE = new RecipeMap<>(
-            "microscope",
+    public static final RecipeMap<SimpleRecipeBuilder> MICROSCOPE_RECIPES = new RecipeMap<>(
+            "microscope_recipes",
             1, 9, 1, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> BIO_REACTOR = new RecipeMap<>(
-            "bio_reactor",
+    public static final RecipeMap<SimpleRecipeBuilder> BIO_REACTOR_RECIPES = new RecipeMap<>(
+            "bio_reactor_recipes",
             3, 3, 5, 3, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> ELECTROLYTIC_CELL = new RecipeMap<>(
-            "electrolytic_cell",
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTROLYTIC_CELL_RECIPES = new RecipeMap<>(
+            "electrolytic_cell_recipes",
             3, 4, 2, 6, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> ROTARY_EVAPORATOR = new RecipeMap<>(
-            "rotary_evaporator",
+    public static final RecipeMap<SimpleRecipeBuilder> ROTARY_EVAPORATOR_RECIPES = new RecipeMap<>(
+            "rotary_evaporator_recipes",
             1, 2, 1, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> TEXTILE_FACTORY = new RecipeMap<>(
-            "textile_factory",
+    public static final RecipeMap<SimpleRecipeBuilder> TEXTILE_FACTORY_RECIPES = new RecipeMap<>(
+            "textile_factory_recipes",
             4, 1, 2, 0, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> ION_IMPLANTER = new RecipeMap<>("ion_implanter",
+    public static final RecipeMap<SimpleRecipeBuilder> ION_IMPLANTER_RECIPES = new RecipeMap<>("ion_implanter_recipes",
             4, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CVD_UNIT = new RecipeMap<>("cvd_unit",
+    public static final RecipeMap<SimpleRecipeBuilder> CVD_UNIT_RECIPES = new RecipeMap<>("cvd_unit_recipes",
             3, 2, 2, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> ROASTER = new RecipeMap<>("roaster",
+    public static final RecipeMap<SimpleRecipeBuilder> ROASTER_RECIPES = new RecipeMap<>("roaster_recipes",
             2, 4, 2, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> ENGRAVING_UNIT = new RecipeMap<>("engraving_unit",
+    public static final RecipeMap<SimpleRecipeBuilder> ENGRAVING_UNIT_RECIPES = new RecipeMap<>(
+            "engraving_unit_recipes",
             2, 4, 2, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CHEMICAL_PLANT = new RecipeMap<>("chemical_plant",
+    public static final RecipeMap<SimpleRecipeBuilder> CHEMICAL_PLANT_RECIPES = new RecipeMap<>(
+            "chemical_plant_recipes",
             6, 4, 5, 4, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CLARIFIER = new RecipeMap<>("clarifier",
+    public static final RecipeMap<SimpleRecipeBuilder> CLARIFIER_RECIPES = new RecipeMap<>("clarifier_recipes",
             1, 6, 1, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> FROTH_FLOTATION_UNIT = new RecipeMap<>("froth_flotation_unit",
+    public static final RecipeMap<SimpleRecipeBuilder> FROTH_FLOTATION_UNIT_RECIPES = new RecipeMap<>(
+            "froth_flotation_unit_recipes",
             4, 4, 4, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> DIGESTER = new RecipeMap<>("digester",
+    public static final RecipeMap<SimpleRecipeBuilder> DIGESTER_RECIPES = new RecipeMap<>("digester_recipes",
             4, 4, 4, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> MOLECULAR_BEAM_RECIPES = new RecipeMap<>(
-            "molecular_beam_recipes",
+            "molecular_beam_recipes_recipes",
             4, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> HIGH_TEMP_DISTILLATION = new RecipeMap<>(
-            "high_temp_distillation",
+    public static final RecipeMap<SimpleRecipeBuilder> HIGH_TEMP_DISTILLATION_RECIPES = new RecipeMap<>(
+            "high_temp_distillation_recipes",
             1, 1, 1, 12, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> POLYMERIZATION_TANK = new RecipeMap<>("polymerization_tank",
+    public static final RecipeMap<SimpleRecipeBuilder> POLYMERIZATION_TANK_RECIPES = new RecipeMap<>(
+            "polymerization_tank_recipes",
             2, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> THERMAL_PRESS = new RecipeMap<>("thermal_press",
+    public static final RecipeMap<SimpleRecipeBuilder> THERMAL_PRESS_RECIPES = new RecipeMap<>("thermal_press_recipes",
             4, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CONDENSATION_UNIT = new RecipeMap<>("condensation_unit",
+    public static final RecipeMap<SimpleRecipeBuilder> CONDENSATION_UNIT_RECIPES = new RecipeMap<>(
+            "condensation_unit_recipes",
             1, 0, 2, 4, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CRYOGENIC_DISTILLATION_PLANT = new RecipeMap<>(
-            "cryogenic_distillation_plant",
+    public static final RecipeMap<SimpleRecipeBuilder> CRYOGENIC_DISTILLATION_PLANT_RECIPES = new RecipeMap<>(
+            "cryogenic_distillation_plant_recipes",
             1, 1, 9, 9, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> PRESSURE_SWING_ADSORBER = new RecipeMap<>(
-            "pressure_swing_adsorber",
+    public static final RecipeMap<SimpleRecipeBuilder> PRESSURE_SWING_ADSORBER_RECIPES = new RecipeMap<>(
+            "pressure_swing_adsorber_recipes",
             1, 1, 1, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> RARE_GAS_STRIPPING_COLUMN = new RecipeMap<>(
-            "rare_gas_stripping_column",
+    public static final RecipeMap<SimpleRecipeBuilder> RARE_GAS_STRIPPING_COLUMN_RECIPES = new RecipeMap<>(
+            "rare_gas_stripping_column_recipes",
             0, 0, 3, 2, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> PHASE_SEPARATOR = new RecipeMap<>("phase_separator",
+    public static final RecipeMap<SimpleRecipeBuilder> PHASE_SEPARATOR_RECIPES = new RecipeMap<>(
+            "phase_separator_recipes",
             0, 0, 1, 3, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> DISSOLUTION_TANK = new RecipeMap<>("dissolution_tank",
+    public static final RecipeMap<SimpleRecipeBuilder> DISSOLUTION_TANK_RECIPES = new RecipeMap<>(
+            "dissolution_tank_recipes",
             1, 4, 2, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> DRYER = new RecipeMap<>("dryer",
+    public static final RecipeMap<SimpleRecipeBuilder> DRYER_RECIPES = new RecipeMap<>("dryer_recipes",
             1, 4, 2, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> BURNER_REACTOR = new RecipeMap<>("burner_reactor",
+    public static final RecipeMap<SimpleRecipeBuilder> BURNER_REACTOR_RECIPES = new RecipeMap<>(
+            "burner_reactor_recipes",
             2, 2, 2, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> DILUTION_REFRIGERATOR = new RecipeMap<>("dilution_refrigerator",
+    public static final RecipeMap<SimpleRecipeBuilder> DILUTION_REFRIGERATOR_RECIPES = new RecipeMap<>(
+            "dilution_refrigerator_recipes",
             2, 2, 2, 3, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> SINTERING_OVEN = new RecipeMap<>("sintering_oven",
+    public static final RecipeMap<SimpleRecipeBuilder> SINTERING_OVEN_RECIPES = new RecipeMap<>(
+            "sintering_oven_recipes",
             2, 2, 2, 2, new SimpleRecipeBuilder(), false);
 }

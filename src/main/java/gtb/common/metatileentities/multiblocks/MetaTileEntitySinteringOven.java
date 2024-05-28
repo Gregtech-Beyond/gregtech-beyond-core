@@ -31,7 +31,7 @@ import gtb.common.block.blocks.GTBMultiblockCasing;
 public class MetaTileEntitySinteringOven extends RecipeMapMultiblockController {
 
     public MetaTileEntitySinteringOven(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.SINTERING_OVEN);
+        super(metaTileEntityId, GTBRecipeMaps.SINTERING_OVEN_RECIPES);
         initializeAbilities();
     }
 

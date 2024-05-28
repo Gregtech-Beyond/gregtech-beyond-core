@@ -15,7 +15,7 @@ import gregtech.api.unification.OreDictUnifier;
 public class BastnasiteProcessing {
 
     public static void init() {
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .input(dust, Bastnasite)
                 .input(dust, Calcite)
                 .output(dust, CalcinatedBastnasite, 2)
@@ -23,7 +23,7 @@ public class BastnasiteProcessing {
                 .EUt(70)
                 .buildAndRegister();
 
-        DIGESTER.recipeBuilder()
+        DIGESTER_RECIPES.recipeBuilder()
                 .fluidInputs(NitricAcid.getFluid(1000))
                 .input(dust, CalcinatedBastnasite)
                 .output(dust, CalcinatedSiliconDioxide)
@@ -72,7 +72,7 @@ public class BastnasiteProcessing {
                 .EUt(80)
                 .buildAndRegister();
 
-        DISSOLUTION_TANK.recipeBuilder()
+        DISSOLUTION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(DistilledWater.getFluid(4000))
                 .fluidInputs(ConditionedBastnasiteMud.getFluid(1432))
                 .fluidOutputs(DilutedBastnasiteMud.getFluid(5000))
@@ -90,7 +90,7 @@ public class BastnasiteProcessing {
                 .EUt(912)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(FilteredBastnasiteMud.getFluid(1000))
                 .circuitMeta(1)
                 .output(dust, BastnasiteOxideComposite, 1)
@@ -116,7 +116,7 @@ public class BastnasiteProcessing {
                 .EUt(2090)
                 .buildAndRegister();
 
-        DILUTION_TANK.recipeBuilder()
+        DILUTION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(AcidicBastnasiteConcentrate.getFluid(1000))
                 .fluidInputs(Fluorine.getFluid(1000))
                 .fluidOutputs(HydrofluoricAcid.getFluid(1000))
@@ -125,7 +125,7 @@ public class BastnasiteProcessing {
                 .EUt(1009)
                 .buildAndRegister();
 
-        ELECTROLYTIC_CELL.recipeBuilder()
+        ELECTROLYTIC_CELL_RECIPES.recipeBuilder()
                 .notConsumable(stick, Iridium)
                 .notConsumable(stick, StainlessSteel)
                 .fluidInputs(CeriumRichBastnasiteConcentrate.getFluid(1000))
@@ -145,7 +145,7 @@ public class BastnasiteProcessing {
                 .EUt(800)
                 .buildAndRegister();
 
-        DILUTION_TANK.recipeBuilder()
+        DILUTION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(CeriumSolution.getFluid(1000))
                 .fluidInputs(DistilledWater.getFluid(1000))
                 .fluidOutputs(DilutedCeriumSolution.getFluid(2000))
@@ -169,7 +169,7 @@ public class BastnasiteProcessing {
                 .EUt(70)
                 .buildAndRegister();
 
-        DRYER.recipeBuilder()
+        DRYER_RECIPES.recipeBuilder()
                 .fluidInputs(BastnasiteRarerEarthOxidesMixture.getFluid(1000))
                 .output(dust, DriedBastnasiteRarerEarthOxidesPulp, 1)
                 .output(dust, BastnasiteByProducts, 1)
@@ -240,7 +240,7 @@ public class BastnasiteProcessing {
                 .EUt(700)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(HydrofluoricAcid.getFluid(1000))
                 .input(dust, HolmiumOxide)
                 .output(dust, HolmiumFluoride)

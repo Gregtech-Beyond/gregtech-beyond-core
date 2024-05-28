@@ -49,7 +49,7 @@ public class MetaTileEntityDilutionRefrigerator extends RecipeMapMultiblockContr
     private int temperature;
 
     public MetaTileEntityDilutionRefrigerator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.DILUTION_REFRIGERATOR);
+        super(metaTileEntityId, GTBRecipeMaps.DILUTION_REFRIGERATOR_RECIPES);
     }
 
     @Override

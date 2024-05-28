@@ -11,7 +11,7 @@ public class GermaniumProcessing {
 
     public static void init() {
         // ZnS + 5O -> GeO2 + ZnO + SO2
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .input(dust, Sphalerite, 2)
                 .fluidInputs(Oxygen.getFluid(5000))
                 .output(dust, RoastedSphalerite, 3)

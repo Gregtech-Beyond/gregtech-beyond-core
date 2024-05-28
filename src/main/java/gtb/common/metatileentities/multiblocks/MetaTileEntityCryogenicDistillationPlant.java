@@ -31,7 +31,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityCryogenicDistillationPlant extends RecipeMapMultiblockController {
 
     public MetaTileEntityCryogenicDistillationPlant(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CRYOGENIC_DISTILLATION_PLANT);
+        super(metaTileEntityId, GTBRecipeMaps.CRYOGENIC_DISTILLATION_PLANT_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

@@ -180,7 +180,7 @@ public class Catalysts {
                 .EUt(600)
                 .buildAndRegister();
 
-        CRYSTALLIZATION.recipeBuilder()
+        CRYSTALLIZATION_RECIPES.recipeBuilder()
                 .fluidInputs(ZirconiumDioxideSolution.getFluid(1000))
                 .output(dust, RecrystallizedZirconiumDioxide, 2)
                 .duration(500)

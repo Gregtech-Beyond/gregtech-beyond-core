@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityDilutionTank extends RecipeMapMultiblockController {
 
     public MetaTileEntityDilutionTank(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.DILUTION_TANK);
+        super(metaTileEntityId, GTBRecipeMaps.DILUTION_TANK_RECIPES);
         initializeAbilities();
     }
 

@@ -22,7 +22,7 @@ public class XylenolLine {
                 .EUt(120)
                 .buildAndRegister();
 
-        GTBRecipeMaps.CATALYTIC_REFORMATION_UNIT.recipeBuilder()
+        GTBRecipeMaps.CATALYTIC_REFORMATION_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(GTBMaterials.MXylene.getFluid(1000))
                 .notConsumable(dust, GTBMaterials.ZSM5, 1)
                 .fluidOutputs(GTBMaterials.PXylene.getFluid(1000))

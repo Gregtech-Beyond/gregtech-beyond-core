@@ -15,15 +15,17 @@ import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 public class PolyethyleneLine {
 
     public static void init() {
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Air.getFluid(1000)).fluidInputs(Ethylene.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(Air.getFluid(1000)).fluidInputs(Ethylene.getFluid(144))
                 .fluidOutputs(Polyethylene.getFluid(144)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Oxygen.getFluid(1000)).fluidInputs(Ethylene.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(Oxygen.getFluid(1000))
+                .fluidInputs(Ethylene.getFluid(144))
                 .fluidOutputs(Polyethylene.getFluid(144)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, KaminskyCatalyst).fluidInputs(Ethylene.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, KaminskyCatalyst).fluidInputs(Ethylene.getFluid(144))
                 .fluidOutputs(Polyethylene.getFluid(576)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, PhilipsCatalyst).fluidInputs(Ethylene.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, PhilipsCatalyst).fluidInputs(Ethylene.getFluid(144))
                 .fluidOutputs(Polyethylene.getFluid(288)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, ZieglerNattaCatalyst).fluidInputs(Ethylene.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, ZieglerNattaCatalyst)
+                .fluidInputs(Ethylene.getFluid(144))
                 .fluidOutputs(Polyethylene.getFluid(432)).duration(500).EUt(800).buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,

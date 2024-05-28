@@ -32,7 +32,7 @@ import gtb.common.block.blocks.GTBMultiblockCasing;
 public class MetaTileEntityWaterTank extends NoEnergyMultiController {
 
     public MetaTileEntityWaterTank(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.WATER_TANK);
+        super(metaTileEntityId, GTBRecipeMaps.WATER_TANK_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

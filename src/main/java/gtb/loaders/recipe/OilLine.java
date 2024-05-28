@@ -138,15 +138,15 @@ public class OilLine {
 
         // Dilution of Oil
 
-        DILUTION_TANK.recipeBuilder().fluidInputs(Water.getFluid(2000))
+        DILUTION_TANK_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(2000))
                 .fluidInputs(OilHeavy.getFluid(500)).fluidOutputs(DilutedOil.getFluid(2500)).EUt(80)
                 .duration(100).buildAndRegister();
-        DILUTION_TANK.recipeBuilder().fluidInputs(Water.getFluid(1500)).fluidInputs(RawOil.getFluid(1000))
+        DILUTION_TANK_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1500)).fluidInputs(RawOil.getFluid(1000))
                 .fluidOutputs(DilutedOil.getFluid(2500)).EUt(80).duration(100).buildAndRegister();
-        DILUTION_TANK.recipeBuilder().fluidInputs(Water.getFluid(1300))
+        DILUTION_TANK_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1300))
                 .fluidInputs(OilLight.getFluid(1200)).fluidOutputs(DilutedOil.getFluid(2500)).EUt(80)
                 .duration(100).buildAndRegister();
-        DILUTION_TANK.recipeBuilder().fluidInputs(Water.getFluid(1500)).fluidInputs(Oil.getFluid(1000))
+        DILUTION_TANK_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1500)).fluidInputs(Oil.getFluid(1000))
                 .fluidOutputs(DilutedOil.getFluid(2500)).EUt(80).duration(100).buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1500)).fluidInputs(OilHeavy.getFluid(500))
@@ -158,7 +158,7 @@ public class OilLine {
         MIXER_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1000)).fluidInputs(Oil.getFluid(1000))
                 .fluidOutputs(DilutedOil.getFluid(2000)).EUt(80).duration(100).buildAndRegister();
 
-        GTBRecipeMaps.FISCHER_TROPSCH_REACTOR.recipeBuilder().fluidInputs(DistilledWater.getFluid(2000))
+        GTBRecipeMaps.FISCHER_TROPSCH_REACTOR_RECIPES.recipeBuilder().fluidInputs(DistilledWater.getFluid(2000))
                 .fluidInputs(RefineryGas.getFluid(8000)).notConsumable(dust, CobaltOxide, 1)
                 .output(PARAFFIN_WAX, 1).fluidOutputs(Diesel.getFluid(1000))
                 .fluidOutputs(Gasoline.getFluid(500)).fluidOutputs(Water.getFluid(2000))
@@ -166,7 +166,7 @@ public class OilLine {
                 .fluidOutputs(Ethanol.getFluid(1500)).fluidOutputs(Methane.getFluid(2000))
                 .fluidOutputs(Formaldehyde.getFluid(500)).duration(200).EUt(5000).buildAndRegister();
 
-        VACUUM_DISTILLATION_TOWER.recipeBuilder()
+        VACUUM_DISTILLATION_TOWER_RECIPES.recipeBuilder()
                 .fluidInputs(SulfuricOilResidues.getFluid(1000))
                 .fluidOutputs(LubricantMixture.getFluid(850))
                 .fluidOutputs(SulfuricFuelOil.getFluid(200))
@@ -193,7 +193,7 @@ public class OilLine {
                 .EUt(8)
                 .buildAndRegister();
 
-        CRYSTALLIZATION.recipeBuilder()
+        CRYSTALLIZATION_RECIPES.recipeBuilder()
                 .fluidInputs(SlackWax.getFluid(1000))
                 .output(PARAFFIN_WAX, 4)
                 .fluidOutputs(Lubricant.getFluid(250))
@@ -222,7 +222,7 @@ public class OilLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        COKER.recipeBuilder()
+        COKER_RECIPES.recipeBuilder()
                 .input(BITUMINOUS_RESIDUES, 1)
                 .fluidInputs(Steam.getFluid(1000))
                 .fluidOutputs(SulfuricOilResidues.getFluid(150))

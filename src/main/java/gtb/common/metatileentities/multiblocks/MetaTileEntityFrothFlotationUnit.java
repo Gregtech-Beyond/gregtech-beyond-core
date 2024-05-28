@@ -32,7 +32,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityFrothFlotationUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityFrothFlotationUnit(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.FROTH_FLOTATION_UNIT);
+        super(metaTileEntityId, GTBRecipeMaps.FROTH_FLOTATION_UNIT_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

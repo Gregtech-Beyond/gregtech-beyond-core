@@ -1,14 +1,10 @@
 package gtb.loaders.recipe.polymerLines;
 
-import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
-import static gregtech.api.unification.material.MarkerMaterials.Color.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
-import static gtb.common.item.GTBMetaItems.*;
 
 public class ZylonLine {
 
@@ -114,7 +110,7 @@ public class ZylonLine {
                 .blastFurnaceTemp(10000)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, PolymerizationReadyZylon)
                 .output(dust, Zylon)
                 .fluidInputs(Air.getFluid(1000))
@@ -122,7 +118,7 @@ public class ZylonLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, PolymerizationReadyZylon)
                 .output(dust, Zylon)
                 .fluidInputs(Oxygen.getFluid(1000))
@@ -130,7 +126,7 @@ public class ZylonLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, PolymerizationReadyZylon)
                 .output(dust, Zylon)
                 .notConsumable(dust, KaminskyCatalyst)
@@ -138,7 +134,7 @@ public class ZylonLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, PolymerizationReadyZylon)
                 .output(dust, Zylon)
                 .notConsumable(dust, PhilipsCatalyst)
@@ -146,7 +142,7 @@ public class ZylonLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, PolymerizationReadyZylon)
                 .output(dust, Zylon)
                 .notConsumable(dust, ZieglerNattaCatalyst)

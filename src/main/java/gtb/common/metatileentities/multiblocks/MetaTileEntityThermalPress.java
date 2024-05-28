@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityThermalPress extends RecipeMapMultiblockController {
 
     public MetaTileEntityThermalPress(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.THERMAL_PRESS);
+        super(metaTileEntityId, GTBRecipeMaps.THERMAL_PRESS_RECIPES);
         initializeAbilities();
     }
 

@@ -114,7 +114,7 @@ public class FullerenePolymerMatrixLine {
                 .duration(250)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .input(dust, EschericiaColi, 1)
                 .input(dust, Sugar)
                 .EUt(480)
@@ -443,7 +443,7 @@ public class FullerenePolymerMatrixLine {
                 .EUt(700)
                 .buildAndRegister();
 
-        VACUUM_DISTILLATION_TOWER.recipeBuilder()
+        VACUUM_DISTILLATION_TOWER_RECIPES.recipeBuilder()
                 .input(dust, Carbon)
                 .output(dust, ActivatedCarbon)
                 .duration(200)

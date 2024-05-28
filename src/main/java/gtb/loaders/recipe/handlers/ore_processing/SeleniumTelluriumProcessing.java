@@ -11,7 +11,7 @@ public class SeleniumTelluriumProcessing {
 
     public static void init() {
         // CuSO4 + H2O -> H2SO4 + Cu + O
-        ELECTROLYTIC_CELL.recipeBuilder()
+        ELECTROLYTIC_CELL_RECIPES.recipeBuilder()
                 .fluidInputs(BlueVitriol.getFluid(1000))
                 .fluidInputs(Water.getFluid(1000))
                 .circuitMeta(3)
@@ -34,7 +34,7 @@ public class SeleniumTelluriumProcessing {
                 .buildAndRegister();
 
         // Ag2TeSe + 4O + Na2CO3 -> Na2TeO3 + SeO2 + 2Ag + CO2
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .input(dust, ChalcogenAnodeMud)
                 .input(dust, SodaAsh, 6)
                 .fluidInputs(Oxygen.getFluid(4000))

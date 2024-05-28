@@ -31,7 +31,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityCatalyticReformationUnit(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CATALYTIC_REFORMATION_UNIT);
+        super(metaTileEntityId, GTBRecipeMaps.CATALYTIC_REFORMATION_UNIT_RECIPES);
         initializeAbilities();
     }
 

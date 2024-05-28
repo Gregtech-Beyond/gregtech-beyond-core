@@ -9,7 +9,7 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 public class FullerenePolymerTetrixLine {
 
     public static void init() {
-        CHEMICAL_PLANT.recipeBuilder()
+        CHEMICAL_PLANT_RECIPES.recipeBuilder()
                 .fluidInputs(Ferrocene.getFluid(1000))
                 .fluidInputs(FluorohydrideAmmoniumCarbama.getFluid(1000))
                 .fluidInputs(Dichloromethane.getFluid(1000))

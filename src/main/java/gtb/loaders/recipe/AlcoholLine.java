@@ -51,7 +51,7 @@ public class AlcoholLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        FERMENTATION_VAT.recipeBuilder()
+        FERMENTATION_VAT_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(16000))
                 .fluidInputs(GrainSolution.getFluid(1000))
                 .input(dust, Sugar, 24)
@@ -61,7 +61,7 @@ public class AlcoholLine {
                 .EUt(12)
                 .buildAndRegister();
 
-        FERMENTATION_VAT.recipeBuilder()
+        FERMENTATION_VAT_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(16000))
                 .fluidInputs(Oxygen.getFluid(4000))
                 .input(dust, Sugar, 24)

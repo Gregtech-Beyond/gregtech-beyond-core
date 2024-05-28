@@ -28,7 +28,7 @@ import gtb.common.block.GTBMetaBlocks;
 public class MetaTileEntityCVDUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityCVDUnit(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CVD_UNIT);
+        super(metaTileEntityId, GTBRecipeMaps.CVD_UNIT_RECIPES);
     }
 
     @Override

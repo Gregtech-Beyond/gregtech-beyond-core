@@ -33,7 +33,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
 
     public MetaTileEntityBurnerReactor(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.BURNER_REACTOR);
+        super(metaTileEntityId, GTBRecipeMaps.BURNER_REACTOR_RECIPES);
         initializeAbilities();
     }
 

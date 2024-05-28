@@ -11,7 +11,7 @@ public class MolybdenumProcessing {
 
     public static void init() {
         // MoS2 + 9O -> MoO3 + 2SO2 + ReO2
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .input(dust, Molybdenite, 3)
                 .fluidInputs(Oxygen.getFluid(8000))
                 .output(dust, MolybdenumTrioxide, 4)

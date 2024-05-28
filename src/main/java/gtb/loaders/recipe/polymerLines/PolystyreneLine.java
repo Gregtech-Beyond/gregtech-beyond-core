@@ -1,6 +1,5 @@
 package gtb.loaders.recipe.polymerLines;
 
-import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
@@ -9,7 +8,7 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 public class PolystyreneLine {
 
     public static void init() {
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(Styrene.getFluid(1000))
                 .fluidOutputs(Polystyrene.getFluid(1000))
                 .fluidInputs(Air.getFluid(1000))
@@ -17,7 +16,7 @@ public class PolystyreneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(Styrene.getFluid(1000))
                 .fluidOutputs(Polystyrene.getFluid(1000))
                 .fluidInputs(Oxygen.getFluid(1000))
@@ -25,7 +24,7 @@ public class PolystyreneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(Styrene.getFluid(1000))
                 .fluidOutputs(Polystyrene.getFluid(4000))
                 .notConsumable(dust, KaminskyCatalyst)
@@ -33,7 +32,7 @@ public class PolystyreneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(Styrene.getFluid(1000))
                 .fluidOutputs(Polystyrene.getFluid(2000))
                 .notConsumable(dust, PhilipsCatalyst)
@@ -41,7 +40,7 @@ public class PolystyreneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(Styrene.getFluid(1000))
                 .fluidOutputs(Polystyrene.getFluid(3000))
                 .notConsumable(dust, ZieglerNattaCatalyst)

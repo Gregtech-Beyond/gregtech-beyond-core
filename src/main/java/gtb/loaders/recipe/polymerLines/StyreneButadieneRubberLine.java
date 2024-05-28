@@ -24,7 +24,7 @@ public class StyreneButadieneRubberLine {
                 .EUt(640)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(PolymerizedStyreneButadieneSolution.getFluid(5000))
                 .fluidOutputs(DilutedSulfuricAcid.getFluid(1000))
                 .output(dust, RawStyreneButadieneRubber, 12)
@@ -42,7 +42,7 @@ public class StyreneButadieneRubberLine {
                         Styrene.getFluid(1000),
                         Butadiene.getFluid(3000) });
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(StyreneButadieneSolution.getFluid(1000))
                 .notConsumable(nButyllithium.getFluid(50))
                 .fluidOutputs(PolymerizedStyreneButadieneSolution.getFluid(1000))
@@ -50,7 +50,7 @@ public class StyreneButadieneRubberLine {
                 .EUt(90)
                 .buildAndRegister();
 
-        THERMAL_PRESS.recipeBuilder()
+        THERMAL_PRESS_RECIPES.recipeBuilder()
                 .input(dust, RawStyreneButadieneRubber, 4)
                 .input(dust, Sulfur)
                 .notConsumable(dust, Zincite)
@@ -59,7 +59,7 @@ public class StyreneButadieneRubberLine {
                 .EUt(270)
                 .buildAndRegister();
 
-        THERMAL_PRESS.recipeBuilder()
+        THERMAL_PRESS_RECIPES.recipeBuilder()
                 .input(dust, RawStyreneButadieneRubber, 4)
                 .input(dust, Sulfur)
                 .notConsumable(dust, Magnesia)

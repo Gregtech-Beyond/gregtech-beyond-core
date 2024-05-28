@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityRareGasStrippingColumn extends RecipeMapMultiblockController {
 
     public MetaTileEntityRareGasStrippingColumn(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.RARE_GAS_STRIPPING_COLUMN);
+        super(metaTileEntityId, GTBRecipeMaps.RARE_GAS_STRIPPING_COLUMN_RECIPES);
         initializeAbilities();
     }
 

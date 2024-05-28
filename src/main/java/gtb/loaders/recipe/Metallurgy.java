@@ -55,7 +55,7 @@ public final class Metallurgy {
                 .EUt(80)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(HydrogenPeroxide.getFluid(1000))
                 .fluidInputs(LithiumHydroxideSolution.getFluid(1000))
                 .fluidOutputs(LithiumPeroxideSolution.getFluid(1000))

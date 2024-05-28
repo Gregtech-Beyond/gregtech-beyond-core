@@ -15,15 +15,19 @@ import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 public class PolyvinylAcetateLine {
 
     public static void init() {
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Oxygen.getFluid(1000)).fluidInputs(VinylAcetate.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(Oxygen.getFluid(1000))
+                .fluidInputs(VinylAcetate.getFluid(144))
                 .fluidOutputs(PolyvinylAcetate.getFluid(144)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(Air.getFluid(1000)).fluidInputs(VinylAcetate.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(Air.getFluid(1000))
+                .fluidInputs(VinylAcetate.getFluid(144))
                 .fluidOutputs(PolyvinylAcetate.getFluid(144)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, KaminskyCatalyst).fluidInputs(VinylAcetate.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, KaminskyCatalyst)
+                .fluidInputs(VinylAcetate.getFluid(144))
                 .fluidOutputs(PolyvinylAcetate.getFluid(576)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, PhilipsCatalyst).fluidInputs(VinylAcetate.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, PhilipsCatalyst).fluidInputs(VinylAcetate.getFluid(144))
                 .fluidOutputs(PolyvinylAcetate.getFluid(288)).duration(500).EUt(800).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, ZieglerNattaCatalyst).fluidInputs(VinylAcetate.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, ZieglerNattaCatalyst)
+                .fluidInputs(VinylAcetate.getFluid(144))
                 .fluidOutputs(PolyvinylAcetate.getFluid(432)).duration(500).EUt(800).buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,

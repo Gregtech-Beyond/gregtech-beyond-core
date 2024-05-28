@@ -29,7 +29,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityElectrolyticCell extends RecipeMapMultiblockController {
 
     public MetaTileEntityElectrolyticCell(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.ELECTROLYTIC_CELL);
+        super(metaTileEntityId, GTBRecipeMaps.ELECTROLYTIC_CELL_RECIPES);
         initializeAbilities();
     }
 

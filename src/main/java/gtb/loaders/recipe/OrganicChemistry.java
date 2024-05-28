@@ -25,7 +25,7 @@ public class OrganicChemistry {
                 .EUt(120)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(HydrogenChloride.getFluid(1000))
                 .input(dust, Silicon)
                 .fluidOutputs(ChloroSilane.getFluid(1000))
