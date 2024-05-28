@@ -368,7 +368,7 @@ public class GTBUnknownCompositionMaterials {
                 .color(0xBBDEFB)
                 .build();
 
-        SupercooledLiquidNitrogen = new Material.Builder(getMaterialsId(), gregtechId("supercoold_liquid_nitrogen"))
+        SupercooledLiquidNitrogen = new Material.Builder(getMaterialsId(), gregtechId("supercooled_liquid_nitrogen"))
                 .fluid()
                 .color(0x4FC3F7)
                 .build();
