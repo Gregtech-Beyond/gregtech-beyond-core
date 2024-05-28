@@ -188,7 +188,6 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem CHROMATIC_GLASS_FIBER;
     public static MetaItem<?>.MetaValueItem SATURATED_CHROMATIC_GLASS_FIBER;
 
-
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
         metaItem1.setRegistryName("gtb");

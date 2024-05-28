@@ -12,7 +12,6 @@ import static gtb.common.item.GTBMetaItems.*;
 import gregtech.api.unification.material.Materials;
 
 import gtb.common.block.GTBMetaBlocks;
-import gtb.common.item.GTBMetaItems;
 
 public class Catalysts {
 
@@ -210,7 +209,7 @@ public class Catalysts {
                 .fluidInputs(Nomex.getFluid(1000))
                 .input(gem, ChromaticGlass)
                 .input(stick, StainlessSteel, 2)
-                .input(foil , Polytetrafluoroethylene, 4)
+                .input(foil, Polytetrafluoroethylene, 4)
                 .output(CHROMATIC_GLASS_FIBER)
                 .duration(200)
                 .EUt(700)
