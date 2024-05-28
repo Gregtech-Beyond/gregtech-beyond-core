@@ -851,6 +851,10 @@ public class GTBUnknownCompositionMaterials {
         PolymerizationReadyZylon = new Material.Builder(getMaterialsId(), gregtechId("polymerization_ready_zylon"))
                 .dust()
                 .color(0xD2A842).build();
+
+        RarerEarthConcentrate = new Material.Builder(getMaterialsId(), gregtechId("rarer_earth_concentrate"))
+                .fluid()
+                .color(0x593F37).build();
     }
 
     private static int getMaterialsId() {

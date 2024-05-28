@@ -190,7 +190,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("C2H6O", true);
 
         ActivatedCarbon = new Material.Builder(getMaterialsId(), gregtechId("activated_carbon"))
-                .fluid()
+                .dust()
                 .color(0x9DD6D0)
                 .build().setFormula("C", true);
 
@@ -1207,17 +1207,19 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0xB0A19B).build().setFormula("(C16H12O2)", true);
 
-        RarestEarthMixture = new Material.Builder(getMaterialsId(), gregtechId("rarer_earth_concentrate"))
+        RarestEarthMixture = new Material.Builder(getMaterialsId(), gregtechId("rarer_earth_mixture"))
                 .fluid()
                 .color(0x6A3F32).build().setFormula("(C16H12O2)", true);
 
-        PurifiedScandiumLeachResidues = new Material.Builder(getMaterialsId(), gregtechId("purified_scandium_leach_residues"))
-                .fluid()
-                .color(0x7E57C2).build().setFormula("(C16H12O2)", true);
+        PurifiedScandiumLeachResidues = new Material.Builder(getMaterialsId(),
+                gregtechId("purified_scandium_leach_residues"))
+                        .fluid()
+                        .color(0x7E57C2).build().setFormula("(C16H12O2)", true);
 
-        ExquisiteScandiumLeachResidues = new Material.Builder(getMaterialsId(), gregtechId("exquisite_scandium_leach_solution"))
-                .fluid()
-                .color(0x58447B).build().setFormula("(C16H12O2)", true);
+        ExquisiteScandiumLeachResidues = new Material.Builder(getMaterialsId(),
+                gregtechId("exquisite_scandium_leach_solution"))
+                        .fluid()
+                        .color(0x58447B).build().setFormula("(C16H12O2)", true);
 
         LanthanumLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("lanthanum_leach_solution"))
                 .fluid()
@@ -1243,23 +1245,35 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0xEEDBDB).build().setFormula("(C16H12O2)", true);
 
-        RoastedGadoliniteLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("roasted_gadolinite_leach_solution"))
-                .fluid()
-                .color(0x5A4F4D).build().setFormula("(C16H12O2)", true);
+        RoastedGadoliniteLeachSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("roasted_gadolinite_leach_solution"))
+                        .fluid()
+                        .color(0x5A4F4D).build().setFormula("(C16H12O2)", true);
 
         GadoliniumSolution = new Material.Builder(getMaterialsId(), gregtechId("gadolinium_solution"))
                 .fluid()
                 .color(0x6D4C41).build().setFormula("(C16H12O2)", true);
 
-        CooledGadoliniteLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("cooled_gadolinite_leach_solution"))
-                .fluid()
-                .color(0x8D6E63).build().setFormula("(C16H12O2)", true);
+        CooledGadoliniteLeachSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("cooled_gadolinite_leach_solution"))
+                        .fluid()
+                        .color(0x8D6E63).build().setFormula("(C16H12O2)", true);
 
         GadoliniteLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("gadolinite_leach_solution"))
                 .fluid()
                 .color(0x605856).build().setFormula("(C16H12O2)", true);
 
+        SilverAlloy = new Material.Builder(getMaterialsId(), gregtechId("silver_alloy"))
+                .fluid()
+                .dust()
+                .ingot()
+                .flags(MaterialFlags.GENERATE_FOIL, MaterialFlags.GENERATE_PLATE)
+                .color(0x605856).build().setFormula("(C16H12O2)", true);
 
+        SinteredSilver = new Material.Builder(getMaterialsId(), gregtechId("sintered_silver"))
+                .dust()
+                .ingot()
+                .color(0x9D9A9A).build().setFormula("Ag", true);
     }
 
     private static int getMaterialsId() {

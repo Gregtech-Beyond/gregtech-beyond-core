@@ -103,7 +103,8 @@ public class GTBMaterials {
     public static Material SheepBlood;
     public static Material Xerizin;
 
-
+    public static Material SinteredSilver;
+    public static Material SilverAlloy;
     public static Material RarestEarthMixture;
     public static Material RarerEarthConcentrate;
     public static Material PurifiedScandiumLeachResidues;
@@ -123,7 +124,6 @@ public class GTBMaterials {
     public static Material ErbiumOxide;
     public static Material DysprosiumOxide;
     public static Material ScandiumOxide;
-
 
     // Element Materials
     public static Material Rubidium;
