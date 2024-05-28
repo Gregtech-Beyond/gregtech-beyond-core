@@ -1,6 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -37,10 +36,6 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
         initializeAbilities();
     }
 
-    public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
-    }
-
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.LEFT, RelativeDirection.FRONT, RelativeDirection.UP)
@@ -75,7 +70,7 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.CLEAN_STAINLESS_STEEL_CASING;
+        return Textures.HEAT_PROOF_CASING;
     }
 
     @Override
