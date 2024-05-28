@@ -21,7 +21,7 @@ tile.gtb_wire_coil.infinity.name=Infinity Coil Block
 tile.gtb_wire_coil.eternal.name=Eternal Coil Block
 tile.gtb_wire_coil_2.temporally_constrained_anti_matter.name=Temporally Constrained Anti-Matter Coil Block
 tile.gtb_wire_coil_2.cataclysm_induced_mixed_matter.name=Cataclysm Induced Mixed-Matter Coil Block
-
+tile.gtb_multiblock_casing.basic_structural_casing.name=Basic Structural Casing
 
 
 # Recipemaps
@@ -362,6 +362,45 @@ metaitem.alumino_silicate_wool_sheet.name=Alumino Silicate Wool Sheet
 
 #Materials
 
+
+
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.gadolinium_leach=Gadolinium Leach
+gregtech.material.rarer_earth_concentrate=Rarer Earth Concentrate
+gregtech.material.roasted_gadolinite_leach_solution=Roasted Gadolinite Leach Solution
+gregtech.material.dysprosium_oxide_solution=Dysprosium Oxide Solution
+gregtech.material.diluted_cerium_solution=Diluted Cerium Solution
+gregtech.material.gadolinite=Gadolinite
+gregtech.material.gadolinite_leach_solution=Gadolinite Leach Solution
+gregtech.material.piranha_solution=Piranha Solution
+gregtech.material.cooled_gadolinite_leach_solution=Cooled Gadolinite Leach Solution
+gregtech.material.gadolinium_solution=Gadolinium Solution
+gregtech.material.anthracene=Anthracene
+gregtech.material.silver_alloy=Silver Alloy
+gregtech.material.sintered_silver=Sintered Silver
 gregtech.material.calcinated_bastnasite=Calcinated Bastnasite
 gregtech.material.calcinated_silicon_dioxide=Calcinated Silicon Dioxide
 gregtech.material.calcinated_residues=Calcinated Residues
