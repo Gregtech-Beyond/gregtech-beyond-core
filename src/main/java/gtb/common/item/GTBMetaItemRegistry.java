@@ -200,5 +200,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ROTARRY_SPINNING_WHISKER = addItem(186, "rotarry_spinning_whisker");
         GTBMetaItems.CHROMATIC_GLASS_FIBER = addItem(187, "chromatic_glass_fiber");
         GTBMetaItems.SATURATED_CHROMATIC_GLASS_FIBER = addItem(188, "saturated_chromatic_glass_fiber");
+        GTBMetaItems.SINTERED_SILVER_COIL = addItem(189, "sintered_silver_coil");
     }
 }
