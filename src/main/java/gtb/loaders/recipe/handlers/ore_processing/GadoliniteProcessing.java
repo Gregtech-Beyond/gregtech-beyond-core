@@ -7,6 +7,8 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
+import gregtech.api.unification.material.Materials;
+
 public class GadoliniteProcessing {
 
     public static void init() {
@@ -132,7 +134,7 @@ public class GadoliniteProcessing {
 
         ELECTROLYZER_RECIPES.recipeBuilder()
                 .input(dust, ScandiumOxide, 2)
-                .output(dust, Scandium)
+                .output(dust, Materials.Scandium)
                 .fluidOutputs(Oxygen.getFluid(1000))
                 .duration(200)
                 .EUt(120)
