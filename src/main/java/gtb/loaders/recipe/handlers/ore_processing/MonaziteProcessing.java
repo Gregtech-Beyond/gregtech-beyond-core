@@ -287,5 +287,13 @@ public class MonaziteProcessing {
                 .duration(200)
                 .EUt(800)
                 .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, HafniumOxide, 2)
+                .output(dust, Hafnium)
+                .fluidOutputs(Oxygen.getFluid(1000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
     }
 }
