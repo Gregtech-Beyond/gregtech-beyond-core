@@ -4,10 +4,10 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.MarkerMaterials.Color.Magenta;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.GELLED_TOLUENE;
+import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
-import static gtb.common.item.GTBMetaItems.UVA_HALIDE_LAMP;
+import static gtb.common.item.GTBMetaItems.*;
 
 public class FullerenePolymerMatrixLine {
 
