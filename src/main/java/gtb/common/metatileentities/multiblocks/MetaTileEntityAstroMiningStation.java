@@ -34,7 +34,7 @@ import gtb.common.block.blocks.GTBMultiblockCasing;
 public class MetaTileEntityAstroMiningStation extends RecipeMapMultiblockController {
 
     public MetaTileEntityAstroMiningStation(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.ASTRO_MINING_STATION);
+        super(metaTileEntityId, GTBRecipeMaps.ASTRO_MINING_STATION_RECIPES);
         initializeAbilities();
     }
 
