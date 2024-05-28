@@ -674,7 +674,5 @@ public class GTBMaterials {
         GTBUnknownCompositionMaterials.register();
         GTBBiologicalMaterials.register();
         GTBFantasyMaterials.register();
-        GTBMaterialSetFormula.init();
-        GTBMaterialIconSet.set();
     }
 }
