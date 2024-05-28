@@ -39,7 +39,7 @@ public class KaptonLine {
                 .notConsumable(dust, Tin)
                 .fluidInputs(Aniline.getFluid(2000))
                 .fluidInputs(Phenol.getFluid(1000))
-                .notConsumable(HydrochloricAcid.getFluid())
+                .notConsumable(HydrochloricAcid.getFluid(1000))
                 .output(dust, Oxydianiline, 27)
                 .fluidOutputs(Methane.getFluid(2000))
                 .duration(100).EUt(VA[ZPM]).buildAndRegister();
@@ -49,7 +49,7 @@ public class KaptonLine {
                 .fluidInputs(Aminophenol.getFluid(1000))
                 .fluidInputs(Nitrochlorobenzene.getFluid(1000))
                 .fluidInputs(Water.getFluid(1000))
-                .notConsumable(Dimethylformamide.getFluid())
+                .notConsumable(Dimethylformamide.getFluid(200))
                 .output(dust, Oxydianiline, 27)
                 .fluidOutputs(Oxygen.getFluid(3000))
                 .fluidOutputs(HydrochloricAcid.getFluid(1000))
