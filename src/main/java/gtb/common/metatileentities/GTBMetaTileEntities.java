@@ -52,6 +52,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityPhaseSeparator PHASE_SEPARATOR;
     public static MetaTileEntityDissolutionTank DISSOLUTION_TANK;
     public static MetaTileEntityBurnerReactor BURNER_REACTOR;
+    public static MetaTileEntityDilutionRefrigerator DILUTION_REFRIGERATOR;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -124,6 +125,8 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityDissolutionTank(gtb("dissolution_tank")));
         BURNER_REACTOR = registerMetaTileEntity(3034,
                 new MetaTileEntityBurnerReactor(gtb("burner_reactor")));
+        DILUTION_REFRIGERATOR = registerMetaTileEntity(3035,
+                new MetaTileEntityDilutionRefrigerator(gtb("dilution_refrigerator")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
