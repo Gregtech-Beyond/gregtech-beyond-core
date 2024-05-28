@@ -82,6 +82,14 @@
           "bottom" : "#side"
         }
       },
+      "basic_structural_casing" : {
+        "model" : "minecraft:cube_bottom_top",
+        "textures" : {
+          "top" : "gregtech:blocks/gtb_multiblock_casing/basic_structural_casing",
+          "side" : "gregtech:blocks/gtb_multiblock_casing/basic_structural_casing",
+          "bottom" : "#side"
+        }
+      },
       "advanced_substrate_casing" : {
         "model" : "minecraft:cube_bottom_top",
         "textures" : {
