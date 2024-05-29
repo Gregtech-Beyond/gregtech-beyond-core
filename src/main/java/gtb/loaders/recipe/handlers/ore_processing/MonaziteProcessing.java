@@ -86,7 +86,7 @@ public class MonaziteProcessing {
                 .EUt(800)
                 .buildAndRegister();
 
-        ELECTROMAGNETIC_SEPARATOR_RECIPES.recipeBuilder()
+        CENTRIFUGE_RECIPES.recipeBuilder()
                 .fluidInputs(CooledRareEarthFiltrate.getFluid(1000))
                 .chancedOutput(dust, EuropiumOxide, 2000, 20)
                 .output(dust, MonaziteRarerEarthFiltrate)
