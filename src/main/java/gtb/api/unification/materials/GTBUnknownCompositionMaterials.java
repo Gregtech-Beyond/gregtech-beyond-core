@@ -11,8 +11,8 @@ import gregtech.api.unification.material.Material;
 public class GTBUnknownCompositionMaterials {
 
     // Range 25201-25400
-    private static int startId = 25201;
-    private static final int END_ID = startId + 200;
+    private static int startId = 30201;
+    private static final int END_ID = startId + 1000;
 
     public static void register() {
         // 25201 Platinum Extraction Mixture
@@ -863,6 +863,136 @@ public class GTBUnknownCompositionMaterials {
         CooledOrthoXyleneMixture = new Material.Builder(getMaterialsId(), gregtechId("cooled_ortho_xylene_mixture"))
                 .fluid()
                 .color(0x4C4C4C).build();
+
+        ManganeseSulfate = new Material.Builder(getMaterialsId(), gregtechId("manganese_sulfate"))
+                .dust()
+                .color(0xDBD180).build();
+
+        Rhodocrosite = new Material.Builder(getMaterialsId(), gregtechId("rhodocrosite"))
+                .dust()
+                .color(0xC62828).build();
+
+        CassiteriteCokePellets = new Material.Builder(getMaterialsId(), gregtechId("cassiterite_coke_pellets"))
+                .dust()
+                .color(0x414040).build();
+
+        TinSlag = new Material.Builder(getMaterialsId(), gregtechId("tin_slag"))
+                .dust()
+                .color(0xADAAAA).build();
+
+        NbTaContainingDust = new Material.Builder(getMaterialsId(), gregtechId("nb_ta_containing_dust"))
+                .dust()
+                .color(0x8E7C7C).build();
+
+        NiobiumTantalumOxide = new Material.Builder(getMaterialsId(), gregtechId("niobium_tantalum_dust"))
+                .dust()
+                .color(0xC66262).build();
+
+        AluminiumTrifluoride = new Material.Builder(getMaterialsId(), gregtechId("aluminium_trifluoride"))
+                .dust()
+                .color(0x1976D2).build();
+
+        SiliconFluoride = new Material.Builder(getMaterialsId(), gregtechId("silicon_fluoride"))
+                .dust()
+                .color(0x818A91).build();
+
+        NbTaFluorideMix = new Material.Builder(getMaterialsId(), gregtechId("nb_ta_fluoride_mix"))
+                .fluid()
+                .color(0x786158).build();
+
+        BariumOxide = new Material.Builder(getMaterialsId(), gregtechId("barium_oxide"))
+                .dust()
+                .color(0xC86B69).build();
+
+        BariumPeroxide = new Material.Builder(getMaterialsId(), gregtechId("barium_peroxide"))
+                .dust()
+                .color(0x9C3734).build();
+
+        Columbite = new Material.Builder(getMaterialsId(), gregtechId("columbite"))
+                .dust()
+                .ore()
+                .color(0xFDD835).build();
+
+        FusedColumbite = new Material.Builder(getMaterialsId(), gregtechId("fused_columbite"))
+                .dust()
+                .color(0xB3A460).build();
+
+        ColumbiteMinorOxideResidue = new Material.Builder(getMaterialsId(), gregtechId("columbite_minor_oxide_residue"))
+                .dust()
+                .color(0x8B7B33).build();
+
+        LeachedColumbite = new Material.Builder(getMaterialsId(), gregtechId("leached_columbite"))
+                .dust()
+                .color(0x9E925E).build();
+
+        IronSulfate = new Material.Builder(getMaterialsId(), gregtechId("iron_sulfate"))
+                .dust()
+                .color(0xFFF176).build();
+
+        SodiumSulfate = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfate"))
+                .dust()
+                .color(0x2A6E8D).build();
+
+        TantaliteMinorOxideResidue = new Material.Builder(getMaterialsId(), gregtechId("tantalite_minor_oxide_residue"))
+                .dust()
+                .color(0xFDD835).build();
+
+        FluoroniobicAcid = new Material.Builder(getMaterialsId(), gregtechId("fluoroniobic_acid"))
+                .fluid()
+                .color(0x7CB342).build();
+
+        FusedTantalite = new Material.Builder(getMaterialsId(), gregtechId("fused_tantalite"))
+                .dust()
+                .color(0x57382F).build();
+
+        LeachedTantalite = new Material.Builder(getMaterialsId(), gregtechId("leached_tantalite"))
+                .dust()
+                .color(0x5A200E).build();
+
+        CubicZirconia = new Material.Builder(getMaterialsId(), gregtechId("cubic_zirconia"))
+                .dust()
+                .gem()
+                .color(0xDECAE1).build();
+
+        AcidicLeachedPyrochlore = new Material.Builder(getMaterialsId(), gregtechId("acidic_leached_pyrochlore"))
+                .dust()
+                .color(0x8F4630).build();
+
+        LeachedPyrochlore = new Material.Builder(getMaterialsId(), gregtechId("leached_pyrochlore"))
+                .dust()
+                .color(0x8F4630).build();
+
+        PotasssiumFluoroNiobate = new Material.Builder(getMaterialsId(), gregtechId("potassium_fluoro_niobate"))
+                .dust()
+                .color(0x72FF86).build();
+
+        FluorotantalicAcid = new Material.Builder(getMaterialsId(), gregtechId("fluorotantalic_acid"))
+                .fluid()
+                .color(0x7CB342).build();
+
+        TributylPhosphate = new Material.Builder(getMaterialsId(), gregtechId("tributyl_phosphate"))
+                .fluid()
+                .color(0x8E422B).build();
+
+        MethylIsobutylKetone = new Material.Builder(getMaterialsId(), gregtechId("methyl_isobutyl_ketone"))
+                .fluid()
+                .color(0x20FF2E).build();
+
+        NbTaSeparationMixture = new Material.Builder(getMaterialsId(), gregtechId("nb_ta_separation_mixture"))
+                .fluid()
+                .color(0xFFA078).build();
+
+        OxypentafluoroNiobate = new Material.Builder(getMaterialsId(), gregtechId("oxypentafluoro_niobate"))
+                .fluid()
+                .color(0x70FF5E).build();
+
+        HeptafluoroTantalate = new Material.Builder(getMaterialsId(), gregtechId("heptafluoro_tantalite"))
+                .fluid()
+                .color(0x2AFF5E).build();
+
+        PotasssiumFluoroTantalate = new Material.Builder(getMaterialsId(), gregtechId("potassium_fluoro_tantalite"))
+                .dust()
+                .color(0x00DC51).build();
     }
 
     private static int getMaterialsId() {

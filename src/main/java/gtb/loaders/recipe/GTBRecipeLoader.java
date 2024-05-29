@@ -14,7 +14,6 @@ public final class GTBRecipeLoader {
         RecipeMaps.CENTRIFUGE_RECIPES.setMaxFluidInputs(2);
         RecipeMaps.CENTRIFUGE_RECIPES.setSlotOverlay(false, true, false, GuiTextures.CENTRIFUGE_OVERLAY);
         RecipeMaps.CHEMICAL_BATH_RECIPES.setMaxFluidInputs(2);
-        RecipeMaps.CHEMICAL_BATH_RECIPES.setSlotOverlay(false, true, false, GuiTextures.FLUID_TANK_OVERLAY);
         RecipeMaps.MIXER_RECIPES.setMaxFluidInputs(4);
         RecipeMaps.EXTRACTOR_RECIPES.setMaxInputs(2);
         RecipeMaps.CHEMICAL_RECIPES.setMaxOutputs(3);
@@ -72,5 +71,7 @@ public final class GTBRecipeLoader {
         HydrogenPeroxideLine.init();
         GadoliniteProcessing.init();
         MonaziteProcessing.init();
+        IronProcessing.init();
+        NiobiumTantalumProcessing.init();
     }
 }
