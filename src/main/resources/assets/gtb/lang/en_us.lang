@@ -387,6 +387,11 @@ metaitem.sintered_silver_coil.name=Sintered Silver Coil
 
 #Materials
 
+gregtech.material.red_slurry=Red Slurry
+gregtech.material.neutralised_red_mud=Neutralised Red Mud
+gregtech.material.iron_chloride_solution=Iron Chloride Solution
+gregtech.material.crystallized_titanyl_sulfate=Crystallized Titanyl Sulfate
+gregtech.material.titanyl_sulfate=Titanyl Sulfate
 gregtech.material.red_mud_concentrate=Red Mud Concentrate
 gregtech.material.sodium_aluminate_solution=Sodium Aluminate Solution
 gregtech.material.roasted_bauxite=Roasted Bauxite
