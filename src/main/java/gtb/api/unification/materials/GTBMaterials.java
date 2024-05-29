@@ -626,6 +626,9 @@ public class GTBMaterials {
     public static Material TraceRheniumFlue;
 
     // Organic Chemistry Materials
+    public static Material OxidizedOrthoXyleneMixture;
+    public static Material CooledOrthoXyleneMixture;
+    public static Material VanadiumPentoxide;
     public static Material BlueVitriol;
     public static Material KaptonE;
     public static Material KaptonK;

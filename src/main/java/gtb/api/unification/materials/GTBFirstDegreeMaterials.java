@@ -1274,6 +1274,10 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .ingot()
                 .color(0x9D9A9A).build().setFormula("Ag", true);
+
+        VanadiumPentoxide = new Material.Builder(getMaterialsId(), gregtechId("vanadium_pentoxide"))
+                .dust()
+                .color(0x8500A3).build().setFormula("VaO5", true);
     }
 
     private static int getMaterialsId() {
