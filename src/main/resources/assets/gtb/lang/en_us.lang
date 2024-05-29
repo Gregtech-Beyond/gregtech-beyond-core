@@ -387,6 +387,41 @@ metaitem.sintered_silver_coil.name=Sintered Silver Coil
 
 #Materials
 
+
+
+gregtech.material.manganese_sulfate.name=Manganese Sulfate
+gregtech.material.rhodocrosite.name=Rhodocrosite
+gregtech.material.cassiterite_coke_pellets.name=Cassiterite Coke Pellets
+gregtech.material.tin_slag.name=Tin Slag
+gregtech.material.nb_ta_containing_dust.name=Niobium Tantalum Containing Dust
+gregtech.material.niobium_tantalum_dust.name=Niobium Tantalum Dust
+gregtech.material.aluminium_trifluoride.name=Aluminium Trifluoride
+gregtech.material.silicon_fluoride.name=Silicon Fluoride
+gregtech.material.nb_ta_fluoride_mix.name=Niobium Tantalum Fluoride
+gregtech.material.barium_oxide.name=Barium Oxide
+gregtech.material.barium_peroxide.name=Barium Peroxide
+gregtech.material.columbite.name=Columbite
+gregtech.material.fused_columbite.name=Fused Columbite
+gregtech.material.columbite_minor_oxide_residue.name=Columbite Minor Oxide Residue
+gregtech.material.leached_columbite.name=Leached Columbite
+gregtech.material.iron_sulfate.name=Iron Sulfate
+gregtech.material.sodium_sulfate.name=Sodium Sulfate
+gregtech.material.tantalite_minor_oxide_residue.name=Tantalite Minor Oxide Residue
+gregtech.material.fluoroniobic_acid.name=Fluoroniobic Acid
+gregtech.material.fused_tantalite.name=Fused Tantalite
+gregtech.material.leached_tantalite.name=Leached Tantalite
+gregtech.material.cubic_zirconia.name=Cubic Zirconia
+gregtech.material.acidic_leached_pyrochlore.name=Acidic Leached Pyrochlore
+gregtech.material.leached_pyrochlore.name=Leached Pyrochlore
+gregtech.material.potassium_fluoro_niobate.name=Potassiumfluoroniobiate
+gregtech.material.fluorotantalic_acid.name=Fluorotantalic Acid
+gregtech.material.tributyl_phosphate.name=Tributyl Phosphate
+gregtech.material.methyl_isobutyl_ketone.name=Methyl Isobutyl Ketone
+gregtech.material.nb_ta_separation_mixture.name=Niobium Tantalum Separation Mixture
+gregtech.material.heptafluoro_tantalite.name=Heptafluorotantalite
+gregtech.material.oxypentafluoro_niobate.name=Oxypentafluoroniobiate
+gregtech.material.potassium_fluoro_tantalite.name=Potassiumfluorotantalite
+
 gregtech.material.yttrium_oxide.name=Yttrium Oxide
 gregtech.material.erbium_oxide.name=Erbium Oxide
 gregtech.material.dysprosium_oxide.name=Dysprosium Oxide
