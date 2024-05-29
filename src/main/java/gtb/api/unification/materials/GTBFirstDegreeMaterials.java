@@ -1278,6 +1278,33 @@ public class GTBFirstDegreeMaterials {
         VanadiumPentoxide = new Material.Builder(getMaterialsId(), gregtechId("vanadium_pentoxide"))
                 .dust()
                 .color(0x8500A3).build().setFormula("VaO5", true);
+
+        TitaniumDioxide = new Material.Builder(getMaterialsId(), gregtechId("titanium_dioxide"))
+                .dust()
+                .color(0xBA68C8).build().setFormula("TiO2", true);
+
+        GaseousTitaniumTetrachloride = new Material.Builder(getMaterialsId(), gregtechId("gaseous_titanium_tetrachloride"))
+                .gas()
+                .color(0xBA68C8).build().setFormula("TiCl4", true);
+
+        RedMudConcentrate = new Material.Builder(getMaterialsId(), gregtechId("red_mud_concentrate"))
+                .dust()
+                .color(0xE53935).build();
+
+        SodiumAluminateSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_aluminate_solution"))
+                .fluid()
+                .color(0x1E88E5).build();
+
+        RoastedBauxite = new Material.Builder(getMaterialsId(), gregtechId("roasted_bauxite"))
+                .dust()
+                .color(0x46271D).build();
+
+        LeachedBauxite = new Material.Builder(getMaterialsId(), gregtechId("leached_bauxite"))
+                .dust()
+                .color(0x8B371C).build();
+
+
+
     }
 
     private static int getMaterialsId() {

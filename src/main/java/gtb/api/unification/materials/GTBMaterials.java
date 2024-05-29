@@ -658,6 +658,14 @@ public class GTBMaterials {
     public static Material PotasssiumFluoroTantalate;
     public static Material AcetoneSolution;
     public static Material DilutedAcetone;
+    public static Material TitaniumDioxide;
+    public static Material GaseousTitaniumTetrachloride;
+    public static Material RedMudConcentrate;
+    public static Material SodiumAluminateSolution;
+    public static Material RoastedBauxite;
+    public static Material LeachedBauxite;
+
+
 
     // Organic Chemistry Materials
     public static Material PhosphorusOxychloride;
