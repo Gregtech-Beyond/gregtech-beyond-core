@@ -866,133 +866,133 @@ public class GTBUnknownCompositionMaterials {
 
         ManganeseSulfate = new Material.Builder(getMaterialsId(), gregtechId("manganese_sulfate"))
                 .dust()
-                .color(0xDBD180).build();
+                .color(0xDBD180).build().setFormula("MgSO2", true);
 
         Rhodocrosite = new Material.Builder(getMaterialsId(), gregtechId("rhodocrosite"))
                 .dust()
-                .color(0xC62828).build();
+                .color(0xC62828).build().setFormula("MnCO3", true);
 
         CassiteriteCokePellets = new Material.Builder(getMaterialsId(), gregtechId("cassiterite_coke_pellets"))
                 .dust()
-                .color(0x414040).build();
+                .color(0x414040).build().setFormula("SnO2C?", true);
 
         TinSlag = new Material.Builder(getMaterialsId(), gregtechId("tin_slag"))
                 .dust()
-                .color(0xADAAAA).build();
+                .color(0xADAAAA).build().setFormula("NbTa?", true);
 
         NbTaContainingDust = new Material.Builder(getMaterialsId(), gregtechId("nb_ta_containing_dust"))
                 .dust()
-                .color(0x8E7C7C).build();
+                .color(0x8E7C7C).build().setFormula("NbTa?", true);
 
         NiobiumTantalumOxide = new Material.Builder(getMaterialsId(), gregtechId("niobium_tantalum_dust"))
                 .dust()
-                .color(0xC66262).build();
+                .color(0xC66262).build().setFormula("(Nb2O5)(Ta2O5)", true);
 
         AluminiumTrifluoride = new Material.Builder(getMaterialsId(), gregtechId("aluminium_trifluoride"))
                 .dust()
-                .color(0x1976D2).build();
+                .color(0x1976D2).build().setFormula("AlF3", true);
 
         SiliconFluoride = new Material.Builder(getMaterialsId(), gregtechId("silicon_fluoride"))
                 .fluid()
-                .color(0x818A91).build();
+                .color(0x818A91).build().setFormula("SiF2", true);
 
         NbTaFluorideMix = new Material.Builder(getMaterialsId(), gregtechId("nb_ta_fluoride_mix"))
                 .fluid()
-                .color(0x786158).build();
+                .color(0x786158).build().setFormula("(H2NbOF5)(H2TaF7)", true);
 
         BariumOxide = new Material.Builder(getMaterialsId(), gregtechId("barium_oxide"))
                 .dust()
-                .color(0xC86B69).build();
+                .color(0xC86B69).build().setFormula("BaO2", true);
 
         BariumPeroxide = new Material.Builder(getMaterialsId(), gregtechId("barium_peroxide"))
                 .dust()
-                .color(0x9C3734).build();
+                .color(0x9C3734).build().setFormula("BaO5", true);
 
         Columbite = new Material.Builder(getMaterialsId(), gregtechId("columbite"))
                 .dust()
                 .ore()
-                .color(0xFDD835).build();
+                .color(0xFDD835).build().setFormula("FeNb2O6", true);
 
         FusedColumbite = new Material.Builder(getMaterialsId(), gregtechId("fused_columbite"))
                 .dust()
-                .color(0xB3A460).build();
+                .color(0xB3A460).build().setFormula("(Fe2O3)(NaO)Nb2O5", true);
 
         ColumbiteMinorOxideResidue = new Material.Builder(getMaterialsId(), gregtechId("columbite_minor_oxide_residue"))
                 .dust()
-                .color(0x8B7B33).build();
+                .color(0x8B7B33).build().setFormula("(BaO)(SnO2)(WO3)(Al2O3)", true);
 
         LeachedColumbite = new Material.Builder(getMaterialsId(), gregtechId("leached_columbite"))
                 .dust()
-                .color(0x9E925E).build();
+                .color(0x9E925E).build().setFormula("(Nb2O5)9Ta2O5?", true);
 
         IronSulfate = new Material.Builder(getMaterialsId(), gregtechId("iron_sulfate"))
                 .dust()
-                .color(0xFFF176).build();
+                .color(0xFFF176).build().setFormula("FeSO4", true);
 
         SodiumSulfate = new Material.Builder(getMaterialsId(), gregtechId("sodium_sulfate"))
                 .dust()
-                .color(0x2A6E8D).build();
+                .color(0x2A6E8D).build().setFormula("Na2SO4", true);
 
         TantaliteMinorOxideResidue = new Material.Builder(getMaterialsId(), gregtechId("tantalite_minor_oxide_residue"))
                 .dust()
-                .color(0xFDD835).build();
+                .color(0xFDD835).build().setFormula("(BaO)(ZrO2)(TiO2)(SiO2)", true);
 
         FluoroniobicAcid = new Material.Builder(getMaterialsId(), gregtechId("fluoroniobic_acid"))
                 .fluid()
-                .color(0x7CB342).build();
+                .color(0x7CB342).build().setFormula("NbHF7", true);
 
         FusedTantalite = new Material.Builder(getMaterialsId(), gregtechId("fused_tantalite"))
                 .dust()
-                .color(0x57382F).build();
+                .color(0x57382F).build().setFormula("(Fe2O3)(NaO)Ta2O5", true);
 
         LeachedTantalite = new Material.Builder(getMaterialsId(), gregtechId("leached_tantalite"))
                 .dust()
-                .color(0x5A200E).build();
+                .color(0x5A200E).build().setFormula("(Ta2O5)9Nb2O5?", true);
 
         CubicZirconia = new Material.Builder(getMaterialsId(), gregtechId("cubic_zirconia"))
                 .dust()
                 .gem()
-                .color(0xDECAE1).build();
+                .color(0xDECAE1).build().setFormula("ZrO2", true);
 
         AcidicLeachedPyrochlore = new Material.Builder(getMaterialsId(), gregtechId("acidic_leached_pyrochlore"))
                 .dust()
-                .color(0x8F4630).build();
+                .color(0x8F4630).build().setFormula("(H2SO4)Ca12Sr6Ba6?ThUNb26O78F26", true);
 
         LeachedPyrochlore = new Material.Builder(getMaterialsId(), gregtechId("leached_pyrochlore"))
                 .dust()
-                .color(0x8F4630).build();
+                .color(0x8F4630).build().setFormula("(Nb2O5)9Ta2O5?", true);
 
         PotasssiumFluoroNiobate = new Material.Builder(getMaterialsId(), gregtechId("potassium_fluoro_niobate"))
                 .dust()
-                .color(0x72FF86).build();
+                .color(0x72FF86).build().setFormula("K2NbF7", true);
 
         FluorotantalicAcid = new Material.Builder(getMaterialsId(), gregtechId("fluorotantalic_acid"))
                 .fluid()
-                .color(0x7CB342).build();
+                .color(0x7CB342).build().setFormula("TaHF7", true);
 
         TributylPhosphate = new Material.Builder(getMaterialsId(), gregtechId("tributyl_phosphate"))
                 .fluid()
-                .color(0x8E422B).build();
+                .color(0x8E422B).build().setFormula("(C4H9)3PO4", true);
 
         MethylIsobutylKetone = new Material.Builder(getMaterialsId(), gregtechId("methyl_isobutyl_ketone"))
                 .fluid()
-                .color(0x20FF2E).build();
+                .color(0x20FF2E).build().setFormula("C6H12O", true);
 
         NbTaSeparationMixture = new Material.Builder(getMaterialsId(), gregtechId("nb_ta_separation_mixture"))
                 .fluid()
-                .color(0xFFA078).build();
+                .color(0xFFA078).build().setFormula("C18H39O5P", true);
 
         OxypentafluoroNiobate = new Material.Builder(getMaterialsId(), gregtechId("oxypentafluoro_niobate"))
                 .fluid()
-                .color(0x70FF5E).build();
+                .color(0x70FF5E).build().setFormula("H2NbOF5", true);
 
         HeptafluoroTantalate = new Material.Builder(getMaterialsId(), gregtechId("heptafluoro_tantalite"))
                 .fluid()
-                .color(0x2AFF5E).build();
+                .color(0x2AFF5E).build().setFormula("H2TaF7", true);
 
         PotasssiumFluoroTantalate = new Material.Builder(getMaterialsId(), gregtechId("potassium_fluoro_tantalite"))
                 .dust()
-                .color(0x00DC51).build();
+                .color(0x00DC51).build().setFormula("K2TaF7", true);
     }
 
     private static int getMaterialsId() {
