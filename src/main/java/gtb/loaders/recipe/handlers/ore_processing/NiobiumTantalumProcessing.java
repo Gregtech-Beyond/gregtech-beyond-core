@@ -205,7 +205,7 @@ public class NiobiumTantalumProcessing {
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder().duration(180).EUt(120)
-                .input(dust, LeachedPyrochlore)
+                .input(dust, LeachedPyrochlore, 17)
                 .fluidInputs(HydrofluoricAcid.getFluid(10400))
                 .fluidOutputs(FluoroniobicAcid.getFluid(2000))
                 .duration(100).EUt(VA[MV])
