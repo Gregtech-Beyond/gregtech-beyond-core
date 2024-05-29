@@ -1205,70 +1205,70 @@ public class GTBFirstDegreeMaterials {
 
         DysprosiumOxideSolution = new Material.Builder(getMaterialsId(), gregtechId("dysprosium_oxide_solution"))
                 .fluid()
-                .color(0xB0A19B).build().setFormula("(C16H12O2)", true);
+                .color(0xB0A19B).build().setFormula("DsO2(H2O)", true);
 
         RarestEarthMixture = new Material.Builder(getMaterialsId(), gregtechId("rarer_earth_mixture"))
                 .fluid()
-                .color(0x6A3F32).build().setFormula("(C16H12O2)", true);
+                .color(0x6A3F32).build();
 
         PurifiedScandiumLeachResidues = new Material.Builder(getMaterialsId(),
                 gregtechId("purified_scandium_leach_residues"))
                         .fluid()
-                        .color(0x7E57C2).build().setFormula("(C16H12O2)", true);
+                        .color(0x7E57C2).build().setFormula("Sc?", true);
 
         ExquisiteScandiumLeachResidues = new Material.Builder(getMaterialsId(),
                 gregtechId("exquisite_scandium_leach_solution"))
                         .fluid()
-                        .color(0x58447B).build().setFormula("(C16H12O2)", true);
+                        .color(0x58447B).build().setFormula("Sc*?", true);
 
         LanthanumLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("lanthanum_leach_solution"))
                 .fluid()
-                .color(0x413061).build().setFormula("(C16H12O2)", true);
+                .color(0x413061).build().setFormula("La?", true);
 
         LanthanumLeachEmulsion = new Material.Builder(getMaterialsId(), gregtechId("lanthanum_leach_emulsion"))
                 .fluid()
-                .color(0x494353).build().setFormula("(C16H12O2)", true);
+                .color(0x494353).build().setFormula("La?", true);
 
         REEGroupMud = new Material.Builder(getMaterialsId(), gregtechId("ree_group_mud"))
                 .fluid()
-                .color(0x3A1A11).build().setFormula("(C16H12O2)", true);
+                .color(0x3A1A11).build();
 
         SulfuricResidues = new Material.Builder(getMaterialsId(), gregtechId("sulfuric_residues"))
                 .fluid()
-                .color(0xFDD835).build().setFormula("(C16H12O2)", true);
+                .color(0xFDD835).build().setFormula("SO2?", true);
 
         Cryolite = new Material.Builder(getMaterialsId(), gregtechId("cryolite"))
                 .fluid()
-                .color(0x82A6C4).build().setFormula("(C16H12O2)", true);
+                .color(0x82A6C4).build().setFormula("Al(O2)", true);
 
         GadoliniumLeach = new Material.Builder(getMaterialsId(), gregtechId("gadolinium_leach"))
                 .fluid()
-                .color(0xEEDBDB).build().setFormula("(C16H12O2)", true);
+                .color(0xEEDBDB).build().setFormula("Gd?", true);
 
         RoastedGadoliniteLeachSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("roasted_gadolinite_leach_solution"))
                         .fluid()
-                        .color(0x5A4F4D).build().setFormula("(C16H12O2)", true);
+                        .color(0x5A4F4D).build().setFormula("Gd(H2O)?", true);
 
         GadoliniumSolution = new Material.Builder(getMaterialsId(), gregtechId("gadolinium_solution"))
                 .fluid()
-                .color(0x6D4C41).build().setFormula("(C16H12O2)", true);
+                .color(0x6D4C41).build().setFormula("Gd(H2O)", true);
 
         CooledGadoliniteLeachSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("cooled_gadolinite_leach_solution"))
                         .fluid()
-                        .color(0x8D6E63).build().setFormula("(C16H12O2)", true);
+                        .color(0x8D6E63).build().setFormula("(GdS2)(H2O)", true);
 
         GadoliniteLeachSolution = new Material.Builder(getMaterialsId(), gregtechId("gadolinite_leach_solution"))
                 .fluid()
-                .color(0x605856).build().setFormula("(C16H12O2)", true);
+                .color(0x605856).build().setFormula("(GdS2)(H2O)", true);
 
         SilverAlloy = new Material.Builder(getMaterialsId(), gregtechId("silver_alloy"))
                 .fluid()
                 .dust()
                 .ingot()
                 .flags(MaterialFlags.GENERATE_FOIL, MaterialFlags.GENERATE_PLATE)
-                .color(0x605856).build().setFormula("(C16H12O2)", true);
+                .color(0x605856).build().setFormula("AgCuAu", true);
 
         SinteredSilver = new Material.Builder(getMaterialsId(), gregtechId("sintered_silver"))
                 .dust()
@@ -1283,13 +1283,14 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0xBA68C8).build().setFormula("TiO2", true);
 
-        GaseousTitaniumTetrachloride = new Material.Builder(getMaterialsId(), gregtechId("gaseous_titanium_tetrachloride"))
-                .gas()
-                .color(0xBA68C8).build().setFormula("TiCl4", true);
+        GaseousTitaniumTetrachloride = new Material.Builder(getMaterialsId(),
+                gregtechId("gaseous_titanium_tetrachloride"))
+                        .gas()
+                        .color(0xBA68C8).build().setFormula("TiCl4", true);
 
         RedMudConcentrate = new Material.Builder(getMaterialsId(), gregtechId("red_mud_concentrate"))
                 .dust()
-                .color(0xE53935).build();
+                .color(0xE53935).build().setFormula("HCl?", true);
 
         SodiumAluminateSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_aluminate_solution"))
                 .fluid()
@@ -1303,8 +1304,25 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0x8B371C).build();
 
+        TitanylSulfate = new Material.Builder(getMaterialsId(), gregtechId("titanyl_sulfate"))
+                .fluid()
+                .color(0xe66adb).build().setFormula("TiO(SO4)", true);
 
+        RedSlurry = new Material.Builder(getMaterialsId(), gregtechId("red_slurry"))
+                .fluid()
+                .color(0xc91243).build().setFormula("TiO2?", true);
 
+        NeutralisedRedMud = new Material.Builder(getMaterialsId(), gregtechId("neutralised_red_mud"))
+                .fluid()
+                .color(0x700c27).build().setFormula("Fe??", true);
+
+        IronChlorideSolution = new Material.Builder(getMaterialsId(), gregtechId("iron_chloride_solution"))
+                .fluid()
+                .color(0x706f70).build().setFormula("FeCl(H2O)?", true);
+
+        CrystallizedTitanylSulfate = new Material.Builder(getMaterialsId(), gregtechId("crystallized_titanyl_sulfate"))
+                .dust()
+                .color(0xe66adb).build().setFormula("TiO(SO4)", true);
     }
 
     private static int getMaterialsId() {
