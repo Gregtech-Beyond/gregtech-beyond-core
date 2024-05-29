@@ -387,8 +387,12 @@ metaitem.sintered_silver_coil.name=Sintered Silver Coil
 
 #Materials
 
-
-
+gregtech.material.red_mud_concentrate=Red Mud Concentrate
+gregtech.material.sodium_aluminate_solution=Sodium Aluminate Solution
+gregtech.material.roasted_bauxite=Roasted Bauxite
+gregtech.material.leached_bauxite=Leached Bauxite
+gregtech.material.titanium_dioxide=Titanium Dioxide
+gregtech.material.gaseous_titanium_tetrachloride=Gaseous Titanium Tetrachloride
 gregtech.material.manganese_sulfate=Manganese Sulfate
 gregtech.material.rhodocrosite=Rhodocrosite
 gregtech.material.cassiterite_coke_pellets=Cassiterite Coke Pellets
