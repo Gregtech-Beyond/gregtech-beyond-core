@@ -1,17 +1,17 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.unification.OreDictUnifier;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
-import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
+import static gtb.api.unification.materials.GTBMaterials.*;
+
+import net.minecraft.item.ItemStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
 
 public class NiobiumTantalumProcessing {
 
