@@ -1,57 +1,54 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.unification.OreDictUnifier;
-import gregtech.common.items.MetaItems;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ingredients.IntCircuitIngredient;
+import gregtech.api.unification.OreDictUnifier;
+
 public class AluminiumProcessing {
 
     public static void init() {
-
-
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
                 new ItemStack[] {
-                        OreDictUnifier.get(dust, Bauxite, 15)});
-
+                        OreDictUnifier.get(dust, Bauxite, 15) });
 
         ROASTER_RECIPES.recipeBuilder()
                 .input(dust, Bauxite)
                 .output(dust, RoastedBauxite)
+                .fluidOutputs(Steam.getFluid(1000))
                 .duration(200)
                 .EUt(2)
                 .buildAndRegister();
 
         BLAST_RECIPES.recipeBuilder()
                 .input(dust, RoastedBauxite, 5)
+                .fluidInputs(Oxygen.getFluid(1000))
                 .output(ingot, Aluminium, 2)
                 .blastFurnaceTemp(1200)
                 .duration(200)
                 .EUt(120)
-                .blastFurnaceTemp();
-
-
-        GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
-                new ItemStack[] {
-                        OreDictUnifier.get(dust, Aluminium, 1),
-                        MetaItems.INTEGRATED_LOGIC_CIRCUIT.getStackForm()});
-
+                .buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Aluminium, 1),
-                MetaItems.INTEGRATED_LOGIC_CIRCUIT.getStackForm()},
-                new FluidStack[]{
+                        IntCircuitIngredient.getIntegratedCircuit(1) });
+
+        GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, Aluminium, 1),
+                        IntCircuitIngredient.getIntegratedCircuit(2) },
+                new FluidStack[] {
                         Nitrogen.getFluid(1000)
                 });
-
 
         BLAST_RECIPES.recipeBuilder()
                 .fluidInputs(Nitrogen.getFluid(1000))
@@ -108,14 +105,11 @@ public class AluminiumProcessing {
 
         BLAST_RECIPES.recipeBuilder()
                 .input(dust, AluminiumHydroxide, 4)
-                .output(dust, Aluminium, 1)
+                .output(ingot, Aluminium, 1)
                 .fluidOutputs(Steam.getFluid(2000))
                 .duration(200)
                 .EUt(400)
                 .blastFurnaceTemp(1800)
                 .buildAndRegister();
-
-
-
     }
 }
