@@ -1298,7 +1298,7 @@ public class GTBFirstDegreeMaterials {
 
         RoastedBauxite = new Material.Builder(getMaterialsId(), gregtechId("roasted_bauxite"))
                 .dust()
-                .color(0x46271D).build();
+                .color(0x46271D).build().setFormula("Al2O3", true);
 
         LeachedBauxite = new Material.Builder(getMaterialsId(), gregtechId("leached_bauxite"))
                 .dust()
