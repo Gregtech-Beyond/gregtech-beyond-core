@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
 import gregtech.common.items.MetaItems;
 
 public class BiologyLines {
@@ -107,6 +108,7 @@ public class BiologyLines {
                 .fluidInputs(AmmoniumNitrate.getFluid(1000))
                 .fluidInputs(EpidermalGrowthFactor.getFluid(1000))
                 .fluidInputs(B_27_Supplement.getFluid(1000))
+                .input(dust, Agar, 4)
                 .input(dust, Glutamine, 20)
                 .fluidOutputs(RawGrowthMedium.getFluid(4000))
                 .duration(1000)
@@ -801,5 +803,16 @@ public class BiologyLines {
         GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
                 new ItemStack[] { SHAPE_MOLD_CYLINDER.getStackForm(1) },
                 new FluidStack[] { Polybenzimidazole.getFluid(18) });
+
+        GTRecipeHandler.removeRecipesByInputs(FLUID_HEATER_RECIPES,
+                new FluidStack[] { RawGrowthMedium.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(MIXER_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, Salt, 4),
+                        OreDictUnifier.get(dust, Agar, 4),
+                        OreDictUnifier.get(dust, Calcium, 4),
+                        OreDictUnifier.get(dust, Meat, 4) },
+                new FluidStack[] { Mutagen.getFluid(4000) });
     }
 }
