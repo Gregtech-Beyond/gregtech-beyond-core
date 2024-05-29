@@ -5,6 +5,7 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.api.recipes.GTBRecipeMaps.*;
 
 public class NiobiumTantalumProcessing {
 
@@ -274,6 +275,48 @@ public class NiobiumTantalumProcessing {
                 .output(dust, PotassiumFluoride, 4)
                 .duration(200).EUt(VA[HV])
                 .output(dust, Tantalum)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(PhosphorusTrichloride.getFluid(1000))
+                .fluidInputs(Oxygen.getFluid(1000))
+                .fluidOutputs(PhosphorusOxychloride.getFluid(2000))
+                .duration(200)
+                .EUt(700)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(PhosphorusTrichloride.getFluid(1000))
+                .notConsumable(HydrochloricAcid.getFluid(100))
+                .fluidInputs(NButanol.getFluid(1000))
+                .fluidOutputs(TributylPhosphate.getFluid(2000))
+                .duration(200)
+                .EUt(500)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Acetone.getFluid(1000))
+                .fluidInputs(Hydrogen.getFluid(1000))
+                .fluidOutputs(AcetoneSolution.getFluid(2000))
+                .notConsumable(dust, Zinc)
+                .duration(200)
+                .EUt(780)
+                .buildAndRegister();
+
+        HIGH_TEMP_DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(AcetoneSolution.getFluid(2000))
+                .fluidOutputs(DilutedAcetone.getFluid(1000))
+                .fluidOutputs(MethylIsobutylKetone.getFluid(1000))
+                .duration(400)
+                .EUt(60)
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(DilutedAcetone.getFluid(2000))
+                .fluidOutputs(Water.getFluid(1000))
+                .fluidOutputs(Acetone.getFluid(1000))
+                .duration(200)
+                .EUt(80)
                 .buildAndRegister();
     }
 }

@@ -656,8 +656,11 @@ public class GTBMaterials {
     public static Material HeptafluoroTantalate;
     public static Material OxypentafluoroNiobate;
     public static Material PotasssiumFluoroTantalate;
+    public static Material AcetoneSolution;
+    public static Material DilutedAcetone;
 
     // Organic Chemistry Materials
+    public static Material PhosphorusOxychloride;
     public static Material OxidizedOrthoXyleneMixture;
     public static Material CooledOrthoXyleneMixture;
     public static Material VanadiumPentoxide;
