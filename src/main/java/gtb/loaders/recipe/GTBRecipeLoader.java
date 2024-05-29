@@ -73,6 +73,5 @@ public final class GTBRecipeLoader {
         MonaziteProcessing.init();
         IronProcessing.init();
         NiobiumTantalumProcessing.init();
-
     }
 }

@@ -25,6 +25,8 @@ public class GTBMaterialPropertyAddition {
         Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
         AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         Mica.setProperty(PropertyKey.INGOT, new IngotProperty());
+        BandedIron.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         // Pre-Registered Materials ????????
 

@@ -893,7 +893,7 @@ public class GTBUnknownCompositionMaterials {
                 .color(0x1976D2).build();
 
         SiliconFluoride = new Material.Builder(getMaterialsId(), gregtechId("silicon_fluoride"))
-                .dust()
+                .fluid()
                 .color(0x818A91).build();
 
         NbTaFluorideMix = new Material.Builder(getMaterialsId(), gregtechId("nb_ta_fluoride_mix"))
