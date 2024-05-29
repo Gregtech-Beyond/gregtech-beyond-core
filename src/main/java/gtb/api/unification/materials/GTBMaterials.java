@@ -624,6 +624,38 @@ public class GTBMaterials {
     public static Material Syngas;
     public static Material MolybdenumFlue;
     public static Material TraceRheniumFlue;
+    public static Material ManganeseSulfate;
+    public static Material Rhodocrosite;
+    public static Material CassiteriteCokePellets;
+    public static Material TinSlag;
+    public static Material NbTaContainingDust;
+    public static Material NiobiumTantalumOxide;
+    public static Material AluminiumTrifluoride;
+    public static Material SiliconFluoride;
+    public static Material NbTaFluorideMix;
+    public static Material BariumOxide;
+    public static Material BariumPeroxide;
+    public static Material Columbite;
+    public static Material FusedColumbite;
+    public static Material ColumbiteMinorOxideResidue;
+    public static Material LeachedColumbite;
+    public static Material IronSulfate;
+    public static Material SodiumSulfate;
+    public static Material TantaliteMinorOxideResidue;
+    public static Material FluoroniobicAcid;
+    public static Material FusedTantalite;
+    public static Material LeachedTantalite;
+    public static Material CubicZirconia;
+    public static Material AcidicLeachedPyrochlore;
+    public static Material LeachedPyrochlore;
+    public static Material PotasssiumFluoroNiobate;
+    public static Material FluorotantalicAcid;
+    public static Material TributylPhosphate;
+    public static Material MethylIsobutylKetone;
+    public static Material NbTaSeparationMixture;
+    public static Material HeptafluoroTantalate;
+    public static Material OxypentafluoroNiobate;
+    public static Material PotasssiumFluoroTantalate;
 
     // Organic Chemistry Materials
     public static Material OxidizedOrthoXyleneMixture;

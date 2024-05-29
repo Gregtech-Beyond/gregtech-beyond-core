@@ -30,8 +30,8 @@ public class IronProcessing {
                 .buildAndRegister();
 
         PRIMITIVE_BLAST_FURNACE_RECIPES.recipeBuilder()
-                .input(dust, Magnetite)
-                .output(ingot, BandedIron)
+                .input(dust, Magnetite, 3)
+                .output(ingot, BandedIron, 4)
                 .duration(200)
                 .buildAndRegister();
 
@@ -46,8 +46,8 @@ public class IronProcessing {
         BLAST_RECIPES.recipeBuilder()
                 .fluidInputs(Hydrogen.getFluid(1000))
                 .fluidOutputs(Steam.getFluid(1000))
-                .input(ingot, BandedIron)
-                .output(ingot, Iron)
+                .input(ingot, BandedIron, 5)
+                .output(ingot, Iron, 2)
                 .duration(200)
                 .EUt(12)
                 .blastFurnaceTemp(1000)
@@ -56,8 +56,8 @@ public class IronProcessing {
         BLAST_RECIPES.recipeBuilder()
                 .fluidInputs(Hydrogen.getFluid(1000))
                 .fluidOutputs(Steam.getFluid(1000))
-                .input(dust, BandedIron)
-                .output(ingot, Iron)
+                .input(dust, BandedIron, 5)
+                .output(ingot, Iron, 2)
                 .duration(200)
                 .EUt(12)
                 .blastFurnaceTemp(1000)
@@ -65,8 +65,8 @@ public class IronProcessing {
 
         ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(100))
-                .input(dust, BandedIron)
-                .output(ingot, Iron)
+                .input(dust, BandedIron, 5)
+                .output(ingot, Iron, 2)
                 .EUt(8)
                 .duration(80)
                 .buildAndRegister();
