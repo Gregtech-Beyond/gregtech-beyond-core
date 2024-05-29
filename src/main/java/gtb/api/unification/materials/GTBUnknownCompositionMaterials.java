@@ -855,6 +855,14 @@ public class GTBUnknownCompositionMaterials {
         RarerEarthConcentrate = new Material.Builder(getMaterialsId(), gregtechId("rarer_earth_concentrate"))
                 .fluid()
                 .color(0x593F37).build();
+
+        OxidizedOrthoXyleneMixture = new Material.Builder(getMaterialsId(), gregtechId("oxidized_ortho_xylene_mixture"))
+                .fluid()
+                .color(0x38D7FF).build();
+
+        CooledOrthoXyleneMixture = new Material.Builder(getMaterialsId(), gregtechId("cooled_ortho_xylene_mixture"))
+                .fluid()
+                .color(0x97D9FF).build();
     }
 
     private static int getMaterialsId() {
