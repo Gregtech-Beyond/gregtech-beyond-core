@@ -191,5 +191,13 @@ public class OrganicChemistry {
                 .duration(200)
                 .EUt(8)
                 .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(SodiumHydroxideSolution.getFluid(1000))
+                .fluidOutputs(Water.getFluid(1000))
+                .output(dust, SodiumHydroxide, 3)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
     }
 }
