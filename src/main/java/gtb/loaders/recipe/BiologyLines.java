@@ -188,6 +188,14 @@ public class BiologyLines {
                 .EUt(120)
                 .buildAndRegister();
 
+        FLUID_HEATER_RECIPES.recipeBuilder()
+                .fluidInputs(DepletedBacterialGrowthMedium.getFluid(1000))
+                .fluidOutputs(BacterialGrowthMedium.getFluid(500))
+                .circuitMeta(1)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, Yeast, 1)
                 .fluidInputs(Biomass.getFluid(1000))
