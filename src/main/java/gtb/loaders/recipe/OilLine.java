@@ -3,13 +3,10 @@ package gtb.loaders.recipe;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
-
-import gregtech.common.items.MetaItems;
-
-import gtb.api.recipes.GTBRecipeMaps;
 
 public class OilLine {
 
@@ -158,7 +155,7 @@ public class OilLine {
         MIXER_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1000)).fluidInputs(Oil.getFluid(1000))
                 .fluidOutputs(DilutedOil.getFluid(2000)).EUt(80).duration(100).buildAndRegister();
 
-        GTBRecipeMaps.FISCHER_TROPSCH_REACTOR_RECIPES.recipeBuilder().fluidInputs(DistilledWater.getFluid(2000))
+        FISCHER_TROPSCH_REACTOR_RECIPES.recipeBuilder().fluidInputs(DistilledWater.getFluid(2000))
                 .fluidInputs(RefineryGas.getFluid(8000)).notConsumable(dust, CobaltOxide, 1)
                 .output(PARAFFIN_WAX, 1).fluidOutputs(Diesel.getFluid(1000))
                 .fluidOutputs(Gasoline.getFluid(500)).fluidOutputs(Water.getFluid(2000))
@@ -210,13 +207,13 @@ public class OilLine {
 
         FLUID_SOLIDFICATION_RECIPES.recipeBuilder()
                 .fluidInputs(Resin.getFluid(100))
-                .output(MetaItems.STICKY_RESIN, 1)
+                .output(STICKY_RESIN, 1)
                 .duration(200)
                 .EUt(12)
                 .buildAndRegister();
 
         CENTRIFUGE_RECIPES.recipeBuilder()
-                .input(MetaItems.STICKY_RESIN, 1)
+                .input(STICKY_RESIN, 1)
                 .fluidOutputs(Resin.getFluid(100))
                 .duration(120)
                 .EUt(80)
