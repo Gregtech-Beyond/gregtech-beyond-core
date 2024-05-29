@@ -664,8 +664,11 @@ public class GTBMaterials {
     public static Material SodiumAluminateSolution;
     public static Material RoastedBauxite;
     public static Material LeachedBauxite;
-
-
+    public static Material NeutralisedRedMud;
+    public static Material RedSlurry;
+    public static Material TitanylSulfate;
+    public static Material IronChlorideSolution;
+    public static Material CrystallizedTitanylSulfate;
 
     // Organic Chemistry Materials
     public static Material PhosphorusOxychloride;
