@@ -387,6 +387,12 @@ metaitem.sintered_silver_coil.name=Sintered Silver Coil
 
 #Materials
 
+gregtech.material.roasted_bornite=Roasted Bornite
+gregtech.material.sodium_carbonate_solution=Sodium Carbonate Solution
+gregtech.material.sodium_chromate_solution=Sodium Chromate Solution
+gregtech.material.sodium_dichromate_solution=Sodium Dichromate Solution
+gregtech.material.sodium_dichromate=Sodium Dichromate
+gregtech.material.soda_ash_solution=Soda Ash Solution
 gregtech.material.red_slurry=Red Slurry
 gregtech.material.neutralised_red_mud=Neutralised Red Mud
 gregtech.material.iron_chloride_solution=Iron Chloride Solution
