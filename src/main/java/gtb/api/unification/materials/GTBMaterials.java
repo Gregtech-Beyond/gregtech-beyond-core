@@ -669,8 +669,18 @@ public class GTBMaterials {
     public static Material TitanylSulfate;
     public static Material IronChlorideSolution;
     public static Material CrystallizedTitanylSulfate;
+    public static Material RoastedBornite;
+    public static Material MalachiteSlag;
+    public static Material SinteredMalachiteSlag;
+
+
 
     // Organic Chemistry Materials
+    public static Material SodiumCarbonateSolution;
+    public static Material SodiumChromateSolution;
+    public static Material SodiumDichromateSolution;
+    public static Material SodiumDichromate;
+    public static Material SodaAshSolution;
     public static Material PhosphorusOxychloride;
     public static Material OxidizedOrthoXyleneMixture;
     public static Material CooledOrthoXyleneMixture;
