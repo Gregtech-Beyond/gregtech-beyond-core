@@ -4,6 +4,7 @@ import static gregtech.api.unification.material.Materials.*;
 
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.*;
+import gtb.loaders.recipe.handlers.ore_processing.GermaniumProcessing;
 
 public class GTBMaterialPropertyAddition {
 
@@ -63,9 +64,14 @@ public class GTBMaterialPropertyAddition {
         Gadolinium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Gadolinium.addFlags(MaterialFlags.GENERATE_PLATE);
 
-        // Gadolinium
+        // Rhenium
 
         Rhenium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Rhenium.addFlags(MaterialFlags.GENERATE_PLATE);
+
+        // Germanium
+
+        Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Germanium.addFlags(MaterialFlags.GENERATE_PLATE);
     }
 }
