@@ -4,7 +4,7 @@ import gregtech.api.capability.impl.MultiblockRecipeLogic;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.recipes.Recipe;
 
-import gtb.api.capabilites.interfaces.containers.IKevContainer;
+import gtb.api.capabilites.containers.interfaces.containers.IKevContainer;
 import gtb.api.recipes.properties.KevOutputRecipeProperty;
 import gtb.api.utils.GTBLog;
 import lombok.Getter;
@@ -37,7 +37,6 @@ public class MultiblockKevGeneratorRecipeLogic extends MultiblockRecipeLogic {
     protected void completeRecipe() {
         super.completeRecipe();
         this.iKevContainer.changeKev(this.kevRecipeOutput);
-        GTBLog.logger.info("Completed recipe, added " + this.kevRecipeOutput);
     }
 
     /*

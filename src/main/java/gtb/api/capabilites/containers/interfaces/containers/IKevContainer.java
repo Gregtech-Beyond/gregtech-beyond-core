@@ -1,6 +1,8 @@
-package gtb.api.capabilites.interfaces.containers;
+package gtb.api.capabilites.containers.interfaces.containers;
 
-public interface IKevContainer {
+import gtb.api.capabilites.pipable.Pipable;
+
+public interface IKevContainer extends Pipable {
 
     int minKev = 0;
 

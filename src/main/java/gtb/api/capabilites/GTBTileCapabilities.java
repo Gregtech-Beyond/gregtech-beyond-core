@@ -5,7 +5,7 @@ import net.minecraftforge.common.capabilities.CapabilityInject;
 
 import gregtech.api.capability.SimpleCapabilityManager;
 
-import gtb.api.capabilites.interfaces.containers.IKevContainer;
+import gtb.api.capabilites.containers.interfaces.containers.IKevContainer;
 
 public final class GTBTileCapabilities {
 

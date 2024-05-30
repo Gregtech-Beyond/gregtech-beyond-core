@@ -26,8 +26,8 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.capabilites.GTBMultiblockAbility;
 import gtb.api.capabilites.GTBTileCapabilities;
-import gtb.api.capabilites.impl.KevContainer;
-import gtb.api.capabilites.interfaces.containers.IKevContainer;
+import gtb.api.capabilites.containers.impl.KevContainer;
+import gtb.api.capabilites.containers.interfaces.containers.IKevContainer;
 import gtb.api.render.GTBTextures;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 

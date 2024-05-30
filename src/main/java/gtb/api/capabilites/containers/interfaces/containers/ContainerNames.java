@@ -1,4 +1,4 @@
-package gtb.api.capabilites.interfaces.containers;
+package gtb.api.capabilites.containers.interfaces.containers;
 
 public enum ContainerNames {
     KEV_CONTAINER,

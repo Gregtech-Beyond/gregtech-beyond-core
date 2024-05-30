@@ -2,8 +2,8 @@ package gtb.api.capabilites;
 
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 
-import gtb.api.capabilites.interfaces.containers.ContainerNames;
-import gtb.api.capabilites.interfaces.containers.IKevContainer;
+import gtb.api.capabilites.containers.interfaces.containers.ContainerNames;
+import gtb.api.capabilites.containers.interfaces.containers.IKevContainer;
 
 @SuppressWarnings("InstantiationOfUtilityClass")
 public class GTBMultiblockAbility {

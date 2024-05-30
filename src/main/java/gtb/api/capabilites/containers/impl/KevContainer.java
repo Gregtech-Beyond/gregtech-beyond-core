@@ -1,9 +1,8 @@
-package gtb.api.capabilites.impl;
+package gtb.api.capabilites.containers.impl;
 
 import static gtb.api.utils.NBTKeys.KEV_KEY;
 
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.common.capabilities.Capability;
 
 import org.jetbrains.annotations.NotNull;
@@ -13,8 +12,9 @@ import gregtech.api.metatileentity.MTETrait;
 import gregtech.api.metatileentity.MetaTileEntity;
 
 import gtb.api.capabilites.GTBTileCapabilities;
-import gtb.api.capabilites.interfaces.containers.ContainerNames;
-import gtb.api.capabilites.interfaces.containers.IKevContainer;
+import gtb.api.capabilites.containers.interfaces.containers.ContainerNames;
+import gtb.api.capabilites.containers.interfaces.containers.IKevContainer;
+import gtb.api.capabilites.pipable.CapabilityNetworkId;
 import gtb.api.utils.GTBLog;
 import lombok.Getter;
 
@@ -64,18 +64,6 @@ public class KevContainer extends MTETrait implements IKevContainer {
     }
 
     @Override
-    public void writeInitialSyncData(@NotNull PacketBuffer buf) {
-        super.writeInitialSyncData(buf);
-        buf.writeInt(this.kev);
-    }
-
-    @Override
-    public void receiveInitialSyncData(@NotNull PacketBuffer buf) {
-        super.receiveInitialSyncData(buf);
-        this.kev = buf.readInt();
-    }
-
-    @Override
     public void resetContainer() {
         this.setKev(0);
     }
@@ -90,5 +78,10 @@ public class KevContainer extends MTETrait implements IKevContainer {
     public void changeKev(int valueToAdd) {
         this.setKev(this.kev + valueToAdd);
         GTBLog.logger.info("has Changed");
+    }
+
+    @Override
+    public int getNetworkId() {
+        return CapabilityNetworkId.KEV_NETWORK_ID.getId();
     }
 }

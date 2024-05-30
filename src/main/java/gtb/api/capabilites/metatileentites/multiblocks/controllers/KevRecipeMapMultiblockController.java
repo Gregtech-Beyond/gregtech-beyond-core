@@ -12,9 +12,9 @@ import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
 
 import gtb.api.capabilites.GTBMultiblockAbility;
-import gtb.api.capabilites.impl.KevContainer;
-import gtb.api.capabilites.interfaces.containers.IKevContainer;
-import gtb.api.capabilites.interfaces.machines.KevMachine;
+import gtb.api.capabilites.containers.impl.KevContainer;
+import gtb.api.capabilites.containers.interfaces.containers.IKevContainer;
+import gtb.api.capabilites.containers.interfaces.machines.KevMachine;
 import gtb.api.capabilites.metatileentites.multiblocks.logics.MultiblockKevGeneratorRecipeLogic;
 import lombok.Getter;
 
