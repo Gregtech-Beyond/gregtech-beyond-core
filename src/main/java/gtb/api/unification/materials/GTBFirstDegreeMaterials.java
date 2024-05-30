@@ -1324,10 +1324,6 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0xe66adb).build().setFormula("TiO(SO4)", true);
 
-        SodiumCarbonateSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_carbonate_solution"))
-                .fluid()
-                .color(0xe66adb).build().setFormula("Na2CO3(H2O)", true);
-
         SodiumChromateSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_chromate_solution"))
                 .fluid()
                 .color(0xFDD835).build().setFormula("Na2CrO4(H2O)", true);
@@ -1355,6 +1351,36 @@ public class GTBFirstDegreeMaterials {
         SinteredMalachiteSlag = new Material.Builder(getMaterialsId(), gregtechId("sintered_malachite_slag"))
                 .dust()
                 .color(0x4D6B4F).build().setFormula("Cu5FeS4", true);
+
+        SodiumCarbonateSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_carbonate_solution"))
+                .fluid()
+                .color(0x4D6B4F).build().setFormula("Cu5FeS4", true);
+
+        RealgarSolution = new Material.Builder(getMaterialsId(), gregtechId("realgar_solution"))
+                .fluid()
+                .color(0xB83431).build().setFormula("As4S4(H2O)", true);
+
+        RecrystallizedRealgar = new Material.Builder(getMaterialsId(), gregtechId("recrystallized_realgar"))
+                .dust()
+                .color(0xD83F3B).build().setFormula("As4S4(H2O)*", true);
+
+        ArsenicHydroxide = new Material.Builder(getMaterialsId(), gregtechId("arsenic_hydroxide"))
+                .dust()
+                .color(0xD83F3B).build().setFormula("AsOH", true);
+
+        MoltenGalena = new Material.Builder(getMaterialsId(), gregtechId("molten_galena"))
+                .fluid()
+                .color(0x846392).build().setFormula("PbS", true);
+
+        MoltenOxidizedGalena = new Material.Builder(getMaterialsId(), gregtechId("molten_oxidized_galena"))
+                .fluid()
+                .color(0x7E5F8C).build().setFormula("(PbS)O2", true);
+
+        DesulfurizedMoltenGalena = new Material.Builder(getMaterialsId(), gregtechId("desulfurized_molten_galena"))
+                .fluid()
+                .color(0x77528E).build().setFormula("Pb?", true);
+
+
 
 
 
