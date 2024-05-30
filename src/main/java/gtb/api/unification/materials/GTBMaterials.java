@@ -676,6 +676,12 @@ public class GTBMaterials {
 
 
     // Organic Chemistry Materials
+    public static Material MoltenOxidizedGalena;
+    public static Material DesulfurizedMoltenGalena;
+    public static Material MoltenGalena;
+    public static Material ArsenicHydroxide;
+    public static Material RecrystallizedRealgar;
+    public static Material RealgarSolution;
     public static Material SodiumCarbonateSolution;
     public static Material SodiumChromateSolution;
     public static Material SodiumDichromateSolution;
