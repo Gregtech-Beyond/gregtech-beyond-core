@@ -1323,6 +1323,42 @@ public class GTBFirstDegreeMaterials {
         CrystallizedTitanylSulfate = new Material.Builder(getMaterialsId(), gregtechId("crystallized_titanyl_sulfate"))
                 .dust()
                 .color(0xe66adb).build().setFormula("TiO(SO4)", true);
+
+        SodiumCarbonateSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_carbonate_solution"))
+                .fluid()
+                .color(0xe66adb).build().setFormula("Na2CO3(H2O)", true);
+
+        SodiumChromateSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_chromate_solution"))
+                .fluid()
+                .color(0xFDD835).build().setFormula("Na2CrO4(H2O)", true);
+
+        SodiumDichromateSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_dichromate_solution"))
+                .fluid()
+                .color(0xF78A37).build().setFormula("Na2Cr2O7(H2O)", true);
+
+        SodiumDichromate = new Material.Builder(getMaterialsId(), gregtechId("sodium_dichromate"))
+                .dust()
+                .color(0xFF6F00).build().setFormula("Na2Cr2O7", true);
+
+        SodaAshSolution = new Material.Builder(getMaterialsId(), gregtechId("soda_ash_solution"))
+                .fluid()
+                .color(0x455A64).build().setFormula("Na2CO3", true);
+
+        RoastedBornite = new Material.Builder(getMaterialsId(), gregtechId("roasted_bornite"))
+                .dust()
+                .color(0x455A64).build().setFormula("Cu5FeS4", true);
+
+        MalachiteSlag = new Material.Builder(getMaterialsId(), gregtechId("malachite_slag"))
+                .dust()
+                .color(0x68856A).build().setFormula("Cu5FeS4", true);
+
+        SinteredMalachiteSlag = new Material.Builder(getMaterialsId(), gregtechId("sintered_malachite_slag"))
+                .dust()
+                .color(0x4D6B4F).build().setFormula("Cu5FeS4", true);
+
+
+
+
     }
 
     private static int getMaterialsId() {
