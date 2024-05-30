@@ -15,7 +15,7 @@ public class ThalliumProcessing {
                 .input(dust, Pyrite, 3)
                 .fluidInputs(Oxygen.getFluid(6000))
                 .output(ingot, Iron)
-                .output(dust, ThalliumSulfate, 7)
+                .chancedOutput(dust, ThalliumSulfate, 7, 200, 0)
                 .fluidOutputs(SulfurDioxide.getFluid(1000))
                 .duration(100).EUt(VA[HV]).buildAndRegister();
 
@@ -24,7 +24,7 @@ public class ThalliumProcessing {
                 .input(dust, Galena, 4)
                 .fluidInputs(Oxygen.getFluid(6000))
                 .output(ingot, Lead, 2)
-                .output(dust, ThalliumSulfate, 7)
+                .chancedOutput(dust, ThalliumSulfate, 7, 200, 0)
                 .fluidOutputs(SulfurDioxide.getFluid(1000))
                 .duration(100).EUt(VA[HV]).buildAndRegister();
 
