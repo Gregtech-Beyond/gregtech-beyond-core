@@ -3,10 +3,14 @@ package gtb.loaders.recipe.handlers.ore_processing;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.items.MetaItems.NANO_CENTRAL_PROCESSING_UNIT_WAFER;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
+import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
 
 public class IronProcessing {
 
@@ -31,6 +35,28 @@ public class IronProcessing {
 
         PRIMITIVE_BLAST_FURNACE_RECIPES.recipeBuilder()
                 .input(dust, Magnetite, 3)
+                .input(dust, Carbon, 2)
+                .output(ingot, BandedIron, 4)
+                .duration(200)
+                .buildAndRegister();
+
+        PRIMITIVE_BLAST_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Magnetite, 3)
+                .input(dust, Charcoal, 2)
+                .output(ingot, BandedIron, 4)
+                .duration(200)
+                .buildAndRegister();
+
+        PRIMITIVE_BLAST_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Magnetite, 3)
+                .input(dust, Coal, 2)
+                .output(ingot, BandedIron, 4)
+                .duration(200)
+                .buildAndRegister();
+
+        PRIMITIVE_BLAST_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Magnetite, 3)
+                .input(dust, Coke)
                 .output(ingot, BandedIron, 4)
                 .duration(200)
                 .buildAndRegister();
@@ -112,5 +138,9 @@ public class IronProcessing {
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedCentrifuged, BasalticMineralSand));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedPurified, BasalticMineralSand));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(ore, BasalticMineralSand));
+
+        GTRecipeHandler.removeRecipesByInputs(ELECTROLYTIC_CELL_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, BandedIron, 5) });
     }
 }
