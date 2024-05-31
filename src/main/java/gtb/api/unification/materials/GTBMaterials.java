@@ -127,7 +127,6 @@ public class GTBMaterials {
 
     // Element Materials
     public static Material Rubidium;
-    public static Material Holmium;
 
     // FD Materials
     public static Material Gadolinite;
