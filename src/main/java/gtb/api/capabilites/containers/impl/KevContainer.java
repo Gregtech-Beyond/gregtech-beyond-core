@@ -27,6 +27,7 @@ public class KevContainer extends MTETrait implements IKevContainer {
     public KevContainer(MetaTileEntity metaTileEntity, int maxKev) {
         super(metaTileEntity);
         this.maxKev = maxKev;
+        GTBLog.logger.info("this::getMaxKev : " + maxKev);
         this.kev = 0;
     }
 
@@ -71,6 +72,11 @@ public class KevContainer extends MTETrait implements IKevContainer {
     @Override
     public boolean canChangeKev(int valueToAdd) {
         int additionResult = this.getKev() + valueToAdd;
+        GTBLog.logger.info("additionResult : " + additionResult);
+        GTBLog.logger.info(String.format("additionResult >= minKev : %b", additionResult >= minKev));
+        GTBLog.logger.info(String.format("this.maxKev : %d", this.maxKev));
+        GTBLog.logger
+                .info(String.format("additionResult <= this.getMaxKev() : %b", additionResult <= this.getMaxKev()));
         return additionResult >= minKev && additionResult <= this.getMaxKev();
     }
 

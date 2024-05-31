@@ -82,7 +82,8 @@ public class MetaTileEntityKevHatch extends MetaTileEntityMultiblockPart
         if (capability.equals(GTBTileCapabilities.CAPABILITY_KEV_CONTAINER)) {
             return GTBTileCapabilities.CAPABILITY_KEV_CONTAINER.cast(this.kevContainer);
         }
-        return super.getCapability(capability, side);
+        return null;
+        // return super.getCapability(capability, side);
     }
 
     @NotNull

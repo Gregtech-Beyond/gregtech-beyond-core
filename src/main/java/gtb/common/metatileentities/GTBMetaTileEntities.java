@@ -43,6 +43,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDigester DIGESTER;
     public static MetaTileEntityChemicalPlant CHEMICAL_PLANT;
     public static MetaTileEntityKevGenerator KEV_GENERATOR;
+    public static MetaTileEntityKevConsumer KEV_CONSUMER;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -93,6 +94,7 @@ public final class GTBMetaTileEntities {
         DIGESTER = registerMetaTileEntity(3022,
                 new MetaTileEntityDigester(gtb("digester")));
         KEV_GENERATOR = registerMetaTileEntity(3023, new MetaTileEntityKevGenerator(gtb("kev_generator")));
+        KEV_CONSUMER = registerMetaTileEntity(3024, new MetaTileEntityKevConsumer(gtb("kev_consumer")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

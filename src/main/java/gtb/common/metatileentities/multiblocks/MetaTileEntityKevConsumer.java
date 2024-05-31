@@ -25,10 +25,10 @@ import codechicken.lib.vec.Matrix4;
 import gtb.api.capabilites.metatileentites.multiblocks.controllers.KevRecipeMapMultiblockController;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityKevGenerator extends KevRecipeMapMultiblockController {
+public class MetaTileEntityKevConsumer extends KevRecipeMapMultiblockController {
 
-    public MetaTileEntityKevGenerator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.KEV_SUPPLY, true);
+    public MetaTileEntityKevConsumer(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.KEV_TEST, false);
         initializeAbilities();
     }
 
@@ -55,7 +55,7 @@ public class MetaTileEntityKevGenerator extends KevRecipeMapMultiblockController
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return super.autoAbilities(true, true, true, false, false, true, false);
+        return super.autoAbilities(true, true, true, true, false, true, false);
     }
 
     @SideOnly(Side.CLIENT)
@@ -80,6 +80,6 @@ public class MetaTileEntityKevGenerator extends KevRecipeMapMultiblockController
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityKevGenerator(metaTileEntityId);
+        return new MetaTileEntityKevConsumer(metaTileEntityId);
     }
 }
