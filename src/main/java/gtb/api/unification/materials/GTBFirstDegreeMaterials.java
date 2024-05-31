@@ -1380,11 +1380,13 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0x77528E).build().setFormula("Pb?", true);
 
+        CopperSulfide = new Material.Builder(getMaterialsId(), gregtechId("copper_sulfide"))
+                .dust()
+                .color(0x77528E).build().setFormula("CuSO2", true);
 
-
-
-
-
+        SodiumIodate = new Material.Builder(getMaterialsId(), gregtechId("sodium_iodate"))
+                .dust()
+                .color(0x77528E).build().setFormula("NaIO", true);
     }
 
     private static int getMaterialsId() {
