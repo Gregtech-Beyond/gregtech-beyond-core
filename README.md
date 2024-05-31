@@ -1,3 +1,13 @@
+### GREGTECH BEYOND:
+
+where to find the project and follow its development?
+curseforge:
+https://www.curseforge.com/minecraft/modpacks/gregtech-beyond
+discord:
+https://discord.gg/sG6NZ7NaeC
+other Projects
+https://github.com/Gregtech-Beyond
+
 ### INSTALLATION:
 
 Run `./gradlew setupDecompWorkspace`.
