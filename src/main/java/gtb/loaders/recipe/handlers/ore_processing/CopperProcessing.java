@@ -1,18 +1,16 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.NANO_CENTRAL_PROCESSING_UNIT_WAFER;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+
+import net.minecraft.item.ItemStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
 
 public class CopperProcessing {
 
@@ -72,7 +70,6 @@ public class CopperProcessing {
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedPurified, Chalcocite));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(ore, Chalcocite));
 
-
         ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(2000))
                 .input(dust, Chalcocite, 2)
@@ -128,10 +125,5 @@ public class CopperProcessing {
                 .duration(400)
                 .EUt(50)
                 .buildAndRegister();
-
-
-
-
-
     }
 }

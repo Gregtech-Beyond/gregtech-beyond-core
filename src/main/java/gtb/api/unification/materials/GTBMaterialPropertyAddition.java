@@ -4,7 +4,6 @@ import static gregtech.api.unification.material.Materials.*;
 
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.*;
-import gtb.loaders.recipe.handlers.ore_processing.GermaniumProcessing;
 
 public class GTBMaterialPropertyAddition {
 

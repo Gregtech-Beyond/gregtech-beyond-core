@@ -7,17 +7,13 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
 
 public class ArsenicProcessing {
 
     public static void init() {
-
-
         MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(1000))
                 .input(dust, Realgar, 2)
@@ -25,7 +21,6 @@ public class ArsenicProcessing {
                 .duration(120)
                 .EUt(10)
                 .buildAndRegister();
-
 
         CRYSTALLIZATION_RECIPES.recipeBuilder()
                 .fluidInputs(RealgarSolution.getFluid(1000))
@@ -52,13 +47,8 @@ public class ArsenicProcessing {
                 .EUt(70)
                 .buildAndRegister();
 
-
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Realgar, 2) });
-
-
-
-
     }
 }

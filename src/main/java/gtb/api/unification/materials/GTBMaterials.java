@@ -103,6 +103,8 @@ public class GTBMaterials {
     public static Material SheepBlood;
     public static Material Xerizin;
 
+    public static Material CopperSulfide;
+    public static Material SodiumIodate;
     public static Material SinteredSilver;
     public static Material SilverAlloy;
     public static Material RarestEarthMixture;
@@ -680,8 +682,6 @@ public class GTBMaterials {
     public static Material SodiumArsenateSulfuricSolution;
     public static Material NickelRareResidue;
     public static Material NickelSulfuricSolution;
-
-
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;

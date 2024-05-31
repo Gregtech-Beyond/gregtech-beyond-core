@@ -6,17 +6,15 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
-import net.minecraft.client.particle.ParticleEnchantmentTable;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidRegistry;
 
 public class NickelProcessing {
 
-    public static void init(){
-
+    public static void init() {
         ROASTER_RECIPES.recipeBuilder()
                 .input(dust, Garnierite, 2)
                 .output(dust, Nickel)
@@ -33,12 +31,9 @@ public class NickelProcessing {
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedPurified, Garnierite));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(ore, Garnierite));
 
-
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Garnierite, 2) });
-
-
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(9500))
@@ -92,7 +87,7 @@ public class NickelProcessing {
         BLAST_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(2000))
                 .input(dust, Sulfur, 2)
-                .input(dust,NickelSulfatePrecipitate, 12)
+                .input(dust, NickelSulfatePrecipitate, 12)
                 .output(dust, CopperFreeNickelSulfide, 12)
                 .output(dust, CopperSulfide, 2)
                 .fluidOutputs(SulfurDioxide.getFluid(1000))
@@ -129,9 +124,5 @@ public class NickelProcessing {
                 .duration(200)
                 .EUt(70)
                 .buildAndRegister();
-
-
-
-
     }
 }

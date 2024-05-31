@@ -1,24 +1,14 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ingredients.IntCircuitIngredient;
-import gregtech.api.unification.OreDictUnifier;
-
-
 public class LeadProcessing {
 
-    public static void init(){
-
+    public static void init() {
         EXTRACTOR_RECIPES.recipeBuilder()
                 .input(dust, Galena)
                 .fluidOutputs(MoltenGalena.getFluid(144))
@@ -49,15 +39,5 @@ public class LeadProcessing {
                 .duration(200)
                 .EUt(70)
                 .buildAndRegister();
-
-
-
-
-
-
-
-
-
-
     }
 }

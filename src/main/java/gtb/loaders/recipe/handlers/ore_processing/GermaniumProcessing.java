@@ -1,8 +1,5 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.unification.OreDictUnifier;
-
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -11,6 +8,9 @@ import static gregtech.common.items.MetaItems.SHAPE_EXTRUDER_INGOT;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
 
 public class GermaniumProcessing {
 
