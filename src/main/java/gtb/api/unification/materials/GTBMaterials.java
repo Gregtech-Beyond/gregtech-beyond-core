@@ -672,6 +672,15 @@ public class GTBMaterials {
     public static Material RoastedBornite;
     public static Material MalachiteSlag;
     public static Material SinteredMalachiteSlag;
+    public static Material CobaltSulfide;
+    public static Material NickelSulfide;
+    public static Material AmmoniaMetalSulfuricSolution;
+    public static Material CopperFreeNickelSulfide;
+    public static Material NickelSulfatePrecipitate;
+    public static Material SodiumIodide;
+    public static Material SodiumArsenateSulfuricSolution;
+    public static Material NickelRareResidue;
+    public static Material NickelSulfuricSolution;
 
 
 
