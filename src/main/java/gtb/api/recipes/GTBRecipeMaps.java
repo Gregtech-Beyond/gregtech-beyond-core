@@ -5,7 +5,6 @@ import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import scala.sys.process.ProcessBuilderImpl;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
@@ -173,17 +172,4 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> GRAVITY_SEPARATOR_RECIPES = new RecipeMap<>(
             "gravity_separator_recipes", 4, 4, 1, 1, new SimpleRecipeBuilder(), false);
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

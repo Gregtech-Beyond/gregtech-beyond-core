@@ -7,19 +7,13 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
-import gregtech.common.items.MetaItems;
-
 
 public class ZincProcessing {
 
-    public static void init(){
-
-
-
+    public static void init() {
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Sphalerite, 2) });
@@ -44,8 +38,5 @@ public class ZincProcessing {
                 .duration(20)
                 .EUt(7)
                 .buildAndRegister();
-
-
-
     }
 }

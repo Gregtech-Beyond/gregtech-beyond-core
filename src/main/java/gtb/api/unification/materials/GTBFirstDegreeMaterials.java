@@ -8,6 +8,7 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.info.MaterialIconSet;
+
 import gtb.api.unification.materials.info.GTBMaterialFlags;
 
 public class GTBFirstDegreeMaterials {
@@ -1482,132 +1483,129 @@ public class GTBFirstDegreeMaterials {
 
         CobaltSulfide = new Material.Builder(getMaterialsId(),
                 gregtechId("cobalt_sulfide"))
-                .dust()
-                .color(0x616AA2).build().setFormula("CoSO2", true);
+                        .dust()
+                        .color(0x616AA2).build().setFormula("CoSO2", true);
 
         NickelSulfide = new Material.Builder(getMaterialsId(),
                 gregtechId("nickel_sulfide"))
-                .dust()
-                .color(0x628CB1).build().setFormula("NiSO2", true);
+                        .dust()
+                        .color(0x628CB1).build().setFormula("NiSO2", true);
 
         UraniumSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("uranium_solution"))
-                .fluid()
-                .color(0x58935B).build().setFormula("U?", true);
+                        .fluid()
+                        .color(0x58935B).build().setFormula("U?", true);
 
         ThoriumPhosphateCakeSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("thorium_phosphate_cake_solution"))
-                .fluid()
-                .color(0x426845).build().setFormula("Th?", true);
+                        .fluid()
+                        .color(0x426845).build().setFormula("Th?", true);
 
         Alumina = new Material.Builder(getMaterialsId(),
                 gregtechId("alumina"))
-                .fluid()
-                .ingot()
-                .dust()
-                .color(0x8FABC2).build().setFormula("Al2O3", true);
+                        .fluid()
+                        .ingot()
+                        .dust()
+                        .color(0x8FABC2).build().setFormula("Al2O3", true);
 
         Zircon = new Material.Builder(getMaterialsId(),
                 gregtechId("zircon"))
-                .fluid()
-                .flags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED)
-                .ore()
-                .gem()
-                .dust()
-                .color(0x903939).build().setFormula("ZrSiO4", true);
+                        .fluid()
+                        .flags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED)
+                        .ore()
+                        .gem()
+                        .dust()
+                        .color(0x903939).build().setFormula("ZrSiO4", true);
 
         DigestedPyrochlore = new Material.Builder(getMaterialsId(),
                 gregtechId("digested_pyrochlore"))
-                .dust()
-                .color(0x3B1F17).build().setFormula("Ca2Nb2O7", true);
+                        .dust()
+                        .color(0x3B1F17).build().setFormula("Ca2Nb2O7", true);
 
         PyrochloreSlurry = new Material.Builder(getMaterialsId(),
                 gregtechId("pyrochlore_slurry"))
-                .fluid()
-                .color(0x48190B).build().setFormula("Ca2Nb2O7", true);
+                        .fluid()
+                        .color(0x48190B).build().setFormula("Ca2Nb2O7", true);
 
         ImpurePyrochloreSlurry = new Material.Builder(getMaterialsId(),
                 gregtechId("impure_pyrochlore_slurry"))
-                .fluid()
-                .color(0x541907).build().setFormula("Ca2Nb2O7", true);
+                        .fluid()
+                        .color(0x541907).build().setFormula("Ca2Nb2O7", true);
 
         ImpureZirconSlurry = new Material.Builder(getMaterialsId(),
                 gregtechId("impure_zircon_slurry"))
-                .fluid()
-                .color(0xB35B5B).build().setFormula("ZrSiO4", true);
+                        .fluid()
+                        .color(0xB35B5B).build().setFormula("ZrSiO4", true);
 
         SodiumEthylXanthate = new Material.Builder(getMaterialsId(),
                 gregtechId("sodium_ethyl_xanthate"))
-                .dust()
-                .color(0xBFB669).build().setFormula("CH3CH2OCS2Na", true);
+                        .dust()
+                        .color(0xBFB669).build().setFormula("CH3CH2OCS2Na", true);
 
         ZirconSlurry = new Material.Builder(getMaterialsId(),
                 gregtechId("zircon_slurry"))
-                .fluid()
-                .color(0xB25656).build().setFormula("ZrSiO4", true);
+                        .fluid()
+                        .color(0xB25656).build().setFormula("ZrSiO4", true);
 
         FusedZircon = new Material.Builder(getMaterialsId(),
                 gregtechId("fused_zircon"))
-                .dust()
-                .color(0x842222).build().setFormula("ZrSiO4", true);
+                        .dust()
+                        .color(0x842222).build().setFormula("ZrSiO4", true);
 
         ZirconylChlorideSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("zirconyl_chloride_solution"))
-                .fluid()
-                .color(0x4CAF50).build().setFormula("(ZrOCl2)(HCl)2(H2O)2", true);
+                        .fluid()
+                        .color(0x4CAF50).build().setFormula("(ZrOCl2)(HCl)2(H2O)2", true);
 
         HafniumExtractionMixture = new Material.Builder(getMaterialsId(),
                 gregtechId("hafnium_extraction_mixture"))
-                .fluid()
-                .color(0xEC407A).build();
+                        .fluid()
+                        .color(0xEC407A).build();
 
         PurifiedZirconylChlorideSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("purified_zirconyl_chloride_solution"))
-                .fluid()
-                .color(0x43A047).build().setFormula("(ZrOCl2)(HCl)2(H2O)2", true);
+                        .fluid()
+                        .color(0x43A047).build().setFormula("(ZrOCl2)(HCl)2(H2O)2", true);
 
         HafniumExtract = new Material.Builder(getMaterialsId(),
                 gregtechId("hafnium_extract"))
-                .fluid()
-                .color(0xC9A3CF).build();
+                        .fluid()
+                        .color(0xC9A3CF).build();
 
         HafniumSulfateSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("hafnium_sulfate_solution"))
-                .fluid()
-                .color(0xE1BEE7).build().setFormula("[Hf(SO4)2](H2O)2", true);
+                        .fluid()
+                        .color(0xE1BEE7).build().setFormula("[Hf(SO4)2](H2O)2", true);
 
         HafniumDioxide = new Material.Builder(getMaterialsId(),
                 gregtechId("hafnium_dioxide"))
-                .dust()
-                .color(0xCAC3CC).build().setFormula("HfO2", true);
+                        .dust()
+                        .color(0xCAC3CC).build().setFormula("HfO2", true);
 
         ZirconiumBase = new Material.Builder(getMaterialsId(),
                 gregtechId("zirconium_base"))
-                .dust()
-                .color(0xFAF4C2).build().setFormula("Zr?", true);
+                        .dust()
+                        .color(0xFAF4C2).build().setFormula("Zr?", true);
 
         ImpureCelestineSlurry = new Material.Builder(getMaterialsId(),
                 gregtechId("impure_celestine_slurry"))
-                .dust()
-                .color(0x709BBD).build().setFormula("((?)(SrS))(H2O)(SiO2)", true);
+                        .dust()
+                        .color(0x709BBD).build().setFormula("((?)(SrS))(H2O)(SiO2)", true);
 
         CelestineSlurry = new Material.Builder(getMaterialsId(),
                 gregtechId("celestine_slurry"))
-                .dust()
-                .color(0x81A4BF).build();
+                        .dust()
+                        .color(0x81A4BF).build();
 
         StrontiumSulfideSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("strontium_sulfide_solution"))
-                .dust()
-                .color(0x4F5A63).build().setFormula("(SrS)(H2O)", true);
+                        .dust()
+                        .color(0x4F5A63).build().setFormula("(SrS)(H2O)", true);
 
         StrontiumCarbonate = new Material.Builder(getMaterialsId(),
                 gregtechId("strontium_carbonate"))
-                .dust()
-                .color(0x4CAF50).build().setFormula("SrCO3", true);
-
-
-
+                        .dust()
+                        .color(0x4CAF50).build().setFormula("SrCO3", true);
     }
 
     private static int getMaterialsId() {

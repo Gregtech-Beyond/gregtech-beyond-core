@@ -7,6 +7,7 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
+
 import gtb.api.unification.materials.info.GTBMaterialFlags;
 
 public class GTBUnknownCompositionMaterials {

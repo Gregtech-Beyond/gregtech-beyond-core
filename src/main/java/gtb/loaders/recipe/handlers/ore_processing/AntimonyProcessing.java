@@ -6,20 +6,15 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
-import gregtech.api.unification.material.MarkerMaterials;
-
-import gtb.common.item.GTBMetaItems;
-import net.minecraft.item.ItemStack;
 
 public class AntimonyProcessing {
-    
-    public static void init(){
 
-
-
+    public static void init() {
         GTRecipeHandler.removeRecipesByInputs(CENTRIFUGE_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Stibnite, 5) });
@@ -35,7 +30,6 @@ public class AntimonyProcessing {
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedCentrifuged, Stibnite));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedPurified, Stibnite));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(ore, Stibnite));
-
 
         ROASTER_RECIPES.recipeBuilder()
                 .input(dust, AntimonyTrioxide, 5)
@@ -53,10 +47,5 @@ public class AntimonyProcessing {
                 .duration(200)
                 .EUt(20)
                 .buildAndRegister();
-        
-        
-        
-        
-
     }
 }

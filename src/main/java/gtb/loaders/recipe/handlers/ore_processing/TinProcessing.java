@@ -1,11 +1,5 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.OreDictUnifier;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -13,10 +7,15 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.OreDictUnifier;
+
 public class TinProcessing {
 
-    public static void init(){
-
+    public static void init() {
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustImpure, CassiteriteSand));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, CassiteriteSand));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustPure, CassiteriteSand));
@@ -66,9 +65,5 @@ public class TinProcessing {
                 .duration(200)
                 .EUt(7)
                 .buildAndRegister();
-
-
-
-
     }
 }

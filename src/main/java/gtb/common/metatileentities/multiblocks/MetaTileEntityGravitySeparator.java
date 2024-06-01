@@ -1,4 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -19,7 +20,6 @@ import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMetalCasing;
-import gregtech.common.blocks.BlockMultiblockCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
@@ -43,9 +43,9 @@ public class MetaTileEntityGravitySeparator extends RecipeMapMultiblockControlle
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~P~P","~~~~","CCCC","CCCC","CCCC","CCCC","CCCC")
-                .aisle("~PPP","~P~P","CCCC","C~~C","CDDC","C~~C","CCSC")
-                .aisle("~~~~","~~~~","CCCC","CDDC","C~~C","CDDC","CCCC")
+                .aisle("~P~P", "~~~~", "CCCC", "CCCC", "CCCC", "CCCC", "CCCC")
+                .aisle("~PPP", "~P~P", "CCCC", "C~~C", "CDDC", "C~~C", "CCSC")
+                .aisle("~~~~", "~~~~", "CCCC", "CDDC", "C~~C", "CDDC", "CCCC")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))

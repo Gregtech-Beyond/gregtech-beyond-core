@@ -10,7 +10,6 @@ import static gtb.common.item.GTBMetaItems.*;
 public class RandomRecipes {
 
     public static void init() {
-
         SOLAR_THERMAL_CONCENTRATOR_RECIPES.recipeBuilder()
                 .circuitMeta(1)
                 .duration(20)

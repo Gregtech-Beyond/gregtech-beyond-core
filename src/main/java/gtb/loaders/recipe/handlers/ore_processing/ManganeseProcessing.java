@@ -13,9 +13,7 @@ import gregtech.api.unification.OreDictUnifier;
 
 public class ManganeseProcessing {
 
-    public static void init(){
-
-
+    public static void init() {
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, Pyrolusite, 3));
 
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustImpure, Pyrolusite));
@@ -42,16 +40,5 @@ public class ManganeseProcessing {
                 .duration(200)
                 .EUt(7)
                 .buildAndRegister();
-
-
-
-
-
-
-
-
-
-
     }
-
 }

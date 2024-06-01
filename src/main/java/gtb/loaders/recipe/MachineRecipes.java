@@ -72,14 +72,6 @@ public class MachineRecipes {
                 .EUt(800)
                 .buildAndRegister();
 
-        ModHandler.addShapedRecipe("water_tank_machine", GTBMetaTileEntities.WATER_TANK.getStackForm(),
-                "WPW", "FSF", "WCW",
-                'W', new UnificationEntry(plate, Wood),
-                'C', new UnificationEntry(OrePrefix.circuit, MarkerMaterials.Tier.LV),
-                'P', ELECTRIC_PUMP_LV.getStackForm(),
-                'S', STEEL_BORDERED_WOODEN_CASING,
-                'F', new UnificationEntry(frameGt, Steel));
-
         ModHandler.addShapedRecipe("clarifier_machine", GTBMetaTileEntities.CLARIFIER.getStackForm(),
                 "PCP", "UMU", "PCP",
                 'M', MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.EV),

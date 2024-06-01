@@ -2,7 +2,6 @@ package gtb.api.unification.materials;
 
 import gregtech.api.unification.material.Material;
 
-import gtb.api.unification.materials.info.GTBMaterialFlags;
 import gtb.api.unification.materials.info.GTBMaterialIconSet;
 
 public class GTBMaterials {
@@ -718,7 +717,6 @@ public class GTBMaterials {
     public static Material CelestineSlurry;
     public static Material StrontiumSulfideSolution;
     public static Material StrontiumCarbonate;
-
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;

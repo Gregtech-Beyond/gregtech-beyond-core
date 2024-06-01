@@ -1,10 +1,5 @@
 package gtb.loaders.recipe;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.OreDictUnifier;
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -12,6 +7,9 @@ import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
+
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.OreDictUnifier;
 
 public final class Metallurgy {
 
@@ -182,8 +180,6 @@ public final class Metallurgy {
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, KaptonK));
 
-
-
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustImpure, Platinum));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Platinum));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustPure, Platinum));
@@ -191,7 +187,6 @@ public final class Metallurgy {
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedCentrifuged, Platinum));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedPurified, Platinum));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(ore, Platinum));
-
 
         BLAST_RECIPES.recipeBuilder()
                 .input(dust, Platinum)
@@ -205,8 +200,10 @@ public final class Metallurgy {
         ModHandler.addSmeltingRecipe(OreDictUnifier.get(dust, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
         ModHandler.addSmeltingRecipe(OreDictUnifier.get(dustPure, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
         ModHandler.addSmeltingRecipe(OreDictUnifier.get(crushed, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
-        ModHandler.addSmeltingRecipe(OreDictUnifier.get(crushedCentrifuged, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
-        ModHandler.addSmeltingRecipe(OreDictUnifier.get(crushedPurified, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
+        ModHandler.addSmeltingRecipe(OreDictUnifier.get(crushedCentrifuged, Platinum),
+                OreDictUnifier.get(ingot, PlatinumRaw));
+        ModHandler.addSmeltingRecipe(OreDictUnifier.get(crushedPurified, Platinum),
+                OreDictUnifier.get(ingot, PlatinumRaw));
         ModHandler.addSmeltingRecipe(OreDictUnifier.get(ore, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
 
         MACERATOR_RECIPES.recipeBuilder()
@@ -216,7 +213,6 @@ public final class Metallurgy {
                 .duration(80)
                 .buildAndRegister();
 
-
         VACUUM_FURNACE_RECIPES.recipeBuilder()
                 .input(dust, BorosilicateGlass)
                 .output(ingot, BorosilicateGlass)
@@ -224,9 +220,5 @@ public final class Metallurgy {
                 .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, BorosilicateGlass));
-
-
-
-
     }
 }

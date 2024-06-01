@@ -1,9 +1,5 @@
 package gtb.loaders.recipe;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.unification.OreDictUnifier;
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -203,6 +199,5 @@ public class OrganicChemistry {
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
-
     }
 }

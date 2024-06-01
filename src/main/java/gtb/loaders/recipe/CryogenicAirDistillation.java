@@ -1,15 +1,14 @@
 package gtb.loaders.recipe;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.unification.OreDictUnifier;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
 
 public class CryogenicAirDistillation {
 
@@ -251,15 +250,15 @@ public class CryogenicAirDistillation {
 
         GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
                 new FluidStack[] {
-                         LiquidEnderAir.getFluid(200000)});
+                        LiquidEnderAir.getFluid(200000) });
 
         GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
                 new FluidStack[] {
-                        LiquidAir.getFluid(50000)});
+                        LiquidAir.getFluid(50000) });
 
         GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
                 new FluidStack[] {
-                        LiquidNetherAir.getFluid(100000)});
+                        LiquidNetherAir.getFluid(100000) });
 
         VACUUM_RECIPES.recipeBuilder()
                 .fluidInputs(Air.getFluid(1000))

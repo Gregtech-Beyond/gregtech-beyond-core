@@ -27,5 +27,4 @@ public class GTBMaterialFlags {
     public static final MaterialFlag GENERATE_BOULE = new MaterialFlag.Builder("generate_boule")
             .requireProps(PropertyKey.GEM)
             .build();
-    }
 }

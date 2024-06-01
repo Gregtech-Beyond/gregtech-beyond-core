@@ -1,10 +1,5 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.unification.OreDictUnifier;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -13,10 +8,15 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
+
 public class PitchblendeProcessing {
 
     public static void init() {
-
         MIXER_RECIPES.recipeBuilder()
                 .fluidOutputs(ImpurePitchblendeSlurry.getFluid(1000))
                 .fluidInputs(SulfuricAcid.getFluid(1000))
@@ -111,7 +111,7 @@ public class PitchblendeProcessing {
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Uraninite, 3) },
                 new FluidStack[] { HydrofluoricAcid.getFluid(4000),
-                                    Fluorine.getFluid(2000)});
+                        Fluorine.getFluid(2000) });
 
         BURNER_REACTOR_RECIPES.recipeBuilder()
                 .input(dust, UraniumResidues, 2)
@@ -154,7 +154,5 @@ public class PitchblendeProcessing {
                 .duration(200)
                 .EUt(700)
                 .buildAndRegister();
-
-
     }
 }

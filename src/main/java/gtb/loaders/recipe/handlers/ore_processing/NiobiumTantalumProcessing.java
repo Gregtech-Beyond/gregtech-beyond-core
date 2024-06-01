@@ -9,11 +9,12 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.api.unification.materials.info.GTBMaterialIconType.*;
 
-import gtb.api.unification.ore.GTBOrePrefix;
 import net.minecraft.item.ItemStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
+
+import gtb.api.unification.ore.GTBOrePrefix;
 
 public class NiobiumTantalumProcessing {
 
@@ -328,12 +329,12 @@ public class NiobiumTantalumProcessing {
                 .buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
-                new ItemStack[]{
-                        OreDictUnifier.get(dust, Tantalite, 9)});
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, Tantalite, 9) });
 
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
-                new ItemStack[]{
-                        OreDictUnifier.get(dust, Pyrochlore, 11)});
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, Pyrochlore, 11) });
 
         GRAVITY_SEPARATOR_RECIPES.recipeBuilder()
                 .input(dust, Pyrochlore, 1)

@@ -8,16 +8,15 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
-import gregtech.api.recipes.ModHandler;
-import gregtech.common.items.MetaItems;
+import java.util.function.Predicate;
+
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipe;
+
+import gregtech.api.recipes.ModHandler;
 
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.BlockCoolingCoil;
-import net.minecraft.item.crafting.IRecipe;
-import org.apache.groovy.parser.antlr4.GroovyParser;
-
-import java.util.function.Predicate;
 
 public class Electronics {
 
@@ -81,7 +80,6 @@ public class Electronics {
                 .buildAndRegister();
 
         ModHandler.removeRecipeByOutput((Predicate<IRecipe>) ITEM_FILTER);
-
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(foil, Zinc, 16)

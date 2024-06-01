@@ -70,11 +70,6 @@ public class CommonProxy {
         GTBMaterials.init();
     }
 
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public static void registerMaterialsPost(PostMaterialEvent event) {
-        GTBMaterialFlags.add();
-    }
-
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
         ItemBlock itemBlock = producer.apply(block);
         itemBlock.setRegistryName(Objects.requireNonNull(block.getRegistryName()));

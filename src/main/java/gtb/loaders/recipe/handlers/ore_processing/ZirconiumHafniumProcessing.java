@@ -10,9 +10,7 @@ import gtb.api.unification.ore.GTBOrePrefix;
 
 public class ZirconiumHafniumProcessing {
 
-    public static void init(){
-
-
+    public static void init() {
         GRAVITY_SEPARATOR_RECIPES.recipeBuilder()
                 .input(dust, Zircon)
                 .output(GTBOrePrefix.sifted, Zircon, 1)
@@ -122,10 +120,5 @@ public class ZirconiumHafniumProcessing {
                 .duration(100)
                 .EUt(80)
                 .buildAndRegister();
-
-
-
-
-
     }
 }
