@@ -18,11 +18,9 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 import gregtech.api.block.VariantItemBlock;
 import gregtech.api.unification.material.event.MaterialEvent;
-import gregtech.api.unification.material.event.PostMaterialEvent;
 
 import gtb.GregtechBeyondCore;
 import gtb.api.unification.materials.GTBMaterials;
-import gtb.api.unification.materials.info.GTBMaterialFlags;
 import gtb.api.utils.GTBLog;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.loaders.recipe.GTBRecipeLoader;

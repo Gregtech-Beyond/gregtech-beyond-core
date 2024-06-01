@@ -49,7 +49,6 @@ public final class GTBRecipeLoader {
         GermaniumProcessing.init();
         MolybdenumProcessing.init();
         ThalliumProcessing.init();
-        RubidiumProcessing.init();
         Catalysts.init();
         MonaziteProcessing.init();
         NaquadahProcessing.init();
@@ -84,5 +83,14 @@ public final class GTBRecipeLoader {
         NickelProcessing.init();
         PitchblendeProcessing.init();
         ManganeseProcessing.init();
+        ZirconiumHafniumProcessing.init();
+        ZincProcessing.init();
+        TinProcessing.init();
+        StrontiumProcessing.init();
+        LeadProcessing.init();
+        CopperProcessing.init();
+        BasicOreProcessingOverhaul.init();
+        ArsenicProcessing.init();
+        AntimonyProcessing.init();
     }
 }
