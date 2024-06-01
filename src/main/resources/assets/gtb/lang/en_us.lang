@@ -1,3 +1,6 @@
+#Ore Prefixes
+
+item.material.oreprefix.sifted=Sifted %s Dust
 
 # Blocks
 tile.gtb_multiblock_active_casing.high_energy_coil.name=High Energy Coil
@@ -22,14 +25,15 @@ tile.gtb_wire_coil.eternal.name=Eternal Coil Block
 tile.gtb_wire_coil_2.temporally_constrained_anti_matter.name=Temporally Constrained Anti-Matter Coil Block
 tile.gtb_wire_coil_2.cataclysm_induced_mixed_matter.name=Cataclysm Induced Mixed-Matter Coil Block
 tile.gtb_multiblock_casing.basic_structural_casing.name=Basic Structural Casing
-tile.cruicible.boron_nitride_cruicible.name=Boron Nitride Cruicible
-tile.cruicible.graphite_cruicible.name=Graphite Cruicible
-tile.cruicible.tungsten_cruicible.name=Tungsten Cruicible
-tile.cruicible.quartz_cruicible.name=Quartz Cruicible
+tile.crucible.boron_nitride_crucible.name=Boron Nitride Crucible
+tile.crucible.graphite_crucible.name=Graphite Crucible
+tile.crucible.tungsten_crucible.name=Tungsten Crucible
+tile.crucible.quartz_crucible.name=Quartz Crucible
 tile.gtb_multiblock_casing.silicon_carbide_casing.name=Silicon Carbide Casing
 tile.gtb_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Casing
 tile.gtb_multiblock_casing.substrate_casing.name=Substrate Casing
 tile.cooling_coil.silver_alloy.name=Silver Alloy Cooling Coil
+tile.gtb_multiblock_casing.gravity_separator_rotor_block.name=Gravity Separator Rotor Block
 
 # Recipemaps
 recipemap.water_tank_recipes.name=Water Collection
@@ -75,7 +79,7 @@ recipemap.pressure_swing_adsorber_recipes.name=Pressure Swing Adsorption
 recipemap.dilution_refrigerator_recipes.name=Dilution Refrigeration
 recipemap.burner_reactor_recipes.name=Burner Reaction
 recipemap.dissolution_tank_recipes.name=Dissolution
-
+recipemap.gravity_separator_recipes.name=Gravity Separation Recipes
 # Singleblock machinery
 
 gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator
@@ -387,6 +391,29 @@ metaitem.sintered_silver_coil.name=Sintered Silver Coil
 
 #Materials
 
+gregtech.material.uranium_solution=Uranium Solution
+gregtech.material.thorium_phosphate_cake_solution=Thorium Phosphate Cake Solution
+gregtech.material.alumina=Alumin
+gregtech.material.zircon=Zircon
+gregtech.material.pyrochlore_slurry=Pyrochlore Slurry
+gregtech.material.impure_pyrochlore_slurry=Impure Pyrochlore Slurry
+gregtech.material.impure_zircon_slurry=Impure Zircon Slurry
+gregtech.material.zircon_slurry=Zircon Slurry
+gregtech.material.zirconyl_chloride_solution=Zirconyl Chloride Solution
+gregtech.material.hafnium_extraction_mixture=Hafnium Extraction Mixture
+gregtech.material.purified_zirconyl_chloride_solution=Purified Zirconyl Chloride Solution
+gregtech.material.hafnium_extract=Hafnium Extract
+gregtech.material.hafnium_sulfate_solution=Hafnium Sulfate Solution
+gregtech.material.impure_celestine_slurry=Impure Celestine Slurry
+gregtech.material.celestine_slurry=Celestine Slurry
+gregtech.material.strontium_sulfide_solution=Strontium Sulfide Solution
+gregtech.material.digested_pyrochlore=Digested Pyrochlore
+gregtech.material.sodium_ethyl_xanthate=Sodium Ethyl Xanthate
+gregtech.material.fused_zircon=Fused Zircon
+gregtech.material.hafnium_dioxide=Hafnium Dioxide
+gregtech.material.zirconium_base=Zirconium Base
+gregtech.material.strontium_carbonate=Strontium Carbonate
+gregtech.material.celestine=Celestine
 gregtech.material.cobalt_sulfide=Cobalt Sulfide
 gregtech.material.nickel_sulfide=Nickel Sulfide
 gregtech.material.oxidized_ortho_xylene_mixture=Oxidized Ortho-Xylene Mixture
