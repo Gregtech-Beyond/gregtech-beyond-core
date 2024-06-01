@@ -51,20 +51,25 @@ public final class GTBRecipeLoader {
         ThalliumProcessing.init();
         RubidiumProcessing.init();
         Catalysts.init();
-        MonaziteProcessing.NaquadahLine.init();
+        MonaziteProcessing.init();
+        NaquadahProcessing.init();
         NaturalGasLine.init();
         OilLine.init();
         OrganicChemistry.init();
-        RubidiumProcessing.PlatinumLine.init();
-        MonaziteProcessing.TungstenLine.init();
+        RubidiumProcessing.init();
+        PlatinumProcessing.init();
+        MonaziteProcessing.init();
+        TungstenProcessing.init();
         XylenolLine.init();
         MaterialBenefication.init();
         RandomRecipes.init();
         BiologyLines.init();
-        MolybdenumProcessing.AdamantiumLine.init();
+        MolybdenumProcessing.init();
+        AdamantiumProcessing.init();
         Metallurgy.init();
         Photolithography.init();
-        GermaniumProcessing.DamascusSteelLine.init();
+        GermaniumProcessing.init();
+        DamascusSteelProcessing.init();
         MachineRecipes.init();
         BrineLine.init();
         BastnasiteProcessing.init();
@@ -76,5 +81,8 @@ public final class GTBRecipeLoader {
         AluminiumProcessing.init();
         TitaniumProcessing.init();
         ChromeProcessing.init();
+        NickelProcessing.init();
+        PitchblendeProcessing.init();
+        ManganeseProcessing.init();
     }
 }
