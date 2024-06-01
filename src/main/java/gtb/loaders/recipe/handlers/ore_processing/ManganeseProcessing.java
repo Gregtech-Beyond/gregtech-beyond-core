@@ -23,22 +23,5 @@ public class ManganeseProcessing {
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedCentrifuged, Pyrolusite));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedPurified, Pyrolusite));
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(ore, Pyrolusite));
-
-        ROASTER_RECIPES.recipeBuilder()
-                .input(dust, Pyrolusite, 3)
-                .circuitMeta(0)
-                .output(dust, Manganese)
-                .duration(200)
-                .EUt(7)
-                .buildAndRegister();
-
-        ROASTER_RECIPES.recipeBuilder()
-                .input(dust, Pyrolusite, 3)
-                .circuitMeta(1)
-                .fluidOutputs(Steam.getFluid(1000))
-                .output(dust, Manganese)
-                .duration(200)
-                .EUt(7)
-                .buildAndRegister();
     }
 }
