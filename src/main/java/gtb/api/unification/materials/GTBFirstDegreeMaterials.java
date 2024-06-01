@@ -1606,6 +1606,16 @@ public class GTBFirstDegreeMaterials {
                 gregtechId("strontium_carbonate"))
                         .dust()
                         .color(0x4CAF50).build().setFormula("SrCO3", true);
+
+        ImpureTantaliteSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("impure_tantalite_slurry"))
+                        .fluid()
+                        .color(0x74321D).build().setFormula("MnTa2O6(H2O)?", true);
+
+        TantaliteSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("tantalite_slurry"))
+                        .fluid()
+                        .color(0x593428).build().setFormula("MnTa2O6(H2O)", true);
     }
 
     private static int getMaterialsId() {

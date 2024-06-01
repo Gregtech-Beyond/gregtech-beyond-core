@@ -154,7 +154,7 @@ public class NiobiumTantalumProcessing {
 
         // MnTa2O6 + BaO2 + NaOH -> 0.5H2O + (Fe2O3)(NaO)Ta2O5 + (BaO)(ZrO2)(TiO2)(SiO2)
         BLAST_RECIPES.recipeBuilder().duration(340).EUt(120).blastFurnaceTemp(3400)
-                .input(dust, Tantalite, 5)
+                .input(GTBOrePrefix.floated, Tantalite, 5)
                 .input(dust, BariumPeroxide, 3)
                 .input(dust, SodiumHydroxide, 3)
                 .fluidOutputs(Water.getFluid(1000))
@@ -375,6 +375,39 @@ public class NiobiumTantalumProcessing {
                 .input(GTBOrePrefix.floated, Pyrochlore)
                 .output(dust, DigestedPyrochlore)
                 .duration(200)
+                .EUt(90)
+                .buildAndRegister();
+
+        GRAVITY_SEPARATOR_RECIPES.recipeBuilder()
+                .input(dust, Tantalite, 1)
+                .output(GTBOrePrefix.sifted, Tantalite, 1)
+                .output(dust, Calcite)
+                .duration(200)
+                .EUt(90)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .input(GTBOrePrefix.sifted, Tantalite, 4)
+                .fluidInputs(DistilledWater.getFluid(1000))
+                .fluidOutputs(ImpureTantaliteSlurry.getFluid(1000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        FROTH_FLOTATION_UNIT_RECIPES.recipeBuilder()
+                .fluidInputs(ImpureTantaliteSlurry.getFluid(1000))
+                .notConsumable(AmidoEthylAlkylImidazole.getFluid(100))
+                .notConsumable(dust, SodiumEthylXanthate, 2)
+                .fluidOutputs(TantaliteSlurry.getFluid(1000))
+                .duration(400)
+                .EUt(80)
+                .buildAndRegister();
+
+        CLARIFIER_RECIPES.recipeBuilder()
+                .fluidInputs(TantaliteSlurry.getFluid(1000))
+                .fluidOutputs(WasteWater.getFluid(1000))
+                .output(GTBOrePrefix.floated, Tantalite, 16)
+                .duration(700)
                 .EUt(90)
                 .buildAndRegister();
     }
