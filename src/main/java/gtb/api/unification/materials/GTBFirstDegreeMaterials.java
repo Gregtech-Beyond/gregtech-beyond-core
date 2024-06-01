@@ -8,6 +8,7 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.info.MaterialIconSet;
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 
 public class GTBFirstDegreeMaterials {
 
@@ -1237,10 +1238,6 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0xFDD835).build().setFormula("SO2?", true);
 
-        Cryolite = new Material.Builder(getMaterialsId(), gregtechId("cryolite"))
-                .fluid()
-                .color(0x82A6C4).build().setFormula("Al(O2)", true);
-
         GadoliniumLeach = new Material.Builder(getMaterialsId(), gregtechId("gadolinium_leach"))
                 .fluid()
                 .color(0xEEDBDB).build().setFormula("Gd?", true);
@@ -1502,6 +1499,37 @@ public class GTBFirstDegreeMaterials {
                 gregtechId("thorium_phosphate_cake_solution"))
                 .fluid()
                 .color(0x426845).build().setFormula("Th?", true);
+
+        Alumina = new Material.Builder(getMaterialsId(),
+                gregtechId("alumina"))
+                .fluid()
+                .ingot()
+                .dust()
+                .color(0x8FABC2).build().setFormula("Al2O3", true);
+
+        RedZircon = new Material.Builder(getMaterialsId(),
+                gregtechId("red_zircon"))
+                .fluid()
+                .flags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED)
+                .ore()
+                .gem()
+                .dust()
+                .color(0x903939).build().setFormula("ZrSiO4", true);
+
+        DigestedPyrochlore = new Material.Builder(getMaterialsId(),
+                gregtechId("digested_pyrochlore"))
+                .dust()
+                .color(0x3B1F17).build().setFormula("Ca2Nb2O7", true);
+
+        PyrochloreSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("pyrochlore_slurry"))
+                .fluid()
+                .color(0x48190B).build().setFormula("Ca2Nb2O7", true);
+
+        ImpurePyrochloreSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("impure_pyrochlore_slurry"))
+                .fluid()
+                .color(0x541907).build().setFormula("Ca2Nb2O7", true);
 
 
 

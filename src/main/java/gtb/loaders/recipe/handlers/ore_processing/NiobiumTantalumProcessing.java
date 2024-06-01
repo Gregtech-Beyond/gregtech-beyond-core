@@ -7,7 +7,9 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.api.unification.materials.info.GTBMaterialIconType.*;
 
+import gtb.api.unification.ore.GTBOrePrefix;
 import net.minecraft.item.ItemStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
@@ -195,7 +197,7 @@ public class NiobiumTantalumProcessing {
                 .buildAndRegister();
 
         BLAST_RECIPES.recipeBuilder().duration(350).EUt(480).blastFurnaceTemp(2700)
-                .input(dust, Pyrochlore, 6)
+                .input(dust, DigestedPyrochlore, 1)
                 .fluidInputs(SulfuricAcid.getFluid(2000))
                 .duration(200).EUt(VA[EV])
                 .output(dust, AcidicLeachedPyrochlore, 6)
@@ -326,11 +328,53 @@ public class NiobiumTantalumProcessing {
                 .buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
-                new ItemStack[] {
-                        OreDictUnifier.get(dust, Tantalite, 9) });
+                new ItemStack[]{
+                        OreDictUnifier.get(dust, Tantalite, 9)});
 
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
-                new ItemStack[] {
-                        OreDictUnifier.get(dust, Pyrochlore, 11) });
+                new ItemStack[]{
+                        OreDictUnifier.get(dust, Pyrochlore, 11)});
+
+        GRAVITY_SEPARATOR_RECIPES.recipeBuilder()
+                .input(dust, Pyrochlore, 1)
+                .output(GTBOrePrefix.sifted, Pyrochlore, 1)
+                .output(dust, Calcite)
+                .duration(200)
+                .EUt(90)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(DistilledWater.getFluid(1000))
+                .input(GTBOrePrefix.sifted, Pyrochlore, 4)
+                .fluidOutputs(ImpurePyrochloreSlurry.getFluid(1000))
+                .duration(80)
+                .EUt(120)
+                .buildAndRegister();
+
+        FROTH_FLOTATION_UNIT_RECIPES.recipeBuilder()
+                .fluidInputs(ImpurePyrochloreSlurry.getFluid(1000))
+                .notConsumable(AmidoEthylAlkylImidazole.getFluid(100))
+                .notConsumable(MethylIsobutylCarbonyl.getFluid(100))
+                .notConsumable(dust, Calcite)
+                .fluidOutputs(PyrochloreSlurry.getFluid(1000))
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        CLARIFIER_RECIPES.recipeBuilder()
+                .fluidInputs(PyrochloreSlurry.getFluid(1000))
+                .output(GTBOrePrefix.floated, Pyrochlore, 16)
+                .fluidOutputs(WasteWater.getFluid(1000))
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(SulfuricAcid.getFluid(100))
+                .input(GTBOrePrefix.floated, Pyrochlore)
+                .output(dust, DigestedPyrochlore)
+                .duration(200)
+                .EUt(90)
+                .buildAndRegister();
     }
 }

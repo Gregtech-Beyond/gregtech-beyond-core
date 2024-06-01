@@ -698,7 +698,11 @@ public class GTBMaterials {
     public static Material UraniumDioxide;
     public static Material UraniumSolution;
     public static Material ThoriumPhosphateCakeSolution;
-
+    public static Material RedZircon;
+    public static Material Celestine;
+    public static Material ImpurePyrochloreSlurry;
+    public static Material DigestedPyrochlore;
+    public static Material PyrochloreSlurry;
 
 
     // Organic Chemistry Materials
@@ -756,7 +760,6 @@ public class GTBMaterials {
 
     public static void init() {
         GTBMaterialPropertyAddition.init();
-        GTBMaterialFlags.add();
         GTBMaterialIconSet.set();
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();

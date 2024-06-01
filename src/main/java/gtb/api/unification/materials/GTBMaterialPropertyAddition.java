@@ -1,9 +1,9 @@
 package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
-
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.*;
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 
 public class GTBMaterialPropertyAddition {
 
@@ -28,6 +28,8 @@ public class GTBMaterialPropertyAddition {
         BandedIron.setProperty(PropertyKey.INGOT, new IngotProperty());
         PlatinumRaw.setProperty(PropertyKey.INGOT, new IngotProperty());
         Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Pyrochlore.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
+        Tantalite.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
 
         // Pre-Registered Materials ????????
 
