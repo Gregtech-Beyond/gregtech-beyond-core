@@ -1,5 +1,12 @@
 package gtb.loaders.recipe;
 
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
+import static gregtech.api.recipes.RecipeMaps.DISTILLATION_RECIPES;
+import static gregtech.api.recipes.RecipeMaps.ELECTROLYZER_RECIPES;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
@@ -242,5 +249,17 @@ public class CryogenicAirDistillation {
                 .duration(800)
                 .EUt(8)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] {
+                         LiquidEnderAir.getFluid(200000)});
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] {
+                        LiquidAir.getFluid(50000)});
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] {
+                        LiquidNetherAir.getFluid(100000)});
     }
 }
