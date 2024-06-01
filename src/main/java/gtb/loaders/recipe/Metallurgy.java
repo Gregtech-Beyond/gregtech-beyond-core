@@ -217,6 +217,15 @@ public final class Metallurgy {
                 .buildAndRegister();
 
 
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, BorosilicateGlass)
+                .output(ingot, BorosilicateGlass)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, BorosilicateGlass));
+
+
 
 
     }
