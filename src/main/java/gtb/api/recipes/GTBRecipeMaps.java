@@ -5,12 +5,10 @@ import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import scala.sys.process.ProcessBuilderImpl;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
-
-    public static final RecipeMap<NoEnergyRecipeBuilder> WATER_TANK_RECIPES = new RecipeMap<>("water_tank_recipes",
-            1, 0, 0, 1, new NoEnergyRecipeBuilder(), false);
 
     public static final RecipeMap<NoEnergyRecipeBuilder> SOLAR_THERMAL_CONCENTRATOR_RECIPES = new RecipeMap<>(
             "solar_thermal_concentrator_recipes",
@@ -175,7 +173,6 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> GRAVITY_SEPARATOR_RECIPES = new RecipeMap<>(
             "gravity_separator_recipes", 4, 4, 1, 1, new SimpleRecipeBuilder(), false);
-
 
 
 

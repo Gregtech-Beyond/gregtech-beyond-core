@@ -18,7 +18,6 @@ import lombok.NoArgsConstructor;
 public final class GTBMetaTileEntities {
 
     public static MetaTileEntityNanoscaleFabricator NANOSCALE_FABRICATOR;
-    public static MetaTileEntityWaterTank WATER_TANK;
     public static MetaTileEntitySolarThermalConcentrator SOLAR_THERMAL_CONCENTRATOR;
     public static MetaTileEntityBacterialVat BACTERIAL_VAT;
     public static MetaTileEntityVacuumFurnace VACUUM_FURNACE;
@@ -66,7 +65,6 @@ public final class GTBMetaTileEntities {
 
     public static void init() {
         // Multiblocks
-        WATER_TANK = registerMetaTileEntity(3000, new MetaTileEntityWaterTank(gtb("water_tank")));
         SOLAR_THERMAL_CONCENTRATOR = registerMetaTileEntity(3001,
                 new MetaTileEntitySolarThermalConcentrator(gtb("solar_thermal_concentrator")));
         BACTERIAL_VAT = registerMetaTileEntity(3002, new MetaTileEntityBacterialVat(gtb("bacterial_vat")));
@@ -162,5 +160,6 @@ public final class GTBMetaTileEntities {
 
         registerSimpleMetaTileEntity(DRYER, 4150, "dryer", GTBRecipeMaps.DRYER_RECIPES,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
     }
 }

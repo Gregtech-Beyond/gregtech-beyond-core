@@ -10,8 +10,6 @@ import static gtb.common.item.GTBMetaItems.*;
 public class RandomRecipes {
 
     public static void init() {
-        WATER_TANK_RECIPES.recipeBuilder().circuitMeta(1).duration(20).fluidOutputs(Water.getFluid(200))
-                .buildAndRegister();
 
         SOLAR_THERMAL_CONCENTRATOR_RECIPES.recipeBuilder()
                 .circuitMeta(1)
