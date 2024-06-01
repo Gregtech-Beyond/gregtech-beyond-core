@@ -7,6 +7,7 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 
 public class GTBUnknownCompositionMaterials {
 
@@ -748,7 +749,7 @@ public class GTBUnknownCompositionMaterials {
                         .color(0x33691E).build().setFormula("?2", true);
 
         MuddyMonaziteOreByproducts = new Material.Builder(getMaterialsId(), gregtechId("muddy_monazite_ore_byproducts"))
-                .fluid()
+                .dust()
                 .color(0x5C423A).build().setFormula("???", true);
 
         CeriumOxideFiltrate = new Material.Builder(getMaterialsId(), gregtechId("cerium_oxide_filtrate"))
@@ -911,7 +912,14 @@ public class GTBUnknownCompositionMaterials {
         Columbite = new Material.Builder(getMaterialsId(), gregtechId("columbite"))
                 .dust()
                 .ore()
+                .flags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED)
                 .color(0xFDD835).build().setFormula("FeNb2O6", true);
+
+        Celestine = new Material.Builder(getMaterialsId(), gregtechId("celestine"))
+                .dust()
+                .ore()
+                .flags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED)
+                .color(0xA7CFF1).build().setFormula("SrSO4", true);
 
         FusedColumbite = new Material.Builder(getMaterialsId(), gregtechId("fused_columbite"))
                 .dust()
