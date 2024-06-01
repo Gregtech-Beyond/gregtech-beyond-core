@@ -125,7 +125,7 @@ public class KevlarLine {
 
         MIXER_RECIPES.recipeBuilder()
                 .notConsumable(ROTARRY_SPINNING_WHISKER)
-                .input(dust, KevlarConcentrate)
+                .input(dust, PurifiedKevlarConcentrate)
                 .output(dust, KevlarBlend)
                 .EUt(2000)
                 .duration(800)
