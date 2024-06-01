@@ -216,6 +216,40 @@ public class BasicOreProcessingOverhaul {
                 .EUt(9)
                 .buildAndRegister();
 
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, RutherfordiumOxide, 2)
+                .output(dust, Rutherfordium)
+                .fluidOutputs(Steam.getFluid(1000))
+                .circuitMeta(1)
+                .duration(200)
+                .EUt(8)
+                .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, RutherfordiumOxide, 2)
+                .output(dust, Rutherfordium)
+                .circuitMeta(0)
+                .duration(200)
+                .EUt(8)
+                .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, ZirconiumOxide, 2)
+                .output(dust, Zirconium)
+                .fluidOutputs(Steam.getFluid(1000))
+                .circuitMeta(1)
+                .duration(200)
+                .EUt(8)
+                .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, ZirconiumOxide, 2)
+                .output(dust, Zirconium)
+                .circuitMeta(0)
+                .duration(200)
+                .EUt(8)
+                .buildAndRegister();
+
 
 
 
