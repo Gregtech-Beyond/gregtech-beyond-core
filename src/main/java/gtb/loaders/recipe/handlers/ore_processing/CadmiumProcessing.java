@@ -10,7 +10,8 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 public class CadmiumProcessing {
 
     public static void init() {
-        ROASTER_RECIPES.recipeBuilder()
+
+        EXTRACTOR_RECIPES.recipeBuilder()
                 .input(dust, Zincite)
                 .fluidOutputs(CrudeZinc.getFluid(144))
                 .duration(200)
