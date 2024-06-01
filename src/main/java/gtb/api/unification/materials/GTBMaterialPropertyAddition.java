@@ -82,5 +82,9 @@ public class GTBMaterialPropertyAddition {
 
         Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Strontium.addFlags(MaterialFlags.GENERATE_PLATE);
+
+        // Rutherfordium
+        Rutherfordium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Rutherfordium.addFlags(MaterialFlags.GENERATE_PLATE);
     }
 }
