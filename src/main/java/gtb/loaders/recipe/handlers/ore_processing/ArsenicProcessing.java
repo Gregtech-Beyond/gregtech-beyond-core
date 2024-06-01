@@ -50,5 +50,9 @@ public class ArsenicProcessing {
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Realgar, 2) });
+
+        GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, ArsenicTrioxide, 5) });
     }
 }
