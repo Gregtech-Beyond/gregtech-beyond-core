@@ -125,5 +125,26 @@ public class CopperProcessing {
                 .duration(400)
                 .EUt(50)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, CupricOxide, 2) });
+
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, CupricOxide, 2)
+                .circuitMeta(1)
+                .output(dust, Copper)
+                .fluidOutputs(Steam.getFluid(1000))
+                .duration(200)
+                .EUt(90)
+                .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, CupricOxide, 2)
+                .circuitMeta(0)
+                .output(dust, Copper)
+                .duration(200)
+                .EUt(90)
+                .buildAndRegister();
     }
 }
