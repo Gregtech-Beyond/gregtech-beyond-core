@@ -41,7 +41,7 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
                 .aisle("F   F", "  X  ", " XXX ", "  X  ", "F   F")
                 .aisle("F X F", " XCX ", "XCCCX", " XCX ", "F X F")
-                .aisle("FXXXF", "XCCCX", "XK#KX", "XCCCX", "FXXXF")
+                .aisle("FXSXF", "XCCCX", "XK#KX", "XCCCX", "FXXXF")
                 .aisle("F X F", " XCX ", "XC#CX", " XCX ", "F X F")
                 .aisle("F   F", "  X  ", " XCX ", "  X  ", "F   F")
                 .aisle("     ", "  X  ", " XMX ", "  X  ", "     ")
