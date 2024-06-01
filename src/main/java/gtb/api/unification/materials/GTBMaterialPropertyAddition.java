@@ -26,6 +26,7 @@ public class GTBMaterialPropertyAddition {
         AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         Mica.setProperty(PropertyKey.INGOT, new IngotProperty());
         BandedIron.setProperty(PropertyKey.INGOT, new IngotProperty());
+        PlatinumRaw.setProperty(PropertyKey.INGOT, new IngotProperty());
         Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
 
         // Pre-Registered Materials ????????
