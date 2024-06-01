@@ -172,4 +172,21 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> SINTERING_OVEN_RECIPES = new RecipeMap<>(
             "sintering_oven_recipes",
             2, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> GRAVITY_SEPARATOR_RECIPES = new RecipeMap<>(
+            "gravity_separator_recipes", 4, 4, 1, 1, new SimpleRecipeBuilder(), false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
