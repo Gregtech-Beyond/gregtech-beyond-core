@@ -1382,11 +1382,129 @@ public class GTBFirstDegreeMaterials {
 
         CopperSulfide = new Material.Builder(getMaterialsId(), gregtechId("copper_sulfide"))
                 .dust()
-                .color(0x77528E).build().setFormula("CuSO2", true);
+                .color(0xDF7351).build().setFormula("CuSO2", true);
+
+        CopperSulfideSolution = new Material.Builder(getMaterialsId(), gregtechId("copper_sulfide_solution"))
+                .fluid()
+                .color(0xDF7351).build().setFormula("CuSO2(H2O)", true);
 
         SodiumIodate = new Material.Builder(getMaterialsId(), gregtechId("sodium_iodate"))
                 .dust()
-                .color(0x77528E).build().setFormula("NaIO", true);
+                .color(0x303F9F).build().setFormula("NaIO", true);
+
+        NickelSulfuricSolution = new Material.Builder(getMaterialsId(), gregtechId("nickel_sulfuric_solution"))
+                .fluid()
+                .color(0xD8843E).build().setFormula("NiS2?", true);
+
+        NickelRareResidue = new Material.Builder(getMaterialsId(), gregtechId("nickel_rare_residue"))
+                .dust()
+                .color(0x633426).build().setFormula("NiS2?", true);
+
+        SodiumArsenateSulfuricSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("sodium_arsenate_sulfuric_solution"))
+                        .fluid()
+                        .color(0x596D78).build().setFormula("NiS2?", true);
+
+        SodiumIodide = new Material.Builder(getMaterialsId(), gregtechId("sodium_iodide"))
+                .dust()
+                .color(0x07384F).build().setFormula("NaI", true);
+
+        NickelSulfatePrecipitate = new Material.Builder(getMaterialsId(), gregtechId("nickel_sulfate_precipitate"))
+                .dust()
+                .color(0x591B09).build().setFormula("NiS?", true);
+
+        AmmoniaMetalSulfuricSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("ammonia_metal_sulfuric_solution"))
+                        .fluid()
+                        .color(0x7F67AF).build().setFormula("(NH3)?", true);
+
+        ImpurePitchblendeSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("impure_pitchblende_slurry"))
+                        .fluid()
+                        .color(0xE1C441).build();
+
+        SodiumIsopropylXanthate = new Material.Builder(getMaterialsId(),
+                gregtechId("sodium_isopropyl_xanthate"))
+                        .fluid()
+                        .color(0x8D7924).build();
+
+        PitchblendeSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("pitchblende_slurry"))
+                        .fluid()
+                        .color(0xC9BA79).build();
+
+        UraniumExtractionMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("uranium_extraction_mixture"))
+                        .fluid()
+                        .color(0x388E3C).build();
+
+        UraniniteExtract = new Material.Builder(getMaterialsId(),
+                gregtechId("uraninite_extract"))
+                        .fluid()
+                        .color(0x445045).build();
+
+        UranylSulfide = new Material.Builder(getMaterialsId(),
+                gregtechId("uranyl_sulfide"))
+                        .fluid()
+                        .color(0x99A043).build();
+
+        AmmoniaSulfateSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("ammonia_sulfate_solution"))
+                        .fluid()
+                        .color(0xE4B86C).build().setFormula("(NH3)(H2O)S", true);
+
+        PitchblendeFiltrate = new Material.Builder(getMaterialsId(),
+                gregtechId("pitchblende_filtrate"))
+                        .dust()
+                        .color(0xAFB42B).build().setFormula("?", true);
+
+        UraniumThoriumFiltrate = new Material.Builder(getMaterialsId(),
+                gregtechId("uranium_thorium_filtrate"))
+                        .dust()
+                        .color(0x4CAF50).build().setFormula("(UO2)(ThO2)?", true);
+
+        LeadMetallicPowder = new Material.Builder(getMaterialsId(),
+                gregtechId("lead_metallic_powder"))
+                        .dust()
+                        .color(0x977C9E).build().setFormula("Pb?", true);
+
+        UraniumMetallicPowder = new Material.Builder(getMaterialsId(),
+                gregtechId("uranium_metallic_powder"))
+                        .dust()
+                        .color(0x456D47).build().setFormula("U??", true);
+
+        UraniumResidues = new Material.Builder(getMaterialsId(),
+                gregtechId("uranium_residues"))
+                        .dust()
+                        .color(0x36736B).build().setFormula("U?", true);
+
+        UraniumDioxide = new Material.Builder(getMaterialsId(),
+                gregtechId("uranium_dioxide"))
+                        .dust()
+                        .color(0x68886A).build().setFormula("UO2", true);
+
+        CobaltSulfide = new Material.Builder(getMaterialsId(),
+                gregtechId("cobalt_sulfide"))
+                .dust()
+                .color(0x616AA2).build().setFormula("CoSO2", true);
+
+        NickelSulfide = new Material.Builder(getMaterialsId(),
+                gregtechId("nickel_sulfide"))
+                .dust()
+                .color(0x628CB1).build().setFormula("NiSO2", true);
+
+        UraniumSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("uranium_solution"))
+                .fluid()
+                .color(0x58935B).build().setFormula("U?", true);
+
+        ThoriumPhosphateCakeSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("thorium_phosphate_cake_solution"))
+                .fluid()
+                .color(0x426845).build().setFormula("Th?", true);
+
+
+
     }
 
     private static int getMaterialsId() {
