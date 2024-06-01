@@ -8,10 +8,16 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
+import gregtech.api.recipes.ModHandler;
+import gregtech.common.items.MetaItems;
 import net.minecraft.item.Item;
 
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.BlockCoolingCoil;
+import net.minecraft.item.crafting.IRecipe;
+import org.apache.groovy.parser.antlr4.GroovyParser;
+
+import java.util.function.Predicate;
 
 public class Electronics {
 
@@ -72,6 +78,17 @@ public class Electronics {
                 .output(SINTERED_SILVER_COIL)
                 .duration(200)
                 .EUt(80)
+                .buildAndRegister();
+
+        ModHandler.removeRecipeByOutput((Predicate<IRecipe>) ITEM_FILTER);
+
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(foil, Zinc, 16)
+                .input(plate, Steel)
+                .output(ITEM_FILTER)
+                .duration(200)
+                .EUt(12)
                 .buildAndRegister();
     }
 }
