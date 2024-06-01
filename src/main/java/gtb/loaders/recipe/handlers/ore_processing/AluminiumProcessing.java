@@ -111,5 +111,20 @@ public class AluminiumProcessing {
                 .EUt(400)
                 .blastFurnaceTemp(1800)
                 .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, AluminiumHydroxide, 5)
+                .output(dust, Alumina, 2)
+                .fluidOutputs(Steam.getFluid(2000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        EXTRACTOR_RECIPES.recipeBuilder()
+                .input(dust, Alumina)
+                .fluidOutputs(Alumina.getFluid(144))
+                .duration(60)
+                .EUt(7)
+                .buildAndRegister();
     }
 }
