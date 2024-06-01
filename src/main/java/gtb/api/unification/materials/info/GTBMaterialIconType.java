@@ -7,7 +7,8 @@ public class GTBMaterialIconType {
     public static final MaterialIconType coil = new MaterialIconType("coil");
     public static final MaterialIconType milled = new MaterialIconType("milled");
     public static final MaterialIconType floated = new MaterialIconType("floated");
-    public static final MaterialIconType seedCrystal = new MaterialIconType("seedCrystal");
+    public static final MaterialIconType sifted = new MaterialIconType("sifted");
     public static final MaterialIconType boule = new MaterialIconType("boule");
+    public static final MaterialIconType seedCrystal = new MaterialIconType("seed_crystal");
     public static final MaterialIconType petri = new MaterialIconType("petri");
 }
