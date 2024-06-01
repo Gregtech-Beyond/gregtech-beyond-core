@@ -11,13 +11,11 @@ import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.MarkerMaterials;
-import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
-import gregtech.common.metatileentities.storage.*;
 
 import gtb.common.metatileentities.GTBMetaTileEntities;
 
@@ -72,14 +70,6 @@ public class MachineRecipes {
                 .duration(120)
                 .EUt(800)
                 .buildAndRegister();
-
-        ModHandler.addShapedRecipe("water_tank_machine", GTBMetaTileEntities.WATER_TANK.getStackForm(),
-                "WPW", "FSF", "WCW",
-                'W', new UnificationEntry(plate, Wood),
-                'C', new UnificationEntry(OrePrefix.circuit, MarkerMaterials.Tier.LV),
-                'P', ELECTRIC_PUMP_LV.getStackForm(),
-                'S', STEEL_BORDERED_WOODEN_CASING,
-                'F', new UnificationEntry(frameGt, Steel));
 
         ModHandler.addShapedRecipe("clarifier_machine", GTBMetaTileEntities.CLARIFIER.getStackForm(),
                 "PCP", "UMU", "PCP",

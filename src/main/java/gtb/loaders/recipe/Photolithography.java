@@ -214,7 +214,7 @@ public class Photolithography {
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(plate, Aluminium)
-                .input(plate, BorosilicateGlass)
+                .input(ingot, BorosilicateGlass)
                 .circuitMeta(1)
                 .output(LITHOGRAPHY_BASE_MASK)
                 .duration(20)
@@ -322,7 +322,7 @@ public class Photolithography {
                 .EUt(12)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(dust, Graphite, 3)
                 .fluidInputs(GrapheneOxidationSolution.getFluid(100))
                 .output(dust, GraphiteOxide)
@@ -331,7 +331,7 @@ public class Photolithography {
                 .EUt(2000)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(dust, GraphiteOxide)
                 .notConsumable(NICKEL_BREEDING_BED)
                 .fluidInputs(Methane.getFluid(1000))
@@ -347,7 +347,7 @@ public class Photolithography {
                 .EUt(900)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(ENGRAVED_TITANATE_SUBSTRATE_WAFER)
                 .input(dust, EnrichedNaquadahTriniumEuropiumDuranide)
                 .fluidInputs(SiliconCarbideVapor.getFluid(144))
@@ -356,7 +356,7 @@ public class Photolithography {
                 .EUt(1800)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(POWER_INTEGRATED_CIRCUIT)
                 .input(dust, SilverBromide)
                 .input(dust, IndiumGalliumPhosphide)
@@ -365,7 +365,7 @@ public class Photolithography {
                 .EUt(200)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(1000))
                 .input(SILICON_WAFER)
                 .output(SILICON_DIOXIDE_WAFER)
@@ -373,7 +373,7 @@ public class Photolithography {
                 .EUt(12)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(2000))
                 .input(PHOSPHORUS_WAFER)
                 .output(SILICON_DIOXIDE_WAFER, 2)
@@ -381,7 +381,7 @@ public class Photolithography {
                 .EUt(12)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(4000))
                 .input(NAQUADAH_WAFER)
                 .output(SILICON_DIOXIDE_WAFER, 4)
@@ -389,7 +389,7 @@ public class Photolithography {
                 .EUt(12)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(6000))
                 .input(NEUTRONIUM_WAFER)
                 .output(SILICON_DIOXIDE_WAFER, 6)
@@ -397,7 +397,7 @@ public class Photolithography {
                 .EUt(12)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(Silane.getFluid(1000))
                 .input(N_DOPED_SILICON_DIOXIDE_WAFER)
                 .output(POLYSILICON_WAFER)
@@ -430,7 +430,7 @@ public class Photolithography {
                 .notConsumable(NANOCPU_LITHOGRAPHY_MASK).output(ENGRAVED_NANOCPU_WAFER, 12).duration(400)
                 .EUt(480).buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(DOPED_NANOCPU_WAFER)
                 .fluidInputs(Trichlorosilane.getFluid(1000))
                 .output(GATED_NANOCPU_WAFER)
@@ -438,7 +438,7 @@ public class Photolithography {
                 .EUt(80)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(GATED_NANOCPU_WAFER)
                 .fluidInputs(Trichlorosilane.getFluid(1000), Oxygen.getFluid(1000))
                 .output(INSULATED_NANOCPU_WAFER)
@@ -450,7 +450,7 @@ public class Photolithography {
                 .notConsumable(craftingLens, MarkerMaterials.Color.Red)
                 .output(TRENCHED_INSULATED_NANOCPU_WAFER).duration(200).EUt(12).buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(TRENCHED_INSULATED_NANOCPU_WAFER)
                 .input(dust, Copper)
                 .output(UNPLANARIZED_NANOCPU_WAFER)
@@ -600,7 +600,7 @@ public class Photolithography {
                 .duration(800)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(Trichloroflerane.getFluid(100))
                 .fluidOutputs(HydrogenChloride.getFluid(100))
                 .input(PRE_ENGRAVED_NQO2_WAFER)
@@ -757,7 +757,7 @@ public class Photolithography {
                 .EUt(12)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(1000))
                 .input(dust, NickelNitride, 1)
                 .input(DOPED_POLYSILICON_WAFER)
@@ -841,7 +841,7 @@ public class Photolithography {
         LASER_ENGRAVER_RECIPES.recipeBuilder().input(SAPPHIRE_WAFER).notConsumable(QBIT_CPU_LITHOGRAPHY_MASK)
                 .output(ENGRAVED_QBIT_CPU_WAFER).duration(80).EUt(900).buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(ENGRAVED_CPU_WAFER)
                 .input(dust, VanadiumTrichloride)
                 .input(dust, IndiumChloride)
@@ -859,7 +859,7 @@ public class Photolithography {
                 .EUt(900)
                 .buildAndRegister();
 
-        ION_IMPLANTER.recipeBuilder()
+        ION_IMPLANTER_RECIPES.recipeBuilder()
                 .input(SUPERCONDUCTOR_COATED_QBIT_CPU_WAFER)
                 .input(U_TWOFOURTY_ELECTRON_SOURCE)
                 .output(QUBIT_CENTRAL_PROCESSING_UNIT)
@@ -946,7 +946,7 @@ public class Photolithography {
                 .input(MONOCRYSTALLINE_OGANESSON_INGOT).fluidInputs(Lubricant.getFluid(6)).duration(600).EUt(60000)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(Trichloroflerane.getFluid(1000))
                 .input(OGANESSON_WAFER)
                 .output(TREATED_OGANESSON_WAFER)
@@ -971,7 +971,7 @@ public class Photolithography {
                 .EUt(800)
                 .buildAndRegister();
 
-        ION_IMPLANTER.recipeBuilder()
+        ION_IMPLANTER_RECIPES.recipeBuilder()
                 .input(ENGRAVED_OGANESSON_WAFER)
                 .input(dust, UEVSuperconductor, 1)
                 .output(RAW_OGANESSON_WAFER)
@@ -1055,7 +1055,7 @@ public class Photolithography {
                 .EUt(90)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(ENGRAVED_QBIT_CPU_WAFER).input(dust, VanadiumTrichloride)
                 .input(dust, IndiumChloride, 1)
                 .output(DOPED_QBIT_CPU_WAFER)
@@ -1081,14 +1081,14 @@ public class Photolithography {
                 .EUt(480)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(ENGRAVED_OGANESSON_WAFER).input(dust, RutheniumTriniumAmericiumNeutronate, 1)
                 .output(SUPERCONDUCTOR_LAYERED_UHASOC_WAFER)
                 .duration(800)
                 .EUt(2000001)
                 .buildAndRegister();
 
-        ION_IMPLANTER.recipeBuilder()
+        ION_IMPLANTER_RECIPES.recipeBuilder()
                 .input(SUPERCONDUCTOR_LAYERED_UHASOC_WAFER)
                 .input(ingot, ElectronDegenerateRhenium)
                 .output(DEGENERATE_UHASOC_WAFER)
@@ -1096,7 +1096,7 @@ public class Photolithography {
                 .EUt(700)
                 .buildAndRegister();
 
-        ION_IMPLANTER.recipeBuilder()
+        ION_IMPLANTER_RECIPES.recipeBuilder()
                 .input(DEGENERATE_UHASOC_WAFER).input(CONTROLLED_SHAPED_NAQUADRIA_CHARGE)
                 .input(SHAPED_HIGH_ENERGY_GAMMA_SHIELD)
                 .output(CELLED_UHASOC_WAFER)
@@ -1111,7 +1111,7 @@ public class Photolithography {
                 .EUt(90000)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(SPIN_ALIGNED_UHASOC_WAFER)
                 .input(ingot, ElectronDegenerateRhenium)
                 .output(RELAYERED_UHASOC_WAFER)
@@ -1211,7 +1211,7 @@ public class Photolithography {
                 .EUt(89012)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(INDIUM_PHOSPHIDE_WAFER)
                 .input(ingot, ZBLAN)
                 .output(ZBLAN_LAYERED_INP_WAFER)
@@ -1227,14 +1227,14 @@ public class Photolithography {
                 .EUt(78004523)
                 .buildAndRegister();
 
-        ION_IMPLANTER.recipeBuilder()
+        ION_IMPLANTER_RECIPES.recipeBuilder()
                 .input(dust, DopedNanotubeDepositionMixture).input(INTERCONNECTED_INP_WAFER)
                 .output(RESONANT_INP_WAFER)
                 .duration(560)
                 .EUt(12864590)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(RESONANT_INP_WAFER).input(dust, NanotubeDepositionMix)
                 .output(INSULATED_INP_WAFER)
                 .duration(720)
@@ -1249,21 +1249,21 @@ public class Photolithography {
                 .duration(120)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(dust, DopedNanotubeDepositionMix).input(RE_EXPOSED_INP_WAFER)
                 .output(ELECTROLUMINESCENT_INP_WAFER)
                 .duration(1200)
                 .EUt(80901234)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(ELECTROLUMINESCENT_INP_WAFER).input(dust, DopedNanotubeDepositionMixture)
                 .output(RECOATED_INP_WAFER)
                 .duration(1200)
                 .EUt(80129012)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(CONTACT_READY_INP_WAFER)
                 .fluidInputs(Tritanium.getFluid(144))
                 .output(OPTICAL_SOC_WAFER)
@@ -1278,7 +1278,7 @@ public class Photolithography {
                 .EUt(891282)
                 .buildAndRegister();
 
-        CVD_UNIT.recipeBuilder()
+        CVD_UNIT_RECIPES.recipeBuilder()
                 .input(UNINSULATED_OPTICAL_SOC)
                 .input(plate, FullerenePolymerMatrix)
                 .input(plate, FullerenePolymerTetrix)
@@ -1288,7 +1288,7 @@ public class Photolithography {
                 .EUt(891282)
                 .buildAndRegister();
 
-        ION_IMPLANTER.recipeBuilder()
+        ION_IMPLANTER_RECIPES.recipeBuilder()
                 .input(CONTACTLESS_OPTICAL_SOC)
                 .input(dust, NaquadriaticTaranium)
                 .output(OPTICAL_SOC)
@@ -1329,7 +1329,7 @@ public class Photolithography {
                 .EUt(901275)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1339,7 +1339,7 @@ public class Photolithography {
                 .notConsumable(UHPIC_LITHOGRAPHY_MASK)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1349,7 +1349,7 @@ public class Photolithography {
                 .notConsumable(UHPIC_LITHOGRAPHY_MASK)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1358,7 +1358,7 @@ public class Photolithography {
                 .output(SPINORIAL_MEMORY_WAFER)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1368,7 +1368,7 @@ public class Photolithography {
                 .notConsumable(SOC_LITHOGRAPHY_MASK)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1378,7 +1378,7 @@ public class Photolithography {
                 .notConsumable(UHASOC_LITHOGRAPHY_MASK)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1388,7 +1388,7 @@ public class Photolithography {
                 .notConsumable(UHASOC_POST_ENGRAVING_MASK)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1398,7 +1398,7 @@ public class Photolithography {
                 .notConsumable(OPTICAL_LITHOGRAPHY_MASK)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1408,7 +1408,7 @@ public class Photolithography {
                 .notConsumable(RE_EXPOSED_INP_WAFER)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1417,7 +1417,7 @@ public class Photolithography {
                 .output(CONTACT_READY_INP_WAFER)
                 .buildAndRegister();
 
-        ENGRAVING_UNIT.recipeBuilder()
+        ENGRAVING_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(SuperFluidHelium_4.getFluid(4000))
                 .fluidOutputs(Helium.getFluid(4000))
                 .duration(1200)
@@ -1445,7 +1445,7 @@ public class Photolithography {
         for (Material nDopantMaterial : N_DOPANT_MATERIALS) {
             for (Material pDopantMaterial : P_DOPANT_MATERIALS) {
 
-                CVD_UNIT.recipeBuilder()
+                CVD_UNIT_RECIPES.recipeBuilder()
                         .input(ENGRAVED_POWER_IC_WAFER)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1454,7 +1454,7 @@ public class Photolithography {
                         .EUt(100)
                         .buildAndRegister();
 
-                CVD_UNIT.recipeBuilder()
+                CVD_UNIT_RECIPES.recipeBuilder()
                         .input(POLYSILICON_WAFER)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1463,7 +1463,7 @@ public class Photolithography {
                         .EUt(100)
                         .buildAndRegister();
 
-                CVD_UNIT.recipeBuilder()
+                CVD_UNIT_RECIPES.recipeBuilder()
                         .input(ENGRAVED_RAM_WAFER)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1472,7 +1472,7 @@ public class Photolithography {
                         .EUt(100)
                         .buildAndRegister();
 
-                CVD_UNIT.recipeBuilder()
+                CVD_UNIT_RECIPES.recipeBuilder()
                         .input(ENGRAVED_CPU_WAFER)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1481,7 +1481,7 @@ public class Photolithography {
                         .EUt(100)
                         .buildAndRegister();
 
-                CVD_UNIT.recipeBuilder()
+                CVD_UNIT_RECIPES.recipeBuilder()
                         .input(ENGRAVED_IC_WAFER)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1499,7 +1499,7 @@ public class Photolithography {
                         .EUt(12)
                         .buildAndRegister();
 
-                ION_IMPLANTER.recipeBuilder()
+                ION_IMPLANTER_RECIPES.recipeBuilder()
                         .input(ENGRAVED_NANOCPU_WAFER)
                         .fluidInputs(VeryHotArgon.getFluid(1000))
                         .fluidOutputs(Argon.getFluid(1000))
@@ -1510,7 +1510,7 @@ public class Photolithography {
                         .EUt(100)
                         .buildAndRegister();
 
-                ION_IMPLANTER.recipeBuilder()
+                ION_IMPLANTER_RECIPES.recipeBuilder()
                         .input(ENGRAVED_SPINORIAL_MEMORY_WAFER)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1519,7 +1519,7 @@ public class Photolithography {
                         .EUt(100)
                         .buildAndRegister();
 
-                ION_IMPLANTER.recipeBuilder()
+                ION_IMPLANTER_RECIPES.recipeBuilder()
                         .input(ENGRAVED_HASOC_WAFER)
                         .input(dust, Naquadah)
                         .input(dust, nDopantMaterial)
@@ -1529,7 +1529,7 @@ public class Photolithography {
                         .EUt(100)
                         .buildAndRegister();
 
-                ION_IMPLANTER.recipeBuilder()
+                ION_IMPLANTER_RECIPES.recipeBuilder()
                         .input(ENGRAVED_ASOC_WAFER)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1538,7 +1538,7 @@ public class Photolithography {
                         .EUt(100)
                         .buildAndRegister();
 
-                ION_IMPLANTER.recipeBuilder()
+                ION_IMPLANTER_RECIPES.recipeBuilder()
                         .input(ENGRAVED_SOC_WAFER)
                         .input(dust, nDopantMaterial)
                         .input(dust, pDopantMaterial)
@@ -1547,7 +1547,7 @@ public class Photolithography {
                         .EUt(100)
                         .buildAndRegister();
 
-                ION_IMPLANTER.recipeBuilder()
+                ION_IMPLANTER_RECIPES.recipeBuilder()
                         .input(SILICON_DIOXIDE_WAFER)
                         .input(dust, nDopantMaterial)
                         .output(N_DOPED_SILICON_DIOXIDE_WAFER)
@@ -1784,7 +1784,7 @@ public class Photolithography {
                 .EUt(80)
                 .buildAndRegister();
 
-        CRYSTALLIZATION.recipeBuilder()
+        CRYSTALLIZATION_RECIPES.recipeBuilder()
                 .fluidInputs(PhosphorusSolution.getFluid(1000))
                 .output(dust, WhitePhosphorus)
                 .fluidOutputs(Water.getFluid(1000))

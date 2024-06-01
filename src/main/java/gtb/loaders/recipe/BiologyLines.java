@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
 import gregtech.common.items.MetaItems;
 
 public class BiologyLines {
@@ -69,7 +70,7 @@ public class BiologyLines {
                 .EUt(1200)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .input(CUPRIAVIDUS_NECATOR_CULTURE)
                 .fluidInputs(BacterialGrowthMedium.getFluid(1000))
                 .fluidOutputs(DepletedBacterialGrowthMedium.getFluid(1000))
@@ -107,6 +108,7 @@ public class BiologyLines {
                 .fluidInputs(AmmoniumNitrate.getFluid(1000))
                 .fluidInputs(EpidermalGrowthFactor.getFluid(1000))
                 .fluidInputs(B_27_Supplement.getFluid(1000))
+                .input(dust, Agar, 4)
                 .input(dust, Glutamine, 20)
                 .fluidOutputs(RawGrowthMedium.getFluid(4000))
                 .duration(1000)
@@ -186,6 +188,14 @@ public class BiologyLines {
                 .EUt(120)
                 .buildAndRegister();
 
+        FLUID_HEATER_RECIPES.recipeBuilder()
+                .fluidInputs(DepletedBacterialGrowthMedium.getFluid(1000))
+                .fluidOutputs(BacterialGrowthMedium.getFluid(500))
+                .circuitMeta(1)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, Yeast, 1)
                 .fluidInputs(Biomass.getFluid(1000))
@@ -244,7 +254,7 @@ public class BiologyLines {
                 .EUt(780)
                 .buildAndRegister();
 
-        FERMENTATION_VAT.recipeBuilder()
+        FERMENTATION_VAT_RECIPES.recipeBuilder()
                 .fluidInputs(Wort.getFluid(1000))
                 .fluidOutputs(MaltExtract.getFluid(1000))
                 .duration(900)
@@ -269,7 +279,7 @@ public class BiologyLines {
                 .EUt(7120)
                 .buildAndRegister();
 
-        ELECTROLYTIC_CELL.recipeBuilder()
+        ELECTROLYTIC_CELL_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(1000))
                 .fluidInputs(EthoxylatedNonylphenol.getFluid(1000))
                 .fluidOutputs(Nonylphenol.getFluid(800))
@@ -306,7 +316,7 @@ public class BiologyLines {
                 .EUt(812)
                 .buildAndRegister();
 
-        ROTARY_EVAPORATOR.recipeBuilder()
+        ROTARY_EVAPORATOR_RECIPES.recipeBuilder()
                 .fluidInputs(YeastMixture.getFluid(1000))
                 .fluidOutputs(YeastExtract.getFluid(1000))
                 .duration(800)
@@ -402,7 +412,7 @@ public class BiologyLines {
                 .EUt(70)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .notConsumable(YEEMSolution.getFluid(1000))
                 .fluidInputs(BacterialGrowthMedium.getFluid(250))
                 .fluidOutputs(DepletedBacterialGrowthMedium.getFluid(250))
@@ -412,7 +422,7 @@ public class BiologyLines {
                 .EUt(20000)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .notConsumable(YEEMSolution.getFluid(1000))
                 .fluidInputs(BacterialGrowthMedium.getFluid(250))
                 .fluidOutputs(DepletedBacterialGrowthMedium.getFluid(250))
@@ -422,7 +432,7 @@ public class BiologyLines {
                 .EUt(20000)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .notConsumable(YEEMSolution.getFluid(1000))
                 .fluidInputs(BacterialGrowthMedium.getFluid(250))
                 .fluidOutputs(DepletedBacterialGrowthMedium.getFluid(250))
@@ -432,7 +442,7 @@ public class BiologyLines {
                 .EUt(20000)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .notConsumable(YEEMSolution.getFluid(1000))
                 .fluidInputs(BacterialGrowthMedium.getFluid(250))
                 .fluidOutputs(DepletedBacterialGrowthMedium.getFluid(250))
@@ -551,7 +561,7 @@ public class BiologyLines {
                 .EUt(560)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .input(PAD_PETRI_DISH)
                 .input(dust, Iriditus)
                 .fluidOutputs(Xerizin.getFluid(100))
@@ -559,14 +569,14 @@ public class BiologyLines {
                 .EUt(80)
                 .buildAndRegister();
 
-        TEXTILE_FACTORY.recipeBuilder()
+        TEXTILE_FACTORY_RECIPES.recipeBuilder()
                 .input(COTTON)
                 .output(COTTON_SHEET)
                 .duration(200)
                 .EUt(120)
                 .buildAndRegister();
 
-        TEXTILE_FACTORY.recipeBuilder()
+        TEXTILE_FACTORY_RECIPES.recipeBuilder()
                 .input(COTTON_SHEET)
                 .output(CHEESE_CLOTH)
                 .duration(200)
@@ -633,7 +643,7 @@ public class BiologyLines {
                 .EUt(500)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .input(dust, DefattedSoybeanFlour, 1)
                 .output(dust, PapaicDigestOfSoybeanMeal, 1)
                 .duration(800)
@@ -649,7 +659,7 @@ public class BiologyLines {
                 .EUt(160)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(BeanSlurry.getFluid(1000))
                 .notConsumable(YEEM_PETRI)
                 .duration(200)
@@ -725,7 +735,7 @@ public class BiologyLines {
                 .circuitMeta(1)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .input(dust, Glucose, 1)
                 .notConsumable(dust, CupriavidusNecator)
                 .fluidInputs(PalmOil.getFluid(20))
@@ -743,7 +753,7 @@ public class BiologyLines {
                 .EUt(500)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(OneFourButanediol.getFluid(1000))
                 .fluidOutputs(YButyrolacetone.getFluid(1000))
                 .notConsumable(dust, CucrmgbaCatalyst, 1)
@@ -801,5 +811,16 @@ public class BiologyLines {
         GTRecipeHandler.removeRecipesByInputs(FLUID_SOLIDFICATION_RECIPES,
                 new ItemStack[] { SHAPE_MOLD_CYLINDER.getStackForm(1) },
                 new FluidStack[] { Polybenzimidazole.getFluid(18) });
+
+        GTRecipeHandler.removeRecipesByInputs(FLUID_HEATER_RECIPES,
+                new FluidStack[] { RawGrowthMedium.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(MIXER_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, Salt, 4),
+                        OreDictUnifier.get(dust, Agar, 4),
+                        OreDictUnifier.get(dust, Calcium, 4),
+                        OreDictUnifier.get(dust, Meat, 4) },
+                new FluidStack[] { Mutagen.getFluid(4000) });
     }
 }

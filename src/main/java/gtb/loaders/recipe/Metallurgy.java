@@ -8,6 +8,9 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.OreDictUnifier;
+
 public final class Metallurgy {
 
     public static void init() {
@@ -55,7 +58,7 @@ public final class Metallurgy {
                 .EUt(80)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(HydrogenPeroxide.getFluid(1000))
                 .fluidInputs(LithiumHydroxideSolution.getFluid(1000))
                 .fluidOutputs(LithiumPeroxideSolution.getFluid(1000))
@@ -72,5 +75,150 @@ public final class Metallurgy {
                 .duration(200)
                 .EUt(700)
                 .buildAndRegister();
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Cupronickel)
+                .output(ingot, Cupronickel)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Cupronickel));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, SolderingAlloy)
+                .output(ingot, SolderingAlloy)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, SolderingAlloy));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, FullerenePolymerTetrix)
+                .output(ingot, FullerenePolymerTetrix)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, FullerenePolymerTetrix));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, FullerenePolymerMatrix)
+                .output(ingot, FullerenePolymerMatrix)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, FullerenePolymerMatrix));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Zylon)
+                .output(ingot, Zylon)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Zylon));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Polycaprolactam)
+                .output(ingot, Polycaprolactam)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Polycaprolactam));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Polyethylene)
+                .output(ingot, Polyethylene)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Polyethylene));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Polytetrafluoroethylene)
+                .output(ingot, Polytetrafluoroethylene)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Polytetrafluoroethylene));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Polybenzimidazole)
+                .output(ingot, Polybenzimidazole)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Polybenzimidazole));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Nomex)
+                .output(ingot, Nomex)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Nomex));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Kevlar)
+                .output(ingot, Kevlar)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Kevlar));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, KaptonE)
+                .output(ingot, KaptonE)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, KaptonE));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, KaptonK)
+                .output(ingot, KaptonK)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, KaptonK));
+
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustImpure, Platinum));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Platinum));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustPure, Platinum));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushed, Platinum));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedCentrifuged, Platinum));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedPurified, Platinum));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(ore, Platinum));
+
+        BLAST_RECIPES.recipeBuilder()
+                .input(dust, Platinum)
+                .output(ingot, Platinum)
+                .blastFurnaceTemp(1600)
+                .duration(200)
+                .EUt(180)
+                .buildAndRegister();
+
+        ModHandler.addSmeltingRecipe(OreDictUnifier.get(dustImpure, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
+        ModHandler.addSmeltingRecipe(OreDictUnifier.get(dust, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
+        ModHandler.addSmeltingRecipe(OreDictUnifier.get(dustPure, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
+        ModHandler.addSmeltingRecipe(OreDictUnifier.get(crushed, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
+        ModHandler.addSmeltingRecipe(OreDictUnifier.get(crushedCentrifuged, Platinum),
+                OreDictUnifier.get(ingot, PlatinumRaw));
+        ModHandler.addSmeltingRecipe(OreDictUnifier.get(crushedPurified, Platinum),
+                OreDictUnifier.get(ingot, PlatinumRaw));
+        ModHandler.addSmeltingRecipe(OreDictUnifier.get(ore, Platinum), OreDictUnifier.get(ingot, PlatinumRaw));
+
+        MACERATOR_RECIPES.recipeBuilder()
+                .input(ingot, PlatinumRaw)
+                .output(ingot, PlatinumRaw)
+                .EUt(12)
+                .duration(80)
+                .buildAndRegister();
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, BorosilicateGlass)
+                .output(ingot, BorosilicateGlass)
+                .EUt(2)
+                .duration(20)
+                .buildAndRegister();
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, BorosilicateGlass));
     }
 }

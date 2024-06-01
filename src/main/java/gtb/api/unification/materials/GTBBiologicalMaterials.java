@@ -465,6 +465,12 @@ public class GTBBiologicalMaterials {
                 .fluid()
                 .color(0x388E3C)
                 .build().setFormula("?", true);
+
+        PhthalicAnhydride = new Material.Builder(getMaterialsId(), gregtechId("phthalic_anhydride"))
+                .fluid()
+                .dust()
+                .color(0x388E3C)
+                .build().setFormula("?", true);
     }
 
     private static int getMaterialsId() {

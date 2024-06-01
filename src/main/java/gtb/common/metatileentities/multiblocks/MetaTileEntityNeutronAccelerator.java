@@ -32,7 +32,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityNeutronAccelerator extends RecipeMapMultiblockController {
 
     public MetaTileEntityNeutronAccelerator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.NEUTRON_ACCELERATOR);
+        super(metaTileEntityId, GTBRecipeMaps.NEUTRON_ACCELERATOR_RECIPES);
         initializeAbilities();
     }
 

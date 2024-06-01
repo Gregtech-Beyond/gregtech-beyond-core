@@ -25,7 +25,7 @@ public class OrganicChemistry {
                 .EUt(120)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(HydrogenChloride.getFluid(1000))
                 .input(dust, Silicon)
                 .fluidOutputs(ChloroSilane.getFluid(1000))
@@ -156,6 +156,46 @@ public class OrganicChemistry {
                 .fluidInputs(Oxygen.getFluid(1000))
                 .fluidOutputs(Water.getFluid(2000))
                 .output(dust, PhosphorusTrichloride, 3)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        CATALYTIC_REFORMATION_UNIT_RECIPES.recipeBuilder()
+                .fluidInputs(Oxygen.getFluid(1000))
+                .fluidInputs(OrthoXylene.getFluid(1000))
+                .notConsumable(dust, VanadiumPentoxide)
+                .fluidOutputs(OxidizedOrthoXyleneMixture.getFluid(1000))
+                .duration(200)
+                .EUt(120)
+                .buildAndRegister();
+
+        VACUUM_RECIPES.recipeBuilder()
+                .fluidInputs(OxidizedOrthoXyleneMixture.getFluid(1000))
+                .fluidOutputs(CooledOrthoXyleneMixture.getFluid(1000))
+                .duration(200)
+                .EUt(670)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(CooledOrthoXyleneMixture.getFluid(1000))
+                .output(dust, PhthalicAnhydride, 3)
+                .fluidOutputs(PhthalicAcid.getFluid(600))
+                .duration(500)
+                .EUt(700)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Oxygen.getFluid(5000))
+                .input(dust, Vanadium)
+                .output(dust, VanadiumPentoxide)
+                .duration(200)
+                .EUt(8)
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(SodiumHydroxideSolution.getFluid(1000))
+                .fluidOutputs(Water.getFluid(1000))
+                .output(dust, SodiumHydroxide, 3)
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();

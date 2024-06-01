@@ -1,4 +1,4 @@
-package gtb.loaders.recipe;
+package gtb.loaders.recipe.handlers.ore_processing;
 
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -13,7 +13,7 @@ import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.common.items.MetaItems;
 
-public final class PlatinumLine {
+public class PlatinumProcessing {
 
     public static void init() {
         CHEMICAL_RECIPES.recipeBuilder()
@@ -174,7 +174,7 @@ public final class PlatinumLine {
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
                 new FluidStack[] { RhodiumSulfate.getFluid(1000) });
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(RhodiumSulfateSolution.getFluid(1000))
                 .input(dust, Zinc)
                 .output(dust, ZincSulfide, 6)
@@ -241,7 +241,7 @@ public final class PlatinumLine {
                 .buildAndRegister();
 
         // Rh(NH3)2(H2O)2 -> Rh + 2NH3 + 2H2O (H2O lost to dehydrator)
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(RhodiumFilterCakeSolution.getFluid(1000))
                 .output(dust, Rhodium)
                 .fluidOutputs(Ammonia.getFluid(2000))

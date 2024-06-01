@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityPolymerizationTank extends RecipeMapMultiblockController {
 
     public MetaTileEntityPolymerizationTank(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.POLYMERIZATION_TANK);
+        super(metaTileEntityId, GTBRecipeMaps.POLYMERIZATION_TANK_RECIPES);
         initializeAbilities();
     }
 

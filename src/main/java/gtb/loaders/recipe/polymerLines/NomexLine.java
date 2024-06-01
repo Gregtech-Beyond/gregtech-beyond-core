@@ -1,11 +1,8 @@
 package gtb.loaders.recipe.polymerLines;
 
-import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
-import static gregtech.api.unification.material.MarkerMaterials.Color.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
@@ -67,7 +64,7 @@ public class NomexLine {
                 .duration(120)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, mPhenyleneDiamine, 4)
                 .input(dust, IsophthaloylChloride, 4)
                 .fluidOutputs(NomexPolymerizationBase.getFluid(1000))
@@ -75,7 +72,7 @@ public class NomexLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        TEXTILE_FACTORY.recipeBuilder()
+        TEXTILE_FACTORY_RECIPES.recipeBuilder()
                 .fluidInputs(NomexPolymerizationBase.getFluid(1000))
                 .input(ROTARRY_SPINNING_WHISKER)
                 .output(plate, Nomex)

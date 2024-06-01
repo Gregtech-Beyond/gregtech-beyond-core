@@ -32,7 +32,7 @@ import gtb.common.block.blocks.GTBMultiblockCasing;
 public class MetaTileEntityChemicalPlant extends RecipeMapMultiblockController {
 
     public MetaTileEntityChemicalPlant(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CHEMICAL_PLANT);
+        super(metaTileEntityId, GTBRecipeMaps.CHEMICAL_PLANT_RECIPES);
         initializeAbilities();
     }
 

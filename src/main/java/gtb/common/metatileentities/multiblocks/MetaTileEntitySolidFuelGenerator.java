@@ -34,7 +34,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntitySolidFuelGenerator extends NoEnergyMultiController {
 
     public MetaTileEntitySolidFuelGenerator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.SOLID_FUEL_GENERATOR);
+        super(metaTileEntityId, GTBRecipeMaps.SOLID_FUEL_GENERATOR_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

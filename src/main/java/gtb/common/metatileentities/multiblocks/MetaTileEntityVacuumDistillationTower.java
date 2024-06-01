@@ -33,7 +33,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityVacuumDistillationTower extends RecipeMapMultiblockController {
 
     public MetaTileEntityVacuumDistillationTower(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.VACUUM_DISTILLATION_TOWER);
+        super(metaTileEntityId, GTBRecipeMaps.VACUUM_DISTILLATION_TOWER_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

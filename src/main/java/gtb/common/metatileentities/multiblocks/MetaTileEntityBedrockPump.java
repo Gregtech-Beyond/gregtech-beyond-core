@@ -33,7 +33,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityBedrockPump extends RecipeMapMultiblockController {
 
     public MetaTileEntityBedrockPump(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.BEDROCK_PUMP);
+        super(metaTileEntityId, GTBRecipeMaps.BEDROCK_PUMP_RECIPES);
         initializeAbilities();
     }
 

@@ -11,20 +11,20 @@ public class ThalliumProcessing {
 
     public static void init() {
         // FeS2 + 6O -> Fe + Tl2SO4 + SO2
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .input(dust, Pyrite, 3)
                 .fluidInputs(Oxygen.getFluid(6000))
                 .output(ingot, Iron)
-                .output(dust, ThalliumSulfate, 7)
+                .chancedOutput(dust, ThalliumSulfate, 7, 200, 0)
                 .fluidOutputs(SulfurDioxide.getFluid(1000))
                 .duration(100).EUt(VA[HV]).buildAndRegister();
 
         // 2PbS + 6O -> 2Pb + Tl2SO4 + SO2
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .input(dust, Galena, 4)
                 .fluidInputs(Oxygen.getFluid(6000))
                 .output(ingot, Lead, 2)
-                .output(dust, ThalliumSulfate, 7)
+                .chancedOutput(dust, ThalliumSulfate, 7, 200, 0)
                 .fluidOutputs(SulfurDioxide.getFluid(1000))
                 .duration(100).EUt(VA[HV]).buildAndRegister();
 

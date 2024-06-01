@@ -30,7 +30,7 @@ import gtb.common.block.blocks.GTBMultiblockCasing;
 public class MetaTileEntityBlackHoleCompressor extends RecipeMapMultiblockController {
 
     public MetaTileEntityBlackHoleCompressor(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.BLACK_HOLE_COMPRESSOR);
+        super(metaTileEntityId, GTBRecipeMaps.BLACK_HOLE_COMPRESSOR_RECIPES);
         initializeAbilities();
     }
 

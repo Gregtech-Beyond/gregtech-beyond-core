@@ -29,7 +29,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityClarifier extends RecipeMapMultiblockController {
 
     public MetaTileEntityClarifier(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CLARIFIER);
+        super(metaTileEntityId, GTBRecipeMaps.CLARIFIER_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

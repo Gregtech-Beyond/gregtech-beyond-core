@@ -16,7 +16,7 @@ public class AlcoholLine {
                 .fluidOutputs(EthanolWaterAzeotrope.getFluid(720))
                 .fluidOutputs(FuselOil.getFluid(80))
                 .duration(120)
-                .EUt(800)
+                .EUt(20)
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
@@ -26,7 +26,7 @@ public class AlcoholLine {
                 .fluidOutputs(Ethylene.getFluid(1200))
                 .duration(200)
                 .circuitMeta(1)
-                .EUt(800)
+                .EUt(20)
                 .buildAndRegister();
 
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
@@ -36,7 +36,7 @@ public class AlcoholLine {
                 .fluidOutputs(Ethylene.getFluid(1200))
                 .duration(200)
                 .circuitMeta(1)
-                .EUt(800)
+                .EUt(40)
                 .buildAndRegister();
 
         DISTILLATION_RECIPES.recipeBuilder()
@@ -51,7 +51,7 @@ public class AlcoholLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        FERMENTATION_VAT.recipeBuilder()
+        FERMENTATION_VAT_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(16000))
                 .fluidInputs(GrainSolution.getFluid(1000))
                 .input(dust, Sugar, 24)
@@ -61,7 +61,7 @@ public class AlcoholLine {
                 .EUt(12)
                 .buildAndRegister();
 
-        FERMENTATION_VAT.recipeBuilder()
+        FERMENTATION_VAT_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(16000))
                 .fluidInputs(Oxygen.getFluid(4000))
                 .input(dust, Sugar, 24)
@@ -77,7 +77,7 @@ public class AlcoholLine {
                 .fluidOutputs(AceticAcid.getFluid(400))
                 .output(dust, Wood, 1)
                 .duration(200)
-                .EUt(800)
+                .EUt(20)
                 .buildAndRegister();
     }
 }

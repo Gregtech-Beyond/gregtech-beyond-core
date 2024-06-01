@@ -29,7 +29,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityPressureSwingAdsorber extends RecipeMapMultiblockController {
 
     public MetaTileEntityPressureSwingAdsorber(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.PRESSURE_SWING_ADSORBER);
+        super(metaTileEntityId, GTBRecipeMaps.PRESSURE_SWING_ADSORBER_RECIPES);
         initializeAbilities();
     }
 

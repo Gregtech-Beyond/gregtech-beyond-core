@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController {
 
     public MetaTileEntityTextileFactory(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.TEXTILE_FACTORY);
+        super(metaTileEntityId, GTBRecipeMaps.TEXTILE_FACTORY_RECIPES);
         initializeAbilities();
     }
 

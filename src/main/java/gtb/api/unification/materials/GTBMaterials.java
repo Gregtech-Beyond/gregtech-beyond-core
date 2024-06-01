@@ -2,7 +2,6 @@ package gtb.api.unification.materials;
 
 import gregtech.api.unification.material.Material;
 
-import gtb.api.unification.materials.info.GTBMaterialFlags;
 import gtb.api.unification.materials.info.GTBMaterialIconSet;
 
 public class GTBMaterials {
@@ -103,11 +102,35 @@ public class GTBMaterials {
     public static Material SheepBlood;
     public static Material Xerizin;
 
+    public static Material CopperSulfide;
+    public static Material SodiumIodate;
+    public static Material SinteredSilver;
+    public static Material SilverAlloy;
+    public static Material RarestEarthMixture;
+    public static Material RarerEarthConcentrate;
+    public static Material PurifiedScandiumLeachResidues;
+    public static Material ExquisiteScandiumLeachResidues;
+    public static Material LanthanumLeachSolution;
+    public static Material LanthanumLeachEmulsion;
+    public static Material REEGroupMud;
+    public static Material SulfuricResidues;
+    public static Material Cryolite;
+    public static Material GadoliniumLeach;
+    public static Material RoastedGadoliniteLeachSolution;
+    public static Material GadoliniumSolution;
+    public static Material GadoliniteLeachSolution;
+    public static Material CooledGadoliniteLeachSolution;
+    public static Material DysprosiumOxideSolution;
+    public static Material YttriumOxide;
+    public static Material ErbiumOxide;
+    public static Material DysprosiumOxide;
+    public static Material ScandiumOxide;
+
     // Element Materials
     public static Material Rubidium;
-    public static Material Holmium;
 
     // FD Materials
+    public static Material Gadolinite;
     public static Material Tetradecanol;
     public static Material MethylIsobutylCarbonyl;
     public static Material AmidoEthylAlkylImidazole;
@@ -601,8 +624,118 @@ public class GTBMaterials {
     public static Material Syngas;
     public static Material MolybdenumFlue;
     public static Material TraceRheniumFlue;
+    public static Material ManganeseSulfate;
+    public static Material Rhodocrosite;
+    public static Material CassiteriteCokePellets;
+    public static Material TinSlag;
+    public static Material NbTaContainingDust;
+    public static Material NiobiumTantalumOxide;
+    public static Material AluminiumTrifluoride;
+    public static Material SiliconFluoride;
+    public static Material NbTaFluorideMix;
+    public static Material BariumOxide;
+    public static Material BariumPeroxide;
+    public static Material Columbite;
+    public static Material FusedColumbite;
+    public static Material ColumbiteMinorOxideResidue;
+    public static Material LeachedColumbite;
+    public static Material IronSulfate;
+    public static Material SodiumSulfate;
+    public static Material TantaliteMinorOxideResidue;
+    public static Material FluoroniobicAcid;
+    public static Material FusedTantalite;
+    public static Material LeachedTantalite;
+    public static Material CubicZirconia;
+    public static Material AcidicLeachedPyrochlore;
+    public static Material LeachedPyrochlore;
+    public static Material PotasssiumFluoroNiobate;
+    public static Material FluorotantalicAcid;
+    public static Material TributylPhosphate;
+    public static Material MethylIsobutylKetone;
+    public static Material NbTaSeparationMixture;
+    public static Material HeptafluoroTantalate;
+    public static Material OxypentafluoroNiobate;
+    public static Material PotasssiumFluoroTantalate;
+    public static Material AcetoneSolution;
+    public static Material DilutedAcetone;
+    public static Material TitaniumDioxide;
+    public static Material GaseousTitaniumTetrachloride;
+    public static Material RedMudConcentrate;
+    public static Material SodiumAluminateSolution;
+    public static Material RoastedBauxite;
+    public static Material LeachedBauxite;
+    public static Material NeutralisedRedMud;
+    public static Material RedSlurry;
+    public static Material TitanylSulfate;
+    public static Material IronChlorideSolution;
+    public static Material CrystallizedTitanylSulfate;
+    public static Material RoastedBornite;
+    public static Material MalachiteSlag;
+    public static Material SinteredMalachiteSlag;
+    public static Material CobaltSulfide;
+    public static Material NickelSulfide;
+    public static Material AmmoniaMetalSulfuricSolution;
+    public static Material CopperFreeNickelSulfide;
+    public static Material NickelSulfatePrecipitate;
+    public static Material SodiumIodide;
+    public static Material SodiumArsenateSulfuricSolution;
+    public static Material NickelRareResidue;
+    public static Material NickelSulfuricSolution;
+    public static Material CopperSulfideSolution;
+    public static Material ImpurePitchblendeSlurry;
+    public static Material SodiumIsopropylXanthate;
+    public static Material PitchblendeSlurry;
+    public static Material PitchblendeFiltrate;
+    public static Material UraniumThoriumFiltrate;
+    public static Material LeadMetallicPowder;
+    public static Material UraniumMetallicPowder;
+    public static Material UraniumResidues;
+    public static Material UraniumExtractionMixture;
+    public static Material UraniniteExtract;
+    public static Material UranylSulfide;
+    public static Material AmmoniaSulfateSolution;
+    public static Material UraniumDioxide;
+    public static Material UraniumSolution;
+    public static Material ThoriumPhosphateCakeSolution;
+    public static Material Zircon;
+    public static Material Celestine;
+    public static Material ImpurePyrochloreSlurry;
+    public static Material DigestedPyrochlore;
+    public static Material PyrochloreSlurry;
+    public static Material ImpureZirconSlurry;
+    public static Material SodiumEthylXanthate;
+    public static Material ZirconSlurry;
+    public static Material FusedZircon;
+    public static Material ZirconylChlorideSolution;
+    public static Material PurifiedZirconylChlorideSolution;
+    public static Material HafniumExtractionMixture;
+    public static Material HafniumExtract;
+    public static Material HafniumSulfateSolution;
+    public static Material HafniumDioxide;
+    public static Material ZirconiumBase;
+    public static Material ImpureCelestineSlurry;
+    public static Material CelestineSlurry;
+    public static Material StrontiumSulfideSolution;
+    public static Material StrontiumCarbonate;
+    public static Material ImpureTantaliteSlurry;
+    public static Material TantaliteSlurry;
 
     // Organic Chemistry Materials
+    public static Material MoltenOxidizedGalena;
+    public static Material DesulfurizedMoltenGalena;
+    public static Material MoltenGalena;
+    public static Material ArsenicHydroxide;
+    public static Material RecrystallizedRealgar;
+    public static Material RealgarSolution;
+    public static Material SodiumCarbonateSolution;
+    public static Material SodiumChromateSolution;
+    public static Material SodiumDichromateSolution;
+    public static Material SodiumDichromate;
+    public static Material SodaAshSolution;
+    public static Material PhosphorusOxychloride;
+    public static Material OxidizedOrthoXyleneMixture;
+    public static Material CooledOrthoXyleneMixture;
+    public static Material VanadiumPentoxide;
     public static Material BlueVitriol;
     public static Material KaptonE;
     public static Material KaptonK;
@@ -642,7 +775,6 @@ public class GTBMaterials {
 
     public static void init() {
         GTBMaterialPropertyAddition.init();
-        GTBMaterialFlags.add();
         GTBMaterialIconSet.set();
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();
@@ -651,7 +783,5 @@ public class GTBMaterials {
         GTBUnknownCompositionMaterials.register();
         GTBBiologicalMaterials.register();
         GTBFantasyMaterials.register();
-        GTBMaterialSetFormula.init();
-        GTBMaterialIconSet.set();
     }
 }

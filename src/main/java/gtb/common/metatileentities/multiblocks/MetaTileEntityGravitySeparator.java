@@ -11,50 +11,55 @@ import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
+import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.blocks.BlockBoilerCasing;
+import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
-import gtb.api.NoEnergyMultiController;
 import gtb.api.recipes.GTBRecipeMaps;
-import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing;
 
-public class MetaTileEntityWaterTank extends NoEnergyMultiController {
+public class MetaTileEntityGravitySeparator extends RecipeMapMultiblockController {
 
-    public MetaTileEntityWaterTank(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.WATER_TANK);
+    public MetaTileEntityGravitySeparator(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.GRAVITY_SEPARATOR_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING
-                .getState(GTBMultiblockCasing.CasingType.STEEL_BORDERED_WOODEN_CASING);
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("F~F", "~~~", "F~F")
-                .aisle("CCC", "CCC", "CSC")
-                .aisle("CCC", "C~C", "CCC")
-                .aisle("CCC", "CCC", "CCC")
+                .aisle("~P~P", "~~~~", "CCCC", "CCCC", "CCCC", "CCCC", "CCCC")
+                .aisle("~PPP", "~P~P", "CCCC", "C~~C", "CDDC", "C~~C", "CCSC")
+                .aisle("~~~~", "~~~~", "CCCC", "CDDC", "C~~C", "CDDC", "CCCC")
                 .where('S', selfPredicate())
                 .where('~', any())
+                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                .where('D',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
+                                .getState(GTBMultiblockCasing.CasingType.GRAVITY_SEPARATOR_ROTOR_BLOCK)))
                 .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
-                .where('F', frames(Materials.Steel))
+                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1, 1))
+                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMaxGlobalLimited(1, 1))
+                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1, 1))
+                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1, 1)))
                 .build();
     }
 
@@ -66,7 +71,7 @@ public class MetaTileEntityWaterTank extends NoEnergyMultiController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return GTBTextures.STEEL_BORDERED_WOODEN_CASING;
+        return Textures.SOLID_STEEL_CASING;
     }
 
     @Override
@@ -80,11 +85,11 @@ public class MetaTileEntityWaterTank extends NoEnergyMultiController {
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.PRIMITIVE_BLAST_FURNACE_OVERLAY;
+        return Textures.BLOWER_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityWaterTank(metaTileEntityId);
+        return new MetaTileEntityGravitySeparator(metaTileEntityId);
     }
 }

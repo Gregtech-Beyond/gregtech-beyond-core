@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityPhaseSeparator extends RecipeMapMultiblockController {
 
     public MetaTileEntityPhaseSeparator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.PHASE_SEPARATOR);
+        super(metaTileEntityId, GTBRecipeMaps.PHASE_SEPARATOR_RECIPES);
         initializeAbilities();
     }
 

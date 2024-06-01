@@ -20,6 +20,12 @@
           "all" : "gregtech:blocks/gtb_multiblock_casing/high_energy_coil"
         }
       },
+      "gravity_separator_rotor_block" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing/gravity_separator_rotor_block"
+        }
+      },
       "quantum_casing" : {
         "model" : "minecraft:cube_all",
         "textures" : {
@@ -79,6 +85,14 @@
         "textures" : {
           "top" : "gregtech:blocks/gtb_multiblock_casing/substrate_casing_top",
           "side" : "gregtech:blocks/gtb_multiblock_casing/substrate_casing_side",
+          "bottom" : "#side"
+        }
+      },
+      "basic_structural_casing" : {
+        "model" : "minecraft:cube_bottom_top",
+        "textures" : {
+          "top" : "gregtech:blocks/gtb_multiblock_casing/basic_structural_casing",
+          "side" : "gregtech:blocks/gtb_multiblock_casing/basic_structural_casing",
           "bottom" : "#side"
         }
       },

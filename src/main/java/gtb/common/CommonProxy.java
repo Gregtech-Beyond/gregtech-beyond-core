@@ -16,13 +16,16 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
+import org.jetbrains.annotations.NotNull;
+
 import gregtech.api.block.VariantItemBlock;
 import gregtech.api.unification.material.event.MaterialEvent;
 import gregtech.api.unification.material.event.PostMaterialEvent;
+import gregtech.common.items.MetaItems;
 
 import gtb.GregtechBeyondCore;
 import gtb.api.unification.materials.GTBMaterials;
-import gtb.api.unification.materials.info.GTBMaterialFlags;
+import gtb.api.unification.ore.GTBOrePrefix;
 import gtb.api.utils.GTBLog;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.loaders.recipe.GTBRecipeLoader;
@@ -49,6 +52,7 @@ public class CommonProxy {
         registry.register(GTBMetaBlocks.GTB_EXPLOSIVE);
         registry.register(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL);
         registry.register(GTBMetaBlocks.BLOCK_CRUCIBLE);
+        registry.register(GTBMetaBlocks.COOLING_COIL);
     }
 
     @SubscribeEvent
@@ -61,16 +65,12 @@ public class CommonProxy {
         registry.register(createItemBlock(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL, VariantItemBlock::new));
         registry.register(createItemBlock(GTBMetaBlocks.BLOCK_CRUCIBLE, VariantItemBlock::new));
+        registry.register(createItemBlock(GTBMetaBlocks.COOLING_COIL, VariantItemBlock::new));
     }
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public static void registerMaterials(MaterialEvent event) {
         GTBMaterials.init();
-    }
-
-    @SubscribeEvent(priority = EventPriority.HIGH)
-    public static void registerMaterialsPost(PostMaterialEvent event) {
-        GTBMaterialFlags.add();
     }
 
     private static <T extends Block> ItemBlock createItemBlock(T block, Function<T, ItemBlock> producer) {
@@ -87,5 +87,12 @@ public class CommonProxy {
         // This is called AFTER GregTech registers recipes, so
         // anything here is safe to call removals in
         GTBRecipeLoader.init();
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public static void postRegisterMaterials(@NotNull PostMaterialEvent event) {
+        MetaItems.addOrePrefix(GTBOrePrefix.floated);
+        MetaItems.addOrePrefix(GTBOrePrefix.sifted);
+        // SusyMaterials.removeFlags();
     }
 }

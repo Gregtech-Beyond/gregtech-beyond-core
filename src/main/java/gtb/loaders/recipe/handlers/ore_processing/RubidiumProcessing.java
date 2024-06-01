@@ -72,7 +72,7 @@ public class RubidiumProcessing {
                 .EUt(700)
                 .buildAndRegister();
 
-        ELECTROLYTIC_CELL.recipeBuilder()
+        ELECTROLYTIC_CELL_RECIPES.recipeBuilder()
                 .input(dust, TinFourChloride, 2)
                 .notConsumable(stick, Steel)
                 .notConsumable(MagnesiumChlorideSolution.getFluid(432))

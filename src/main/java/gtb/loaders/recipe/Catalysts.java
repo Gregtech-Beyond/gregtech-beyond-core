@@ -180,7 +180,7 @@ public class Catalysts {
                 .EUt(600)
                 .buildAndRegister();
 
-        CRYSTALLIZATION.recipeBuilder()
+        CRYSTALLIZATION_RECIPES.recipeBuilder()
                 .fluidInputs(ZirconiumDioxideSolution.getFluid(1000))
                 .output(dust, RecrystallizedZirconiumDioxide, 2)
                 .duration(500)
@@ -203,6 +203,16 @@ public class Catalysts {
                 .outputs(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(FULLERENE_POLYMER_TETRIX_CASING))
                 .duration(200)
                 .EUt(800)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(Nomex.getFluid(1000))
+                .input(gem, ChromaticGlass)
+                .input(stick, StainlessSteel, 2)
+                .input(foil, Polytetrafluoroethylene, 4)
+                .output(CHROMATIC_GLASS_FIBER)
+                .duration(200)
+                .EUt(700)
                 .buildAndRegister();
     }
 }

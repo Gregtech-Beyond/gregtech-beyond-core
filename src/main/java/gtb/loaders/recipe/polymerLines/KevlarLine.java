@@ -2,10 +2,8 @@ package gtb.loaders.recipe.polymerLines;
 
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
-import static gregtech.api.unification.material.MarkerMaterials.Color.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
@@ -127,13 +125,13 @@ public class KevlarLine {
 
         MIXER_RECIPES.recipeBuilder()
                 .notConsumable(ROTARRY_SPINNING_WHISKER)
-                .input(dust, KevlarConcentrate)
+                .input(dust, PurifiedKevlarConcentrate)
                 .output(dust, KevlarBlend)
                 .EUt(2000)
                 .duration(800)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, KevlarBlend)
                 .output(dust, Kevlar)
                 .fluidInputs(Air.getFluid(1000))
@@ -141,7 +139,7 @@ public class KevlarLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, KevlarBlend)
                 .output(dust, Kevlar)
                 .fluidInputs(Oxygen.getFluid(1000))
@@ -149,7 +147,7 @@ public class KevlarLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, KevlarBlend)
                 .output(dust, Kevlar)
                 .notConsumable(dust, KaminskyCatalyst)
@@ -157,7 +155,7 @@ public class KevlarLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, KevlarBlend)
                 .output(dust, Kevlar)
                 .notConsumable(dust, PhilipsCatalyst)
@@ -165,7 +163,7 @@ public class KevlarLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, KevlarBlend)
                 .output(dust, Kevlar)
                 .notConsumable(dust, ZieglerNattaCatalyst)

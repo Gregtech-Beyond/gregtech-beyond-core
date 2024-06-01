@@ -47,19 +47,19 @@ public class PolyphenyleneSulfideLine {
                 .EUt(280)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(SodiumSulfideDichloroBenzeneMixture.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(PhenyleneSulfidePrePolymerMixture.getFluid(144))
                 .notConsumable(dust, KaminskyCatalyst).fluidOutputs(PolyphenyleneSulfide.getFluid(576)).duration(120)
                 .EUt(670).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(SodiumSulfideDichloroBenzeneMixture.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(PhenyleneSulfidePrePolymerMixture.getFluid(144))
                 .notConsumable(dust, PhilipsCatalyst).fluidOutputs(PolyphenyleneSulfide.getFluid(288)).duration(120)
                 .EUt(670).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(SodiumSulfideDichloroBenzeneMixture.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(PhenyleneSulfidePrePolymerMixture.getFluid(144))
                 .notConsumable(dust, ZieglerNattaCatalyst).fluidOutputs(PolyphenyleneSulfide.getFluid(432))
                 .duration(120).EUt(670).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(SodiumSulfideDichloroBenzeneMixture.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(PhenyleneSulfidePrePolymerMixture.getFluid(144))
                 .fluidInputs(Oxygen.getFluid(1000)).fluidOutputs(PolyphenyleneSulfide.getFluid(144)).duration(120)
                 .EUt(670).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().fluidInputs(SodiumSulfideDichloroBenzeneMixture.getFluid(144))
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(PhenyleneSulfidePrePolymerMixture.getFluid(144))
                 .fluidInputs(Air.getFluid(1000)).fluidOutputs(PolyphenyleneSulfide.getFluid(144)).duration(120).EUt(670)
                 .buildAndRegister();
     }

@@ -31,7 +31,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityFermentationVat extends RecipeMapMultiblockController {
 
     public MetaTileEntityFermentationVat(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.FERMENTATION_VAT);
+        super(metaTileEntityId, GTBRecipeMaps.FERMENTATION_VAT_RECIPES);
         initializeAbilities();
     }
 

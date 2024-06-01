@@ -7,11 +7,15 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.OreDictUnifier;
+
 public class MolybdenumProcessing {
 
     public static void init() {
         // MoS2 + 9O -> MoO3 + 2SO2 + ReO2
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .input(dust, Molybdenite, 3)
                 .fluidInputs(Oxygen.getFluid(8000))
                 .output(dust, MolybdenumTrioxide, 4)
@@ -86,5 +90,16 @@ public class MolybdenumProcessing {
                 .output(dust, AmmoniumChloride, 2)
                 .fluidOutputs(SulfuricAcid.getFluid(1000))
                 .duration(100).EUt(VA[EV]).buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, Wulfenite, 6));
+        GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, Molybdenite, 3));
+
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustImpure, Molybdenite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Molybdenite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustPure, Molybdenite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushed, Molybdenite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedCentrifuged, Molybdenite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedPurified, Molybdenite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(ore, Molybdenite));
     }
 }

@@ -3,7 +3,6 @@ package gtb.loaders.recipe;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
@@ -27,7 +26,7 @@ public class BrineLine {
                 .EUt(650)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(IodineSlurry.getFluid(1000))
                 .output(dust, Iodine)
                 .duration(120)
@@ -54,21 +53,21 @@ public class BrineLine {
                 .EUt(7120)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(DampBromine.getFluid(1000))
                 .fluidOutputs(Bromine.getFluid(1000))
                 .duration(1200)
                 .EUt(4800)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(Brine.getFluid(1000))
                 .fluidOutputs(ConcentratedBrine.getFluid(800))
                 .duration(120)
                 .EUt(700)
                 .buildAndRegister();
 
-        CRYSTALLIZATION.recipeBuilder()
+        CRYSTALLIZATION_RECIPES.recipeBuilder()
                 .fluidInputs(ConcentratedBrine.getFluid(1000))
                 .notConsumable(NAK_COOLANT_CELL)
                 .output(dust, PotassiumMagnesiumSalts, 30)
@@ -106,7 +105,7 @@ public class BrineLine {
                 .EUt(850)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(LithiumChlorideSolution.getFluid(1000))
                 .fluidOutputs(Chlorine.getFluid(1000))
                 .output(dust, Lithium)
@@ -133,7 +132,7 @@ public class BrineLine {
                 .EUt(800)
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder()
+        DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(SodiumSulfideSolution.getFluid(1000))
                 .output(dust, SodiumSulfide)
                 .duration(102)

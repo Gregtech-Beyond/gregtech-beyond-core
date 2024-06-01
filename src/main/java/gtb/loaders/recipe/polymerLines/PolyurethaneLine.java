@@ -31,7 +31,7 @@ public class PolyurethaneLine {
                 .EUt(1900)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(UrethanePrePolymer.getFluid(1000))
                 .fluidOutputs(Polyurethane.getFluid(1000))
                 .fluidInputs(Air.getFluid(1000))
@@ -39,7 +39,7 @@ public class PolyurethaneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(UrethanePrePolymer.getFluid(1000))
                 .fluidOutputs(Polyurethane.getFluid(1000))
                 .fluidInputs(Oxygen.getFluid(1000))
@@ -47,7 +47,7 @@ public class PolyurethaneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(UrethanePrePolymer.getFluid(1000))
                 .fluidOutputs(Polyurethane.getFluid(4000))
                 .notConsumable(dust, KaminskyCatalyst)
@@ -55,7 +55,7 @@ public class PolyurethaneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(UrethanePrePolymer.getFluid(1000))
                 .fluidOutputs(Polyurethane.getFluid(2000))
                 .notConsumable(dust, PhilipsCatalyst)
@@ -63,7 +63,7 @@ public class PolyurethaneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(UrethanePrePolymer.getFluid(1000))
                 .fluidOutputs(Polyurethane.getFluid(3000))
                 .notConsumable(dust, ZieglerNattaCatalyst)

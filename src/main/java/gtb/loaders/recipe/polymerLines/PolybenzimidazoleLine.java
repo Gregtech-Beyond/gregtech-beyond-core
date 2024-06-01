@@ -25,7 +25,7 @@ public class PolybenzimidazoleLine {
                 .EUt(800)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .input(dust, PolybenzimidazolePrePolymerFoam, 1)
                 .fluidOutputs(ImpurePolybenzimidazoleSolution.getFluid(1000))
                 .duration(700)

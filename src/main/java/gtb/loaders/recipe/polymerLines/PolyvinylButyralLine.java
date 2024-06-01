@@ -13,7 +13,7 @@ import gregtech.api.recipes.GTRecipeHandler;
 public class PolyvinylButyralLine {
 
     public static void init() {
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(PolyvinylAcetate.getFluid(144))
                 .fluidInputs(Butyraldehyde.getFluid(255))
                 .fluidOutputs(PolyvinylButyral.getFluid(144))

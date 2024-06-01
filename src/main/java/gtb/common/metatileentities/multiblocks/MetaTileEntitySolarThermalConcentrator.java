@@ -34,7 +34,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiController {
 
     public MetaTileEntitySolarThermalConcentrator(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.SOLAR_THERMAL_CONCENTRATOR);
+        super(metaTileEntityId, GTBRecipeMaps.SOLAR_THERMAL_CONCENTRATOR_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

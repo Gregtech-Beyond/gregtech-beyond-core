@@ -126,8 +126,6 @@ public class GTBOrganicChemistryMaterials {
                 .setFormula("C6H2(CH3)4", true);
 
         PyromelliticDianhydride = new Material.Builder(getMaterialsId(), gregtechId("pyromellitic_dianhydride")) // TODO
-                                                                                                                 // PDMA
-                                                                                                                 // Tooltip
                 .dust()
                 .color(0xF0EAD6)
                 .iconSet(MaterialIconSet.ROUGH)
@@ -191,6 +189,21 @@ public class GTBOrganicChemistryMaterials {
                 .components(Carbon, 12, Hydrogen, 12, Nitrogen, 2, Oxygen, 1)
                 .build()
                 .setFormula("O(C6H4NH2)2", true);
+
+        PhosphorusOxychloride = new Material.Builder(getMaterialsId(), gregtechId("phosphorus_oxychloride"))
+                .fluid()
+                .color(0xD9D086).build()
+                .setFormula("POCl3", true);
+
+        AcetoneSolution = new Material.Builder(getMaterialsId(), gregtechId("acetone_solution"))
+                .fluid()
+                .color(0xD9D086).build()
+                .setFormula("(C3H6O)H?", true);
+
+        DilutedAcetone = new Material.Builder(getMaterialsId(), gregtechId("diluted_acetone"))
+                .fluid()
+                .color(0xBAD5E1).build()
+                .setFormula("(C3H6O)(H2O)", true);
     }
 
     private static int getMaterialsId() {

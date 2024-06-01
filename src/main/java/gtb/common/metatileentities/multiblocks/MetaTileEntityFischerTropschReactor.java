@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityFischerTropschReactor extends RecipeMapMultiblockController {
 
     public MetaTileEntityFischerTropschReactor(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.FISCHER_TROPSCH_REACTOR);
+        super(metaTileEntityId, GTBRecipeMaps.FISCHER_TROPSCH_REACTOR_RECIPES);
         initializeAbilities();
     }
 

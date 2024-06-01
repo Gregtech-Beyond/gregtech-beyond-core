@@ -5,6 +5,8 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.*;
 
+import gtb.api.unification.materials.info.GTBMaterialFlags;
+
 public class GTBMaterialPropertyAddition {
 
     public static void init() {
@@ -25,29 +27,64 @@ public class GTBMaterialPropertyAddition {
         Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
         AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
         Mica.setProperty(PropertyKey.INGOT, new IngotProperty());
+        BandedIron.setProperty(PropertyKey.INGOT, new IngotProperty());
+        PlatinumRaw.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
+        Pyrochlore.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
+        Tantalite.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
 
         // Pre-Registered Materials ????????
 
         // Zirconium
-        Zirconium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Zirconium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Zirconium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Zirconium.addFlags(MaterialFlags.GENERATE_FRAME);
-        Zirconium.addFlags(MaterialFlags.GENERATE_ROD);
 
         // Holmium
 
         Holmium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Holmium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Holmium.addFlags(MaterialFlags.GENERATE_FRAME);
-        Holmium.addFlags(MaterialFlags.GENERATE_ROD);
 
         // Hafnium
 
-        Hafnium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Hafnium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Hafnium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Hafnium.addFlags(MaterialFlags.GENERATE_FRAME);
-        Hafnium.addFlags(MaterialFlags.GENERATE_ROD);
+
+        // Scandium
+
+        Scandium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Scandium.addFlags(MaterialFlags.GENERATE_PLATE);
+
+        // Dysprosium
+
+        Dysprosium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Dysprosium.addFlags(MaterialFlags.GENERATE_PLATE);
+
+        // Erbium
+
+        Erbium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Erbium.addFlags(MaterialFlags.GENERATE_PLATE);
+        // Gadolinium
+
+        Gadolinium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Gadolinium.addFlags(MaterialFlags.GENERATE_PLATE);
+
+        // Rhenium
+
+        Rhenium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Rhenium.addFlags(MaterialFlags.GENERATE_PLATE);
+
+        // Germanium
+
+        Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Germanium.addFlags(MaterialFlags.GENERATE_PLATE);
+
+        // Strontium
+
+        Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Strontium.addFlags(MaterialFlags.GENERATE_PLATE);
+
+        // Rutherfordium
+        Rutherfordium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Rutherfordium.addFlags(MaterialFlags.GENERATE_PLATE);
     }
 }

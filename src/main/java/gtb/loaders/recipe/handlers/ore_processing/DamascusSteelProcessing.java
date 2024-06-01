@@ -1,4 +1,4 @@
-package gtb.loaders.recipe;
+package gtb.loaders.recipe.handlers.ore_processing;
 
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -9,7 +9,7 @@ import static gtb.common.item.GTBMetaItems.*;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
 
-public class DamascusSteelLine {
+public class DamascusSteelProcessing {
 
     public static void init() {
         GTRecipeHandler.removeRecipesByInputs(CENTRIFUGE_RECIPES, OreDictUnifier.get(dust, DamascusSteel, 8));

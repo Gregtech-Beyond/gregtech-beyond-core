@@ -31,7 +31,7 @@ public class PolydimethylsiloxaneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, Dimethylsiloxane)
                 .notConsumable(dust, ZieglerNattaCatalyst)
                 .output(dust, Polydimethylsiloxane, 3)
@@ -39,7 +39,7 @@ public class PolydimethylsiloxaneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, Dimethylsiloxane)
                 .notConsumable(dust, PhilipsCatalyst)
                 .output(dust, Polydimethylsiloxane, 2)
@@ -47,7 +47,7 @@ public class PolydimethylsiloxaneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder()
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, Dimethylsiloxane)
                 .notConsumable(dust, KaminskyCatalyst)
                 .output(dust, Polydimethylsiloxane, 4)
@@ -55,7 +55,7 @@ public class PolydimethylsiloxaneLine {
                 .EUt(80)
                 .buildAndRegister();
 
-        THERMAL_PRESS.recipeBuilder()
+        THERMAL_PRESS_RECIPES.recipeBuilder()
                 .input(dust, Polydimethylsiloxane, 9)
                 .input(dust, Sulfur)
                 .fluidOutputs(SiliconeRubber.getFluid(1296))

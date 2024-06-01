@@ -29,6 +29,8 @@ public final class GTBTextures {
             "gtb_multiblock_casing/silicon_carbide_casing");
     public static SimpleOverlayRenderer CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(
             "multiblock/cvd_unit");
+    public static SimpleOverlayRenderer LARGE_CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(
+            "multiblock/large_cvd_unit");
 
     private GTBTextures() {}
 

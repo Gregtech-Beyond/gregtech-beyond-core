@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
 
     public MetaTileEntityBacterialVat(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.BACTERIAL_VAT);
+        super(metaTileEntityId, GTBRecipeMaps.BACTERIAL_VAT_RECIPES);
         initializeAbilities();
     }
 

@@ -4,10 +4,10 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.MarkerMaterials.Color.Magenta;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
-import static gregtech.common.items.MetaItems.GELLED_TOLUENE;
+import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
-import static gtb.common.item.GTBMetaItems.UVA_HALIDE_LAMP;
+import static gtb.common.item.GTBMetaItems.*;
 
 public class FullerenePolymerMatrixLine {
 
@@ -114,7 +114,7 @@ public class FullerenePolymerMatrixLine {
                 .duration(250)
                 .buildAndRegister();
 
-        BIO_REACTOR.recipeBuilder()
+        BIO_REACTOR_RECIPES.recipeBuilder()
                 .input(dust, EschericiaColi, 1)
                 .input(dust, Sugar)
                 .EUt(480)
@@ -378,9 +378,10 @@ public class FullerenePolymerMatrixLine {
                 .duration(100)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Ammonia.getFluid(2000))
                 .fluidInputs(Phosgene.getFluid(1000))
+                .notConsumable(Silvertetrafluoroborate.getFluid(1000))
                 .fluidInputs(IsopropylAlcohol.getFluid(2000))
                 .notConsumable(dust, Triphenylphosphine, 1)
                 .fluidOutputs(DilutedHydrochloricAcid.getFluid(4000))
@@ -443,7 +444,7 @@ public class FullerenePolymerMatrixLine {
                 .EUt(700)
                 .buildAndRegister();
 
-        VACUUM_DISTILLATION_TOWER.recipeBuilder()
+        VACUUM_DISTILLATION_TOWER_RECIPES.recipeBuilder()
                 .input(dust, Carbon)
                 .output(dust, ActivatedCarbon)
                 .duration(200)

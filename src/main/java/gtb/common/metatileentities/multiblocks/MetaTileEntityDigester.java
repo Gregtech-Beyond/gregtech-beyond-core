@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityDigester extends RecipeMapMultiblockController {
 
     public MetaTileEntityDigester(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.DIGESTER);
+        super(metaTileEntityId, GTBRecipeMaps.DIGESTER_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

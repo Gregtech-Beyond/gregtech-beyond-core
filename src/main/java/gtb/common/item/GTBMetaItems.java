@@ -185,6 +185,9 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem LITHIUM_FOAM_BASE;
     public static MetaItem<?>.MetaValueItem ALUMINO_SILICATE_WOOL_SHEET;
     public static MetaItem<?>.MetaValueItem ROTARRY_SPINNING_WHISKER;
+    public static MetaItem<?>.MetaValueItem CHROMATIC_GLASS_FIBER;
+    public static MetaItem<?>.MetaValueItem SATURATED_CHROMATIC_GLASS_FIBER;
+    public static MetaItem<?>.MetaValueItem SINTERED_SILVER_COIL;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);

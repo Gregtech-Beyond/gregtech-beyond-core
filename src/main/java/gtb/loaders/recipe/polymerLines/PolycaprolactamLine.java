@@ -36,19 +36,19 @@ public class PolycaprolactamLine {
                 .duration(120)
                 .buildAndRegister();
 
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
                 .notConsumable(dust, KaminskyCatalyst).output(dust, Polycaprolactam).duration(120)
                 .EUt(670).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
                 .notConsumable(dust, PhilipsCatalyst).output(dust, Polycaprolactam).duration(120)
                 .EUt(670).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
                 .notConsumable(dust, ZieglerNattaCatalyst).output(dust, Polycaprolactam)
                 .duration(120).EUt(670).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
                 .fluidInputs(Oxygen.getFluid(1000)).output(dust, Polycaprolactam).duration(120)
                 .EUt(670).buildAndRegister();
-        POLYMERIZATION_TANK.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
+        POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, PrePolymerizedCaprolactam)
                 .fluidInputs(Air.getFluid(1000)).output(dust, Polycaprolactam).duration(120)
                 .EUt(670)
                 .buildAndRegister();

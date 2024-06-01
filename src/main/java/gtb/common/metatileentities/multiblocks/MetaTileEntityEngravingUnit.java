@@ -30,7 +30,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityEngravingUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityEngravingUnit(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.ENGRAVING_UNIT);
+        super(metaTileEntityId, GTBRecipeMaps.ENGRAVING_UNIT_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

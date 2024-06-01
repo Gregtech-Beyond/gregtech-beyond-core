@@ -6,10 +6,15 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
+
 public class MonaziteProcessing {
 
     public static void init() {
-        DIGESTER.recipeBuilder()
+        DIGESTER_RECIPES.recipeBuilder()
                 .fluidInputs(NitricAcid.getFluid(1000))
                 .input(dust, Monazite)
                 .output(dust, SiliconDioxide)
@@ -18,7 +23,7 @@ public class MonaziteProcessing {
                 .EUt(2000)
                 .buildAndRegister();
 
-        DISSOLUTION_TANK.recipeBuilder()
+        DISSOLUTION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(MuddyMonaziteSolution.getFluid(1000))
                 .fluidInputs(DistilledWater.getFluid(2000))
                 .output(dust, MuddyMonaziteOreByproducts, 1)
@@ -38,7 +43,7 @@ public class MonaziteProcessing {
                 .EUt(700)
                 .buildAndRegister();
 
-        DILUTION_TANK.recipeBuilder()
+        DILUTION_TANK_RECIPES.recipeBuilder()
                 .input(dust, MonaziteSulfide)
                 .fluidInputs(Water.getFluid(2000))
                 .fluidOutputs(DilutedMonaziteSulfide.getFluid(2000))
@@ -86,7 +91,7 @@ public class MonaziteProcessing {
                 .EUt(800)
                 .buildAndRegister();
 
-        ELECTROMAGNETIC_SEPARATOR_RECIPES.recipeBuilder()
+        CENTRIFUGE_RECIPES.recipeBuilder()
                 .fluidInputs(CooledRareEarthFiltrate.getFluid(1000))
                 .chancedOutput(dust, EuropiumOxide, 2000, 20)
                 .output(dust, MonaziteRarerEarthFiltrate)
@@ -110,7 +115,7 @@ public class MonaziteProcessing {
                 .EUt(1800)
                 .buildAndRegister();
 
-        DRYER.recipeBuilder()
+        DRYER_RECIPES.recipeBuilder()
                 .input(dust, SaturatedChlorinatedMonaziteFiltrate)
                 .output(dust, DriedMonaziteFiltrate)
                 .duration(400)
@@ -133,7 +138,7 @@ public class MonaziteProcessing {
                 .EUt(780)
                 .buildAndRegister();
 
-        DILUTION_TANK.recipeBuilder()
+        DILUTION_TANK_RECIPES.recipeBuilder()
                 .input(dust, CeriumOxideFiltrate)
                 .fluidInputs(DistilledWater.getFluid(2000))
                 .fluidOutputs(DilutedCeriumFiltrate.getFluid(2000))
@@ -193,7 +198,7 @@ public class MonaziteProcessing {
                 .EUt(800)
                 .buildAndRegister();
 
-        FROTH_FLOTATION_UNIT.recipeBuilder()
+        FROTH_FLOTATION_UNIT_RECIPES.recipeBuilder()
                 .fluidInputs(ImpureMonaziteOreByproductSlurry.getFluid(1000))
                 .notConsumable(MethylIsobutylCarbonyl.getFluid(200))
                 .notConsumable(AmidoEthylAlkylImidazole.getFluid(200))
@@ -202,7 +207,7 @@ public class MonaziteProcessing {
                 .EUt(70)
                 .buildAndRegister();
 
-        CLARIFIER.recipeBuilder()
+        CLARIFIER_RECIPES.recipeBuilder()
                 .fluidInputs(MonaziteOreByproductSlurry.getFluid(1000))
                 .chancedOutput(dust, ThoriumPhosphateCake, 2, 3300, 0)
                 .chancedOutput(dust, UraniumFiltrate, 2, 3300, 0)
@@ -212,7 +217,7 @@ public class MonaziteProcessing {
                 .EUt(1080)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Ethylene.getFluid(1000))
                 .fluidInputs(PalmaticAcid.getFluid(1000))
                 .fluidOutputs(Steam.getFluid(1000))
@@ -221,7 +226,7 @@ public class MonaziteProcessing {
                 .EUt(800)
                 .buildAndRegister();
 
-        ROASTER.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .fluidInputs(Ethylene.getFluid(1000))
                 .fluidInputs(CaprylicAcid.getFluid(1000))
                 .fluidOutputs(Steam.getFluid(1000))
@@ -287,5 +292,17 @@ public class MonaziteProcessing {
                 .duration(200)
                 .EUt(800)
                 .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .input(dust, HafniumOxide, 2)
+                .output(dust, Hafnium)
+                .fluidOutputs(Oxygen.getFluid(1000))
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, Monazite, 2) });
     }
 }

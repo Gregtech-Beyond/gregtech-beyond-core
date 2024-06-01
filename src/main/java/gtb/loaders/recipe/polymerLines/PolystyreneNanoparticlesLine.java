@@ -23,7 +23,7 @@ public class PolystyreneNanoparticlesLine {
                 .fluidOutputs(Methylamine.getFluid(700))
                 .buildAndRegister();
 
-        DEHYDRATOR.recipeBuilder().duration(180).EUt(1920)
+        DEHYDRATOR_RECIPES.recipeBuilder().duration(180).EUt(1920)
                 .fluidInputs(SodiumTungstate.getFluid(12000))
                 .fluidInputs(PhosphoricAcid.getFluid(1000))
                 .output(dust, SodiumPhosphotungstate, 56)

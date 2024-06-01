@@ -32,7 +32,7 @@ import gtb.common.block.blocks.GTBMultiblockCasing;
 public class MetaTileEntityHighTemperatureDistillationTower extends RecipeMapMultiblockController {
 
     public MetaTileEntityHighTemperatureDistillationTower(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.HIGH_TEMP_DISTILLATION);
+        super(metaTileEntityId, GTBRecipeMaps.HIGH_TEMP_DISTILLATION_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }

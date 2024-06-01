@@ -33,7 +33,7 @@ import gtb.api.recipes.GTBRecipeMaps;
 public class MetaTileEntityCoker extends NoEnergyMultiController {
 
     public MetaTileEntityCoker(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.COKER);
+        super(metaTileEntityId, GTBRecipeMaps.COKER_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
