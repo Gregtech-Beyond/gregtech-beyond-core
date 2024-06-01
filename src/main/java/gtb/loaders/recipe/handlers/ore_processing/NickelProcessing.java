@@ -124,5 +124,31 @@ public class NickelProcessing {
                 .duration(200)
                 .EUt(70)
                 .buildAndRegister();
+
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustImpure, Pentlandite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Pentlandite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dustPure, Pentlandite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushed, Pentlandite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedCentrifuged, Pentlandite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(crushedPurified, Pentlandite));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(ore, Pentlandite));
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(DistilledWater.getFluid(1000))
+                .input(dust, CopperSulfide)
+                .fluidOutputs(CopperSulfideSolution.getFluid(1000))
+                .duration(200)
+                .EUt(90)
+                .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder()
+                .fluidInputs(CopperSulfideSolution.getFluid(1000))
+                .output(dust, CupricOxide, 2)
+                .fluidOutputs(SulfurDioxide.getFluid(1000))
+                .duration(200)
+                .EUt(12)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, Powellite, 6));
     }
 }
