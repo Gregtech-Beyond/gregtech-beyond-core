@@ -16,11 +16,16 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 
+import org.jetbrains.annotations.NotNull;
+
 import gregtech.api.block.VariantItemBlock;
 import gregtech.api.unification.material.event.MaterialEvent;
+import gregtech.api.unification.material.event.PostMaterialEvent;
+import gregtech.common.items.MetaItems;
 
 import gtb.GregtechBeyondCore;
 import gtb.api.unification.materials.GTBMaterials;
+import gtb.api.unification.ore.GTBOrePrefix;
 import gtb.api.utils.GTBLog;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.loaders.recipe.GTBRecipeLoader;
@@ -82,5 +87,12 @@ public class CommonProxy {
         // This is called AFTER GregTech registers recipes, so
         // anything here is safe to call removals in
         GTBRecipeLoader.init();
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGH)
+    public static void postRegisterMaterials(@NotNull PostMaterialEvent event) {
+        MetaItems.addOrePrefix(GTBOrePrefix.floated);
+        MetaItems.addOrePrefix(GTBOrePrefix.sifted);
+        // SusyMaterials.removeFlags();
     }
 }

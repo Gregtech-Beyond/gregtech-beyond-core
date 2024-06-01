@@ -77,5 +77,10 @@ public class GTBMaterialPropertyAddition {
 
         Germanium.setProperty(PropertyKey.INGOT, new IngotProperty());
         Germanium.addFlags(MaterialFlags.GENERATE_PLATE);
+
+        // Strontium
+
+        Strontium.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Strontium.addFlags(MaterialFlags.GENERATE_PLATE);
     }
 }

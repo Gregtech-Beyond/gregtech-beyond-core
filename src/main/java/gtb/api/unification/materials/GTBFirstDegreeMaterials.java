@@ -1589,17 +1589,17 @@ public class GTBFirstDegreeMaterials {
 
         ImpureCelestineSlurry = new Material.Builder(getMaterialsId(),
                 gregtechId("impure_celestine_slurry"))
-                        .dust()
+                        .fluid()
                         .color(0x709BBD).build().setFormula("((?)(SrS))(H2O)(SiO2)", true);
 
         CelestineSlurry = new Material.Builder(getMaterialsId(),
                 gregtechId("celestine_slurry"))
-                        .dust()
+                        .fluid()
                         .color(0x81A4BF).build();
 
         StrontiumSulfideSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("strontium_sulfide_solution"))
-                        .dust()
+                        .fluid()
                         .color(0x4F5A63).build().setFormula("(SrS)(H2O)", true);
 
         StrontiumCarbonate = new Material.Builder(getMaterialsId(),
