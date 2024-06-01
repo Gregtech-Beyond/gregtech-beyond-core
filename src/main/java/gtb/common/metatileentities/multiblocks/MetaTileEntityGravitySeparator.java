@@ -27,6 +27,8 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 
 public class MetaTileEntityGravitySeparator extends RecipeMapMultiblockController {
 
@@ -49,6 +51,9 @@ public class MetaTileEntityGravitySeparator extends RecipeMapMultiblockControlle
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                .where('D',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
+                                .getState(GTBMultiblockCasing.CasingType.GRAVITY_SEPARATOR_ROTOR_BLOCK)))
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1, 1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMaxGlobalLimited(1, 1))
