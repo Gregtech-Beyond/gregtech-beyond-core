@@ -49,7 +49,7 @@ public class GadoliniteProcessing {
 
         ELECTROLYTIC_CELL_RECIPES.recipeBuilder()
                 .fluidInputs(GadoliniumLeach.getFluid(1000))
-                .notConsumable(Cryolite.getFluid(100))
+                .notConsumable(Alumina.getFluid(100))
                 .fluidOutputs(GadoliniumSolution.getFluid(600))
                 .fluidOutputs(SulfuricResidues.getFluid(400))
                 .notConsumable(stick, Titanium)
@@ -69,7 +69,7 @@ public class GadoliniteProcessing {
 
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(GadoliniumSolution.getFluid(1000))
-                .output(dust, GadoliniumOxide, 2)
+                .output(dust, GadoliniumOxide, 4)
                 .fluidOutputs(Water.getFluid(1000))
                 .duration(240)
                 .EUt(700)
