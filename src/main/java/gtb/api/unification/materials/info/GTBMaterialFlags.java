@@ -14,7 +14,10 @@ public class GTBMaterialFlags {
     public static final MaterialFlag GENERATE_COIL = new MaterialFlag.Builder("generate_coil")
             .requireFlags(MaterialFlags.GENERATE_FINE_WIRE)
             .build();
-    public static final MaterialFlag GENERATE_FOATED = new MaterialFlag.Builder("generate_floated")
+    public static final MaterialFlag GENERATE_FLOATED = new MaterialFlag.Builder("generate_floated")
+            .build();
+
+    public static final MaterialFlag GENERATE_SIFTED = new MaterialFlag.Builder("generate_sifted")
             .build();
 
     public static final MaterialFlag DISABLE_CRYSTALLIZATION = new MaterialFlag.Builder("no_crystallization")
@@ -24,10 +27,5 @@ public class GTBMaterialFlags {
     public static final MaterialFlag GENERATE_BOULE = new MaterialFlag.Builder("generate_boule")
             .requireProps(PropertyKey.GEM)
             .build();
-
-    public static void add() {
-        Graphene.addFlags(MaterialFlags.GENERATE_FOIL);
-        Mica.addFlags(MaterialFlags.GENERATE_FOIL);
-        BorosilicateGlass.addFlags(MaterialFlags.GENERATE_PLATE);
     }
 }
