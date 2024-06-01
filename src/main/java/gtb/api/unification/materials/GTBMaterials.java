@@ -698,11 +698,26 @@ public class GTBMaterials {
     public static Material UraniumDioxide;
     public static Material UraniumSolution;
     public static Material ThoriumPhosphateCakeSolution;
-    public static Material RedZircon;
+    public static Material Zircon;
     public static Material Celestine;
     public static Material ImpurePyrochloreSlurry;
     public static Material DigestedPyrochlore;
     public static Material PyrochloreSlurry;
+    public static Material ImpureZirconSlurry;
+    public static Material SodiumEthylXanthate;
+    public static Material ZirconSlurry;
+    public static Material FusedZircon;
+    public static Material ZirconylChlorideSolution;
+    public static Material PurifiedZirconylChlorideSolution;
+    public static Material HafniumExtractionMixture;
+    public static Material HafniumExtract;
+    public static Material HafniumSulfateSolution;
+    public static Material HafniumDioxide;
+    public static Material ZirconiumBase;
+    public static Material ImpureCelestineSlurry;
+    public static Material CelestineSlurry;
+    public static Material StrontiumSulfideSolution;
+    public static Material StrontiumCarbonate;
 
 
     // Organic Chemistry Materials

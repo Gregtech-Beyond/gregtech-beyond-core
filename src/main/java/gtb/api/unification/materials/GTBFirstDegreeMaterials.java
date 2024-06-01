@@ -1507,8 +1507,8 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0x8FABC2).build().setFormula("Al2O3", true);
 
-        RedZircon = new Material.Builder(getMaterialsId(),
-                gregtechId("red_zircon"))
+        Zircon = new Material.Builder(getMaterialsId(),
+                gregtechId("zircon"))
                 .fluid()
                 .flags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED)
                 .ore()
@@ -1530,6 +1530,81 @@ public class GTBFirstDegreeMaterials {
                 gregtechId("impure_pyrochlore_slurry"))
                 .fluid()
                 .color(0x541907).build().setFormula("Ca2Nb2O7", true);
+
+        ImpureZirconSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("impure_zircon_slurry"))
+                .fluid()
+                .color(0xB35B5B).build().setFormula("ZrSiO4", true);
+
+        SodiumEthylXanthate = new Material.Builder(getMaterialsId(),
+                gregtechId("sodium_ethyl_xanthate"))
+                .dust()
+                .color(0xBFB669).build().setFormula("CH3CH2OCS2Na", true);
+
+        ZirconSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("zircon_slurry"))
+                .fluid()
+                .color(0xB25656).build().setFormula("ZrSiO4", true);
+
+        FusedZircon = new Material.Builder(getMaterialsId(),
+                gregtechId("fused_zircon"))
+                .dust()
+                .color(0x842222).build().setFormula("ZrSiO4", true);
+
+        ZirconylChlorideSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("zirconyl_chloride_solution"))
+                .fluid()
+                .color(0x4CAF50).build().setFormula("(ZrOCl2)(HCl)2(H2O)2", true);
+
+        HafniumExtractionMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("hafnium_extraction_mixture"))
+                .fluid()
+                .color(0xEC407A).build();
+
+        PurifiedZirconylChlorideSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("purified_zirconyl_chloride_solution"))
+                .fluid()
+                .color(0x43A047).build().setFormula("(ZrOCl2)(HCl)2(H2O)2", true);
+
+        HafniumExtract = new Material.Builder(getMaterialsId(),
+                gregtechId("hafnium_extract"))
+                .fluid()
+                .color(0xC9A3CF).build();
+
+        HafniumSulfateSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("hafnium_sulfate_solution"))
+                .fluid()
+                .color(0xE1BEE7).build().setFormula("[Hf(SO4)2](H2O)2", true);
+
+        HafniumDioxide = new Material.Builder(getMaterialsId(),
+                gregtechId("hafnium_dioxide"))
+                .dust()
+                .color(0xCAC3CC).build().setFormula("HfO2", true);
+
+        ZirconiumBase = new Material.Builder(getMaterialsId(),
+                gregtechId("zirconium_base"))
+                .dust()
+                .color(0xFAF4C2).build().setFormula("Zr?", true);
+
+        ImpureCelestineSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("impure_celestine_slurry"))
+                .dust()
+                .color(0x709BBD).build().setFormula("((?)(SrS))(H2O)(SiO2)", true);
+
+        CelestineSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("celestine_slurry"))
+                .dust()
+                .color(0x81A4BF).build();
+
+        StrontiumSulfideSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("strontium_sulfide_solution"))
+                .dust()
+                .color(0x4F5A63).build().setFormula("(SrS)(H2O)", true);
+
+        StrontiumCarbonate = new Material.Builder(getMaterialsId(),
+                gregtechId("strontium_carbonate"))
+                .dust()
+                .color(0x4CAF50).build().setFormula("SrCO3", true);
 
 
 
