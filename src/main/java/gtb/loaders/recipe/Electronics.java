@@ -10,6 +10,7 @@ import static gtb.common.item.GTBMetaItems.*;
 
 import java.util.function.Predicate;
 
+import gregtech.common.items.MetaItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 
@@ -79,7 +80,7 @@ public class Electronics {
                 .EUt(80)
                 .buildAndRegister();
 
-        ModHandler.removeRecipeByOutput((Predicate<IRecipe>) ITEM_FILTER);
+        ModHandler.removeRecipeByOutput(ITEM_FILTER.getStackForm());
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(foil, Zinc, 16)
