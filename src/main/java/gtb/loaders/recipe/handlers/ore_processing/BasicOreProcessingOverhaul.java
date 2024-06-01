@@ -41,8 +41,8 @@ public class BasicOreProcessingOverhaul {
                         OreDictUnifier.get(dust, ManganeseSulfate, 6) });
 
         ROASTER_RECIPES.recipeBuilder()
-                .input(dust, ManganeseSulfate, 6)
-                .fluidOutputs(SulfurTrioxide.getFluid(5000))
+                .input(dust, ManganeseSulfate, 3)
+                .fluidOutputs(SulfurDioxide.getFluid(2000))
                 .output(dust, Manganese, 1)
                 .circuitMeta(0)
                 .duration(200)
