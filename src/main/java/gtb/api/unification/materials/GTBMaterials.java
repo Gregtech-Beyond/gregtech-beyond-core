@@ -682,6 +682,24 @@ public class GTBMaterials {
     public static Material SodiumArsenateSulfuricSolution;
     public static Material NickelRareResidue;
     public static Material NickelSulfuricSolution;
+    public static Material CopperSulfideSolution;
+    public static Material ImpurePitchblendeSlurry;
+    public static Material SodiumIsopropylXanthate;
+    public static Material PitchblendeSlurry;
+    public static Material PitchblendeFiltrate;
+    public static Material UraniumThoriumFiltrate;
+    public static Material LeadMetallicPowder;
+    public static Material UraniumMetallicPowder;
+    public static Material UraniumResidues;
+    public static Material UraniumExtractionMixture;
+    public static Material UraniniteExtract;
+    public static Material UranylSulfide;
+    public static Material AmmoniaSulfateSolution;
+    public static Material UraniumDioxide;
+    public static Material UraniumSolution;
+    public static Material ThoriumPhosphateCakeSolution;
+
+
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;
