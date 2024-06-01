@@ -38,12 +38,13 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.LEFT, RelativeDirection.FRONT, RelativeDirection.DOWN)
-                .aisle("F   F", "F X F", "FXXXF", "F X F", "F   F", "     ")
-                .aisle("  X  ", " XCX ", "XCCCX", " XCX ", "  X  ", "  X  ")
-                .aisle(" XXX ", "XCCCX", "XK#KX", "XC#CX", " XCX ", " XMX ")
-                .aisle("  X  ", " XCX ", "XCCCX", " XCX ", "  X  ", "  X  ")
-                .aisle("F   F", "F X F", "FXSXF", "F X F", "F   F", "     ")
+        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
+                .aisle("F   F", "  X  ", " XXX ", "  X  ", "F   F")
+                .aisle("F X F", " XCX ", "XCCCX", " XCX ", "F X F")
+                .aisle("FXXXF", "XCCCX", "XK#KX", "XCCCX", "FXXXF")
+                .aisle("F X F", " XCX ", "XC#CX", " XCX ", "F X F")
+                .aisle("F   F", "  X  ", " XCX ", "  X  ", "F   F")
+                .aisle("     ", "  X  ", " XMX ", "  X  ", "     ")
                 .where('S', selfPredicate())
                 .where('X',
                         states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF))
