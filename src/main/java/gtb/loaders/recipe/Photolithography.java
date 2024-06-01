@@ -214,7 +214,7 @@ public class Photolithography {
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(plate, Aluminium)
-                .input(plate, BorosilicateGlass)
+                .input(ingot, BorosilicateGlass)
                 .circuitMeta(1)
                 .output(LITHOGRAPHY_BASE_MASK)
                 .duration(20)
