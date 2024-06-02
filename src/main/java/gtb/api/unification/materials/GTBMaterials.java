@@ -720,6 +720,7 @@ public class GTBMaterials {
     public static Material ImpureTantaliteSlurry;
     public static Material TantaliteSlurry;
     public static Material SodiumBisulfateSolution;
+    public static Material EpoxidPCBBase;
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;
