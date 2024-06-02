@@ -862,13 +862,13 @@ public class Photolithography {
         ION_IMPLANTER_RECIPES.recipeBuilder()
                 .input(SUPERCONDUCTOR_COATED_QBIT_CPU_WAFER)
                 .input(U_TWOFOURTY_ELECTRON_SOURCE)
-                .output(QUBIT_CENTRAL_PROCESSING_UNIT)
+                .output(QUBIT_CENTRAL_PROCESSING_UNIT_WAFER)
                 .duration(200)
                 .EUt(90)
                 .buildAndRegister();
 
         CUTTER_RECIPES.recipeBuilder()
-                .input(QUBIT_CENTRAL_PROCESSING_UNIT)
+                .input(QUBIT_CENTRAL_PROCESSING_UNIT_WAFER)
                 .output(QBIT_CPU_DIE, 5)
                 .fluidInputs(Water.getFluid(12))
                 .duration(200)
@@ -1809,5 +1809,17 @@ public class Photolithography {
                 .duration(500)
                 .EUt(8)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { QUBIT_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1) },
+                new FluidStack[] { Water.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { QUBIT_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1) },
+                new FluidStack[] { DistilledWater.getFluid(750) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { QUBIT_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1) },
+                new FluidStack[] { Lubricant.getFluid(250) });
     }
 }
