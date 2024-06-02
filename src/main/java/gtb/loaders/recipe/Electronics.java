@@ -10,6 +10,7 @@ import static gtb.common.item.GTBMetaItems.*;
 
 import java.util.function.Predicate;
 
+import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.stack.UnificationEntry;
@@ -19,12 +20,14 @@ import gregtech.common.items.MetaItems;
 import gtb.common.metatileentities.GTBMetaTileEntities;
 import gtb.loaders.recipe.polymerLines.PolytetrafluoroethyleneLine;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 
 import gregtech.api.recipes.ModHandler;
 
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.BlockCoolingCoil;
+import net.minecraftforge.fluids.FluidStack;
 
 public class Electronics {
 
@@ -203,5 +206,59 @@ public class Electronics {
                 .EUt(90)
                 .buildAndRegister();
 
+        GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
+                new ItemStack[] {OreDictUnifier.get(dust, FerriteMixture, 1) },
+                new FluidStack[] { Oxygen.getFluid(1000) });
+
+        ARC_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, FerriteMixture)
+                .fluidInputs(Oxygen.getFluid(1000))
+                .output(dust, NickelZincFerrite)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        ELECTRON_BEAM_LITHOGRAPHER_RECIPES.recipeBuilder()
+                .input(N_DOPED_SILICON_DIOXIDE_WAFER)
+                .fluidInputs(NovolacsPhotoresist.getFluid(144))
+                .output(PATTERENED_SILICON_DIOXIDE_WAFER)
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(N_DOPED_SILICON_DIOXIDE_WAFER)
+                .notConsumable(INDUCTOR_LITHOGRAPHY_MASK)
+                .fluidInputs(NovolacsPhotoresist.getFluid(144))
+                .output(PATTERENED_SILICON_DIOXIDE_WAFER)
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .input(PATTERENED_SILICON_DIOXIDE_WAFER)
+                .fluidInputs(NitricAcid.getFluid(100))
+                .output(ETCHED_INDUCTOR_WAFER)
+                .duration(90)
+                .EUt(70)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(ETCHED_INDUCTOR_WAFER)
+                .input(wireFine, Cupronickel, 4)
+                .input(ring, NickelZincFerrite)
+                .output(INDUCTOR_WAFER)
+                .fluidInputs(Polyethylene.getFluid(144))
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .input(INDUCTOR_WAFER)
+                .fluidInputs(Lubricant.getFluid(72))
+                .output(SMD_INDUCTOR, 16)
+                .duration(90)
+                .EUt(70)
+                .buildAndRegister();
     }
 }

@@ -193,6 +193,10 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem THICK_FILM_RESISTOR_WAFER;
     public static MetaItem<?>.MetaValueItem THICK_FILM_RESISTOR_BASE_WAFER;
     public static MetaItem<?>.MetaValueItem TRANSISTOR_WAFER;
+    public static MetaItem<?>.MetaValueItem PATTERENED_SILICON_DIOXIDE_WAFER;
+    public static MetaItem<?>.MetaValueItem INDUCTOR_LITHOGRAPHY_MASK;
+    public static MetaItem<?>.MetaValueItem ETCHED_INDUCTOR_WAFER;
+    public static MetaItem<?>.MetaValueItem INDUCTOR_WAFER;
 
 
     public static void init() {

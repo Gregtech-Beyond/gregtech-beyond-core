@@ -206,6 +206,10 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.THICK_FILM_RESISTOR_BASE_WAFER = addItem(192, "thick_film_resistor_base_wafer");
         GTBMetaItems.THICK_FILM_RESISTOR_WAFER = addItem(193, "thick_film_resistor_wafer");
         GTBMetaItems.TRANSISTOR_WAFER = addItem(194, "transistor_wafer");
+        GTBMetaItems.PATTERENED_SILICON_DIOXIDE_WAFER = addItem(195, "patterend_silicon_dioxide_wafer");
+        GTBMetaItems.INDUCTOR_LITHOGRAPHY_MASK = addItem(196, "inductor_lithography_mask");
+        GTBMetaItems.ETCHED_INDUCTOR_WAFER = addItem(197, "etched_inductor_wafer");
+        GTBMetaItems.INDUCTOR_WAFER = addItem(198, "inductor_wafer");
 
     }
 }

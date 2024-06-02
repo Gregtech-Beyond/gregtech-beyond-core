@@ -1616,6 +1616,7 @@ public class GTBFirstDegreeMaterials {
                 gregtechId("tantalite_slurry"))
                         .fluid()
                         .color(0x593428).build().setFormula("MnTa2O6(H2O)", true);
+
     }
 
     private static int getMaterialsId() {
