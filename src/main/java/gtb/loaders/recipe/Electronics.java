@@ -11,6 +11,7 @@ import static gtb.common.item.GTBMetaItems.*;
 import java.util.function.Predicate;
 
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.stack.UnificationEntry;
@@ -428,6 +429,137 @@ public class Electronics {
                 .duration(120)
                 .EUt(90)
                 .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(Iron3Chloride.getFluid(100))
+                .input(PATTERENED_PHENOLIC_CIRCUIT_BOARD)
+                .output(GOOD_CIRCUIT_BOARD)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(SodiumBisulfateSolution.getFluid(100))
+                .input(PATTERENED_PHENOLIC_CIRCUIT_BOARD)
+                .output(GOOD_CIRCUIT_BOARD)
+                .duration(200)
+                .EUt(8)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(NovolacsPhotoresist.getFluid(100))
+                .input(PHENOLIC_BOARD)
+                .output(PATTERENED_PHENOLIC_CIRCUIT_BOARD)
+                .duration(299)
+                .EUt(12)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(wireFine, Electrum, 4),
+                        OreDictUnifier.get(dust, Carbon)},
+                new FluidStack[] { Polyethylene.getFluid(288) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(wireFine, Tantalum, 4),
+                        OreDictUnifier.get(dust, Carbon)},
+                new FluidStack[] { Polyethylene.getFluid(288) });
+
+
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(EPOXY_BOARD)
+                .input(foil, Gold)
+                .output(LAMINATED_EPOXY_BOARD)
+                .duration(200)
+                .EUt(480)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(LAMINATED_EPOXY_BOARD)
+                .output(ENGRAVED_EPOXY_BOARD)
+                .duration(200)
+                .EUt(490)
+                .buildAndRegister();
+
+        ELECTRON_BEAM_LITHOGRAPHER_RECIPES.recipeBuilder()
+                .fluidInputs(NovolacsPhotoresist.getFluid(144))
+                .input(ENGRAVED_EPOXY_BOARD)
+                .circuitMeta(0)
+                .output(PATTERENED_EPOXY_BOARD)
+                .duration(200)
+                .EUt(470)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(Iron3Chloride.getFluid(100))
+                .input(PATTERENED_EPOXY_BOARD)
+                .output(ADVANCED_CIRCUIT_BOARD)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(SodiumBisulfateSolution.getFluid(100))
+                .input(PATTERENED_EPOXY_BOARD)
+                .output(ADVANCED_CIRCUIT_BOARD)
+                .duration(200)
+                .EUt(8)
+                .buildAndRegister();
+
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(plate, Epoxy)
+                .input(plate, Polyetheretherketone)
+                .output(plate, EpoxidPCBBase)
+                .duration(210)
+                .EUt(520)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(SulfuricAcid.getFluid(500))
+                .input(foil, Gold, 8)
+                .input(plate, EpoxidPCBBase)
+                .output(EPOXY_BOARD)
+                .duration(340)
+                .EUt(78)
+                .buildAndRegister();
+
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(plate, Epoxy, 1),
+                        OreDictUnifier.get(foil, Gold, 8)},
+                new FluidStack[] { SulfuricAcid.getFluid(500) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { EPOXY_BOARD.getStackForm(),
+                        OreDictUnifier.get(foil, Electrum, 8)},
+                new FluidStack[] { SodiumPersulfate.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { EPOXY_BOARD.getStackForm(),
+                        OreDictUnifier.get(foil, Electrum, 8)},
+                new FluidStack[] { Iron3Chloride.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(dustSmall, GalliumArsenide, 1),
+                        IntCircuitIngredient.getIntegratedCircuit(2),
+                        OreDictUnifier.get(foil, Silicon, 32)});
+
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(dust, GalliumArsenide)
+                .input(dust, Silicon, 32)
+                .input(MONOCRYSTALLINE_SEED_CRYSTAL)
+                .output(UNBAKED_MONOCRYSTALLINE_SILICON_BOULE)
+                .duration(200)
+                .EUt(12)
+                .buildAndRegister();
+
+        BLAST_RECIPES.recipeBuilder()
+                .blastFurnaceTemp(800)
+                .input(UNBAKED_MONOCRYSTALLINE_SILICON_BOULE)
+                .output(SILICON_BOULE)
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
 
 
 
