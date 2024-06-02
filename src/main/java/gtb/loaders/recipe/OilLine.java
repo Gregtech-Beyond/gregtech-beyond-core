@@ -1,5 +1,9 @@
 package gtb.loaders.recipe;
 
+import gregtech.api.recipes.GTRecipeHandler;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -12,7 +16,7 @@ public class OilLine {
 
     public static void init() {
         CENTRIFUGE_RECIPES.recipeBuilder().fluidInputs(DilutedOil.getFluid(1000))
-                .fluidOutputs(SaltWater.getFluid(600)).fluidOutputs(DesaltedOil.getFluid(400)).EUt(299)
+                .fluidOutputs(SaltWater.getFluid(600)).fluidOutputs(DesaltedOil.getFluid(400)).EUt(20)
                 .duration(120).buildAndRegister();
 
         DISTILLATION_RECIPES.recipeBuilder().fluidInputs(DesaltedOil.getFluid(1000))
@@ -147,13 +151,13 @@ public class OilLine {
                 .fluidOutputs(DilutedOil.getFluid(2500)).EUt(80).duration(100).buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1500)).fluidInputs(OilHeavy.getFluid(500))
-                .fluidOutputs(DilutedOil.getFluid(2000)).EUt(80).duration(100).buildAndRegister();
+                .fluidOutputs(DilutedOil.getFluid(2000)).EUt(10).duration(100).buildAndRegister();
         MIXER_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1000)).fluidInputs(RawOil.getFluid(1000))
-                .fluidOutputs(DilutedOil.getFluid(2000)).EUt(80).duration(100).buildAndRegister();
+                .fluidOutputs(DilutedOil.getFluid(2000)).EUt(10).duration(100).buildAndRegister();
         MIXER_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(800)).fluidInputs(OilLight.getFluid(1200))
-                .fluidOutputs(DilutedOil.getFluid(2000)).EUt(80).duration(100).buildAndRegister();
+                .fluidOutputs(DilutedOil.getFluid(2000)).EUt(10).duration(100).buildAndRegister();
         MIXER_RECIPES.recipeBuilder().fluidInputs(Water.getFluid(1000)).fluidInputs(Oil.getFluid(1000))
-                .fluidOutputs(DilutedOil.getFluid(2000)).EUt(80).duration(100).buildAndRegister();
+                .fluidOutputs(DilutedOil.getFluid(2000)).EUt(10).duration(100).buildAndRegister();
 
         FISCHER_TROPSCH_REACTOR_RECIPES.recipeBuilder().fluidInputs(DistilledWater.getFluid(2000))
                 .fluidInputs(RefineryGas.getFluid(8000)).notConsumable(dust, CobaltOxide, 1)
@@ -227,5 +231,19 @@ public class OilLine {
                 .duration(200)
                 .EUt(99)
                 .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] { RawOil.getFluid(100) });
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] { Oil.getFluid(50) });
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] { OilLight.getFluid(150) });
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] { OilHeavy.getFluid(100) });
+
+
     }
 }
