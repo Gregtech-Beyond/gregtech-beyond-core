@@ -201,5 +201,11 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.CHROMATIC_GLASS_FIBER = addItem(187, "chromatic_glass_fiber");
         GTBMetaItems.SATURATED_CHROMATIC_GLASS_FIBER = addItem(188, "saturated_chromatic_glass_fiber");
         GTBMetaItems.SINTERED_SILVER_COIL = addItem(189, "sintered_silver_coil");
+        GTBMetaItems.VACUUM_TUBE_COMPONENTS = addItem(190, "vacuum_tube_components");
+        GTBMetaItems.THICK_FILM_WAFER = addItem(191, "thick_film_wafer");
+        GTBMetaItems.THICK_FILM_RESISTOR_BASE_WAFER = addItem(192, "thick_film_resistor_base_wafer");
+        GTBMetaItems.THICK_FILM_RESISTOR_WAFER = addItem(193, "thick_film_resistor_wafer");
+        GTBMetaItems.TRANSISTOR_WAFER = addItem(194, "transistor_wafer");
+
     }
 }
