@@ -215,6 +215,9 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.DIODE_WAFER = addItem(201, "diode_wafer");
         GTBMetaItems.ALUMINIUM_CAPACITOR = addItem(202, "aluminium_capacitor");
         GTBMetaItems.RAW_CAPACITOR_ROLL = addItem(203, "raw_capacitor_roll");
-
+        GTBMetaItems.PATTERENED_PHENOLIC_CIRCUIT_BOARD = addItem(204, "patterened_phenol_circuit_board");
+        GTBMetaItems.LAMINATED_EPOXY_BOARD = addItem(205, "laminated_epoxy_board");
+        GTBMetaItems.ENGRAVED_EPOXY_BOARD = addItem(206, "engraved_epoxy_board");
+        GTBMetaItems.PATTERENED_EPOXY_BOARD = addItem(207, "patterened_epoxy_board");
     }
 }

@@ -202,6 +202,10 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem DIODE_WAFER;
     public static MetaItem<?>.MetaValueItem RAW_CAPACITOR_ROLL;
     public static MetaItem<?>.MetaValueItem ALUMINIUM_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem PATTERENED_PHENOLIC_CIRCUIT_BOARD;
+    public static MetaItem<?>.MetaValueItem LAMINATED_EPOXY_BOARD;
+    public static MetaItem<?>.MetaValueItem ENGRAVED_EPOXY_BOARD;
+    public static MetaItem<?>.MetaValueItem PATTERENED_EPOXY_BOARD;
 
 
     public static void init() {
