@@ -19,6 +19,7 @@ import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.items.MetaItems;
 import gtb.common.metatileentities.GTBMetaTileEntities;
 import gtb.loaders.recipe.polymerLines.PolytetrafluoroethyleneLine;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -260,5 +261,75 @@ public class Electronics {
                 .duration(90)
                 .EUt(70)
                 .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(N_DOPED_SILICON_DIOXIDE_WAFER)
+                .input(foil, Molybdenum)
+                .output(REINFORCED_BASE_WAFER)
+                .duration(200)
+                .EUt(78)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(N_DOPED_SILICON_DIOXIDE_WAFER)
+                .input(foil, Palladium)
+                .output(REINFORCED_BASE_WAFER, 2)
+                .duration(200)
+                .EUt(78)
+                .buildAndRegister();
+
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
+                .input(REINFORCED_BASE_WAFER)
+                .fluidInputs(NovolacsPhotoresist.getFluid(144))
+                .output(PATTERENED_BASE_WAFER)
+                .duration(80)
+                .EUt(90)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(PATTERENED_BASE_WAFER)
+                .input(wireFine, Copper, 4)
+                .output(DIODE_WAFER)
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .fluidInputs(Lubricant.getFluid(80))
+                .input(DIODE_WAFER)
+                .output(SMD_DIODE, 16)
+                .duration(200)
+                .EUt(249)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(foil, Aluminium, 4)
+                .input(Items.PAPER)
+                .output(RAW_CAPACITOR_ROLL, 8)
+                .duration(120)
+                .EUt(80)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(BoricAcid.getFluid(72))
+                .input(RAW_CAPACITOR_ROLL, 8)
+                .output(ALUMINIUM_CAPACITOR, 8)
+                .duration(240)
+                .EUt(180)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(ALUMINIUM_CAPACITOR, 16)
+                .input(ring, SiliconeRubber, 2)
+                .input(foil, Aluminium, 2)
+                .output(SMD_CAPACITOR, 16)
+                .duration(800)
+                .EUt(270)
+                .buildAndRegister();
+
+
+
+
+
     }
 }

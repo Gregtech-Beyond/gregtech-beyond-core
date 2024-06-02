@@ -210,6 +210,9 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.INDUCTOR_LITHOGRAPHY_MASK = addItem(196, "inductor_lithography_mask");
         GTBMetaItems.ETCHED_INDUCTOR_WAFER = addItem(197, "etched_inductor_wafer");
         GTBMetaItems.INDUCTOR_WAFER = addItem(198, "inductor_wafer");
+        GTBMetaItems.REINFORCED_BASE_WAFER = addItem(199, "reinforced_base_wafer");
+        GTBMetaItems.PATTERENED_BASE_WAFER = addItem(200, "patterened_base_wafer");
+        GTBMetaItems.DIODE_WAFER = addItem(201, "diode_wafer");
 
     }
 }

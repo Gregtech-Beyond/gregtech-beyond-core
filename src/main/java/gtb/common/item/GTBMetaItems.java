@@ -197,6 +197,9 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem INDUCTOR_LITHOGRAPHY_MASK;
     public static MetaItem<?>.MetaValueItem ETCHED_INDUCTOR_WAFER;
     public static MetaItem<?>.MetaValueItem INDUCTOR_WAFER;
+    public static MetaItem<?>.MetaValueItem REINFORCED_BASE_WAFER;
+    public static MetaItem<?>.MetaValueItem PATTERENED_BASE_WAFER;
+    public static MetaItem<?>.MetaValueItem DIODE_WAFER;
 
 
     public static void init() {
