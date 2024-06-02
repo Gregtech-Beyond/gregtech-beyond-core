@@ -10,7 +10,14 @@ import static gtb.common.item.GTBMetaItems.*;
 
 import java.util.function.Predicate;
 
+import gregtech.api.unification.OreDictUnifier;
+import gregtech.api.unification.material.MarkerMaterials;
+import gregtech.api.unification.stack.UnificationEntry;
+import gregtech.common.blocks.BlockMachineCasing;
+import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.items.MetaItems;
+import gtb.common.metatileentities.GTBMetaTileEntities;
+import gtb.loaders.recipe.polymerLines.PolytetrafluoroethyleneLine;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 
@@ -89,5 +96,112 @@ public class Electronics {
                 .duration(200)
                 .EUt(12)
                 .buildAndRegister();
+
+
+        ModHandler.addShapedRecipe("vacuum_tube_component_recipe", VACUUM_TUBE_COMPONENTS.getStackForm(),
+                " F ", "C C", "B B",
+                'B', new UnificationEntry(bolt, Steel),
+                'C', new UnificationEntry(cableGtSingle, Copper),
+                'F', new UnificationEntry(wireFine, RedAlloy));
+
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(Polytetrafluoroethylene.getFluid(144))
+                .input(SILICON_DIOXIDE_WAFER)
+                .output(THICK_FILM_WAFER)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .input(THICK_FILM_WAFER)
+                .output(THICK_FILM_RESISTOR_BASE_WAFER)
+                .duration(200)
+                .fluidInputs(Lubricant.getFluid(100))
+                .EUt(80)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(wireFine, Tantalum, 2)
+                .input(THICK_FILM_RESISTOR_BASE_WAFER)
+                .input(dust, Carbon)
+                .output(THICK_FILM_RESISTOR_WAFER, 2)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(wireFine, Electrum, 2)
+                .input(THICK_FILM_RESISTOR_BASE_WAFER)
+                .input(dust, Carbon)
+                .output(THICK_FILM_RESISTOR_WAFER)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .input(THICK_FILM_RESISTOR_WAFER)
+                .output(SMD_RESISTOR, 16)
+                .fluidInputs(Lubricant.getFluid(20))
+                .duration(80)
+                .EUt(70)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(SILICON_DIOXIDE_WAFER)
+                .input(wireFine, Copper, 8)
+                .output(TRANSISTOR_WAFER)
+                .duration(20)
+                .EUt(70)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(SILICON_DIOXIDE_WAFER)
+                .input(wireFine, Aluminium, 7)
+                .output(TRANSISTOR_WAFER)
+                .duration(20)
+                .EUt(70)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(SILICON_DIOXIDE_WAFER)
+                .input(wireFine, Tantalum, 6)
+                .output(TRANSISTOR_WAFER)
+                .duration(20)
+                .EUt(70)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(SILICON_DIOXIDE_WAFER)
+                .input(wireFine, Platinum, 5)
+                .output(TRANSISTOR_WAFER)
+                .duration(20)
+                .EUt(70)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(SILICON_DIOXIDE_WAFER)
+                .input(wireFine, Titanium, 4)
+                .output(TRANSISTOR_WAFER)
+                .duration(20)
+                .EUt(70)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(SILICON_DIOXIDE_WAFER)
+                .input(wireFine, Tungsten, 2)
+                .output(TRANSISTOR_WAFER)
+                .duration(20)
+                .EUt(70)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .input(TRANSISTOR_WAFER)
+                .output(SMD_TRANSISTOR, 16)
+                .fluidInputs(Lubricant.getFluid(60))
+                .duration(120)
+                .EUt(90)
+                .buildAndRegister();
+
     }
 }
