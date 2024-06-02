@@ -188,6 +188,12 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem CHROMATIC_GLASS_FIBER;
     public static MetaItem<?>.MetaValueItem SATURATED_CHROMATIC_GLASS_FIBER;
     public static MetaItem<?>.MetaValueItem SINTERED_SILVER_COIL;
+    public static MetaItem<?>.MetaValueItem VACUUM_TUBE_COMPONENTS;
+    public static MetaItem<?>.MetaValueItem THICK_FILM_WAFER;
+    public static MetaItem<?>.MetaValueItem THICK_FILM_RESISTOR_WAFER;
+    public static MetaItem<?>.MetaValueItem THICK_FILM_RESISTOR_BASE_WAFER;
+    public static MetaItem<?>.MetaValueItem TRANSISTOR_WAFER;
+
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
