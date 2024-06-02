@@ -200,6 +200,8 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem REINFORCED_BASE_WAFER;
     public static MetaItem<?>.MetaValueItem PATTERENED_BASE_WAFER;
     public static MetaItem<?>.MetaValueItem DIODE_WAFER;
+    public static MetaItem<?>.MetaValueItem RAW_CAPACITOR_ROLL;
+    public static MetaItem<?>.MetaValueItem ALUMINIUM_CAPACITOR;
 
 
     public static void init() {

@@ -327,6 +327,24 @@ public class Electronics {
                 .EUt(270)
                 .buildAndRegister();
 
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(ALUMINIUM_CAPACITOR, 16)
+                .input(ring, StyreneButadieneRubber)
+                .input(foil, Aluminium, 2)
+                .output(SMD_CAPACITOR, 16)
+                .duration(800)
+                .EUt(270)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .input(ALUMINIUM_CAPACITOR, 16)
+                .input(ring, Rubber, 8)
+                .input(foil, Aluminium, 2)
+                .output(SMD_CAPACITOR, 16)
+                .duration(800)
+                .EUt(270)
+                .buildAndRegister();
+
 
 
 

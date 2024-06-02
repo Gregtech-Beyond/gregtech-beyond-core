@@ -213,6 +213,8 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.REINFORCED_BASE_WAFER = addItem(199, "reinforced_base_wafer");
         GTBMetaItems.PATTERENED_BASE_WAFER = addItem(200, "patterened_base_wafer");
         GTBMetaItems.DIODE_WAFER = addItem(201, "diode_wafer");
+        GTBMetaItems.ALUMINIUM_CAPACITOR = addItem(202, "aluminium_capacitor");
+        GTBMetaItems.RAW_CAPACITOR_ROLL = addItem(203, "raw_capacitor_roll");
 
     }
 }
