@@ -719,6 +719,7 @@ public class GTBMaterials {
     public static Material StrontiumCarbonate;
     public static Material ImpureTantaliteSlurry;
     public static Material TantaliteSlurry;
+    public static Material SodiumBisulfateSolution;
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;

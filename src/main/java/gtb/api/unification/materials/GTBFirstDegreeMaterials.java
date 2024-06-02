@@ -1617,6 +1617,12 @@ public class GTBFirstDegreeMaterials {
                         .fluid()
                         .color(0x593428).build().setFormula("MnTa2O6(H2O)", true);
 
+        SodiumBisulfateSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("sodium_bisulfate_solution"))
+                .fluid()
+                .color(0x3F51B5).build().setFormula("(NaHSO4)(H2O)", true);
+
+
     }
 
     private static int getMaterialsId() {

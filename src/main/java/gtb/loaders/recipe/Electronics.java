@@ -345,6 +345,89 @@ public class Electronics {
                 .EUt(270)
                 .buildAndRegister();
 
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, Copper, 4),
+                OreDictUnifier.get(plate, Polyethylene)},
+                new FluidStack[] { SulfuricAcid.getFluid(250) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, Copper, 4),
+                        OreDictUnifier.get(plate, PolyvinylChloride)},
+                new FluidStack[] { SulfuricAcid.getFluid(250) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, Copper, 4),
+                        OreDictUnifier.get(plate, Polytetrafluoroethylene)},
+                new FluidStack[] { SulfuricAcid.getFluid(250) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, Copper, 4),
+                        OreDictUnifier.get(plate, Polybenzimidazole)},
+                new FluidStack[] { SulfuricAcid.getFluid(250) });
+
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(foil, Copper, 4)
+                .input(plate, Polyethylene)
+                .output(PLASTIC_BOARD)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(foil, Copper, 4)
+                .input(plate, PolyvinylChloride)
+                .output(PLASTIC_BOARD, 2)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(foil, Copper, 4)
+                .input(plate, Polytetrafluoroethylene)
+                .output(PLASTIC_BOARD, 4)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(foil, Copper, 4)
+                .input(plate, Polybenzimidazole)
+                .output(PLASTIC_BOARD, 8)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(Iron3Chloride.getFluid(100))
+                .input(PLASTIC_BOARD)
+                .output(PLASTIC_CIRCUIT_BOARD)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(SodiumBisulfateSolution.getFluid(100))
+                .input(PLASTIC_BOARD)
+                .output(PLASTIC_CIRCUIT_BOARD)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Water.getFluid(1000))
+                .input(dust, SodiumBisulfate, 3)
+                .fluidOutputs(SodiumBisulfateSolution.getFluid(1000))
+                .duration(190)
+                .EUt(70)
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(SodiumBisulfateSolution.getFluid(1000))
+                .output(dust, SodiumBisulfate, 3)
+                .fluidOutputs(Water.getFluid(1000))
+                .duration(120)
+                .EUt(90)
+                .buildAndRegister();
 
 
 
