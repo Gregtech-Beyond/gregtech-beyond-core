@@ -24,6 +24,7 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.capabilites.metatileentites.multiblocks.controllers.KevRecipeMapMultiblockController;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.utils.GTBLog;
 
 public class MetaTileEntityKevGenerator extends KevRecipeMapMultiblockController {
 
@@ -46,11 +47,6 @@ public class MetaTileEntityKevGenerator extends KevRecipeMapMultiblockController
                 .where('C', states(getCasingState()).setMinGlobalLimited(9)
                         .or(autoAbilities()))
                 .build();
-    }
-
-    @Override
-    public void update() {
-        super.update();
     }
 
     @Override

@@ -1,31 +1,25 @@
 package gtb.api.capabilites.metatileentites.multiblocks.logics;
 
-import org.jetbrains.annotations.NotNull;
-
 import gregtech.api.capability.impl.MultiblockRecipeLogic;
-import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.recipeproperties.RecipeProperty;
 
 import gtb.api.capabilites.containers.interfaces.containers.IKevContainer;
 import gtb.api.capabilites.containers.interfaces.machines.KevMachine;
+import gtb.api.capabilites.metatileentites.multiblocks.controllers.KevRecipeMapMultiblockController;
 import gtb.api.recipes.properties.KevInputRecipeProperty;
 import gtb.api.recipes.properties.KevOutputRecipeProperty;
-import gtb.api.utils.GTBLog;
 import lombok.Getter;
 
 public class MultiblockKevRecipeLogic extends MultiblockRecipeLogic implements KevMachine {
 
-    private final IKevContainer iKevContainer;
     private int kevRecipeValue;
     @Getter
     private final RecipeProperty<Integer> recipeProperty;
 
-    public MultiblockKevRecipeLogic(RecipeMapMultiblockController tileEntity, IKevContainer iKevContainer,
+    public MultiblockKevRecipeLogic(KevRecipeMapMultiblockController tileEntity,
                                     boolean doesGenerateKev) {
         super(tileEntity);
-        this.iKevContainer = iKevContainer;
-        this.kevRecipeValue = 0;
         this.recipeProperty = doesGenerateKev ? KevOutputRecipeProperty.getInstance() :
                 KevInputRecipeProperty.getInstance();
     }
@@ -50,15 +44,6 @@ public class MultiblockKevRecipeLogic extends MultiblockRecipeLogic implements K
     @Override
     protected void completeRecipe() {
         super.completeRecipe();
-        this.iKevContainer.changeKev(this.kevRecipeValue);
-    }
-
-    @Override
-    public boolean checkRecipe(@NotNull Recipe recipe) {
-        this.setKevRecipeValue(recipe);
-        GTBLog.logger.info("Recipe value : " + this.kevRecipeValue);
-        GTBLog.logger.info("this.iKevContainer.canChangeKev(this.kevRecipeValue) : " +
-                this.iKevContainer.canChangeKev(this.kevRecipeValue));
-        return this.iKevContainer.canChangeKev(this.kevRecipeValue) && super.checkRecipe(recipe);
+        this.getIKevContainer().changeKev(this.kevRecipeValue);
     }
 }

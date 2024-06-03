@@ -14,7 +14,6 @@ import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
 
 import gtb.api.capabilites.GTBMultiblockAbility;
-import gtb.api.capabilites.containers.impl.KevContainer;
 import gtb.api.capabilites.containers.interfaces.containers.IKevContainer;
 import gtb.api.capabilites.containers.interfaces.machines.KevMachine;
 import gtb.api.capabilites.metatileentites.multiblocks.logics.MultiblockKevRecipeLogic;
@@ -32,7 +31,7 @@ public abstract class KevRecipeMapMultiblockController extends RecipeMapMultiblo
         this.multiblockAbility = doesGenerateKev ? GTBMultiblockAbility.KEY_CONTAINER_OUTPUT :
                 GTBMultiblockAbility.KEY_CONTAINER_INPUT;
         this.initializeAbilities();
-        this.recipeMapWorkable = new MultiblockKevRecipeLogic(this, this.iKevContainer, doesGenerateKev);
+        this.recipeMapWorkable = new MultiblockKevRecipeLogic(this, doesGenerateKev);
     }
 
     @Override
@@ -55,14 +54,9 @@ public abstract class KevRecipeMapMultiblockController extends RecipeMapMultiblo
         super.formStructure(context);
     }
 
-    private int getMaxKev() {
-        return 1;
-    }
-
     @Override
     protected void initializeAbilities() {
         super.initializeAbilities();
-        this.iKevContainer = new KevContainer(this, this.getMaxKev());
         List<IKevContainer> iKevContainers = this.getAbilities(this.multiblockAbility);
         this.iKevContainer = iKevContainers.isEmpty() ? null : iKevContainers.get(0);
     }
