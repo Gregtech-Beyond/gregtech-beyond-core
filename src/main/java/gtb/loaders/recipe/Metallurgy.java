@@ -220,5 +220,22 @@ public final class Metallurgy {
                 .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, BorosilicateGlass));
+
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Cupronickel));
+        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Invar));
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Cupronickel)
+                .output(ingot, Cupronickel)
+                .duration(20)
+                .EUt(8)
+                .buildAndRegister();
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, Invar)
+                .output(ingot, Invar)
+                .duration(20)
+                .EUt(8)
+                .buildAndRegister();
     }
 }
