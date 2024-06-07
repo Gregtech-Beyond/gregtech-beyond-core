@@ -691,5 +691,14 @@ public class Electronics {
                 new ItemStack[] { PHENOLIC_BOARD.getStackForm(),
                         OreDictUnifier.get(foil, Silver, 4) },
                 new FluidStack[] { Iron3Chloride.getFluid(100) });
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Formaldehyde.getFluid(1000))
+                .fluidInputs(Phenol.getFluid(1000))
+                .fluidOutputs(NovolacsPhotoresist.getFluid(1000))
+                .circuitMeta(1)
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
     }
 }
