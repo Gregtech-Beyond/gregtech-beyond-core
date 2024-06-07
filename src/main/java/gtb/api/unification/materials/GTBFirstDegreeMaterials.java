@@ -1271,6 +1271,7 @@ public class GTBFirstDegreeMaterials {
         SinteredSilver = new Material.Builder(getMaterialsId(), gregtechId("sintered_silver"))
                 .dust()
                 .ingot()
+                .flags(MaterialFlags.GENERATE_ROD)
                 .color(0x9D9A9A).build().setFormula("Ag", true);
 
         VanadiumPentoxide = new Material.Builder(getMaterialsId(), gregtechId("vanadium_pentoxide"))
