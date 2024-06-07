@@ -219,5 +219,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.LAMINATED_EPOXY_BOARD = addItem(205, "laminated_epoxy_board");
         GTBMetaItems.ENGRAVED_EPOXY_BOARD = addItem(206, "engraved_epoxy_board");
         GTBMetaItems.PATTERENED_EPOXY_BOARD = addItem(207, "patterened_epoxy_board");
+        GTBMetaItems.TRANSISTOR_BASE_WAFER = addItem(208, "transistor_base_wafer");
     }
 }

@@ -1,6 +1,9 @@
 package gtb.common.item;
 
+import static gtb.api.unification.ore.GTBOrePrefix.*;
+
 import gregtech.api.items.metaitem.MetaItem;
+import gregtech.common.items.MetaItems;
 
 public class GTBMetaItems {
 
@@ -206,10 +209,12 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem LAMINATED_EPOXY_BOARD;
     public static MetaItem<?>.MetaValueItem ENGRAVED_EPOXY_BOARD;
     public static MetaItem<?>.MetaValueItem PATTERENED_EPOXY_BOARD;
-
+    public static MetaItem<?>.MetaValueItem TRANSISTOR_BASE_WAFER;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
         metaItem1.setRegistryName("gtb");
+
+        MetaItems.addOrePrefix(sifted, floated);
     }
 }
