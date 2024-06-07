@@ -8,28 +8,18 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
-import java.util.function.Predicate;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ModHandler;
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
-import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.stack.UnificationEntry;
-import gregtech.common.blocks.BlockMachineCasing;
-import gregtech.common.blocks.MetaBlocks;
-import gregtech.common.items.MetaItems;
-import gtb.common.metatileentities.GTBMetaTileEntities;
-import gtb.loaders.recipe.polymerLines.PolytetrafluoroethyleneLine;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
-
-import gregtech.api.recipes.ModHandler;
 
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.BlockCoolingCoil;
-import net.minecraftforge.fluids.FluidStack;
 
 public class Electronics {
 
@@ -78,7 +68,7 @@ public class Electronics {
                 .input(plate, SilverAlloy, 4)
                 .input(SINTERED_SILVER_COIL)
                 .input(foil, Zylon, 2)
-                .output((Item) GTBMetaBlocks.COOLING_COIL.getState(BlockCoolingCoil.CoolingCoilType.SILVER_ALLOY), 1)
+                .output(GTBMetaBlocks.COOLING_COIL.getState(BlockCoolingCoil.CoolingCoilType.SILVER_ALLOY).getBlock())
                 .duration(400)
                 .EUt(2000)
                 .buildAndRegister();
@@ -102,13 +92,11 @@ public class Electronics {
                 .EUt(12)
                 .buildAndRegister();
 
-
         ModHandler.addShapedRecipe("vacuum_tube_component_recipe", VACUUM_TUBE_COMPONENTS.getStackForm(),
                 " F ", "C C", "B B",
                 'B', new UnificationEntry(bolt, Steel),
                 'C', new UnificationEntry(cableGtSingle, Copper),
                 'F', new UnificationEntry(wireFine, RedAlloy));
-
 
         CHEMICAL_BATH_RECIPES.recipeBuilder()
                 .fluidInputs(Polytetrafluoroethylene.getFluid(144))
@@ -162,7 +150,7 @@ public class Electronics {
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(SILICON_DIOXIDE_WAFER)
-                .input(wireFine, Aluminium, 7)
+                .input(wireFine, Aluminium, 8)
                 .output(TRANSISTOR_WAFER)
                 .duration(20)
                 .EUt(70)
@@ -171,7 +159,7 @@ public class Electronics {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(SILICON_DIOXIDE_WAFER)
                 .input(wireFine, Tantalum, 6)
-                .output(TRANSISTOR_WAFER)
+                .output(TRANSISTOR_BASE_WAFER)
                 .duration(20)
                 .EUt(70)
                 .buildAndRegister();
@@ -209,7 +197,7 @@ public class Electronics {
                 .buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
-                new ItemStack[] {OreDictUnifier.get(dust, FerriteMixture, 1) },
+                new ItemStack[] { OreDictUnifier.get(dust, FerriteMixture, 1) },
                 new FluidStack[] { Oxygen.getFluid(1000) });
 
         ARC_FURNACE_RECIPES.recipeBuilder()
@@ -348,22 +336,22 @@ public class Electronics {
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(foil, Copper, 4),
-                OreDictUnifier.get(plate, Polyethylene)},
+                        OreDictUnifier.get(plate, Polyethylene) },
                 new FluidStack[] { SulfuricAcid.getFluid(250) });
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(foil, Copper, 4),
-                        OreDictUnifier.get(plate, PolyvinylChloride)},
+                        OreDictUnifier.get(plate, PolyvinylChloride) },
                 new FluidStack[] { SulfuricAcid.getFluid(250) });
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(foil, Copper, 4),
-                        OreDictUnifier.get(plate, Polytetrafluoroethylene)},
+                        OreDictUnifier.get(plate, Polytetrafluoroethylene) },
                 new FluidStack[] { SulfuricAcid.getFluid(250) });
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(foil, Copper, 4),
-                        OreDictUnifier.get(plate, Polybenzimidazole)},
+                        OreDictUnifier.get(plate, Polybenzimidazole) },
                 new FluidStack[] { SulfuricAcid.getFluid(250) });
 
         FORMING_PRESS_RECIPES.recipeBuilder()
@@ -446,7 +434,7 @@ public class Electronics {
                 .EUt(8)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .fluidInputs(NovolacsPhotoresist.getFluid(100))
                 .input(PHENOLIC_BOARD)
                 .output(PATTERENED_PHENOLIC_CIRCUIT_BOARD)
@@ -456,14 +444,13 @@ public class Electronics {
 
         GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(wireFine, Electrum, 4),
-                        OreDictUnifier.get(dust, Carbon)},
+                        OreDictUnifier.get(dust, Carbon) },
                 new FluidStack[] { Polyethylene.getFluid(288) });
 
         GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(wireFine, Tantalum, 4),
-                        OreDictUnifier.get(dust, Carbon)},
+                        OreDictUnifier.get(dust, Carbon) },
                 new FluidStack[] { Polyethylene.getFluid(288) });
-
 
         FORMING_PRESS_RECIPES.recipeBuilder()
                 .input(EPOXY_BOARD)
@@ -522,26 +509,25 @@ public class Electronics {
                 .EUt(78)
                 .buildAndRegister();
 
-
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(plate, Epoxy, 1),
-                        OreDictUnifier.get(foil, Gold, 8)},
+                        OreDictUnifier.get(foil, Gold, 8) },
                 new FluidStack[] { SulfuricAcid.getFluid(500) });
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { EPOXY_BOARD.getStackForm(),
-                        OreDictUnifier.get(foil, Electrum, 8)},
+                        OreDictUnifier.get(foil, Electrum, 8) },
                 new FluidStack[] { SodiumPersulfate.getFluid(1000) });
 
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { EPOXY_BOARD.getStackForm(),
-                        OreDictUnifier.get(foil, Electrum, 8)},
+                        OreDictUnifier.get(foil, Electrum, 8) },
                 new FluidStack[] { Iron3Chloride.getFluid(1000) });
 
         GTRecipeHandler.removeRecipesByInputs(BLAST_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(dustSmall, GalliumArsenide, 1),
                         IntCircuitIngredient.getIntegratedCircuit(2),
-                        OreDictUnifier.get(foil, Silicon, 32)});
+                        OreDictUnifier.get(dust, Silicon, 32) });
 
         FORMING_PRESS_RECIPES.recipeBuilder()
                 .input(dust, GalliumArsenide)
@@ -560,9 +546,150 @@ public class Electronics {
                 .EUt(70)
                 .buildAndRegister();
 
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(Polyethylene.getFluid(288))
+                .input(TRANSISTOR_BASE_WAFER)
+                .input(foil, Gallium, 8)
+                .output(TRANSISTOR_WAFER)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
 
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(Polytetrafluoroethylene.getFluid(144))
+                .input(TRANSISTOR_BASE_WAFER)
+                .input(foil, Gallium, 4)
+                .output(TRANSISTOR_WAFER)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
 
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(Polybenzimidazole.getFluid(72))
+                .input(TRANSISTOR_BASE_WAFER)
+                .input(foil, Gallium, 2)
+                .output(TRANSISTOR_WAFER)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
 
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(FullerenePolymerMatrix.getFluid(36))
+                .input(TRANSISTOR_BASE_WAFER)
+                .input(foil, Gallium, 2)
+                .output(TRANSISTOR_WAFER)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
 
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, Gallium, 1),
+                        OreDictUnifier.get(wireFine, AnnealedCopper, 8) },
+                new FluidStack[] { Polyethylene.getFluid(144) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, Gallium, 1),
+                        OreDictUnifier.get(wireFine, Tantalum, 8) },
+                new FluidStack[] { Polyethylene.getFluid(144) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, SiliconeRubber, 1),
+                        OreDictUnifier.get(foil, Aluminium, 1) },
+                new FluidStack[] { Polyethylene.getFluid(72) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, PolyvinylChloride, 1),
+                        OreDictUnifier.get(foil, Tantalum, 1) },
+                new FluidStack[] { Polyethylene.getFluid(72) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, PolyvinylChloride, 1),
+                        OreDictUnifier.get(foil, Tantalum, 1) },
+                new FluidStack[] { Polyethylene.getFluid(72) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(dust, GalliumArsenide, 1),
+                        OreDictUnifier.get(wireFine, Platinum, 8) },
+                new FluidStack[] { Polyethylene.getFluid(288) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(ring, NickelZincFerrite, 1),
+                        OreDictUnifier.get(wireFine, Cupronickel, 4) },
+                new FluidStack[] { Polyethylene.getFluid(144) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(ring, NickelZincFerrite, 1),
+                        OreDictUnifier.get(wireFine, Tantalum, 4) },
+                new FluidStack[] { Polyethylene.getFluid(144) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { PLASTIC_BOARD.getStackForm(),
+                        OreDictUnifier.get(foil, Copper, 6) },
+                new FluidStack[] { SodiumPersulfate.getFluid(500) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { PLASTIC_BOARD.getStackForm(),
+                        OreDictUnifier.get(foil, Copper, 6) },
+                new FluidStack[] { Iron3Chloride.getFluid(250) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(plate, Polyethylene, 1),
+                        OreDictUnifier.get(foil, Copper, 4) },
+                new FluidStack[] { SulfuricAcid.getFluid(250) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(plate, PolyvinylChloride, 1),
+                        OreDictUnifier.get(foil, Copper, 4) },
+                new FluidStack[] { SulfuricAcid.getFluid(250) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(plate, Polytetrafluoroethylene, 1),
+                        OreDictUnifier.get(foil, Copper, 4) },
+                new FluidStack[] { SulfuricAcid.getFluid(250) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(plate, Polybenzimidazole, 1),
+                        OreDictUnifier.get(foil, Copper, 4) },
+                new FluidStack[] { SulfuricAcid.getFluid(250) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(plate, Epoxy, 1),
+                        OreDictUnifier.get(foil, Gold, 8) },
+                new FluidStack[] { SulfuricAcid.getFluid(500) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, Aluminium, 1),
+                        OreDictUnifier.get(foil, PolyvinylChloride, 2) },
+                new FluidStack[] { Polyethylene.getFluid(72) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, Tantalum, 1),
+                        OreDictUnifier.get(foil, SiliconeRubber, 1) },
+                new FluidStack[] { Polyethylene.getFluid(72) });
+
+        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+                new ItemStack[] { OreDictUnifier.get(foil, Tantalum, 1),
+                        OreDictUnifier.get(foil, PolyvinylChloride, 2) },
+                new FluidStack[] { Polyethylene.getFluid(72) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { EPOXY_BOARD.getStackForm(),
+                        OreDictUnifier.get(foil, Electrum, 8) },
+                new FluidStack[] { SodiumPersulfate.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { EPOXY_BOARD.getStackForm(),
+                        OreDictUnifier.get(foil, Electrum, 8) },
+                new FluidStack[] { Iron3Chloride.getFluid(500) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { PHENOLIC_BOARD.getStackForm(),
+                        OreDictUnifier.get(foil, Silver, 4) },
+                new FluidStack[] { SodiumPersulfate.getFluid(200) });
+
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
+                new ItemStack[] { PHENOLIC_BOARD.getStackForm(),
+                        OreDictUnifier.get(foil, Silver, 4) },
+                new FluidStack[] { Iron3Chloride.getFluid(100) });
     }
 }
