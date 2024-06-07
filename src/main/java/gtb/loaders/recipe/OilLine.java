@@ -1,9 +1,5 @@
 package gtb.loaders.recipe;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -11,6 +7,10 @@ import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
+
+import net.minecraftforge.fluids.FluidStack;
+
+import gregtech.api.recipes.GTRecipeHandler;
 
 public class OilLine {
 
@@ -243,7 +243,5 @@ public class OilLine {
 
         GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
                 new FluidStack[] { OilHeavy.getFluid(100) });
-
-
     }
 }

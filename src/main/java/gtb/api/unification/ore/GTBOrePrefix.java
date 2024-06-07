@@ -1,6 +1,5 @@
 package gtb.api.unification.ore;
 
-import static gregtech.api.GTValues.*;
 import static gtb.api.unification.materials.info.GTBMaterialFlags.*;
 
 import gregtech.api.unification.ore.OrePrefix;

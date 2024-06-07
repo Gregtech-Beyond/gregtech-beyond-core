@@ -1619,19 +1619,16 @@ public class GTBFirstDegreeMaterials {
 
         SodiumBisulfateSolution = new Material.Builder(getMaterialsId(),
                 gregtechId("sodium_bisulfate_solution"))
-                .fluid()
-                .color(0x3F51B5).build().setFormula("(NaHSO4)(H2O)", true);
+                        .fluid()
+                        .color(0x3F51B5).build().setFormula("(NaHSO4)(H2O)", true);
 
         EpoxidPCBBase = new Material.Builder(getMaterialsId(),
                 gregtechId("epoxid_pcb_base"))
-                .fluid()
-                .dust()
-                .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE)
-                .color(0xFDD835).build();
-
-
-
+                        .fluid()
+                        .dust()
+                        .ingot()
+                        .flags(MaterialFlags.GENERATE_PLATE)
+                        .color(0xFDD835).build();
     }
 
     private static int getMaterialsId() {

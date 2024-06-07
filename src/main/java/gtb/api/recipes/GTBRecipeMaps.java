@@ -5,7 +5,6 @@ import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import net.minecraftforge.common.animation.TimeValues;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
@@ -176,8 +175,4 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ELECTRON_BEAM_LITHOGRAPHER_RECIPES = new RecipeMap<>(
             "electron_beam_lithographer_recipes", 2, 1, 1, 0, new SimpleRecipeBuilder(), false);
-
-
-
-
 }
