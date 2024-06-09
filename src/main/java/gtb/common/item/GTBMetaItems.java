@@ -210,6 +210,13 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem ENGRAVED_EPOXY_BOARD;
     public static MetaItem<?>.MetaValueItem PATTERENED_EPOXY_BOARD;
     public static MetaItem<?>.MetaValueItem TRANSISTOR_BASE_WAFER;
+    public static MetaItem<?>.MetaValueItem BIOLOGICALLY_APPROVED_LENS;
+    public static MetaItem<?>.MetaValueItem NEURO_SUPPORT_UNIT;
+    public static MetaItem<?>.MetaValueItem ELECTRICALLY_WIRED_PETRI_DISH;
+    public static MetaItem<?>.MetaValueItem BIFIDOBACTERERIUM_BRAVE_CULTURE;
+    public static MetaItem<?>.MetaValueItem STEM_CELL_LAB_ON_CHIP;
+    public static MetaItem<?>.MetaValueItem LAB_ON_CHIP_BASE;
+    public static MetaItem<?>.MetaValueItem LAB_ON_CHIP;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
