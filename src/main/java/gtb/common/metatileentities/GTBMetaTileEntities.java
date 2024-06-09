@@ -66,6 +66,7 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] DRYER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ELECTRON_BEAM_LITHOGRAPHER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] BIO_REACTOR_SINGLE = new SimpleMachineMetaTileEntity[6];
+    public static SimpleMachineMetaTileEntity[] VACUUM_EJECTOR = new SimpleMachineMetaTileEntity[4];
 
     public static void init() {
         // Multiblocks
@@ -175,6 +176,10 @@ public final class GTBMetaTileEntities {
 
         registerSimpleMetaTileEntity(BIO_REACTOR_SINGLE, 4190, "bio_reactor_single",
                 GTBRecipeMaps.BIO_REACTOR_RECIPES,
+                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(VACUUM_EJECTOR, 4200, "vacuum_ejector",
+                GTBRecipeMaps.VACUUM_EJECTION_RECIPES,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }

@@ -5,6 +5,7 @@ import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import scala.sys.process.ProcessBuilderImpl;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBRecipeMaps {
@@ -178,6 +179,9 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ENZYMATIC_HYDROLISIS_RECIPES = new RecipeMap<>(
             "enzymatic_hydrolisis_recipes", 1, 1, 1, 9, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_EJECTION_RECIPES = new RecipeMap<>(
+            "vacuum_ejection_recipes", 1, 1, 0,0, new SimpleRecipeBuilder(),  false);
 
 
 
