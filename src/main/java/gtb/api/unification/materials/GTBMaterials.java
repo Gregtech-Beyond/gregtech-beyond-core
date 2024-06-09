@@ -741,7 +741,27 @@ public class GTBMaterials {
     public static Material AnimalCells;
     public static Material HighPuritySilicon;
     public static Material SiliconTetrachloride;
-
+    public static Material IndiumHydroxide;
+    public static Material IndiumHydroxideConcentrate;
+    public static Material IronPoorMixture;
+    public static Material ZincPoorMixture;
+    public static Material MetalHydroxideMix;
+    public static Material AcidicMetalRichSlagSlurry;
+    public static Material SeparatedMetalRichSlagSlurry;
+    public static Material ZincSlagSlurry;
+    public static Material ZincResidualSlag;
+    public static Material FineZincSlag;
+    public static Material ThalliumChloride;
+    public static Material ThalliumSulfateSolution;
+    public static Material ThalliumResidues;
+    public static Material CadmiumSulfateSolution;
+    public static Material CadmiumThalliumLiqour;
+    public static Material CadmiumZinc;
+    public static Material ZincAmalgam;
+    public static Material ZincFlue;
+    public static Material ZincExhaustMixture;
+    public static Material ZincOreCokePellets;
+    public static Material MetalRichSlagSlurry;
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;

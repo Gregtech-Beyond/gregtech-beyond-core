@@ -1731,6 +1731,111 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .color(0x8500A3).build().setFormula("SiCl4", true);
 
+        IndiumHydroxide  = new Material.Builder(getMaterialsId(),
+                gregtechId("indium_hydroxide"))
+                .dust()
+                .color(0x8500A3).build().setFormula("In(HO)3", true);
+
+        IndiumHydroxideConcentrate = new Material.Builder(getMaterialsId(),
+                gregtechId("indium_hydroxide_concentrate"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("InHO", true);
+
+        IronPoorMixture  = new Material.Builder(getMaterialsId(),
+                gregtechId("iron_poor_mixture"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?In", true);
+
+        ZincPoorMixture  = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_poor_mixture"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?Fe", true);
+
+        MetalHydroxideMix  = new Material.Builder(getMaterialsId(),
+                gregtechId("metal_hydroxide_mix"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?ZnOH", true);
+
+        SeparatedMetalRichSlagSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("separated_metal_rich_slag_slurry"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("H3PO4?", true);
+
+        AcidicMetalRichSlagSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("acidic_metal_rich_slag_slurry"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("H3PO4?", true);
+
+        MetalRichSlagSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("metal_rich_slag_slurry"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        ZincSlagSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_slag_slurry"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        ZincResidualSlag  = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_residual_slag"))
+                .dust()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        FineZincSlag = new Material.Builder(getMaterialsId(),
+                gregtechId("fine_zinc_slag"))
+                .dust()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        ThalliumSulfateSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("thallium_sulfate_solution"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("Tl2SO4?", true);
+
+        ThalliumChloride = new Material.Builder(getMaterialsId(),
+                gregtechId("thallium_chloride"))
+                .dust()
+                .color(0x8500A3).build().setFormula("TlCl2", true);
+
+        ThalliumResidues = new Material.Builder(getMaterialsId(),
+                gregtechId("thallium_residues"))
+                .dust()
+                .color(0x8500A3).build().setFormula("Tl?", true);
+
+        CadmiumSulfateSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("cadmium_sulfate_solution"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("CdSO4?", true);
+
+        CadmiumThalliumLiqour = new Material.Builder(getMaterialsId(),
+                gregtechId("cadmium_thalliun_liqour"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("(H2SO4)CdTl", true);
+
+        ZincAmalgam = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_amalgam"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("ZnHg", true);
+
+        CadmiumZinc = new Material.Builder(getMaterialsId(),
+                gregtechId("cadmium_zinc"))
+                .dust()
+                .color(0x8500A3).build().setFormula("(H2SO4)CdZn?", true);
+
+        ZincFlue = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_flue"))
+                .dust()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        ZincExhaustMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_exhaust_mixture"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("(SO2)(CO2)?", true);
+
+        ZincOreCokePellets = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_ore_coke_pellets"))
+                .dust()
+                .color(0x8500A3).build().setFormula("(H2O)(ZnS)C", true);
+
 
 
 
