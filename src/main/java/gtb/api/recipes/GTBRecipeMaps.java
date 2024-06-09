@@ -175,4 +175,15 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ELECTRON_BEAM_LITHOGRAPHER_RECIPES = new RecipeMap<>(
             "electron_beam_lithographer_recipes", 2, 1, 1, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ENZYMATIC_HYDROLISIS_RECIPES = new RecipeMap<>(
+            "enzymatic_hydrolisis_recipes", 1, 1, 1, 9, new SimpleRecipeBuilder(), false);
+
+
+
+
+
+
+
 }
+
