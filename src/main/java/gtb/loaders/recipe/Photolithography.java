@@ -1846,6 +1846,15 @@ public class Photolithography {
                 .EUt(8)
                 .buildAndRegister();
 
+        ROASTER_RECIPES.recipeBuilder()
+                .fluidInputs(Trichlorosilane.getFluid(1000))
+                .output(dust, HighPuritySilicon)
+                .fluidInputs(Hydrogen.getFluid(2000))
+                .fluidOutputs(HydrochloricAcid.getFluid(2000))
+                .duration(200)
+                .EUt(120)
+                .buildAndRegister();
+
 
     }
 }
