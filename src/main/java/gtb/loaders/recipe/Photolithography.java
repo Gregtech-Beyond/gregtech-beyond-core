@@ -1855,6 +1855,52 @@ public class Photolithography {
                 .EUt(120)
                 .buildAndRegister();
 
+        VACUUM_EJECTION_RECIPES.recipeBuilder()
+                .input(dust, HighPuritySilicon)
+                .output(MONOCRYSTALLINE_SEED_CRYSTAL)
+                .duration(400)
+                .EUt(2)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { SILICON_BOULE.getStackForm(1) },
+                new FluidStack[] { Lubricant.getFluid(20) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { SILICON_BOULE.getStackForm(1) },
+                new FluidStack[] { DistilledWater.getFluid(60) });
+
+        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
+                new ItemStack[] { SILICON_BOULE.getStackForm(1) },
+                new FluidStack[] { Water.getFluid(80) });
+
+        CUTTER_RECIPES.recipeBuilder()
+                .fluidInputs(Lubricant.getFluid(20))
+                .input(SILICON_BOULE)
+                .output(SILICON_WAFER, 16)
+                .output(MONOCRYSTALLINE_SEED_CRYSTAL)
+                .duration(400)
+                .EUt(64)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .fluidInputs(DistilledWater.getFluid(40))
+                .input(SILICON_BOULE)
+                .output(SILICON_WAFER, 16)
+                .output(MONOCRYSTALLINE_SEED_CRYSTAL)
+                .duration(600)
+                .EUt(68)
+                .buildAndRegister();
+
+        CUTTER_RECIPES.recipeBuilder()
+                .fluidInputs(Water.getFluid(60))
+                .input(SILICON_BOULE)
+                .output(SILICON_WAFER, 16)
+                .output(MONOCRYSTALLINE_SEED_CRYSTAL)
+                .duration(800)
+                .EUt(70)
+                .buildAndRegister();
+
 
     }
 }
