@@ -16,7 +16,7 @@ public class OilLine {
 
     public static void init() {
         CENTRIFUGE_RECIPES.recipeBuilder().fluidInputs(DilutedOil.getFluid(1000))
-                .fluidOutputs(SaltWater.getFluid(600)).fluidOutputs(DesaltedOil.getFluid(400)).EUt(20)
+                .fluidOutputs(SaltWater.getFluid(200)).fluidOutputs(DesaltedOil.getFluid(800)).EUt(20)
                 .duration(120).buildAndRegister();
 
         DISTILLATION_RECIPES.recipeBuilder().fluidInputs(DesaltedOil.getFluid(1000))
