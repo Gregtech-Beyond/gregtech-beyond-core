@@ -80,7 +80,8 @@ recipemap.pressure_swing_adsorber_recipes.name=Pressure Swing Adsorption
 recipemap.dilution_refrigerator_recipes.name=Dilution Refrigeration
 recipemap.burner_reactor_recipes.name=Burner Reaction
 recipemap.dissolution_tank_recipes.name=Dissolution
-recipemap.gravity_separator_recipes.name=Gravity Separation Recipes
+recipemap.gravity_separator_recipes.name=Gravity Separation
+recipemap.electron_beam_lithographer.name=Electron Beam Lithography
 # Singleblock machinery
 
 gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator
@@ -155,6 +156,15 @@ gtb.machine.dryer.luv.name=Elite Dryer Unit II
 gtb.machine.dryer.zpm.name=Elite Dryer Unit III
 gtb.machine.dryer.uv.name=Ultimate Dryer Unit
 
+gtb.machine.electron_beam_lithographer.lv.name=Basic Electron Beam Lithography Unit
+gtb.machine.electron_beam_lithographer.mv.name=Advanced Electron Beam Lithography Unit
+gtb.machine.electron_beam_lithographer.hv.name=Advanced Electron Beam Lithography Unit II
+gtb.machine.electron_beam_lithographer.ev.name=Advanced Electron Beam Lithography Unit III
+gtb.machine.electron_beam_lithographer.iv.name=Elite Electron Beam Lithography Unit
+gtb.machine.electron_beam_lithographer.luv.name=Elite Electron Beam Lithography Unit II
+gtb.machine.electron_beam_lithographer.zpm.name=Elite Electron Beam Lithography Unit III
+gtb.machine.electron_beam_lithographer.uv.name=Ultimate Electron Beam Lithography Unit
+
 
 
 # Multiblock machine controllers
@@ -195,6 +205,7 @@ gtb.machine.rare_gas_stripping_column.name=Rare Gas Stripping Column
 gtb.machine.condensation_unit.name=Condensation Unit
 gtb.machine.pressure_swing_adsorber.name=Pressue Swing Adsorber
 gtb.machine.dilution_refrigerator.name=Dilution Refrigerator
+gtb.machine.gravity_separator.name=Gravity Separator
 
 # MetaItems
 
@@ -407,11 +418,12 @@ metaitem.patterened_epoxy_board.name=Patterned Epoxy Board
 metaitem.engraved_epoxy_board.name=Engraved Epoxy Board
 metaitem.laminated_epoxy_board.name=Laminated Epoxy Board
 metaitem.patterened_phenol_circuit_board.name=Patterned Phenolic Board
-
+metaitem.biologically_approved_lens.name=Biologically Approved Lens
 
 #Materials
 
 
+gregtech.material.alumino_silicate_wool_solution=Alumino Silicate Wool Solution
 gregtech.material.epoxid_pcb_base=Epoxid Circuit Board Base
 gregtech.material.sodium_bisulfate_solution=Sodium Bisulfate Solution
 gregtech.material.tantalite_slurry=Tantalite Slurry
