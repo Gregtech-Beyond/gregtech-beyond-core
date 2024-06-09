@@ -762,6 +762,7 @@ public class GTBMaterials {
     public static Material ZincExhaustMixture;
     public static Material ZincOreCokePellets;
     public static Material MetalRichSlagSlurry;
+    public static Material PreciousMetal;
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;

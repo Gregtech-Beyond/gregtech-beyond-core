@@ -1836,6 +1836,14 @@ public class GTBFirstDegreeMaterials {
                 .dust()
                 .color(0x8500A3).build().setFormula("(H2O)(ZnS)C", true);
 
+        PreciousMetal = new Material.Builder(getMaterialsId(),
+                gregtechId("precious_metal"))
+                .dust()
+                .ingot()
+                .ore()
+                .fluid()
+                .color(0x8500A3).build().setFormula("Au?", true);
+
 
 
 
