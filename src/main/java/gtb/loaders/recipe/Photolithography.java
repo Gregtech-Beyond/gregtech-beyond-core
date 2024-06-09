@@ -1821,5 +1821,31 @@ public class Photolithography {
         GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
                 new ItemStack[] { QUBIT_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1) },
                 new FluidStack[] { Lubricant.getFluid(250) });
+
+        VACUUM_DISTILLATION_TOWER_RECIPES.recipeBuilder()
+                .input(dust, Silicon)
+                .output(dust, HighPuritySilicon)
+                .EUt(10000)
+                .duration(200)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Chlorine.getFluid(4000))
+                .input(dust, Silicon)
+                .fluidOutputs(SiliconTetrachloride.getFluid(1000))
+                .duration(200)
+                .EUt(12)
+                .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder()
+                .fluidInputs(SiliconTetrachloride.getFluid(1000))
+                .fluidInputs(Hydrogen.getFluid(4000))
+                .fluidOutputs(HydrochloricAcid.getFluid(4000))
+                .output(dust, HighPuritySilicon)
+                .duration(120)
+                .EUt(8)
+                .buildAndRegister();
+
+
     }
 }
