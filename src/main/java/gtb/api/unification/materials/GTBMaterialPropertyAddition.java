@@ -6,6 +6,7 @@ import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.*;
 
 import gtb.api.unification.materials.info.GTBMaterialFlags;
+import gtb.api.unification.materials.info.GTBMaterialIconSet;
 
 public class GTBMaterialPropertyAddition {
 
@@ -32,6 +33,7 @@ public class GTBMaterialPropertyAddition {
         Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Pyrochlore.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
         Tantalite.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
+        Steel.addFlags(GTBMaterialFlags.GENERATE_ITEM_CASING);
 
         // Pre-Registered Materials ????????
 
