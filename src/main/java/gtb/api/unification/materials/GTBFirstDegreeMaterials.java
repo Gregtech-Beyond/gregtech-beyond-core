@@ -1630,6 +1630,112 @@ public class GTBFirstDegreeMaterials {
                         .ingot()
                         .flags(MaterialFlags.GENERATE_PLATE)
                         .color(0xFDD835).build();
+
+        AluminoSilicateWoolSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("alumino_silicate_wool_solution"))
+                .fluid()
+                .color(0x6B757F).build().setFormula("(Al2SiO5)(H2O)", true);
+
+        Shewanella = new Material.Builder(getMaterialsId(),
+                gregtechId("shewanella"))
+                .dust()
+                .color(0x8500A3).build().setFormula("Bacteria", true);
+
+        GeneTherapyFluid = new Material.Builder(getMaterialsId(),
+                gregtechId("gene_therapy_fluid"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        GenePlasmids = new Material.Builder(getMaterialsId(),
+                gregtechId("gene_plasmids"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        MilkResidueSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("milk_residues_slurry"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        BifidobacteriumBrave = new Material.Builder(getMaterialsId(),
+                gregtechId("bifidobacterium_brave"))
+                .dust()
+                .color(0x8500A3).build().setFormula("Bacteria", true);
+
+        Chitosan = new Material.Builder(getMaterialsId(),
+                gregtechId("chitosan"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        MushroomSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("mushroom_solution"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        Chitin = new Material.Builder(getMaterialsId(),
+                gregtechId("chitin"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        RapidlyReplicatingAnimalCells = new Material.Builder(getMaterialsId(),
+                gregtechId("rapidly_replicating_animal_cells"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        MycGene = new Material.Builder(getMaterialsId(),
+                gregtechId("myc_gene"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        Oct_4_Gene = new Material.Builder(getMaterialsId(),
+                gregtechId("oct_4_gene"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        SOX_2_Gene = new Material.Builder(getMaterialsId(),
+                gregtechId("sox_2_gene"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        KFL_4_Gene = new Material.Builder(getMaterialsId(),
+                gregtechId("kfl_4_gene"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        RottenSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("rotten_solution"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        HomogenizedRottenMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("homogenized_rotten_mixture"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        CAS_9 = new Material.Builder(getMaterialsId(),
+                gregtechId("cas_9"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        AnimalCells = new Material.Builder(getMaterialsId(),
+                gregtechId("animal_cells"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("?", true);
+
+        HighPuritySilicon = new Material.Builder(getMaterialsId(),
+                gregtechId("high_purity_silicon"))
+                .dust()
+                .color(0x8500A3).build().setFormula("Si*", true);
+
+        SiliconTetrachloride = new Material.Builder(getMaterialsId(),
+                gregtechId("silicon_tetrachloride"))
+                .fluid()
+                .color(0x8500A3).build().setFormula("SiCl4", true);
+
+
+
+
+
+
     }
 
     private static int getMaterialsId() {

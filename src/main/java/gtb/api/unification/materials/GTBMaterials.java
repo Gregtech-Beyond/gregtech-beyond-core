@@ -721,6 +721,27 @@ public class GTBMaterials {
     public static Material TantaliteSlurry;
     public static Material SodiumBisulfateSolution;
     public static Material EpoxidPCBBase;
+    public static Material AluminoSilicateWoolSolution;
+    public static Material Shewanella;
+    public static Material GeneTherapyFluid;
+    public static Material GenePlasmids;
+    public static Material MilkResidueSlurry;
+    public static Material BifidobacteriumBrave;
+    public static Material Chitosan;
+    public static Material MushroomSolution;
+    public static Material Chitin;
+    public static Material RapidlyReplicatingAnimalCells;
+    public static Material MycGene;
+    public static Material Oct_4_Gene;
+    public static Material SOX_2_Gene;
+    public static Material KFL_4_Gene;
+    public static Material RottenSolution;
+    public static Material HomogenizedRottenMixture;
+    public static Material CAS_9;
+    public static Material AnimalCells;
+    public static Material HighPuritySilicon;
+    public static Material SiliconTetrachloride;
+
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;
