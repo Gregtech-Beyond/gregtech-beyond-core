@@ -54,6 +54,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDilutionRefrigerator DILUTION_REFRIGERATOR;
     public static MetaTileEntityGravitySeparator GRAVITY_SEPARATOR;
     public static MetaTileEntitySinteringOven SINTERING_OVEN;
+    public static MetaTileEntityEnzymaticHydrolisisTank ENZYMATIC_HYDROLISIS_TANK;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -64,6 +65,7 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] ROTARY_EVAPORATOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DRYER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ELECTRON_BEAM_LITHOGRAPHER = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] BIO_REACTOR_SINGLE = new SimpleMachineMetaTileEntity[6];
 
     public static void init() {
         // Multiblocks
@@ -132,6 +134,8 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityGravitySeparator(gtb("gravity_separator")));
         SINTERING_OVEN = registerMetaTileEntity(3037,
                 new MetaTileEntitySinteringOven(gtb("sintering_oven")));
+        ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
+                new MetaTileEntityEnzymaticHydrolisisTank(gtb("enzymatic_hydrolisis_tank")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -167,6 +171,10 @@ public final class GTBMetaTileEntities {
 
         registerSimpleMetaTileEntity(ELECTRON_BEAM_LITHOGRAPHER, 4170, "electron_beam_lithographer",
                 GTBRecipeMaps.ELECTRON_BEAM_LITHOGRAPHER_RECIPES,
+                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(BIO_REACTOR_SINGLE, 4190, "bio_reactor_single",
+                GTBRecipeMaps.BIO_REACTOR_RECIPES,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }
