@@ -832,7 +832,7 @@ public class BiologyLines {
         CENTRIFUGE_RECIPES.recipeBuilder()
                 .fluidInputs(Blood.getFluid(1000))
                 .fluidOutputs(BloodCells.getFluid(500))
-                .fluidOutputs(BloodPlasma.getFluid(500))
+                .fluidOutputs(BloodPlasma.getPlasma(500))
                 .duration(200)
                 .EUt(90)
                 .buildAndRegister();
