@@ -3,8 +3,7 @@ package gtb.loaders.recipe;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
 
-import gtb.loaders.recipe.circuitry.CrystalCircuitry;
-import gtb.loaders.recipe.circuitry.WetwareCircuitry;
+import gtb.loaders.recipe.circuitry.*;
 import gtb.loaders.recipe.handlers.ore_processing.*;
 import gtb.loaders.recipe.polymerLines.*;
 
