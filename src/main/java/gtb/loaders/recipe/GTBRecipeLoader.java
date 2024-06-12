@@ -3,6 +3,8 @@ package gtb.loaders.recipe;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
 
+import gtb.loaders.recipe.circuitry.CrystalCircuitry;
+import gtb.loaders.recipe.circuitry.WetwareCircuitry;
 import gtb.loaders.recipe.handlers.ore_processing.*;
 import gtb.loaders.recipe.polymerLines.*;
 
@@ -23,6 +25,10 @@ public final class GTBRecipeLoader {
         RecipeMaps.SIFTER_RECIPES.setMaxFluidInputs(1);
         RecipeMaps.SIFTER_RECIPES.setMaxFluidOutputs(1);
 
+
+        IndiumProcessing.init();
+        CrystalCircuitry.init();
+        WetwareCircuitry.init();
         Electronics.init();
         FullerenePolymerTetrixLine.init();
         FullerenePolymerMatrixLine.init();
