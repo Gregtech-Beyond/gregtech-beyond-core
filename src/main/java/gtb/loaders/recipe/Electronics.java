@@ -700,5 +700,13 @@ public class Electronics {
                 .duration(200)
                 .EUt(70)
                 .buildAndRegister();
+
+        CVD_UNIT_RECIPES.recipeBuilder()
+                .fluidInputs(Methane.getFluid(1000))
+                .input(ANNEALED_NICKEL_PLATE)
+                .output(NICKEL_BREEDING_BED)
+                .duration(200)
+                .EUt(80)
+                .buildAndRegister();
     }
 }
