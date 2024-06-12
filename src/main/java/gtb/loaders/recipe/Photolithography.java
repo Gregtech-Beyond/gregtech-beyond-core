@@ -1404,8 +1404,8 @@ public class Photolithography {
                 .duration(1200)
                 .EUt(8000)
                 .input(INSULATED_INP_WAFER)
-                .output(OPTICAL_LITHOGRAPHY_MASK)
-                .notConsumable(RE_EXPOSED_INP_WAFER)
+                .notConsumable(OPTICAL_LITHOGRAPHY_MASK)
+                .output(RE_EXPOSED_INP_WAFER)
                 .buildAndRegister();
 
         ENGRAVING_UNIT_RECIPES.recipeBuilder()
