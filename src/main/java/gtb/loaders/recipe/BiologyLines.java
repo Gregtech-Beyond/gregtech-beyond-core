@@ -4,19 +4,17 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
-import static gregtechfoodoption.item.GTFOMetaItem.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 import static net.minecraft.init.Blocks.*;
 import static net.minecraft.init.Items.*;
 
-import gregtech.api.recipes.ingredients.IntCircuitIngredient;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.common.items.MetaItems;
 
@@ -929,7 +927,7 @@ public class BiologyLines {
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(ExtraDistilledWater.getFluid(1000))
-                .input(CHUM)
+                .input(ROTTEN_FLESH)
                 .fluidOutputs(RottenSolution.getFluid(1000))
                 .duration(200)
                 .EUt(280)
@@ -1040,10 +1038,6 @@ public class BiologyLines {
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { OreDictUnifier.get(dust, Osmiridium) },
                 new FluidStack[] { Bacteria.getFluid(500),
-                        SterileGrowthMedium.getFluid(500)});
-
-
-
-
+                        SterileGrowthMedium.getFluid(500) });
     }
 }

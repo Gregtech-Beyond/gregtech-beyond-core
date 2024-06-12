@@ -16,17 +16,14 @@ import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
-
 import gregtech.common.metatileentities.MetaTileEntities;
+
 import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.BlockCoolingCoil;
-import gtb.common.block.blocks.GTBMultiblockCasing;
 import gtb.common.metatileentities.GTBMetaTileEntities;
 
 public class MachineRecipes {
 
     public static void init() {
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .duration(200)
                 .EUt(80)

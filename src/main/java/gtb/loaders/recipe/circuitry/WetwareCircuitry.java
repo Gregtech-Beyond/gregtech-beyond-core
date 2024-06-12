@@ -8,18 +8,15 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
 
-import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ingredients.IntCircuitIngredient;
-import gregtech.api.unification.OreDictUnifier;
-import gregtech.api.unification.material.MarkerMaterials;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
+import gregtech.api.recipes.GTRecipeHandler;
+import gregtech.api.unification.OreDictUnifier;
+
 public class WetwareCircuitry {
 
-    public static void init(){
-
-
+    public static void init() {
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .fluidInputs(Polybenzimidazole.getFluid(1152))
                 .input(wireFine, NaquadahAlloy, 16)
@@ -56,7 +53,7 @@ public class WetwareCircuitry {
                         OreDictUnifier.get(pipeSmallFluid, Polybenzimidazole, 8),
                         OreDictUnifier.get(plate, Electrum, 8),
                         OreDictUnifier.get(foil, SiliconeRubber, 16),
-                        OreDictUnifier.get(bolt, HSSE, 8)},
+                        OreDictUnifier.get(bolt, HSSE, 8) },
                 new FluidStack[] { SterileGrowthMedium.getFluid(250) });
 
         GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
@@ -66,7 +63,7 @@ public class WetwareCircuitry {
                         NEURO_PROCESSOR.getStackForm(),
                         CRYSTAL_CENTRAL_PROCESSING_UNIT.getStackForm(),
                         NANO_CENTRAL_PROCESSING_UNIT.getStackForm(),
-                        OreDictUnifier.get(wireFine, YttriumBariumCuprate, 8)},
+                        OreDictUnifier.get(wireFine, YttriumBariumCuprate, 8) },
                 new FluidStack[] { Tin.getFluid(144) });
 
         GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
@@ -76,11 +73,11 @@ public class WetwareCircuitry {
                         NEURO_PROCESSOR.getStackForm(),
                         CRYSTAL_CENTRAL_PROCESSING_UNIT.getStackForm(),
                         NANO_CENTRAL_PROCESSING_UNIT.getStackForm(),
-                        OreDictUnifier.get(wireFine, YttriumBariumCuprate, 8)},
+                        OreDictUnifier.get(wireFine, YttriumBariumCuprate, 8) },
                 new FluidStack[] { SolderingAlloy.getFluid(72) });
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(ADVANCED_SMD_TRANSISTOR,8)
+                .input(ADVANCED_SMD_TRANSISTOR, 8)
                 .input(ADVANCED_SMD_CAPACITOR, 8)
                 .input(NEURO_PROCESSOR)
                 .input(CRYSTAL_SYSTEM_ON_CHIP)
@@ -93,7 +90,7 @@ public class WetwareCircuitry {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .input(ADVANCED_SMD_TRANSISTOR,8)
+                .input(ADVANCED_SMD_TRANSISTOR, 8)
                 .input(ADVANCED_SMD_CAPACITOR, 8)
                 .input(NEURO_PROCESSOR)
                 .input(CRYSTAL_SYSTEM_ON_CHIP)
@@ -104,17 +101,5 @@ public class WetwareCircuitry {
                 .duration(200)
                 .EUt(12000)
                 .buildAndRegister();
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

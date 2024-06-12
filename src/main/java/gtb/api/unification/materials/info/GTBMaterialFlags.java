@@ -1,11 +1,9 @@
 package gtb.api.unification.materials.info;
 
-import gregtech.api.unification.material.info.MaterialFlags;
-import gregtech.api.unification.material.properties.IMaterialProperty;
-import gregtech.api.unification.ore.OrePrefix;
 import org.jetbrains.annotations.ApiStatus;
 
 import gregtech.api.unification.material.info.MaterialFlag;
+import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.PropertyKey;
 
 @ApiStatus.Internal

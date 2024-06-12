@@ -1,9 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
-import net.minecraft.advancements.Advancement;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -13,11 +10,11 @@ import org.jetbrains.annotations.NotNull;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
+import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
-import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
@@ -28,7 +25,6 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
-
 
 public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockController {
 
@@ -45,10 +41,10 @@ public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockCo
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~P~~~~","~~~~~~~~~","~~~CCC~~~","~~CCCCC~~","P~CCCCC~P","~~CCCCC~~","~~~CSC~~~")
-                .aisle("~~~~P~~~~","~~~~~~~~~","~~~CCC~~~","~~C~~~C~~","P~C~~~C~P","~~C~~~C~~","~~~CCC~~~")
-                .aisle("~~~~P~~~~","~~~~~~~~~","~~~~C~~~~","~~~C~C~~~","P~C~~~C~P","~~~C~C~~~","~~~CCC~~~")
-                .aisle("~~~~~~~~~","~~~~P~~~~","~~~~C~~~~","~~~~C~~~~","~PCCCCCP~","~~~~C~~~~","~~~~C~~~~")
+                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~CCC~~~", "~~CCCCC~~", "P~CCCCC~P", "~~CCCCC~~", "~~~CSC~~~")
+                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~CCC~~~", "~~C~~~C~~", "P~C~~~C~P", "~~C~~~C~~", "~~~CCC~~~")
+                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~~C~~~~", "~~~C~C~~~", "P~C~~~C~P", "~~~C~C~~~", "~~~CCC~~~")
+                .aisle("~~~~~~~~~", "~~~~P~~~~", "~~~~C~~~~", "~~~~C~~~~", "~PCCCCCP~", "~~~~C~~~~", "~~~~C~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
@@ -59,7 +55,6 @@ public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockCo
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
                 .build();
     }
-
 
     @Override
     public TraceabilityPredicate autoAbilities() {

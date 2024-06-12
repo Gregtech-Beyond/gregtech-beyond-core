@@ -1900,7 +1900,5 @@ public class Photolithography {
                 .duration(800)
                 .EUt(70)
                 .buildAndRegister();
-
-
     }
 }

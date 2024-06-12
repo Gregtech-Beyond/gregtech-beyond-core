@@ -6,22 +6,21 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.common.item.GTBMetaItems.*;
+
+import net.minecraft.item.ItemStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-
-import static gtb.common.item.GTBMetaItems.*;
 
 public class CrystalCircuitry {
-    public static void init(){
 
+    public static void init() {
         GTRecipeHandler.removeRecipesByInputs(LASER_ENGRAVER_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(craftingLens, MarkerMaterials.Color.Lime),
-                        ENGRAVED_CRYSTAL_CHIP.getStackForm()});
+                        ENGRAVED_CRYSTAL_CHIP.getStackForm() });
 
         LASER_ENGRAVER_RECIPES.recipeBuilder()
                 .input(ENGRAVED_CRYSTAL_CHIP)
@@ -38,9 +37,5 @@ public class CrystalCircuitry {
                 .output(BIOLOGICALLY_APPROVED_LENS)
                 .EUt(120)
                 .buildAndRegister();
-
-
-
-
     }
 }

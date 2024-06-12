@@ -220,13 +220,12 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ENGRAVED_EPOXY_BOARD = addItem(206, "engraved_epoxy_board");
         GTBMetaItems.PATTERENED_EPOXY_BOARD = addItem(207, "patterened_epoxy_board");
         GTBMetaItems.TRANSISTOR_BASE_WAFER = addItem(208, "transistor_base_wafer");
-        GTBMetaItems.BIOLOGICALLY_APPROVED_LENS  = addItem(209, "biologically_approved_lens");
+        GTBMetaItems.BIOLOGICALLY_APPROVED_LENS = addItem(209, "biologically_approved_lens");
         GTBMetaItems.NEURO_SUPPORT_UNIT = addItem(210, "neuro_support_unit");
         GTBMetaItems.ELECTRICALLY_WIRED_PETRI_DISH = addItem(211, "electrically_wired_petri_dish");
         GTBMetaItems.BIFIDOBACTERERIUM_BRAVE_CULTURE = addItem(212, "bifidobacterium_brave_culture");
         GTBMetaItems.STEM_CELL_LAB_ON_CHIP = addItem(213, "stem_cell_lab_on_chip");
         GTBMetaItems.LAB_ON_CHIP = addItem(214, "lab_on_chip");
         GTBMetaItems.LAB_ON_CHIP_BASE = addItem(215, "lab_on_chip_base");
-
     }
 }
