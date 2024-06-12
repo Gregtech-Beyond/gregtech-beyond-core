@@ -22,7 +22,7 @@ public final class GTBRecipeMaps {
             1, 1, 0, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BACTERIAL_VAT_RECIPES = new RecipeMap<>("bacterial_vat_recipes",
-            1, 1, 0, 0, new SimpleRecipeBuilder(), false);
+            4, 2, 6, 4, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BEDROCK_PUMP_RECIPES = new RecipeMap<>("bedrock_pump_recipes",
             1, 0, 0, 1, new SimpleRecipeBuilder(), false);
