@@ -192,7 +192,7 @@ public class IndiumProcessing {
                 .buildAndRegister();
 
         DEHYDRATOR_RECIPES.recipeBuilder()
-                .fluidOutputs(IndiumHydroxideConcentrate.getFluid(1000))
+                .fluidInputs(IndiumHydroxideConcentrate.getFluid(1000))
                 .output(dust, IndiumHydroxide, 7)
                 .duration(200)
                 .EUt(120)
