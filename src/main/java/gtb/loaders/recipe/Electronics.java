@@ -708,5 +708,31 @@ public class Electronics {
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
+
+        ARC_FURNACE_RECIPES.recipeBuilder()
+                .fluidInputs(Oxygen.getFluid(1000))
+                .input(plate, Nickel)
+                .output(ANNEALED_NICKEL_PLATE)
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(SolderingAlloy.getFluid(1296))
+                .input(gemExquisite, NetherQuartz)
+                .input(wireFine, Gold, 4)
+                .output(PIEZOELECTRIC_CRYSTAL)
+                .duration(1000)
+                .EUt(1700)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(SolderingAlloy.getFluid(144))
+                .output(ULTRASONIC_HOMOGENIZER)
+                .input(stick, RhodiumPlatedPalladium)
+                .input(PIEZOELECTRIC_CRYSTAL)
+                .duration(1000)
+                .EUt(1700)
+                .buildAndRegister();
     }
 }
