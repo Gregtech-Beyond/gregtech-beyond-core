@@ -1848,8 +1848,8 @@ public class GTBFirstDegreeMaterials {
 
         StreptococcusPyogenes = new Material.Builder(getMaterialsId(),
                 gregtechId("streptococcus_pyogenes"))
-                .dust()
-                .color(0x61605A).build().setFormula("Bacteria", true);
+                        .dust()
+                        .color(0x61605A).build().setFormula("Bacteria", true);
     }
 
     private static int getMaterialsId() {
