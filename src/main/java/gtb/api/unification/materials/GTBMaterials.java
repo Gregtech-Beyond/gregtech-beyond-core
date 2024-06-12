@@ -101,7 +101,7 @@ public class GTBMaterials {
     public static Material BetaPineneSolution;
     public static Material SheepBlood;
     public static Material Xerizin;
-
+    public static Material StreptococcusPyogenes;
     public static Material CopperSulfide;
     public static Material SodiumIodate;
     public static Material SinteredSilver;

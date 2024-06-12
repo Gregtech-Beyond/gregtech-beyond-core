@@ -925,8 +925,16 @@ public class BiologyLines {
                 .EUt(800)
                 .buildAndRegister();
 
+        MICROSCOPE_RECIPES.recipeBuilder()
+                .fluidInputs(WasteWater.getFluid(100))
+                .chancedOutput(dust, StreptococcusPyogenes, 300, 0)
+                .duration(212)
+                .EUt(700)
+                .buildAndRegister();
+
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(ExtraDistilledWater.getFluid(1000))
+                .notConsumable(dust, StreptococcusPyogenes)
                 .input(ROTTEN_FLESH)
                 .fluidOutputs(RottenSolution.getFluid(1000))
                 .duration(200)

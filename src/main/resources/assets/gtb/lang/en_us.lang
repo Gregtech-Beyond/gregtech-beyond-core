@@ -81,7 +81,12 @@ recipemap.dilution_refrigerator_recipes.name=Dilution Refrigeration
 recipemap.burner_reactor_recipes.name=Burner Reaction
 recipemap.dissolution_tank_recipes.name=Dissolution
 recipemap.gravity_separator_recipes.name=Gravity Separation
-recipemap.electron_beam_lithographer.name=Electron Beam Lithography
+recipemap.electron_beam_lithographer_recipes.name=Electron Beam Lithography
+recipemap.enzymatic_hydrolisis_recipes.name=Enzymatic Hydrolisis
+recipemap.vacuum_ejection_recipes.name=Vacuum Ejection Recipes
+recipemap.dryer_recipes.name=Dryer Recipes
+recipemap.sintering_oven_recipes.name=Sintering
+recipemap.high_temp_distillation_recipes.name=High Temperature Distillation
 # Singleblock machinery
 
 gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator
@@ -156,11 +161,11 @@ gtb.machine.dryer.luv.name=Elite Dryer II
 gtb.machine.dryer.zpm.name=Elite Dryer III
 gtb.machine.dryer.uv.name=Ultimate Dryer
 
-gtb.machine.bio_reactor.lv.name=Basic Bio Reactor
-gtb.machine.bio_reactor.mv.name=Advanced Bio Reactor
-gtb.machine.bio_reactor.hv.name=Advanced Bio Reactor II
-gtb.machine.bio_reactor.ev.name=Advanced Bio Reactor III
-gtb.machine.bio_reactor.iv.name=Elite Bio Reactor
+gtb.machine.bio_reactor_single.lv.name=Basic Bio Reactor
+gtb.machine.bio_reactor_single.mv.name=Advanced Bio Reactor
+gtb.machine.bio_reactor_single.hv.name=Advanced Bio Reactor II
+gtb.machine.bio_reactor_single.ev.name=Advanced Bio Reactor III
+gtb.machine.bio_reactor_single.iv.name=Elite Bio Reactor
 
 gtb.machine.vacuum_ejector.lv.name=Basic Vacuum Ejector
 gtb.machine.vacuum_ejector.mv.name=Advanced Vacuum Ejector
@@ -179,6 +184,8 @@ gtb.machine.electron_beam_lithographer.uv.name=Ultimate Electron Beam Lithograph
 
 # Multiblock machine controllers
 
+gtb.machine.enzymatic_hydrolisis_tank.name=Enzymatic Hydrolisis Tank
+gtb.machine.sintering_oven.name=Sintering Oven
 gtb.machine.dissolution_tank.name=Dissolution Tank
 gtb.machine.burner_reactor.name=Burner Reactor
 gtb.machine.large_cvd_unit.name=Large CVD Unit
@@ -441,7 +448,7 @@ metaitem.biologically_approved_lens.name=Biologically Approved Lens
 
 #Materials
 
-
+gregtech.material.streptococcus_pyogenes=Streptococcus Pyrogenes
 gregtech.material.shewanella=Shewanella
 gregtech.material.gene_therapy_fluid=Gene Therapy Fluid
 gregtech.material.gene_plasmids=Gene Plasmids

@@ -1845,6 +1845,11 @@ public class GTBFirstDegreeMaterials {
                         .ore()
                         .fluid()
                         .color(0xAD9B49).build().setFormula("Au?", true);
+
+        StreptococcusPyogenes = new Material.Builder(getMaterialsId(),
+                gregtechId("streptococcus_pyogenes"))
+                .dust()
+                .color(0x61605A).build().setFormula("Bacteria", true);
     }
 
     private static int getMaterialsId() {
