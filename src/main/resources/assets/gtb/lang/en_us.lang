@@ -138,32 +138,42 @@ gtb.machine.cvd_unit.luv.name=Elite CVD Unit II
 gtb.machine.cvd_unit.zpm.name=Elite CVD Unit III
 gtb.machine.cvd_unit.uv.name=Ultimate CVD Unit
 
-gtb.machine.ion_implanter.lv.name=Basic Ion Implanter Unit
-gtb.machine.ion_implanter.mv.name=Advanced Ion Implanter Unit
-gtb.machine.ion_implanter.hv.name=Advanced Ion Implanter Unit II
-gtb.machine.ion_implanter.ev.name=Advanced Ion Implanter Unit III
-gtb.machine.ion_implanter.iv.name=Elite Ion Implanter Unit
-gtb.machine.ion_implanter.luv.name=Elite Ion Implanter Unit II
-gtb.machine.ion_implanter.zpm.name=Elite Ion Implanter Unit III
-gtb.machine.ion_implanter.uv.name=Ultimate Ion Implanter Unit
+gtb.machine.ion_implanter.lv.name=Basic Ion Implanter
+gtb.machine.ion_implanter.mv.name=Advanced Ion Implanter
+gtb.machine.ion_implanter.hv.name=Advanced Ion Implanter II
+gtb.machine.ion_implanter.ev.name=Advanced Ion Implanter III
+gtb.machine.ion_implanter.iv.name=Elite Ion Implanter
+gtb.machine.ion_implanter.luv.name=Elite Ion Implanter II
+gtb.machine.ion_implanter.zpm.name=Elite Ion Implanter III
+gtb.machine.ion_implanter.uv.name=Ultimate Ion Implanter
 
-gtb.machine.dryer.lv.name=Basic Dryer Unit
-gtb.machine.dryer.mv.name=Advanced Dryer Unit
-gtb.machine.dryer.hv.name=Advanced Dryer Unit II
-gtb.machine.dryer.ev.name=Advanced Dryer Unit III
-gtb.machine.dryer.iv.name=Elite Dryer Unit
-gtb.machine.dryer.luv.name=Elite Dryer Unit II
-gtb.machine.dryer.zpm.name=Elite Dryer Unit III
-gtb.machine.dryer.uv.name=Ultimate Dryer Unit
+gtb.machine.dryer.lv.name=Basic Dryer
+gtb.machine.dryer.mv.name=Advanced Dryer
+gtb.machine.dryer.hv.name=Advanced Dryer  II
+gtb.machine.dryer.ev.name=Advanced Dryer III
+gtb.machine.dryer.iv.name=Elite Dryer
+gtb.machine.dryer.luv.name=Elite Dryer II
+gtb.machine.dryer.zpm.name=Elite Dryer III
+gtb.machine.dryer.uv.name=Ultimate Dryer
 
-gtb.machine.electron_beam_lithographer.lv.name=Basic Electron Beam Lithography Unit
-gtb.machine.electron_beam_lithographer.mv.name=Advanced Electron Beam Lithography Unit
-gtb.machine.electron_beam_lithographer.hv.name=Advanced Electron Beam Lithography Unit II
-gtb.machine.electron_beam_lithographer.ev.name=Advanced Electron Beam Lithography Unit III
-gtb.machine.electron_beam_lithographer.iv.name=Elite Electron Beam Lithography Unit
-gtb.machine.electron_beam_lithographer.luv.name=Elite Electron Beam Lithography Unit II
-gtb.machine.electron_beam_lithographer.zpm.name=Elite Electron Beam Lithography Unit III
-gtb.machine.electron_beam_lithographer.uv.name=Ultimate Electron Beam Lithography Unit
+gtb.machine.bio_reactor.lv.name=Basic Bio Reactor
+gtb.machine.bio_reactor.mv.name=Advanced Bio Reactor
+gtb.machine.bio_reactor.hv.name=Advanced Bio Reactor II
+gtb.machine.bio_reactor.ev.name=Advanced Bio Reactor III
+gtb.machine.bio_reactor.iv.name=Elite Bio Reactor
+
+gtb.machine.vacuum_ejector.lv.name=Basic Vacuum Ejector
+gtb.machine.vacuum_ejector.mv.name=Advanced Vacuum Ejector
+gtb.machine.vacuum_ejector.hv.name=Advanced Vacuum Ejector II
+
+gtb.machine.electron_beam_lithographer.lv.name=Basic Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.mv.name=Advanced Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.hv.name=Advanced Electron Beam Lithographer II
+gtb.machine.electron_beam_lithographer.ev.name=Advanced Electron Beam Lithographer III
+gtb.machine.electron_beam_lithographer.iv.name=Elite Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.luv.name=Elite Electron Beam Lithographer II
+gtb.machine.electron_beam_lithographer.zpm.name=Elite Electron Beam Lithographer III
+gtb.machine.electron_beam_lithographer.uv.name=Ultimate Electron Beam Lithographer
 
 
 
@@ -209,6 +219,15 @@ gtb.machine.gravity_separator.name=Gravity Separator
 
 # MetaItems
 
+metaitem.electrically_wired_petri_dish.name=Electrically Wired Petri Dish
+metaitem.neuro_support_unit.name=Neuro Support Unit
+metaitem.raw_capacitor_roll.name=Raw Capacitor Roll
+metaitem.bifidobacterium_brave_culture.name=Bifidobacterium Brave Culture
+metaitem.stem_cell_lab_on_chip.name=Stemcell Lab on Chip
+metaitem.lab_on_chip.name=Lab on Chip
+metaitem.lab_on_chip_base.name=Lab on Chip Base
+metaitem.transistor_wafer.name=Transistor Wafer
+metaitem.annealed_nickel_plate.name=Annealed Nickel Plate
 metaitem.laser_assembly.name=Laser Assembly
 metaitem.engraved_hasoc_wafer.name=Engraved HaSoC Wafer
 metaitem.astro_miner.name=Astro Miner
@@ -423,6 +442,46 @@ metaitem.biologically_approved_lens.name=Biologically Approved Lens
 #Materials
 
 
+gregtech.material.shewanella=Shewanella
+gregtech.material.gene_therapy_fluid=Gene Therapy Fluid
+gregtech.material.gene_plasmids=Gene Plasmids
+gregtech.material.milk_residues_slurry=Milk Residues Slurry
+gregtech.material.bifidobacterium_brave=Bifidobacterium Brave
+gregtech.material.chitosan=Chitosan
+gregtech.material.mushroom_solution=Mushroom Solution
+gregtech.material.chitin=Chitin
+gregtech.material.rapidly_replicating_animal_cells=Rapidly Replicating Animal Cells
+gregtech.material.myc_gene=Myc-Gene
+gregtech.material.oct_4_gene=Oct-4-Gene
+gregtech.material.sox_2_gene=SOX-2-Gene
+gregtech.material.rotten_solution=Rotten Solution
+gregtech.material.kfl_4_gene=kfl-4-Gene
+gregtech.material.homogenized_rotten_mixture=Homogenized Rotten Mixture
+gregtech.material.cas_9=Cas-9
+gregtech.material.animal_cells=Animal Cells
+gregtech.material.high_purity_silicon=High Purity Silicon
+gregtech.material.indium_hydroxide=Indium Hydroxide
+gregtech.material.indium_hydroxide_concentrate=Indium Hydroxide
+gregtech.material.iron_poor_mixture=Iron Poor Mixture
+gregtech.material.zinc_poor_mixture=Zinc Poor Mixture
+gregtech.material.metal_hydroxide_mix=Metal Hydroxide Mix
+gregtech.material.separated_metal_rich_slag_slurry=Separated Metal Rich Slag Slurry
+gregtech.material.acidic_metal_rich_slag_slurry=Acidic Metal Rich Slag Slurry
+gregtech.material.metal_rich_slag_slurry=Metal Rich Slag Slurry
+gregtech.material.zinc_slag_slurry=Zinc Slag Slurry
+gregtech.material.zinc_residual_slag=Zinc Residual Slag
+gregtech.material.fine_zinc_slag=Fine Zing Slag
+gregtech.material.thallium_sulfate_solution=Thallium Sulfate Solution
+gregtech.material.thallium_chloride=Thallium Chloride
+gregtech.material.thallium_residues=Thallium Residues
+gregtech.material.cadmium_sulfate_solution=Cadmium Sulfate Solution
+gregtech.material.cadmium_thalliun_liqour=Cadmium Thallium
+gregtech.material.zinc_amalgam=Zinc Amalgam
+gregtech.material.cadmium_zinc=Cadmium Zinc
+gregtech.material.zinc_flue=Zinc Flue
+gregtech.material.zinc_exhaust_mixture=Zinc Exhaust Mixture
+gregtech.material.zinc_ore_coke_pellets=Zinc Ore Coke Pellets
+gregtech.material.precious_metal=Precious Metal
 gregtech.material.alumino_silicate_wool_solution=Alumino Silicate Wool Solution
 gregtech.material.epoxid_pcb_base=Epoxid Circuit Board Base
 gregtech.material.sodium_bisulfate_solution=Sodium Bisulfate Solution
@@ -1105,12 +1164,10 @@ gregtech.material.acetic_anhydride=Acetic Anhydirde
 gregtech.material.blood_cells=Blood Cells
 gregtech.material.blood_plasma=Blood
 gregtech.material.linoleic_acid=Linoleic Acid
-
 gregtech.material.beryllium_oxide=Beryllium Oxide
 gregtech.material.calcium_carbide=Calcium Carbide
 gregtech.material.calcium_hydroxide=Calcium Hydroxide
 gregtech.material.chlorosulfuric_acid=Chlorosulfuric Acid
-gregtech.material.cubic_zirconia=Cubic Zirconia
 gregtech.material.molybdenum_trioxide=Molybdenum Trioxide
 gregtech.material.lead_chloride=Lead Chloride
 gregtech.material.sodium_tellurite=Sodium Tellurite
