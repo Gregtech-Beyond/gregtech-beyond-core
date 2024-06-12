@@ -16,7 +16,6 @@ import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
-import gregtech.common.metatileentities.MetaTileEntities;
 
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.metatileentities.GTBMetaTileEntities;
@@ -99,7 +98,7 @@ public class MachineRecipes {
                 "PBP", "SFS", "PSP",
                 'F', new UnificationEntry(frameGt, Bronze),
                 'S', new UnificationEntry(pipeSmallFluid, Steel),
-                'B', MetaTileEntities.STEAM_BOILER_COAL_BRONZE,
+                'B', BlockMachineCasing.MachineCasingType.ULV,
                 'P', new UnificationEntry(plate, Bronze));
 
         ModHandler.addShapedRecipe("ffu_machine", GTBMetaTileEntities.FROTH_FLOTATION_UNIT.getStackForm(),
