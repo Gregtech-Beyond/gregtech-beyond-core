@@ -227,5 +227,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.STEM_CELL_LAB_ON_CHIP = addItem(213, "stem_cell_lab_on_chip");
         GTBMetaItems.LAB_ON_CHIP = addItem(214, "lab_on_chip");
         GTBMetaItems.LAB_ON_CHIP_BASE = addItem(215, "lab_on_chip_base");
+        GTBMetaItems.ANNEALED_NICKEL_PLATE = addItem(216, "annealed_nickel_plate");
     }
 }
