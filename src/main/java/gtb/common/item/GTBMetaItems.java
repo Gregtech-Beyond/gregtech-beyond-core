@@ -218,6 +218,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem LAB_ON_CHIP_BASE;
     public static MetaItem<?>.MetaValueItem LAB_ON_CHIP;
     public static MetaItem<?>.MetaValueItem ANNEALED_NICKEL_PLATE;
+    public static MetaItem<?>.MetaValueItem PIEZOELECTRIC_CRYSTAL;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
