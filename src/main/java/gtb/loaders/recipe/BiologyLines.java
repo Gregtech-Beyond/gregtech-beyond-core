@@ -837,7 +837,7 @@ public class BiologyLines {
                 .EUt(90)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(1000))
                 .fluidInputs(HydrochloricAcid.getFluid(1000))
                 .fluidInputs(SulfuricAcid.getFluid(2000))
