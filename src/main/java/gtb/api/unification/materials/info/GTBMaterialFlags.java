@@ -3,8 +3,11 @@ package gtb.api.unification.materials.info;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.Materials.Cupronickel;
 
+import java.util.Arrays;
+
 import org.jetbrains.annotations.ApiStatus;
 
+import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialFlag;
 import gregtech.api.unification.material.info.MaterialFlags;
 import gregtech.api.unification.material.properties.PropertyKey;
@@ -25,32 +28,28 @@ public class GTBMaterialFlags {
             .build();
 
     public static void addToMaterials() {
-        Titanium.addFlags(MaterialFlags.GENERATE_FOIL);
-        Graphene.addFlags(MaterialFlags.GENERATE_FOIL);
-        Mica.addFlags(MaterialFlags.GENERATE_FOIL);
+        addFlag(MaterialFlags.GENERATE_FOIL, Titanium, Graphene, Mica);
 
-        NaquadahAlloy.addFlags(MaterialFlags.GENERATE_FINE_WIRE);
-        Tungsten.addFlags(MaterialFlags.GENERATE_FINE_WIRE);
+        addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten);
 
         Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
 
-        Pyrochlore.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
-        Tantalite.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
+        addFlag(GTBMaterialFlags.GENERATE_SIFTED, GTBMaterialFlags.GENERATE_FLOATED, Pyrochlore, Tantalite);
 
-        Steel.addFlags(GTBMaterialFlags.GENERATE_ITEM_CASING);
+        addFlag(GTBMaterialFlags.GENERATE_ITEM_CASING, Steel, Aluminium, StainlessSteel, Titanium, TungstenSteel);
 
-        SiliconDioxide.addFlags(MaterialFlags.GENERATE_PLATE);
-        BorosilicateGlass.addFlags(MaterialFlags.GENERATE_PLATE);
-        Zirconium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Holmium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Hafnium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Scandium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Dysprosium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Erbium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Gadolinium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Rhenium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Germanium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Strontium.addFlags(MaterialFlags.GENERATE_PLATE);
-        Rutherfordium.addFlags(MaterialFlags.GENERATE_PLATE);
+        addFlag(MaterialFlags.GENERATE_PLATE, SiliconDioxide, BorosilicateGlass, Zirconium, Holmium, Hafnium, Scandium,
+                Dysprosium, Erbium, Gadolinium, Rhenium, Germanium, Strontium, Rutherfordium);
+    }
+
+    private static void addFlag(MaterialFlag flag, Material... materials) {
+        Arrays.stream(materials).forEach(material -> material.addFlags(flag));
+    }
+
+    private static void addFlag(MaterialFlag flag, MaterialFlag flag2, Material... materials) {
+        Arrays.stream(materials).forEach(material -> {
+            material.addFlags(flag);
+            material.addFlags(flag2);
+        });
     }
 }
