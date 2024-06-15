@@ -181,4 +181,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_EJECTION_RECIPES = new RecipeMap<>(
             "vacuum_ejection_recipes", 1, 1, 0, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
+            "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
 }
