@@ -2,6 +2,7 @@ package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.DISABLE_DECOMPOSITION;
+import static gregtech.api.unification.material.info.MaterialFlags.GENERATE_FOIL;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
@@ -810,7 +811,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .flags(MaterialFlags.GENERATE_PLATE,GENERATE_FOIL)
                 .color(0x584643)
                 .build().setFormula("C8H8", true);
 
