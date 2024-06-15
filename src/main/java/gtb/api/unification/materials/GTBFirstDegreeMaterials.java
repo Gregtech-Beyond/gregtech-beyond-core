@@ -1271,6 +1271,7 @@ public class GTBFirstDegreeMaterials {
         SinteredSilver = new Material.Builder(getMaterialsId(), gregtechId("sintered_silver"))
                 .dust()
                 .ingot()
+                .flags(MaterialFlags.GENERATE_ROD)
                 .color(0x9D9A9A).build().setFormula("Ag", true);
 
         VanadiumPentoxide = new Material.Builder(getMaterialsId(), gregtechId("vanadium_pentoxide"))
@@ -1616,6 +1617,239 @@ public class GTBFirstDegreeMaterials {
                 gregtechId("tantalite_slurry"))
                         .fluid()
                         .color(0x593428).build().setFormula("MnTa2O6(H2O)", true);
+
+        SodiumBisulfateSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("sodium_bisulfate_solution"))
+                        .fluid()
+                        .color(0x3F51B5).build().setFormula("(NaHSO4)(H2O)", true);
+
+        EpoxidPCBBase = new Material.Builder(getMaterialsId(),
+                gregtechId("epoxid_pcb_base"))
+                        .fluid()
+                        .dust()
+                        .ingot()
+                        .flags(MaterialFlags.GENERATE_PLATE)
+                        .color(0xFDD835).build();
+
+        AluminoSilicateWoolSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("alumino_silicate_wool_solution"))
+                        .fluid()
+                        .color(0x6B757F).build().setFormula("(Al2SiO5)(H2O)", true);
+
+        Shewanella = new Material.Builder(getMaterialsId(),
+                gregtechId("shewanella"))
+                        .dust()
+                        .color(0x568358).build().setFormula("Bacteria", true);
+
+        GeneTherapyFluid = new Material.Builder(getMaterialsId(),
+                gregtechId("gene_therapy_fluid"))
+                        .fluid()
+                        .color(0x234B25).build().setFormula("?", true);
+
+        GenePlasmids = new Material.Builder(getMaterialsId(),
+                gregtechId("gene_plasmids"))
+                        .fluid()
+                        .color(0x576959).build().setFormula("?", true);
+
+        MilkResidueSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("milk_residues_slurry"))
+                        .fluid()
+                        .color(0xDBDBDB).build();
+
+        BifidobacteriumBrave = new Material.Builder(getMaterialsId(),
+                gregtechId("bifidobacterium_brave"))
+                        .dust()
+                        .color(0x2B776E).build().setFormula("Bacteria", true);
+
+        Chitosan = new Material.Builder(getMaterialsId(),
+                gregtechId("chitosan"))
+                        .fluid()
+                        .color(0xFFEB3B).build();
+
+        MushroomSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("mushroom_solution"))
+                        .fluid()
+                        .color(0x614239).build();
+
+        Chitin = new Material.Builder(getMaterialsId(),
+                gregtechId("chitin"))
+                        .fluid()
+                        .color(0xE3C338).build();
+
+        RapidlyReplicatingAnimalCells = new Material.Builder(getMaterialsId(),
+                gregtechId("rapidly_replicating_animal_cells"))
+                        .fluid()
+                        .color(0x9F87A8).build().setFormula("?", true);
+
+        MycGene = new Material.Builder(getMaterialsId(),
+                gregtechId("myc_gene"))
+                        .fluid()
+                        .color(0x606F61).build();
+
+        Oct_4_Gene = new Material.Builder(getMaterialsId(),
+                gregtechId("oct_4_gene"))
+                        .fluid()
+                        .color(0x485649).build();
+
+        SOX_2_Gene = new Material.Builder(getMaterialsId(),
+                gregtechId("sox_2_gene"))
+                        .fluid()
+                        .color(0x3F5140).build();
+
+        KFL_4_Gene = new Material.Builder(getMaterialsId(),
+                gregtechId("kfl_4_gene"))
+                        .fluid()
+                        .color(0x555F55).build();
+
+        RottenSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("rotten_solution"))
+                        .fluid()
+                        .color(0x663020).build();
+
+        HomogenizedRottenMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("homogenized_rotten_mixture"))
+                        .fluid()
+                        .color(0x842B10).build();
+
+        CAS_9 = new Material.Builder(getMaterialsId(),
+                gregtechId("cas_9"))
+                        .fluid()
+                        .color(0x2B3E1E).build();
+
+        AnimalCells = new Material.Builder(getMaterialsId(),
+                gregtechId("animal_cells"))
+                        .fluid()
+                        .color(0xC07A7A).build().setFormula("?", true);
+
+        HighPuritySilicon = new Material.Builder(getMaterialsId(),
+                gregtechId("high_purity_silicon"))
+                        .dust()
+                        .color(0x574E4E).build().setFormula("Si*", true);
+
+        SiliconTetrachloride = new Material.Builder(getMaterialsId(),
+                gregtechId("silicon_tetrachloride"))
+                        .fluid()
+                        .color(0x79847A).build().setFormula("SiCl4", true);
+
+        IndiumHydroxide = new Material.Builder(getMaterialsId(),
+                gregtechId("indium_hydroxide"))
+                        .dust()
+                        .color(0x652F6E).build().setFormula("In(HO)3", true);
+
+        IndiumHydroxideConcentrate = new Material.Builder(getMaterialsId(),
+                gregtechId("indium_hydroxide_concentrate"))
+                        .fluid()
+                        .color(0x855D8B).build().setFormula("InHO", true);
+
+        IronPoorMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("iron_poor_mixture"))
+                        .fluid()
+                        .color(0xF4511E).build().setFormula("?In", true);
+
+        ZincPoorMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_poor_mixture"))
+                        .fluid()
+                        .color(0x7E57C2).build().setFormula("?Fe", true);
+
+        MetalHydroxideMix = new Material.Builder(getMaterialsId(),
+                gregtechId("metal_hydroxide_mix"))
+                        .fluid()
+                        .color(0xF5AE52).build().setFormula("?ZnOH", true);
+
+        SeparatedMetalRichSlagSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("separated_metal_rich_slag_slurry"))
+                        .fluid()
+                        .color(0x848B91).build().setFormula("H3PO4?", true);
+
+        AcidicMetalRichSlagSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("acidic_metal_rich_slag_slurry"))
+                        .fluid()
+                        .color(0x96856C).build().setFormula("H3PO4?", true);
+
+        MetalRichSlagSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("metal_rich_slag_slurry"))
+                        .fluid()
+                        .color(0xD9A899).build().setFormula("?", true);
+
+        ZincSlagSlurry = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_slag_slurry"))
+                        .fluid()
+                        .color(0xB5B2AE).build().setFormula("?", true);
+
+        ZincResidualSlag = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_residual_slag"))
+                        .dust()
+                        .color(0xB8B7B7).build().setFormula("?", true);
+
+        FineZincSlag = new Material.Builder(getMaterialsId(),
+                gregtechId("fine_zinc_slag"))
+                        .dust()
+                        .color(0xADADAD).build().setFormula("?", true);
+
+        ThalliumSulfateSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("thallium_sulfate_solution"))
+                        .fluid()
+                        .color(0x8A8F94).build().setFormula("Tl2SO4?", true);
+
+        ThalliumChloride = new Material.Builder(getMaterialsId(),
+                gregtechId("thallium_chloride"))
+                        .dust()
+                        .color(0xE3F2FD).build().setFormula("TlCl2", true);
+
+        ThalliumResidues = new Material.Builder(getMaterialsId(),
+                gregtechId("thallium_residues"))
+                        .dust()
+                        .color(0xA970C1).build().setFormula("Tl?", true);
+
+        CadmiumSulfateSolution = new Material.Builder(getMaterialsId(),
+                gregtechId("cadmium_sulfate_solution"))
+                        .fluid()
+                        .color(0xCFB091).build().setFormula("CdSO4?", true);
+
+        CadmiumThalliumLiqour = new Material.Builder(getMaterialsId(),
+                gregtechId("cadmium_thalliun_liqour"))
+                        .fluid()
+                        .color(0xA6B5A7).build().setFormula("(H2SO4)CdTl", true);
+
+        ZincAmalgam = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_amalgam"))
+                        .fluid()
+                        .color(0x999999).build().setFormula("ZnHg", true);
+
+        CadmiumZinc = new Material.Builder(getMaterialsId(),
+                gregtechId("cadmium_zinc"))
+                        .dust()
+                        .color(0x726E7E).build().setFormula("(H2SO4)CdZn?", true);
+
+        ZincFlue = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_flue"))
+                        .dust()
+                        .iconSet(MaterialIconSet.SAND)
+                        .color(0xA1A1A0).build().setFormula("?", true);
+
+        ZincExhaustMixture = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_exhaust_mixture"))
+                        .fluid()
+                        .color(0x7D7D7C).build().setFormula("(SO2)(CO2)?", true);
+
+        ZincOreCokePellets = new Material.Builder(getMaterialsId(),
+                gregtechId("zinc_ore_coke_pellets"))
+                        .dust()
+                        .iconSet(MaterialIconSet.ROUGH)
+                        .color(0x61605A).build().setFormula("(H2O)(ZnS)C", true);
+
+        PreciousMetal = new Material.Builder(getMaterialsId(),
+                gregtechId("precious_metal"))
+                        .dust()
+                        .ingot()
+                        .ore()
+                        .fluid()
+                        .color(0xAD9B49).build().setFormula("Au?", true);
+
+        StreptococcusPyogenes = new Material.Builder(getMaterialsId(),
+                gregtechId("streptococcus_pyogenes"))
+                        .dust()
+                        .color(0x61605A).build().setFormula("Bacteria", true);
     }
 
     private static int getMaterialsId() {

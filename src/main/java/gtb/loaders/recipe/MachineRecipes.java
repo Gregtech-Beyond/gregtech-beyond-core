@@ -17,11 +17,21 @@ import gregtech.common.blocks.BlockMachineCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
+import gtb.common.block.GTBMetaBlocks;
 import gtb.common.metatileentities.GTBMetaTileEntities;
 
 public class MachineRecipes {
 
     public static void init() {
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .duration(200)
+                .EUt(20)
+                .outputs(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(VACUUM_FURNACE_CASING))
+                .input(bolt, Silver)
+                .input(frameGt, Iron)
+                .fluidInputs(AluminoSilicateWoolSolution.getFluid(288))
+                .buildAndRegister();
+
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(plate, StainlessSteel, 4)
                 .input(circuit, MarkerMaterials.Tier.EV, 2)
@@ -84,11 +94,24 @@ public class MachineRecipes {
                 'P', ELECTRIC_PISTON_EV.getStackForm(),
                 'T', new UnificationEntry(plate, Titanium));
 
+        ModHandler.addShapedRecipe("stc_machine", GTBMetaTileEntities.SOLAR_THERMAL_CONCENTRATOR.getStackForm(),
+                "PBP", "SFS", "PSP",
+                'F', new UnificationEntry(frameGt, Bronze),
+                'S', new UnificationEntry(pipeSmallFluid, Steel),
+                'B', BlockMachineCasing.MachineCasingType.ULV,
+                'P', new UnificationEntry(plate, Bronze));
+
         ModHandler.addShapedRecipe("ffu_machine", GTBMetaTileEntities.FROTH_FLOTATION_UNIT.getStackForm(),
                 "CPC", "PMP", "CPC",
                 'M', MetaBlocks.MACHINE_CASING.getItemVariant(BlockMachineCasing.MachineCasingType.EV),
                 'C', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
                 'P', ELECTRIC_PUMP_EV.getStackForm());
+
+        ModHandler.addShapedRecipe("vac_furnace_machine", GTBMetaTileEntities.VACUUM_FURNACE.getStackForm(),
+                "PCP", "CMC", "PCP",
+                'M', GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(VACUUM_FURNACE_CASING),
+                'P', new UnificationEntry(plate, Steel),
+                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.MV));
 
         registerMachineRecipe(GTBMetaTileEntities.ROTARY_EVAPORATOR,
                 "MRM", "CMC", "PRP",

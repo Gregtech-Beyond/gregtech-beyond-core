@@ -56,6 +56,7 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
                 .where('C', states(getCasingState())
+                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
                 .where('Z', frames(Materials.Bronze))
