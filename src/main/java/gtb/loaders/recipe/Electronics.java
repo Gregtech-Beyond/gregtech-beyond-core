@@ -1,6 +1,7 @@
 package gtb.loaders.recipe;
 
 import static gregtech.api.recipes.RecipeMaps.*;
+import static gregtech.api.unification.material.MarkerMaterials.Tier.LV;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
@@ -12,6 +13,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
+import gregtech.api.GTValues;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.recipes.ingredients.IntCircuitIngredient;
@@ -143,7 +145,7 @@ public class Electronics {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(SILICON_DIOXIDE_WAFER)
                 .input(wireFine, Copper, 8)
-                .output(TRANSISTOR_WAFER)
+                .output(TRANSISTOR_BASE_WAFER)
                 .duration(20)
                 .EUt(70)
                 .buildAndRegister();
@@ -151,7 +153,7 @@ public class Electronics {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(SILICON_DIOXIDE_WAFER)
                 .input(wireFine, Aluminium, 8)
-                .output(TRANSISTOR_WAFER)
+                .output(TRANSISTOR_BASE_WAFER)
                 .duration(20)
                 .EUt(70)
                 .buildAndRegister();
@@ -167,7 +169,7 @@ public class Electronics {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(SILICON_DIOXIDE_WAFER)
                 .input(wireFine, Platinum, 5)
-                .output(TRANSISTOR_WAFER)
+                .output(TRANSISTOR_BASE_WAFER)
                 .duration(20)
                 .EUt(70)
                 .buildAndRegister();
@@ -175,7 +177,7 @@ public class Electronics {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(SILICON_DIOXIDE_WAFER)
                 .input(wireFine, Titanium, 4)
-                .output(TRANSISTOR_WAFER)
+                .output(TRANSISTOR_BASE_WAFER)
                 .duration(20)
                 .EUt(70)
                 .buildAndRegister();
@@ -183,7 +185,7 @@ public class Electronics {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(SILICON_DIOXIDE_WAFER)
                 .input(wireFine, Tungsten, 2)
-                .output(TRANSISTOR_WAFER)
+                .output(TRANSISTOR_BASE_WAFER)
                 .duration(20)
                 .EUt(70)
                 .buildAndRegister();
@@ -733,6 +735,67 @@ public class Electronics {
                 .input(PIEZOELECTRIC_CRYSTAL)
                 .duration(1000)
                 .EUt(1700)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(Glue.getFluid(100))
+                .input(dust, GrapheneOxide)
+                .output(dust, Graphene)
+                .duration(200)
+                .EUt(780)
+                .buildAndRegister();
+
+        THERMAL_PRESS_RECIPES.recipeBuilder()
+                .input(plate, ReinforcedEpoxyResin, 2)
+                .input(foil, Copper, 2)
+                .output(LAMINATED_RER_BOARD)
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(NovolacsPhotoresist.getFluid(250))
+                .input(LAMINATED_RER_BOARD)
+                .output(PATTERENED_PR4_PLATE)
+                .duration(190)
+                .EUt(GTValues.EV)
+                .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .fluidInputs(HydrofluoricAcid.getFluid(1000))
+                .input(PATTERENED_PR4_PLATE)
+                .output(ETCHED_PR4_PLATE)
+                .duration(200)
+                .EUt(70)
+                .buildAndRegister();
+
+        CVD_UNIT_RECIPES.recipeBuilder()
+                .input(dust, Copper, 2)
+                .input(dust, Aluminium, 2)
+                .input(ETCHED_PR4_PLATE)
+                .output(SPUTTERED_PR4_PLATE)
+                .duration(200)
+                .EUt(78)
+                .buildAndRegister();
+
+        THERMAL_PRESS_RECIPES.recipeBuilder()
+                .input(SPUTTERED_PR4_PLATE)
+                .input(plate, SiliconDioxide)
+                .output(PRESSED_PR4_PLATE)
+                .duration(120)
+                .EUt(270)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(SolderingAlloy.getFluid(144))
+                .input(PRESSED_PR4_PLATE)
+                .input(cableGtSingle, Aluminium, 2)
+                .input(circuit, LV)
+                .input(SENSOR_HV)
+                .input(EMITTER_HV)
+                .output(PLANAR_TRANSFORMER)
+                .duration(1200)
+                .EUt(200)
                 .buildAndRegister();
     }
 }
