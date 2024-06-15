@@ -29,6 +29,7 @@ import gtb.api.unification.ore.GTBOrePrefix;
 import gtb.api.utils.GTBLog;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.loaders.recipe.GTBRecipeLoader;
+import gtb.loaders.recipe.handlers.GTBMaterialRecipeHandler;
 
 @Mod.EventBusSubscriber(modid = GregtechBeyondCore.MODID)
 public class CommonProxy {
@@ -93,5 +94,6 @@ public class CommonProxy {
     public static void postRegisterMaterials(@NotNull PostMaterialEvent event) {
         GTBMaterialFlags.addToMaterials();
         GTBOrePrefix.register();
+        GTBMaterialRecipeHandler.register();
     }
 }

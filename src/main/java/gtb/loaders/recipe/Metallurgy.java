@@ -11,8 +11,6 @@ import static gtb.common.item.GTBMetaItems.*;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
 
-import gtb.api.unification.ore.GTBOrePrefix;
-
 public final class Metallurgy {
 
     public static void init() {
@@ -238,13 +236,6 @@ public final class Metallurgy {
                 .output(ingot, Invar)
                 .duration(200)
                 .EUt(8)
-                .buildAndRegister();
-
-        BENDER_RECIPES.recipeBuilder()
-                .input(plate, Steel)
-                .output(GTBOrePrefix.item_casing, Steel, 2)
-                .duration(400)
-                .EUt(60)
                 .buildAndRegister();
     }
 }
