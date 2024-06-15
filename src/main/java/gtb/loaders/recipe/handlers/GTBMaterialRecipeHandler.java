@@ -11,7 +11,7 @@ import gtb.api.unification.ore.GTBOrePrefix;
 public final class GTBMaterialRecipeHandler {
 
     public static void register() {
-        GTBOrePrefix.item_casing.addProcessingHandler(GTBMaterialRecipeHandler::generateItemCasing);
+        GTBOrePrefix.itemCasing.addProcessingHandler(GTBMaterialRecipeHandler::generateItemCasing);
     }
 
     private static void generateItemCasing(OrePrefix orePrefix, Material material) {
