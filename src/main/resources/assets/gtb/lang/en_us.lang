@@ -445,9 +445,23 @@ metaitem.engraved_epoxy_board.name=Engraved Epoxy Board
 metaitem.laminated_epoxy_board.name=Laminated Epoxy Board
 metaitem.patterened_phenol_circuit_board.name=Patterned Phenolic Board
 metaitem.biologically_approved_lens.name=Biologically Approved Lens
+metaitem.laminated_rer_board.name=Laminated Reinforced Epoxy Resin Board
+metaitem.piezoelectric_crystal.name=Piezoelectric Crystal
+metaitem.patterned_pr4_plate.name=Patterned PR4 Plate
+metaitem.etched_pr4_plate.name=Etched PR4 Plate
+metaitem.planar_transformer.name=Planar Transformer
+metaitem.sputtered_pr4_plate.name=Sputtered PR4 Plate
+metaitem.pressed_pr4_plate.name=Pressed PR4 Plate
+
+
+
 
 #Materials
 
+gregtech.material.rare_naq_fluoroantimonic_acid=Naquadah Fluoroantimonic Acid
+gregtech.material.naq_hydrochloric_acid=Naquadah Hydrochloric Acid
+gregtech.material.rare_naquadah_waste=Rare Naquadah Waste
+gregtech.material.naquadah_waste=Naquadah Waste
 gregtech.material.streptococcus_pyogenes=Streptococcus Pyrogenes
 gregtech.material.shewanella=Shewanella
 gregtech.material.gene_therapy_fluid=Gene Therapy Fluid
@@ -538,7 +552,7 @@ gregtech.material.desulfurized_molten_galena=Desulfurized Molten Galena
 gregtech.material.molten_oxidized_galena=Molten Oxidized Galena
 gregtech.material.molten_galena=Molten Galena
 gregtech.material.realgar_solution=Realgar Solution
-gregtech.material.uranium_dioxide=Roasted Bornite
+gregtech.material.uranium_dioxide=Uranium Dioxide
 gregtech.material.uranium_residues=Uranium Residues
 gregtech.material.uranium_metallic_powder=Uranium Metallic Powder
 gregtech.material.lead_metallic_powder=Lead Metallic Powder
@@ -678,7 +692,7 @@ gregtech.material.trace_rhenium_flue=Trace Rhenium Flue
 gregtech.material.zinc_oxide=Zinc Oxide
 gregtech.material.germanium_tetrachloride=Germanium Tetrachloride
 gregtech.material.germanium_dioxide=Germanium Dioxide
-gregtech.material.silicon_tetrachloride=Silicon Tetrachl
+gregtech.material.silicon_tetrachloride=Silicon Tetrachloride
 gregtech.material.durene=Durene
 gregtech.material.pyromellitic_dianhydride=Pyromellitic Dianhydride
 gregtech.material.aminophenol=4-Aminophenol
