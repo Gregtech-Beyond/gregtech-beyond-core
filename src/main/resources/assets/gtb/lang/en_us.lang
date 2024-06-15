@@ -2,6 +2,7 @@
 
 item.material.oreprefix.sifted=Sifted %s Dust
 item.material.oreprefix.floated=Floated %s Dust
+item.material.oreprefix.item_casing=%s Item Casing
 
 # Blocks
 tile.gtb_multiblock_active_casing.high_energy_coil.name=High Energy Coil

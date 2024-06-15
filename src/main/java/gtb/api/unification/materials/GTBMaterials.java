@@ -822,8 +822,6 @@ public class GTBMaterials {
     public static Material CataclysmInducedMixedMatter;
 
     public static void init() {
-        GTBMaterialPropertyAddition.init();
-        GTBMaterialIconSet.set();
         GTBElementMaterials.register();
         GTBFirstDegreeMaterials.register();
         GTBSecondDegreeMaterials.register();
@@ -831,5 +829,7 @@ public class GTBMaterials {
         GTBUnknownCompositionMaterials.register();
         GTBBiologicalMaterials.register();
         GTBFantasyMaterials.register();
+        GTBMaterialPropertyAddition.init();
+        GTBMaterialIconSet.set();
     }
 }
