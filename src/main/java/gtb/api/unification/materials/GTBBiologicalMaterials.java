@@ -454,7 +454,7 @@ public class GTBBiologicalMaterials {
         YButyrolacetone = new Material.Builder(getMaterialsId(), gregtechId("y_butyralacetone"))
                 .fluid()
                 .color(0x673AB7)
-                .build().setFormula("C4H6O2", true);
+                .build().setFormula("?", true);
 
         PalmOil = new Material.Builder(getMaterialsId(), gregtechId("palm_oil"))
                 .fluid()
@@ -469,8 +469,8 @@ public class GTBBiologicalMaterials {
         PhthalicAnhydride = new Material.Builder(getMaterialsId(), gregtechId("phthalic_anhydride"))
                 .fluid()
                 .dust()
-                .color(0xC1C1C1)
-                .build().setFormula("C8H4O3", true);
+                .color(0x388E3C)
+                .build().setFormula("?", true);
     }
 
     private static int getMaterialsId() {

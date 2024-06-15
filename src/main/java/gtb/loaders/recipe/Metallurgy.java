@@ -11,8 +11,6 @@ import static gtb.common.item.GTBMetaItems.*;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
 
-import gtb.api.unification.ore.GTBOrePrefix;
-
 public final class Metallurgy {
 
     public static void init() {
@@ -36,7 +34,7 @@ public final class Metallurgy {
                 .fluidInputs(SodiumPotassium.getFluid(1000))
                 .input(COOLANT_CELL)
                 .output(NAK_COOLANT_CELL)
-                .duration(1200)
+                .duration(120)
                 .EUt(12)
                 .buildAndRegister();
 
@@ -82,7 +80,7 @@ public final class Metallurgy {
                 .input(dust, Cupronickel)
                 .output(ingot, Cupronickel)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Cupronickel));
 
@@ -90,7 +88,7 @@ public final class Metallurgy {
                 .input(dust, SolderingAlloy)
                 .output(ingot, SolderingAlloy)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, SolderingAlloy));
 
@@ -98,7 +96,7 @@ public final class Metallurgy {
                 .input(dust, FullerenePolymerTetrix)
                 .output(ingot, FullerenePolymerTetrix)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, FullerenePolymerTetrix));
 
@@ -106,7 +104,7 @@ public final class Metallurgy {
                 .input(dust, FullerenePolymerMatrix)
                 .output(ingot, FullerenePolymerMatrix)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, FullerenePolymerMatrix));
 
@@ -114,7 +112,7 @@ public final class Metallurgy {
                 .input(dust, Zylon)
                 .output(ingot, Zylon)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Zylon));
 
@@ -122,7 +120,7 @@ public final class Metallurgy {
                 .input(dust, Polycaprolactam)
                 .output(ingot, Polycaprolactam)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Polycaprolactam));
 
@@ -130,7 +128,7 @@ public final class Metallurgy {
                 .input(dust, Polyethylene)
                 .output(ingot, Polyethylene)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Polyethylene));
 
@@ -138,7 +136,7 @@ public final class Metallurgy {
                 .input(dust, Polytetrafluoroethylene)
                 .output(ingot, Polytetrafluoroethylene)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Polytetrafluoroethylene));
 
@@ -146,7 +144,7 @@ public final class Metallurgy {
                 .input(dust, Polybenzimidazole)
                 .output(ingot, Polybenzimidazole)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Polybenzimidazole));
 
@@ -154,7 +152,7 @@ public final class Metallurgy {
                 .input(dust, Nomex)
                 .output(ingot, Nomex)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Nomex));
 
@@ -162,7 +160,7 @@ public final class Metallurgy {
                 .input(dust, Kevlar)
                 .output(ingot, Kevlar)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Kevlar));
 
@@ -170,7 +168,7 @@ public final class Metallurgy {
                 .input(dust, KaptonE)
                 .output(ingot, KaptonE)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, KaptonE));
 
@@ -178,7 +176,7 @@ public final class Metallurgy {
                 .input(dust, KaptonK)
                 .output(ingot, KaptonK)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, KaptonK));
 
@@ -219,32 +217,8 @@ public final class Metallurgy {
                 .input(dust, BorosilicateGlass)
                 .output(ingot, BorosilicateGlass)
                 .EUt(2)
-                .duration(200)
+                .duration(20)
                 .buildAndRegister();
         ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, BorosilicateGlass));
-
-        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Cupronickel));
-        ModHandler.removeFurnaceSmelting(OreDictUnifier.get(dust, Invar));
-
-        VACUUM_FURNACE_RECIPES.recipeBuilder()
-                .input(dust, Cupronickel)
-                .output(ingot, Cupronickel)
-                .duration(200)
-                .EUt(8)
-                .buildAndRegister();
-
-        VACUUM_FURNACE_RECIPES.recipeBuilder()
-                .input(dust, Invar)
-                .output(ingot, Invar)
-                .duration(200)
-                .EUt(8)
-                .buildAndRegister();
-
-        BENDER_RECIPES.recipeBuilder()
-                .input(plate, Steel)
-                .output(GTBOrePrefix.item_casing, Steel, 2)
-                .duration(400)
-                .EUt(60)
-                .buildAndRegister();
     }
 }

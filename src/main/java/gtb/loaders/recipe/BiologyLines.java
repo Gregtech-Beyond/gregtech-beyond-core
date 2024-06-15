@@ -7,14 +7,12 @@ import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.item.GTBMetaItems.*;
-import static net.minecraft.init.Blocks.*;
 import static net.minecraft.init.Items.*;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
 import gregtech.api.recipes.GTRecipeHandler;
-import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.common.items.MetaItems;
 
@@ -814,6 +812,9 @@ public class BiologyLines {
                 new ItemStack[] { SHAPE_MOLD_CYLINDER.getStackForm(1) },
                 new FluidStack[] { Polybenzimidazole.getFluid(18) });
 
+        GTRecipeHandler.removeRecipesByInputs(FLUID_HEATER_RECIPES,
+                new FluidStack[] { RawGrowthMedium.getFluid(1000) });
+
         GTRecipeHandler.removeRecipesByInputs(MIXER_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, Salt, 4),
@@ -821,231 +822,5 @@ public class BiologyLines {
                         OreDictUnifier.get(dust, Calcium, 4),
                         OreDictUnifier.get(dust, Meat, 4) },
                 new FluidStack[] { Mutagen.getFluid(4000) });
-
-        CENTRIFUGE_RECIPES.recipeBuilder()
-                .input(dust, Meat)
-                .fluidOutputs(Blood.getFluid(1000))
-                .duration(200)
-                .EUt(90)
-                .buildAndRegister();
-
-        CENTRIFUGE_RECIPES.recipeBuilder()
-                .fluidInputs(Blood.getFluid(1000))
-                .fluidOutputs(BloodCells.getFluid(500))
-                .fluidOutputs(BloodPlasma.getPlasma(500))
-                .duration(200)
-                .EUt(90)
-                .buildAndRegister();
-
-        LARGE_CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(Oxygen.getFluid(1000))
-                .fluidInputs(HydrochloricAcid.getFluid(1000))
-                .fluidInputs(SulfuricAcid.getFluid(2000))
-                .fluidOutputs(SulfurTrioxide.getFluid(1000))
-                .fluidOutputs(ChlorosulfonicAcid.getFluid(2000))
-                .fluidOutputs(Water.getFluid(2000))
-                .duration(240)
-                .EUt(800)
-                .buildAndRegister();
-
-        DRYER_RECIPES.recipeBuilder()
-                .fluidInputs(Milk.getFluid(1000))
-                .circuitMeta(2)
-                .output(dust, SolidMilkResidues)
-                .duration(200)
-                .EUt(80)
-                .buildAndRegister();
-
-        MIXER_RECIPES.recipeBuilder()
-                .input(dust, SolidMilkResidues)
-                .fluidInputs(Milk.getFluid(1000))
-                .fluidOutputs(MilkResidueSlurry.getFluid(1000))
-                .duration(200)
-                .EUt(80)
-                .buildAndRegister();
-
-        BIO_REACTOR_RECIPES.recipeBuilder()
-                .fluidInputs(MilkResidueSlurry.getFluid(1000))
-                .fluidInputs(BacterialGrowthMedium.getFluid(1000))
-                .input(PLUS_STERILIZED_PETRI_DISH)
-                .output(BIFIDOBACTERERIUM_BRAVE_CULTURE)
-                .duration(2000)
-                .EUt(800)
-                .buildAndRegister();
-
-        BIO_REACTOR_RECIPES.recipeBuilder()
-                .input(BIFIDOBACTERERIUM_BRAVE_CULTURE)
-                .fluidInputs(BacterialGrowthMedium.getFluid(1000))
-                .output(dust, BifidobacteriumBrave, 1)
-                .duration(200)
-                .EUt(150)
-                .buildAndRegister();
-
-        BIO_REACTOR_RECIPES.recipeBuilder()
-                .fluidInputs(BacterialGrowthMedium.getFluid(250))
-                .fluidOutputs(DepletedBacterialGrowthMedium.getFluid(250))
-                .notConsumable(YEEMSolution.getFluid(100))
-                .input(dust, BifidobacteriumBrave, 1)
-                .output(dust, BifidobacteriumBrave, 2)
-                .duration(200)
-                .EUt(700)
-                .buildAndRegister();
-
-        BACTERIAL_VAT_RECIPES.recipeBuilder()
-                .fluidInputs(Chitin.getFluid(1000))
-                .fluidOutputs(Chitosan.getFluid(1000))
-                .input(dust, BifidobacteriumBrave, 1)
-                .duration(200)
-                .EUt(800)
-                .buildAndRegister();
-
-        DILUTION_REFRIGERATOR_RECIPES.recipeBuilder()
-                .fluidInputs(DistilledWater.getFluid(1000))
-                .input(RED_MUSHROOM)
-                .fluidOutputs(MushroomSolution.getFluid(1000))
-                .duration(120)
-                .EUt(780)
-                .buildAndRegister();
-
-        MIXER_RECIPES.recipeBuilder()
-                .fluidInputs(MushroomSolution.getFluid(1000))
-                .notConsumable(ULTRASONIC_HOMOGENIZER)
-                .fluidOutputs(Chitin.getFluid(1000))
-                .duration(200)
-                .EUt(780)
-                .buildAndRegister();
-
-        ENZYMATIC_HYDROLISIS_RECIPES.recipeBuilder()
-                .fluidInputs(RapidlyReplicatingAnimalCells.getFluid(1000))
-                .fluidOutputs(MycGene.getFluid(1000))
-                .fluidOutputs(Oct_4_Gene.getFluid(1000))
-                .fluidOutputs(SOX_2_Gene.getFluid(1000))
-                .fluidOutputs(KFL_4_Gene.getFluid(1000))
-                .duration(200)
-                .EUt(800)
-                .buildAndRegister();
-
-        MICROSCOPE_RECIPES.recipeBuilder()
-                .fluidInputs(WasteWater.getFluid(100))
-                .chancedOutput(dust, StreptococcusPyogenes, 300, 0)
-                .duration(212)
-                .EUt(700)
-                .buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(ExtraDistilledWater.getFluid(1000))
-                .notConsumable(dust, StreptococcusPyogenes)
-                .input(ROTTEN_FLESH)
-                .fluidOutputs(RottenSolution.getFluid(1000))
-                .duration(200)
-                .EUt(280)
-                .buildAndRegister();
-
-        DISSOLUTION_TANK_RECIPES.recipeBuilder()
-                .fluidInputs(RottenSolution.getFluid(1000))
-                .fluidInputs(DistilledWater.getFluid(1000))
-                .notConsumable(ULTRASONIC_HOMOGENIZER)
-                .fluidOutputs(HomogenizedRottenMixture.getFluid(1000))
-                .duration(200)
-                .EUt(700)
-                .buildAndRegister();
-
-        ENZYMATIC_HYDROLISIS_RECIPES.recipeBuilder()
-                .fluidInputs(HomogenizedRottenMixture.getFluid(1000))
-                .fluidOutputs(CAS_9.getFluid(1000))
-                .duration(200)
-                .EUt(712)
-                .buildAndRegister();
-
-        BIO_REACTOR_RECIPES.recipeBuilder()
-                .fluidInputs(Oct_4_Gene.getFluid(1000))
-                .fluidInputs(SOX_2_Gene.getFluid(1000))
-                .fluidInputs(MycGene.getFluid(1000))
-                .fluidInputs(CAS_9.getFluid(1000))
-                .fluidInputs(KFL_4_Gene.getFluid(1000))
-                .fluidOutputs(GenePlasmids.getFluid(5000))
-                .input(dust, EschericiaColi)
-                .duration(200)
-                .EUt(700)
-                .buildAndRegister();
-
-        MIXER_RECIPES.recipeBuilder()
-                .fluidInputs(Chitosan.getFluid(1000))
-                .fluidInputs(GenePlasmids.getFluid(1000))
-                .fluidOutputs(GeneTherapyFluid.getFluid(2000))
-                .duration(200)
-                .EUt(700)
-                .buildAndRegister();
-
-        BACTERIAL_VAT_RECIPES.recipeBuilder()
-                .fluidInputs(GeneTherapyFluid.getFluid(10000))
-                .fluidInputs(AnimalCells.getFluid(10000))
-                .circuitMeta(1)
-                .fluidInputs(SterileGrowthMedium.getFluid(10000))
-                .output(STEM_CELLS)
-                .duration(2000)
-                .EUt(800)
-                .buildAndRegister();
-
-        BACTERIAL_VAT_RECIPES.recipeBuilder()
-                .fluidInputs(GeneTherapyFluid.getFluid(10000))
-                .fluidInputs(AnimalCells.getFluid(10000))
-                .circuitMeta(2)
-                .notConsumable(STEM_CELL_LAB_ON_CHIP)
-                .fluidInputs(SterileGrowthMedium.getFluid(10000))
-                .output(STEM_CELLS, 2)
-                .duration(2000)
-                .EUt(800)
-                .buildAndRegister();
-
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .input(plate, Iridium, 4)
-                .input(bolt, Naquadah, 4)
-                .input(QUBIT_CENTRAL_PROCESSING_UNIT)
-                .output(LAB_ON_CHIP_BASE)
-                .duration(200)
-                .EUt(1200)
-                .buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(BacterialGrowthMedium.getFluid(100))
-                .input(LAB_ON_CHIP_BASE)
-                .output(LAB_ON_CHIP)
-                .duration(120)
-                .EUt(890)
-                .buildAndRegister();
-
-        BIO_REACTOR_RECIPES.recipeBuilder()
-                .fluidInputs(SterileGrowthMedium.getFluid(1000))
-                .input(STEM_CELLS)
-                .input(LAB_ON_CHIP)
-                .output(STEM_CELL_LAB_ON_CHIP)
-                .duration(200)
-                .EUt(120)
-                .buildAndRegister();
-
-        ENZYMATIC_HYDROLISIS_RECIPES.recipeBuilder()
-                .fluidInputs(BloodCells.getFluid(1000))
-                .fluidOutputs(AnimalCells.getFluid(1000))
-                .duration(200)
-                .EUt(700)
-                .buildAndRegister();
-
-        MIXER_RECIPES.recipeBuilder()
-                .fluidInputs(AnimalCells.getFluid(1000))
-                .fluidOutputs(RapidlyReplicatingAnimalCells.getFluid(1000))
-                .notConsumable(dust, Naquadria)
-                .duration(200)
-                .EUt(700)
-                .buildAndRegister();
-
-        GTRecipeHandler.removeRecipesByInputs(FLUID_HEATER_RECIPES,
-                new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(1) },
-                new FluidStack[] { RawGrowthMedium.getFluid(100) });
-
-        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
-                new ItemStack[] { OreDictUnifier.get(dust, Osmiridium) },
-                new FluidStack[] { Bacteria.getFluid(500),
-                        SterileGrowthMedium.getFluid(500) });
     }
 }
