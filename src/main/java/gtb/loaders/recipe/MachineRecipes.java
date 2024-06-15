@@ -25,10 +25,10 @@ public class MachineRecipes {
     public static void init() {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .duration(200)
-                .EUt(80)
-                .output(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(VACUUM_FURNACE_CASING).getBlock())
+                .EUt(20)
+                .outputs(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(VACUUM_FURNACE_CASING))
                 .input(bolt, Silver)
-                .input(frameGt, Steel)
+                .input(frameGt, Iron)
                 .fluidInputs(AluminoSilicateWoolSolution.getFluid(288))
                 .buildAndRegister();
 
@@ -109,7 +109,7 @@ public class MachineRecipes {
 
         ModHandler.addShapedRecipe("vac_furnace_machine", GTBMetaTileEntities.VACUUM_FURNACE.getStackForm(),
                 "PCP", "CMC", "PCP",
-                'M', GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(VACUUM_FURNACE_CASING).getBlock(),
+                'M', GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(VACUUM_FURNACE_CASING),
                 'P', new UnificationEntry(plate, Steel),
                 'C', new UnificationEntry(circuit, MarkerMaterials.Tier.MV));
 
