@@ -24,6 +24,7 @@ public final class GTBRecipeLoader {
         RecipeMaps.SIFTER_RECIPES.setMaxFluidInputs(1);
         RecipeMaps.SIFTER_RECIPES.setMaxFluidOutputs(1);
 
+        NaquadahProcessing.init();
         IndiumProcessing.init();
         CrystalCircuitry.init();
         WetwareCircuitry.init();
