@@ -41,6 +41,26 @@ public class GTBFantasyMaterials {
                 gregtechId("cataclysm_induced_mixed_matter"))
                         .ingot()
                         .build().setFormula("Mm***", true);
+
+        NaquadahWaste = new Material.Builder(getMaterialsId(),
+                gregtechId("naquadah_waste"))
+                        .fluid()
+                        .color(0x2d690b).build();
+
+        RareNaquadahWaste = new Material.Builder(getMaterialsId(),
+                gregtechId("rare_naquadah_waste"))
+                        .fluid()
+                        .color(0x0c2100).build();
+
+        NaqHydrochloricAcid = new Material.Builder(getMaterialsId(),
+                gregtechId("naq_hydrochloric_acid"))
+                        .fluid()
+                        .color(0x1d4f00).build();
+
+        RareNaqFluoroantimonicAcid = new Material.Builder(getMaterialsId(),
+                gregtechId("rare_naq_fluoroantimonic_acid"))
+                        .fluid()
+                        .color(0xa1c9a5).build();
     }
 
     private static int getMaterialsId() {

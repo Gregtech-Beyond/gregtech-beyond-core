@@ -101,7 +101,7 @@ public class GTBMaterials {
     public static Material BetaPineneSolution;
     public static Material SheepBlood;
     public static Material Xerizin;
-
+    public static Material StreptococcusPyogenes;
     public static Material CopperSulfide;
     public static Material SodiumIodate;
     public static Material SinteredSilver;
@@ -125,6 +125,10 @@ public class GTBMaterials {
     public static Material ErbiumOxide;
     public static Material DysprosiumOxide;
     public static Material ScandiumOxide;
+    public static Material RareNaqFluoroantimonicAcid;
+    public static Material NaqHydrochloricAcid;
+    public static Material RareNaquadahWaste;
+    public static Material NaquadahWaste;
 
     // Element Materials
     public static Material Rubidium;
@@ -719,6 +723,50 @@ public class GTBMaterials {
     public static Material StrontiumCarbonate;
     public static Material ImpureTantaliteSlurry;
     public static Material TantaliteSlurry;
+    public static Material SodiumBisulfateSolution;
+    public static Material EpoxidPCBBase;
+    public static Material AluminoSilicateWoolSolution;
+    public static Material Shewanella;
+    public static Material GeneTherapyFluid;
+    public static Material GenePlasmids;
+    public static Material MilkResidueSlurry;
+    public static Material BifidobacteriumBrave;
+    public static Material Chitosan;
+    public static Material MushroomSolution;
+    public static Material Chitin;
+    public static Material RapidlyReplicatingAnimalCells;
+    public static Material MycGene;
+    public static Material Oct_4_Gene;
+    public static Material SOX_2_Gene;
+    public static Material KFL_4_Gene;
+    public static Material RottenSolution;
+    public static Material HomogenizedRottenMixture;
+    public static Material CAS_9;
+    public static Material AnimalCells;
+    public static Material HighPuritySilicon;
+    public static Material SiliconTetrachloride;
+    public static Material IndiumHydroxide;
+    public static Material IndiumHydroxideConcentrate;
+    public static Material IronPoorMixture;
+    public static Material ZincPoorMixture;
+    public static Material MetalHydroxideMix;
+    public static Material AcidicMetalRichSlagSlurry;
+    public static Material SeparatedMetalRichSlagSlurry;
+    public static Material ZincSlagSlurry;
+    public static Material ZincResidualSlag;
+    public static Material FineZincSlag;
+    public static Material ThalliumChloride;
+    public static Material ThalliumSulfateSolution;
+    public static Material ThalliumResidues;
+    public static Material CadmiumSulfateSolution;
+    public static Material CadmiumThalliumLiqour;
+    public static Material CadmiumZinc;
+    public static Material ZincAmalgam;
+    public static Material ZincFlue;
+    public static Material ZincExhaustMixture;
+    public static Material ZincOreCokePellets;
+    public static Material MetalRichSlagSlurry;
+    public static Material PreciousMetal;
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;
