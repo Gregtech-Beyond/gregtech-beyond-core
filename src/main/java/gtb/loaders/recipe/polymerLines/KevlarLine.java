@@ -133,7 +133,7 @@ public class KevlarLine {
 
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, KevlarBlend)
-                .output(dust, Kevlar)
+                .chancedOutput(dust, Kevlar, 3000, 100)
                 .fluidInputs(Air.getFluid(1000))
                 .duration(200)
                 .EUt(80)
@@ -141,7 +141,7 @@ public class KevlarLine {
 
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, KevlarBlend)
-                .output(dust, Kevlar)
+                .chancedOutput(dust, Kevlar, 3000, 100)
                 .fluidInputs(Oxygen.getFluid(1000))
                 .duration(200)
                 .EUt(80)
@@ -157,7 +157,7 @@ public class KevlarLine {
 
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, KevlarBlend)
-                .output(dust, Kevlar)
+                .chancedOutput(dust, Kevlar, 8000, 100)
                 .notConsumable(dust, PhilipsCatalyst)
                 .duration(200)
                 .EUt(80)
@@ -165,7 +165,7 @@ public class KevlarLine {
 
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .input(dust, KevlarBlend)
-                .output(dust, Kevlar)
+                .chancedOutput(dust, Kevlar, 5000, 100)
                 .notConsumable(dust, ZieglerNattaCatalyst)
                 .duration(200)
                 .EUt(80)

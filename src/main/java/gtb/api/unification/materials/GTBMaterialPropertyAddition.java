@@ -32,6 +32,9 @@ public class GTBMaterialPropertyAddition {
         Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
         Pyrochlore.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
         Tantalite.addFlags(GTBMaterialFlags.GENERATE_FLOATED, GTBMaterialFlags.GENERATE_SIFTED);
+        Steel.addFlags(GTBMaterialFlags.GENERATE_ITEM_CASING);
+        SiliconDioxide.addFlags(MaterialFlags.GENERATE_PLATE);
+        Tungsten.addFlags(MaterialFlags.GENERATE_FINE_WIRE);
 
         // Pre-Registered Materials ????????
 
