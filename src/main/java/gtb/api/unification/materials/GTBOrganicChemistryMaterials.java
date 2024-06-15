@@ -84,7 +84,7 @@ public class GTBOrganicChemistryMaterials {
         Kevlar = new Material.Builder(getMaterialsId(), gregtechId("kevlar"))
                 .ingot().fluid()
                 .color(0xF0F078)
-                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE)
+                .flags(DISABLE_DECOMPOSITION, NO_SMASHING, NO_SMELTING, GENERATE_PLATE, GENERATE_FOIL)
                 .components(Carbon, 14, Hydrogen, 10, Nitrogen, 2, Oxygen, 2)
                 .build()
                 .setFormula("(C6H4)2(CO)2(NH)2", true);
