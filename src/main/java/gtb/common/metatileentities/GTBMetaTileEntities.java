@@ -53,6 +53,9 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityBurnerReactor BURNER_REACTOR;
     public static MetaTileEntityDilutionRefrigerator DILUTION_REFRIGERATOR;
     public static MetaTileEntityGravitySeparator GRAVITY_SEPARATOR;
+    public static MetaTileEntitySinteringOven SINTERING_OVEN;
+    public static MetaTileEntityEnzymaticHydrolisisTank ENZYMATIC_HYDROLISIS_TANK;
+    public static MetaTileEntityCuringOven CURING_OVEN;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -62,6 +65,9 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] MICROSCOPE = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] ROTARY_EVAPORATOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DRYER = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] ELECTRON_BEAM_LITHOGRAPHER = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] BIO_REACTOR_SINGLE = new SimpleMachineMetaTileEntity[6];
+    public static SimpleMachineMetaTileEntity[] VACUUM_EJECTOR = new SimpleMachineMetaTileEntity[4];
 
     public static void init() {
         // Multiblocks
@@ -128,6 +134,11 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityDilutionRefrigerator(gtb("dilution_refrigerator")));
         GRAVITY_SEPARATOR = registerMetaTileEntity(3036,
                 new MetaTileEntityGravitySeparator(gtb("gravity_separator")));
+        SINTERING_OVEN = registerMetaTileEntity(3037,
+                new MetaTileEntitySinteringOven(gtb("sintering_oven")));
+        ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
+                new MetaTileEntityEnzymaticHydrolisisTank(gtb("enzymatic_hydrolisis_tank")));
+        CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -159,6 +170,18 @@ public final class GTBMetaTileEntities {
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(DRYER, 4150, "dryer", GTBRecipeMaps.DRYER_RECIPES,
+                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(ELECTRON_BEAM_LITHOGRAPHER, 4170, "electron_beam_lithographer",
+                GTBRecipeMaps.ELECTRON_BEAM_LITHOGRAPHER_RECIPES,
+                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(BIO_REACTOR_SINGLE, 4190, "bio_reactor_single",
+                GTBRecipeMaps.BIO_REACTOR_RECIPES,
+                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(VACUUM_EJECTOR, 4200, "vacuum_ejector",
+                GTBRecipeMaps.VACUUM_EJECTION_RECIPES,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }
