@@ -229,5 +229,11 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.LAB_ON_CHIP_BASE = addItem(215, "lab_on_chip_base");
         GTBMetaItems.ANNEALED_NICKEL_PLATE = addItem(216, "annealed_nickel_plate");
         GTBMetaItems.PIEZOELECTRIC_CRYSTAL = addItem(217, "piezoelectric_crystal");
+        GTBMetaItems.LAMINATED_RER_BOARD = addItem(218, "laminated_rer_board");
+        GTBMetaItems.PATTERENED_PR4_PLATE = addItem(219, "patterned_pr4_plate");
+        GTBMetaItems.ETCHED_PR4_PLATE = addItem(220, "etched_pr4_plate");
+        GTBMetaItems.PLANAR_TRANSFORMER = addItem(221, "planar_transformer");
+        GTBMetaItems.SPUTTERED_PR4_PLATE = addItem(222, "sputtered_pr4_plate");
+        GTBMetaItems.PRESSED_PR4_PLATE = addItem(223, "pressed_pr4_plate");
     }
 }

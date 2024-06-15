@@ -55,6 +55,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityGravitySeparator GRAVITY_SEPARATOR;
     public static MetaTileEntitySinteringOven SINTERING_OVEN;
     public static MetaTileEntityEnzymaticHydrolisisTank ENZYMATIC_HYDROLISIS_TANK;
+    public static MetaTileEntityCuringOven CURING_OVEN;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -137,6 +138,7 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntitySinteringOven(gtb("sintering_oven")));
         ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
                 new MetaTileEntityEnzymaticHydrolisisTank(gtb("enzymatic_hydrolisis_tank")));
+        CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

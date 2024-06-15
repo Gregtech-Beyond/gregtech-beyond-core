@@ -219,6 +219,12 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem LAB_ON_CHIP;
     public static MetaItem<?>.MetaValueItem ANNEALED_NICKEL_PLATE;
     public static MetaItem<?>.MetaValueItem PIEZOELECTRIC_CRYSTAL;
+    public static MetaItem<?>.MetaValueItem LAMINATED_RER_BOARD;
+    public static MetaItem<?>.MetaValueItem ETCHED_PR4_PLATE;
+    public static MetaItem<?>.MetaValueItem PATTERENED_PR4_PLATE;
+    public static MetaItem<?>.MetaValueItem PLANAR_TRANSFORMER;
+    public static MetaItem<?>.MetaValueItem SPUTTERED_PR4_PLATE;
+    public static MetaItem<?>.MetaValueItem PRESSED_PR4_PLATE;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
