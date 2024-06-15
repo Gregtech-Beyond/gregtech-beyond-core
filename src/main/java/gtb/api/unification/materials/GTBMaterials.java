@@ -125,6 +125,10 @@ public class GTBMaterials {
     public static Material ErbiumOxide;
     public static Material DysprosiumOxide;
     public static Material ScandiumOxide;
+    public static Material RareNaqFluoroantimonicAcid;
+    public static Material NaqHydrochloricAcid;
+    public static Material RareNaquadahWaste;
+    public static Material NaquadahWaste;
 
     // Element Materials
     public static Material Rubidium;
