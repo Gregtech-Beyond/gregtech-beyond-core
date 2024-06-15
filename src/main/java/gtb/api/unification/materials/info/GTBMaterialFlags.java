@@ -27,6 +27,18 @@ public class GTBMaterialFlags {
             .requireFlags(MaterialFlags.GENERATE_PLATE)
             .build();
 
+    public static MaterialFlag GENERATE_SEED_CRYSTAL = (new MaterialFlag.Builder("seed_crystal"))
+            .build();
+
+    public static MaterialFlag GENERATE_BOULE = (new MaterialFlag.Builder("boule"))
+            .build();
+
+    public static MaterialFlag DISABLE_SEED_CRYSTAL = (new MaterialFlag.Builder("disable_crystal"))
+            .build();
+
+    public static MaterialFlag DISABLE_BOULE = (new MaterialFlag.Builder("disable_crystal"))
+            .build();
+
     public static void addToMaterials() {
         addFlag(MaterialFlags.GENERATE_FOIL, Titanium, Graphene, Mica);
 
@@ -40,6 +52,8 @@ public class GTBMaterialFlags {
 
         addFlag(MaterialFlags.GENERATE_PLATE, SiliconDioxide, BorosilicateGlass, Zirconium, Holmium, Hafnium, Scandium,
                 Dysprosium, Erbium, Gadolinium, Rhenium, Germanium, Strontium, Rutherfordium);
+
+        addFlag(DISABLE_BOULE, DISABLE_SEED_CRYSTAL, Coke, Charcoal, Salt, RockSalt, Coal, Sugar, Flint);
     }
 
     private static void addFlag(MaterialFlag flag, Material... materials) {
