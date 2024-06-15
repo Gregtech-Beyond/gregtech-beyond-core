@@ -103,7 +103,6 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem LANTHANUM_SEED_CRYSTAL;
     public static MetaItem<?>.MetaValueItem OGANESSON_SEED_CRYSTAL;
     public static MetaItem<?>.MetaValueItem OGANESSON_BOULE;
-    public static MetaItem<?>.MetaValueItem HASOC_LITHOGRAPHY_MASK;
     public static MetaItem<?>.MetaValueItem MONOCRYSTALLINE_OGANESSON_INGOT;
     public static MetaItem<?>.MetaValueItem OGANESSON_WAFER;
     public static MetaItem<?>.MetaValueItem TREATED_OGANESSON_WAFER;
@@ -114,7 +113,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem ENGRAVED_HASOC_WAFER;
     public static MetaItem<?>.MetaValueItem BATHED_TREATED_OGANESSON_WAFER;
     public static MetaItem<?>.MetaValueItem UNPOLARIZED_HASOC_WAFER;
-    public static MetaItem<?>.MetaValueItem HASOC_DIE;
+    public static MetaItem<?>.MetaValueItem UHASOC_DIE;
     public static MetaItem<?>.MetaValueItem BIOSAFE_PROTECTIVE_PLATING;
     public static MetaItem<?>.MetaValueItem CLEAN_HASOC_DIE;
     public static MetaItem<?>.MetaValueItem NEURAL_IMPLANTED_HASOC_DIE;

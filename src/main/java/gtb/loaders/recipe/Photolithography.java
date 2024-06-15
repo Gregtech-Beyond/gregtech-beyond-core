@@ -988,19 +988,19 @@ public class Photolithography {
 
         CUTTER_RECIPES.recipeBuilder()
                 .input(HIGHLY_ADVANCED_SOC_WAFER)
-                .output(HASOC_DIE, 6)
+                .output(UHASOC_DIE, 6)
                 .fluidInputs(Water.getFluid(12))
                 .duration(2000)
                 .EUt(80000)
                 .buildAndRegister();
 
-        CUTTER_RECIPES.recipeBuilder().input(HIGHLY_ADVANCED_SOC_WAFER).output(HASOC_DIE, 6)
+        CUTTER_RECIPES.recipeBuilder().input(HIGHLY_ADVANCED_SOC_WAFER).output(UHASOC_DIE, 6)
                 .fluidInputs(DistilledWater.getFluid(6)).duration(1000).EUt(80000).buildAndRegister();
-        CUTTER_RECIPES.recipeBuilder().input(HIGHLY_ADVANCED_SOC_WAFER).output(HASOC_DIE, 6)
+        CUTTER_RECIPES.recipeBuilder().input(HIGHLY_ADVANCED_SOC_WAFER).output(UHASOC_DIE, 6)
                 .fluidInputs(Lubricant.getFluid(6)).duration(600).EUt(60000).buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(HASOC_DIE).input(NEUROLOGICAL_LIFE_SUPPORT_UNIT).input(plate, Polybenzimidazole)
+                .input(UHASOC_DIE).input(NEUROLOGICAL_LIFE_SUPPORT_UNIT).input(plate, Polybenzimidazole)
                 .input(wireFine, NaquadahAlloy, 4).input(STEM_CELLS)
                 .fluidInputs(SterileGrowthMedium.getFluid(144))
                 .output(NEURAL_IMPLANTED_HASOC_DIE)
