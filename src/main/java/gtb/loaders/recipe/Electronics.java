@@ -797,5 +797,14 @@ public class Electronics {
                 .duration(1200)
                 .EUt(200)
                 .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .fluidInputs(Polyethylene.getFluid(72))
+                .input(PETRI_DISH)
+                .input(cableGtSingle, Aluminium, 2)
+                .output(ELECTRICALLY_WIRED_PETRI_DISH)
+                .duration(100)
+                .EUt(70)
+                .buildAndRegister();
     }
 }
