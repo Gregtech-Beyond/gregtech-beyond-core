@@ -1,6 +1,9 @@
 package gtb.common.item;
 
+import static gtb.api.unification.ore.GTBOrePrefix.*;
+
 import gregtech.api.items.metaitem.MetaItem;
+import gregtech.common.items.MetaItems;
 
 public class GTBMetaItems {
 
@@ -188,9 +191,45 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem CHROMATIC_GLASS_FIBER;
     public static MetaItem<?>.MetaValueItem SATURATED_CHROMATIC_GLASS_FIBER;
     public static MetaItem<?>.MetaValueItem SINTERED_SILVER_COIL;
+    public static MetaItem<?>.MetaValueItem VACUUM_TUBE_COMPONENTS;
+    public static MetaItem<?>.MetaValueItem THICK_FILM_WAFER;
+    public static MetaItem<?>.MetaValueItem THICK_FILM_RESISTOR_WAFER;
+    public static MetaItem<?>.MetaValueItem THICK_FILM_RESISTOR_BASE_WAFER;
+    public static MetaItem<?>.MetaValueItem TRANSISTOR_WAFER;
+    public static MetaItem<?>.MetaValueItem PATTERENED_SILICON_DIOXIDE_WAFER;
+    public static MetaItem<?>.MetaValueItem INDUCTOR_LITHOGRAPHY_MASK;
+    public static MetaItem<?>.MetaValueItem ETCHED_INDUCTOR_WAFER;
+    public static MetaItem<?>.MetaValueItem INDUCTOR_WAFER;
+    public static MetaItem<?>.MetaValueItem REINFORCED_BASE_WAFER;
+    public static MetaItem<?>.MetaValueItem PATTERENED_BASE_WAFER;
+    public static MetaItem<?>.MetaValueItem DIODE_WAFER;
+    public static MetaItem<?>.MetaValueItem RAW_CAPACITOR_ROLL;
+    public static MetaItem<?>.MetaValueItem ALUMINIUM_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem PATTERENED_PHENOLIC_CIRCUIT_BOARD;
+    public static MetaItem<?>.MetaValueItem LAMINATED_EPOXY_BOARD;
+    public static MetaItem<?>.MetaValueItem ENGRAVED_EPOXY_BOARD;
+    public static MetaItem<?>.MetaValueItem PATTERENED_EPOXY_BOARD;
+    public static MetaItem<?>.MetaValueItem TRANSISTOR_BASE_WAFER;
+    public static MetaItem<?>.MetaValueItem BIOLOGICALLY_APPROVED_LENS;
+    public static MetaItem<?>.MetaValueItem NEURO_SUPPORT_UNIT;
+    public static MetaItem<?>.MetaValueItem ELECTRICALLY_WIRED_PETRI_DISH;
+    public static MetaItem<?>.MetaValueItem BIFIDOBACTERERIUM_BRAVE_CULTURE;
+    public static MetaItem<?>.MetaValueItem STEM_CELL_LAB_ON_CHIP;
+    public static MetaItem<?>.MetaValueItem LAB_ON_CHIP_BASE;
+    public static MetaItem<?>.MetaValueItem LAB_ON_CHIP;
+    public static MetaItem<?>.MetaValueItem ANNEALED_NICKEL_PLATE;
+    public static MetaItem<?>.MetaValueItem PIEZOELECTRIC_CRYSTAL;
+    public static MetaItem<?>.MetaValueItem LAMINATED_RER_BOARD;
+    public static MetaItem<?>.MetaValueItem ETCHED_PR4_PLATE;
+    public static MetaItem<?>.MetaValueItem PATTERENED_PR4_PLATE;
+    public static MetaItem<?>.MetaValueItem PLANAR_TRANSFORMER;
+    public static MetaItem<?>.MetaValueItem SPUTTERED_PR4_PLATE;
+    public static MetaItem<?>.MetaValueItem PRESSED_PR4_PLATE;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);
         metaItem1.setRegistryName("gtb");
+
+        MetaItems.addOrePrefix(sifted, floated);
     }
 }

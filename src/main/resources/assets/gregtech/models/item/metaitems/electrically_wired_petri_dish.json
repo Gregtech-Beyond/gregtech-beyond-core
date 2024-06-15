@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gtb:items/metaitems/electrically_wired_petri_dish"
+  }
+}
