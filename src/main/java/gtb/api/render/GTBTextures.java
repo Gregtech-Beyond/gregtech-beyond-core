@@ -31,8 +31,6 @@ public final class GTBTextures {
             "multiblock/cvd_unit");
     public static SimpleOverlayRenderer LARGE_CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(
             "multiblock/large_cvd_unit");
-    public static SimpleOverlayRenderer CURING_OVEN_OVERLAY = new SimpleOverlayRenderer(
-            "multiblock/curing_oven");
 
     private GTBTextures() {}
 

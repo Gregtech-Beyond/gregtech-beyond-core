@@ -1,5 +1,6 @@
 package gtb.api.unification.ore;
 
+import static gregtech.api.GTValues.*;
 import static gtb.api.unification.materials.info.GTBMaterialFlags.*;
 
 import gregtech.api.unification.ore.OrePrefix;
@@ -12,6 +13,4 @@ public class GTBOrePrefix {
             OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_FLOATED));
     public static final OrePrefix sifted = new OrePrefix("dustSifted", -1, null, GTBMaterialIconType.sifted,
             OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_SIFTED));
-    public static final OrePrefix item_casing = new OrePrefix("itemCasing", -1, null, GTBMaterialIconType.item_casing,
-            OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_ITEM_CASING));
 }

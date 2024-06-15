@@ -22,7 +22,7 @@ public final class GTBRecipeMaps {
             1, 1, 0, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BACTERIAL_VAT_RECIPES = new RecipeMap<>("bacterial_vat_recipes",
-            4, 2, 6, 4, new SimpleRecipeBuilder(), false);
+            1, 1, 0, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BEDROCK_PUMP_RECIPES = new RecipeMap<>("bedrock_pump_recipes",
             1, 0, 0, 1, new SimpleRecipeBuilder(), false);
@@ -172,16 +172,4 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> GRAVITY_SEPARATOR_RECIPES = new RecipeMap<>(
             "gravity_separator_recipes", 4, 4, 1, 1, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> ELECTRON_BEAM_LITHOGRAPHER_RECIPES = new RecipeMap<>(
-            "electron_beam_lithographer_recipes", 2, 1, 1, 0, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> ENZYMATIC_HYDROLISIS_RECIPES = new RecipeMap<>(
-            "enzymatic_hydrolisis_recipes", 1, 1, 1, 9, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_EJECTION_RECIPES = new RecipeMap<>(
-            "vacuum_ejection_recipes", 1, 1, 0, 0, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
-            "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
 }
