@@ -862,13 +862,13 @@ public class Photolithography {
         ION_IMPLANTER_RECIPES.recipeBuilder()
                 .input(SUPERCONDUCTOR_COATED_QBIT_CPU_WAFER)
                 .input(U_TWOFOURTY_ELECTRON_SOURCE)
-                .output(QUBIT_CENTRAL_PROCESSING_UNIT_WAFER)
+                .output(QUBIT_CENTRAL_PROCESSING_UNIT)
                 .duration(200)
                 .EUt(90)
                 .buildAndRegister();
 
         CUTTER_RECIPES.recipeBuilder()
-                .input(QUBIT_CENTRAL_PROCESSING_UNIT_WAFER)
+                .input(QUBIT_CENTRAL_PROCESSING_UNIT)
                 .output(QBIT_CPU_DIE, 5)
                 .fluidInputs(Water.getFluid(12))
                 .duration(200)
@@ -1404,8 +1404,8 @@ public class Photolithography {
                 .duration(1200)
                 .EUt(8000)
                 .input(INSULATED_INP_WAFER)
-                .notConsumable(OPTICAL_LITHOGRAPHY_MASK)
-                .output(RE_EXPOSED_INP_WAFER)
+                .output(OPTICAL_LITHOGRAPHY_MASK)
+                .notConsumable(RE_EXPOSED_INP_WAFER)
                 .buildAndRegister();
 
         ENGRAVING_UNIT_RECIPES.recipeBuilder()
@@ -1808,97 +1808,6 @@ public class Photolithography {
                 .fluidOutputs(HydrogenChloride.getFluid(2000))
                 .duration(500)
                 .EUt(8)
-                .buildAndRegister();
-
-        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { QUBIT_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1) },
-                new FluidStack[] { Water.getFluid(1000) });
-
-        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { QUBIT_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1) },
-                new FluidStack[] { DistilledWater.getFluid(750) });
-
-        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { QUBIT_CENTRAL_PROCESSING_UNIT_WAFER.getStackForm(1) },
-                new FluidStack[] { Lubricant.getFluid(250) });
-
-        VACUUM_DISTILLATION_TOWER_RECIPES.recipeBuilder()
-                .input(dust, Silicon)
-                .output(dust, HighPuritySilicon)
-                .EUt(10000)
-                .duration(200)
-                .buildAndRegister();
-
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(Chlorine.getFluid(4000))
-                .input(dust, Silicon)
-                .fluidOutputs(SiliconTetrachloride.getFluid(1000))
-                .duration(200)
-                .EUt(12)
-                .buildAndRegister();
-
-        ROASTER_RECIPES.recipeBuilder()
-                .fluidInputs(SiliconTetrachloride.getFluid(1000))
-                .fluidInputs(Hydrogen.getFluid(4000))
-                .fluidOutputs(HydrochloricAcid.getFluid(4000))
-                .output(dust, HighPuritySilicon)
-                .duration(120)
-                .EUt(8)
-                .buildAndRegister();
-
-        ROASTER_RECIPES.recipeBuilder()
-                .fluidInputs(Trichlorosilane.getFluid(1000))
-                .output(dust, HighPuritySilicon)
-                .fluidInputs(Hydrogen.getFluid(2000))
-                .fluidOutputs(HydrochloricAcid.getFluid(2000))
-                .duration(200)
-                .EUt(120)
-                .buildAndRegister();
-
-        VACUUM_EJECTION_RECIPES.recipeBuilder()
-                .input(dust, HighPuritySilicon)
-                .output(MONOCRYSTALLINE_SEED_CRYSTAL)
-                .duration(400)
-                .EUt(2)
-                .buildAndRegister();
-
-        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { SILICON_BOULE.getStackForm(1) },
-                new FluidStack[] { Lubricant.getFluid(20) });
-
-        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { SILICON_BOULE.getStackForm(1) },
-                new FluidStack[] { DistilledWater.getFluid(60) });
-
-        GTRecipeHandler.removeRecipesByInputs(CUTTER_RECIPES,
-                new ItemStack[] { SILICON_BOULE.getStackForm(1) },
-                new FluidStack[] { Water.getFluid(80) });
-
-        CUTTER_RECIPES.recipeBuilder()
-                .fluidInputs(Lubricant.getFluid(20))
-                .input(SILICON_BOULE)
-                .output(SILICON_WAFER, 16)
-                .output(MONOCRYSTALLINE_SEED_CRYSTAL)
-                .duration(400)
-                .EUt(64)
-                .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder()
-                .fluidInputs(DistilledWater.getFluid(40))
-                .input(SILICON_BOULE)
-                .output(SILICON_WAFER, 16)
-                .output(MONOCRYSTALLINE_SEED_CRYSTAL)
-                .duration(600)
-                .EUt(68)
-                .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder()
-                .fluidInputs(Water.getFluid(60))
-                .input(SILICON_BOULE)
-                .output(SILICON_WAFER, 16)
-                .output(MONOCRYSTALLINE_SEED_CRYSTAL)
-                .duration(800)
-                .EUt(70)
                 .buildAndRegister();
     }
 }
