@@ -811,7 +811,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE,GENERATE_FOIL)
+                .flags(MaterialFlags.GENERATE_PLATE, GENERATE_FOIL)
                 .color(0x584643)
                 .build().setFormula("C8H8", true);
 
