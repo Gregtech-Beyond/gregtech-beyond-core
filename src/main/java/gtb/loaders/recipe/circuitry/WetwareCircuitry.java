@@ -46,7 +46,7 @@ public class WetwareCircuitry {
                 .EUt(12000)
                 .buildAndRegister();
 
-        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+        GTRecipeHandler.removeRecipesByInputs(CIRCUIT_ASSEMBLER_RECIPES,
                 new ItemStack[] {
                         WETWARE_CIRCUIT_BOARD.getStackForm(),
                         STEM_CELLS.getStackForm(16),
@@ -56,7 +56,7 @@ public class WetwareCircuitry {
                         OreDictUnifier.get(bolt, HSSE, 8) },
                 new FluidStack[] { SterileGrowthMedium.getFluid(250) });
 
-        GTRecipeHandler.removeRecipesByInputs(ASSEMBLER_RECIPES,
+        GTRecipeHandler.removeRecipesByInputs(CIRCUIT_ASSEMBLER_RECIPES,
                 new ItemStack[] {
                         ADVANCED_SMD_TRANSISTOR.getStackForm(8),
                         ADVANCED_SMD_CAPACITOR.getStackForm(8),
@@ -76,7 +76,7 @@ public class WetwareCircuitry {
                         OreDictUnifier.get(wireFine, YttriumBariumCuprate, 8) },
                 new FluidStack[] { SolderingAlloy.getFluid(72) });
 
-        ASSEMBLER_RECIPES.recipeBuilder()
+        CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
                 .input(ADVANCED_SMD_TRANSISTOR, 8)
                 .input(ADVANCED_SMD_CAPACITOR, 8)
                 .input(NEURO_PROCESSOR)
@@ -89,7 +89,7 @@ public class WetwareCircuitry {
                 .EUt(12000)
                 .buildAndRegister();
 
-        ASSEMBLER_RECIPES.recipeBuilder()
+        CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
                 .input(ADVANCED_SMD_TRANSISTOR, 8)
                 .input(ADVANCED_SMD_CAPACITOR, 8)
                 .input(NEURO_PROCESSOR)
