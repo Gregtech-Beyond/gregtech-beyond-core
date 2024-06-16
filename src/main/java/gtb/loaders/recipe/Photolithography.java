@@ -278,14 +278,6 @@ public class Photolithography {
                 .EUt(12)
                 .buildAndRegister();
 
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .input(LITHOGRAPHY_BASE_MASK).input(dye, MarkerMaterials.Color.Black)
-                .circuitMeta(8)
-                .output(HASOC_LITHOGRAPHY_MASK)
-                .duration(50)
-                .EUt(12)
-                .buildAndRegister();
-
         FLUID_HEATER_RECIPES.recipeBuilder()
                 .fluidInputs(Xenon.getFluid(1000))
                 .fluidOutputs(VeryHotXenon.getFluid(1000))
