@@ -45,7 +45,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
                 .aisle(" A   A ", " AAAAA ", "AAGGGAA", " AAAAA ", " A   A ")
                 .aisle(" A   A ", "AAAAAAA", "AA~~~AA", "AAAAAAA", " A   A ")
                 .aisle(" A   A ", " AAAAA ", "AAGGGAA", " AAAAA ", " A   A ")
-                .aisle("       ", " A   A ", " C   A ", " A   A ", "       ")
+                .aisle("       ", " A   A ", " S   A ", " A   A ", "       ")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('A', states(getCasingState())
