@@ -246,5 +246,31 @@ public final class Metallurgy {
                 .duration(400)
                 .EUt(60)
                 .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Invar, 5)
+                .input(dust, Iron, 4)
+                .input(dust, Kanthal)
+                .output(dust, EglinSteelBase, 10)
+                .duration(600)
+                .EUt(710)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .input(dust, Sulfur)
+                .input(dust, Carbon)
+                .input(dust, EglinSteelBase, 10)
+                .input(dust, Silicon)
+                .output(dust, EglinSteel, 13)
+                .duration(500)
+                .EUt(500)
+                .buildAndRegister();
+
+        CRYSTALLIZATION_RECIPES.recipeBuilder()
+                .fluidInputs(SiliconCarbide.getFluid(1000))
+                .output(dust, PurifiedSiliconCarbide)
+                .duration(200)
+                .EUt(120)
+                .buildAndRegister();
     }
 }
