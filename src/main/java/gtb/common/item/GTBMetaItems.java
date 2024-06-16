@@ -224,6 +224,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem PLANAR_TRANSFORMER;
     public static MetaItem<?>.MetaValueItem SPUTTERED_PR4_PLATE;
     public static MetaItem<?>.MetaValueItem PRESSED_PR4_PLATE;
+    public static MetaItem<?>.MetaValueItem NEODYMIUM_MAGNET;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);

@@ -234,5 +234,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.PLANAR_TRANSFORMER = addItem(221, "planar_transformer");
         GTBMetaItems.SPUTTERED_PR4_PLATE = addItem(222, "sputtered_pr4_plate");
         GTBMetaItems.PRESSED_PR4_PLATE = addItem(223, "pressed_pr4_plate");
+        GTBMetaItems.NEODYMIUM_MAGNET = addItem(224, "neodymium_magnet");
     }
 }
