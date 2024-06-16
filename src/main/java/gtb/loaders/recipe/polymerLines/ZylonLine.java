@@ -149,5 +149,16 @@ public class ZylonLine {
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
+
+        LARGE_CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Propene.getFluid(1000))
+                .fluidInputs(Benzene.getFluid(1000))
+                .fluidInputs(Oxygen.getFluid(3000))
+                .fluidOutputs(Acetone.getFluid(1000))
+                .fluidOutputs(Resorcinol.getFluid(1000))
+                .fluidOutputs(Hydroquinone.getFluid(1000))
+                .duration(500)
+                .EUt(480)
+                .buildAndRegister();
     }
 }
