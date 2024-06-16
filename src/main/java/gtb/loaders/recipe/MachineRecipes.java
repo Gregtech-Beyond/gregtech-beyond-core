@@ -202,6 +202,7 @@ public class MachineRecipes {
                 .input(plateDense, Steel, 2)
                 .input(rotor, TungstenSteel, 4)
                 .input(circuit, MarkerMaterials.Tier.IV, 4)
+                .output(GTBMetaTileEntities.ENGRAVING_UNIT)
                 .duration(200)
                 .EUt(700)
                 .buildAndRegister();
