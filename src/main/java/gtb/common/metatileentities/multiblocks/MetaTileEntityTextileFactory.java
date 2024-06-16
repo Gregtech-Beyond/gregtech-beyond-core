@@ -1,5 +1,9 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gregicality.multiblocks.api.render.GCYMTextures;
+import gregicality.multiblocks.common.block.GCYMMetaBlocks;
+import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
+import gregicality.multiblocks.common.metatileentities.GCYMMetaTileEntities;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -35,7 +39,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
+        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING.getState(BlockLargeMultiblockCasing.CasingType.VIBRATION_SAFE_CASING);
     }
 
     @Override
@@ -66,7 +70,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.CLEAN_STAINLESS_STEEL_CASING;
+        return GCYMTextures.VIBRATION_SAFE_CASING;
     }
 
     @Override
