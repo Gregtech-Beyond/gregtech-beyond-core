@@ -178,7 +178,7 @@ public class MachineRecipes {
                 .input(plate, Steel, 4)
                 .input(stickLong, Steel, 2)
                 .input(VOLTAGE_COIL_LV, 4)
-                .input(circuit, MarkerMaterials.Tier.LV)
+                .input(circuit, MarkerMaterials.Tier.MV, 2)
                 .output(GTBMetaTileEntities.SINTERING_OVEN)
                 .duration(200)
                 .EUt(70)
