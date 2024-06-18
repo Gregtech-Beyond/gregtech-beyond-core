@@ -28,6 +28,13 @@ public class PolyethyleneLine {
                 .fluidInputs(Ethylene.getFluid(144))
                 .fluidOutputs(Polyethylene.getFluid(432)).duration(500).EUt(800).buildAndRegister();
 
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(1) },
+                new FluidStack[] { Air.getFluid(1000), Ethylene.getFluid(144) });
+        GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
+                new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(1) },
+                new FluidStack[] { Oxygen.getFluid(1000), Ethylene.getFluid(144) });
+
         GTRecipeHandler.removeRecipesByInputs(CHEMICAL_RECIPES,
                 new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(1) },
                 new FluidStack[] { Air.getFluid(1000), Ethylene.getFluid(144) });

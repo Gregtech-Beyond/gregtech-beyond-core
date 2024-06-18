@@ -1,7 +1,7 @@
 package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.material.info.MaterialFlags.DISABLE_DECOMPOSITION;
+import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
@@ -167,7 +167,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .flags(GENERATE_PLATE)
                 .color(0x000F15)
                 .build().setFormula("C20H12O3", true);
 
@@ -263,7 +263,7 @@ public class GTBFirstDegreeMaterials {
 
         ElectronDegenerateRhenium = new Material.Builder(getMaterialsId(), gregtechId("electron_degenerate_rhenium"))
                 .dust()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .flags(GENERATE_PLATE)
                 .color(0xDCD4EA)
                 .build().setFormula("Re-", true);
 
@@ -332,7 +332,7 @@ public class GTBFirstDegreeMaterials {
 
         MetastableOganesson = new Material.Builder(getMaterialsId(), gregtechId("metastable_oganesson"))
                 .fluid()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .flags(GENERATE_PLATE)
                 .dust()
                 .color(0xB71C1C)
                 .build().setFormula("Og", true);
@@ -364,7 +364,7 @@ public class GTBFirstDegreeMaterials {
 
         HighDensityPolyethylene = new Material.Builder(getMaterialsId(), gregtechId("high_density_polyethylene"))
                 .fluid()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .flags(GENERATE_PLATE)
                 .dust()
                 .color(0xBDBDBD)
                 .build().setFormula("C2H4", true);
@@ -430,7 +430,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
+                .flags(GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
                 .color(0x313031)
                 .build().setFormula("PdFeC153C36NO2", true);
 
@@ -438,7 +438,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
+                .flags(GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
                 .color(0x1D181E)
                 .build().setFormula("C61HRhNO2", true);
 
@@ -568,7 +568,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
+                .flags(GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
                 .color(0x575979)
                 .build().setFormula("Ti9C9K9Li9S9H5", true);
 
@@ -749,7 +749,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .flags(GENERATE_PLATE)
                 .color(0x809A9D)
                 .build().setFormula("C17H16N2O2", true);
 
@@ -757,7 +757,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .flags(GENERATE_PLATE)
                 .color(0x584643)
                 .build().setFormula("C8H8", true);
 
@@ -810,7 +810,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .flags(GENERATE_PLATE, GENERATE_FOIL)
                 .color(0x584643)
                 .build().setFormula("C8H8", true);
 
@@ -908,7 +908,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_PLATE)
+                .flags(GENERATE_PLATE)
                 .color(0x584643)
                 .build().setFormula("[COC6H4CONHC6H4NH]n", true);
         // fluid
@@ -1265,7 +1265,7 @@ public class GTBFirstDegreeMaterials {
                 .fluid()
                 .dust()
                 .ingot()
-                .flags(MaterialFlags.GENERATE_FOIL, MaterialFlags.GENERATE_PLATE)
+                .flags(MaterialFlags.GENERATE_FOIL, GENERATE_PLATE)
                 .color(0x605856).build().setFormula("AgCuAu", true);
 
         SinteredSilver = new Material.Builder(getMaterialsId(), gregtechId("sintered_silver"))
@@ -1628,7 +1628,7 @@ public class GTBFirstDegreeMaterials {
                         .fluid()
                         .dust()
                         .ingot()
-                        .flags(MaterialFlags.GENERATE_PLATE)
+                        .flags(GENERATE_PLATE)
                         .color(0xFDD835).build();
 
         AluminoSilicateWoolSolution = new Material.Builder(getMaterialsId(),
@@ -1850,6 +1850,38 @@ public class GTBFirstDegreeMaterials {
                 gregtechId("streptococcus_pyogenes"))
                         .dust()
                         .color(0x61605A).build().setFormula("Bacteria", true);
+
+        EglinSteel = new Material.Builder(getMaterialsId(),
+                gregtechId("eglin_steel"))
+                        .dust()
+                        .ingot()
+                        .blast(2900)
+                        .flags(GENERATE_PLATE, GENERATE_FRAME)
+                        .color(0xA14919).build().setFormula("(Fe4(FeAlCr)(Fe2Ni)5)10SSiC", true);
+
+        EglinSteelBase = new Material.Builder(getMaterialsId(),
+                gregtechId("eglin_steel_base"))
+                        .dust()
+                        .color(0xAD7150).build().setFormula("Fe4(FeAlCr)(Fe2Ni)5", true);
+
+        LowQualitySteel = new Material.Builder(getMaterialsId(),
+                gregtechId("low_quality_steel"))
+                        .dust()
+                        .ingot()
+                        .flags(GENERATE_PLATE, GENERATE_FRAME)
+                        .color(0x434343).build().setFormula("Fe20C", true);
+
+        PurifiedSiliconCarbide = new Material.Builder(getMaterialsId(),
+                gregtechId("purified_silicon_carbide"))
+                        .dust()
+                        .ingot()
+                        .flags(GENERATE_PLATE, GENERATE_FRAME)
+                        .color(0x434343).build().setFormula("SiC", true);
+
+        Hydroquinone = new Material.Builder(getMaterialsId(),
+                gregtechId("hydroquinone"))
+                        .fluid()
+                        .color(0x9e3123).build().setFormula("C6H4(OH)2", true);
     }
 
     private static int getMaterialsId() {
