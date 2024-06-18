@@ -458,10 +458,10 @@ metaitem.neodymium_magnet.name=Neodymium Magnet
 
 #Materials
 
-gregtech.material.purified_silicon_carbide.name=Purified Silicon Carbide
-gregtech.material.low_quality_steel.name=Low Quality Steel
-gregtech.material.eglin_steel_base.name=Eglin Steel Base
-gregtech.material.eglin_steel.name=Eglin Steel
+gregtech.material.purified_silicon_carbide=Purified Silicon Carbide
+gregtech.material.low_quality_steel=Low Quality Steel
+gregtech.material.eglin_steel_base=Eglin Steel Base
+gregtech.material.eglin_steel=Eglin Steel
 gregtech.material.rare_naq_fluoroantimonic_acid=Naquadah Fluoroantimonic Acid
 gregtech.material.naq_hydrochloric_acid=Naquadah Hydrochloric Acid
 gregtech.material.rare_naquadah_waste=Rare Naquadah Waste
