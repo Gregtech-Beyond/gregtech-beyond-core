@@ -24,7 +24,7 @@ public class MachineRecipes {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .duration(200)
                 .EUt(20)
-                .output(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(VACUUM_FURNACE_CASING).getBlock())
+                .outputs(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(VACUUM_FURNACE_CASING))
                 .input(bolt, Silver)
                 .input(frameGt, Iron)
                 .fluidInputs(AluminoSilicateWoolSolution.getFluid(288))
