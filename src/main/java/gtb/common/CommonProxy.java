@@ -21,14 +21,15 @@ import org.jetbrains.annotations.NotNull;
 import gregtech.api.block.VariantItemBlock;
 import gregtech.api.unification.material.event.MaterialEvent;
 import gregtech.api.unification.material.event.PostMaterialEvent;
-import gregtech.common.items.MetaItems;
 
 import gtb.GregtechBeyondCore;
 import gtb.api.unification.materials.GTBMaterials;
+import gtb.api.unification.materials.info.GTBMaterialFlags;
 import gtb.api.unification.ore.GTBOrePrefix;
 import gtb.api.utils.GTBLog;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.loaders.recipe.GTBRecipeLoader;
+import gtb.loaders.recipe.handlers.GTBMaterialRecipeHandler;
 
 @Mod.EventBusSubscriber(modid = GregtechBeyondCore.MODID)
 public class CommonProxy {
@@ -89,10 +90,10 @@ public class CommonProxy {
         GTBRecipeLoader.init();
     }
 
-    @SubscribeEvent(priority = EventPriority.HIGH)
+    @SubscribeEvent(priority = EventPriority.NORMAL)
     public static void postRegisterMaterials(@NotNull PostMaterialEvent event) {
-        MetaItems.addOrePrefix(GTBOrePrefix.floated);
-        MetaItems.addOrePrefix(GTBOrePrefix.sifted);
-        // SusyMaterials.removeFlags();
+        GTBMaterialFlags.addToMaterials();
+        GTBOrePrefix.register();
+        GTBMaterialRecipeHandler.register();
     }
 }

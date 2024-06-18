@@ -2,6 +2,9 @@
 
 item.material.oreprefix.sifted=Sifted %s Dust
 item.material.oreprefix.floated=Floated %s Dust
+item.material.oreprefix.item_casing=%s Item Casing
+item.material.oreprefix.seed_crystal=%s Seed Crystal
+item.material.oreprefix.boule=%s Boule
 
 # Blocks
 tile.gtb_multiblock_active_casing.high_energy_coil.name=High Energy Coil

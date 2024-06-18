@@ -11,8 +11,6 @@ import static gtb.common.item.GTBMetaItems.*;
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.OreDictUnifier;
 
-import gtb.api.unification.ore.GTBOrePrefix;
-
 public final class Metallurgy {
 
     public static void init() {
