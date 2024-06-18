@@ -31,5 +31,52 @@ public class RandomRecipes {
                 .duration(200)
                 .EUt(70)
                 .buildAndRegister();
+
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .input(dust, SiliconDioxide)
+                .input(dust, Sapphire)
+                .output(dust, AluminoSilicateWool, 2)
+                .duration(100)
+                .EUt(8)
+                .buildAndRegister();
+
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .input(dust, SiliconDioxide)
+                .input(dust, GreenSapphire)
+                .output(dust, AluminoSilicateWool, 2)
+                .duration(100)
+                .EUt(8)
+                .buildAndRegister();
+
+        ALLOY_SMELTER_RECIPES.recipeBuilder()
+                .input(dust, SiliconDioxide)
+                .input(dust, GreenSapphire)
+                .output(dust, AluminoSilicateWool, 2)
+                .duration(100)
+                .EUt(8)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Water.getFluid(1000))
+                .input(dust, AluminoSilicateWool)
+                .fluidOutputs(AluminoSilicateWoolSolution.getFluid(1000))
+                .duration(80)
+                .EUt(16)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Oxygen.getFluid(2000))
+                .input(dust, Silver)
+                .output(dust, SilverOxide, 3)
+                .duration(40)
+                .EUt(7)
+                .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, SilverOxide, 3)
+                .output(dust, Silver)
+                .duration(90)
+                .EUt(8)
+                .buildAndRegister();
     }
 }

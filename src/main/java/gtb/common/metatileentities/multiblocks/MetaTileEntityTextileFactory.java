@@ -19,8 +19,10 @@ import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockMetalCasing;
-import gregtech.common.blocks.MetaBlocks;
+
+import gregicality.multiblocks.api.render.GCYMTextures;
+import gregicality.multiblocks.common.block.GCYMMetaBlocks;
+import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
@@ -35,19 +37,21 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
+        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING
+                .getState(BlockLargeMultiblockCasing.CasingType.VIBRATION_SAFE_CASING);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCSCC")
-                .aisle("GGGGG", "G~~~G", "G~~~G", "G~~~G", "GGGGG")
-                .aisle("GGGGG", "G~~~G", "G~~~G", "G~~~G", "GGGGG")
-                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
+                .aisle("       ", " A   A ", " A   A ", " A   A ", "       ")
+                .aisle(" A   A ", " AAAAA ", "AAGGGAA", " AAAAA ", " A   A ")
+                .aisle(" A   A ", "AAAAAAA", "AA~~~AA", "AAAAAAA", " A   A ")
+                .aisle(" A   A ", " AAAAA ", "AAGGGAA", " AAAAA ", " A   A ")
+                .aisle("       ", " A   A ", " S   A ", " A   A ", "       ")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState())
+                .where('A', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
@@ -65,7 +69,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.CLEAN_STAINLESS_STEEL_CASING;
+        return GCYMTextures.VIBRATION_SAFE_CASING;
     }
 
     @Override

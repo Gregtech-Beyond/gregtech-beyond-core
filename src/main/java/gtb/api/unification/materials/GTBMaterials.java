@@ -114,7 +114,6 @@ public class GTBMaterials {
     public static Material LanthanumLeachEmulsion;
     public static Material REEGroupMud;
     public static Material SulfuricResidues;
-    public static Material Cryolite;
     public static Material GadoliniumLeach;
     public static Material RoastedGadoliniteLeachSolution;
     public static Material GadoliniumSolution;
@@ -522,8 +521,13 @@ public class GTBMaterials {
     public static Material SeleniumDioxide;
     public static Material SelenousAcid;
     public static Material ChalcogenAnodeMud;
+    public static Material Hydroquinone;
 
     // SD Materials
+    public static Material PurifiedSiliconCarbide;
+    public static Material LowQualitySteel;
+    public static Material EglinSteelBase;
+    public static Material EglinSteel;
     public static Material CalciumSalts;
     public static Material SodiumSalts;
     public static Material PotassiumMagnesiumSalts;

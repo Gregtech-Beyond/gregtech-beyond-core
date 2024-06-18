@@ -90,7 +90,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.LANTHANUM_SEED_CRYSTAL = addItem(75, "lanthanum_seed_crystal");
         GTBMetaItems.OGANESSON_SEED_CRYSTAL = addItem(76, "oganesson_seed_crystal");
         GTBMetaItems.OGANESSON_BOULE = addItem(77, "oganesson_boule");
-        GTBMetaItems.HASOC_LITHOGRAPHY_MASK = addItem(78, "hasoc_lithography_mask");
         GTBMetaItems.MONOCRYSTALLINE_OGANESSON_INGOT = addItem(79, "monocrystalline_oganesson_ingot");
         GTBMetaItems.OGANESSON_WAFER = addItem(80, "oganesson_wafer");
         GTBMetaItems.TREATED_OGANESSON_WAFER = addItem(81, "treated_oganesson_wafer");
@@ -101,7 +100,7 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ENGRAVED_HASOC_WAFER = addItem(86, "engraved_hasoc_wafer");
         GTBMetaItems.BATHED_TREATED_OGANESSON_WAFER = addItem(87, "bathed_treated_oganesson_wafer");
         GTBMetaItems.UNPOLARIZED_HASOC_WAFER = addItem(88, "unpolarized_hasoc_wafer");
-        GTBMetaItems.HASOC_DIE = addItem(89, "hasoc_die");
+        GTBMetaItems.UHASOC_DIE = addItem(89, "hasoc_die");
         GTBMetaItems.BIOSAFE_PROTECTIVE_PLATING = addItem(90, "biosafe_protective_plating");
         GTBMetaItems.CLEAN_HASOC_DIE = addItem(91, "clean_hasoc_die");
         GTBMetaItems.NEURAL_IMPLANTED_HASOC_DIE = addItem(92, "neural_implanted_hasoc_die");
@@ -235,5 +234,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.PLANAR_TRANSFORMER = addItem(221, "planar_transformer");
         GTBMetaItems.SPUTTERED_PR4_PLATE = addItem(222, "sputtered_pr4_plate");
         GTBMetaItems.PRESSED_PR4_PLATE = addItem(223, "pressed_pr4_plate");
+        GTBMetaItems.NEODYMIUM_MAGNET = addItem(224, "neodymium_magnet");
     }
 }

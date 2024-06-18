@@ -44,7 +44,7 @@ public class MetaTileEntityHighTemperatureDistillationTower extends RecipeMapMul
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("YSY", "YYY", "YYY")
+                .aisle("YYY", "YYY", "YSY")
                 .aisle("XXX", "X#X", "XXX").setRepeatable(1, 11)
                 .aisle("XXX", "XXX", "XXX")
                 .where('S', selfPredicate())
