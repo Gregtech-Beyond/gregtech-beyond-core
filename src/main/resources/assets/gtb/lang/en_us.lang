@@ -452,12 +452,16 @@ metaitem.etched_pr4_plate.name=Etched PR4 Plate
 metaitem.planar_transformer.name=Planar Transformer
 metaitem.sputtered_pr4_plate.name=Sputtered PR4 Plate
 metaitem.pressed_pr4_plate.name=Pressed PR4 Plate
-
+metaitem.neodymium_magnet.name=Neodymium Magnet
 
 
 
 #Materials
 
+gregtech.material.purified_silicon_carbide.name=Purified Silicon Carbide
+gregtech.material.low_quality_steel.name=Low Quality Steel
+gregtech.material.eglin_steel_base.name=Eglin Steel Base
+gregtech.material.eglin_steel.name=Eglin Steel
 gregtech.material.rare_naq_fluoroantimonic_acid=Naquadah Fluoroantimonic Acid
 gregtech.material.naq_hydrochloric_acid=Naquadah Hydrochloric Acid
 gregtech.material.rare_naquadah_waste=Rare Naquadah Waste
