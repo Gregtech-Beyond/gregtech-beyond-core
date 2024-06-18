@@ -63,6 +63,20 @@ public class RandomRecipes {
                 .duration(80)
                 .EUt(16)
                 .buildAndRegister();
-                
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Oxygen.getFluid(2000))
+                .input(dust, Silver)
+                .output(dust, SilverOxide, 3)
+                .duration(40)
+                .EUt(7)
+                .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder()
+                .input(dust, SilverOxide, 3)
+                .output(dust, Silver)
+                .duration(90)
+                .EUt(8)
+                .buildAndRegister();
     }
 }
