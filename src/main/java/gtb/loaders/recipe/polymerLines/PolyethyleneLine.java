@@ -16,17 +16,17 @@ public class PolyethyleneLine {
 
     public static void init() {
         POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(Air.getFluid(1000)).fluidInputs(Ethylene.getFluid(144))
-                .fluidOutputs(Polyethylene.getFluid(144)).duration(500).EUt(800).buildAndRegister();
+                .fluidOutputs(Polyethylene.getFluid(144)).duration(500).EUt(8).buildAndRegister();
         POLYMERIZATION_TANK_RECIPES.recipeBuilder().fluidInputs(Oxygen.getFluid(1000))
                 .fluidInputs(Ethylene.getFluid(144))
-                .fluidOutputs(Polyethylene.getFluid(144)).duration(500).EUt(800).buildAndRegister();
+                .fluidOutputs(Polyethylene.getFluid(144)).duration(500).EUt(8).buildAndRegister();
         POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, KaminskyCatalyst).fluidInputs(Ethylene.getFluid(144))
-                .fluidOutputs(Polyethylene.getFluid(576)).duration(500).EUt(800).buildAndRegister();
+                .fluidOutputs(Polyethylene.getFluid(576)).duration(500).EUt(8).buildAndRegister();
         POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, PhilipsCatalyst).fluidInputs(Ethylene.getFluid(144))
-                .fluidOutputs(Polyethylene.getFluid(288)).duration(500).EUt(800).buildAndRegister();
+                .fluidOutputs(Polyethylene.getFluid(288)).duration(500).EUt(8).buildAndRegister();
         POLYMERIZATION_TANK_RECIPES.recipeBuilder().input(dust, ZieglerNattaCatalyst)
                 .fluidInputs(Ethylene.getFluid(144))
-                .fluidOutputs(Polyethylene.getFluid(432)).duration(500).EUt(800).buildAndRegister();
+                .fluidOutputs(Polyethylene.getFluid(432)).duration(500).EUt(8).buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(LARGE_CHEMICAL_RECIPES,
                 new ItemStack[] { IntCircuitIngredient.getIntegratedCircuit(1) },
