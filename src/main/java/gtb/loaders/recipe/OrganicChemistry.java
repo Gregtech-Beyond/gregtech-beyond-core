@@ -1,5 +1,7 @@
 package gtb.loaders.recipe;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -118,7 +120,7 @@ public class OrganicChemistry {
         CHEMICAL_RECIPES.recipeBuilder()
                 .notConsumable(dust, Zeolite)
                 .fluidInputs(Ammonia.getFluid(1000))
-                .fluidInputs(NButanol.getFluid(1000))
+                .fluidInputs(Butanol.getFluid(1000))
                 .fluidOutputs(Tributylamine.getFluid(1000))
                 .duration(120)
                 .EUt(600)

@@ -1,5 +1,6 @@
 package gtb.loaders.recipe.circuitry;
 
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;

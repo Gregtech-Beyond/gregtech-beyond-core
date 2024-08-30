@@ -1,5 +1,6 @@
 package gtb.loaders.recipe;
 
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -45,7 +46,7 @@ public class AlcoholLine {
                 .fluidOutputs(NPropanol.getFluid(10))
                 .fluidOutputs(EthanolWaterAzeotrope.getFluid(100))
                 .fluidOutputs(IsoamylAlcohol.getFluid(615))
-                .fluidOutputs(NButanol.getFluid(10))
+                .fluidOutputs(Butanol.getFluid(10))
                 .fluidOutputs(IsobutylAlcohol.getFluid(155))
                 .duration(200)
                 .EUt(80)

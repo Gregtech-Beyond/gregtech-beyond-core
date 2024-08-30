@@ -9,12 +9,11 @@ import static gtb.api.unification.materials.GTBMaterials.*;
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialFlags;
-import gregtech.api.unification.material.info.MaterialIconSet;
 
 public class GTBSecondDegreeMaterials {
 
     // Range: 25401 - 25500
-    private static int startId = 25401;
+    private static int startId = 20956;
     private static final int END_ID = startId + 100;
 
     public static void register() {
@@ -44,12 +43,6 @@ public class GTBSecondDegreeMaterials {
                 .color(0xB1AC9E)
                 .build().setFormula("Pd?(NH3)", true);
 
-        Ethylenediamine = new Material.Builder(getMaterialsId(), gregtechId("ethylenediamine"))
-                .dust()
-                .fluid()
-                .color(0x4A148C)
-                .build().setFormula("C2H4(NH2)2", true);
-
         Syngas = new Material.Builder(getMaterialsId(), gregtechId("syngas"))
                 .fluid()
                 .color(0xE8D6D1)
@@ -69,38 +62,6 @@ public class GTBSecondDegreeMaterials {
                 .color(0xc293e6)
                 .build().setFormula("LiCl(H2O)", true);
 
-        RoastedSphalerite = new Material.Builder(getMaterialsId(), gregtechId("roasted_sphalerite"))
-                .dust()
-                .color(0xAC8B5C)
-                .flags(DISABLE_DECOMPOSITION)
-                .iconSet(MaterialIconSet.FINE)
-                .components(Gallium, 1, GermaniumDioxide, 1)
-                .build();
-
-        WaelzOxide = new Material.Builder(getMaterialsId(), gregtechId("waelz_oxide"))
-                .dust()
-                .color(0xB8B8B8)
-                .flags(DISABLE_DECOMPOSITION)
-                .iconSet(MaterialIconSet.FINE)
-                .components(Zinc, 1, GermaniumDioxide, 1)
-                .build();
-
-        ImpureGermaniumDioxide = new Material.Builder(getMaterialsId(), gregtechId("impure_germanium_dioxide"))
-                .dust()
-                .color(0x666666)
-                .flags(DISABLE_DECOMPOSITION)
-                .iconSet(MaterialIconSet.ROUGH)
-                .components(GermaniumDioxide, 1)
-                .build().setFormula("GeO2?", true);
-
-        ZincRichSphalerite = new Material.Builder(getMaterialsId(), gregtechId("zinc_rich_sphalerite"))
-                .dust()
-                .color(0xABA3A3)
-                .iconSet(MaterialIconSet.METALLIC)
-                .flags(DISABLE_DECOMPOSITION)
-                .components(Sphalerite, 1, Zinc, 2)
-                .build();
-
         DilutedCeriumFiltrate = new Material.Builder(getMaterialsId(), gregtechId("diluted_cerium_filtrate"))
                 .fluid()
                 .color(0x406742).build().setFormula("Ce(H2O)?", true);
@@ -111,10 +72,6 @@ public class GTBSecondDegreeMaterials {
         DilutedCeriumSolution = new Material.Builder(getMaterialsId(), gregtechId("diluted_cerium_solution"))
                 .fluid()
                 .color(0x677753).build().setFormula("Ce?(H2O)2", true);
-
-        AluminiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("aluminium_hydroxide"))
-                .dust()
-                .color(0x2E325B).build().setFormula("Al(HO2)", true);
 
         WetHafniumZirconiumBlend = new Material.Builder(getMaterialsId(), gregtechId("wet_hafnium_zirconium_blend"))
                 .dust()
@@ -153,10 +110,6 @@ public class GTBSecondDegreeMaterials {
                 .fluid()
                 .color(0xB0C5C8)
                 .build().setFormula("Si(CH3)2O", true);
-
-        TitaniumNitrate = new Material.Builder(getMaterialsId(), gregtechId("titanium_nitrate"))
-                .dust()
-                .color(0x7E24A3).build().setFormula("Ti(NO3)4", true);
 
         LithiumCarbonateSolution = new Material.Builder(getMaterialsId(), gregtechId("lithium_carbonate_solution"))
                 .fluid()
@@ -227,22 +180,10 @@ public class GTBSecondDegreeMaterials {
                 .color(0xEF9A9A)
                 .build().setFormula("(H5C6)3P(H2O)?", true);
 
-        HeavyAlkaliChlorideSolution = new Material.Builder(getMaterialsId(),
-                gregtechId("heavy_alkali_chloride_solution"))
-                        .fluid()
-                        .color(0x8F5353)
-                        .build()
-                        .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
-
         TriarylPhosphine = new Material.Builder(getMaterialsId(), gregtechId("triaryl_phosphine"))
                 .fluid()
                 .color(0xEF9A9A)
                 .build().setFormula("(H5C6)3P", true);
-
-        DiethylEther = new Material.Builder(getMaterialsId(), gregtechId("diethyl_ether"))
-                .fluid()
-                .color(0xEF9A9A)
-                .build().setFormula("(C2H5)2O", true);
 
         ArylmagnesiumHalides = new Material.Builder(getMaterialsId(), gregtechId("arylmagnesium_halides"))
                 .fluid()
@@ -299,12 +240,6 @@ public class GTBSecondDegreeMaterials {
                 .color(0xAFC896)
                 .build().setFormula("Br(H2O)", true);
 
-        Triphenylphosphine = new Material.Builder(getMaterialsId(), gregtechId("triphenylphosphine"))
-                .fluid()
-                .dust()
-                .color(0x333537)
-                .build().setFormula("(C6H5)3P", true);
-
         SodiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("sodium_hydroxide_solution"))
                 .fluid()
                 .color(0x9DD6D0)
@@ -325,11 +260,6 @@ public class GTBSecondDegreeMaterials {
                 .color(0x707272)
                 .build().setFormula("C(O2)", true);
 
-        GrapheneOxide = new Material.Builder(getMaterialsId(), gregtechId("graphene_oxide"))
-                .dust()
-                .color(0x5C5D5D)
-                .build().setFormula("C(O2)", true);
-
         GrapheneOxidationResidues = new Material.Builder(getMaterialsId(), gregtechId("graphene_oxidation_residues"))
                 .dust()
                 .color(0x827717)
@@ -344,11 +274,6 @@ public class GTBSecondDegreeMaterials {
                 .fluid()
                 .color(0xA29A56)
                 .build().setFormula("C(O2)", true);
-
-        CalciumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("calciumhydroxide"))
-                .dust()
-                .color(0x1A237E)
-                .build().setFormula("Ca(OH)2", true);
 
         LithiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxidesolution"))
                 .dust()

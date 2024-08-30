@@ -1,5 +1,8 @@
 package gtb.loaders.recipe;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -65,7 +68,7 @@ public class MachineRecipes {
                 .input(ELECTRIC_MOTOR_IV, 4)
                 .fluidInputs(Polytetrafluoroethylene.getFluid(2304))
                 .fluidInputs(SolderingAlloy.getFluid(2304))
-                .output(GTBMetaTileEntities.CHEMICAL_PLANT)
+                .output(CHEMICAL_PLANT)
                 .duration(1200)
                 .EUt(800)
                 .buildAndRegister();
@@ -121,7 +124,7 @@ public class MachineRecipes {
                 'P', new UnificationEntry(plate, BlackSteel),
                 'C', ELECTRIC_PUMP_MV.getStackForm());
 
-        ModHandler.addShapedRecipe("fermentation_vat_machine", GTBMetaTileEntities.FERMENTATION_VAT.getStackForm(),
+        ModHandler.addShapedRecipe("fermentation_vat_machine", FERMENTATION_TANK.getStackForm(),
                 "PCP", "CMC", "RWR",
                 'M', BlockMachineCasing.MachineCasingType.MV,
                 'C', new UnificationEntry(circuit, MarkerMaterials.Tier.MV),
@@ -161,7 +164,7 @@ public class MachineRecipes {
                 'P', new UnificationEntry(plate, Bronze));
 
         ModHandler.addShapedRecipe("catalytic_reformation_unit_machine",
-                GTBMetaTileEntities.CATALYTIC_REFORMATION_UNIT.getStackForm(),
+                CATALYTIC_REFORMER.getStackForm(),
                 "PCP", "CMC", "PCP",
                 'M', BlockMachineCasing.MachineCasingType.HV,
                 'C', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
@@ -280,7 +283,7 @@ public class MachineRecipes {
                 'P', ELECTRIC_PUMP_EV.getStackForm(),
                 'C', ELECTRIC_MOTOR_EV.getStackForm());
 
-        ModHandler.addShapedRecipe("digester_machine", GTBMetaTileEntities.DIGESTER.getStackForm(),
+        ModHandler.addShapedRecipe("digester_machine", DIGESTER.getStackForm(),
                 "TTT", "PMP", "TTT",
                 'M', BlockMachineCasing.MachineCasingType.IV,
                 'P', ELECTRIC_PISTON_EV.getStackForm(),

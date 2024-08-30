@@ -1,5 +1,6 @@
 package gtb.common.block.blocks;
 
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.Adamantium;
 import static gregtech.api.unification.material.Materials.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 

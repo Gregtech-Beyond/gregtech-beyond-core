@@ -1,11 +1,14 @@
 package gtb.loaders.recipe;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
 import static gregtech.common.items.MetaItems.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
+import static gtb.api.unification.ore.GTBOrePrefix.*;
 import static gtb.common.item.GTBMetaItems.*;
 
 import gregtech.api.recipes.ModHandler;
@@ -240,7 +243,7 @@ public final class Metallurgy {
 
         BENDER_RECIPES.recipeBuilder()
                 .input(plate, Steel)
-                .output(GTBOrePrefix.item_casing, Steel, 2)
+                .output(itemCasing, Steel, 2)
                 .duration(400)
                 .EUt(60)
                 .buildAndRegister();

@@ -8,7 +8,7 @@ import gregtech.api.unification.material.Material;
 public class GTBBiologicalMaterials {
 
     // Range 25601-25800
-    private static int startId = 25601;
+    private static int startId = 20001;
     private static final int END_ID = startId + 200;
 
     public static void register() {
@@ -95,11 +95,6 @@ public class GTBBiologicalMaterials {
                 .color(0x43A047)
                 .build().setFormula("C6H5NH2", true);
 
-        AmmoniumNitrate = new Material.Builder(getMaterialsId(), gregtechId("ammonium_nitrate"))
-                .fluid()
-                .color(0x7A6BAA)
-                .build().setFormula("NH4NO3", true);
-
         B_27_Supplement = new Material.Builder(getMaterialsId(), gregtechId("b_27_supplement"))
                 .fluid()
                 .color(0x2C572D)
@@ -159,11 +154,6 @@ public class GTBBiologicalMaterials {
                 .fluid()
                 .color(0xB79134)
                 .build().setFormula("CHCCH2OH", true);
-
-        Acetylene = new Material.Builder(getMaterialsId(), gregtechId("acetylene"))
-                .fluid()
-                .color(0x8BC34A)
-                .build().setFormula("C2H2", true);
 
         CleanAmmoniaSolution = new Material.Builder(getMaterialsId(), gregtechId("clean_ammonia_solution"))
                 .fluid()
@@ -262,11 +252,6 @@ public class GTBBiologicalMaterials {
                 .color(0xCECAAC)
                 .build().setFormula("C20H12O3", true);
 
-        Glucose = new Material.Builder(getMaterialsId(), gregtechId("glucose"))
-                .dust()
-                .color(0xECEBE4)
-                .build().setFormula("C20H12O3", true);
-
         Nonoxynol_9 = new Material.Builder(getMaterialsId(), gregtechId("nonoxynol_9"))
                 .fluid()
                 .color(0x336635)
@@ -295,11 +280,6 @@ public class GTBBiologicalMaterials {
         Iriditus = new Material.Builder(getMaterialsId(), gregtechId("iriditus"))
                 .dust()
                 .color(0x1976D2)
-                .build().setFormula("?", true);
-
-        Fructose = new Material.Builder(getMaterialsId(), gregtechId("fructose"))
-                .dust()
-                .color(0xDEE3E6)
                 .build().setFormula("?", true);
 
         SheepBlood = new Material.Builder(getMaterialsId(), gregtechId("sheep_blood"))
@@ -465,12 +445,6 @@ public class GTBBiologicalMaterials {
                 .fluid()
                 .color(0x388E3C)
                 .build().setFormula("?", true);
-
-        PhthalicAnhydride = new Material.Builder(getMaterialsId(), gregtechId("phthalic_anhydride"))
-                .fluid()
-                .dust()
-                .color(0xC1C1C1)
-                .build().setFormula("C8H4O3", true);
     }
 
     private static int getMaterialsId() {

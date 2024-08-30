@@ -8,17 +8,15 @@ import gregtech.api.unification.material.Material;
 public class GTBFantasyMaterials {
 
     // Range 25001-25200
-    private static int startId = 2601;
+    private static int startId = 20202;
     private static final int END_ID = startId + 50;
 
     public static void register() {
         AwakenedDraconium = new Material.Builder(getMaterialsId(), gregtechId("awakened_draconium"))
                 .ingot()
+                .liquid()
+                .dust()
                 .build().setFormula("AwDr", true);
-
-        Adamantium = new Material.Builder(getMaterialsId(), gregtechId("adamantium"))
-                .ingot()
-                .build().setFormula("Ad", true);
 
         CosmicNeutronium = new Material.Builder(getMaterialsId(), gregtechId("cosmic_neutronium"))
                 .ingot()

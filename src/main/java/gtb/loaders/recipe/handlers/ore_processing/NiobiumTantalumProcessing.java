@@ -1,5 +1,7 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.GTValues.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
@@ -297,7 +299,7 @@ public class NiobiumTantalumProcessing {
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(PhosphorusTrichloride.getFluid(1000))
                 .notConsumable(HydrochloricAcid.getFluid(100))
-                .fluidInputs(NButanol.getFluid(1000))
+                .fluidInputs(Butanol.getFluid(1000))
                 .fluidOutputs(TributylPhosphate.getFluid(2000))
                 .duration(200)
                 .EUt(500)

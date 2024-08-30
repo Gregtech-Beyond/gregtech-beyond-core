@@ -1,7 +1,6 @@
 package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.material.info.MaterialIconSet.FINE;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
@@ -13,7 +12,7 @@ import gtb.api.unification.materials.info.GTBMaterialFlags;
 public class GTBUnknownCompositionMaterials {
 
     // Range 25201-25400
-    private static int startId = 30201;
+    private static int startId = 21200;
     private static final int END_ID = startId + 1000;
 
     public static void register() {
@@ -56,11 +55,6 @@ public class GTBUnknownCompositionMaterials {
         SulfuricOilResidues = new Material.Builder(getMaterialsId(), gregtechId("sulfuric_oil_residues"))
                 .liquid(new FluidBuilder())
                 .color(0x827717)
-                .build();
-
-        Resin = new Material.Builder(getMaterialsId(), gregtechId("resin"))
-                .liquid(new FluidBuilder())
-                .color(0xBBA177)
                 .build();
 
         Kerosene = new Material.Builder(getMaterialsId(), gregtechId("kerosene"))
@@ -157,21 +151,6 @@ public class GTBUnknownCompositionMaterials {
                 .fluid()
                 .color(0x41403C)
                 .build().setFormula("I?", true);
-
-        IodizedBrine = new Material.Builder(getMaterialsId(), gregtechId("iodized_brine"))
-                .fluid()
-                .color(0x535147)
-                .build().setFormula("I?", true);
-
-        IodineSlurry = new Material.Builder(getMaterialsId(), gregtechId("iodine_slurry"))
-                .fluid()
-                .color(0x2B2E43)
-                .build().setFormula("I??", true);
-
-        BrominatedBrine = new Material.Builder(getMaterialsId(), gregtechId("brominated_brine"))
-                .fluid()
-                .color(0xE79E9D)
-                .build().setFormula("I??", true);
 
         Brine = new Material.Builder(getMaterialsId(), gregtechId("brine"))
                 .fluid()
@@ -290,11 +269,6 @@ public class GTBUnknownCompositionMaterials {
                 .color(0x010101)
                 .build();
 
-        Adamantite = new Material.Builder(getMaterialsId(), gregtechId("adamantite"))
-                .dust()
-                .color(0x27374F)
-                .build();
-
         EnrichedNaquadahNitrate = new Material.Builder(getMaterialsId(), gregtechId("enriched_naquadah_nitrate"))
                 .dust()
                 .color(0x212121)
@@ -325,24 +299,9 @@ public class GTBUnknownCompositionMaterials {
                 .color(0x75AACA)
                 .build();
 
-        Mithril = new Material.Builder(getMaterialsId(), gregtechId("mithril"))
-                .dust()
-                .color(0x0478BC)
-                .build();
-
         GrainsOfInfinity = new Material.Builder(getMaterialsId(), gregtechId("grains_of_infinity"))
                 .dust()
                 .color(0x292B2C)
-                .build();
-
-        MolybdenumFlue = new Material.Builder(getMaterialsId(), gregtechId("molybdenum_flue"))
-                .fluid()
-                .color(0x39194A)
-                .build();
-
-        TraceRheniumFlue = new Material.Builder(getMaterialsId(), gregtechId("trace_rhenium_flue"))
-                .fluid()
-                .color(0x96D6D5)
                 .build();
 
         CrudeZinc = new Material.Builder(getMaterialsId(), gregtechId("crude_zinc"))
@@ -353,11 +312,6 @@ public class GTBUnknownCompositionMaterials {
         CadmiumRichZinc = new Material.Builder(getMaterialsId(), gregtechId("cadmium_rich_zinc"))
                 .fluid()
                 .color(0x7A787B)
-                .build();
-
-        ChalcogenAnodeMud = new Material.Builder(getMaterialsId(), gregtechId("chalcogen_anode_mud"))
-                .dust().color(0x8A3324)
-                .iconSet(FINE)
                 .build();
 
         BlueVitriol = new Material.Builder(getMaterialsId(), gregtechId("blue_vitriol"))
@@ -866,10 +820,6 @@ public class GTBUnknownCompositionMaterials {
                 .fluid()
                 .color(0x4C4C4C).build();
 
-        ManganeseSulfate = new Material.Builder(getMaterialsId(), gregtechId("manganese_sulfate"))
-                .dust()
-                .color(0xDBD180).build().setFormula("MgSO2", true);
-
         Rhodocrosite = new Material.Builder(getMaterialsId(), gregtechId("rhodocrosite"))
                 .dust()
                 .color(0xC62828).build().setFormula("MnCO3", true);
@@ -946,10 +896,6 @@ public class GTBUnknownCompositionMaterials {
                 .dust()
                 .color(0xFDD835).build().setFormula("(BaO)(ZrO2)(TiO2)(SiO2)", true);
 
-        FluoroniobicAcid = new Material.Builder(getMaterialsId(), gregtechId("fluoroniobic_acid"))
-                .fluid()
-                .color(0x7CB342).build().setFormula("NbHF7", true);
-
         FusedTantalite = new Material.Builder(getMaterialsId(), gregtechId("fused_tantalite"))
                 .dust()
                 .color(0x57382F).build().setFormula("(Fe2O3)(NaO)Ta2O5", true);
@@ -957,11 +903,6 @@ public class GTBUnknownCompositionMaterials {
         LeachedTantalite = new Material.Builder(getMaterialsId(), gregtechId("leached_tantalite"))
                 .dust()
                 .color(0x5A200E).build().setFormula("(Ta2O5)9Nb2O5?", true);
-
-        CubicZirconia = new Material.Builder(getMaterialsId(), gregtechId("cubic_zirconia"))
-                .dust()
-                .gem()
-                .color(0xDECAE1).build().setFormula("ZrO2", true);
 
         AcidicLeachedPyrochlore = new Material.Builder(getMaterialsId(), gregtechId("acidic_leached_pyrochlore"))
                 .dust()
@@ -978,14 +919,6 @@ public class GTBUnknownCompositionMaterials {
         FluorotantalicAcid = new Material.Builder(getMaterialsId(), gregtechId("fluorotantalic_acid"))
                 .fluid()
                 .color(0x7CB342).build().setFormula("TaHF7", true);
-
-        TributylPhosphate = new Material.Builder(getMaterialsId(), gregtechId("tributyl_phosphate"))
-                .fluid()
-                .color(0x8E422B).build().setFormula("(C4H9)3PO4", true);
-
-        MethylIsobutylKetone = new Material.Builder(getMaterialsId(), gregtechId("methyl_isobutyl_ketone"))
-                .fluid()
-                .color(0x20FF2E).build().setFormula("C6H12O", true);
 
         NbTaSeparationMixture = new Material.Builder(getMaterialsId(), gregtechId("nb_ta_separation_mixture"))
                 .fluid()

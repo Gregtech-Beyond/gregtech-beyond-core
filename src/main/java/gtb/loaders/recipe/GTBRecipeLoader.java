@@ -31,9 +31,6 @@ public final class GTBRecipeLoader {
         WetwareCircuitry.init();
         Electronics.init();
         FullerenePolymerTetrixLine.init();
-        FullerenePolymerMatrixLine.init();
-        KaptonLine.init();
-        KevlarLine.init();
         NomexLine.init();
         PolybenzimidazoleLine.init();
         PolycaprolactamLine.init();
@@ -48,7 +45,6 @@ public final class GTBRecipeLoader {
         PolyvinylButyralLine.init();
         PolyvinylChlorideLine.init();
         StyreneButadieneRubberLine.init();
-        ZylonLine.init();
         SeleniumTelluriumProcessing.init();
         CryogenicAirDistillation.init();
         AlcoholLine.init();

@@ -1,5 +1,7 @@
 package gtb.loaders.recipe;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -1234,7 +1236,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder()
-                .input(dust, CarbonNanotubes)
+                .input(dust, CarbonNanotube)
                 .fluidInputs(Xenon.getFluid(2000))
                 .output(dust, DopedNanotubeDepositionMix)
                 .EUt(8003490)
@@ -1298,7 +1300,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder()
-                .input(wireFine, CarbonNanotubes)
+                .input(wireFine, CarbonNanotube)
                 .fluidInputs(Xenon.getFluid(1000))
                 .output(dust, NanotubeDepositionMix)
                 .duration(400)
@@ -1306,7 +1308,7 @@ public class Photolithography {
                 .buildAndRegister();
 
         MIXER_RECIPES.recipeBuilder()
-                .input(wireFine, CarbonNanotubes)
+                .input(wireFine, CarbonNanotube)
                 .fluidInputs(Krypton.getFluid(1000))
                 .output(dust, DopedNanotubeDepositionMixture)
                 .duration(400)

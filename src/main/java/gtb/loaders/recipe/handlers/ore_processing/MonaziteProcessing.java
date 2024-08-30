@@ -1,5 +1,7 @@
 package gtb.loaders.recipe.handlers.ore_processing;
 
+import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
+import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -245,7 +247,7 @@ public class MonaziteProcessing {
 
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(ZieglerAlfolMixture.getFluid(1000))
-                .fluidOutputs(NButanol.getFluid(200))
+                .fluidOutputs(Butanol.getFluid(200))
                 .fluidOutputs(Ethanol.getFluid(300))
                 .fluidOutputs(Hexanol.getFluid(150))
                 .fluidOutputs(Decanol.getFluid(100))

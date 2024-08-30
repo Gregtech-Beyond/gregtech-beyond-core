@@ -61,10 +61,6 @@ public final class GTBRecipeMaps {
             "fischer_tropsch_reactor_recipes",
             2, 1, 2, 9, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CRYSTALLIZATION_RECIPES = new RecipeMap<>(
-            "crystallization_recipes",
-            3, 3, 3, 3, new SimpleRecipeBuilder(), false);
-
     public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR_RECIPES = new RecipeMap<>(
             "dehydrator_recipes",
             3, 3, 3, 3, new SimpleRecipeBuilder(), false);
@@ -95,16 +91,9 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> CVD_UNIT_RECIPES = new RecipeMap<>("cvd_unit_recipes",
             3, 2, 2, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> ROASTER_RECIPES = new RecipeMap<>("roaster_recipes",
-            2, 4, 2, 2, new SimpleRecipeBuilder(), false);
-
     public static final RecipeMap<SimpleRecipeBuilder> ENGRAVING_UNIT_RECIPES = new RecipeMap<>(
             "engraving_unit_recipes",
             2, 4, 2, 2, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> CHEMICAL_PLANT_RECIPES = new RecipeMap<>(
-            "chemical_plant_recipes",
-            6, 4, 5, 4, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CLARIFIER_RECIPES = new RecipeMap<>("clarifier_recipes",
             1, 6, 1, 2, new SimpleRecipeBuilder(), false);
@@ -112,13 +101,6 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> FROTH_FLOTATION_UNIT_RECIPES = new RecipeMap<>(
             "froth_flotation_unit_recipes",
             4, 4, 4, 2, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> DIGESTER_RECIPES = new RecipeMap<>("digester_recipes",
-            4, 4, 4, 2, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> MOLECULAR_BEAM_RECIPES = new RecipeMap<>(
-            "molecular_beam_recipes_recipes",
-            4, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> HIGH_TEMP_DISTILLATION_RECIPES = new RecipeMap<>(
             "high_temp_distillation_recipes",
@@ -150,17 +132,6 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> PHASE_SEPARATOR_RECIPES = new RecipeMap<>(
             "phase_separator_recipes",
             0, 0, 1, 3, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> DISSOLUTION_TANK_RECIPES = new RecipeMap<>(
-            "dissolution_tank_recipes",
-            1, 4, 2, 1, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> DRYER_RECIPES = new RecipeMap<>("dryer_recipes",
-            1, 4, 2, 1, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> BURNER_REACTOR_RECIPES = new RecipeMap<>(
-            "burner_reactor_recipes",
-            2, 2, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> DILUTION_REFRIGERATOR_RECIPES = new RecipeMap<>(
             "dilution_refrigerator_recipes",
