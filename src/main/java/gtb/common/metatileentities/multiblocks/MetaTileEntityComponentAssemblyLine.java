@@ -25,6 +25,7 @@ import gtb.api.render.GTBTextures;
 import gtb.api.unification.materials.GTBMaterials;
 import gtb.api.utils.GTBUniverUtil;
 import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBBlockGlassCasing;
 import gtb.common.block.blocks.GTBMultiblockCasing;
 import gtb.common.metatileentities.GTBMetaTileEntities;
 import net.minecraft.block.state.IBlockState;
@@ -170,7 +171,7 @@ public class MetaTileEntityComponentAssemblyLine extends RecipeMapMultiblockCont
     }
 
     private static IBlockState getGlassState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.OSMIR_BORON_SILICATE_GLASS);
+        return GTBMetaBlocks.GTB_GLASS_CASING.getState(GTBBlockGlassCasing.CasingType.OSMIR_BORON_SILICATE_GLASS);
     }
 
     private static IBlockState getFrameState() {
