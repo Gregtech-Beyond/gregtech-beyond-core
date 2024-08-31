@@ -1,7 +1,7 @@
 package gtb.common.metatileentities;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
 import static gregtech.common.metatileentities.MetaTileEntities.*;
+import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.utils.GTBUtil.gtb;
 
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
@@ -18,6 +18,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBMetaTileEntities {
 
+
+    public static MetaTileEntityBlazingBlastFurnace BLAZING_BLAST_FURNACE;
     public static MetaTileEntitySolarThermalConcentrator SOLAR_THERMAL_CONCENTRATOR;
     public static MetaTileEntityBacterialVat BACTERIAL_VAT;
     public static MetaTileEntityVacuumFurnace VACUUM_FURNACE;
@@ -49,6 +51,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntitySinteringOven SINTERING_OVEN;
     public static MetaTileEntityEnzymaticHydrolisisTank ENZYMATIC_HYDROLISIS_TANK;
     public static MetaTileEntityCuringOven CURING_OVEN;
+    public static MetaTileEntityComponentAssemblyLine COMPONENT_ASSEMBLY_LINE;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -64,6 +67,7 @@ public final class GTBMetaTileEntities {
 
     public static void init() {
         // Multiblocks
+
         SOLAR_THERMAL_CONCENTRATOR = registerMetaTileEntity(3001,
                 new MetaTileEntitySolarThermalConcentrator(gtb("solar_thermal_concentrator")));
         BACTERIAL_VAT = registerMetaTileEntity(3002, new MetaTileEntityBacterialVat(gtb("bacterial_vat")));
@@ -117,6 +121,11 @@ public final class GTBMetaTileEntities {
         ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
                 new MetaTileEntityEnzymaticHydrolisisTank(gtb("enzymatic_hydrolisis_tank")));
         CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
+        BLAZING_BLAST_FURNACE = registerMetaTileEntity(3040,
+                new MetaTileEntityBlazingBlastFurnace(gtb("blazing_blast_furnace")));
+        COMPONENT_ASSEMBLY_LINE = registerMetaTileEntity(3041,
+                new MetaTileEntityComponentAssemblyLine(gtb("component_assembly_line")));
+
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

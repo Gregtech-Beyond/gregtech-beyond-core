@@ -1,12 +1,11 @@
 package gtb.loaders.recipe;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.dust;
+import static gtb.api.recipes.GTBRecipeMaps.*;
 
-import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.unification.materials.GTBMaterials;
 
 public class XylenolLine {
@@ -24,7 +23,7 @@ public class XylenolLine {
                 .EUt(120)
                 .buildAndRegister();
 
-        GTBRecipeMaps.CATALYTIC_REFORMATION_UNIT_RECIPES.recipeBuilder()
+        CATALYTIC_REFORMER_RECIPES.recipeBuilder()
                 .fluidInputs(GTBMaterials.MXylene.getFluid(1000))
                 .notConsumable(dust, GTBMaterials.ZSM5, 1)
                 .fluidOutputs(GTBMaterials.PXylene.getFluid(1000))

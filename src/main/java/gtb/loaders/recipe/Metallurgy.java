@@ -1,7 +1,6 @@
 package gtb.loaders.recipe;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -17,6 +16,14 @@ import gregtech.api.unification.OreDictUnifier;
 public final class Metallurgy {
 
     public static void init() {
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .input(SHAPE_EMPTY)
+                .circuitMeta(1)
+                .output(PETRI_DISH_MOLD)
+                .EUt(12)
+                .duration(80)
+                .buildAndRegister();
+
         FLUID_SOLIDFICATION_RECIPES.recipeBuilder()
                 .fluidInputs(Rhodium.getFluid(144))
                 .input(ingot, Palladium, 3)

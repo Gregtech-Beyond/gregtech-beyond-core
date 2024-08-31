@@ -12,6 +12,8 @@ import org.jetbrains.annotations.NotNull;
 
 import gregtech.api.block.VariantBlock;
 
+import javax.annotation.Nonnull;
+
 public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.CasingType> {
 
     public GTBMultiblockCasing() {
@@ -32,10 +34,18 @@ public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.Casing
 
     public enum CasingType implements IStringSerializable {
 
+
+        ADVANCED_INVAR_CASING("advanced_invar_casing"),
         CLIMATE_PROOF_CASING("climate_proof_casing"),
         QUANTUM_CASING("quantum_casing"),
         QUANTUM_GLASS("quantum_glass"),
         ENGRAVER_CASING("engraver_casing"),
+        POLYBENZIMIDAZOLE_PIPE("polybenzimidazole_pipe_casing"),
+        CYCLOTRON_CASING("cyclotron_casing"),
+        CYCLOTRON_COIL("cyclotron_coil"),
+        IRIDIUM_CASING("iridium_casing"),
+        ADVANCED_FILTER_CASING("advanced_filter_casing"),
+        ALGAE_FARM_CASING("algae_farm_casing"),
         SUBSTRATE("substrate_casing"),
         BASIC_STRUCTURAL_CASING("basic_structural_casing"),
         ADVANCED_SUBSTRATE("advanced_substrate_casing"),
@@ -43,17 +53,30 @@ public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.Casing
         SILICON_CARBIDE_CASING("silicon_carbide_casing"),
         BIOLOGICALLY_STERILE_CASING("biologically_sterile_casing"),
         FULLERENE_POLYMER_TETRIX_CASING("fullerene_polymer_tetrix_casing"),
-        GRAVITY_SEPARATOR_ROTOR_BLOCK("gravity_separator_rotor_block");
-
+        GRAVITY_SEPARATOR_ROTOR_BLOCK("gravity_separator_rotor_block"),
+        SUBSTRATE_CASING("substrate_casing"),
+        ADVANCED_SUBSTRATE_CASING("advanced_substrate_casing"),
+        ADVANCED_ALUMINIUM_CASING("advanced_aluminium_casing"),
+        VACUUM_CASING("vacuum_casing"),
+        DRILL_HEAD("drill_head"),
+        NAQUADRIA_CASING("naquadria_casing"),
+        HYPER_CASING("hyper_casing"),
+        TALONITE_CASING("talonite_casing"),
+        FARM_PIPE_CASING("farm_pipe_casing"),
+        FARM_CASING("farm_casing"),
+        BREEDING_CASING("breeding_casing"),
+        TRITANIUM_CASING("tritanium_casing"),
+        REFLECTIVE_CASING("reflective_casing");
         private final String name;
 
         CasingType(String name) {
             this.name = name;
         }
 
+        @Nonnull
         @Override
-        public @NotNull String getName() {
-            return this.name;
+        public String getName() {
+            return name;
         }
     }
 }

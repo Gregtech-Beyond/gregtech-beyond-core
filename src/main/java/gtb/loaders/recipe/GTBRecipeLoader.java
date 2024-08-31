@@ -4,7 +4,7 @@ import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
 
 import gtb.loaders.recipe.circuitry.*;
-import gtb.loaders.recipe.handlers.ore_processing.*;
+import gtb.loaders.recipe.ore_processing.*;
 import gtb.loaders.recipe.polymerLines.*;
 
 public final class GTBRecipeLoader {

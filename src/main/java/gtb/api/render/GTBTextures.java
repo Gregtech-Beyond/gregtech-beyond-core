@@ -11,6 +11,8 @@ import gtb.GregtechBeyondCore;
 @Mod.EventBusSubscriber(modid = GregtechBeyondCore.MODID, value = Side.CLIENT)
 public final class GTBTextures {
 
+    public static SimpleOverlayRenderer BURNER_REACTOR_OVERLAY = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing/burner_reactor_overlay");
     public static SimpleOverlayRenderer VACUUM_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/vacuum_furnace_casing");
     public static SimpleOverlayRenderer CLIMATE_PROOF_CASING = new SimpleOverlayRenderer(
@@ -23,6 +25,14 @@ public final class GTBTextures {
             "gtb_multiblock_casing/silicon_carbide_casing");
     public static SimpleOverlayRenderer CURING_OVEN_OVERLAY = new SimpleOverlayRenderer(
             "multiblock/curing_oven");
+    public static SimpleOverlayRenderer ALGAE_FARM_CASING = new SimpleOverlayRenderer(
+            "multiblock/algae_farm_casing");
+    public static SimpleOverlayRenderer CYCLOTRON_CASING = new SimpleOverlayRenderer(
+            "multiblock/cyclotron_casing");
+    public static SimpleOverlayRenderer IRIDIUM_CASING = new SimpleOverlayRenderer(
+            "multiblock/iridium_casing");
+    public static SimpleOverlayRenderer QUANTUM_CASING = new SimpleOverlayRenderer(
+            "multiblock/quantum_casing");
 
     private GTBTextures() {}
 

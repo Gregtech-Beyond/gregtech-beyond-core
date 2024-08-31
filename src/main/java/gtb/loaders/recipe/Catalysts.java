@@ -1,7 +1,6 @@
 package gtb.loaders.recipe;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -150,7 +149,7 @@ public class Catalysts {
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Methane.getFluid(1000))
-                .fluidOutputs(TrimethylAluminium.getFluid(1000))
+                .fluidOutputs(Trimethylaluminium.getFluid(1000))
                 .input(dust, Aluminium)
                 .EUt(120)
                 .duration(120)
@@ -158,7 +157,7 @@ public class Catalysts {
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(Water.getFluid(1000))
-                .fluidInputs(TrimethylAluminium.getFluid(1000))
+                .fluidInputs(Trimethylaluminium.getFluid(1000))
                 .fluidOutputs(Methane.getFluid(2000))
                 .output(dust, MethylAluminoxane)
                 .EUt(120)

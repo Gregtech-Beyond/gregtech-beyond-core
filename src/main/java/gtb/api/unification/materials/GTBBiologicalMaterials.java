@@ -1,15 +1,20 @@
 package gtb.api.unification.materials;
 
+import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.unification.material.Material;
+import gregtech.api.unification.material.Materials;
+import gregtech.api.unification.material.info.MaterialFlags;
+import gtb.api.recipes.GTBRecipeMaps;
 
 public class GTBBiologicalMaterials {
 
     // Range 25601-25800
     private static int startId = 20001;
-    private static final int END_ID = startId + 200;
+    private static final int END_ID = startId + 2000;
 
     public static void register() {
         CupriavidusNecator = new Material.Builder(getMaterialsId(), gregtechId("cupriavidus_necator"))
@@ -69,6 +74,91 @@ public class GTBBiologicalMaterials {
                 .fluid()
                 .color(0x8AA5A0)
                 .build().setFormula("C18H13CuN2O", true);
+
+        DryRedAlgae = new Material.Builder(getMaterialsId(), gregtechId("dry_red_algae"))
+                .dust()
+                .color(0x880808)
+                .build();
+        //  25602 Red Algae
+        RedAlgae = new Material.Builder(getMaterialsId(), gregtechId("red_algae"))
+                .dust()
+                .color(0xAA4A44)
+                .build();
+        //  25603 Dry Green Algae
+        DryGreenAlgae = new Material.Builder(getMaterialsId(), gregtechId("dry_green_algae"))
+                .dust()
+                .color(0x4F7942)
+                .build();
+        //  25604 Green Algae
+        GreenAlgae = new Material.Builder(getMaterialsId(), gregtechId("green_algae"))
+                .dust()
+                .color(0x5F8575)
+                .build();
+        //  25605 Dry Golden Algae
+        DryGoldenAlgae = new Material.Builder(getMaterialsId(), gregtechId("dry_golden_algae"))
+                .dust()
+                .color(0xDAA520)
+                .build();
+        //  25606 Golden Algae
+        GoldenAlgae = new Material.Builder(getMaterialsId(), gregtechId("golden_algae"))
+                .dust()
+                .color(0xEEDC82)
+                .build();
+        //  25607 Dry Brown Algae
+        DryBrownAlgae = new Material.Builder(getMaterialsId(), gregtechId("dry_brown_algae"))
+                .dust()
+                .color(0x5C4033)
+                .build();
+        //  25608 Brown Algae
+        BrownAlgae = new Material.Builder(getMaterialsId(), gregtechId("brown_algae"))
+                .dust()
+                .color(0x988558)
+                .build();
+        //  25609 UraeMix
+        UreaMix = new Material.Builder(getMaterialsId(), gregtechId("urea_mix"))
+                .liquid(new FluidBuilder().temperature(200))
+                .color(0x443610)
+                .build();
+        //  25610 Fermentation Base
+        FermentationBase = new Material.Builder(getMaterialsId(), gregtechId("fermentation_base"))
+                .liquid(new FluidBuilder().temperature(200))
+                .color(0x5E5839)
+                .build();
+        // Resin
+        Resin = new Material.Builder(getMaterialsId(), gregtechId("resin"))
+                .liquid(new FluidBuilder().temperature(200))
+                .color(0x353533)
+                .build();
+        // CaCO3
+        CalciumCarbonate = new Material.Builder(getMaterialsId(), gregtechId("calcium_carbonate"))
+                .dust()
+                .components(Calcium, 1, Carbon, 1, Oxygen, 3)
+                .color(0xE8E8CB)
+                .build();
+        // Propionic Acid
+        PropionicAcid = new Material.Builder(getMaterialsId(), gregtechId("propionic_acid"))
+                .liquid(new FluidBuilder().temperature(200))
+                .color(0xB3BC88)
+                .build();
+        //Sodium Aluminate
+        SodiumAluminate = new Material.Builder(getMaterialsId(), gregtechId("sodium_aluminate"))
+                .dust()
+                .colorAverage()
+                .components(Sodium, 1, Aluminium, 1, Oxygen, 2)
+                .build();
+        // RedMud
+        RedMud = new Material.Builder(getMaterialsId(), gregtechId("red_mud"))
+                .fluid()
+                .colorAverage()
+                .flags(MaterialFlags.DISABLE_DECOMPOSITION)
+                .components(Rutile, 1, HydrochloricAcid, 2)
+                .build();
+        //  Pine oil
+        PineOil = new Material.Builder(getMaterialsId(), gregtechId("pine_oil"))
+                .fluid()
+                .colorAverage()
+                .color(0xd6ac37)
+                .build();
 
         Sulfanilamide = new Material.Builder(getMaterialsId(), gregtechId("sulfanilamide"))
                 .fluid()

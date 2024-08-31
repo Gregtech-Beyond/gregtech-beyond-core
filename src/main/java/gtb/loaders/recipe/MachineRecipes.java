@@ -1,8 +1,5 @@
 package gtb.loaders.recipe;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
-import static cn.gtcommunity.epimorphism.common.metatileentities.EPMetaTileEntities.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -52,23 +49,6 @@ public class MachineRecipes {
                 .input(circuit, MarkerMaterials.Tier.EV, 2)
                 .input(ELECTRIC_PUMP_EV, 2)
                 .outputs(GTBMetaTileEntities.DILUTION_TANK.getStackForm(1))
-                .duration(1200)
-                .EUt(800)
-                .buildAndRegister();
-
-        ASSEMBLY_LINE_RECIPES.recipeBuilder()
-                .input(foil, Polybenzimidazole, 32)
-                .input(plate, Grisium, 32)
-                .input(stickLong, Cupronickel, 32)
-                .input(pipeLargeFluid, Polytetrafluoroethylene, 8)
-                .input(MetaBlocks.BOILER_CASING
-                        .getState(BlockBoilerCasing.BoilerCasingType.POLYTETRAFLUOROETHYLENE_PIPE).getBlock())
-                .input(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.PTFE_INERT_CASING).getBlock())
-                .input(circuit, MarkerMaterials.Tier.IV, 4)
-                .input(ELECTRIC_MOTOR_IV, 4)
-                .fluidInputs(Polytetrafluoroethylene.getFluid(2304))
-                .fluidInputs(SolderingAlloy.getFluid(2304))
-                .output(CHEMICAL_PLANT)
                 .duration(1200)
                 .EUt(800)
                 .buildAndRegister();
@@ -124,14 +104,6 @@ public class MachineRecipes {
                 'P', new UnificationEntry(plate, BlackSteel),
                 'C', ELECTRIC_PUMP_MV.getStackForm());
 
-        ModHandler.addShapedRecipe("fermentation_vat_machine", FERMENTATION_TANK.getStackForm(),
-                "PCP", "CMC", "RWR",
-                'M', BlockMachineCasing.MachineCasingType.MV,
-                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.MV),
-                'P', ELECTRIC_PUMP_MV.getStackForm(),
-                'R', ROBOT_ARM_MV.getStackForm(),
-                'W', new UnificationEntry(wireGtSingle, Aluminium));
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(circuit, MarkerMaterials.Tier.EV, 2)
                 .input(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.HV).getBlock())
@@ -163,12 +135,6 @@ public class MachineRecipes {
                 'M', new UnificationEntry(frameGt, Bronze),
                 'P', new UnificationEntry(plate, Bronze));
 
-        ModHandler.addShapedRecipe("catalytic_reformation_unit_machine",
-                CATALYTIC_REFORMER.getStackForm(),
-                "PCP", "CMC", "PCP",
-                'M', BlockMachineCasing.MachineCasingType.HV,
-                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
-                'P', new UnificationEntry(plate, EglinSteel));
 
         ModHandler.addShapedRecipe("solid_fuel_generator_machine",
                 GTBMetaTileEntities.SOLID_FUEL_GENERATOR.getStackForm(),
@@ -282,12 +248,6 @@ public class MachineRecipes {
                 'U', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
                 'P', ELECTRIC_PUMP_EV.getStackForm(),
                 'C', ELECTRIC_MOTOR_EV.getStackForm());
-
-        ModHandler.addShapedRecipe("digester_machine", DIGESTER.getStackForm(),
-                "TTT", "PMP", "TTT",
-                'M', BlockMachineCasing.MachineCasingType.IV,
-                'P', ELECTRIC_PISTON_EV.getStackForm(),
-                'T', new UnificationEntry(plate, Titanium));
 
         ModHandler.addShapedRecipe("stc_machine", GTBMetaTileEntities.SOLAR_THERMAL_CONCENTRATOR.getStackForm(),
                 "PBP", "SFS", "PSP",

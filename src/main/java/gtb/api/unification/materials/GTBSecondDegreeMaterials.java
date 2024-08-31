@@ -3,6 +3,7 @@ package gtb.api.unification.materials;
 import static gregtech.api.fluids.attribute.FluidAttributes.ACID;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.DISABLE_DECOMPOSITION;
+import static gregtech.api.unification.material.info.MaterialIconSet.DULL;
 import static gregtech.api.util.GTUtility.gregtechId;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
@@ -47,10 +48,6 @@ public class GTBSecondDegreeMaterials {
                 .fluid()
                 .color(0xE8D6D1)
                 .build().setFormula("(H)6(CO)", true);
-
-        Pikyonium = new Material.Builder(getMaterialsId(), gregtechId("pikyonium"))
-                .ingot()
-                .build().setFormula("(Ni2NbAl2(Ni4Cr))8((Fe4(FeAlCr)(Fe2Ni05)10SSiC)5?4Ce3Sb2Pt2Yb(FeW)4", true);
 
         CalciumSalts = new Material.Builder(getMaterialsId(), gregtechId("calcium_salts"))
                 .dust()
@@ -158,6 +155,33 @@ public class GTBSecondDegreeMaterials {
                 .color(0xBA68C8)
                 .build().setFormula("(MgCl)(H2O)", true);
 
+        DragonBreath = new Material.Builder(getMaterialsId(), gregtechId("dragon_breath"))
+                .liquid(new FluidBuilder().attributes(ACID))
+                .color(0x9400D3)
+                .build()
+                .setFormula("Dc?", false);
+        //  25402 Concentrate Dragon Breath
+        ConcentrateDragonBreath = new Material.Builder(getMaterialsId(), gregtechId("concentrate_dragon_breath"))
+                .liquid(new FluidBuilder().attributes(ACID))
+                .color(0x9400D3)
+                .build()
+                .setFormula("Dc2?", true);
+        //  25403 Dragon Blood
+        DragonBlood = new Material.Builder(getMaterialsId(), gregtechId("dragon_blood"))
+                .fluid()
+                .color(0xDC2814)
+                .iconSet(DULL)
+                .build()
+                .setFormula("*Dc*Rn?", true);
+        //  25404 Dragon Tear
+        DragonTear = new Material.Builder(getMaterialsId(), gregtechId("dragon_tear"))
+                .liquid(new FluidBuilder().temperature(2992))
+                .color(0x9999FF)
+                .iconSet(DULL)
+                .build()
+                .setFormula("⚙", false);
+
+
         StyreneButadieneSolution = new Material.Builder(getMaterialsId(), gregtechId("styrene_butadiene_solution"))
                 .fluid()
                 .color(0xCD846D)
@@ -168,12 +192,6 @@ public class GTBSecondDegreeMaterials {
                         .fluid()
                         .color(0x4780B9)
                         .build().setFormula("Al2(C2H5)6", true);
-
-        TrimethylAluminium = new Material.Builder(getMaterialsId(),
-                gregtechId("trimethylaluminium"))
-                        .fluid()
-                        .color(0x0097A7)
-                        .build().setFormula("Al(CH3)3", true);
 
         TriarylPhosphineSolution = new Material.Builder(getMaterialsId(), gregtechId("triaryl_phosphine_solution"))
                 .fluid()

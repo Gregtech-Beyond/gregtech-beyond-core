@@ -1,7 +1,7 @@
 package gtb.loaders.recipe;
 
-import static cn.gtcommunity.epimorphism.api.recipe.EPRecipeMaps.*;
-import static cn.gtcommunity.epimorphism.api.unification.EPMaterials.*;
+
+import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
@@ -162,7 +162,7 @@ public class OrganicChemistry {
                 .EUt(80)
                 .buildAndRegister();
 
-        CATALYTIC_REFORMATION_UNIT_RECIPES.recipeBuilder()
+        CATALYTIC_REFORMER_RECIPES.recipeBuilder()
                 .fluidInputs(Oxygen.getFluid(1000))
                 .fluidInputs(OrthoXylene.getFluid(1000))
                 .notConsumable(dust, VanadiumPentoxide)
