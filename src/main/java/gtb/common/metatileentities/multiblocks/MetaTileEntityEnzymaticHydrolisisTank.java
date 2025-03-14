@@ -64,7 +64,7 @@ public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockCo
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.CLEAN_STAINLESS_STEEL_CASING;
+        return Textures.SOLID_STEEL_CASING;
     }
 
     @Override
