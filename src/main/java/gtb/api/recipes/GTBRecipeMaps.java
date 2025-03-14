@@ -184,4 +184,26 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
             "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CATALYTIC_CRACKING_RECIPES = new RecipeMap<>(
+            "catalytic_cracking_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> VULCANIZED_PRESS_RECIPES = new RecipeMap<>(
+            "catalytic_cracking_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> VIS_BREAKER_RECIPES = new RecipeMap<>(
+            "vis_breaker_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> GRAVITY_SETTLER_RECIPES = new RecipeMap<>(
+            "gravity_settler_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> SEALED_REACTION_CHAMBER_RECIPES = new RecipeMap<>(
+            "sealed_reaction_chamber_recipes", 1, 1, 1, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_METALIZER_RECIPES = new RecipeMap<>(
+            "vacuum_metalizer_recipes", 4, 1, 0, 0, new SimpleRecipeBuilder(), false);
+
+
+
+
 }
