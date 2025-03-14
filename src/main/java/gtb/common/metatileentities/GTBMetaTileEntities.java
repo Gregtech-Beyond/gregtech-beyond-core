@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBMetaTileEntities {
 
+    public static MetaTileEntityCatalyticCrackingUnit CATALYTIC_CRACKING_UNIT;
     public static MetaTileEntityNanoscaleFabricator NANOSCALE_FABRICATOR;
     public static MetaTileEntitySolarThermalConcentrator SOLAR_THERMAL_CONCENTRATOR;
     public static MetaTileEntityBacterialVat BACTERIAL_VAT;
@@ -56,6 +57,11 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntitySinteringOven SINTERING_OVEN;
     public static MetaTileEntityEnzymaticHydrolisisTank ENZYMATIC_HYDROLISIS_TANK;
     public static MetaTileEntityCuringOven CURING_OVEN;
+    public static MetaTileEntityVulcanizedPress VULCANIZED_PRESS;
+    public static MetaTileEntityGravitySettlerTank GRAVITY_SETTLER_TANK;
+    public static MetaTileEntityVisBreaker VIS_BREAKER;
+    public static MetaTileEntityVacuumMetalizer VACUUM_METALIZER;
+
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -139,6 +145,13 @@ public final class GTBMetaTileEntities {
         ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
                 new MetaTileEntityEnzymaticHydrolisisTank(gtb("enzymatic_hydrolisis_tank")));
         CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
+        CATALYTIC_CRACKING_UNIT = registerMetaTileEntity(3040,
+                new MetaTileEntityCatalyticCrackingUnit(gtb("catalytic_cracking_unit")));
+        VULCANIZED_PRESS = registerMetaTileEntity(3041, new MetaTileEntityVulcanizedPress(gtb("vulcanized_press")));
+        GRAVITY_SETTLER_TANK = registerMetaTileEntity(3042,
+                new MetaTileEntityGravitySettlerTank(gtb("gravity_settler_tank")));
+        VIS_BREAKER = registerMetaTileEntity(3043, new MetaTileEntityVisBreaker(gtb("vis_breaker")));
+        VACUUM_METALIZER = registerMetaTileEntity(3044, new MetaTileEntityVacuumMetalizer(gtb("vacuum_metalizer")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
