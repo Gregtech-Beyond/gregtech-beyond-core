@@ -2,27 +2,35 @@ package gtb.api.unification.materials;
 
 import static gregtech.api.unification.material.Materials.*;
 
+import gregtech.api.fluids.FluidBuilder;
+import gregtech.api.fluids.store.FluidStorageKeys;
 import gregtech.api.unification.material.properties.*;
 
 public class GTBMaterialPropertyAddition {
 
     public static void init() {
-        Cadmium.setProperty(PropertyKey.FLUID, new FluidProperty());
-        Bromine.setProperty(PropertyKey.FLUID, new FluidProperty());
-        PhosphorusPentoxide.setProperty(PropertyKey.FLUID, new FluidProperty());
-        SodiumSulfide.setProperty(PropertyKey.FLUID, new FluidProperty());
-        IndiumPhosphide.setProperty(PropertyKey.INGOT, new IngotProperty());
+        Bromine.setProperty(PropertyKey.FLUID,
+                new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+
+        AmmoniumChloride.setProperty(PropertyKey.FLUID,
+                new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+
+        Sodium.setProperty(PropertyKey.FLUID,
+                new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+
+        Cadmium.setProperty(PropertyKey.FLUID,
+                new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+
+        PhosphorusPentoxide.setProperty(PropertyKey.FLUID,
+                new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+
+        SodiumSulfide.setProperty(PropertyKey.FLUID,
+                new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
+
         Moscovium.setProperty(PropertyKey.DUST, new DustProperty());
         Nihonium.setProperty(PropertyKey.DUST, new DustProperty());
         Thallium.setProperty(PropertyKey.DUST, new DustProperty());
         Iodine.setProperty(PropertyKey.DUST, new DustProperty());
-        AmmoniumChloride.setProperty(PropertyKey.FLUID, new FluidProperty());
-        Mica.setProperty(PropertyKey.INGOT, new IngotProperty());
-        BandedIron.setProperty(PropertyKey.INGOT, new IngotProperty());
-        PlatinumRaw.setProperty(PropertyKey.INGOT, new IngotProperty());
-        Sodium.setProperty(PropertyKey.FLUID, new FluidProperty());
-
-        // Pre-Registered Materials ????????
 
         // Zirconium
         Zirconium.setProperty(PropertyKey.INGOT, new IngotProperty());
