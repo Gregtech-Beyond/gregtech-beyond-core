@@ -58,7 +58,7 @@ public class MetaTileEntityCryogenicDistillationPlant extends RecipeMapMultibloc
                                 .toArray(MetaTileEntity[]::new))
                                         .setMinLayerLimited(1).setMaxLayerLimited(1))
                         .or(autoAbilities(true, false)))
-                .where('~', air())
+                .where('~', any())
                 .build();
     }
 
