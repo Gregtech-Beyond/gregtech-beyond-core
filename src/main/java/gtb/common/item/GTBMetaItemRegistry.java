@@ -59,7 +59,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.ENGRAVED_SOC_WAFER = addItem(44, "engraved_soc_wafer");
         GTBMetaItems.UHASOC_LITHOGRAPHY_MASK = addItem(45, "uhasoc_lithography_mask");
         GTBMetaItems.SHAPED_HIGH_ENERGY_GAMMA_SHIELD = addItem(46, "shaped_high_energy_gamma_shield");
-        GTBMetaItems.PRE_ENGRAVED_UHASOC_WAFER = addItem(47, "pre_engraved_uhasoc_wafer");
         GTBMetaItems.SUPERCONDUCTOR_LAYERED_UHASOC_WAFER = addItem(48, "superconductor_layered_uhasoc_wafer");
         GTBMetaItems.DEGENERATE_UHASOC_WAFER = addItem(49, "degenerate_uhasoc_wafer");
         GTBMetaItems.CELLED_UHASOC_WAFER = addItem(50, "celled_uhasoc_wafer");
@@ -235,5 +234,21 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.SPUTTERED_PR4_PLATE = addItem(222, "sputtered_pr4_plate");
         GTBMetaItems.PRESSED_PR4_PLATE = addItem(223, "pressed_pr4_plate");
         GTBMetaItems.NEODYMIUM_MAGNET = addItem(224, "neodymium_magnet");
+        GTBMetaItems.BITUMEN_CRYSTAL = addItem(225, "bitumen_crystal");
+        GTBMetaItems.ASPHALT = addItem(226, "asphalt");
+        GTBMetaItems.NANO_SMD_DIODE = addItem(227, "nano_smd_diode");
+        GTBMetaItems.NANO_SMD_TRANSISTOR = addItem(228, "nano_smd_transistor");
+        GTBMetaItems.NANO_SMD_CAPACITOR = addItem(229, "nano_smd_capacitor");
+        GTBMetaItems.NANO_SMD_INDUCTOR = addItem(230, "nano_smd_inductor");
+        GTBMetaItems.NANO_SMD_RESISTOR = addItem(231, "nano_smd_resistor");
+        GTBMetaItems.GDSII_LITHOGRAPHY_MASK = addItem(232, "gdsii_lithography_mask");
+        GTBMetaItems.GDSII_MASKED_WAFER = addItem(233, "gdsii_masked_wafer");
+        GTBMetaItems.DOPED_GDSII_WAFER = addItem(234, "doped_gdsii_wafer");
+        GTBMetaItems.THIN_COPPER_SHEET = addItem(235, "thin_copper_sheet");
+        GTBMetaItems.CONNECTED_GDSII_WAFER = addItem(236, "connected_gdsii_wafer");
+        GTBMetaItems.ETCHED_GDSII_WAFER = addItem(237, "etched_gdsii_wafer");
+        GTBMetaItems.GDSII_CHIP = addItem(238, "gdsii_chip");
+        GTBMetaItems.DIP_8_PACKAGE = addItem(239, "dip_8_package");
+        GTBMetaItems.DIP_8_MICROCONTROLLER = addItem(240, "dip_8_microcontroller");
     }
 }
