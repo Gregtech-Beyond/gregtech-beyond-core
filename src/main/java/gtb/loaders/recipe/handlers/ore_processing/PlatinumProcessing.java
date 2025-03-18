@@ -136,20 +136,12 @@ public class PlatinumProcessing {
                 .output(dust, PalladiumSalt, 2)
                 .duration(80).EUt(90).buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(FormicAcid.getFluid(2000))
-                .input(dust, ReprecipitatedPalladium, 2)
-                .output(dust, Palladium)
-                .fluidOutputs(AceticAcid.getFluid(1000))
-                .fluidOutputs(Ammonia.getFluid(2000))
-                .duration(800).EUt(9).buildAndRegister();
-
         LARGE_CHEMICAL_RECIPES.recipeBuilder()
                 .input(dust, PalladiumMetallicPowder, 12)
                 .fluidInputs(PalladiumEnrichedAmmonia.getFluid(6000))
                 .circuitMeta(1)
                 .output(dust, PalladiumSalt, 15)
-                .output(dust, PalladiumRaw, 8)
+                .output(dust, ReprecipitatedPalladium, 8)
                 .duration(80).EUt(90).buildAndRegister();
 
         SIFTER_RECIPES.recipeBuilder()
@@ -252,5 +244,29 @@ public class PlatinumProcessing {
         GTRecipeHandler.removeRecipesByInputs(CENTRIFUGE_RECIPES,
                 new ItemStack[] {
                         OreDictUnifier.get(dust, IridiumMetalResidue, 5) });
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(DeionizedWater.getFluid(1000))
+                .input(dust, ReprecipitatedPalladium, 1)
+                .output(dust, DeionizedPalladium, 1)
+                .EUt(150)
+                .duration(500)
+                .buildAndRegister();
+
+        DRYER_RECIPES.recipeBuilder()
+                .input(dust, DeionizedPalladium, 1)
+                .fluidOutputs(Water.getFluid(1000))
+                .output(dust, DriedPalladium, 1)
+                .EUt(400)
+                .duration(400)
+                .buildAndRegister();
+
+        OXIDATION_FURNACE_RECIPES.recipeBuilder()
+                .input(dust, DriedPalladium, 1)
+                .output(dust, Palladium, 1)
+                .fluidOutputs(Ammonia.getFluid(1000))
+                .EUt(500)
+                .duration(300)
+                .buildAndRegister();
     }
 }
