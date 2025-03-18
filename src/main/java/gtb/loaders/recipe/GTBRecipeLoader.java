@@ -99,5 +99,8 @@ public final class GTBRecipeLoader {
         BasicOreProcessingOverhaul.init();
         ArsenicProcessing.init();
         AntimonyProcessing.init();
+        WaterLine.init();
+        NanoCircuitry.init();
+        CaesiumProcessing.init();
     }
 }
