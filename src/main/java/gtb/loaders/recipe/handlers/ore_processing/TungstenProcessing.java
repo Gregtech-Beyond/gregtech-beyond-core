@@ -6,6 +6,9 @@ import static gregtech.api.unification.ore.OrePrefix.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
 
@@ -82,15 +85,22 @@ public class TungstenProcessing {
                 .EUt(12)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(Hydrogen.getFluid(6000))
+        OXIDATION_FURNACE_RECIPES.recipeBuilder()
                 .input(dust, TungstenTrioxide, 4)
                 .output(dust, Tungsten, 1)
-                .fluidOutputs(Water.getFluid(3000))
+                .fluidOutputs(Oxygen.getFluid(3000))
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
 
         GTRecipeHandler.removeRecipesByInputs(ELECTROLYZER_RECIPES, OreDictUnifier.get(dust, TungsticAcid, 7));
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_BATH_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, Scheelite, 6) },
+                new FluidStack[] { HydrochloricAcid.getFluid(2000) });
+        GTRecipeHandler.removeRecipesByInputs(CHEMICAL_BATH_RECIPES,
+                new ItemStack[] {
+                        OreDictUnifier.get(dust, Tungstate, 7) },
+                new FluidStack[] { HydrochloricAcid.getFluid(2000) });
     }
 }
