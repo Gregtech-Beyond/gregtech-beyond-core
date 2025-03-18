@@ -243,5 +243,107 @@ public class OilLine {
 
         GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
                 new FluidStack[] { OilHeavy.getFluid(100) });
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(Ethanolamine.getFluid(500))
+                .fluidInputs(RefineryGas.getFluid(1000))
+                .fluidOutputs(RichAmine.getFluid(1500))
+                .duration(400)
+                .EUt(380)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(RichAmine.getFluid(1500))
+                .fluidOutputs(Ethanolamine.getFluid(500))
+                .fluidOutputs(HydrogenSulfide.getFluid(1000))
+                .duration(500)
+                .EUt(480)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] { LightlySteamCrackedNaphtha.getFluid(1000) });
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] { SeverelySteamCrackedNaphtha.getFluid(1000) });
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(SeverelySteamCrackedNaphtha.getFluid(1000))
+                .fluidOutputs(Ethylene.getFluid(500))
+                .fluidOutputs(Methane.getFluid(500))
+                .fluidOutputs(Propene.getFluid(300))
+                .fluidOutputs(Propane.getFluid(15))
+                .fluidOutputs(Ethane.getFluid(65))
+                .fluidOutputs(Benzene.getFluid(100))
+                .fluidOutputs(Butene.getFluid(50))
+                .fluidOutputs(Butadiene.getFluid(50))
+                .fluidOutputs(HeavyFuel.getFluid(25))
+                .fluidOutputs(LightFuel.getFluid(50))
+                .fluidOutputs(Toluene.getFluid(20))
+                .fluidOutputs(Cyclooctadiene.getFluid(75))
+                .duration(500)
+                .EUt(480)
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(LightlySteamCrackedNaphtha.getFluid(1000))
+                .fluidOutputs(Ethylene.getFluid(200))
+                .fluidOutputs(Methane.getFluid(200))
+                .fluidOutputs(Propene.getFluid(200))
+                .fluidOutputs(Propane.getFluid(15))
+                .fluidOutputs(Ethane.getFluid(35))
+                .fluidOutputs(Benzene.getFluid(150))
+                .fluidOutputs(Butene.getFluid(80))
+                .fluidOutputs(Butadiene.getFluid(150))
+                .fluidOutputs(HeavyFuel.getFluid(75))
+                .fluidOutputs(LightFuel.getFluid(150))
+                .fluidOutputs(Toluene.getFluid(40))
+                .fluidOutputs(Cyclooctadiene.getFluid(100))
+                .duration(500)
+                .EUt(480)
+                .buildAndRegister();
+
+        GTRecipeHandler.removeRecipesByInputs(DISTILLATION_RECIPES,
+                new FluidStack[] { Gasoline.getFluid(1000) });
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(Gasoline.getFluid(1000))
+                .fluidOutputs(NHeptane.getFluid(150))
+                .fluidOutputs(Toluene.getFluid(50))
+                .fluidOutputs(NOctane.getFluid(150))
+                .fluidOutputs(Ethylbenzene.getFluid(50))
+                .fluidOutputs(MXylene.getFluid(50))
+                .fluidOutputs(NHexadecane.getFluid(50))
+                .fluidOutputs(Propane.getFluid(100))
+                .fluidOutputs(Ethane.getFluid(100))
+                .fluidOutputs(Methane.getFluid(200))
+                .fluidOutputs(Butane.getFluid(150))
+                .duration(500)
+                .EUt(480)
+                .buildAndRegister();
+
+        SINTERING_OVEN_RECIPES.recipeBuilder()
+                .input(BITUMINOUS_RESIDUES, 1)
+                .output(BITUMEN_CRYSTAL, 1)
+                .duration(500)
+                .EUt(480)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Water.getFluid(288))
+                .input(dust, QuartzSand, 2)
+                .input(BITUMEN_CRYSTAL, 2)
+                .output(ASPHALT, 6)
+                .duration(500)
+                .EUt(480)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(Water.getFluid(288))
+                .input(dust, Andesite, 1)
+                .input(BITUMEN_CRYSTAL, 1)
+                .output(ASPHALT, 2)
+                .duration(500)
+                .EUt(480)
+                .buildAndRegister();
     }
 }
