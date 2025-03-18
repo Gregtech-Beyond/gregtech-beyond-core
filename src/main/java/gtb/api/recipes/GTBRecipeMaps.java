@@ -180,7 +180,7 @@ public final class GTBRecipeMaps {
             "enzymatic_hydrolisis_recipes", 1, 1, 1, 9, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_EJECTION_RECIPES = new RecipeMap<>(
-            "vacuum_ejection_recipes", 1, 1, 0, 0, new SimpleRecipeBuilder(), false);
+            "vacuum_ejection_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
             "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
@@ -203,7 +203,21 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_METALIZER_RECIPES = new RecipeMap<>(
             "vacuum_metalizer_recipes", 4, 1, 0, 0, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> OXIDATION_FURNACE_RECIPES = new RecipeMap<>(
+            "oxidation_furnace_recipes", 2, 1, 2, 1, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> ION_EXCHANGE_RECIPES = new RecipeMap<>(
+            "ion_exchange_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> UV_LIGHT_RECIPES = new RecipeMap<>(
+            "uv_light_recipes", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> FLUID_COMPRESSOR_RECIPES = new RecipeMap<>(
+            "fluid_compressor_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> PLASMA_ETCHER_RECIPES = new RecipeMap<>(
+            "plasma_etcher_recipes", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> MOCVD_UNIT_RECIPES = new RecipeMap<>(
+            "mocvd_unit_recipes", 4, 2, 4, 3, new SimpleRecipeBuilder(), false);
 }
