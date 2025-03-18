@@ -1,8 +1,5 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.common.blocks.BlockBoilerCasing;
-import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.GTBMultiblockCasing;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -22,6 +19,7 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
@@ -29,6 +27,8 @@ import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.common.block.GTBMetaBlocks;
+import gtb.common.block.blocks.GTBMultiblockCasing;
 
 public class MetaTileEntitySealedReactionChamber extends RecipeMapMultiblockController {
 
@@ -173,7 +173,9 @@ public class MetaTileEntitySealedReactionChamber extends RecipeMapMultiblockCont
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
                 .where('F', frames(Materials.Steel))
-                .where('T', states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.PERFECTLY_SEALED_VACUUM_CASING)))
+                .where('T',
+                        states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
+                                .getState(GTBMultiblockCasing.CasingType.PERFECTLY_SEALED_VACUUM_CASING)))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
                 .build();
     }
@@ -205,7 +207,6 @@ public class MetaTileEntitySealedReactionChamber extends RecipeMapMultiblockCont
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntitySealedReactionChamber(metaTileEntityId) {
-        };
+        return new MetaTileEntitySealedReactionChamber(metaTileEntityId) {};
     }
 }
