@@ -61,7 +61,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityGravitySettlerTank GRAVITY_SETTLER_TANK;
     public static MetaTileEntityVisBreaker VIS_BREAKER;
     public static MetaTileEntityVacuumMetalizer VACUUM_METALIZER;
-
+    public static MetaTileEntityOxidationFurnace OXIDATION_FURNACE;
+    public static MetaTileEntityMOCVDUnit MOCVD_UNIT;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -74,6 +75,10 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] ELECTRON_BEAM_LITHOGRAPHER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] BIO_REACTOR_SINGLE = new SimpleMachineMetaTileEntity[6];
     public static SimpleMachineMetaTileEntity[] VACUUM_EJECTOR = new SimpleMachineMetaTileEntity[4];
+    public static SimpleMachineMetaTileEntity[] ION_EXCHANGE_UNIT = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] UV_LIGHT = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] FLUID_COMPRESSOR = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] PLASMA_ETCHER = new SimpleMachineMetaTileEntity[15];
 
     public static void init() {
         // Multiblocks
@@ -152,6 +157,8 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityGravitySettlerTank(gtb("gravity_settler_tank")));
         VIS_BREAKER = registerMetaTileEntity(3043, new MetaTileEntityVisBreaker(gtb("vis_breaker")));
         VACUUM_METALIZER = registerMetaTileEntity(3044, new MetaTileEntityVacuumMetalizer(gtb("vacuum_metalizer")));
+        OXIDATION_FURNACE = registerMetaTileEntity(3045, new MetaTileEntityOxidationFurnace(gtb("oxidation_furnace")));
+        MOCVD_UNIT = registerMetaTileEntity(3046, new MetaTileEntityMOCVDUnit(gtb("mocvd_unit")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -196,5 +203,25 @@ public final class GTBMetaTileEntities {
         registerSimpleMetaTileEntity(VACUUM_EJECTOR, 4200, "vacuum_ejector",
                 GTBRecipeMaps.VACUUM_EJECTION_RECIPES,
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                ION_EXCHANGE_UNIT, 4220, "ion_exchange_unit",
+                GTBRecipeMaps.ION_EXCHANGE_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                UV_LIGHT, 4240, "uv_light",
+                GTBRecipeMaps.UV_LIGHT_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                FLUID_COMPRESSOR, 4260, "fluid_compressor",
+                GTBRecipeMaps.FLUID_COMPRESSOR_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                PLASMA_ETCHER, 4280, "plasma_etcher",
+                GTBRecipeMaps.PLASMA_ETCHER_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }
