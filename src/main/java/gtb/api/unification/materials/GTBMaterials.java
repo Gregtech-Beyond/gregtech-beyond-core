@@ -128,11 +128,36 @@ public class GTBMaterials {
     public static Material NaqHydrochloricAcid;
     public static Material RareNaquadahWaste;
     public static Material NaquadahWaste;
+    public static Material Difluorobenzophenone;
 
     // Element Materials
     public static Material Rubidium;
 
     // FD Materials
+    public static Material PolluciteSlurry;
+    public static Material SodiumSilicate;
+    public static Material Oleic_Acid;
+    public static Material ImpurePolluciteSlurry;
+    public static Material MolecularSieve;
+    public static Material DeionizedWater;
+    public static Material SterilizedWater;
+    public static Material DeaeratedWater;
+    public static Material DemineralizedWater;
+    public static Material WaterPlasma;
+    public static Material UltrapureWater;
+    public static Material HighPressureUltrapureWaterGrade1;
+    public static Material SupercriticalUltrapureWaterGrade1;
+    public static Material UltrapureWaterGrade1;
+    public static Material UltrapureWaterGrade2;
+    public static Material UltrapureWaterGrade3;
+    public static Material UltrapureWaterGrade4;
+    public static Material UltrapureWaterGrade5;
+    public static Material UltrapureWaterGrade6;
+    public static Material UltrapureWaterGrade7;
+    public static Material UltrapureWaterGrade8;
+    public static Material RichAmine;
+    public static Material DriedPalladium;
+    public static Material DeionizedPalladium;
     public static Material Gadolinite;
     public static Material Tetradecanol;
     public static Material MethylIsobutylCarbonyl;

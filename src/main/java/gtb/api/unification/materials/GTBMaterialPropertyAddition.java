@@ -31,6 +31,9 @@ public class GTBMaterialPropertyAddition {
         Nihonium.setProperty(PropertyKey.DUST, new DustProperty());
         Thallium.setProperty(PropertyKey.DUST, new DustProperty());
         Iodine.setProperty(PropertyKey.DUST, new DustProperty());
+        Mica.setProperty(PropertyKey.INGOT, new IngotProperty());
+        BandedIron.setProperty(PropertyKey.INGOT, new IngotProperty());
+        PlatinumRaw.setProperty(PropertyKey.INGOT, new IngotProperty());
 
         // Zirconium
         Zirconium.setProperty(PropertyKey.INGOT, new IngotProperty());
@@ -71,5 +74,8 @@ public class GTBMaterialPropertyAddition {
 
         // Rutherfordium
         Rutherfordium.setProperty(PropertyKey.INGOT, new IngotProperty());
+
+        // Rubidium
+        Rubidium.setProperty(PropertyKey.INGOT, new IngotProperty());
     }
 }

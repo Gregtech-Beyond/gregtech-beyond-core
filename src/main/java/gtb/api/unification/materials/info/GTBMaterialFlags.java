@@ -44,9 +44,11 @@ public class GTBMaterialFlags {
 
         addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten);
 
+        addFlag(MaterialFlags.GENERATE_FRAME, Lead);
+
         Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
 
-        addFlag(GTBMaterialFlags.GENERATE_SIFTED, GTBMaterialFlags.GENERATE_FLOATED, Pyrochlore, Tantalite);
+        addFlag(GTBMaterialFlags.GENERATE_SIFTED, GTBMaterialFlags.GENERATE_FLOATED, Pyrochlore, Tantalite, Pollucite);
 
         addFlag(GTBMaterialFlags.GENERATE_ITEM_CASING, Steel, Aluminium, StainlessSteel, Titanium, TungstenSteel);
 
