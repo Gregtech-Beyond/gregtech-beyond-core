@@ -58,6 +58,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
+                .where('~', air())
                 .build();
     }
 
