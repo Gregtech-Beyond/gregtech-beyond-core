@@ -91,7 +91,7 @@ recipemap.dryer_recipes.name=Dryer Recipes
 recipemap.sintering_oven_recipes.name=Sintering
 recipemap.high_temp_distillation_recipes.name=High Temperature Distillation
 
-# Recêipe properties
+# Recipe properties
 gregtech.recipe.kev=Neutron Kinetic Energy: %d kEv
 
 # Singleblock machinery
@@ -1420,9 +1420,11 @@ material.trace_rhenium_flue=Trace Rhenium Flue Gas
 
 
 
-# Tooltips
+# Multiblock display information
 
 gtb.multiblock.kev_production=Producing %d kEv
+gtb.multiblock.kev_reception=Receiving %d kEv
+gtb.multiblock.kev_reception.none=No kEv source found
 
 
 

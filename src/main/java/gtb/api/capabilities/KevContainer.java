@@ -2,8 +2,10 @@ package gtb.api.capabilities;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 
 import org.jetbrains.annotations.NotNull;
@@ -12,6 +14,7 @@ import gregtech.api.metatileentity.MTETrait;
 import gregtech.api.metatileentity.MetaTileEntity;
 
 import lombok.Getter;
+import org.jetbrains.annotations.Nullable;
 
 @Getter
 public class KevContainer extends MTETrait {
@@ -19,6 +22,7 @@ public class KevContainer extends MTETrait {
     private int kev;
     private final boolean isInput;
     private BlockPos blockPos;
+    private final int maxRange = 20;
 
     public KevContainer(@NotNull MetaTileEntity metaTileEntity, boolean isInput) {
         super(metaTileEntity);
@@ -53,6 +57,38 @@ public class KevContainer extends MTETrait {
 
     public void reset() {
         setKev(0);
+    }
+
+    /**
+     * If this container in an input, it tries to {@link #findOutputKevContainer()}. If a container is found, its kev value is set
+     * to the current container, else it is {@link #reset()}.
+     */
+    public void scanAndSetKev() {
+        if (this.isInput) {
+            KevContainer kevSource = findOutputKevContainer();
+            if (kevSource != null) {
+                this.setKev(kevSource.getKev());
+            } else this.reset();
+        }
+    }
+
+    @Nullable
+    public KevContainer findOutputKevContainer() {
+        if (!this.isInput) return null;
+        World world = this.metaTileEntity.getWorld();
+        int scanDistance = 1;
+        while (scanDistance < maxRange) {
+            TileEntity tileEntity = world.getTileEntity(getBlockPos().offset(getFrontFacing(), scanDistance));
+            if (tileEntity == null) {
+                scanDistance++;
+            } else {
+                KevContainer foundKevContainer = tileEntity.getCapability(GTBTileCapabilities.CAPABILITY_KEV_CONTAINER, getFrontFacing().getOpposite());
+                if (foundKevContainer == null || foundKevContainer.isInput) {
+                    return null;
+                } else return foundKevContainer;
+            }
+        }
+        return null;
     }
 
     @Override

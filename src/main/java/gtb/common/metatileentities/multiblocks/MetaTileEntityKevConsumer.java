@@ -1,7 +1,13 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
+import gregtech.api.util.GTUtility;
+import gregtech.api.util.TextComponentUtil;
+import lombok.Setter;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -30,6 +36,8 @@ import gtb.api.metatileentity.multiblock.KevConsumerLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 import lombok.Getter;
 
+import java.util.List;
+
 public class MetaTileEntityKevConsumer extends RecipeMapMultiblockController implements IKevMachine {
 
     @Getter
@@ -37,7 +45,7 @@ public class MetaTileEntityKevConsumer extends RecipeMapMultiblockController imp
 
     public MetaTileEntityKevConsumer(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.KEV_RECIPE_MAP);
-        this.recipeMapWorkable = new KevConsumerLogic(this);
+        this.recipeMapWorkable = new KevConsumerLogic(this, this);
     }
 
     @Override
@@ -94,5 +102,25 @@ public class MetaTileEntityKevConsumer extends RecipeMapMultiblockController imp
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
         return new MetaTileEntityKevConsumer(metaTileEntityId);
+    }
+
+    @Override
+    protected void addDisplayText(List<ITextComponent> textList) {
+        MultiblockDisplayText.builder(textList, isStructureFormed())
+                .setWorkingStatus(recipeMapWorkable.isWorkingEnabled(), recipeMapWorkable.isActive())
+                .addEnergyUsageLine(recipeMapWorkable.getEnergyContainer())
+                .addEnergyTierLine(GTUtility.getTierByVoltage(recipeMapWorkable.getMaxVoltage()))
+                .addParallelsLine(recipeMapWorkable.getParallelLimit())
+                .addCustom(list -> {
+                    if (kevContainer.getKev() > 0) {
+                        list.add(TextComponentUtil.translationWithColor(TextFormatting.GREEN,
+                                "gtb.multiblock.kev_reception", kevContainer.getKev()));
+                    } else {
+                        list.add(TextComponentUtil.translationWithColor(TextFormatting.RED,
+                                "gtb.multiblock.kev_reception.none"));
+                    }
+                })
+                .addWorkingStatusLine()
+                .addProgressLine(recipeMapWorkable.getProgressPercent());
     }
 }
