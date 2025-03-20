@@ -1,6 +1,5 @@
 package gtb.api.recipes;
 
-import gtb.api.recipes.properties.KevRecipeProperty;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.jetbrains.annotations.NotNull;
 
@@ -11,6 +10,8 @@ import gregtech.api.recipes.recipeproperties.RecipePropertyStorage;
 import gregtech.api.util.EnumValidationResult;
 import gregtech.api.util.GTLog;
 import gregtech.api.util.ValidationResult;
+
+import gtb.api.recipes.properties.KevRecipeProperty;
 
 public class KevRecipeBuilder extends RecipeBuilder<KevRecipeBuilder> {
 

@@ -1,14 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
-import codechicken.lib.render.CCRenderState;
-import codechicken.lib.render.pipeline.IVertexOperation;
-import codechicken.lib.vec.Matrix4;
-import gregtech.api.capability.GregtechDataCodes;
-import gregtech.api.capability.GregtechTileCapabilities;
-import gregtech.api.capability.IControllable;
-import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
-import gregtech.api.util.TextComponentUtil;
-import gregtech.common.ConfigHolder;
+import java.util.List;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
@@ -25,31 +18,41 @@ import org.jetbrains.annotations.NotNull;
 
 import com.google.common.collect.Lists;
 
+import gregtech.api.capability.GregtechDataCodes;
+import gregtech.api.capability.GregtechTileCapabilities;
+import gregtech.api.capability.IControllable;
 import gregtech.api.capability.IEnergyContainer;
 import gregtech.api.capability.impl.EnergyContainerList;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
+import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
 import gregtech.api.metatileentity.multiblock.MultiblockWithDisplayBase;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.util.RelativeDirection;
+import gregtech.api.util.TextComponentUtil;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
+import codechicken.lib.render.CCRenderState;
+import codechicken.lib.render.pipeline.IVertexOperation;
+import codechicken.lib.vec.Matrix4;
 import gtb.api.capabilities.GTBMultiblockAbilities;
+import gtb.api.capabilities.IKevMachine;
 import gtb.api.capabilities.KevContainer;
+import lombok.Getter;
 
-import java.util.List;
+public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implements IControllable, IKevMachine {
 
-public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implements IControllable {
-
-    private IEnergyContainer energyContainer;
+    @Getter
     private KevContainer kevContainer;
+    private IEnergyContainer energyContainer;
     private boolean isWorkingEnabled;
     protected boolean hasNotEnoughEnergy;
     private boolean isActive = false;
@@ -89,7 +92,7 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     @Override
     protected void updateFormedValid() {
         if (!isWorkingEnabled) {
-            this.kevContainer.reset();
+            getKevContainer().reset();
             return;
         }
         int energyToConsume = this.euConsumption;
@@ -109,7 +112,7 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
                 long consumed = this.energyContainer.removeEnergy(energyToConsume);
                 if (consumed == -energyToConsume) {
                     setActive(true);
-                    this.kevContainer.setKev(kevProduction);
+                    getKevContainer().setKev(kevProduction);
                 } else {
                     deactivate();
                 }
@@ -122,8 +125,7 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     private void deactivate() {
         this.hasNotEnoughEnergy = true;
         setActive(false);
-        this.kevContainer.reset();
-
+        getKevContainer().reset();
     }
 
     @Override
@@ -152,7 +154,6 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
         }
     }
 
-
     public IBlockState getCasingState() {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
     }
@@ -178,7 +179,6 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
         getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(), this.isActive(),
                 this.isWorkingEnabled());
     }
-
 
     @SideOnly(Side.CLIENT)
     @Override
@@ -246,10 +246,11 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
                 .setWorkingStatusKeys(
                         "gregtech.multiblock.idling",
                         "gregtech.multiblock.idling",
-                "")
+                        "")
                 .addEnergyUsageExactLine(euConsumption)
                 .addWorkingStatusLine()
-                .addCustom(list -> list.add(TextComponentUtil.translationWithColor(TextFormatting.WHITE,"gtb.multiblock.kev_production", kevContainer.getKev())));
+                .addCustom(list -> list.add(TextComponentUtil.translationWithColor(TextFormatting.WHITE,
+                        "gtb.multiblock.kev_production", kevContainer.getKev())));
     }
 
     @Override
