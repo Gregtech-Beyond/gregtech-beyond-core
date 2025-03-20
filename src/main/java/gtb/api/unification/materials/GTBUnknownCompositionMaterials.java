@@ -1002,6 +1002,10 @@ public class GTBUnknownCompositionMaterials {
         PotasssiumFluoroTantalate = new Material.Builder(getMaterialsId(), gregtechId("potassium_fluoro_tantalite"))
                 .dust()
                 .color(0x00DC51).build().setFormula("K2TaF7", true);
+
+        NuclearWaste = new Material.Builder(getMaterialsId(), gregtechId("nuclear_waste"))
+                .dust()
+                .color(0x00DC52).build();
     }
 
     private static int getMaterialsId() {

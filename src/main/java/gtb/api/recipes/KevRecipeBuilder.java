@@ -47,11 +47,11 @@ public class KevRecipeBuilder extends RecipeBuilder<KevRecipeBuilder> {
     public ValidationResult<Recipe> build() {
         if (this.recipePropertyStorage == null) this.recipePropertyStorage = new RecipePropertyStorage();
         if (this.recipePropertyStorage.hasRecipeProperty(KevRecipeProperty.getInstance())) {
-            if (this.recipePropertyStorage.getRecipePropertyValue(KevRecipeProperty.getInstance(), 0) < 0) {
-                this.recipePropertyStorage.store(KevRecipeProperty.getInstance(), 0);
+            if (this.recipePropertyStorage.getRecipePropertyValue(KevRecipeProperty.getInstance(), KevRecipeProperty.DEFAULT_VALUE) < 0) {
+                this.recipePropertyStorage.store(KevRecipeProperty.getInstance(), KevRecipeProperty.DEFAULT_VALUE);
             }
         } else {
-            this.recipePropertyStorage.store(KevRecipeProperty.getInstance(), 0);
+            this.recipePropertyStorage.store(KevRecipeProperty.getInstance(), KevRecipeProperty.DEFAULT_VALUE);
         }
         return super.build();
     }
@@ -67,7 +67,7 @@ public class KevRecipeBuilder extends RecipeBuilder<KevRecipeBuilder> {
 
     public int getKeV() {
         return this.recipePropertyStorage == null ? 0 :
-                this.recipePropertyStorage.getRecipePropertyValue(KevRecipeProperty.getInstance(), 0);
+                this.recipePropertyStorage.getRecipePropertyValue(KevRecipeProperty.getInstance(), KevRecipeProperty.DEFAULT_VALUE);
     }
 
     @Override

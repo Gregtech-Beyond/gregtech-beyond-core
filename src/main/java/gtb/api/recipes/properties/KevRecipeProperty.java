@@ -10,6 +10,7 @@ import gregtech.api.recipes.recipeproperties.RecipeProperty;
 public class KevRecipeProperty extends RecipeProperty<Integer> {
 
     public static final String KEY = "kev";
+    public static final int DEFAULT_VALUE = 0;
 
     private static KevRecipeProperty INSTANCE;
 

@@ -23,7 +23,6 @@ public class KevContainer extends MTETrait {
 
     private int kev;
     private final boolean isInput;
-    private BlockPos blockPos;
     private final int maxRange = 20;
 
     public KevContainer(@NotNull MetaTileEntity metaTileEntity, boolean isInput) {
@@ -88,14 +87,15 @@ public class KevContainer extends MTETrait {
                         return null;
                     } else return foundKevContainer;
                 } return null;
-            } else scanDistance++;
+            }
+            scanDistance++;
         }
         return null;
     }
 
     private boolean isAir(World world, int scanDistance) {
         IBlockState scanBlockState = world.getBlockState(getBlockPosToScan(scanDistance));
-        return scanBlockState != Blocks.AIR.getDefaultState();
+        return scanBlockState == Blocks.AIR.getDefaultState();
     }
 
     private BlockPos getBlockPosToScan(int scanDistance) {
