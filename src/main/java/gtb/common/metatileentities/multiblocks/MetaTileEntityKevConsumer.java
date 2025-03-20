@@ -45,7 +45,7 @@ public class MetaTileEntityKevConsumer extends RecipeMapMultiblockController imp
 
     public MetaTileEntityKevConsumer(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.KEV_RECIPE_MAP);
-        this.recipeMapWorkable = new KevConsumerLogic(this, this);
+        this.recipeMapWorkable = new KevConsumerLogic(this);
     }
 
     @Override

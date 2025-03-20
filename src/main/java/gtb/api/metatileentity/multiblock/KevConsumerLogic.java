@@ -8,21 +8,20 @@ import gtb.api.capabilities.KevContainer;
 import gtb.common.metatileentities.multiblocks.MetaTileEntityKevConsumer;
 
 public class KevConsumerLogic extends MultiblockRecipeLogic {
+    private IKevMachine kevMachine;
 
-    private KevContainer kevContainer;
-
-    public KevConsumerLogic(RecipeMapMultiblockController tileEntity, IKevMachine kevMachine) {
+    public KevConsumerLogic(RecipeMapMultiblockController tileEntity) {
         super(tileEntity);
-        this.kevContainer = kevMachine.getKevContainer();
+        this.kevMachine = (IKevMachine) tileEntity;
     }
-
 
     @Override
     public void updateWorkable() {
         super.update();
         if (metaTileEntity.getOffsetTimer() % 20 == 0) {
-            if (this.kevContainer == null) return;
-            this.kevContainer.scanAndSetKev();
+            KevContainer kevContainer = kevMachine.getKevContainer();
+            if (kevContainer == null) return;
+            kevContainer.scanAndSetKev();
         }
     }
 }

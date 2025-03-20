@@ -1,5 +1,7 @@
 package gtb.api.capabilities;
 
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.tileentity.TileEntity;
@@ -78,17 +80,26 @@ public class KevContainer extends MTETrait {
         World world = this.metaTileEntity.getWorld();
         int scanDistance = 1;
         while (scanDistance < maxRange) {
-            TileEntity tileEntity = world.getTileEntity(getBlockPos().offset(getFrontFacing(), scanDistance));
-            if (tileEntity == null) {
-                scanDistance++;
-            } else {
-                KevContainer foundKevContainer = tileEntity.getCapability(GTBTileCapabilities.CAPABILITY_KEV_CONTAINER, getFrontFacing().getOpposite());
-                if (foundKevContainer == null || foundKevContainer.isInput) {
-                    return null;
-                } else return foundKevContainer;
-            }
+            if (!isAir(world, scanDistance)) {
+                TileEntity scanTileEntity = world.getTileEntity(getBlockPosToScan(scanDistance));
+                if (scanTileEntity != null) {
+                    KevContainer foundKevContainer = scanTileEntity.getCapability(GTBTileCapabilities.CAPABILITY_KEV_CONTAINER, getFrontFacing().getOpposite());
+                    if (foundKevContainer == null || foundKevContainer.isInput) {
+                        return null;
+                    } else return foundKevContainer;
+                } return null;
+            } else scanDistance++;
         }
         return null;
+    }
+
+    private boolean isAir(World world, int scanDistance) {
+        IBlockState scanBlockState = world.getBlockState(getBlockPosToScan(scanDistance));
+        return scanBlockState != Blocks.AIR.getDefaultState();
+    }
+
+    private BlockPos getBlockPosToScan(int scanDistance) {
+        return getBlockPos().offset(getFrontFacing(), scanDistance);
     }
 
     @Override
