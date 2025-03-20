@@ -90,6 +90,10 @@ recipemap.vacuum_ejection_recipes.name=Vacuum Ejection Recipes
 recipemap.dryer_recipes.name=Dryer Recipes
 recipemap.sintering_oven_recipes.name=Sintering
 recipemap.high_temp_distillation_recipes.name=High Temperature Distillation
+
+# Recêipe properties
+gregtech.recipe.kev=Neutron Kinetic Energy: %d kEv
+
 # Singleblock machinery
 
 gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator
@@ -1418,7 +1422,7 @@ material.trace_rhenium_flue=Trace Rhenium Flue Gas
 
 # Tooltips
 
-
+gtb.multiblock.kev_production=Producing %d kEv
 
 
 

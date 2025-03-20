@@ -40,6 +40,10 @@ public class KevContainer extends MTETrait {
         this.metaTileEntity.markDirty();
     }
 
+    public void reset() {
+        setKev(0);
+    }
+
     @Override
     @NotNull
     public NBTTagCompound serializeNBT() {

@@ -3,9 +3,21 @@ package gtb.common.metatileentities.multiblocks;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
+import gregtech.api.capability.GregtechDataCodes;
+import gregtech.api.capability.GregtechTileCapabilities;
 import gregtech.api.capability.IControllable;
+import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
+import gregtech.api.util.TextComponentUtil;
+import gregtech.common.ConfigHolder;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.PacketBuffer;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -32,13 +44,17 @@ import gregtech.common.blocks.MetaBlocks;
 import gtb.api.capabilities.GTBMultiblockAbilities;
 import gtb.api.capabilities.KevContainer;
 
+import java.util.List;
+
 public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implements IControllable {
 
     private IEnergyContainer energyContainer;
     private KevContainer kevContainer;
     private boolean isWorkingEnabled;
+    protected boolean hasNotEnoughEnergy;
+    private boolean isActive = false;
     private int kevProduction;
-    private final long euConsumption = 1024;
+    private final int euConsumption = 1024;
     private final int baseKevProduction = 300;
 
     public MetaTileEntityKevGenerator(ResourceLocation metaTileEntityId) {
@@ -67,11 +83,48 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     }
 
     private void calculateKevProduction() {
-
+        kevProduction = baseKevProduction;
     }
 
     @Override
-    protected void updateFormedValid() {}
+    protected void updateFormedValid() {
+        if (!isWorkingEnabled) {
+            this.kevContainer.reset();
+            return;
+        }
+        int energyToConsume = this.euConsumption;
+        calculateKevProduction();
+        boolean hasMaintenance = ConfigHolder.machines.enableMaintenance && hasMaintenanceMechanics();
+        if (hasMaintenance) {
+            // 10% more energy per maintenance problem
+            energyToConsume += getNumMaintenanceProblems() * energyToConsume / 10;
+        }
+
+        if (this.hasNotEnoughEnergy && energyContainer.getInputPerSec() > 19L * energyToConsume) {
+            this.hasNotEnoughEnergy = false;
+        }
+
+        if (this.energyContainer.getEnergyStored() >= energyToConsume) {
+            if (!hasNotEnoughEnergy) {
+                long consumed = this.energyContainer.removeEnergy(energyToConsume);
+                if (consumed == -energyToConsume) {
+                    setActive(true);
+                    this.kevContainer.setKev(kevProduction);
+                } else {
+                    deactivate();
+                }
+            }
+        } else {
+            deactivate();
+        }
+    }
+
+    private void deactivate() {
+        this.hasNotEnoughEnergy = true;
+        setActive(false);
+        this.kevContainer.reset();
+
+    }
 
     @Override
     public boolean isWorkingEnabled() {
@@ -81,7 +134,24 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     @Override
     public void setWorkingEnabled(boolean isWorkingAllowed) {
         this.isWorkingEnabled = isWorkingAllowed;
+        markDirty();
+        World world = getWorld();
+        if (world != null && !world.isRemote) {
+            writeCustomData(GregtechDataCodes.WORKING_ENABLED, buf -> buf.writeBoolean(isWorkingEnabled));
+        }
     }
+
+    public void setActive(boolean active) {
+        if (this.isActive != active) {
+            this.isActive = active;
+            markDirty();
+            World world = getWorld();
+            if (world != null && !world.isRemote) {
+                writeCustomData(GregtechDataCodes.WORKABLE_ACTIVE, buf -> buf.writeBoolean(active));
+            }
+        }
+    }
+
 
     public IBlockState getCasingState() {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
@@ -90,8 +160,8 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCC", "CSC", "CCC")
-                .aisle("CCC", "CAC", "CCC")
+                .aisle("CCC", "CCC", "CCC")
+                .aisle("CCC", "CAC", "CSC")
                 .aisle("CCC", "CCC", "CCC")
                 .where('S', selfPredicate())
                 .where('A', air())
@@ -126,5 +196,67 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
         return new MetaTileEntityKevGenerator(metaTileEntityId);
+    }
+
+    @Override
+    public NBTTagCompound writeToNBT(NBTTagCompound data) {
+        super.writeToNBT(data);
+        data.setBoolean("isActive", this.isActive);
+        data.setBoolean("isWorkingEnabled", this.isWorkingEnabled);
+        return data;
+    }
+
+    @Override
+    public void readFromNBT(NBTTagCompound data) {
+        super.readFromNBT(data);
+        this.isActive = data.getBoolean("isActive");
+        this.isWorkingEnabled = data.getBoolean("isWorkingEnabled");
+    }
+
+    @Override
+    public void writeInitialSyncData(PacketBuffer buf) {
+        super.writeInitialSyncData(buf);
+        buf.writeBoolean(this.isActive);
+        buf.writeBoolean(this.isWorkingEnabled);
+    }
+
+    @Override
+    public void receiveInitialSyncData(PacketBuffer buf) {
+        super.receiveInitialSyncData(buf);
+        this.isActive = buf.readBoolean();
+        this.isWorkingEnabled = buf.readBoolean();
+    }
+
+    @Override
+    public void receiveCustomData(int dataId, @NotNull PacketBuffer buf) {
+        super.receiveCustomData(dataId, buf);
+        if (dataId == GregtechDataCodes.WORKABLE_ACTIVE) {
+            this.isActive = buf.readBoolean();
+            scheduleRenderUpdate();
+        } else if (dataId == GregtechDataCodes.WORKING_ENABLED) {
+            this.isWorkingEnabled = buf.readBoolean();
+            scheduleRenderUpdate();
+        }
+    }
+
+    @Override
+    protected void addDisplayText(List<ITextComponent> textList) {
+        MultiblockDisplayText.builder(textList, isStructureFormed())
+                .setWorkingStatus(true, isActive() && isWorkingEnabled()) // transform into two-state system for display
+                .setWorkingStatusKeys(
+                        "gregtech.multiblock.idling",
+                        "gregtech.multiblock.idling",
+                "")
+                .addEnergyUsageExactLine(euConsumption)
+                .addWorkingStatusLine()
+                .addCustom(list -> list.add(TextComponentUtil.translationWithColor(TextFormatting.WHITE,"gtb.multiblock.kev_production", kevContainer.getKev())));
+    }
+
+    @Override
+    public <T> T getCapability(Capability<T> capability, EnumFacing side) {
+        if (capability == GregtechTileCapabilities.CAPABILITY_CONTROLLABLE) {
+            return GregtechTileCapabilities.CAPABILITY_CONTROLLABLE.cast(this);
+        }
+        return super.getCapability(capability, side);
     }
 }
