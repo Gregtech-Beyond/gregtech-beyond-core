@@ -183,7 +183,8 @@ gtb.machine.electron_beam_lithographer.luv.name=Elite Electron Beam Lithographer
 gtb.machine.electron_beam_lithographer.zpm.name=Elite Electron Beam Lithographer III
 gtb.machine.electron_beam_lithographer.uv.name=Ultimate Electron Beam Lithographer
 
-
+gtb.machine.kev_output_hatch.name=kEv Output Hatch
+gtb.machine.kev_input_hatch.name=kEv Input Hatch
 
 # Multiblock machine controllers
 

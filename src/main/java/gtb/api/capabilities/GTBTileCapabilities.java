@@ -1,8 +1,9 @@
 package gtb.api.capabilities;
 
-import gregtech.api.capability.SimpleCapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
+
+import gregtech.api.capability.SimpleCapabilityManager;
 
 public class GTBTileCapabilities {
 

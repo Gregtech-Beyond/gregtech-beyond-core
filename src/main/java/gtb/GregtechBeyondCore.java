@@ -2,7 +2,6 @@ package gtb;
 
 import static gregtech.api.GregTechAPI.HEATING_COILS;
 
-import gtb.api.capabilities.GTBTileCapabilities;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -10,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.jetbrains.annotations.NotNull;
 
 import gtb.api.GTBInternalTags;
+import gtb.api.capabilities.GTBTileCapabilities;
 import gtb.api.utils.GTBLog;
 import gtb.common.CommonProxy;
 import gtb.common.block.GTBMetaBlocks;

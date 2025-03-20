@@ -10,6 +10,7 @@ import gregtech.client.renderer.texture.Textures;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
+import gtb.common.metatileentities.multiblockpart.MetaTileEntityKevHatch;
 import gtb.common.metatileentities.multiblocks.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -56,6 +57,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntitySinteringOven SINTERING_OVEN;
     public static MetaTileEntityEnzymaticHydrolisisTank ENZYMATIC_HYDROLISIS_TANK;
     public static MetaTileEntityCuringOven CURING_OVEN;
+    public static MetaTileEntityKevHatch KEV_INPUT_HATCH;
+    public static MetaTileEntityKevHatch KEV_OUTPUT_HATCH;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -139,6 +142,8 @@ public final class GTBMetaTileEntities {
         ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
                 new MetaTileEntityEnzymaticHydrolisisTank(gtb("enzymatic_hydrolisis_tank")));
         CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
+        KEV_OUTPUT_HATCH = registerMetaTileEntity(3040, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), false));
+        KEV_INPUT_HATCH = registerMetaTileEntity(3041, new MetaTileEntityKevHatch(gtb("kev_input_hatch"), true));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",

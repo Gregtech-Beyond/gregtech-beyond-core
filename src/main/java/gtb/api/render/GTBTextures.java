@@ -33,6 +33,12 @@ public final class GTBTextures {
             "multiblock/large_cvd_unit");
     public static SimpleOverlayRenderer CURING_OVEN_OVERLAY = new SimpleOverlayRenderer(
             "multiblock/curing_oven");
+    public static final SimpleOverlayRenderer KEV_MULTIBLOCK_HATCH = new SimpleOverlayRenderer(
+            "hatches/kev_multiblock_hatch/cube_all");
+    public static SimpleOverlayRenderer KEV_HATCH_OUTPUT_OVERLAY = new SimpleOverlayRenderer(
+            "hatches/kev_multiblock_hatch/output_overlay");
+    public static SimpleOverlayRenderer KEV_HATCH_INPUT_OVERLAY = new SimpleOverlayRenderer(
+            "hatches/kev_multiblock_hatch/input_overlay");
 
     private GTBTextures() {}
 
