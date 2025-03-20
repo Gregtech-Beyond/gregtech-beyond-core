@@ -2,6 +2,7 @@ package gtb;
 
 import static gregtech.api.GregTechAPI.HEATING_COILS;
 
+import gtb.api.capabilities.GTBTileCapabilities;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -35,6 +36,7 @@ public class GregtechBeyondCore {
     public void onPreInit(@NotNull FMLPreInitializationEvent event) {
         GTBLog.init(event.getModLog());
 
+        GTBTileCapabilities.register();
         GTBMetaItems.init();
         GTBMetaBlocks.init();
         GTBMetaTileEntities.init();
