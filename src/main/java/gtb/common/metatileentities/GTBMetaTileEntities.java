@@ -59,6 +59,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityCuringOven CURING_OVEN;
     public static MetaTileEntityKevHatch KEV_INPUT_HATCH;
     public static MetaTileEntityKevHatch KEV_OUTPUT_HATCH;
+    public static MetaTileEntityKevGenerator KEV_GENERATOR;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -144,6 +145,7 @@ public final class GTBMetaTileEntities {
         CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
         KEV_OUTPUT_HATCH = registerMetaTileEntity(3040, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), false));
         KEV_INPUT_HATCH = registerMetaTileEntity(3041, new MetaTileEntityKevHatch(gtb("kev_input_hatch"), true));
+        KEV_GENERATOR = registerMetaTileEntity(3042, new MetaTileEntityKevGenerator(gtb("kev_generator")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
