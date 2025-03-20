@@ -42,7 +42,7 @@ public class MetaTileEntityKevConsumer extends RecipeMapMultiblockController imp
 
     @Override
     protected void initializeAbilities() {
-        this.kevContainer = new KevContainer(this, true);
+        super.initializeAbilities();
         if (!getAbilities(GTBMultiblockAbilities.KEV_CONTAINER_INPUT).isEmpty()) {
             this.kevContainer = getAbilities(GTBMultiblockAbilities.KEV_CONTAINER_INPUT).get(0);
         }

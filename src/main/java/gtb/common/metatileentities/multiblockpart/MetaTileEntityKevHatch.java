@@ -34,7 +34,6 @@ public class MetaTileEntityKevHatch extends MetaTileEntityMultiblockPart
     public MetaTileEntityKevHatch(ResourceLocation metaTileEntityId, boolean isInput) {
         super(metaTileEntityId, 1);
         this.isInput = isInput;
-
         this.kevContainer = new KevContainer(this, isInput);
     }
 

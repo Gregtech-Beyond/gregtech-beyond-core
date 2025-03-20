@@ -66,11 +66,14 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
 
     private void initializeAbilities() {
         this.energyContainer = new EnergyContainerList(getAbilities(MultiblockAbility.INPUT_ENERGY));
-        this.kevContainer = new KevContainer(this, false);
+        if (!getAbilities(GTBMultiblockAbilities.KEV_CONTAINER_OUTPUT).isEmpty()) {
+            this.kevContainer = getAbilities(GTBMultiblockAbilities.KEV_CONTAINER_OUTPUT).get(0);
+        }
     }
 
     private void resetTileAbilities() {
         this.energyContainer = new EnergyContainerList(Lists.newArrayList());
+        this.kevContainer.reset();
     }
 
     @Override
@@ -91,6 +94,7 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
 
     @Override
     protected void updateFormedValid() {
+        if (getKevContainer() == null) return;
         if (!isWorkingEnabled) {
             getKevContainer().reset();
             return;

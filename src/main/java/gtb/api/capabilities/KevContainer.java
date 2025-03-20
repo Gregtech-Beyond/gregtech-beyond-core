@@ -2,6 +2,8 @@ package gtb.api.capabilities;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.capabilities.Capability;
 
 import org.jetbrains.annotations.NotNull;
@@ -16,6 +18,7 @@ public class KevContainer extends MTETrait {
 
     private int kev;
     private final boolean isInput;
+    private BlockPos blockPos;
 
     public KevContainer(@NotNull MetaTileEntity metaTileEntity, boolean isInput) {
         super(metaTileEntity);
@@ -33,6 +36,14 @@ public class KevContainer extends MTETrait {
             return GTBTileCapabilities.CAPABILITY_KEV_CONTAINER.cast(this);
         }
         return null;
+    }
+
+    public BlockPos getBlockPos() {
+        return this.metaTileEntity.getPos();
+    }
+
+    public EnumFacing getFrontFacing() {
+        return this.metaTileEntity.getFrontFacing();
     }
 
     public void setKev(int value) {
