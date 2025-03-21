@@ -814,6 +814,7 @@ public class GTBMaterials {
     public static Material KevlarConcentrate;
     public static Material KevlarBlend;
     public static Material PurifiedKevlarConcentrate;
+    public static Material NuclearWaste;
 
     // Fantasy Materials
     public static Material AwakenedDraconium;

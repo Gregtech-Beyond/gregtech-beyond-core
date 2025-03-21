@@ -99,5 +99,7 @@ public final class GTBRecipeLoader {
         BasicOreProcessingOverhaul.init();
         ArsenicProcessing.init();
         AntimonyProcessing.init();
+
+        KevTestRecipes.register();
     }
 }

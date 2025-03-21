@@ -4,12 +4,15 @@ import static gregtech.common.metatileentities.MetaTileEntities.*;
 import static gtb.api.utils.GTBUtil.gtb;
 
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
+import gregtech.api.unification.material.Materials;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.texture.Textures;
 
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
+import gtb.common.metatileentities.multiblockpart.MetaTileEntityKevCooler;
+import gtb.common.metatileentities.multiblockpart.MetaTileEntityKevHatch;
 import gtb.common.metatileentities.multiblocks.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -56,6 +59,10 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntitySinteringOven SINTERING_OVEN;
     public static MetaTileEntityEnzymaticHydrolisisTank ENZYMATIC_HYDROLISIS_TANK;
     public static MetaTileEntityCuringOven CURING_OVEN;
+    public static MetaTileEntityKevHatch KEV_INPUT_HATCH;
+    public static MetaTileEntityKevHatch KEV_OUTPUT_HATCH;
+    public static MetaTileEntityKevGenerator KEV_GENERATOR;
+    public static MetaTileEntityKevConsumer KEV_CONSUMER;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -68,6 +75,7 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] ELECTRON_BEAM_LITHOGRAPHER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] BIO_REACTOR_SINGLE = new SimpleMachineMetaTileEntity[6];
     public static SimpleMachineMetaTileEntity[] VACUUM_EJECTOR = new SimpleMachineMetaTileEntity[4];
+    public static MetaTileEntityKevCooler[] KEV_COOLERS = new MetaTileEntityKevCooler[4];
 
     public static void init() {
         // Multiblocks
@@ -139,6 +147,12 @@ public final class GTBMetaTileEntities {
         ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
                 new MetaTileEntityEnzymaticHydrolisisTank(gtb("enzymatic_hydrolisis_tank")));
         CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
+        KEV_OUTPUT_HATCH = registerMetaTileEntity(3040, new MetaTileEntityKevHatch(gtb("kev_output_hatch"), false));
+        KEV_INPUT_HATCH = registerMetaTileEntity(3041, new MetaTileEntityKevHatch(gtb("kev_input_hatch"), true));
+        KEV_GENERATOR = registerMetaTileEntity(3042, new MetaTileEntityKevGenerator(gtb("kev_generator")));
+        KEV_CONSUMER = registerMetaTileEntity(3043, new MetaTileEntityKevConsumer(gtb("kev_consumer")));
+        KEV_COOLERS[0] = registerMetaTileEntity(3044, new MetaTileEntityKevCooler(Materials.Diamond, 10));
+        KEV_COOLERS[1] = registerMetaTileEntity(3045, new MetaTileEntityKevCooler(Materials.Redstone, 20));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
