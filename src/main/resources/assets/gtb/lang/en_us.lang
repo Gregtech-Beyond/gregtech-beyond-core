@@ -1427,7 +1427,8 @@ gtb.multiblock.kev_reception=Receiving %d kEv
 gtb.multiblock.kev_reception.none=No kEv source found
 
 
-
+# Tooltips
+gtb.machine.kev_cooler.cooling_amount=§fReduces the produced §akEv §fby §b%d
 
 
 
