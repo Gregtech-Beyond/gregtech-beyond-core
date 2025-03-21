@@ -11,7 +11,7 @@ public class KevTestRecipes {
         GTBRecipeMaps.KEV_RECIPE_MAP.recipeBuilder()
                 .input(OrePrefix.ingot, Materials.Steel)
                 .output(OrePrefix.plate, Materials.Steel)
-                .kEv(300)
+                .kEv(270)
                 .EUt(100)
                 .duration(100)
                 .buildAndRegister();
