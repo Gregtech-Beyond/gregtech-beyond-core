@@ -1,21 +1,25 @@
 package gtb.common.metatileentities.multiblocks;
 
-import static gtb.api.utils.GTBMultiblockDisplayTextUtil.addColorNumber;
+import static gtb.api.utils.GTBMultiblockDisplayTextUtil.*;
 
 import java.util.List;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import gregtech.api.capability.GregtechTileCapabilities;
 import gregtech.api.capability.IControllable;
@@ -41,14 +45,17 @@ import gtb.api.capabilities.GTBMultiblockAbilities;
 import gtb.api.capabilities.IKevMachine;
 import gtb.api.capabilities.KevContainer;
 import gtb.api.metatileentity.multiblock.KevGeneratorLogic;
+import gtb.api.utils.GTBMultiblockDisplayTextUtil;
 
 public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implements IControllable, IKevMachine {
 
     private KevGeneratorLogic logic;
+    public static final int BASE_KEV_PRODUCTION = 300;
+    public static final int BASE_EU_CONSUMPTION = 1024;
 
     public MetaTileEntityKevGenerator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId);
-        this.logic = new KevGeneratorLogic(this);
+        this.logic = new KevGeneratorLogic(this, BASE_EU_CONSUMPTION, BASE_KEV_PRODUCTION);
     }
 
     @Override
@@ -137,17 +144,27 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
                         this.logic.getCoolingAmount(),
                         TextFormatting.WHITE,
                         "gtb.multiblock.kev_generator.cooling"))
-                .addCustom(addColorNumber(
+                .addCustom(GTBMultiblockDisplayTextUtil.addColorNumberCondition(
                         TextFormatting.GREEN,
                         this.logic.getKevContainer().getKev(),
                         TextFormatting.WHITE,
                         "gtb.multiblock.kev_generator.kev_production",
                         isActive()))
-                .addCustom(addColorNumber(TextFormatting.GREEN,
+                .addCustom(GTBMultiblockDisplayTextUtil.addColorNumberCondition(TextFormatting.GREEN,
                         this.logic.getKevProduction(),
                         TextFormatting.GRAY,
                         "gtb.multiblock.kev_generator.kev_production.expected",
                         !isActive()));
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World player, @NotNull List<String> tooltip,
+                               boolean advanced) {
+        tooltip.add(I18n.format("gtb.machine.kev_generator.usage"));
+        tooltip.add(I18n.format("gregtech.universal.tooltip.uses_per_tick", BASE_EU_CONSUMPTION));
+        tooltip.add(I18n.format("gtb.machine.kev_generator.base_kev_production", BASE_KEV_PRODUCTION));
+        tooltip.add(I18n.format("gtb.machine.kev_generator.coolers.tooltip"));
+        tooltip.add(I18n.format("gtb.machine.kev_generator.output_hatch.tooltip"));
     }
 
     @Override

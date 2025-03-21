@@ -39,11 +39,12 @@ public class KevGeneratorLogic {
     private final MultiblockWithDisplayBase metaTileEntity;
     private IEnergyContainer energyContainer;
     protected boolean hasNotEnoughEnergy;
-    private static final int base_kev_production = 300;
-    private static final int base_eu_consumption = 1024;
+    private final int baseKevProduction, baseEuConsumption;
 
-    public KevGeneratorLogic(MultiblockWithDisplayBase metaTileEntity) {
+    public KevGeneratorLogic(MultiblockWithDisplayBase metaTileEntity, int baseEuConsumption, int baseKevProduction) {
         this.metaTileEntity = metaTileEntity;
+        this.baseEuConsumption = baseEuConsumption;
+        this.baseKevProduction = baseKevProduction;
     }
 
     public void initializeAbilities() {
@@ -62,7 +63,7 @@ public class KevGeneratorLogic {
     }
 
     private void setKevProduction() {
-        this.kevProduction = base_kev_production - this.coolingAmount;
+        this.kevProduction = baseKevProduction - this.coolingAmount;
     }
 
     public void resetTileAbilities() {
@@ -80,7 +81,7 @@ public class KevGeneratorLogic {
             return;
         }
 
-        euConsumption = base_eu_consumption;
+        euConsumption = baseEuConsumption;
 
         boolean hasMaintenance = ConfigHolder.machines.enableMaintenance &&
                 this.metaTileEntity.hasMaintenanceMechanics();

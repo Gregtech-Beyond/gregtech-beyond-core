@@ -3,13 +3,17 @@ package gtb.common.metatileentities.multiblocks;
 import java.util.List;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
@@ -101,6 +105,15 @@ public class MetaTileEntityKevConsumer extends RecipeMapMultiblockController imp
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
         return new MetaTileEntityKevConsumer(metaTileEntityId);
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World player, @NotNull List<String> tooltip,
+                               boolean advanced) {
+        tooltip.add(I18n.format("gtb.machine.kev_consumer.usage"));
+        tooltip.add(I18n.format("gtb.machine.kev_consumer.generator.tooltip"));
+        tooltip.add(I18n.format("gtb.machine.kev_consumer.recipe.tooltip"));
+        tooltip.add(I18n.format("gtb.machine.kev_consumer.fail_recipe.tooltip", "nuclear waste"));
     }
 
     @Override

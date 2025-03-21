@@ -1432,6 +1432,16 @@ gtb.multiblock.kev_reception.none=No kEv source found
 # Tooltips
 gtb.machine.kev_cooler.cooling_amount=§fReduces the produced §akEv §fby §b%d
 
+gtb.machine.kev_generator.usage=Accelerates particles.
+gtb.machine.kev_generator.base_kev_production=Base production: §a%d kEv§r.
+gtb.machine.kev_generator.coolers.tooltip=Production can be reduced by placing §bCoolers§r.
+gtb.machine.kev_generator.output_hatch.tooltip=To work properly, the Kev output hatch must face a Kev input hatch within a free 20 blocks straight line.
+
+gtb.machine.kev_consumer.usage=Write something interesting.
+gtb.machine.kev_consumer.generator.tooltip=To work properly, use a §fNeutron Activator§7 to accelerate the particles.
+gtb.machine.kev_consumer.recipe.tooltip=The value received must match §6EXACTLY§7 the value of the recipe. Otherwise the recipe will not start or fail.
+gtb.machine.kev_consumer.fail_recipe.tooltip=If the recipe fails, it outputs %s.
+
 
 
 
