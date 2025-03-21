@@ -52,10 +52,12 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
 
     @Getter
     private KevContainer kevContainer;
-    private IEnergyContainer energyContainer;
+    @Getter
     private boolean isWorkingEnabled;
+    private IEnergyContainer energyContainer;
     protected boolean hasNotEnoughEnergy;
-    private boolean isActive = false;
+    private boolean isWorking = false;
+    private int coolingAmount = 0;
     private int kevProduction;
     private final int euConsumption = 1024;
     private final int baseKevProduction = 300;
@@ -68,7 +70,20 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
         this.energyContainer = new EnergyContainerList(getAbilities(MultiblockAbility.INPUT_ENERGY));
         if (!getAbilities(GTBMultiblockAbilities.KEV_CONTAINER_OUTPUT).isEmpty()) {
             this.kevContainer = getAbilities(GTBMultiblockAbilities.KEV_CONTAINER_OUTPUT).get(0);
+            setCoolingAmount();
+            setKevProduction();
         }
+    }
+
+    private void setCoolingAmount() {
+        if (!getAbilities(GTBMultiblockAbilities.KEV_COOLER).isEmpty()) {
+            getAbilities(GTBMultiblockAbilities.KEV_COOLER)
+                    .forEach(cooler -> coolingAmount += cooler.getCoolingAmount());
+        }
+    }
+
+    private void setKevProduction() {
+        this.kevProduction = this.baseKevProduction - this.coolingAmount;
     }
 
     private void resetTileAbilities() {
@@ -88,19 +103,14 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
         resetTileAbilities();
     }
 
-    private void calculateKevProduction() {
-        kevProduction = baseKevProduction;
-    }
-
     @Override
     protected void updateFormedValid() {
-        if (getKevContainer() == null) return;
-        if (!isWorkingEnabled) {
-            getKevContainer().reset();
+        if (!isWorkingEnabled()) {
+            setWorking(false);
             return;
         }
+
         int energyToConsume = this.euConsumption;
-        calculateKevProduction();
         boolean hasMaintenance = ConfigHolder.machines.enableMaintenance && hasMaintenanceMechanics();
         if (hasMaintenance) {
             // 10% more energy per maintenance problem
@@ -115,26 +125,16 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
             if (!hasNotEnoughEnergy) {
                 long consumed = this.energyContainer.removeEnergy(energyToConsume);
                 if (consumed == -energyToConsume) {
-                    setActive(true);
-                    getKevContainer().setKev(kevProduction);
+                    setWorking(true);
                 } else {
-                    deactivate();
+                    this.hasNotEnoughEnergy = true;
+                    setWorking(false);
                 }
             }
         } else {
-            deactivate();
+            this.hasNotEnoughEnergy = true;
+            setWorking(false);
         }
-    }
-
-    private void deactivate() {
-        this.hasNotEnoughEnergy = true;
-        setActive(false);
-        getKevContainer().reset();
-    }
-
-    @Override
-    public boolean isWorkingEnabled() {
-        return this.isWorkingEnabled;
     }
 
     @Override
@@ -147,13 +147,17 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
         }
     }
 
-    public void setActive(boolean active) {
-        if (this.isActive != active) {
-            this.isActive = active;
+    public void setWorking(boolean working) {
+        if (working) getKevContainer().setKev(kevProduction);
+        else getKevContainer().reset();
+
+        if (this.isWorking != working) {
+            this.isWorking = working;
+
             markDirty();
             World world = getWorld();
             if (world != null && !world.isRemote) {
-                writeCustomData(GregtechDataCodes.WORKABLE_ACTIVE, buf -> buf.writeBoolean(active));
+                writeCustomData(GregtechDataCodes.WORKABLE_ACTIVE, buf -> buf.writeBoolean(working));
             }
         }
     }
@@ -165,11 +169,12 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("CCC", "CCC", "CCC")
-                .aisle("CCC", "CAC", "CSC")
-                .aisle("CCC", "CCC", "CCC")
+                .aisle("CCC", "CCC", "CCC", "CCC")
+                .aisle("CCC", "GOG", "GOG", "CSC")
+                .aisle("CCC", "CCC", "CCC", "CCC")
                 .where('S', selfPredicate())
-                .where('A', air())
+                .where('O', abilities(GTBMultiblockAbilities.KEV_COOLER))
+                .where('G', states(MetaBlocks.TRANSPARENT_CASING.getDefaultState()))
                 .where('C', states(getCasingState()).setMinGlobalLimited(18)
                         .or(autoAbilities())
                         .or(abilities(GTBMultiblockAbilities.KEV_CONTAINER_OUTPUT).setExactLimit(1))
@@ -203,9 +208,14 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     }
 
     @Override
+    public boolean isActive() {
+        return super.isActive() && this.isWorking;
+    }
+
+    @Override
     public NBTTagCompound writeToNBT(NBTTagCompound data) {
         super.writeToNBT(data);
-        data.setBoolean("isActive", this.isActive);
+        data.setBoolean("isWorking", this.isWorking);
         data.setBoolean("isWorkingEnabled", this.isWorkingEnabled);
         return data;
     }
@@ -213,21 +223,21 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     @Override
     public void readFromNBT(NBTTagCompound data) {
         super.readFromNBT(data);
-        this.isActive = data.getBoolean("isActive");
+        this.isWorking = data.getBoolean("isWorking");
         this.isWorkingEnabled = data.getBoolean("isWorkingEnabled");
     }
 
     @Override
     public void writeInitialSyncData(PacketBuffer buf) {
         super.writeInitialSyncData(buf);
-        buf.writeBoolean(this.isActive);
+        buf.writeBoolean(this.isWorking);
         buf.writeBoolean(this.isWorkingEnabled);
     }
 
     @Override
     public void receiveInitialSyncData(PacketBuffer buf) {
         super.receiveInitialSyncData(buf);
-        this.isActive = buf.readBoolean();
+        this.isWorking = buf.readBoolean();
         this.isWorkingEnabled = buf.readBoolean();
     }
 
@@ -235,7 +245,7 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     public void receiveCustomData(int dataId, @NotNull PacketBuffer buf) {
         super.receiveCustomData(dataId, buf);
         if (dataId == GregtechDataCodes.WORKABLE_ACTIVE) {
-            this.isActive = buf.readBoolean();
+            this.isWorking = buf.readBoolean();
             scheduleRenderUpdate();
         } else if (dataId == GregtechDataCodes.WORKING_ENABLED) {
             this.isWorkingEnabled = buf.readBoolean();
@@ -244,17 +254,29 @@ public class MetaTileEntityKevGenerator extends MultiblockWithDisplayBase implem
     }
 
     @Override
+    protected void addWarningText(List<ITextComponent> textList) {
+        MultiblockDisplayText.builder(textList, isStructureFormed(), false)
+                .addLowPowerLine(hasNotEnoughEnergy)
+                .addMaintenanceProblemLines(getMaintenanceProblems());
+    }
+
+    @Override
     protected void addDisplayText(List<ITextComponent> textList) {
         MultiblockDisplayText.builder(textList, isStructureFormed())
-                .setWorkingStatus(true, isActive() && isWorkingEnabled()) // transform into two-state system for display
-                .setWorkingStatusKeys(
-                        "gregtech.multiblock.idling",
-                        "gregtech.multiblock.idling",
-                        "")
+                .setWorkingStatus(isWorkingEnabled(), isActive())
                 .addEnergyUsageExactLine(euConsumption)
-                .addWorkingStatusLine()
-                .addCustom(list -> list.add(TextComponentUtil.translationWithColor(TextFormatting.WHITE,
-                        "gtb.multiblock.kev_production", kevContainer.getKev())));
+                .addIdlingLine(isActive())
+                .addRunningPerfectlyLine(true)
+                .addCustom(list -> {
+                    if (!isStructureFormed()) return;
+                    if (isActive()) {
+                        list.add(TextComponentUtil.translationWithColor(TextFormatting.GREEN,
+                                "gtb.multiblock.kev_production", kevContainer.getKev()));
+                    } else {
+                        list.add(TextComponentUtil.translationWithColor(TextFormatting.WHITE,
+                                "gtb.multiblock.kev_production.expected", kevProduction));
+                    }
+                });
     }
 
     @Override

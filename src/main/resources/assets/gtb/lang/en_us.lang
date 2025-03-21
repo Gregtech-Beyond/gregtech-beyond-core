@@ -1423,6 +1423,7 @@ material.trace_rhenium_flue=Trace Rhenium Flue Gas
 # Multiblock display information
 
 gtb.multiblock.kev_production=Producing %d kEv
+gtb.multiblock.kev_production.expected=Will produce %d kEv
 gtb.multiblock.kev_reception=Receiving %d kEv
 gtb.multiblock.kev_reception.none=No kEv source found
 

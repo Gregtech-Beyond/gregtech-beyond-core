@@ -11,12 +11,12 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import gregtech.api.metatileentity.MTETrait;
 import gregtech.api.metatileentity.MetaTileEntity;
 
 import lombok.Getter;
-import org.jetbrains.annotations.Nullable;
 
 @Getter
 public class KevContainer extends MTETrait {
@@ -61,7 +61,8 @@ public class KevContainer extends MTETrait {
     }
 
     /**
-     * If this container in an input, it tries to {@link #findOutputKevContainer()}. If a container is found, its kev value is set
+     * If this container in an input, it tries to {@link #findOutputKevContainer()}. If a container is found, its kev
+     * value is set
      * to the current container, else it is {@link #reset()}.
      */
     public void scanAndSetKev() {
@@ -82,11 +83,13 @@ public class KevContainer extends MTETrait {
             if (!isAir(world, scanDistance)) {
                 TileEntity scanTileEntity = world.getTileEntity(getBlockPosToScan(scanDistance));
                 if (scanTileEntity != null) {
-                    KevContainer foundKevContainer = scanTileEntity.getCapability(GTBTileCapabilities.CAPABILITY_KEV_CONTAINER, getFrontFacing().getOpposite());
+                    KevContainer foundKevContainer = scanTileEntity.getCapability(
+                            GTBTileCapabilities.CAPABILITY_KEV_CONTAINER, getFrontFacing().getOpposite());
                     if (foundKevContainer == null || foundKevContainer.isInput) {
                         return null;
                     } else return foundKevContainer;
-                } return null;
+                }
+                return null;
             }
             scanDistance++;
         }

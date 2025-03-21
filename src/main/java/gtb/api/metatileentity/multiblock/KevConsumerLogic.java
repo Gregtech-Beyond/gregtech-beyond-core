@@ -1,24 +1,26 @@
 package gtb.api.metatileentity.multiblock;
 
-import gregtech.api.capability.impl.MultiblockRecipeLogic;
+import java.util.Collections;
+import java.util.List;
 
+import net.minecraft.item.ItemStack;
+
+import org.jetbrains.annotations.NotNull;
+
+import gregtech.api.capability.impl.MultiblockRecipeLogic;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.util.GTTransferUtils;
+
 import gtb.api.capabilities.IKevMachine;
 import gtb.api.capabilities.KevContainer;
 import gtb.api.recipes.properties.KevRecipeProperty;
 import gtb.api.unification.materials.GTBMaterials;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Collections;
-import java.util.List;
 
 public class KevConsumerLogic extends MultiblockRecipeLogic {
+
     private IKevMachine kevMachine;
     private int recipeKev;
     private int currentKev;
@@ -71,7 +73,8 @@ public class KevConsumerLogic extends MultiblockRecipeLogic {
     }
 
     protected void outputsNuclearWaste() {
-        List<ItemStack> nuclearWaste = Collections.singletonList(OreDictUnifier.get(OrePrefix.dust, GTBMaterials.NuclearWaste));
+        List<ItemStack> nuclearWaste = Collections
+                .singletonList(OreDictUnifier.get(OrePrefix.dust, GTBMaterials.NuclearWaste));
         GTTransferUtils.addItemsToItemHandler(getOutputInventory(), false, nuclearWaste);
     }
 

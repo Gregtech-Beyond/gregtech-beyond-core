@@ -1,38 +1,36 @@
 package gtb.common.metatileentities.multiblockpart;
 
-import codechicken.lib.render.CCRenderState;
-import codechicken.lib.render.pipeline.IVertexOperation;
-import codechicken.lib.vec.Matrix4;
+import static gtb.api.utils.GTBUtil.gtb;
+
+import java.util.List;
+
+import net.minecraft.client.resources.I18n;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import gregtech.api.gui.ModularUI;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockAbilityPart;
 import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.unification.material.Material;
-import gregtech.api.unification.material.Materials;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiblockPart;
+
+import codechicken.lib.render.CCRenderState;
+import codechicken.lib.render.pipeline.IVertexOperation;
+import codechicken.lib.vec.Matrix4;
 import gtb.api.capabilities.GTBMultiblockAbilities;
-import gtb.api.capabilities.GTBTileCapabilities;
 import gtb.api.capabilities.IKevCooler;
-import gtb.api.capabilities.KevContainer;
 import gtb.api.render.GTBTextures;
 import lombok.Getter;
-import net.minecraft.client.resources.I18n;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
-import net.minecraftforge.common.capabilities.Capability;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
-
-import static gtb.api.utils.GTBUtil.gtb;
 
 public class MetaTileEntityKevCooler extends MetaTileEntityMultiblockPart
-                                    implements IMultiblockAbilityPart<IKevCooler>, IKevCooler {
+                                     implements IMultiblockAbilityPart<IKevCooler>, IKevCooler {
 
     private final Material material;
     @Getter

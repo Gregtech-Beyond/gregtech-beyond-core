@@ -1,9 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
-import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
-import gregtech.api.util.GTUtility;
-import gregtech.api.util.TextComponentUtil;
-import lombok.Setter;
+import java.util.List;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
@@ -16,11 +14,14 @@ import org.jetbrains.annotations.NotNull;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
+import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
+import gregtech.api.util.GTUtility;
 import gregtech.api.util.RelativeDirection;
+import gregtech.api.util.TextComponentUtil;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockMetalCasing;
@@ -35,8 +36,6 @@ import gtb.api.capabilities.KevContainer;
 import gtb.api.metatileentity.multiblock.KevConsumerLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 import lombok.Getter;
-
-import java.util.List;
 
 public class MetaTileEntityKevConsumer extends RecipeMapMultiblockController implements IKevMachine {
 
