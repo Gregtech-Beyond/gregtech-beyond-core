@@ -5,6 +5,7 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.fluids.store.FluidStorageKeys;
 import gregtech.api.unification.material.properties.*;
+import net.minecraftforge.gradle.GradleForgeHacks;
 
 public class GTBMaterialPropertyAddition {
 
@@ -27,7 +28,11 @@ public class GTBMaterialPropertyAddition {
         SodiumSulfide.setProperty(PropertyKey.FLUID,
                 new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
 
+        Selenium.setProperty(PropertyKey.DUST, new DustProperty());
+        Iron3Chloride.setProperty(PropertyKey.DUST, new DustProperty());
+        Tellurium.setProperty(PropertyKey.DUST, new DustProperty());
         Moscovium.setProperty(PropertyKey.DUST, new DustProperty());
+        Rubidium.setProperty(PropertyKey.DUST, new DustProperty());
         Nihonium.setProperty(PropertyKey.DUST, new DustProperty());
         Thallium.setProperty(PropertyKey.DUST, new DustProperty());
         Iodine.setProperty(PropertyKey.DUST, new DustProperty());
@@ -37,6 +42,10 @@ public class GTBMaterialPropertyAddition {
 
         // Zirconium
         Zirconium.setProperty(PropertyKey.INGOT, new IngotProperty());
+
+        //Graphene
+
+        Graphene.setProperty(PropertyKey.INGOT, new IngotProperty());
 
         // Holmium
 

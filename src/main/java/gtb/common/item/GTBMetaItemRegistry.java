@@ -250,5 +250,6 @@ public class GTBMetaItemRegistry extends StandardMetaItem {
         GTBMetaItems.GDSII_CHIP = addItem(238, "gdsii_chip");
         GTBMetaItems.DIP_8_PACKAGE = addItem(239, "dip_8_package");
         GTBMetaItems.DIP_8_MICROCONTROLLER = addItem(240, "dip_8_microcontroller");
+        GTBMetaItems.ZENER_DIODE = addItem(241, "zener_diode");
     }
 }

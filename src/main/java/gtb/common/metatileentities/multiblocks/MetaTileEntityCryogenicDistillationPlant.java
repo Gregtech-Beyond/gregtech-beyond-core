@@ -25,14 +25,12 @@ import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMulti
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityCryogenicDistillationPlant extends RecipeMapMultiblockController {
 
     public MetaTileEntityCryogenicDistillationPlant(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.CRYOGENIC_DISTILLATION_PLANT_RECIPES);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
 

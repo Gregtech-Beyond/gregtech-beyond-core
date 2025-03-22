@@ -23,7 +23,6 @@ import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMulti
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
@@ -33,7 +32,6 @@ public class MetaTileEntityHighTemperatureDistillationTower extends RecipeMapMul
 
     public MetaTileEntityHighTemperatureDistillationTower(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.HIGH_TEMP_DISTILLATION_RECIPES);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
 

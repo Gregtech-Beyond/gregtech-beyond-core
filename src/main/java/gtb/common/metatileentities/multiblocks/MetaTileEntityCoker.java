@@ -27,14 +27,12 @@ import gregtech.common.blocks.MetaBlocks;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityCoker extends RecipeMapMultiblockController {
 
     public MetaTileEntityCoker(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.COKER_RECIPES);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
 

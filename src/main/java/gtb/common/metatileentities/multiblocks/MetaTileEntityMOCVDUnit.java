@@ -27,14 +27,12 @@ import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityMOCVDUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityMOCVDUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.MOCVD_UNIT_RECIPES);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
 
@@ -123,7 +121,7 @@ public class MetaTileEntityMOCVDUnit extends RecipeMapMultiblockController {
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.BLOWER_OVERLAY;
+        return Textures.FERMENTER_OVERLAY;
     }
 
     @Override

@@ -211,7 +211,7 @@ public class GTBMaterials {
     public static Material DeoxygenationCatalyst;
     public static Material BastnasiteOxideComposite;
     public static Material SodiumNitride;
-    public static Material BastnasiteByProducts;
+    public static Material BastnasiteByproducts;
     public static Material SamaricRareEarthConcentrate;
     public static Material HydrogenationCatalyst;
     public static Material NeodymiumRareEarthConcentrate;
@@ -796,6 +796,7 @@ public class GTBMaterials {
     public static Material ZincOreCokePellets;
     public static Material MetalRichSlagSlurry;
     public static Material PreciousMetal;
+    public static Material StyreneSuspension;
 
     // Organic Chemistry Materials
     public static Material MoltenOxidizedGalena;

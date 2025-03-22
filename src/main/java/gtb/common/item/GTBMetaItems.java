@@ -239,6 +239,7 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem GDSII_CHIP;
     public static MetaItem<?>.MetaValueItem DIP_8_PACKAGE;
     public static MetaItem<?>.MetaValueItem DIP_8_MICROCONTROLLER;
+    public static MetaItem<?>.MetaValueItem ZENER_DIODE;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);

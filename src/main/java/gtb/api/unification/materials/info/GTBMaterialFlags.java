@@ -42,7 +42,7 @@ public class GTBMaterialFlags {
     public static void addToMaterials() {
         addFlag(MaterialFlags.GENERATE_FOIL, Titanium, Graphene, Mica);
 
-        addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten);
+        addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten, Iron);
 
         addFlag(MaterialFlags.GENERATE_FRAME, Lead);
 

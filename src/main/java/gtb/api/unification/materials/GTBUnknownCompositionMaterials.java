@@ -238,14 +238,14 @@ public class GTBUnknownCompositionMaterials {
                 .color(0xB8BCBE)
                 .build();
 
-        AdamantiumPentoxide = new Material.Builder(getMaterialsId(), gregtechId("adamantiun_pentoxide"))
+        AdamantiumPentoxide = new Material.Builder(getMaterialsId(), gregtechId("adamantium_pentoxide"))
                 .fluid()
                 .dust()
                 .color(0x04273B)
                 .build();
 
         AdamantiumPhosphorusHydrogenPlasma = new Material.Builder(getMaterialsId(),
-                gregtechId("admantium_phosphorus_hydrogen_plasma"))
+                gregtechId("adamantium_phosphorus_hydrogen_plasma"))
                         .plasma()
                         .color(0x1B4F6B)
                         .build();
@@ -676,7 +676,7 @@ public class GTBUnknownCompositionMaterials {
 
         DriedBastnasiteRarerEarthOxidesPulp = new Material.Builder(getMaterialsId(),
                 gregtechId("dried_bastnasite_rarer_earth_oxides_pulp"))
-                        .fluid()
+                        .dust()
                         .color(0x4E1B0C).build();
 
         BastnasiteRarerEarthOxidesEmulsion = new Material.Builder(getMaterialsId(),

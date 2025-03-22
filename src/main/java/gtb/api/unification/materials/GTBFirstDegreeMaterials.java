@@ -134,31 +134,31 @@ public class GTBFirstDegreeMaterials {
                 .color(0x625664)
                 .build().setFormula("C5H6", true);
 
-        TungstenTrioxide = new Material.Builder(getMaterialsId(), gregtechId("tungstentrioxide"))
+        TungstenTrioxide = new Material.Builder(getMaterialsId(), gregtechId("tungsten_trioxide"))
                 .dust()
                 .color(0x6E9C46)
                 .build().setFormula("WO3", true);
 
-        HydrogenPeroxide = new Material.Builder(getMaterialsId(), gregtechId("hydrogenperoxide"))
+        HydrogenPeroxide = new Material.Builder(getMaterialsId(), gregtechId("hydrogen_peroxide"))
                 .fluid()
                 .color(0x64B5F6)
                 .build().setFormula("H2O2", true);
 
-        LithiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxide"))
+        LithiumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("lithium_hydroxide"))
                 .dust()
                 .build().setFormula("LiOH", true);
 
-        SodiumTungstate = new Material.Builder(getMaterialsId(), gregtechId("sodiumtungstate"))
+        SodiumTungstate = new Material.Builder(getMaterialsId(), gregtechId("sodium_tungstate"))
                 .fluid()
                 .color(0x6A6A6A)
                 .build().setFormula("Na2WO4", true);
 
-        CalciumTungstate = new Material.Builder(getMaterialsId(), gregtechId("calciumtungstate"))
+        CalciumTungstate = new Material.Builder(getMaterialsId(), gregtechId("calcium_tungstate"))
                 .dust()
                 .color(0x909393)
                 .build().setFormula("WCaO4", true);
 
-        LithiumFluoride = new Material.Builder(getMaterialsId(), gregtechId("lithiumfluoride"))
+        LithiumFluoride = new Material.Builder(getMaterialsId(), gregtechId("lithium_fluoride"))
                 .dust()
                 .color(0x9DD6D0)
                 .build().setFormula("LiF3", true);
@@ -169,7 +169,7 @@ public class GTBFirstDegreeMaterials {
                 .ingot()
                 .flags(GENERATE_PLATE)
                 .color(0x000F15)
-                .build().setFormula("C20H12O3", true);
+                .build().setFormula("(C20H12O3)n", true);
 
         EthyleneOxide = new Material.Builder(getMaterialsId(), gregtechId("ethylene_oxide"))
                 .fluid()
@@ -367,7 +367,7 @@ public class GTBFirstDegreeMaterials {
                 .flags(GENERATE_PLATE)
                 .dust()
                 .color(0xBDBDBD)
-                .build().setFormula("C2H4", true);
+                .build().setFormula("(C2H4)n", true);
 
         LiquidNitrogen = new Material.Builder(getMaterialsId(), gregtechId("liquid_nitrogen"))
                 .fluid()
@@ -432,7 +432,7 @@ public class GTBFirstDegreeMaterials {
                 .ingot()
                 .flags(GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
                 .color(0x313031)
-                .build().setFormula("PdFeC153C36NO2", true);
+                .build().setFormula("(PdFeC153C36NO2)n", true);
 
         FullerenePolymerTetrix = new Material.Builder(getMaterialsId(), gregtechId("fullerene_polymer_tetrix"))
                 .fluid()
@@ -440,7 +440,7 @@ public class GTBFirstDegreeMaterials {
                 .ingot()
                 .flags(GENERATE_PLATE, MaterialFlags.GENERATE_FRAME, MaterialFlags.GENERATE_FOIL)
                 .color(0x1D181E)
-                .build().setFormula("C61HRhNO2", true);
+                .build().setFormula("(C61HRhNO2)n", true);
 
         Tetrapropylammoniumbromide = new Material.Builder(getMaterialsId(), gregtechId("tetrapropylammoniumbromide"))
                 .fluid()
@@ -751,7 +751,7 @@ public class GTBFirstDegreeMaterials {
                 .ingot()
                 .flags(GENERATE_PLATE)
                 .color(0x809A9D)
-                .build().setFormula("C17H16N2O2", true);
+                .build().setFormula("(C17H16N2O2)n", true);
 
         Polystyrene = new Material.Builder(getMaterialsId(), gregtechId("polystyrene"))
                 .fluid()
@@ -759,7 +759,7 @@ public class GTBFirstDegreeMaterials {
                 .ingot()
                 .flags(GENERATE_PLATE)
                 .color(0x584643)
-                .build().setFormula("C8H8", true);
+                .build().setFormula("(C8H8)n", true);
 
         LithiumTitanate = new Material.Builder(getMaterialsId(), gregtechId("lithium_titanate"))
                 .dust()
@@ -768,7 +768,7 @@ public class GTBFirstDegreeMaterials {
 
         PolystyreneNanoParticles = new Material.Builder(getMaterialsId(), gregtechId("polystyrene_nano_particles"))
                 .dust()
-                .color(0x7E6B67).build().setFormula("Li2TiO3", true);
+                .color(0x7E6B67).build().setFormula("(C8H8)n", true);
 
         NitrogenPentoxide = new Material.Builder(getMaterialsId(), gregtechId("nitrogen_pentoxide"))
                 .fluid()
@@ -803,6 +803,7 @@ public class GTBFirstDegreeMaterials {
                 .color(0x81C784).build().setFormula("C6H6O2", true);
 
         SodiumAcetate = new Material.Builder(getMaterialsId(), gregtechId("sodium_acetate"))
+                .dust()
                 .fluid()
                 .color(0xCE93D8).build().setFormula("CH3COONa", true);
 
@@ -918,7 +919,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("C4H6O4", true);
         EthylBenzene = new Material.Builder(getMaterialsId(), gregtechId("ethyl_benzene")).fluid().color(0x7D7C79)
                 .build().setFormula("C8H10", true);
-        Naphthaldehyde = new Material.Builder(getMaterialsId(), gregtechId("naphthal_dehyde")).fluid().color(0xF3D036)
+        Naphthaldehyde = new Material.Builder(getMaterialsId(), gregtechId("naphthaldehyde")).fluid().color(0xF3D036)
                 .build().setFormula("C10H7CHO", true);
         HydrobromicAcid = new Material.Builder(getMaterialsId(), gregtechId("hydrobromic_acid")).fluid().color(0xE89089)
                 .build().setFormula("HBr", true);
@@ -926,7 +927,7 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("NaCN", true);
         HydrogenCyanide = new Material.Builder(getMaterialsId(), gregtechId("hydrogen_cyanide")).fluid().color(0xA4ABD2)
                 .build().setFormula("HCN", true);
-        Dimethylsulfide = new Material.Builder(getMaterialsId(), gregtechId("dimethyl_sulfide")).fluid().color(0xCD9ED4)
+        Dimethylsulfide = new Material.Builder(getMaterialsId(), gregtechId("dimethylsulfide")).fluid().color(0xCD9ED4)
                 .build().setFormula("C2H6S", true);
         Methylamine = new Material.Builder(getMaterialsId(), gregtechId("methylamine")).fluid().color(0x9C53A8).build()
                 .setFormula("CH3NH2", true);
@@ -940,9 +941,9 @@ public class GTBFirstDegreeMaterials {
                 .build().setFormula("HI", true);
         Hydrazine = new Material.Builder(getMaterialsId(), gregtechId("hydrazine")).fluid().color(0x7DB3E3).build()
                 .setFormula("N2H4", true);
-        BenzoylPeroxide = new Material.Builder(getMaterialsId(), gregtechId("benzyol_peroxide")).fluid().color(0x31516D)
+        BenzoylPeroxide = new Material.Builder(getMaterialsId(), gregtechId("benzoyl_peroxide")).fluid().color(0x31516D)
                 .build().setFormula("C14H10O4", true);
-        BenzoylChloride = new Material.Builder(getMaterialsId(), gregtechId("benzyol_chloride")).fluid().color(0x324834)
+        BenzoylChloride = new Material.Builder(getMaterialsId(), gregtechId("benzoyl_chloride")).fluid().color(0x324834)
                 .build().setFormula("C7H5ClO", true);
         IronChloride = new Material.Builder(getMaterialsId(), gregtechId("iron_chloride")).fluid().color(0x2A5170)
                 .build().setFormula("FeCl", true);
@@ -2011,6 +2012,17 @@ public class GTBFirstDegreeMaterials {
                 gregtechId("difluorobenzophenone"))
                         .fluid()
                         .color(0x31AABA).build().setFormula("C13H8OF2", true);
+
+        BoronOxide = new Material.Builder(getMaterialsId(),
+                gregtechId("boron_oxide"))
+                        .dust()
+                        .color(0xCBD1D4).build().setFormula("BO2", true);
+
+        StyreneSuspension = new Material.Builder(getMaterialsId(),
+                gregtechId("styrene_suspension"))
+                .fluid()
+                .color(0x9E8F89).build().setFormula("C8H8", true);
+
     }
 
     private static int getMaterialsId() {
