@@ -126,7 +126,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> POLYMERIZATION_TANK_RECIPES = new RecipeMap<>(
             "polymerization_tank_recipes",
-            2, 2, 2, 2, new SimpleRecipeBuilder(), false);
+            2, 2, 4, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> THERMAL_PRESS_RECIPES = new RecipeMap<>("thermal_press_recipes",
             4, 2, 2, 2, new SimpleRecipeBuilder(), false);
@@ -156,7 +156,7 @@ public final class GTBRecipeMaps {
             1, 4, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> DRYER_RECIPES = new RecipeMap<>("dryer_recipes",
-            1, 4, 2, 1, new SimpleRecipeBuilder(), false);
+            1, 4, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BURNER_REACTOR_RECIPES = new RecipeMap<>(
             "burner_reactor_recipes",
@@ -220,4 +220,8 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> MOCVD_UNIT_RECIPES = new RecipeMap<>(
             "mocvd_unit_recipes", 4, 2, 4, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> HIGH_TEMP_POLYMERIZATION_TANK_RECIPES = new RecipeMap<>(
+            "high_temp_polymerization_tank_recipes",
+            2, 2, 4, 2, new SimpleRecipeBuilder(), false);
 }
