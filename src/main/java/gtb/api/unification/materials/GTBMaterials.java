@@ -835,7 +835,6 @@ public class GTBMaterials {
     public static Material NMethylPyrrolidone;
     public static Material TerephthalicAcid;
     public static Material TerephthaloylChloride;
-    public static Material ParaPhenylenediamine;
     public static Material Kevlar;
     public static Material KevlarConcentrate;
     public static Material KevlarBlend;

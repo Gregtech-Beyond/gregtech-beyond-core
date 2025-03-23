@@ -632,7 +632,7 @@ public class GTBUnknownCompositionMaterials {
                 .dust()
                 .color(0x944C36).build().setFormula("?", true);
 
-        DehydrogenationCatalyst = new Material.Builder(getMaterialsId(), gregtechId("dehydragenation_catalyst"))
+        DehydrogenationCatalyst = new Material.Builder(getMaterialsId(), gregtechId("dehydrogenation_catalyst"))
                 .dust()
                 .color(0xFFB74D).build().setFormula("?", true);
 

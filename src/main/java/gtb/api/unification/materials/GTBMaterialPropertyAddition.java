@@ -5,7 +5,6 @@ import static gregtech.api.unification.material.Materials.*;
 import gregtech.api.fluids.FluidBuilder;
 import gregtech.api.fluids.store.FluidStorageKeys;
 import gregtech.api.unification.material.properties.*;
-import net.minecraftforge.gradle.GradleForgeHacks;
 
 public class GTBMaterialPropertyAddition {
 
@@ -43,7 +42,7 @@ public class GTBMaterialPropertyAddition {
         // Zirconium
         Zirconium.setProperty(PropertyKey.INGOT, new IngotProperty());
 
-        //Graphene
+        // Graphene
 
         Graphene.setProperty(PropertyKey.INGOT, new IngotProperty());
 
