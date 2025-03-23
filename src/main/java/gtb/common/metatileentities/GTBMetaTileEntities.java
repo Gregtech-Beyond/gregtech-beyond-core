@@ -63,6 +63,8 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityVacuumMetalizer VACUUM_METALIZER;
     public static MetaTileEntityOxidationFurnace OXIDATION_FURNACE;
     public static MetaTileEntityMOCVDUnit MOCVD_UNIT;
+    public static MetaTileEntityHighTemperaturePolymerizationTank HIGH_TEMP_POLYMERIZATION_TANK;
+
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -159,6 +161,7 @@ public final class GTBMetaTileEntities {
         VACUUM_METALIZER = registerMetaTileEntity(3044, new MetaTileEntityVacuumMetalizer(gtb("vacuum_metalizer")));
         OXIDATION_FURNACE = registerMetaTileEntity(3045, new MetaTileEntityOxidationFurnace(gtb("oxidation_furnace")));
         MOCVD_UNIT = registerMetaTileEntity(3046, new MetaTileEntityMOCVDUnit(gtb("mocvd_unit")));
+        HIGH_TEMP_POLYMERIZATION_TANK = registerMetaTileEntity(3047, new MetaTileEntityHighTemperaturePolymerizationTank(gtb("high_temp_polymerization_tank")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
