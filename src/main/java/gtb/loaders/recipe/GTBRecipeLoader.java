@@ -3,8 +3,6 @@ package gtb.loaders.recipe;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.recipes.RecipeMaps;
 
-import gtb.loaders.recipe.polymerLines.*;
-
 public final class GTBRecipeLoader {
 
     public static void init() {
@@ -22,25 +20,11 @@ public final class GTBRecipeLoader {
         RecipeMaps.SIFTER_RECIPES.setMaxFluidInputs(1);
         RecipeMaps.SIFTER_RECIPES.setMaxFluidOutputs(1);
         RecipeMaps.CIRCUIT_ASSEMBLER_RECIPES.setMaxInputs(9);
+        RecipeMaps.VACUUM_RECIPES.setMaxFluidOutputs(2);
+        RecipeMaps.CHEMICAL_RECIPES.setMaxFluidOutputs(3);
 
         MinecraftOverhauls.init();
         Electronics.init();
-        KaptonLine.init();
-        KevlarLine.init();
-        NomexLine.init();
-        PolybenzimidazoleLine.init();
-        PolycaprolactamLine.init();
-        PolydimethylsiloxaneLine.init();
-        PolyethyleneLine.init();
-        PolyphenyleneSulfideLine.init();
-        PolystyreneLine.init();
-        PolystyreneNanoparticlesLine.init();
-        PolytetrafluoroethyleneLine.init();
-        PolyurethaneLine.init();
-        PolyvinylAcetateLine.init();
-        PolyvinylButyralLine.init();
-        PolyvinylChlorideLine.init();
-        StyreneButadieneRubberLine.init();
         CryogenicAirDistillation.init();
         AlcoholLine.init();
         Catalysts.init();
