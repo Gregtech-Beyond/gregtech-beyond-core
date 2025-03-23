@@ -14,7 +14,7 @@ import gtb.api.unification.materials.info.GTBMaterialFlags;
 public class GTBFirstDegreeMaterials {
 
     private static int startId = 24001;
-    private static final int END_ID = startId + 500;;
+    private static final int END_ID = startId + 500;
 
     public static void register() {
         PotassiumDisulfate = new Material.Builder(getMaterialsId(), gregtechId("potassium_disulfate"))
@@ -169,7 +169,7 @@ public class GTBFirstDegreeMaterials {
                 .ingot()
                 .flags(GENERATE_PLATE)
                 .color(0x000F15)
-                .build().setFormula("(C20H12O3)n", true);
+                .build().setFormula("(C19H12O3)n", true);
 
         EthyleneOxide = new Material.Builder(getMaterialsId(), gregtechId("ethylene_oxide"))
                 .fluid()
@@ -2020,9 +2020,8 @@ public class GTBFirstDegreeMaterials {
 
         StyreneSuspension = new Material.Builder(getMaterialsId(),
                 gregtechId("styrene_suspension"))
-                .fluid()
-                .color(0x9E8F89).build().setFormula("C8H8", true);
-
+                        .fluid()
+                        .color(0x9E8F89).build().setFormula("C8H8", true);
     }
 
     private static int getMaterialsId() {
