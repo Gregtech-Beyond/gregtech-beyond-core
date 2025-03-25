@@ -29,7 +29,6 @@ public final class GTBRecipeLoader {
         AlcoholLine.init();
         Catalysts.init();
         NaturalGasLine.init();
-        OilLine.init();
         OrganicChemistry.init();
         XylenolLine.init();
         MaterialBenefication.init();

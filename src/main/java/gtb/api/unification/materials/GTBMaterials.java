@@ -9,7 +9,6 @@ public class GTBMaterials {
     public static Material Ethanol_100;
     public static Material Methanol_100;
     public static Material Butanol_100;
-    public static Material Ethanolamine;
     public static Material StreptococcusPyogenes;
     public static Material CopperSulfide;
     public static Material SodiumIodate;
