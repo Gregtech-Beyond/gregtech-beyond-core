@@ -18,17 +18,20 @@ import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.*;
+import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockGlassCasing;
+import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockController {
+public class MetaTileEntityVacuumMetalizer extends RecipeMapMultiblockController {
 
-    public MetaTileEntityEnzymaticHydrolisisTank(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.ENZYMATIC_HYDROLISIS_RECIPES);
+    public MetaTileEntityVacuumMetalizer(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.VACUUM_METALIZER_RECIPES);
         initializeAbilities();
     }
 
@@ -39,24 +42,34 @@ public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockCo
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~CCC~~~", "~~CCCCC~~", "P~CCCCC~P", "~~CCCCC~~", "~~~CSC~~~")
-                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~CCC~~~", "~~C~~~C~~", "P~C~~~C~P", "~~C~~~C~~", "~~~CCC~~~")
-                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~~C~~~~", "~~~C~C~~~", "P~C~~~C~P", "~~~C~C~~~", "~~~CCC~~~")
-                .aisle("~~~~~~~~~", "~~~~P~~~~", "~~~~C~~~~", "~~~~C~~~~", "~PCCCCCP~", "~~~~C~~~~", "~~~~C~~~~")
+                .aisle(
+                        "CCCC~~~CC",
+                        "CCCCGGGCC",
+                        "CSCC~~~CC")
+                .aisle(
+                        "CGGCGGGCC",
+                        "C~~CPPPCC",
+                        "CGGCGGGCC")
+                .aisle(
+                        "~~~~~~~CC",
+                        "CGGCGGGCC",
+                        "~~~~~~~CC")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(9))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
+                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
+                .where('G', states(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.TEMPERED_GLASS)))
                 .build();
     }
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, false, true, true, true, true, false);
+        return autoAbilities(false, false, true, false, false, true, false);
     }
 
     @SideOnly(Side.CLIENT)
@@ -76,11 +89,11 @@ public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockCo
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.LASER_ENGRAVER_OVERLAY;
+        return Textures.PRIMITIVE_BLAST_FURNACE_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityEnzymaticHydrolisisTank(metaTileEntityId);
+        return new MetaTileEntityVacuumMetalizer(metaTileEntityId);
     }
 }

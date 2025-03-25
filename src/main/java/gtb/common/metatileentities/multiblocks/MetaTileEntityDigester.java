@@ -24,14 +24,12 @@ import gregtech.common.blocks.*;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityDigester extends RecipeMapMultiblockController {
 
     public MetaTileEntityDigester(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.DIGESTER_RECIPES);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
 

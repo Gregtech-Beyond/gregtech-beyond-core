@@ -285,7 +285,7 @@ public class GTBSecondDegreeMaterials {
                 .dust()
                 .flags(MaterialFlags.GENERATE_PLATE)
                 .color(0xAFC896)
-                .build().setFormula("P(H2O)", true);
+                .build().setFormula("(P(H2O))n", true);
 
         BioPlastic = new Material.Builder(getMaterialsId(), gregtechId("bio_plastic"))
                 .fluid()
@@ -345,18 +345,18 @@ public class GTBSecondDegreeMaterials {
                 .color(0xA29A56)
                 .build().setFormula("C(O2)", true);
 
-        CalciumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("calciumhydroxide"))
+        CalciumHydroxide = new Material.Builder(getMaterialsId(), gregtechId("calcium_hydroxide"))
                 .dust()
                 .color(0x1A237E)
                 .build().setFormula("Ca(OH)2", true);
 
-        LithiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithiumhydroxidesolution"))
+        LithiumHydroxideSolution = new Material.Builder(getMaterialsId(), gregtechId("lithium_hydroxide_solution"))
                 .dust()
                 .fluid()
                 .color(0x0277BD)
                 .build().setFormula("(H2O)LiOH", true);
 
-        BastnasiteByProducts = new Material.Builder(getMaterialsId(), gregtechId("bastnasite_byproducts"))
+        BastnasiteByproducts = new Material.Builder(getMaterialsId(), gregtechId("bastnasite_byproducts"))
                 .dust()
                 .color(0x895E47).build();
 
@@ -381,6 +381,11 @@ public class GTBSecondDegreeMaterials {
                 gregtechId("neodymium_rare_earth_concentrate"))
                         .dust()
                         .color(0x686569).build().setFormula("NdO2???", true);
+
+        CopperFreeNickelSulfide = new Material.Builder(getMaterialsId(),
+                gregtechId("copper_free_nickel_sulfide"))
+                        .dust()
+                        .color(0x7F9099).build().setFormula("NiS2?", true);
     }
 
     private static int getMaterialsId() {

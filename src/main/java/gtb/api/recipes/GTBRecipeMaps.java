@@ -126,7 +126,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> POLYMERIZATION_TANK_RECIPES = new RecipeMap<>(
             "polymerization_tank_recipes",
-            2, 2, 2, 2, new SimpleRecipeBuilder(), false);
+            2, 2, 4, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> THERMAL_PRESS_RECIPES = new RecipeMap<>("thermal_press_recipes",
             4, 2, 2, 2, new SimpleRecipeBuilder(), false);
@@ -156,7 +156,7 @@ public final class GTBRecipeMaps {
             1, 4, 2, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> DRYER_RECIPES = new RecipeMap<>("dryer_recipes",
-            1, 4, 2, 1, new SimpleRecipeBuilder(), false);
+            1, 4, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BURNER_REACTOR_RECIPES = new RecipeMap<>(
             "burner_reactor_recipes",
@@ -180,8 +180,48 @@ public final class GTBRecipeMaps {
             "enzymatic_hydrolisis_recipes", 1, 1, 1, 9, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_EJECTION_RECIPES = new RecipeMap<>(
-            "vacuum_ejection_recipes", 1, 1, 0, 0, new SimpleRecipeBuilder(), false);
+            "vacuum_ejection_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
             "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CATALYTIC_CRACKING_RECIPES = new RecipeMap<>(
+            "catalytic_cracking_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> VULCANIZED_PRESS_RECIPES = new RecipeMap<>(
+            "catalytic_cracking_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> VIS_BREAKER_RECIPES = new RecipeMap<>(
+            "vis_breaker_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> GRAVITY_SETTLER_RECIPES = new RecipeMap<>(
+            "gravity_settler_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> SEALED_REACTION_CHAMBER_RECIPES = new RecipeMap<>(
+            "sealed_reaction_chamber_recipes", 1, 1, 1, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> VACUUM_METALIZER_RECIPES = new RecipeMap<>(
+            "vacuum_metalizer_recipes", 4, 1, 0, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> OXIDATION_FURNACE_RECIPES = new RecipeMap<>(
+            "oxidation_furnace_recipes", 2, 1, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ION_EXCHANGE_RECIPES = new RecipeMap<>(
+            "ion_exchange_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> UV_LIGHT_RECIPES = new RecipeMap<>(
+            "uv_light_recipes", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FLUID_COMPRESSOR_RECIPES = new RecipeMap<>(
+            "fluid_compressor_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> PLASMA_ETCHER_RECIPES = new RecipeMap<>(
+            "plasma_etcher_recipes", 3, 2, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> MOCVD_UNIT_RECIPES = new RecipeMap<>(
+            "mocvd_unit_recipes", 4, 2, 4, 3, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> HIGH_TEMP_POLYMERIZATION_TANK_RECIPES = new RecipeMap<>(
+            "high_temp_polymerization_tank_recipes",
+            2, 2, 4, 2, new SimpleRecipeBuilder(), false);
 }

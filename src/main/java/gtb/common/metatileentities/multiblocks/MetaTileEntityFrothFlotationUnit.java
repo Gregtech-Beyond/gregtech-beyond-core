@@ -26,14 +26,13 @@ import gregtech.common.blocks.MetaBlocks;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityFrothFlotationUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityFrothFlotationUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.FROTH_FLOTATION_UNIT_RECIPES);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
+
         initializeAbilities();
     }
 

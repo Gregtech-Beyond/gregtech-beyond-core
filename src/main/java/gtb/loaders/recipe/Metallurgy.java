@@ -238,13 +238,6 @@ public final class Metallurgy {
                 .EUt(8)
                 .buildAndRegister();
 
-        BENDER_RECIPES.recipeBuilder()
-                .input(plate, Steel)
-                .output(GTBOrePrefix.item_casing, Steel, 2)
-                .duration(400)
-                .EUt(60)
-                .buildAndRegister();
-
         MIXER_RECIPES.recipeBuilder()
                 .input(dust, Invar, 5)
                 .input(dust, Iron, 4)

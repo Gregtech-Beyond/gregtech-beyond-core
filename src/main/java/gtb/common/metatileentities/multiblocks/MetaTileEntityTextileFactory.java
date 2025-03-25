@@ -50,7 +50,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
                 .aisle(" A   A ", " AAAAA ", "AAGGGAA", " AAAAA ", " A   A ")
                 .aisle("       ", " A   A ", " S   A ", " A   A ", "       ")
                 .where('S', selfPredicate())
-                .where('~', any())
+                .where(' ', any())
                 .where('A', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
@@ -58,6 +58,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
+                .where('~', air())
                 .build();
     }
 

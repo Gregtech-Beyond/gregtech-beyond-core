@@ -18,46 +18,84 @@ import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiFluidHatch;
+import gregtech.common.blocks.*;
+
+import gregicality.multiblocks.api.render.GCYMTextures;
+import gregicality.multiblocks.common.block.GCYMMetaBlocks;
+import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
-import gtb.api.render.GTBTextures;
-import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.GTBMultiblockCasing;
 
-public class MetaTileEntityHighTemperatureDistillationTower extends RecipeMapMultiblockController {
+public class MetaTileEntityMOCVDUnit extends RecipeMapMultiblockController {
 
-    public MetaTileEntityHighTemperatureDistillationTower(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.HIGH_TEMP_DISTILLATION_RECIPES);
+    public MetaTileEntityMOCVDUnit(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.MOCVD_UNIT_RECIPES);
         initializeAbilities();
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.SILICON_CARBIDE_CASING);
+        return GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING
+                .getState(BlockLargeMultiblockCasing.CasingType.NONCONDUCTING_CASING);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("YYY", "YYY", "YSY")
-                .aisle("XXX", "X#X", "XXX").setRepeatable(1, 11)
-                .aisle("XXX", "XXX", "XXX")
+                .aisle(
+                        "CCC",
+                        "CCC",
+                        "CCC",
+                        "CCC",
+                        "CCC",
+                        "CCC",
+                        "SCC",
+                        "CCC",
+                        "CCC",
+                        "CCC",
+                        "CCC",
+                        "CCC",
+                        "CCC")
+                .aisle(
+                        "CCC",
+                        "G~G",
+                        "GTG",
+                        "G~G",
+                        "CCC",
+                        "CPC",
+                        "CPC",
+                        "CPC",
+                        "CCC",
+                        "G~G",
+                        "GTG",
+                        "G~G",
+                        "CCC")
+                .aisle(
+                        "~C~",
+                        "~G~",
+                        "~G~",
+                        "~G~",
+                        "CCC",
+                        "~~~",
+                        "~~~",
+                        "~~~",
+                        "CCC",
+                        "~G~",
+                        "~G~",
+                        "~G~",
+                        "~C~")
                 .where('S', selfPredicate())
-                .where('Y', states(getCasingState())
+                .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setMaxGlobalLimited(1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(3))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMaxGlobalLimited(1)))
-                .where('X', states(getCasingState())
-                        .or(metaTileEntities(MultiblockAbility.REGISTRY.get(MultiblockAbility.EXPORT_FLUIDS).stream()
-                                .filter(mte -> !(mte instanceof MetaTileEntityMultiFluidHatch))
-                                .toArray(MetaTileEntity[]::new))
-                                        .setMinLayerLimited(1).setMaxLayerLimited(1))
-                        .or(autoAbilities(true, false)))
-                .where('#', air())
+                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TITANIUM_PIPE)))
+                .where('T', states(MetaBlocks.WIRE_COIL.getState(BlockWireCoil.CoilType.NICHROME)))
+                .where('G', states(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.TEMPERED_GLASS)))
+                .where('~', any())
                 .build();
     }
 
@@ -69,7 +107,7 @@ public class MetaTileEntityHighTemperatureDistillationTower extends RecipeMapMul
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return GTBTextures.SILICON_CARBIDE_CASING;
+        return GCYMTextures.NONCONDUCTING_CASING;
     }
 
     @Override
@@ -83,11 +121,11 @@ public class MetaTileEntityHighTemperatureDistillationTower extends RecipeMapMul
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.BLOWER_OVERLAY;
+        return Textures.FERMENTER_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityHighTemperatureDistillationTower(metaTileEntityId);
+        return new MetaTileEntityMOCVDUnit(metaTileEntityId);
     }
 }

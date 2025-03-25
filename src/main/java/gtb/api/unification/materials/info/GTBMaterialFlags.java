@@ -42,11 +42,13 @@ public class GTBMaterialFlags {
     public static void addToMaterials() {
         addFlag(MaterialFlags.GENERATE_FOIL, Titanium, Graphene, Mica);
 
-        addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten);
+        addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten, Iron);
+
+        addFlag(MaterialFlags.GENERATE_FRAME, Lead);
 
         Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
 
-        addFlag(GTBMaterialFlags.GENERATE_SIFTED, GTBMaterialFlags.GENERATE_FLOATED, Pyrochlore, Tantalite);
+        addFlag(GTBMaterialFlags.GENERATE_SIFTED, GTBMaterialFlags.GENERATE_FLOATED, Pyrochlore, Tantalite, Pollucite);
 
         addFlag(GTBMaterialFlags.GENERATE_ITEM_CASING, Steel, Aluminium, StainlessSteel, Titanium, TungstenSteel);
 
