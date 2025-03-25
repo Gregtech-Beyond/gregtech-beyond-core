@@ -224,4 +224,8 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> HIGH_TEMP_POLYMERIZATION_TANK_RECIPES = new RecipeMap<>(
             "high_temp_polymerization_tank_recipes",
             2, 2, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> BEAM_SHRINKING_RECIPES = new RecipeMap<>(
+            "beam_shrinking_recipes",
+            2, 2, 4, 2, new SimpleRecipeBuilder(), false);
 }

@@ -226,5 +226,10 @@ public final class GTBMetaTileEntities {
                 PLASMA_ETCHER, 4280, "plasma_etcher",
                 GTBRecipeMaps.PLASMA_ETCHER_RECIPES, Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(
+                PLASMA_ETCHER, 4300, "beam_shrinking_device",
+                GTBRecipeMaps.PLASMA_ETCHER_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }
