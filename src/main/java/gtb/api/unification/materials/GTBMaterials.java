@@ -6,101 +6,10 @@ import gtb.api.unification.materials.info.GTBMaterialIconSet;
 
 public class GTBMaterials {
 
-    // Biological Materials
-
-    public static Material PolyhydroxylAlkanoate;
-    public static Material YButyrolacetone;
-    public static Material PalmOil;
-    public static Material OrthophosphoricAcidSolution;
-    public static Material OrthophosphoricAcid;
-    public static Material PhosphoricAnihydride;
-    public static Material MethyleneDiphosphoricAcid;
-    public static Material PapaicDigestOfSoybeanMeal;
-    public static Material BeanSlurry;
-    public static Material Rhizobium;
-    public static Material DefattedSoybeanFlour;
-    public static Material SoybeanOil;
-    public static Material CrushedSoybean;
-    public static Material Trypsin;
-    public static Material HomogenizedPancreasMixture;
-    public static Material AlphaLinolenicAcid;
-    public static Material SolidMilkResidues;
-    public static Material MilkOil;
-    public static Material HeatedMilkSlurry;
-    public static Material PeptoneMixture;
-    public static Material PhenylEthylAlcoholBloodAgar;
-    public static Material PhenylEthylAlcohol;
-    public static Material PhenylEthylAlcoholAgarSolution;
-    public static Material DissolvedPhenylEthylAlcoholAgar;
-    public static Material SolidifiedSterileDefibernatedSheepBlood;
-    public static Material EdeticAcid;
-    public static Material DefibernatedSheepBlood;
-    public static Material SheepBloodPlasma;
-    public static Material SheepBloodCells;
-    public static Material Fructose;
-    public static Material Iriditus;
-    public static Material EschericiaColi;
-    public static Material EthyleneGlycol;
-    public static Material Nonylphenol;
-    public static Material EthoxylatedNonylphenol;
-    public static Material Nonoxynol_9_Solution;
-    public static Material Nonoxynol_9;
-    public static Material Glucose;
-    public static Material SolidGrain;
-    public static Material Wort;
-    public static Material HotGristSolution;
-    public static Material GristPowder;
-    public static Material Peptone;
-    public static Material MaltExtract;
-    public static Material NutrientRichSolution;
-    public static Material WasteWater;
-    public static Material YeastMixture;
-    public static Material Mannitol;
-    public static Material YeastExtract;
-    public static Material DissolvedYeastExtractMannitolMixture;
-    public static Material YeastExtractMannitolAgarSolution;
-    public static Material YeastExtractMannitolMedium;
-    public static Material YEEMSolution;
-    public static Material CupriavidusNecator;
-    public static Material CupriavidusNecatorBacteriaSample;
-    public static Material BacterialGrowthMedium;
-    public static Material BloodCells;
-    public static Material BloodPlasma;
-    public static Material Blood;
-    public static Material Catalase;
-    public static Material DepletedBacterialGrowthMedium;
-    public static Material BasicFibroblastGrowthMedium;
-    public static Material EpidermalGrowthFactor;
     public static Material Ethanol_100;
     public static Material Methanol_100;
     public static Material Butanol_100;
-    public static Material Cuproquin;
-    public static Material Sulfanilamide;
-    public static Material AcetylsulfanilylChloride;
-    public static Material ChlorosulfonicAcid;
-    public static Material AceticAnhydride;
-    public static Material Aniline;
-    public static Material AmmoniumNitrate;
-    public static Material B_27_Supplement;
-    public static Material Glutamine;
-    public static Material LinoleicAcid;
-    public static Material Biotin;
     public static Material Ethanolamine;
-    public static Material VitaminA;
-    public static Material BetaIonone;
-    public static Material PropargylChloride;
-    public static Material Citral;
-    public static Material BetaPinene;
-    public static Material Turpentine;
-    public static Material PropargylAlcohol;
-    public static Material Acetylene;
-    public static Material CleanAmmoniaSolution;
-    public static Material BrevibacteriumFlavium;
-    public static Material Yeast;
-    public static Material Leucine;
-    public static Material BetaPineneSolution;
-    public static Material SheepBlood;
-    public static Material Xerizin;
     public static Material StreptococcusPyogenes;
     public static Material CopperSulfide;
     public static Material SodiumIodate;
@@ -129,10 +38,6 @@ public class GTBMaterials {
     public static Material RareNaquadahWaste;
     public static Material NaquadahWaste;
     public static Material Difluorobenzophenone;
-
-    // Element Materials
-    public static Material Rubidium;
-
     // FD Materials
     public static Material PolluciteSlurry;
     public static Material SodiumSilicate;
@@ -183,7 +88,6 @@ public class GTBMaterials {
     public static Material DilutedMonaziteSulfide;
     public static Material MonaziteSulfide;
     public static Material ZincChloride;
-    public static Material ThoriumPhosphateCakeDust;
     public static Material DriedMonaziteFiltrate;
     public static Material EuropiumOxide;
     public static Material ThoriumConcentrate;
@@ -856,7 +760,6 @@ public class GTBMaterials {
         GTBSecondDegreeMaterials.register();
         GTBOrganicChemistryMaterials.register();
         GTBUnknownCompositionMaterials.register();
-        GTBBiologicalMaterials.register();
         GTBFantasyMaterials.register();
         GTBMaterialPropertyAddition.init();
         GTBMaterialIconSet.set();

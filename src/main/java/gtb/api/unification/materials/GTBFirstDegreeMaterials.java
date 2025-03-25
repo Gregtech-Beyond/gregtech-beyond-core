@@ -201,11 +201,6 @@ public class GTBFirstDegreeMaterials {
                 .color(0x9DD6D0)
                 .build().setFormula("H2O", true);
 
-        EthyleneGlycol = new Material.Builder(getMaterialsId(), gregtechId("ethylene_glycol"))
-                .fluid()
-                .color(0x9DD6D0)
-                .build().setFormula("C2H6O2", true);
-
         SodiumBorohydride = new Material.Builder(getMaterialsId(), gregtechId("sodium_borohydride"))
                 .dust()
                 .color(0x9DD6D0)
