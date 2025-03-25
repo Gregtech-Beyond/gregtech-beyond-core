@@ -1,5 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
+import static gregtech.api.unification.material.Materials.Steel;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -18,17 +20,18 @@ import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.*;
+import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockController {
+public class MetaTileEntityVisBreaker extends RecipeMapMultiblockController {
 
-    public MetaTileEntityEnzymaticHydrolisisTank(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.ENZYMATIC_HYDROLISIS_RECIPES);
+    public MetaTileEntityVisBreaker(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.VIS_BREAKER_RECIPES);
         initializeAbilities();
     }
 
@@ -39,30 +42,39 @@ public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockCo
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~CCC~~~", "~~CCCCC~~", "P~CCCCC~P", "~~CCCCC~~", "~~~CSC~~~")
-                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~CCC~~~", "~~C~~~C~~", "P~C~~~C~P", "~~C~~~C~~", "~~~CCC~~~")
-                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~~C~~~~", "~~~C~C~~~", "P~C~~~C~P", "~~~C~C~~~", "~~~CCC~~~")
-                .aisle("~~~~~~~~~", "~~~~P~~~~", "~~~~C~~~~", "~~~~C~~~~", "~PCCCCCP~", "~~~~C~~~~", "~~~~C~~~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~CCCCC~", "~CCCCC~", "~CCCCC~", "~~CSC~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~FFF~~", "~FFFFF~", "FFCCCFF", "FFCCCFF", "FFCCCFF", "~FFFFF~", "~~FFF~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~FFF~~", "~FFFFF~", "FFCCCFF", "FFCCCFF", "FFCCCFF", "~FFFFF~", "~~FFF~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~FFF~~", "~FFFFF~", "FFCCCFF", "FFCCCFF", "FFCCCFF", "~FFFFF~", "~~FFF~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~~~~~~", "~~CCC~~", "~~CCC~~", "~~CCC~~", "~~~~~~~", "~~~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(9))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
+                .where('F', frames(Steel))
                 .build();
     }
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, false, true, true, true, true, false);
+        return autoAbilities(false, false, true, false, false, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.STEEL_FIREBOX;
     }
 
     @Override
@@ -76,11 +88,11 @@ public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockCo
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.LASER_ENGRAVER_OVERLAY;
+        return Textures.COMPRESSOR_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityEnzymaticHydrolisisTank(metaTileEntityId);
+        return new MetaTileEntityVisBreaker(metaTileEntityId);
     }
 }

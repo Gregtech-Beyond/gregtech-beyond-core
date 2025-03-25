@@ -71,7 +71,6 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem ENGRAVED_SOC_WAFER;
     public static MetaItem<?>.MetaValueItem UHASOC_LITHOGRAPHY_MASK;
     public static MetaItem<?>.MetaValueItem SHAPED_HIGH_ENERGY_GAMMA_SHIELD;
-    public static MetaItem<?>.MetaValueItem PRE_ENGRAVED_UHASOC_WAFER;
     public static MetaItem<?>.MetaValueItem SUPERCONDUCTOR_LAYERED_UHASOC_WAFER;
     public static MetaItem<?>.MetaValueItem DEGENERATE_UHASOC_WAFER;
     public static MetaItem<?>.MetaValueItem CELLED_UHASOC_WAFER;
@@ -224,6 +223,23 @@ public class GTBMetaItems {
     public static MetaItem<?>.MetaValueItem SPUTTERED_PR4_PLATE;
     public static MetaItem<?>.MetaValueItem PRESSED_PR4_PLATE;
     public static MetaItem<?>.MetaValueItem NEODYMIUM_MAGNET;
+    public static MetaItem<?>.MetaValueItem BITUMEN_CRYSTAL;
+    public static MetaItem<?>.MetaValueItem ASPHALT;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_DIODE;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_RESISTOR;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_TRANSISTOR;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_INDUCTOR;
+    public static MetaItem<?>.MetaValueItem NANO_SMD_CAPACITOR;
+    public static MetaItem<?>.MetaValueItem GDSII_LITHOGRAPHY_MASK;
+    public static MetaItem<?>.MetaValueItem GDSII_MASKED_WAFER;
+    public static MetaItem<?>.MetaValueItem DOPED_GDSII_WAFER;
+    public static MetaItem<?>.MetaValueItem THIN_COPPER_SHEET;
+    public static MetaItem<?>.MetaValueItem CONNECTED_GDSII_WAFER;
+    public static MetaItem<?>.MetaValueItem ETCHED_GDSII_WAFER;
+    public static MetaItem<?>.MetaValueItem GDSII_CHIP;
+    public static MetaItem<?>.MetaValueItem DIP_8_PACKAGE;
+    public static MetaItem<?>.MetaValueItem DIP_8_MICROCONTROLLER;
+    public static MetaItem<?>.MetaValueItem ZENER_DIODE;
 
     public static void init() {
         GTBMetaItemRegistry metaItem1 = new GTBMetaItemRegistry((short) 0);

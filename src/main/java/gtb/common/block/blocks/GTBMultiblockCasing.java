@@ -35,6 +35,7 @@ public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.Casing
         CLIMATE_PROOF_CASING("climate_proof_casing"),
         QUANTUM_CASING("quantum_casing"),
         QUANTUM_GLASS("quantum_glass"),
+        PERFECTLY_SEALED_VACUUM_CASING("perfectly_sealed_vacuum_casing"),
         ENGRAVER_CASING("engraver_casing"),
         SUBSTRATE("substrate_casing"),
         BASIC_STRUCTURAL_CASING("basic_structural_casing"),

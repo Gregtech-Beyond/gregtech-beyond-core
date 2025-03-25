@@ -25,7 +25,6 @@ import gregtech.common.blocks.MetaBlocks;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.NoEnergyLogic;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing;
@@ -34,7 +33,6 @@ public class MetaTileEntityGravitySeparator extends RecipeMapMultiblockControlle
 
     public MetaTileEntityGravitySeparator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.GRAVITY_SEPARATOR_RECIPES);
-        this.recipeMapWorkable = new NoEnergyLogic(this);
         initializeAbilities();
     }
 

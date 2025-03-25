@@ -1,6 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -18,45 +19,61 @@ import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.*;
+import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockFireboxCasing;
+import gregtech.common.blocks.BlockMetalCasing;
+import gregtech.common.blocks.MetaBlocks;
 
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockController {
+public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockController {
 
-    public MetaTileEntityEnzymaticHydrolisisTank(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.ENZYMATIC_HYDROLISIS_RECIPES);
+    public MetaTileEntityCatalyticCrackingUnit(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.CATALYTIC_CRACKING_RECIPES);
         initializeAbilities();
     }
 
     public IBlockState getCasingState() {
-        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~CCC~~~", "~~CCCCC~~", "P~CCCCC~P", "~~CCCCC~~", "~~~CSC~~~")
-                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~CCC~~~", "~~C~~~C~~", "P~C~~~C~P", "~~C~~~C~~", "~~~CCC~~~")
-                .aisle("~~~~P~~~~", "~~~~~~~~~", "~~~~C~~~~", "~~~C~C~~~", "P~C~~~C~P", "~~~C~C~~~", "~~~CCC~~~")
-                .aisle("~~~~~~~~~", "~~~~P~~~~", "~~~~C~~~~", "~~~~C~~~~", "~PCCCCCP~", "~~~~C~~~~", "~~~~C~~~~")
+                .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC",
+                        "CCCCC", "CCCCC", "CCCCC")
+                .aisle("CCCCC", " AAA ", " AAA ", " AAA ", " P P ", " P P ", " P P ", " P P ", "CP PC", " AAA ",
+                        " AAA ", " AAA ", "CCSCC")
+                .aisle("CCCCC", " AAA ", " A A ", " AAA ", "     ", "     ", "     ", "     ", "C   C", " AAA ",
+                        " F F ", " AAA ", "CCCCC")
+                .aisle("CCCCC", " TTT ", " TTT ", " TTT ", "  R  ", "  R  ", "  R  ", "  R  ", "C R C", " AAA ",
+                        " AAA ", " AAA ", "CCCCC")
+                .aisle("CCCCC", "C   C", "C   C", "C   C", "C   C", "C   C", "C   C", "C   C", "CCCCC", "CCCCC",
+                        "CCCCC", "CCCCC", "CCCCC")
                 .where('S', selfPredicate())
+                .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(9))
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
+                .where('F',
+                        states(MetaBlocks.BOILER_FIREBOX_CASING
+                                .getState(BlockFireboxCasing.FireboxCasingType.STEEL_FIREBOX)))
+                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
+                .where('R', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.BRONZE_PIPE))))
+                .where('A', states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID)))
+                .where('T',
+                        states(MetaBlocks.BOILER_FIREBOX_CASING
+                                .getState(BlockFireboxCasing.FireboxCasingType.BRONZE_FIREBOX)))
                 .build();
     }
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, false, true, true, true, true, false);
+        return autoAbilities(false, false, true, false, false, true, false);
     }
 
     @SideOnly(Side.CLIENT)
@@ -76,11 +93,11 @@ public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockCo
     @NotNull
     @Override
     protected ICubeRenderer getFrontOverlay() {
-        return Textures.LASER_ENGRAVER_OVERLAY;
+        return Textures.ASSEMBLER_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityEnzymaticHydrolisisTank(metaTileEntityId);
+        return new MetaTileEntityCoker(metaTileEntityId);
     }
 }

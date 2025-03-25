@@ -188,15 +188,6 @@ public class Catalysts {
                 .buildAndRegister();
 
         ASSEMBLER_RECIPES.recipeBuilder()
-                .fluidInputs(Polystyrene.getFluid(144))
-                .input(wireFine, Gold)
-                .input(dust, Glucose)
-                .output(BORON_RETAINING_YARN)
-                .duration(120)
-                .EUt(80)
-                .buildAndRegister();
-
-        ASSEMBLER_RECIPES.recipeBuilder()
                 .input(plate, FullerenePolymerTetrix, 6)
                 .input(frameGt, FullerenePolymerMatrix)
                 .circuitMeta(6)
