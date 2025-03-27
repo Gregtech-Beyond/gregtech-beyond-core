@@ -39,10 +39,13 @@ public class GTBMaterialFlags {
     public static MaterialFlag DISABLE_BOULE = (new MaterialFlag.Builder("disable_crystal"))
             .build();
 
+    public static MaterialFlag GENERATE_BEADS = (new MaterialFlag.Builder("beads"))
+            .build();
+
     public static void addToMaterials() {
         addFlag(MaterialFlags.GENERATE_FOIL, Titanium, Graphene, Mica);
 
-        addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten, Iron);
+        addFlag(MaterialFlags.GENERATE_FINE_WIRE, NaquadahAlloy, Tungsten, Iron, Titanium);
 
         addFlag(MaterialFlags.GENERATE_FRAME, Lead);
 
