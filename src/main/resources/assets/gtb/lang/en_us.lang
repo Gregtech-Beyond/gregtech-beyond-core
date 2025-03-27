@@ -92,6 +92,7 @@ recipemap.sintering_oven_recipes.name=Sintering
 recipemap.high_temp_distillation_recipes.name=High Temperature Distillation
 recipemap.beam_shrinking_recipes.name=Beam Shrinking
 recipemap.water_collector_recipes.name=Water Collection
+recipemap.induction_smelter_recipes.name=Induction Smelter
 # Singleblock machinery
 
 gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator
@@ -185,7 +186,31 @@ gtb.machine.electron_beam_lithographer.luv.name=Elite Electron Beam Lithographer
 gtb.machine.electron_beam_lithographer.zpm.name=Elite Electron Beam Lithographer III
 gtb.machine.electron_beam_lithographer.uv.name=Ultimate Electron Beam Lithographer
 
+gtb.machine.beam_shrinking_device.lv.name=Basic Beam Shrinking Device
+gtb.machine.beam_shrinking_device.mv.name=Advanced Beam Shrinking Device
+gtb.machine.beam_shrinking_device.hv.name=Advanced Beam Shrinking Device II
+gtb.machine.beam_shrinking_device.ev.name=Advanced Beam Shrinking Device III
+gtb.machine.beam_shrinking_device.iv.name=Elite Beam Shrinking Device
+gtb.machine.beam_shrinking_device.luv.name=Elite Beam Shrinking Device II
+gtb.machine.beam_shrinking_device.zpm.name=Elite Beam Shrinking Device III
+gtb.machine.beam_shrinking_device.uv.name=Ultimate Beam Shrinking Device
 
+gtb.machine.fluid_compressor.lv.name=Basic Fluid Compressor
+gtb.machine.fluid_compressor.mv.name=Advanced Fluid Compressor
+gtb.machine.fluid_compressor.hv.name=Advanced Fluid Compressor II
+gtb.machine.fluid_compressor.ev.name=Advanced Fluid Compressor III
+gtb.machine.fluid_compressor.iv.name=Elite Fluid Compressor
+gtb.machine.fluid_compressor.luv.name=Elite Fluid Compressor II
+gtb.machine.fluid_compressor.zpm.name=Elite Fluid Compressor III
+gtb.machine.fluid_compressor.uv.name=Ultimate Fluid Compressor
+
+gtb.machine.inscriber.lv.name=Basic Inscriber
+gtb.machine.inscriber.mv.name=Advanced Inscriber
+gtb.machine.inscriber.hv.name=Advanced Inscriber II
+gtb.machine.inscriber.ev.name=Advanced Inscriber III
+
+gtb.machine.induction_smelter.lv.name=Basic Induction Smelter
+gtb.machine.induction_smelter.mv.name=Advanced Induction Smelter
 
 # Multiblock machine controllers
 

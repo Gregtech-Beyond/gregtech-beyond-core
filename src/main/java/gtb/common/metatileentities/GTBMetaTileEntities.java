@@ -82,7 +82,7 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] PLASMA_ETCHER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] BEAM_SHRINKING_DEVICE = new SimpleMachineMetaTileEntity[8];
     public static SimpleMachineMetaTileEntity[] WATER_COLLECTOR = new SimpleMachineMetaTileEntity[2];
-    public static SimpleMachineMetaTileEntity[] INDUCTION_SMELTER = new SimpleMachineMetaTileEntity[2];
+    public static SimpleMachineMetaTileEntity[] INDUCTION_SMELTER = new SimpleMachineMetaTileEntity[3];
     public static SimpleMachineMetaTileEntity[] INSCRIBER = new SimpleMachineMetaTileEntity[5];
 
 
