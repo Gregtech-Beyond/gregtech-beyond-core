@@ -189,7 +189,7 @@ public final class GTBRecipeMaps {
             "catalytic_cracking_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VULCANIZED_PRESS_RECIPES = new RecipeMap<>(
-            "catalytic_cracking_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
+            "vulcanized_press_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VIS_BREAKER_RECIPES = new RecipeMap<>(
             "vis_breaker_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
