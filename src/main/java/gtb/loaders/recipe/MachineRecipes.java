@@ -8,28 +8,17 @@ import static gregtech.loaders.recipe.CraftingComponent.*;
 import static gregtech.loaders.recipe.MetaTileEntityLoader.*;
 import static gtb.api.unification.materials.GTBMaterials.*;
 import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
-import static gtb.common.item.GTBMetaItems.*;
 
 import gregtech.api.recipes.ModHandler;
 import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.common.blocks.*;
 
-import gtb.common.block.GTBMetaBlocks;
 import gtb.common.metatileentities.GTBMetaTileEntities;
 
 public class MachineRecipes {
 
     public static void init() {
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .duration(200)
-                .EUt(20)
-                .outputs(GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getItemVariant(VACUUM_FURNACE_CASING))
-                .input(bolt, Silver)
-                .input(frameGt, Iron)
-                .fluidInputs(AluminoSilicateWoolSolution.getFluid(288))
-                .buildAndRegister();
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(plate, StainlessSteel, 4)
                 .input(circuit, MarkerMaterials.Tier.EV, 2)
@@ -160,37 +149,12 @@ public class MachineRecipes {
                 'M', new UnificationEntry(frameGt, Bronze),
                 'P', new UnificationEntry(plate, Bronze));
 
-        ModHandler.addShapedRecipe("catalytic_reformation_unit_machine",
-                GTBMetaTileEntities.CATALYTIC_REFORMATION_UNIT.getStackForm(),
-                "PCP", "CMC", "PCP",
-                'M', BlockMachineCasing.MachineCasingType.HV,
-                'C', new UnificationEntry(circuit, MarkerMaterials.Tier.EV),
-                'P', new UnificationEntry(plate, EglinSteel));
-
-        ModHandler.addShapedRecipe("solid_fuel_generator_machine",
-                GTBMetaTileEntities.SOLID_FUEL_GENERATOR.getStackForm(),
-                "PCP", "CMC", "PCP",
-                'M', BlockMachineCasing.MachineCasingType.ULV,
-                'C', new UnificationEntry(rotor, Bronze),
-                'P', new UnificationEntry(plate, LowQualitySteel));
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(plate, Steel, 4)
                 .input(stickLong, Steel, 2)
                 .input(VOLTAGE_COIL_LV, 4)
                 .input(circuit, MarkerMaterials.Tier.MV, 2)
                 .output(GTBMetaTileEntities.SINTERING_OVEN)
-                .duration(200)
-                .EUt(70)
-                .buildAndRegister();
-
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .input(NEODYMIUM_MAGNET, 2)
-                .input(circuit, MarkerMaterials.Tier.HV)
-                .input(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.ULV).getBlock())
-                .input(plate, Steel, 2)
-                .inputs(ROBOT_ARM_HV.getStackForm(2))
-                .output(GTBMetaTileEntities.GRAVITY_SEPARATOR)
                 .duration(200)
                 .EUt(70)
                 .buildAndRegister();
@@ -225,17 +189,6 @@ public class MachineRecipes {
                 'Z', ELECTRIC_PUMP_MV,
                 'C', FLUID_FILTER,
                 'P', new UnificationEntry(plate, Aluminium));
-
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .input(plate, SiliconCarbide, 4)
-                .input(circuit, MarkerMaterials.Tier.HV, 2)
-                .input(frameGt, SiliconCarbide)
-                .inputs(ELECTRIC_PUMP_HV.getStackForm(2))
-                .input(VOLTAGE_COIL_MV)
-                .output(GTBMetaTileEntities.HIGH_TEMP_DISTILLATION_TOWER)
-                .duration(200)
-                .EUt(120)
-                .buildAndRegister();
 
         ModHandler.addShapedRecipe("thermal_press_machine", GTBMetaTileEntities.THERMAL_PRESS.getStackForm(),
                 "SPS", "ZMZ", "SPS",

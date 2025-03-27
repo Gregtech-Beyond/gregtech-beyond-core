@@ -11,7 +11,7 @@ public class GTBFantasyMaterials {
     private static int startId = 2601;
     private static final int END_ID = startId + 50;
 
-    public static void register() {
+    public static void init() {
         AwakenedDraconium = new Material.Builder(getMaterialsId(), gregtechId("awakened_draconium"))
                 .ingot()
                 .build().setFormula("AwDr", true);
@@ -42,25 +42,9 @@ public class GTBFantasyMaterials {
                         .ingot()
                         .build().setFormula("Mm***", true);
 
-        NaquadahWaste = new Material.Builder(getMaterialsId(),
-                gregtechId("naquadah_waste"))
-                        .fluid()
-                        .color(0x2d690b).build();
-
-        RareNaquadahWaste = new Material.Builder(getMaterialsId(),
-                gregtechId("rare_naquadah_waste"))
-                        .fluid()
-                        .color(0x0c2100).build();
-
-        NaqHydrochloricAcid = new Material.Builder(getMaterialsId(),
-                gregtechId("naq_hydrochloric_acid"))
-                        .fluid()
-                        .color(0x1d4f00).build();
-
-        RareNaqFluoroantimonicAcid = new Material.Builder(getMaterialsId(),
-                gregtechId("rare_naq_fluoroantimonic_acid"))
-                        .fluid()
-                        .color(0xa1c9a5).build();
+        Pikyonium = new Material.Builder(getMaterialsId(), gregtechId("pikyonium"))
+                .ingot()
+                .build().setFormula("(Ni2NbAl2(Ni4Cr))8((Fe4(FeAlCr)(Fe2Ni05)10SSiC)5?4Ce3Sb2Pt2Yb(FeW)4", true);
     }
 
     private static int getMaterialsId() {

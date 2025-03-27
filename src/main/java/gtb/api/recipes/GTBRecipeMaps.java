@@ -69,7 +69,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> DEHYDRATOR_RECIPES = new RecipeMap<>(
             "dehydrator_recipes",
-            3, 3, 3, 3, new SimpleRecipeBuilder(), false);
+            3, 6, 3, 3, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> MICROSCOPE_RECIPES = new RecipeMap<>(
             "microscope_recipes",
@@ -189,11 +189,8 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
             "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CATALYTIC_CRACKING_RECIPES = new RecipeMap<>(
-            "catalytic_cracking_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
-
     public static final RecipeMap<SimpleRecipeBuilder> VULCANIZED_PRESS_RECIPES = new RecipeMap<>(
-            "catalytic_cracking_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
+            "vulcanized_press_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VIS_BREAKER_RECIPES = new RecipeMap<>(
             "vis_breaker_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
