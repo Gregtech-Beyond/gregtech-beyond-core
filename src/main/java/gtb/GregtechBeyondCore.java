@@ -13,7 +13,6 @@ import gtb.api.utils.GTBLog;
 import gtb.common.CommonProxy;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBBlockWireCoil;
-import gtb.common.item.GTBMetaItems;
 import gtb.common.metatileentities.GTBMetaTileEntities;
 
 @Mod(modid = GregtechBeyondCore.MODID,
@@ -35,7 +34,6 @@ public class GregtechBeyondCore {
     public void onPreInit(@NotNull FMLPreInitializationEvent event) {
         GTBLog.init(event.getModLog());
 
-        GTBMetaItems.init();
         GTBMetaBlocks.init();
         GTBMetaTileEntities.init();
 
