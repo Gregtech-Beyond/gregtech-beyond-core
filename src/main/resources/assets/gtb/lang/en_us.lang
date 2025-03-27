@@ -225,5 +225,6 @@ gtb.machine.rare_gas_stripping_column.name=Rare Gas Stripping Column
 gtb.machine.condensation_unit.name=Condensation Unit
 gtb.machine.pressure_swing_adsorber.name=Pressue Swing Adsorber
 gtb.machine.dilution_refrigerator.name=Dilution Refrigerator
-gtb.machine.gravity_separator.name=Gravity Separatormetaitem.electrically_wired_petri_dish.name=Electrically Wired Petri Dish
+gtb.machine.gravity_separator.name=Gravity Separator
+metaitem.electrically_wired_petri_dish.name=Electrically Wired Petri Dish
 gtb.multiblock.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
