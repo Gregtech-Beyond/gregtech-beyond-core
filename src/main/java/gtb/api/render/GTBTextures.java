@@ -25,6 +25,20 @@ public final class GTBTextures {
             "machines/dehydrator");
     public static OrientedOverlayRenderer NANOSCALE_FABRICATOR_OVERLAY = new OrientedOverlayRenderer(
             "machines/nanoscale_fabricator");
+    public static OrientedOverlayRenderer BEAM_SHRINKING_DEVICE_OVERLAY = new OrientedOverlayRenderer(
+            "machines/beam_shrinking_device");
+    public static OrientedOverlayRenderer VACUUM_EJECTOR_OVERLAY = new OrientedOverlayRenderer(
+            "machines/vacuum_ejector");
+    public static OrientedOverlayRenderer DRYER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/dryer");
+    public static OrientedOverlayRenderer ROASTER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/roaster");
+    public static OrientedOverlayRenderer ROTARY_EVAPORATOR_OVERLAY = new OrientedOverlayRenderer(
+            "machines/rotary_evaporator");
+    public static OrientedOverlayRenderer MICROSCOPE_OVERLAY = new OrientedOverlayRenderer(
+            "machines/microscope");
+    public static OrientedOverlayRenderer WATER_COLLECTOR_OVERLAY = new OrientedOverlayRenderer(
+            "machines/water_collector");
     public static SimpleOverlayRenderer SILICON_CARBIDE_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/silicon_carbide_casing");
     public static SimpleOverlayRenderer CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(

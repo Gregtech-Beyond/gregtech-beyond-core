@@ -80,6 +80,9 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] UV_LIGHT = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] FLUID_COMPRESSOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] PLASMA_ETCHER = new SimpleMachineMetaTileEntity[15];
+    public static SimpleMachineMetaTileEntity[] BEAM_SHRINKING_DEVICE = new SimpleMachineMetaTileEntity[8];
+    public static SimpleMachineMetaTileEntity[] COMPONENT_ASSEMBLER = new SimpleMachineMetaTileEntity[8];
+    public static SimpleMachineMetaTileEntity[] WATER_COLLECTOR = new SimpleMachineMetaTileEntity[8];
 
     public static void init() {
         // Multiblocks
@@ -165,22 +168,22 @@ public final class GTBMetaTileEntities {
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
-                GTBRecipeMaps.CRYSTALLIZATION_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                GTBRecipeMaps.CRYSTALLIZATION_RECIPES, GTBTextures.CRYSTALLIZER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
                 DEHYDRATORS, 4028, "dehydrator",
-                GTBRecipeMaps.DEHYDRATOR_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                GTBRecipeMaps.DEHYDRATOR_RECIPES, GTBTextures.DEHYDRATOR_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
                 MICROSCOPE, 4044, "microscope",
-                GTBRecipeMaps.MICROSCOPE_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                GTBRecipeMaps.MICROSCOPE_RECIPES, GTBTextures.MICROSCOPE_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
                 ROTARY_EVAPORATOR, 4060, "rotary_evaporator",
-                GTBRecipeMaps.ROTARY_EVAPORATOR_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                GTBRecipeMaps.ROTARY_EVAPORATOR_RECIPES, GTBTextures.ROTARY_EVAPORATOR_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(CVD_UNIT, 4090, "cvd_unit", GTBRecipeMaps.CVD_UNIT_RECIPES,
@@ -190,10 +193,10 @@ public final class GTBMetaTileEntities {
                 GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(ROASTER, 4130, "roaster", GTBRecipeMaps.ROASTER_RECIPES,
-                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+                GTBTextures.ROASTER_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(DRYER, 4150, "dryer", GTBRecipeMaps.DRYER_RECIPES,
-                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+                GTBTextures.DRYER_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(ELECTRON_BEAM_LITHOGRAPHER, 4170, "electron_beam_lithographer",
                 GTBRecipeMaps.ELECTRON_BEAM_LITHOGRAPHER_RECIPES,
@@ -205,7 +208,7 @@ public final class GTBMetaTileEntities {
 
         registerSimpleMetaTileEntity(VACUUM_EJECTOR, 4200, "vacuum_ejector",
                 GTBRecipeMaps.VACUUM_EJECTION_RECIPES,
-                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+                GTBTextures.VACUUM_EJECTOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
                 ION_EXCHANGE_UNIT, 4220, "ion_exchange_unit",
@@ -228,8 +231,12 @@ public final class GTBMetaTileEntities {
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
-                PLASMA_ETCHER, 4300, "beam_shrinking_device",
-                GTBRecipeMaps.PLASMA_ETCHER_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                BEAM_SHRINKING_DEVICE, 4300, "beam_shrinking_device",
+                GTBRecipeMaps.BEAM_SHRINKING_RECIPES, GTBTextures.BEAM_SHRINKING_DEVICE_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(WATER_COLLECTOR, 4350, "water_collector",
+                GTBRecipeMaps.PRESSURE_SWING_ADSORBER_RECIPES, GTBTextures.WATER_COLLECTOR_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }

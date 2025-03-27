@@ -1,5 +1,7 @@
 package gtb.api.recipes;
 
+import gregtech.api.gui.GuiTextures;
+import gregtech.api.gui.widgets.ProgressWidget;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
@@ -227,5 +229,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> BEAM_SHRINKING_RECIPES = new RecipeMap<>(
             "beam_shrinking_recipes",
-            2, 2, 4, 2, new SimpleRecipeBuilder(), false);
+            2, 1, 0, 0, new SimpleRecipeBuilder(), false)
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
+                    .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
 }
