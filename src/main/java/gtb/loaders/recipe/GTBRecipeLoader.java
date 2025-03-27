@@ -23,22 +23,6 @@ public final class GTBRecipeLoader {
         RecipeMaps.VACUUM_RECIPES.setMaxFluidOutputs(2);
         RecipeMaps.CHEMICAL_RECIPES.setMaxFluidOutputs(3);
 
-        MinecraftOverhauls.init();
-        Electronics.init();
-        CryogenicAirDistillation.init();
-        AlcoholLine.init();
-        Catalysts.init();
-        NaturalGasLine.init();
-        OrganicChemistry.init();
-        XylenolLine.init();
-        MaterialBenefication.init();
-        RandomRecipes.init();
-        BiologyLines.init();
-        Metallurgy.init();
-        Photolithography.init();
         MachineRecipes.init();
-        BrineLine.init();
-        WaterLine.init();
-        FurnaceRemoveals.init();
     }
 }
