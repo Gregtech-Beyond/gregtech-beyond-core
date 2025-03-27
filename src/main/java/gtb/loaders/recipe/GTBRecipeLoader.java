@@ -22,6 +22,8 @@ public final class GTBRecipeLoader {
         RecipeMaps.CIRCUIT_ASSEMBLER_RECIPES.setMaxInputs(9);
         RecipeMaps.VACUUM_RECIPES.setMaxFluidOutputs(2);
         RecipeMaps.CHEMICAL_RECIPES.setMaxFluidOutputs(3);
+        RecipeMaps.CRACKING_RECIPES.setMaxInputs(2);
+        RecipeMaps.CRACKING_RECIPES.setMaxOutputs(1);
 
         MachineRecipes.init();
     }
