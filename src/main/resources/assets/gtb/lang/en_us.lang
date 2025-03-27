@@ -90,6 +90,8 @@ recipemap.vacuum_ejection_recipes.name=Vacuum Ejection Recipes
 recipemap.dryer_recipes.name=Dryer Recipes
 recipemap.sintering_oven_recipes.name=Sintering
 recipemap.high_temp_distillation_recipes.name=High Temperature Distillation
+recipemap.beam_shrinking_recipes.name=Beam Shrinking
+recipemap.water_collector_recipes.name=Water Collection
 # Singleblock machinery
 
 gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator

@@ -39,6 +39,10 @@ public final class GTBTextures {
             "machines/microscope");
     public static OrientedOverlayRenderer WATER_COLLECTOR_OVERLAY = new OrientedOverlayRenderer(
             "machines/water_collector");
+    public static OrientedOverlayRenderer INDUCTION_SMELTER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/induction_smelter");
+    public static OrientedOverlayRenderer INSCRIBER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/inscriber");
     public static SimpleOverlayRenderer SILICON_CARBIDE_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/silicon_carbide_casing");
     public static SimpleOverlayRenderer CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(

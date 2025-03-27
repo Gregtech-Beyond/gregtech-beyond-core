@@ -81,8 +81,10 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] FLUID_COMPRESSOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] PLASMA_ETCHER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] BEAM_SHRINKING_DEVICE = new SimpleMachineMetaTileEntity[8];
-    public static SimpleMachineMetaTileEntity[] COMPONENT_ASSEMBLER = new SimpleMachineMetaTileEntity[8];
-    public static SimpleMachineMetaTileEntity[] WATER_COLLECTOR = new SimpleMachineMetaTileEntity[8];
+    public static SimpleMachineMetaTileEntity[] WATER_COLLECTOR = new SimpleMachineMetaTileEntity[2];
+    public static SimpleMachineMetaTileEntity[] INDUCTION_SMELTER = new SimpleMachineMetaTileEntity[2];
+    public static SimpleMachineMetaTileEntity[] INSCRIBER = new SimpleMachineMetaTileEntity[5];
+
 
     public static void init() {
         // Multiblocks
@@ -235,8 +237,16 @@ public final class GTBMetaTileEntities {
                 GTBRecipeMaps.BEAM_SHRINKING_RECIPES, GTBTextures.BEAM_SHRINKING_DEVICE_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
-        registerSimpleMetaTileEntity(WATER_COLLECTOR, 4350, "water_collector",
-                GTBRecipeMaps.PRESSURE_SWING_ADSORBER_RECIPES, GTBTextures.WATER_COLLECTOR_OVERLAY,
+        registerSimpleMetaTileEntity(WATER_COLLECTOR, 4320, "water_collector",
+                GTBRecipeMaps.WATER_COLLECTOR_RECIPES, GTBTextures.WATER_COLLECTOR_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(INDUCTION_SMELTER, 4340, "induction_smelter",
+                GTBRecipeMaps.INDUCTION_SMELTER_RECIPES, GTBTextures.INDUCTION_SMELTER_OVERLAY,
+                true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        registerSimpleMetaTileEntity(INSCRIBER, 4360, "inscriber",
+                GTBRecipeMaps.INSCRIBER_RECIPES, GTBTextures.INSCRIBER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
     }
 }
