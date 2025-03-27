@@ -1,5 +1,7 @@
 package gtb.common.metatileentities.multiblocks;
 
+import static gregtech.api.recipes.RecipeMaps.CRACKING_RECIPES;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
@@ -27,12 +29,11 @@ import gregtech.common.blocks.MetaBlocks;
 import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
-import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityCatalyticCrackingUnit(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.CATALYTIC_CRACKING_RECIPES);
+        super(metaTileEntityId, CRACKING_RECIPES);
         initializeAbilities();
     }
 
@@ -79,7 +80,7 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.CLEAN_STAINLESS_STEEL_CASING;
     }
 
     @Override

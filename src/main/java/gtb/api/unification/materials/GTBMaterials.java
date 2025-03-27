@@ -15,6 +15,7 @@ public class GTBMaterials {
     public static Material Eternal;
     public static Material CataclysmInducedMixedMatter;
     public static Material TemporallyConstrainedAntiMatter;
+    public static Material Pikyonium;
 
     // SD Materials
 
