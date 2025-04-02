@@ -24,11 +24,12 @@ public class GTBOrePrefix {
                     (mat.hasProperty(PropertyKey.GEM) || mat.hasFlag(GENERATE_SEED_CRYSTAL)));
     public static final OrePrefix beads = new OrePrefix("beads", M, null, GTBMaterialIconType.beads,
             OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_BEADS));
-
     public static final OrePrefix boule = new OrePrefix("boule", -1, null,
             GTBMaterialIconType.boule,
             OrePrefix.Flags.ENABLE_UNIFICATION,
             mat -> !mat.hasFlag(DISABLE_BOULE) && (mat.hasProperty(PropertyKey.GEM) || mat.hasFlag(GENERATE_BOULE)));
+    public static final OrePrefix sponge = new OrePrefix("sponge", M, null, GTBMaterialIconType.sponge,
+            OrePrefix.Flags.ENABLE_UNIFICATION, mat -> mat.hasFlag(GENERATE_SPONGE));
 
     public static void register() {
         MetaItems.addOrePrefix(GTBOrePrefix.floated);
@@ -37,5 +38,6 @@ public class GTBOrePrefix {
         MetaItems.addOrePrefix(GTBOrePrefix.seedCrystal);
         MetaItems.addOrePrefix(GTBOrePrefix.boule);
         MetaItems.addOrePrefix(GTBOrePrefix.beads);
+        MetaItems.addOrePrefix(GTBOrePrefix.sponge);
     }
 }

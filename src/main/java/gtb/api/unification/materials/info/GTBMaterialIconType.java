@@ -10,4 +10,5 @@ public class GTBMaterialIconType {
     public static MaterialIconType seedCrystal = new MaterialIconType("seed_crystal");
     public static MaterialIconType boule = new MaterialIconType("boule");
     public static MaterialIconType beads = new MaterialIconType("beads");
+    public static MaterialIconType sponge = new MaterialIconType("sponge");
 }
