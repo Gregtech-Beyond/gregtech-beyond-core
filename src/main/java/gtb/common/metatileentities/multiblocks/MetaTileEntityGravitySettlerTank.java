@@ -38,20 +38,20 @@ public class MetaTileEntityGravitySettlerTank extends RecipeMapMultiblockControl
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~", "~CC~", "~CC~", "~CC~", "~CC~", "~CC~", "~~~~")
-                .aisle("~CC~", "CPPC", "C~~C", "CFFC", "CFFC", "CFFC", "~SC~")
-                .aisle("~CC~", "CPPC", "C~~C", "CFFC", "CFFC", "CFFC", "~CC~")
-                .aisle("~~~~", "~GG~", "~GG~", "~GG~", "~GG~", "~GG~", "~~~~")
+        return FactoryBlockPattern.start()
+                .aisle("AAAA", "ACCA", "ACCA", "AAAA")
+                .aisle("ACCA", "CRRC", "CRRC", "AGGA")
+                .aisle("ACCA", "CFFC", "CFFC", "AGGA").setRepeatable(3)
+                .aisle("AAAA", "ASCA", "ACCA", "AAAA")
                 .where('S', selfPredicate())
-                .where('~', any())
+                .where('A', any())
+                .where('R', air())
                 .where('G', states(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.TEMPERED_GLASS)))
                 .where('F',
                         states(MetaBlocks.MULTIBLOCK_CASING
                                 .getState(BlockMultiblockCasing.MultiblockCasingType.GRATE_CASING)))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1, 1))
+                .where('C', states(getCasingState()).setMinGlobalLimited(8)
                         .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMaxGlobalLimited(1, 1))
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1, 1))
                         .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
