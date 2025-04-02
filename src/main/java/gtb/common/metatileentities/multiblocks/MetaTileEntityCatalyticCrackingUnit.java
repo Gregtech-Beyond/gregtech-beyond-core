@@ -57,9 +57,7 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
+                .where('C', states(getCasingState()).or(autoAbilities()))
                 .where('F',
                         states(MetaBlocks.BOILER_FIREBOX_CASING
                                 .getState(BlockFireboxCasing.FireboxCasingType.STEEL_FIREBOX)))
@@ -99,6 +97,6 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityCoker(metaTileEntityId);
+        return new MetaTileEntityCatalyticCrackingUnit(metaTileEntityId);
     }
 }

@@ -231,6 +231,7 @@ gtb.machine.fermentation_vat.name=Fermentation Vat
 gtb.machine.dilution_tank.name=Dilution Tank
 gtb.machine.coker.name=Coker
 gtb.machine.catalytic_reformation_unit.name=Catalytic Reformation Unit
+gtb.machine.catalytic_cracking_unit.name=Catalytic Cracking Unit
 gtb.machine.black_hole_compressor.name=Black Hole Compressor
 gtb.machine.bedrock_pump.name=Bedrock Pump
 gtb.machine.bacterial_vat.name=Bacterial Vat
