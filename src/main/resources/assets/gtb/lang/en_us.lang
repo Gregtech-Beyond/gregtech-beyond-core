@@ -86,7 +86,7 @@ recipemap.burner_reactor_recipes.name=Burner Reaction
 recipemap.dissolution_tank_recipes.name=Dissolution
 recipemap.gravity_separator_recipes.name=Gravity Separation
 recipemap.electron_beam_lithographer_recipes.name=Electron Beam Lithography
-recipemap.enzymatic_hydrolisis_recipes.name=Enzymatic Hydrolisis
+recipemap.enzymatic_hydrolysis_recipes.name=Enzymatic Hydrolysis
 recipemap.vacuum_ejection_recipes.name=Vacuum Ejection Recipes
 recipemap.dryer_recipes.name=Dryer Recipes
 recipemap.sintering_oven_recipes.name=Sintering
@@ -215,7 +215,7 @@ gtb.machine.induction_smelter.mv.name=Advanced Induction Smelter
 
 # Multiblock machine controllers
 
-gtb.machine.enzymatic_hydrolisis_tank.name=Enzymatic Hydrolisis Tank
+gtb.machine.enzymatic_hydrolysis_tank.name=Enzymatic Hydrolysis Tank
 gtb.machine.sintering_oven.name=Sintering Oven
 gtb.machine.dissolution_tank.name=Dissolution Tank
 gtb.machine.burner_reactor.name=Burner Reactor

@@ -25,10 +25,10 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockController {
+public class MetaTileEntityEnzymaticHydrolysisTank extends RecipeMapMultiblockController {
 
-    public MetaTileEntityEnzymaticHydrolisisTank(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.ENZYMATIC_HYDROLISIS_RECIPES);
+    public MetaTileEntityEnzymaticHydrolysisTank(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.ENZYMATIC_HYDROLYSIS_RECIPES);
         initializeAbilities();
     }
 
@@ -81,6 +81,6 @@ public class MetaTileEntityEnzymaticHydrolisisTank extends RecipeMapMultiblockCo
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityEnzymaticHydrolisisTank(metaTileEntityId);
+        return new MetaTileEntityEnzymaticHydrolysisTank(metaTileEntityId);
     }
 }

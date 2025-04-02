@@ -55,7 +55,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDilutionRefrigerator DILUTION_REFRIGERATOR;
     public static MetaTileEntityGravitySeparator GRAVITY_SEPARATOR;
     public static MetaTileEntitySinteringOven SINTERING_OVEN;
-    public static MetaTileEntityEnzymaticHydrolisisTank ENZYMATIC_HYDROLISIS_TANK;
+    public static MetaTileEntityEnzymaticHydrolysisTank ENZYMATIC_HYDROLISIS_TANK;
     public static MetaTileEntityCuringOven CURING_OVEN;
     public static MetaTileEntityVulcanizedPress VULCANIZED_PRESS;
     public static MetaTileEntityGravitySettlerTank GRAVITY_SETTLER_TANK;
@@ -154,7 +154,7 @@ public final class GTBMetaTileEntities {
         SINTERING_OVEN = registerMetaTileEntity(3037,
                 new MetaTileEntitySinteringOven(gtb("sintering_oven")));
         ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
-                new MetaTileEntityEnzymaticHydrolisisTank(gtb("enzymatic_hydrolisis_tank")));
+                new MetaTileEntityEnzymaticHydrolysisTank(gtb("enzymatic_hydrolysis_tank")));
         CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
         CATALYTIC_CRACKING_UNIT = registerMetaTileEntity(3040,
                 new MetaTileEntityCatalyticCrackingUnit(gtb("catalytic_cracking_unit")));
