@@ -41,11 +41,10 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("F#F", "###", "###", "###", "F#F")
-                .aisle("XXX", "XXX", "SXX", "PPP", "XXX")
-                .aisle("XXX", "X#X", "X#X", "P#P", "XXX")
-                .aisle("XXX", "XXX", "XXX", "PPP", "XXX")
+        return FactoryBlockPattern.start()
+                .aisle("F###F", "XXXPX", "XXXPX", "XXXPX")
+                .aisle("#####", "XXXPX", "X###X", "XXXPX")
+                .aisle("F###F", "XXXPX", "XXSPX", "XXXPX")
                 .where('S', selfPredicate())
                 .where('#', any())
                 .where('X', states(getCasingState())

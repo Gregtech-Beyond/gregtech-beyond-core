@@ -43,49 +43,10 @@ public class MetaTileEntityMOCVDUnit extends RecipeMapMultiblockController {
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle(
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        "SCC",
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        "CCC",
-                        "CCC")
-                .aisle(
-                        "CCC",
-                        "G~G",
-                        "GTG",
-                        "G~G",
-                        "CCC",
-                        "CPC",
-                        "CPC",
-                        "CPC",
-                        "CCC",
-                        "G~G",
-                        "GTG",
-                        "G~G",
-                        "CCC")
-                .aisle(
-                        "~C~",
-                        "~G~",
-                        "~G~",
-                        "~G~",
-                        "CCC",
-                        "~~~",
-                        "~~~",
-                        "~~~",
-                        "CCC",
-                        "~G~",
-                        "~G~",
-                        "~G~",
-                        "~C~")
+        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.FRONT, RelativeDirection.UP)
+                .aisle("CCCCCCSCCCCCC", "CCCCCCCCCCCCC", "CCCCCCCCCCCCC")
+                .aisle("CGTGCCCCCGGGC", "C~T~CPPPC~T~C", "CGTGCCCCCGGGC")
+                .aisle("~~~~C~~~C~~~~", "CGGGC~~~CGGGC", "~~~~C~~~C~~~~")
                 .where('S', selfPredicate())
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.EXPORT_ITEMS).setMaxGlobalLimited(1))

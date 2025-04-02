@@ -43,7 +43,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
+        return FactoryBlockPattern.start()
                 .aisle("       ", " A   A ", " A   A ", " A   A ", "       ")
                 .aisle(" A   A ", " AAAAA ", "AAGGGAA", " AAAAA ", " A   A ")
                 .aisle(" A   A ", "AAAAAAA", "AA~~~AA", "AAAAAAA", " A   A ")
