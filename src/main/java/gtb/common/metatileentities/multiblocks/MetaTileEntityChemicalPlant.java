@@ -1,12 +1,8 @@
 package gtb.common.metatileentities.multiblocks;
 
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.jetbrains.annotations.NotNull;
-
+import codechicken.lib.render.CCRenderState;
+import codechicken.lib.render.pipeline.IVertexOperation;
+import codechicken.lib.vec.Matrix4;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -16,18 +12,18 @@ import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
 import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.unification.material.Materials;
-import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockBoilerCasing;
 import gregtech.common.blocks.MetaBlocks;
-
-import codechicken.lib.render.CCRenderState;
-import codechicken.lib.render.pipeline.IVertexOperation;
-import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import org.jetbrains.annotations.NotNull;
 
 public class MetaTileEntityChemicalPlant extends RecipeMapMultiblockController {
 
@@ -43,12 +39,12 @@ public class MetaTileEntityChemicalPlant extends RecipeMapMultiblockController {
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
+        return FactoryBlockPattern.start()
                 .aisle("C~~~C", "CCCCC", "C~~~C", "CCCCC", "C~~~C")
                 .aisle("CCCCC", "CHHHC", "CPPPC", "CCCCC", "CCCCC")
                 .aisle("C~~~C", "CPPPC", "C~~~C", "CPPPC", "C~~~C")
                 .aisle("CCCCC", "CHHHC", "CPPPC", "CCCCC", "CCCCC")
-                .aisle("C~~~C", "SCCCC", "C~~~C", "CCCCC", "C~~~C")
+                .aisle("C~~~C", "CCSCC", "C~~~C", "CCCCC", "C~~~C")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState())
@@ -67,7 +63,7 @@ public class MetaTileEntityChemicalPlant extends RecipeMapMultiblockController {
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
