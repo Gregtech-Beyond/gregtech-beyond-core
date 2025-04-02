@@ -42,6 +42,9 @@ public class GTBMaterialFlags {
     public static MaterialFlag GENERATE_BEADS = (new MaterialFlag.Builder("beads"))
             .build();
 
+    public static MaterialFlag GENERATE_SPONGE = (new MaterialFlag.Builder("sponge"))
+            .build();
+
     public static void addToMaterials() {
         addFlag(MaterialFlags.GENERATE_FOIL, Titanium, Graphene, Mica);
 
@@ -50,7 +53,6 @@ public class GTBMaterialFlags {
         addFlag(MaterialFlags.GENERATE_FRAME, Lead);
 
         Cupronickel.addFlags(MaterialFlags.GENERATE_LONG_ROD);
-
         addFlag(GTBMaterialFlags.GENERATE_SIFTED, GTBMaterialFlags.GENERATE_FLOATED, Pyrochlore, Tantalite, Pollucite);
 
         addFlag(GTBMaterialFlags.GENERATE_ITEM_CASING, Steel, Aluminium, StainlessSteel, Titanium, TungstenSteel);
@@ -59,6 +61,8 @@ public class GTBMaterialFlags {
                 Dysprosium, Erbium, Gadolinium, Rhenium, Germanium, Strontium, Rutherfordium);
 
         addFlag(DISABLE_BOULE, DISABLE_SEED_CRYSTAL, Coke, Charcoal, Salt, RockSalt, Coal, Sugar, Flint);
+
+        addFlag(GENERATE_SPONGE, Titanium);
     }
 
     private static void addFlag(MaterialFlag flag, Material... materials) {
