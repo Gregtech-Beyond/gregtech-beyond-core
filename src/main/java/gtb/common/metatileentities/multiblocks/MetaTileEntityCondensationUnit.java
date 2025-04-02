@@ -50,11 +50,8 @@ public class MetaTileEntityCondensationUnit extends RecipeMapMultiblockControlle
                         states(MetaBlocks.MULTIBLOCK_CASING
                                 .getState(BlockMultiblockCasing.MultiblockCasingType.GRATE_CASING)))
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(4, 1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMaxGlobalLimited(4, 1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMaxGlobalLimited(4, 1))
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(4, 1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(40)
+                        .or(autoAbilities()))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(STEEL_PIPE)))
                 .build();
@@ -62,7 +59,7 @@ public class MetaTileEntityCondensationUnit extends RecipeMapMultiblockControlle
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)

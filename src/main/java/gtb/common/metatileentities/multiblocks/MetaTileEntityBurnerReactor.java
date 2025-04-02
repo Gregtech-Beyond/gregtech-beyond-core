@@ -49,7 +49,7 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
                 .where('X',
                         states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF))
                                 .setMinGlobalLimited(25)
-                                .or(autoAbilities(true, true, true, true, true, true, false)))
+                                .or(autoAbilities()))
                 .where('F',
                         states(MetaBlocks.FRAMES.get(GCYMMaterials.MaragingSteel300)
                                 .getBlock(GCYMMaterials.MaragingSteel300)))
@@ -65,7 +65,7 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)

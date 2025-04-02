@@ -104,6 +104,7 @@ public class MetaTileEntityDilutionRefrigerator extends RecipeMapMultiblockContr
     }
 
     @Override
+    @NotNull
     protected BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
                 .aisle("XXX", "CCC", "CCC", "CCC", "XXX")

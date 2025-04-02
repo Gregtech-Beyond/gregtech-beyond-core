@@ -57,7 +57,7 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
-                .where('C', states(getCasingState()).or(autoAbilities()))
+                .where('C', states(getCasingState()).setMinGlobalLimited(135).or(autoAbilities()))
                 .where('F',
                         states(MetaBlocks.BOILER_FIREBOX_CASING
                                 .getState(BlockFireboxCasing.FireboxCasingType.STEEL_FIREBOX)))
@@ -72,7 +72,7 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)

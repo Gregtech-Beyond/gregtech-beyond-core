@@ -52,9 +52,8 @@ public class MetaTileEntityDissolutionTank extends RecipeMapMultiblockController
                 .aisle("~CCC~", "CCCCC", "CCCCC", "CCCCC", "~CCC~")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(65)
+                        .or(autoAbilities()))
                 .where('F', frames(Materials.BlueSteel))
                 .where('G', states(MetaBlocks.TRANSPARENT_CASING.getDefaultState()))
                 .build();
@@ -62,7 +61,7 @@ public class MetaTileEntityDissolutionTank extends RecipeMapMultiblockController
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, false, false, true, false);
     }
 
     @SideOnly(Side.CLIENT)
