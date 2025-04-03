@@ -31,7 +31,6 @@ public class MetaTileEntitySealedReactionChamber extends RecipeMapMultiblockCont
 
     public MetaTileEntitySealedReactionChamber(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.SEALED_REACTION_CHAMBER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {
@@ -163,12 +162,8 @@ public class MetaTileEntitySealedReactionChamber extends RecipeMapMultiblockCont
                         "~~~~~~~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(138)
+                        .or(autoAbilities()))
                 .where('F', frames(Materials.Steel))
                 .where('T',
                         states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
@@ -179,7 +174,7 @@ public class MetaTileEntitySealedReactionChamber extends RecipeMapMultiblockCont
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
