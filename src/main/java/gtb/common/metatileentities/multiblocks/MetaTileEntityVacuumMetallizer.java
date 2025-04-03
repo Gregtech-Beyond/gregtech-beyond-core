@@ -10,7 +10,6 @@ import org.jetbrains.annotations.NotNull;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
@@ -28,9 +27,9 @@ import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 
-public class MetaTileEntityVacuumMetalizer extends RecipeMapMultiblockController {
+public class MetaTileEntityVacuumMetallizer extends RecipeMapMultiblockController {
 
-    public MetaTileEntityVacuumMetalizer(ResourceLocation metaTileEntityId) {
+    public MetaTileEntityVacuumMetallizer(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.VACUUM_METALIZER_RECIPES);
         initializeAbilities();
     }
@@ -90,6 +89,6 @@ public class MetaTileEntityVacuumMetalizer extends RecipeMapMultiblockController
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityVacuumMetalizer(metaTileEntityId);
+        return new MetaTileEntityVacuumMetallizer(metaTileEntityId);
     }
 }

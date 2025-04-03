@@ -60,7 +60,7 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityVulcanizedPress VULCANIZED_PRESS;
     public static MetaTileEntityGravitySettlerTank GRAVITY_SETTLER_TANK;
     public static MetaTileEntityVisBreaker VIS_BREAKER;
-    public static MetaTileEntityVacuumMetalizer VACUUM_METALIZER;
+    public static MetaTileEntityVacuumMetallizer VACUUM_METALLIZER;
     public static MetaTileEntityOxidationFurnace OXIDATION_FURNACE;
     public static MetaTileEntityMOCVDUnit MOCVD_UNIT;
     public static MetaTileEntityHighTemperaturePolymerizationTank HIGH_TEMP_POLYMERIZATION_TANK;
@@ -162,7 +162,7 @@ public final class GTBMetaTileEntities {
         GRAVITY_SETTLER_TANK = registerMetaTileEntity(3042,
                 new MetaTileEntityGravitySettlerTank(gtb("gravity_settler_tank")));
         VIS_BREAKER = registerMetaTileEntity(3043, new MetaTileEntityVisBreaker(gtb("vis_breaker")));
-        VACUUM_METALIZER = registerMetaTileEntity(3044, new MetaTileEntityVacuumMetalizer(gtb("vacuum_metalizer")));
+        VACUUM_METALLIZER = registerMetaTileEntity(3044, new MetaTileEntityVacuumMetallizer(gtb("vacuum_metallizer")));
         OXIDATION_FURNACE = registerMetaTileEntity(3045, new MetaTileEntityOxidationFurnace(gtb("oxidation_furnace")));
         MOCVD_UNIT = registerMetaTileEntity(3046, new MetaTileEntityMOCVDUnit(gtb("mocvd_unit")));
         HIGH_TEMP_POLYMERIZATION_TANK = registerMetaTileEntity(3047,
