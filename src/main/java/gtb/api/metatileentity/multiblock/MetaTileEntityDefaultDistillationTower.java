@@ -1,27 +1,9 @@
 package gtb.api.metatileentity.multiblock;
 
-import gregtech.api.capability.IDistillationTower;
-import gregtech.api.capability.IMultipleTankHandler;
-import gregtech.api.capability.impl.DistillationTowerLogicHandler;
-import gregtech.api.capability.impl.MultiblockRecipeLogic;
-import gregtech.api.metatileentity.multiblock.IMultiblockPart;
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
-import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
-import gregtech.api.pattern.BlockPattern;
-import gregtech.api.pattern.FactoryBlockPattern;
-import gregtech.api.pattern.PatternMatchContext;
-import gregtech.api.recipes.Recipe;
-import gregtech.api.recipes.RecipeMap;
-import gregtech.api.recipes.RecipeMaps;
-import gregtech.api.util.GTTransferUtils;
-import gregtech.api.util.GTUtility;
-import gregtech.api.util.RelativeDirection;
-import gregtech.api.util.TextComponentUtil;
-import gregtech.client.renderer.ICubeRenderer;
-import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockMetalCasing.MetalCasingType;
-import gregtech.common.blocks.MetaBlocks;
-import gregtech.core.sound.GTSoundEvents;
+import static gregtech.api.util.RelativeDirection.*;
+
+import java.util.List;
+import java.util.function.Function;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
@@ -36,22 +18,40 @@ import net.minecraftforge.items.IItemHandlerModifiable;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
-import java.util.function.Function;
-
-import static gregtech.api.util.RelativeDirection.*;
+import gregtech.api.capability.IDistillationTower;
+import gregtech.api.capability.IMultipleTankHandler;
+import gregtech.api.capability.impl.DistillationTowerLogicHandler;
+import gregtech.api.capability.impl.MultiblockRecipeLogic;
+import gregtech.api.metatileentity.multiblock.IMultiblockPart;
+import gregtech.api.metatileentity.multiblock.MultiblockAbility;
+import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
+import gregtech.api.pattern.BlockPattern;
+import gregtech.api.pattern.FactoryBlockPattern;
+import gregtech.api.pattern.PatternMatchContext;
+import gregtech.api.recipes.Recipe;
+import gregtech.api.recipes.RecipeMap;
+import gregtech.api.util.GTTransferUtils;
+import gregtech.api.util.GTUtility;
+import gregtech.api.util.RelativeDirection;
+import gregtech.api.util.TextComponentUtil;
+import gregtech.client.renderer.ICubeRenderer;
+import gregtech.client.renderer.texture.Textures;
+import gregtech.common.blocks.BlockMetalCasing.MetalCasingType;
+import gregtech.common.blocks.MetaBlocks;
+import gregtech.core.sound.GTSoundEvents;
 
 /**
  * Code from {@link gregtech.common.metatileentities.multi.electric.MetaTileEntityDistillationTower}
  */
-public abstract class MetaTileEntityDefaultDistillationTower extends RecipeMapMultiblockController implements IDistillationTower {
+public abstract class MetaTileEntityDefaultDistillationTower extends RecipeMapMultiblockController
+                                                             implements IDistillationTower {
 
     protected DistillationTowerLogicHandler handler;
 
     protected MetaTileEntityDefaultDistillationTower(ResourceLocation metaTileEntityId, RecipeMap recipeMap) {
         super(metaTileEntityId, recipeMap);
-            this.recipeMapWorkable = new DistillationTowerRecipeLogic(this);
-            this.handler = new DistillationTowerLogicHandler(this);
+        this.recipeMapWorkable = new DistillationTowerRecipeLogic(this);
+        this.handler = new DistillationTowerLogicHandler(this);
     }
 
     /**

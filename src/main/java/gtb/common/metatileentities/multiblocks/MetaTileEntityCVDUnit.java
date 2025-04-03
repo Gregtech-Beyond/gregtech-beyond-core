@@ -5,6 +5,8 @@ import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 
+import org.jetbrains.annotations.NotNull;
+
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -22,7 +24,6 @@ import gregicality.multiblocks.common.block.blocks.BlockLargeMultiblockCasing;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
-import org.jetbrains.annotations.NotNull;
 
 public class MetaTileEntityCVDUnit extends RecipeMapMultiblockController {
 

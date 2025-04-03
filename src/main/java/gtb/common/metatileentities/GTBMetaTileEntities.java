@@ -85,7 +85,6 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] INDUCTION_SMELTER = new SimpleMachineMetaTileEntity[3];
     public static SimpleMachineMetaTileEntity[] INSCRIBER = new SimpleMachineMetaTileEntity[5];
 
-
     public static void init() {
         // Multiblocks
         SOLAR_THERMAL_CONCENTRATOR = registerMetaTileEntity(3001,
