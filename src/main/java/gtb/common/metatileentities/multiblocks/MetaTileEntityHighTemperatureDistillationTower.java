@@ -1,5 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
+import gtb.api.metatileentity.multiblock.MetaTileEntityDefaultDistillationTower;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -28,55 +29,21 @@ import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing;
 
-public class MetaTileEntityHighTemperatureDistillationTower extends RecipeMapMultiblockController {
+public class MetaTileEntityHighTemperatureDistillationTower extends MetaTileEntityDefaultDistillationTower {
 
     public MetaTileEntityHighTemperatureDistillationTower(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.HIGH_TEMP_DISTILLATION_RECIPES);
-        initializeAbilities();
     }
 
+    @Override
     public IBlockState getCasingState() {
         return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.SILICON_CARBIDE_CASING);
-    }
-
-    @Override
-    protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("YYY", "YYY", "YSY")
-                .aisle("XXX", "X#X", "XXX").setRepeatable(1, 11)
-                .aisle("XXX", "XXX", "XXX")
-                .where('S', selfPredicate())
-                .where('Y', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setMaxGlobalLimited(1))
-                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(3))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMaxGlobalLimited(1)))
-                .where('X', states(getCasingState())
-                        .or(metaTileEntities(MultiblockAbility.REGISTRY.get(MultiblockAbility.EXPORT_FLUIDS).stream()
-                                .filter(mte -> !(mte instanceof MetaTileEntityMultiFluidHatch))
-                                .toArray(MetaTileEntity[]::new))
-                                        .setMinLayerLimited(1).setMaxLayerLimited(1))
-                        .or(autoAbilities(true, false)))
-                .where('#', air())
-                .build();
-    }
-
-    @Override
-    public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
         return GTBTextures.SILICON_CARBIDE_CASING;
-    }
-
-    @Override
-    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
-        super.renderMetaTileEntity(renderState, translation, pipeline);
-        getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(),
-                recipeMapWorkable.isActive(), recipeMapWorkable.isWorkingEnabled());
     }
 
     @SideOnly(Side.CLIENT)
