@@ -45,14 +45,11 @@ public class MetaTileEntityMOCVDUnit extends RecipeMapMultiblockController {
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.FRONT, RelativeDirection.UP)
                 .aisle("CCCCCCSCCCCCC", "CCCCCCCCCCCCC", "CCCCCCCCCCCCC")
-                .aisle("CGTGCCCCCGGGC", "C~T~CPPPC~T~C", "CGTGCCCCCGGGC")
+                .aisle("CGGGCCCCCGGGC", "C~T~CPPPC~T~C", "CGGGCCCCCGGGC")
                 .aisle("~~~~C~~~C~~~~", "CGGGC~~~CGGGC", "~~~~C~~~C~~~~")
                 .where('S', selfPredicate())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setMaxGlobalLimited(1))
-                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(3))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMaxGlobalLimited(1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(59)
+                        .or(autoAbilities()))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.TITANIUM_PIPE)))
                 .where('T', states(MetaBlocks.WIRE_COIL.getState(BlockWireCoil.CoilType.NICHROME)))
                 .where('G', states(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.TEMPERED_GLASS)))
@@ -62,7 +59,7 @@ public class MetaTileEntityMOCVDUnit extends RecipeMapMultiblockController {
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, true, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)

@@ -50,12 +50,8 @@ public class MetaTileEntityNeutronAccelerator extends RecipeMapMultiblockControl
                 .aisle("CCCCC", "CCCCC", "CCCCC", "CCCCC", "CCCCC")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(40)
+                        .or(autoAbilities()))
                 .where('F', frames(Materials.Steel))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
@@ -64,13 +60,13 @@ public class MetaTileEntityNeutronAccelerator extends RecipeMapMultiblockControl
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.CLEAN_STAINLESS_STEEL_CASING;
     }
 
     @Override

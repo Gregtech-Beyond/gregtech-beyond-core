@@ -51,12 +51,8 @@ public class MetaTileEntityFermentationVat extends RecipeMapMultiblockController
                 .aisle("~~~~~", "~~P~~", "~PPP~", "~~P~~", "~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('W', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
+                .where('W', states(getCasingState()).setMinGlobalLimited(10)
+                        .or(autoAbilities()))
                 .where('F', frames(Materials.Steel))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .where('G', states(Blocks.GLASS.getDefaultState()))
@@ -65,7 +61,7 @@ public class MetaTileEntityFermentationVat extends RecipeMapMultiblockController
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)

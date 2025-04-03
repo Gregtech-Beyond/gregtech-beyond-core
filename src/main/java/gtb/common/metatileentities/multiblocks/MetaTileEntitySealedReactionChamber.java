@@ -207,6 +207,6 @@ public class MetaTileEntitySealedReactionChamber extends RecipeMapMultiblockCont
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntitySealedReactionChamber(metaTileEntityId) {};
+        return new MetaTileEntitySealedReactionChamber(metaTileEntityId);
     }
 }

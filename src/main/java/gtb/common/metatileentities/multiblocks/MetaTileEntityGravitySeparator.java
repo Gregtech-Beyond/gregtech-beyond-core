@@ -52,12 +52,8 @@ public class MetaTileEntityGravitySeparator extends RecipeMapMultiblockControlle
                 .where('D',
                         states(GTBMetaBlocks.GTB_MULTIBLOCK_CASING
                                 .getState(GTBMultiblockCasing.CasingType.GRAVITY_SEPARATOR_ROTOR_BLOCK)))
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1, 1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMaxGlobalLimited(1, 1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1, 1))
-                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1, 1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(40)
+                        .or(autoAbilities()))
                 .build();
     }
 

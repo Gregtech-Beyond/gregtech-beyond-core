@@ -62,9 +62,8 @@ public class MetaTileEntityVacuumDistillationTower extends RecipeMapMultiblockCo
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(120)
+                        .or(autoAbilities()))
                 .where('F', frames(Materials.BlueSteel))
                 .where('H', states(MetaBlocks.METAL_CASING.getState((BlockMetalCasing.MetalCasingType.STEEL_SOLID))))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
@@ -73,13 +72,13 @@ public class MetaTileEntityVacuumDistillationTower extends RecipeMapMultiblockCo
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return Textures.CLEAN_STAINLESS_STEEL_CASING;
     }
 
     @Override

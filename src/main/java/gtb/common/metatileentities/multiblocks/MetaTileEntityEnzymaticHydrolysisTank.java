@@ -45,11 +45,8 @@ public class MetaTileEntityEnzymaticHydrolysisTank extends RecipeMapMultiblockCo
                 .aisle("~~~~~~~~~", "~~~~P~~~~", "~~~~C~~~~", "~~~~C~~~~", "~PCCCCCP~", "~~~~C~~~~", "~~~~C~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(9))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(28)
+                        .or(autoAbilities()))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState(BlockBoilerCasing.BoilerCasingType.STEEL_PIPE)))
                 .build();
     }

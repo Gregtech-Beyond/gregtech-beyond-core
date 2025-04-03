@@ -46,18 +46,14 @@ public class MetaTileEntityPressureSwingAdsorber extends RecipeMapMultiblockCont
                 .aisle("CCC", "CCC", "CCC")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setMinGlobalLimited(2))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setMinGlobalLimited(2))
-                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setMinGlobalLimited(1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setMinGlobalLimited(2))
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setMinGlobalLimited(2)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(24)
+                        .or(autoAbilities()))
                 .build();
     }
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
