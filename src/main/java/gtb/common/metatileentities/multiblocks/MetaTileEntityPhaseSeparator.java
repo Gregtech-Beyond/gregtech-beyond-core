@@ -27,7 +27,6 @@ public class MetaTileEntityPhaseSeparator extends RecipeMapMultiblockController 
 
     public MetaTileEntityPhaseSeparator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.PHASE_SEPARATOR_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

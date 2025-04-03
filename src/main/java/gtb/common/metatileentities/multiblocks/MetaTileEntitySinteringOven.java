@@ -28,7 +28,6 @@ public class MetaTileEntitySinteringOven extends RecipeMapMultiblockController {
 
     public MetaTileEntitySinteringOven(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.SINTERING_OVEN_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

@@ -27,7 +27,6 @@ public class MetaTileEntityRareGasStrippingColumn extends RecipeMapMultiblockCon
 
     public MetaTileEntityRareGasStrippingColumn(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.RARE_GAS_STRIPPING_COLUMN_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

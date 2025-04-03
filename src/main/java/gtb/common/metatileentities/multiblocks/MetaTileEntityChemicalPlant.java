@@ -28,7 +28,6 @@ public class MetaTileEntityChemicalPlant extends RecipeMapMultiblockController {
 
     public MetaTileEntityChemicalPlant(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.CHEMICAL_PLANT_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

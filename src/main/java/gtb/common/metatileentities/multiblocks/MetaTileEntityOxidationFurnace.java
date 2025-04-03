@@ -30,7 +30,6 @@ public class MetaTileEntityOxidationFurnace extends RecipeMapMultiblockControlle
 
     public MetaTileEntityOxidationFurnace(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.OXIDATION_FURNACE_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

@@ -26,7 +26,6 @@ public class MetaTileEntityElectrolyticCell extends RecipeMapMultiblockControlle
 
     public MetaTileEntityElectrolyticCell(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.ELECTROLYTIC_CELL_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

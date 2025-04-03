@@ -25,7 +25,6 @@ public class MetaTileEntityClarifier extends RecipeMapMultiblockController {
 
     public MetaTileEntityClarifier(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.CLARIFIER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

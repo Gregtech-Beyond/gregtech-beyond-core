@@ -27,7 +27,6 @@ public class MetaTileEntityEngravingUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityEngravingUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.ENGRAVING_UNIT_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

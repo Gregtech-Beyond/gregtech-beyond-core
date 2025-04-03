@@ -29,7 +29,6 @@ public class MetaTileEntityMOCVDUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityMOCVDUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.MOCVD_UNIT_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

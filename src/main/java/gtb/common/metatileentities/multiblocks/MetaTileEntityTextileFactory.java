@@ -29,7 +29,6 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
 
     public MetaTileEntityTextileFactory(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.TEXTILE_FACTORY_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

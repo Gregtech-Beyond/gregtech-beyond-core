@@ -28,7 +28,6 @@ public class MetaTileEntityCondensationUnit extends RecipeMapMultiblockControlle
 
     public MetaTileEntityCondensationUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.CONDENSATION_UNIT_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

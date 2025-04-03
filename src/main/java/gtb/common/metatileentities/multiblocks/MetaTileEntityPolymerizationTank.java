@@ -27,7 +27,6 @@ public class MetaTileEntityPolymerizationTank extends RecipeMapMultiblockControl
 
     public MetaTileEntityPolymerizationTank(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.POLYMERIZATION_TANK_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

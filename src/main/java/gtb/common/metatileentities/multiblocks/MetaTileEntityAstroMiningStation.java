@@ -31,7 +31,6 @@ public class MetaTileEntityAstroMiningStation extends RecipeMapMultiblockControl
 
     public MetaTileEntityAstroMiningStation(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.ASTRO_MINING_STATION_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

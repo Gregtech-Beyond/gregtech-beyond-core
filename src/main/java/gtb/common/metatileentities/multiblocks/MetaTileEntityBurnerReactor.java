@@ -30,7 +30,6 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
 
     public MetaTileEntityBurnerReactor(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.BURNER_REACTOR_RECIPES);
-        initializeAbilities();
     }
 
     @Override

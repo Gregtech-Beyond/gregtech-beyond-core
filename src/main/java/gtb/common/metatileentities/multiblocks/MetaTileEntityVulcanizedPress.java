@@ -28,7 +28,6 @@ public class MetaTileEntityVulcanizedPress extends RecipeMapMultiblockController
 
     public MetaTileEntityVulcanizedPress(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.VULCANIZED_PRESS_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

@@ -25,7 +25,6 @@ public class MetaTileEntityGravitySettlerTank extends RecipeMapMultiblockControl
 
     public MetaTileEntityGravitySettlerTank(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.GRAVITY_SETTLER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

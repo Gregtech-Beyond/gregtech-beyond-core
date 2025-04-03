@@ -33,7 +33,6 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
     public MetaTileEntitySolarThermalConcentrator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.SOLAR_THERMAL_CONCENTRATOR_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

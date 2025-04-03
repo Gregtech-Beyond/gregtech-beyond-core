@@ -29,7 +29,6 @@ public class MetaTileEntityCoker extends RecipeMapMultiblockController {
 
     public MetaTileEntityCoker(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.COKER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

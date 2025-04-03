@@ -29,7 +29,6 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
 
     public MetaTileEntityCatalyticCrackingUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, CRACKING_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

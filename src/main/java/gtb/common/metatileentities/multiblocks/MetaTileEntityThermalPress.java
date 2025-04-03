@@ -27,7 +27,6 @@ public class MetaTileEntityThermalPress extends RecipeMapMultiblockController {
 
     public MetaTileEntityThermalPress(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.THERMAL_PRESS_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

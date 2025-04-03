@@ -27,7 +27,6 @@ public class MetaTileEntityBlackHoleCompressor extends RecipeMapMultiblockContro
 
     public MetaTileEntityBlackHoleCompressor(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.BLACK_HOLE_COMPRESSOR_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

@@ -27,7 +27,6 @@ public class MetaTileEntityBacterialVat extends RecipeMapMultiblockController {
 
     public MetaTileEntityBacterialVat(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.BACTERIAL_VAT_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

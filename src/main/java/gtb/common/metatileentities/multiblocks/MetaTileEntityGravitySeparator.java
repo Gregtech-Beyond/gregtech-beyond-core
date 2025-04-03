@@ -29,7 +29,6 @@ public class MetaTileEntityGravitySeparator extends RecipeMapMultiblockControlle
 
     public MetaTileEntityGravitySeparator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.GRAVITY_SEPARATOR_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

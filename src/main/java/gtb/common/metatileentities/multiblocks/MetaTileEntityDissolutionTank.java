@@ -27,7 +27,6 @@ public class MetaTileEntityDissolutionTank extends RecipeMapMultiblockController
 
     public MetaTileEntityDissolutionTank(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.DISSOLUTION_TANK_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

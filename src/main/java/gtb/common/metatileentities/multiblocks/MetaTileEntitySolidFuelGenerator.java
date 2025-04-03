@@ -33,7 +33,6 @@ public class MetaTileEntitySolidFuelGenerator extends NoEnergyMultiController {
     public MetaTileEntitySolidFuelGenerator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.SOLID_FUEL_GENERATOR_RECIPES);
         this.recipeMapWorkable = new NoEnergyLogic(this);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

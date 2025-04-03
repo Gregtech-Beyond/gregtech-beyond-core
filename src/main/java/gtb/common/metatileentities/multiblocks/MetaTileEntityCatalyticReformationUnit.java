@@ -27,7 +27,6 @@ public class MetaTileEntityCatalyticReformationUnit extends RecipeMapMultiblockC
 
     public MetaTileEntityCatalyticReformationUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.CATALYTIC_REFORMATION_UNIT_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

@@ -30,7 +30,6 @@ public class MetaTileEntityBedrockPump extends RecipeMapMultiblockController {
 
     public MetaTileEntityBedrockPump(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.BEDROCK_PUMP_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

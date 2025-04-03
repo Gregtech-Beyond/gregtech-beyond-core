@@ -25,7 +25,6 @@ public class MetaTileEntityEnzymaticHydrolysisTank extends RecipeMapMultiblockCo
 
     public MetaTileEntityEnzymaticHydrolysisTank(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.ENZYMATIC_HYDROLYSIS_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

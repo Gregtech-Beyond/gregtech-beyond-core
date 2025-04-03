@@ -27,7 +27,6 @@ public class MetaTileEntityHighTemperaturePolymerizationTank extends RecipeMapMu
 
     public MetaTileEntityHighTemperaturePolymerizationTank(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.HIGH_TEMP_POLYMERIZATION_TANK_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

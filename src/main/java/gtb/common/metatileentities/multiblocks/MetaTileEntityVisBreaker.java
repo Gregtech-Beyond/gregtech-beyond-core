@@ -28,7 +28,6 @@ public class MetaTileEntityVisBreaker extends RecipeMapMultiblockController {
 
     public MetaTileEntityVisBreaker(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.VIS_BREAKER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

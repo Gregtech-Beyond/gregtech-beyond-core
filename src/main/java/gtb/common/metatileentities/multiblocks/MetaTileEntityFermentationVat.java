@@ -28,7 +28,6 @@ public class MetaTileEntityFermentationVat extends RecipeMapMultiblockController
 
     public MetaTileEntityFermentationVat(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.FERMENTATION_VAT_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

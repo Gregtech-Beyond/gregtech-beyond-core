@@ -27,7 +27,6 @@ public class MetaTileEntityFischerTropschReactor extends RecipeMapMultiblockCont
 
     public MetaTileEntityFischerTropschReactor(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.FISCHER_TROPSCH_REACTOR_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

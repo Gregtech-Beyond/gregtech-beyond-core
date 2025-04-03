@@ -26,7 +26,6 @@ public class MetaTileEntityPressureSwingAdsorber extends RecipeMapMultiblockCont
 
     public MetaTileEntityPressureSwingAdsorber(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.PRESSURE_SWING_ADSORBER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

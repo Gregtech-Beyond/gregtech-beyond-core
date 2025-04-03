@@ -28,7 +28,6 @@ public class MetaTileEntityVacuumMetallizer extends RecipeMapMultiblockControlle
 
     public MetaTileEntityVacuumMetallizer(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.VACUUM_METALIZER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

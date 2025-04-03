@@ -26,7 +26,6 @@ public class MetaTileEntityDigester extends RecipeMapMultiblockController {
 
     public MetaTileEntityDigester(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.DIGESTER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

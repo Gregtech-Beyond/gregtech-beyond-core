@@ -29,7 +29,6 @@ public class MetaTileEntityVacuumDistillationTower extends RecipeMapMultiblockCo
 
     public MetaTileEntityVacuumDistillationTower(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.VACUUM_DISTILLATION_TOWER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

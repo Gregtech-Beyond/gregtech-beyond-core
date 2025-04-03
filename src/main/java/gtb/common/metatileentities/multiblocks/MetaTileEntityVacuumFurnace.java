@@ -32,7 +32,6 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
 
     public MetaTileEntityVacuumFurnace(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.VACUUM_FURNACE_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {

@@ -29,7 +29,6 @@ public class MetaTileEntityNeutronAccelerator extends RecipeMapMultiblockControl
 
     public MetaTileEntityNeutronAccelerator(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.NEUTRON_ACCELERATOR_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {
