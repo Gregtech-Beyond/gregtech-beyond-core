@@ -2,10 +2,10 @@ package gtb.common.metatileentities.multiblocks;
 
 import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
 
-import javax.annotation.Nonnull;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
+
+import org.jetbrains.annotations.NotNull;
 
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
@@ -37,7 +37,7 @@ public class MetaTileEntityCVDUnit extends RecipeMapMultiblockController {
     }
 
     @Override
-    protected BlockPattern createStructurePattern() {
+    protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
                 .aisle("XXXXX", "XGGGX", "XGGGX")
                 .aisle("XXXXX", "XCCCX", "XGGGX").setRepeatable(3)
@@ -62,9 +62,8 @@ public class MetaTileEntityCVDUnit extends RecipeMapMultiblockController {
         return MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.TEMPERED_GLASS);
     }
 
-    @Nonnull
     @Override
-    protected SimpleOverlayRenderer getFrontOverlay() {
+    protected @NotNull SimpleOverlayRenderer getFrontOverlay() {
         return GTBTextures.CVD_UNIT_OVERLAY;
     }
 

@@ -13,7 +13,6 @@ import org.jetbrains.annotations.NotNull;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
@@ -26,15 +25,10 @@ import gregtech.common.blocks.BlockFireboxCasing;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
-import codechicken.lib.render.CCRenderState;
-import codechicken.lib.render.pipeline.IVertexOperation;
-import codechicken.lib.vec.Matrix4;
-
 public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockController {
 
     public MetaTileEntityCatalyticCrackingUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, CRACKING_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {
@@ -57,9 +51,7 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
                 .where('S', selfPredicate())
                 .where('G', states(Blocks.GLASS.getDefaultState()))
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(135).or(autoAbilities()))
                 .where('F',
                         states(MetaBlocks.BOILER_FIREBOX_CASING
                                 .getState(BlockFireboxCasing.FireboxCasingType.STEEL_FIREBOX)))
@@ -74,20 +66,13 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
         return Textures.CLEAN_STAINLESS_STEEL_CASING;
-    }
-
-    @Override
-    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
-        super.renderMetaTileEntity(renderState, translation, pipeline);
-        getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(),
-                recipeMapWorkable.isActive(), recipeMapWorkable.isWorkingEnabled());
     }
 
     @SideOnly(Side.CLIENT)
@@ -99,6 +84,6 @@ public class MetaTileEntityCatalyticCrackingUnit extends RecipeMapMultiblockCont
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityCoker(metaTileEntityId);
+        return new MetaTileEntityCatalyticCrackingUnit(metaTileEntityId);
     }
 }
