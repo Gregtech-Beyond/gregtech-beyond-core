@@ -35,15 +35,13 @@ public class MetaTileEntityBlackHoleCompressor extends RecipeMapMultiblockContro
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~DFD~", "DCCCD", "FCCCF", "DCCCD", "~DSD~")
-                .aisle("~GGG~", "G~~~G", "G~O~G", "G~~~G", "~GGG~")
-                .aisle("~GGG~", "G~~~G", "G~O~G", "G~~~G", "~GGG~")
-                .aisle("~GGG~", "G~~~G", "G~O~G", "G~~~G", "~GGG~")
+        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.FRONT, RelativeDirection.UP)
+                .aisle("~DSD~", "DCCCD", "FCCCF", "DCCCD", "~DFD~")
+                .aisle("~GGG~", "G~~~G", "G~O~G", "G~~~G", "~GGG~").setRepeatable(3)
                 .aisle("~DFD~", "DCCCD", "FCCCF", "DCCCD", "~DFD~")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState()).setMinGlobalLimited(28)
+                .where('C', states(getCasingState()).setMinGlobalLimited(10)
                         .or(autoAbilities()))
                 .where('F',
                         states(GTBMetaBlocks.GTB_MULTIBLOCK_ACTIVE_CASING

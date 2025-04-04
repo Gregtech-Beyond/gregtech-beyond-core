@@ -28,7 +28,6 @@ public class MetaTileEntityFrothFlotationUnit extends RecipeMapMultiblockControl
 
     public MetaTileEntityFrothFlotationUnit(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.FROTH_FLOTATION_UNIT_RECIPES);
-
     }
 
     public IBlockState getCasingState() {
