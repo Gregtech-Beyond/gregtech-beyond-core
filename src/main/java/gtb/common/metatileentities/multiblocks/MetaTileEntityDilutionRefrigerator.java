@@ -132,31 +132,6 @@ public class MetaTileEntityDilutionRefrigerator extends RecipeMapMultiblockContr
         return true;
     }
 
-    @Override
-    public List<MultiblockShapeInfo> getMatchingShapes() {
-        ArrayList<MultiblockShapeInfo> shapeInfo = new ArrayList<>();
-        MultiblockShapeInfo.Builder builder = MultiblockShapeInfo.builder()
-                .aisle("XEM", "CCC", "CCC", "CCC", "XXX")
-                .aisle("XXD", "C#C", "C#C", "CCC", "XXX")
-                .aisle("ISO", "CCC", "CCC", "CCC", "XXX")
-                .where('X', MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.ALUMINIUM_FROSTPROOF))
-                .where('S', GTBMetaTileEntities.DILUTION_REFRIGERATOR, EnumFacing.SOUTH)
-                .where('#', Blocks.AIR.getDefaultState())
-                .where('E', MetaTileEntities.ENERGY_INPUT_HATCH[GTValues.HV], EnumFacing.NORTH)
-                .where('I', MetaTileEntities.ITEM_IMPORT_BUS[GTValues.HV], EnumFacing.SOUTH)
-                .where('O', MetaTileEntities.ITEM_EXPORT_BUS[GTValues.HV], EnumFacing.SOUTH)
-                .where('D', MetaTileEntities.FLUID_EXPORT_HATCH[GTValues.HV], EnumFacing.EAST)
-                .where('M',
-                        () -> ConfigHolder.machines.enableMaintenance ? MetaTileEntities.MAINTENANCE_HATCH :
-                                MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF),
-                        EnumFacing.NORTH);
-        Arrays.stream(BlockCoolingCoil.CoolingCoilType.values())
-                .sorted(Comparator.comparingInt(entry -> -entry.coilTemperature))
-                .forEach(
-                        entry -> shapeInfo.add(builder.where('C', GTBMetaBlocks.COOLING_COIL.getState(entry)).build()));
-        return shapeInfo;
-    }
-
     @NotNull
     @Override
     public List<ITextComponent> getDataInfo() {
