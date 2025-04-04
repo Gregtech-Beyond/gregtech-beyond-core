@@ -1,9 +1,8 @@
 package gtb.common.metatileentities.multiblocks;
 
-import static gtb.common.block.blocks.GTBMultiblockCasing.CasingType.*;
-
 import javax.annotation.Nonnull;
 
+import gregtech.api.pattern.TraceabilityPredicate;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 
@@ -38,17 +37,23 @@ public class MetaTileEntityCuringOven extends RecipeMapMultiblockController {
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
+        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.FRONT, RelativeDirection.UP)
                 .aisle("F~F", "~~~", "F~F")
                 .aisle("CSC", "CCC", "CCC")
                 .aisle("~P~", "~P~", "~P~")
                 .where('~', any())
                 .where('S', selfPredicate())
-                .where('C', states(getCasingState()).setMinGlobalLimited(3).or(autoAbilities()))
+                .where('C', states(getCasingState()).setMinGlobalLimited(1).or(autoAbilities()))
                 .where('P', states(getPipeState()))
                 .where('F', frames(Materials.BlackSteel))
                 .build();
     }
+
+    @Override
+    public TraceabilityPredicate autoAbilities() {
+        return autoAbilities(true, false, true, true, true, true, false);
+    }
+
 
     private static IBlockState getCasingState() {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
