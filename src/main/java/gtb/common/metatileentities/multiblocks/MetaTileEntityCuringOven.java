@@ -2,7 +2,6 @@ package gtb.common.metatileentities.multiblocks;
 
 import javax.annotation.Nonnull;
 
-import gregtech.api.pattern.TraceabilityPredicate;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 
@@ -14,6 +13,7 @@ import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
+import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
@@ -53,7 +53,6 @@ public class MetaTileEntityCuringOven extends RecipeMapMultiblockController {
     public TraceabilityPredicate autoAbilities() {
         return autoAbilities(true, false, true, true, true, true, false);
     }
-
 
     private static IBlockState getCasingState() {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);

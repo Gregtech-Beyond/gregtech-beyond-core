@@ -1,13 +1,8 @@
 package gtb.common.metatileentities.multiblocks;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.Style;
@@ -16,7 +11,6 @@ import net.minecraft.util.text.TextFormatting;
 
 import org.jetbrains.annotations.NotNull;
 
-import gregtech.api.GTValues;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
@@ -24,7 +18,6 @@ import gregtech.api.metatileentity.multiblock.MultiblockDisplayText;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
-import gregtech.api.pattern.MultiblockShapeInfo;
 import gregtech.api.pattern.PatternMatchContext;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.util.GTUtility;
@@ -32,17 +25,13 @@ import gregtech.api.util.TextComponentUtil;
 import gregtech.api.util.TextFormattingUtil;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
-import gregtech.common.metatileentities.MetaTileEntities;
 
 import gtb.api.metatileentity.multiblock.GTBPredicates;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.recipes.properties.CoilingCoilTemperatureProperty;
-import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.BlockCoolingCoil;
-import gtb.common.metatileentities.GTBMetaTileEntities;
 
 public class MetaTileEntityDilutionRefrigerator extends RecipeMapMultiblockController {
 
