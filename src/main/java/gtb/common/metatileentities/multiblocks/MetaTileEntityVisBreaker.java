@@ -37,8 +37,8 @@ public class MetaTileEntityVisBreaker extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~~~~", "~~CCC~~", "~CCCCC~", "~CCCCC~", "~CCCCC~", "~~CSC~~", "~~~~~~~")
-                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~CCCCC~", "~CCCCC~", "~CCCCC~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CSC~~", "~~~~~~~")
                 .aisle("~~FFF~~", "~FFFFF~", "FFCCCFF", "FFCCCFF", "FFCCCFF", "~FFFFF~", "~~FFF~~")
                 .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
                 .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
@@ -65,7 +65,7 @@ public class MetaTileEntityVisBreaker extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.STEEL_FIREBOX;
+        return Textures.SOLID_STEEL_CASING;
     }
 
     @SideOnly(Side.CLIENT)
