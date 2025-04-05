@@ -1,7 +1,7 @@
 package gtb.api.unification.materials.info;
 
 import static gregtech.api.unification.material.Materials.*;
-import static gregtech.api.unification.material.Materials.Cupronickel;
+import static gtb.api.unification.materials.GTBMaterials.*;
 
 import java.util.Arrays;
 
@@ -16,6 +16,10 @@ import gregtech.api.unification.material.properties.PropertyKey;
 public class GTBMaterialFlags {
 
     public static MaterialFlag GENERATE_SIFTED = (new MaterialFlag.Builder("sifted"))
+            .requireProps(PropertyKey.ORE)
+            .build();
+
+    public static MaterialFlag GENERATE_CONCENTRATE = (new MaterialFlag.Builder("concentrate"))
             .requireProps(PropertyKey.ORE)
             .build();
 
