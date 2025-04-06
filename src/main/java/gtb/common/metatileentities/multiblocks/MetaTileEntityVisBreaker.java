@@ -12,7 +12,6 @@ import org.jetbrains.annotations.NotNull;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
-import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.api.pattern.FactoryBlockPattern;
@@ -23,16 +22,12 @@ import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
-import codechicken.lib.render.CCRenderState;
-import codechicken.lib.render.pipeline.IVertexOperation;
-import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityVisBreaker extends RecipeMapMultiblockController {
 
     public MetaTileEntityVisBreaker(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.VIS_BREAKER_RECIPES);
-        initializeAbilities();
     }
 
     public IBlockState getCasingState() {
@@ -42,8 +37,8 @@ public class MetaTileEntityVisBreaker extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("~~~~~~~", "~~CCC~~", "~CCCCC~", "~CCCCC~", "~CCCCC~", "~~CSC~~", "~~~~~~~")
-                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~CCCCC~", "~CCCCC~", "~CCCCC~", "~~CCC~~", "~~~~~~~")
+                .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CSC~~", "~~~~~~~")
                 .aisle("~~FFF~~", "~FFFFF~", "FFCCCFF", "FFCCCFF", "FFCCCFF", "~FFFFF~", "~~FFF~~")
                 .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
                 .aisle("~~~~~~~", "~~CCC~~", "~C~~~C~", "~C~~~C~", "~C~~~C~", "~~CCC~~", "~~~~~~~")
@@ -56,32 +51,21 @@ public class MetaTileEntityVisBreaker extends RecipeMapMultiblockController {
                 .aisle("~~~~~~~", "~~~~~~~", "~~CCC~~", "~~CCC~~", "~~CCC~~", "~~~~~~~", "~~~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState())
-                        .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.INPUT_ENERGY).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.EXPORT_ITEMS).setExactLimit(1)))
+                .where('C', states(getCasingState()).setMinGlobalLimited(130)
+                        .or(autoAbilities()))
                 .where('F', frames(Steel))
                 .build();
     }
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.STEEL_FIREBOX;
-    }
-
-    @Override
-    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
-        super.renderMetaTileEntity(renderState, translation, pipeline);
-        getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(),
-                recipeMapWorkable.isActive(), recipeMapWorkable.isWorkingEnabled());
+        return Textures.SOLID_STEEL_CASING;
     }
 
     @SideOnly(Side.CLIENT)
