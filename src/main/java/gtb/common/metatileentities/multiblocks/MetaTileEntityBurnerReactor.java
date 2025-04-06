@@ -24,21 +24,17 @@ import gregicality.multiblocks.api.unification.GCYMMaterials;
 import gregicality.multiblocks.common.block.GCYMMetaBlocks;
 import gregicality.multiblocks.common.block.blocks.BlockUniqueCasing;
 
-import codechicken.lib.render.CCRenderState;
-import codechicken.lib.render.pipeline.IVertexOperation;
-import codechicken.lib.vec.Matrix4;
 import gtb.api.recipes.GTBRecipeMaps;
 
 public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
 
     public MetaTileEntityBurnerReactor(ResourceLocation metaTileEntityId) {
         super(metaTileEntityId, GTBRecipeMaps.BURNER_REACTOR_RECIPES);
-        initializeAbilities();
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
-        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
+        return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.FRONT, RelativeDirection.UP)
                 .aisle("F   F", "  X  ", " XXX ", "  X  ", "F   F")
                 .aisle("F X F", " XCX ", "XCCCX", " XCX ", "F X F")
                 .aisle("FXSXF", "XCCCX", "XK#KX", "XCCCX", "FXXXF")
@@ -49,7 +45,7 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
                 .where('X',
                         states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.INVAR_HEATPROOF))
                                 .setMinGlobalLimited(25)
-                                .or(autoAbilities(true, true, true, true, true, true, false)))
+                                .or(autoAbilities()))
                 .where('F',
                         states(MetaBlocks.FRAMES.get(GCYMMaterials.MaragingSteel300)
                                 .getBlock(GCYMMaterials.MaragingSteel300)))
@@ -65,20 +61,13 @@ public class MetaTileEntityBurnerReactor extends RecipeMapMultiblockController {
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
         return Textures.HEAT_PROOF_CASING;
-    }
-
-    @Override
-    public void renderMetaTileEntity(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline) {
-        super.renderMetaTileEntity(renderState, translation, pipeline);
-        getFrontOverlay().renderOrientedState(renderState, translation, pipeline, getFrontFacing(),
-                recipeMapWorkable.isActive(), recipeMapWorkable.isWorkingEnabled());
     }
 
     @SideOnly(Side.CLIENT)

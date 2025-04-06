@@ -5,6 +5,7 @@ item.material.oreprefix.floated=Floated %s Dust
 item.material.oreprefix.item_casing=%s Item Casing
 item.material.oreprefix.seed_crystal=%s Seed Crystal
 item.material.oreprefix.boule=%s Boule
+item.material.oreprefix.sponge=%s Sponge
 
 # Blocks
 tile.gtb_multiblock_active_casing.high_energy_coil.name=High Energy Coil
@@ -17,6 +18,7 @@ tile.gtb_multiblock_casing.quantum_casing.name=Quantum Casing
 tile.gtb_multiblock_casing.quantum_glass.name=Quantum Glass
 tile.gtb_multiblock_casing.biologically_sterile_casing.name=Biologically Sterile Casing
 tile.gtb_multiblock_casing.fullerene_polymer_tetrix_casing.name=Fullerene Polymer Tetrix Casing
+tile.gtb_multiblock_casing.perfectly_sealed_vacuum_casing.name=Perfectly Sealed Vacuum Casing
 tile.gtb_explosive.naquadria_charge.name=Naquadria Charge
 tile.gtb_wire_coil.hss_s.name=HSS-S Coil Block
 tile.gtb_wire_coil.naquadah_alloy.name=Naquadah Alloy Coil Block
@@ -38,6 +40,7 @@ tile.gtb_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Cas
 tile.gtb_multiblock_casing.substrate_casing.name=Substrate Casing
 tile.cooling_coil.silver_alloy.name=Silver Alloy Cooling Coil
 tile.gtb_multiblock_casing.gravity_separator_rotor_block.name=Gravity Separator Rotor Block
+
 
 # Singleblock machinery
 
@@ -309,14 +312,18 @@ recipemap.plasma_etcher_recipes.name=Plasma Etching
 recipemap.uv_light_recipes.name=UV-Light Exposure
 recipemap.ion_exchange_recipes.name=Ion Exchange
 recipemap.fluid_compressor_recipes.name=Fluid Compression
+recipemap.beam_shrinking_recipes.name=Beam Shrinking
+recipemap.water_collector_recipes.name=Water Collection
+recipemap.induction_smelter_recipes.name=Induction Smelter
 
 # Multiblock machine controllers
+
 
 gtb.machine.mocvd_unit.name=MOCVD Unit
 gtb.machine.cold_tower.name=Cold Tower
 gtb.machine.hot_tower.name=Hot Tower
 gtb.machine.oxidation_furnace.name=Oxidation Furnace
-gtb.machine.enzymatic_hydrolisis_tank.name=Enzymatic Hydrolisis Tank
+gtb.machine.enzymatic_hydrolysis_tank.name=Enzymatic Hydrolysis Tank
 gtb.machine.sintering_oven.name=Sintering Oven
 gtb.machine.dissolution_tank.name=Dissolution Tank
 gtb.machine.burner_reactor.name=Burner Reactor
@@ -332,6 +339,7 @@ gtb.machine.fermentation_vat.name=Fermentation Vat
 gtb.machine.dilution_tank.name=Dilution Tank
 gtb.machine.coker.name=Coker
 gtb.machine.catalytic_reformation_unit.name=Catalytic Reformation Unit
+gtb.machine.catalytic_cracking_unit.name=Catalytic Cracking Unit
 gtb.machine.black_hole_compressor.name=Black Hole Compressor
 gtb.machine.bedrock_pump.name=Bedrock Pump
 gtb.machine.bacterial_vat.name=Bacterial Vat
@@ -355,6 +363,15 @@ gtb.machine.condensation_unit.name=Condensation Unit
 gtb.machine.pressure_swing_adsorber.name=Pressue Swing Adsorber
 gtb.machine.dilution_refrigerator.name=Dilution Refrigerator
 gtb.machine.gravity_separator.name=Gravity Separator
+gtb.machine.vacuum_metallizer.name=Vacuum Metallizer
+gtb.machine.high_temp_polymerization_tank.name=High-Temperature Polymerization Tank
+gtb.machine.mocvd_unit.name=MOCVD Unit
+gtb.machine.oxidation_furnace.name=Oxidation Furnace
+gtb.machine.vis_breaker.name=Vis Breaker
+gtb.machine.gravity_settler_tank.name=Gravity Settler Tank
+gtb.machine.vulcanized_press.name=Vulcanized Press
+gtb.machine.curing_oven.name=Curing Oven
+gtb.machine.sealed_reaction_chamber.name=Sealed Reaction Chamber
 metaitem.electrically_wired_petri_dish.name=Electrically Wired Petri Dish
 gtb.multiblock.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
 
