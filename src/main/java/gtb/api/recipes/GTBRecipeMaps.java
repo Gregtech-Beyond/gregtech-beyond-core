@@ -183,8 +183,8 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_EJECTION_RECIPES = new RecipeMap<>(
             "vacuum_ejection_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-            .setSlotOverlay(false, false, GuiTextures.CRYSTAL_OVERLAY);
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
+                    .setSlotOverlay(false, false, GuiTextures.CRYSTAL_OVERLAY);
 
     public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
             "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);

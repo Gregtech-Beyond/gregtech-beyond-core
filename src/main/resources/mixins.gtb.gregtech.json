@@ -1,0 +1,10 @@
+{
+  "package": "gtb.mixins.gregtech",
+  "refmap": "mixins.gtb.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinEbfStructure"
+  ]
+}
