@@ -20,7 +20,6 @@ import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
-import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import gtb.api.recipes.GTBRecipeMaps;
@@ -41,14 +40,13 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("PAP", "FCF", "~C~", "~C~", "WCW", "WCW")
-                .aisle("WAW", "P~P", "G~G", "G~G", "P~P", "CSC")
-                .aisle("PAP", "FCF", "~C~", "~C~", "WCW", "WCW")
+                .aisle("PCP", "FCF", "~C~", "~C~", "WCW", "WCW")
+                .aisle("WCW", "P~P", "G~G", "G~G", "P~P", "CSC")
+                .aisle("PCP", "FCF", "~C~", "~C~", "WCW", "WCW")
                 .where('S', selfPredicate())
                 .where('~', any())
                 .where('C', states(getCasingState()).setMinGlobalLimited(7)
                         .or(autoAbilities()))
-                .where('A', states(MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STAINLESS_CLEAN)))
                 .where('F', frames(Materials.Steel))
                 .where('W', states(MetaBlocks.MACHINE_CASING.getDefaultState()))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
