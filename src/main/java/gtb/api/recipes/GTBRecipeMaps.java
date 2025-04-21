@@ -259,24 +259,24 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> BEAM_SHRINKING_RECIPES = new RecipeMap<>(
             "beam_shrinking_recipes",
             2, 1, 0, 0, new SimpleRecipeBuilder(), false)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-            .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
+                    .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
 
     public static final RecipeMap<SimpleRecipeBuilder> WATER_COLLECTOR_RECIPES = new RecipeMap<>(
             "water_collector_recipes",
             1, 0, 0, 1, new SimpleRecipeBuilder(), false)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-            .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
+                    .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
 
     public static final RecipeMap<SimpleRecipeBuilder> INDUCTION_SMELTER_RECIPES = new RecipeMap<>(
             "induction_smelter_recipes",
             3, 2, 0, 0, new SimpleRecipeBuilder(), false)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-            .setSlotOverlay(false, false, false, GuiTextures.CRYSTAL_OVERLAY);
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
+                    .setSlotOverlay(false, false, false, GuiTextures.CRYSTAL_OVERLAY);
 
     public static final RecipeMap<SimpleRecipeBuilder> INSCRIBER_RECIPES = new RecipeMap<>(
             "inscriber_recipes",
             3, 1, 0, 0, new SimpleRecipeBuilder(), false)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-            .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
+                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
+                    .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
 }
