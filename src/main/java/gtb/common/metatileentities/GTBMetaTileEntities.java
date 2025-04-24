@@ -55,15 +55,16 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityDilutionRefrigerator DILUTION_REFRIGERATOR;
     public static MetaTileEntityGravitySeparator GRAVITY_SEPARATOR;
     public static MetaTileEntitySinteringOven SINTERING_OVEN;
-    public static MetaTileEntityEnzymaticHydrolisisTank ENZYMATIC_HYDROLISIS_TANK;
+    public static MetaTileEntityEnzymaticHydrolysisTank ENZYMATIC_HYDROLISIS_TANK;
     public static MetaTileEntityCuringOven CURING_OVEN;
     public static MetaTileEntityVulcanizedPress VULCANIZED_PRESS;
     public static MetaTileEntityGravitySettlerTank GRAVITY_SETTLER_TANK;
     public static MetaTileEntityVisBreaker VIS_BREAKER;
-    public static MetaTileEntityVacuumMetalizer VACUUM_METALIZER;
+    public static MetaTileEntityVacuumMetallizer VACUUM_METALLIZER;
     public static MetaTileEntityOxidationFurnace OXIDATION_FURNACE;
     public static MetaTileEntityMOCVDUnit MOCVD_UNIT;
     public static MetaTileEntityHighTemperaturePolymerizationTank HIGH_TEMP_POLYMERIZATION_TANK;
+    public static MetaTileEntitySealedReactionChamber SEALED_REACTION_CHAMBER;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -153,7 +154,7 @@ public final class GTBMetaTileEntities {
         SINTERING_OVEN = registerMetaTileEntity(3037,
                 new MetaTileEntitySinteringOven(gtb("sintering_oven")));
         ENZYMATIC_HYDROLISIS_TANK = registerMetaTileEntity(3038,
-                new MetaTileEntityEnzymaticHydrolisisTank(gtb("enzymatic_hydrolisis_tank")));
+                new MetaTileEntityEnzymaticHydrolysisTank(gtb("enzymatic_hydrolysis_tank")));
         CURING_OVEN = registerMetaTileEntity(3039, new MetaTileEntityCuringOven(gtb("curing_oven")));
         CATALYTIC_CRACKING_UNIT = registerMetaTileEntity(3040,
                 new MetaTileEntityCatalyticCrackingUnit(gtb("catalytic_cracking_unit")));
@@ -161,11 +162,13 @@ public final class GTBMetaTileEntities {
         GRAVITY_SETTLER_TANK = registerMetaTileEntity(3042,
                 new MetaTileEntityGravitySettlerTank(gtb("gravity_settler_tank")));
         VIS_BREAKER = registerMetaTileEntity(3043, new MetaTileEntityVisBreaker(gtb("vis_breaker")));
-        VACUUM_METALIZER = registerMetaTileEntity(3044, new MetaTileEntityVacuumMetalizer(gtb("vacuum_metalizer")));
+        VACUUM_METALLIZER = registerMetaTileEntity(3044, new MetaTileEntityVacuumMetallizer(gtb("vacuum_metallizer")));
         OXIDATION_FURNACE = registerMetaTileEntity(3045, new MetaTileEntityOxidationFurnace(gtb("oxidation_furnace")));
         MOCVD_UNIT = registerMetaTileEntity(3046, new MetaTileEntityMOCVDUnit(gtb("mocvd_unit")));
         HIGH_TEMP_POLYMERIZATION_TANK = registerMetaTileEntity(3047,
                 new MetaTileEntityHighTemperaturePolymerizationTank(gtb("high_temp_polymerization_tank")));
+        SEALED_REACTION_CHAMBER = registerMetaTileEntity(3048,
+                new MetaTileEntitySealedReactionChamber(gtb("sealed_reaction_chamber")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
