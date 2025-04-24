@@ -6,7 +6,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "MixinCokeOvenStructure",
-    "MixinEbfStructure",
+    "MixinEBFStructure",
     "MixinPBFStructure",
     "MixinVacuumFreezerStructure"
   ]

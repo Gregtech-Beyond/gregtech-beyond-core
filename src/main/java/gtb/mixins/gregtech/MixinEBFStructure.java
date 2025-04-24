@@ -31,9 +31,9 @@ import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityElectricBlastFurnace;
 
 @Mixin(value = MetaTileEntityElectricBlastFurnace.class, remap = false)
-public abstract class MixinEbfStructure extends RecipeMapMultiblockController {
+public abstract class MixinEBFStructure extends RecipeMapMultiblockController {
 
-    public MixinEbfStructure(ResourceLocation metaTileEntityId, RecipeMap<?> recipeMap) {
+    public MixinEBFStructure(ResourceLocation metaTileEntityId, RecipeMap<?> recipeMap) {
         super(metaTileEntityId, recipeMap);
     }
 
