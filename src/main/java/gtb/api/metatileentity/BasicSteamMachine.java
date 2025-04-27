@@ -1,20 +1,22 @@
 package gtb.api.metatileentity;
 
-import gregtech.api.capability.impl.*;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidTank;
-import net.minecraftforge.fluids.IFluidTank;
-import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.ItemStackHandler;
 
 import org.jetbrains.annotations.NotNull;
 
 import gregtech.api.GTValues;
+import gregtech.api.capability.impl.*;
+import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.ModularUI;
 import gregtech.api.gui.widgets.LabelWidget;
 import gregtech.api.metatileentity.MetaTileEntity;
@@ -25,11 +27,6 @@ import gregtech.client.particle.VanillaParticleEffects;
 import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 
 import gtb.api.utils.GTBUtil;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class BasicSteamMachine extends SteamMetaTileEntity {
 
@@ -50,7 +47,7 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
         this.machineOverlay = overlay;
         this.canInitializeInventories = true;
         initializeInventory();
-        canInitializeInventories = false; //To remove after tests
+        canInitializeInventories = false; // To remove after tests
     }
 
     @Override
@@ -59,7 +56,8 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
     }
 
     /**
-     * Only call it when the recipemap has been set, which happens in {@link SteamMetaTileEntity} AFTER {@link MetaTileEntity}
+     * Only call it when the recipemap has been set, which happens in {@link SteamMetaTileEntity} AFTER
+     * {@link MetaTileEntity}
      * calls this.
      */
     @Override
@@ -75,9 +73,9 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
     @Override
     protected IItemHandlerModifiable createImportItemHandler() {
         int maxInputs = getRecipeMap().getMaxInputs();
-            if (maxInputs > 0) {
-                return new NotifiableItemStackHandler(this, maxInputs, this, false);
-            } else return super.createImportItemHandler();
+        if (maxInputs > 0) {
+            return new NotifiableItemStackHandler(this, maxInputs, this, false);
+        } else return super.createImportItemHandler();
     }
 
     /**
@@ -88,9 +86,9 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
     @Override
     protected IItemHandlerModifiable createExportItemHandler() {
         int maxOutputs = getRecipeMap().getMaxOutputs();
-            if (maxOutputs > 0) {
-                return new NotifiableItemStackHandler(this, maxOutputs, this, false);
-            } else return super.createExportItemHandler();
+        if (maxOutputs > 0) {
+            return new NotifiableItemStackHandler(this, maxOutputs, this, false);
+        } else return super.createExportItemHandler();
     }
 
     /**
@@ -122,7 +120,7 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
         if (maxFluidInputs == 0) return super.createImportFluidHandler();
 
         steamFluidTank = new FilteredFluidHandler(STEAM_CAPACITY).setFilter(CommonFluidFilters.STEAM);
-        List<FluidTank> tanks = getFluidTanksMinusSteam(maxFluidInputs);
+        List<FluidTank> tanks = getRecipeMapInputFluidTanks(maxFluidInputs);
 
         tanks.add(steamFluidTank);
         return new FluidTankList(false, tanks);
@@ -130,9 +128,9 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
 
     /**
      * @return the tanks required by the recipemap. Used both to be appended with {@link #steamFluidTank} in order to
-     * {@link #createImportFluidHandler()} and to display the recipemap-related tanks but not the steam tank.
+     *         {@link #createImportFluidHandler()} and to display the recipemap-related tanks but not the steam tank.
      */
-    private List<FluidTank> getFluidTanksMinusSteam(int maxFluidInputs) {
+    private List<FluidTank> getRecipeMapInputFluidTanks(int maxFluidInputs) {
         return IntStream.range(0, maxFluidInputs)
                 .boxed()
                 .map(i -> new FilteredFluidHandler(tankCapacity)
@@ -144,19 +142,19 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
     public ModularUI createUI(EntityPlayer player) {
         int maxFluidInputs = getRecipeMap().getMaxFluidInputs();
         int yOffset = 0;
-        if (maxFluidInputs >= 6 || getRecipeMap().getMaxFluidInputs() >= 6 ||
+        if (maxFluidInputs >= 6 || getRecipeMap().getMaxInputs() >= 6 ||
                 getRecipeMap().getMaxOutputs() >= 6 || getRecipeMap().getMaxFluidOutputs() >= 6) {
             yOffset = 9;
         }
 
-        FluidTankList tanksToDisplay = new FluidTankList(false, getFluidTanksMinusSteam(maxFluidInputs));
+        FluidTankList tanksToDisplay = new FluidTankList(false, getRecipeMapInputFluidTanks(maxFluidInputs));
 
         return getRecipeMap()
                 .createUITemplate(getRecipeLogic()::getProgressPercent, importItems, exportItems, tanksToDisplay,
                         exportFluids,
                         yOffset)
                 .widget(new LabelWidget(5, 5, getMetaFullName()))
-                .bindPlayerInventory(player.inventory)
+                .bindPlayerInventory(player.inventory, GuiTextures.SLOT, yOffset)
                 .build(getHolder(), player);
     }
 
