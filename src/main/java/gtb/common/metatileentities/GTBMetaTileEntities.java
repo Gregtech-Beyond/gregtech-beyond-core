@@ -7,7 +7,6 @@ import org.jetbrains.annotations.NotNull;
 
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.recipes.RecipeMap;
-import gregtech.api.recipes.RecipeMaps;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.texture.Textures;
 import gregtech.common.metatileentities.MetaTileEntities;

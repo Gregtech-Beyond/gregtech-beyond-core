@@ -19,7 +19,7 @@ import gregtech.api.metatileentity.SteamMetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.client.particle.VanillaParticleEffects;
-import gregtech.client.renderer.texture.Textures;
+import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 
 import gtb.api.utils.GTBUtil;
 
@@ -27,17 +27,21 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
 
     public static BasicSteamMachine addSteamMachine(String machineName, boolean isHighPressure,
                                                     @NotNull RecipeMap<?> recipeMap) {
-        return new BasicSteamMachine(GTBUtil.gtb(machineName), isHighPressure, recipeMap);
+        OrientedOverlayRenderer overlay = new OrientedOverlayRenderer("machines/" + machineName);
+        return new BasicSteamMachine(GTBUtil.gtb(machineName), isHighPressure, recipeMap, overlay);
     }
 
+    private final OrientedOverlayRenderer machineOverlay;
+
     protected BasicSteamMachine(ResourceLocation metaTileEntityId, boolean isHighPressure,
-                                @NotNull RecipeMap<?> recipeMap) {
-        super(metaTileEntityId, recipeMap, Textures.ALLOY_SMELTER_OVERLAY, isHighPressure);
+                                @NotNull RecipeMap<?> recipeMap, OrientedOverlayRenderer overlay) {
+        super(metaTileEntityId, recipeMap, overlay, isHighPressure);
+        this.machineOverlay = overlay;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new BasicSteamMachine(metaTileEntityId, isHighPressure, getRecipeMap());
+        return new BasicSteamMachine(metaTileEntityId, isHighPressure, getRecipeMap(), machineOverlay);
     }
 
     @Override
