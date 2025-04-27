@@ -1,5 +1,6 @@
 package gtb.api.metatileentity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -38,16 +39,14 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
 
     private final OrientedOverlayRenderer machineOverlay;
     private final int tankCapacity = 3000;
-    private boolean canInitializeInventories = false;
-    private FluidTankList tanksToDisplay;
+    private boolean isRecipeLogicSteamSet = false;
 
     protected BasicSteamMachine(ResourceLocation metaTileEntityId, boolean isHighPressure,
                                 @NotNull RecipeMap<?> recipeMap, OrientedOverlayRenderer overlay) {
         super(metaTileEntityId, recipeMap, overlay, isHighPressure);
+        this.isRecipeLogicSteamSet = true;
         this.machineOverlay = overlay;
-        this.canInitializeInventories = true;
         initializeInventory();
-        canInitializeInventories = false; // To remove after tests
     }
 
     @Override
@@ -56,17 +55,21 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
     }
 
     /**
-     * Only call it when the recipemap has been set, which happens in {@link SteamMetaTileEntity} AFTER
-     * {@link MetaTileEntity}
-     * calls this.
+     * Initialize {@link #steamFluidTank} so the {@link RecipeLogicSteam} is properly instantiated but does NOT create
+     * the items and fluids handler
+     * </br>
+     * Called a second time in this class constructor as the recipemap is set and thus allows the handlers to be
+     * created.
      */
     @Override
     protected void initializeInventory() {
-        if (canInitializeInventories) super.initializeInventory();
+        if (!this.isRecipeLogicSteamSet) {
+            steamFluidTank = new FilteredFluidHandler(STEAM_CAPACITY).setFilter(CommonFluidFilters.STEAM);
+        } else super.initializeInventory();
     }
 
     /**
-     * Will only be called when the {@link SteamMetaTileEntity#workableHandler} as been instantiated so not risk
+     * Will only be called when the {@link SteamMetaTileEntity#workableHandler} as been instantiated so no risk
      * for a {@link NullPointerException}.
      */
     @SuppressWarnings(value = "ConstantConditions")
@@ -116,41 +119,26 @@ public class BasicSteamMachine extends SteamMetaTileEntity {
     @SuppressWarnings(value = "ConstantConditions")
     @Override
     public FluidTankList createImportFluidHandler() {
-        int maxFluidInputs = getRecipeMap().getMaxFluidInputs();
-        if (maxFluidInputs == 0) return super.createImportFluidHandler();
-
-        steamFluidTank = new FilteredFluidHandler(STEAM_CAPACITY).setFilter(CommonFluidFilters.STEAM);
-        List<FluidTank> tanks = getRecipeMapInputFluidTanks(maxFluidInputs);
-
-        tanks.add(steamFluidTank);
-        return new FluidTankList(false, tanks);
-    }
-
-    /**
-     * @return the tanks required by the recipemap. Used both to be appended with {@link #steamFluidTank} in order to
-     *         {@link #createImportFluidHandler()} and to display the recipemap-related tanks but not the steam tank.
-     */
-    private List<FluidTank> getRecipeMapInputFluidTanks(int maxFluidInputs) {
-        return IntStream.range(0, maxFluidInputs)
+        List<FluidTank> fluidImports = new ArrayList<>();
+        fluidImports.add(steamFluidTank);
+        IntStream.range(0, getRecipeMap().getMaxFluidInputs())
                 .boxed()
-                .map(i -> new FilteredFluidHandler(tankCapacity)
-                        .setFilter(CommonFluidFilters.STEAM.negate()))
-                .collect(Collectors.toList());
+                .map(i -> new NotifiableFluidTank(tankCapacity, this, false))
+                .forEach(fluidImports::add);
+
+        return new FluidTankList(false, fluidImports);
     }
 
     @Override
     public ModularUI createUI(EntityPlayer player) {
-        int maxFluidInputs = getRecipeMap().getMaxFluidInputs();
         int yOffset = 0;
-        if (maxFluidInputs >= 6 || getRecipeMap().getMaxInputs() >= 6 ||
+        if (getRecipeMap().getMaxFluidInputs() >= 6 || getRecipeMap().getMaxInputs() >= 6 ||
                 getRecipeMap().getMaxOutputs() >= 6 || getRecipeMap().getMaxFluidOutputs() >= 6) {
             yOffset = 9;
         }
 
-        FluidTankList tanksToDisplay = new FluidTankList(false, getRecipeMapInputFluidTanks(maxFluidInputs));
-
         return getRecipeMap()
-                .createUITemplate(getRecipeLogic()::getProgressPercent, importItems, exportItems, tanksToDisplay,
+                .createUITemplate(getRecipeLogic()::getProgressPercent, importItems, exportItems, importFluids,
                         exportFluids,
                         yOffset)
                 .widget(new LabelWidget(5, 5, getMetaFullName()))
