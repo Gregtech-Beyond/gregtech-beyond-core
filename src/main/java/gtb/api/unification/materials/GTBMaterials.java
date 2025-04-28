@@ -1,5 +1,7 @@
 package gtb.api.unification.materials;
 
+import static gtb.api.unification.materials.GTBFantasyMaterials.*;
+
 import gregtech.api.unification.material.Material;
 
 import gtb.api.unification.materials.info.GTBMaterialIconSet;
@@ -16,7 +18,8 @@ public class GTBMaterials {
     public static Material CataclysmInducedMixedMatter;
     public static Material TemporallyConstrainedAntiMatter;
     public static Material Pikyonium;
-
+    public static Material Tenannite;
+    public static Material Xenotime;
     // SD Materials
 
     // Unknown Materials
@@ -28,5 +31,6 @@ public class GTBMaterials {
     public static void init() {
         GTBMaterialPropertyAddition.init();
         GTBMaterialIconSet.set();
+        GTBFantasyMaterials.init();
     }
 }

@@ -81,7 +81,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> ELECTROLYTIC_CELL_RECIPES = new RecipeMap<>(
             "electrolytic_cell_recipes",
-            3, 4, 2, 6, new SimpleRecipeBuilder(), false);
+            4, 4, 2, 6, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> ROTARY_EVAPORATOR_RECIPES = new RecipeMap<>(
             "rotary_evaporator_recipes",
@@ -182,9 +182,7 @@ public final class GTBRecipeMaps {
             "enzymatic_hydrolysis_recipes", 1, 1, 1, 9, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VACUUM_EJECTION_RECIPES = new RecipeMap<>(
-            "vacuum_ejection_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-                    .setSlotOverlay(false, false, GuiTextures.CRYSTAL_OVERLAY);
+            "vacuum_ejection_recipes", 1, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
             "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
@@ -225,6 +223,38 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> HIGH_TEMP_POLYMERIZATION_TANK_RECIPES = new RecipeMap<>(
             "high_temp_polymerization_tank_recipes",
             2, 2, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ELECTROWINNING_CELL = new RecipeMap<>(
+            "electrowinning_cell",
+            2, 2, 4, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> COLD_TOWER = new RecipeMap<>(
+            "cold_tower",
+            1, 1, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> HOT_TOWER = new RecipeMap<>(
+            "hot_tower",
+            1, 1, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> HEAT_EXCHANGER_RECIPES = new RecipeMap<>(
+            "heat_exchanger_recipes",
+            1, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> METEORITE_PREDICTION_CALCULATION = new RecipeMap<>(
+            "meteorite_prediction_calculation",
+            4, 2, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> METEORITE_MINING = new RecipeMap<>(
+            "meteorite_mining",
+            1, 6, 0, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> FRACTIONAL_DISTILLATION_RECIPES = new RecipeMap<>(
+            "fractional_distillation_recipes",
+            1, 1, 2, 8, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> SPACE_COMPONENT_ASSEMBLING = new RecipeMap<>(
+            "space_component_assembling",
+            6, 1, 3, 0, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> BEAM_SHRINKING_RECIPES = new RecipeMap<>(
             "beam_shrinking_recipes",

@@ -322,5 +322,90 @@ public class MachineRecipes {
                 'C', CIRCUIT,
                 'K', CABLE,
                 'M', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.FLUID_COMPRESSOR,
+                "PCP",
+                "UMU",
+                "KCK",
+                'P', PUMP,
+                'C', CIRCUIT,
+                'K', CABLE,
+                'U', PISTON,
+                'M', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.DRYER,
+                "KRK",
+                "CMC",
+                "PCP",
+                'P', PUMP,
+                'C', CIRCUIT,
+                'K', CABLE,
+                'R', ROTOR,
+                'M', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.BIO_REACTOR_SINGLE,
+                "PVP",
+                "CMC",
+                "KVK",
+                'P', PUMP,
+                'V', CONVEYOR,
+                'C', CIRCUIT,
+                'K', CABLE,
+                'M', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.ELECTRON_BEAM_LITHOGRAPHER,
+                "OEO",
+                "KMK",
+                "PCP",
+                'E', EMITTER,
+                'P', PUMP,
+                'O', MOTOR,
+                'C', CIRCUIT,
+                'K', CABLE,
+                'M', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.ION_EXCHANGE_UNIT,
+                "KEK",
+                "PMU",
+                "CEC",
+                'U', CONVEYOR,
+                'E', EMITTER,
+                'P', PUMP,
+                'C', CIRCUIT,
+                'K', CABLE,
+                'M', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.UV_LIGHT,
+                "KEK",
+                "PMU",
+                "CZC",
+                'U', CONVEYOR,
+                'E', EMITTER,
+                'P', PUMP,
+                'Z', SENSOR,
+                'C', CIRCUIT,
+                'K', CABLE,
+                'M', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.PLASMA_ETCHER,
+                "KEK",
+                "PMP",
+                "CZC",
+                'E', PUMP,
+                'P', CIRCUIT,
+                'Z', SENSOR,
+                'C', EMITTER,
+                'K', CABLE,
+                'M', HULL);
+
+        registerMachineRecipe(GTBMetaTileEntities.SPACE_COMPONENT_ASSEMBLER,
+                "CSC",
+                "VMV",
+                "CEC",
+                'E', EMITTER,
+                'C', CIRCUIT,
+                'S', SENSOR,
+                'V', CABLE,
+                'M', HULL);
     }
 }

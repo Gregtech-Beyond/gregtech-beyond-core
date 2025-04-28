@@ -6,6 +6,7 @@ item.material.oreprefix.item_casing=%s Item Casing
 item.material.oreprefix.seed_crystal=%s Seed Crystal
 item.material.oreprefix.boule=%s Boule
 item.material.oreprefix.sponge=%s Sponge
+item.material.oreprefix.concentrate=%s Concentrate
 
 # Blocks
 tile.gtb_multiblock_active_casing.high_energy_coil.name=High Energy Coil
@@ -40,8 +41,221 @@ tile.gtb_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Cas
 tile.gtb_multiblock_casing.substrate_casing.name=Substrate Casing
 tile.cooling_coil.silver_alloy.name=Silver Alloy Cooling Coil
 tile.gtb_multiblock_casing.gravity_separator_rotor_block.name=Gravity Separator Rotor Block
+tile.gtb_multiblock_casing.corrosion_proof_carbon_steel_casing.name=Corrosion Proof Carbon Steel Casing
+
+# Singleblock machinery
+
+gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator
+gtb.machine.rotary_evaporator.mv.name=Advanced Rotary Evaporator
+gtb.machine.rotary_evaporator.hv.name=Advanced Rotary Evaporator II
+gtb.machine.rotary_evaporator.ev.name=Advanced Rotary Evaporator III
+gtb.machine.rotary_evaporator.iv.name=Elite Rotary Evaporator
+gtb.machine.rotary_evaporator.luv.name=Elite Rotary Evaporator II
+gtb.machine.rotary_evaporator.zpm.name=Elite Rotary Evaporator III
+gtb.machine.rotary_evaporator.uv.name=Ultimate Rotary Evaporator
+gtb.machine.rotary_evaporator.uhv.name=Epic Rotary Evaporator
+gtb.machine.rotary_evaporator.uev.name=Epic Rotary Evaporator II
+gtb.machine.rotary_evaporator.uiv.name=Epic Rotary Evaporator III
+gtb.machine.rotary_evaporator.uxv.name=Epic Rotary Evaporator IV
+gtb.machine.rotary_evaporator.opv.name=Legendary Rotary Evaporator
+gtb.machine.rotary_evaporator.max.name=Legendary Rotary Evaporator II
+
+gtb.machine.microscope.lv.name=Basic Microscope
+gtb.machine.microscope.mv.name=Advanced Microscope
+gtb.machine.microscope.hv.name=Advanced Microscope II
+gtb.machine.microscope.ev.name=Advanced Microscope III
+gtb.machine.microscope.iv.name=Elite Microscope
+gtb.machine.microscope.luv.name=Elite Microscope II
+gtb.machine.microscope.zpm.name=Elite Microscope III
+gtb.machine.microscope.uv.name=Ultimate Microscope
+gtb.machine.microscope.uhv.name=Epic Microscope
+gtb.machine.microscope.uev.name=Epic Microscope II
+gtb.machine.microscope.uiv.name=Epic Microscope III
+gtb.machine.microscope.uxv.name=Epic Microscope IV
+gtb.machine.microscope.opv.name=Legendary Microscope
+gtb.machine.microscope.max.name=Legendary Microscope II
+
+gtb.machine.crystallizers.lv.name=Basic Crystallizer
+gtb.machine.crystallizers.mv.name=Advanced Crystallizer
+gtb.machine.crystallizers.hv.name=Advanced Crystallizer II
+gtb.machine.crystallizers.ev.name=Advanced Crystallizer III
+gtb.machine.crystallizers.iv.name=Elite Crystallizer
+gtb.machine.crystallizers.luv.name=Elite Crystallizer II
+gtb.machine.crystallizers.zpm.name=Elite Crystallizer III
+gtb.machine.crystallizers.uv.name=Ultimate Crystallizer
+gtb.machine.crystallizers.uhv.name=Epic Crystallizer
+gtb.machine.crystallizers.uev.name=Epic Crystallizer II
+gtb.machine.crystallizers.uiv.name=Epic Crystallizer III
+gtb.machine.crystallizers.uxv.name=Epic Crystallizer IV
+gtb.machine.crystallizers.opv.name=Legendary Crystallizer
+gtb.machine.crystallizers.max.name=Legendary Crystallizer II
+
+gtb.machine.dehydrator.lv.name=Basic Dehydrator
+gtb.machine.dehydrator.mv.name=Advanced Dehydrator
+gtb.machine.dehydrator.hv.name=Advanced Dehydrator II
+gtb.machine.dehydrator.ev.name=Advanced Dehydrator III
+gtb.machine.dehydrator.iv.name=Elite Dehydrator
+gtb.machine.dehydrator.luv.name=Elite Dehydrator II
+gtb.machine.dehydrator.zpm.name=Elite Dehydrator III
+gtb.machine.dehydrator.uv.name=Ultimate Dehydrator
+gtb.machine.dehydrator.uhv.name=Epic Dehydrator
+gtb.machine.dehydrator.uev.name=Epic Dehydrator II
+gtb.machine.dehydrator.uiv.name=Epic Dehydrator III
+gtb.machine.dehydrator.uxv.name=Epic Dehydrator IV
+gtb.machine.dehydrator.opv.name=Legendary Dehydrator
+gtb.machine.dehydrator.max.name=Legendary Dehydrator II
+
+gtb.machine.roaster.lv.name=Basic Roaster
+gtb.machine.roaster.mv.name=Advanced Roaster
+gtb.machine.roaster.hv.name=Advanced Roaster II
+gtb.machine.roaster.ev.name=Advanced Roaster III
+gtb.machine.roaster.iv.name=Elite Roaster
+gtb.machine.roaster.luv.name=Elite Roaster II
+gtb.machine.roaster.zpm.name=Elite Roaster III
+gtb.machine.roaster.uv.name=Ultimate Roaster
+gtb.machine.roaster.uhv.name=Epic Roaster
+gtb.machine.roaster.uev.name=Epic Roaster II
+gtb.machine.roaster.uiv.name=Epic Roaster III
+gtb.machine.roaster.uxv.name=Epic Roaster IV
+gtb.machine.roaster.opv.name=Legendary Roaster
+gtb.machine.roaster.max.name=Legendary Roaster II
+
+gtb.machine.cvd_unit.lv.name=Basic CVD Unit
+gtb.machine.cvd_unit.mv.name=Advanced CVD Unit
+gtb.machine.cvd_unit.hv.name=Advanced CVD Unit II
+gtb.machine.cvd_unit.ev.name=Advanced CVD Unit III
+gtb.machine.cvd_unit.iv.name=Elite CVD Unit
+gtb.machine.cvd_unit.luv.name=Elite CVD Unit II
+gtb.machine.cvd_unit.zpm.name=Elite CVD Unit III
+gtb.machine.cvd_unit.uv.name=Ultimate CVD Unit
+gtb.machine.cvd_unit.uhv.name=Epic CVD Unit
+gtb.machine.cvd_unit.uev.name=Epic CVD Unit II
+gtb.machine.cvd_unit.uiv.name=Epic CVD Unit III
+gtb.machine.cvd_unit.uxv.name=Epic CVD Unit IV
+gtb.machine.cvd_unit.opv.name=Legendary CVD Unit
+gtb.machine.cvd_unit.max.name=Legendary CVD Unit II
+
+gtb.machine.ion_implanter.lv.name=Basic Ion Implanter
+gtb.machine.ion_implanter.mv.name=Advanced Ion Implanter
+gtb.machine.ion_implanter.hv.name=Advanced Ion Implanter II
+gtb.machine.ion_implanter.ev.name=Advanced Ion Implanter III
+gtb.machine.ion_implanter.iv.name=Elite Ion Implanter
+gtb.machine.ion_implanter.luv.name=Elite Ion Implanter II
+gtb.machine.ion_implanter.zpm.name=Elite Ion Implanter III
+gtb.machine.ion_implanter.uv.name=Ultimate Ion Implanter
+gtb.machine.ion_implanter.uhv.name=Epic Ion Implanter
+gtb.machine.ion_implanter.uev.name=Epic Ion Implanter II
+gtb.machine.ion_implanter.uiv.name=Epic Ion Implanter III
+gtb.machine.ion_implanter.uxv.name=Epic Ion Implanter IV
+gtb.machine.ion_implanter.opv.name=Legendary Ion Implanter
+gtb.machine.ion_implanter.max.name=Legendary Ion Implanter II
+
+gtb.machine.dryer.lv.name=Basic Dryer
+gtb.machine.dryer.mv.name=Advanced Dryer
+gtb.machine.dryer.hv.name=Advanced Dryer  II
+gtb.machine.dryer.ev.name=Advanced Dryer III
+gtb.machine.dryer.iv.name=Elite Dryer
+gtb.machine.dryer.luv.name=Elite Dryer II
+gtb.machine.dryer.zpm.name=Elite Dryer III
+gtb.machine.dryer.uv.name=Ultimate Dryer
+gtb.machine.dryer.uhv.name=Epic Dryer
+gtb.machine.dryer.uev.name=Epic Dryer II
+gtb.machine.dryer.uiv.name=Epic Dryer III
+gtb.machine.dryer.uxv.name=Epic Dryer IV
+gtb.machine.dryer.opv.name=Legendary Dryer
+gtb.machine.dryer.max.name=Legendary Dryer II
+
+gtb.machine.bio_reactor_single.lv.name=Basic Bio Reactor
+gtb.machine.bio_reactor_single.mv.name=Advanced Bio Reactor
+gtb.machine.bio_reactor_single.hv.name=Advanced Bio Reactor II
+gtb.machine.bio_reactor_single.ev.name=Advanced Bio Reactor III
+gtb.machine.bio_reactor_single.iv.name=Elite Bio Reactor
+
+gtb.machine.vacuum_ejector.lv.name=Basic Vacuum Ejector
+gtb.machine.vacuum_ejector.mv.name=Advanced Vacuum Ejector
+gtb.machine.vacuum_ejector.hv.name=Advanced Vacuum Ejector II
+
+gtb.machine.electron_beam_lithographer.lv.name=Basic Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.mv.name=Advanced Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.hv.name=Advanced Electron Beam Lithographer II
+gtb.machine.electron_beam_lithographer.ev.name=Advanced Electron Beam Lithographer III
+gtb.machine.electron_beam_lithographer.iv.name=Elite Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.luv.name=Elite Electron Beam Lithographer II
+gtb.machine.electron_beam_lithographer.zpm.name=Elite Electron Beam Lithographer III
+gtb.machine.electron_beam_lithographer.uv.name=Ultimate Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.uhv.name=Epic Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.uev.name=Epic Electron Beam Lithographer II
+gtb.machine.electron_beam_lithographer.uiv.name=Epic Electron Beam Lithographer III
+gtb.machine.electron_beam_lithographer.uxv.name=Epic Electron Beam Lithographer IV
+gtb.machine.electron_beam_lithographer.opv.name=Legendary Electron Beam Lithographer
+gtb.machine.electron_beam_lithographer.max.name=Legendary Electron Beam Lithographer II
+
+gtb.machine.plasma_etcher.lv.name=Basic Plasma Etcher
+gtb.machine.plasma_etcher.mv.name=Advanced Plasma Etcher
+gtb.machine.plasma_etcher.hv.name=Advanced Plasma Etcher II
+gtb.machine.plasma_etcher.ev.name=Advanced Plasma Etcher III
+gtb.machine.plasma_etcher.iv.name=Elite Plasma Etcher
+gtb.machine.plasma_etcher.luv.name=Elite Plasma Etcher II
+gtb.machine.plasma_etcher.zpm.name=Elite Plasma Etcher III
+gtb.machine.plasma_etcher.uv.name=Ultimate Plasma Etcher
+gtb.machine.plasma_etcher.uhv.name=Epic Plasma Etcher
+gtb.machine.plasma_etcher.uev.name=Epic Plasma Etcher II
+gtb.machine.plasma_etcher.uiv.name=Epic Plasma Etcher III
+gtb.machine.plasma_etcher.uxv.name=Epic Plasma Etcher IV
+gtb.machine.plasma_etcher.opv.name=Legendary Plasma Etcher
+gtb.machine.plasma_etcher.max.name=Legendary Plasma Etcher II
+
+gtb.machine.uv_light.lv.name=Basic UV-Light
+gtb.machine.uv_light.mv.name=Advanced UV-Light
+gtb.machine.uv_light.hv.name=Advanced UV-Light II
+gtb.machine.uv_light.ev.name=Advanced UV-Light III
+gtb.machine.uv_light.iv.name=Elite UV-Light
+gtb.machine.uv_light.luv.name=Elite UV-Light II
+gtb.machine.uv_light.zpm.name=Elite UV-Light III
+gtb.machine.uv_light.uv.name=Ultimate UV-Light
+gtb.machine.uv_light.uhv.name=Epic UV-Light
+gtb.machine.uv_light.uev.name=Epic UV-Light II
+gtb.machine.uv_light.uiv.name=Epic UV-Light III
+gtb.machine.uv_light.uxv.name=Epic UV-Light IV
+gtb.machine.uv_light.opv.name=Legendary UV-Light
+gtb.machine.uv_light.max.name=Legendary UV-Light II
+
+gtb.machine.ion_exchange_unit.lv.name=Basic Ion Exchange Unit
+gtb.machine.ion_exchange_unit.mv.name=Advanced Ion Exchange Unit
+gtb.machine.ion_exchange_unit.hv.name=Advanced Ion Exchange Unit II
+gtb.machine.ion_exchange_unit.ev.name=Advanced Ion Exchange Unit III
+gtb.machine.ion_exchange_unit.iv.name=Elite Ion Exchange Unit
+gtb.machine.ion_exchange_unit.luv.name=Elite Ion Exchange Unit II
+gtb.machine.ion_exchange_unit.zpm.name=Elite Ion Exchange Unit III
+gtb.machine.ion_exchange_unit.uv.name=Ultimate Ion Exchange Unit
+gtb.machine.ion_exchange_unit.uhv.name=Epic Ion Exchange Unit
+gtb.machine.ion_exchange_unit.uev.name=Epic Ion Exchange Unit II
+gtb.machine.ion_exchange_unit.uiv.name=Epic Ion Exchange Unit III
+gtb.machine.ion_exchange_unit.uxv.name=Epic Ion Exchange Unit IV
+gtb.machine.ion_exchange_unit.opv.name=Legendary Ion Exchange Unit
+gtb.machine.ion_exchange_unit.max.name=Legendary Ion Exchange Unit II
+
+gtb.machine.fluid_compressor.lv.name=Basic Fluid Compressor
+gtb.machine.fluid_compressor.mv.name=Advanced Fluid Compressor
+gtb.machine.fluid_compressor.hv.name=Advanced Fluid Compressor  II
+gtb.machine.fluid_compressor.ev.name=Advanced Fluid Compressor III
+gtb.machine.fluid_compressor.iv.name=Elite Fluid Compressor
+gtb.machine.fluid_compressor.luv.name=Elite Fluid Compressor II
+gtb.machine.fluid_compressor.zpm.name=Elite Fluid Compressor III
+gtb.machine.fluid_compressor.uv.name=Ultimate Fluid Compressor
+gtb.machine.fluid_compressor.uhv.name=Epic Fluid Compressor
+gtb.machine.fluid_compressor.uev.name=Epic Fluid Compressor II
+gtb.machine.fluid_compressor.uiv.name=Epic Fluid Compressor III
+gtb.machine.fluid_compressor.uxv.name=Epic Fluid Compressor IV
+gtb.machine.fluid_compressor.opv.name=Legendary Fluid Compressor
+gtb.machine.fluid_compressor.max.name=Legendary Fluid Compressor II
 
 # Recipemaps
+
+
+
+
+recipemap.oxidation_furnace.name=Oxidation Furnace
 recipemap.water_tank_recipes.name=Water Collection
 recipemap.vacuum_furnace_recipes.name=Vacuum Smelting
 recipemap.vacuum_distillation_tower_recipes.name=Vacuum Distillation
@@ -87,135 +301,33 @@ recipemap.burner_reactor_recipes.name=Burner Reaction
 recipemap.dissolution_tank_recipes.name=Dissolution
 recipemap.gravity_separator_recipes.name=Gravity Separation
 recipemap.electron_beam_lithographer_recipes.name=Electron Beam Lithography
-recipemap.enzymatic_hydrolysis_recipes.name=Enzymatic Hydrolysis
+recipemap.enzymatic_hydrolisis_recipes.name=Enzymatic Hydrolisis
 recipemap.vacuum_ejection_recipes.name=Vacuum Ejection Recipes
 recipemap.dryer_recipes.name=Dryer Recipes
 recipemap.sintering_oven_recipes.name=Sintering
 recipemap.high_temp_distillation_recipes.name=High Temperature Distillation
+recipemap.cold_tower.name=Cold Tower Recipes
+recipemap.hot_tower.name=Hot Tower Recipes
+recipemap.mocvd_unit_recipes.name=MOCVD Unit Recipes
+recipemap.plasma_etcher_recipes.name=Plasma Etching
+recipemap.uv_light_recipes.name=UV-Light Exposure
+recipemap.ion_exchange_recipes.name=Ion Exchange
+recipemap.fluid_compressor_recipes.name=Fluid Compression
 recipemap.beam_shrinking_recipes.name=Beam Shrinking
 recipemap.water_collector_recipes.name=Water Collection
 recipemap.induction_smelter_recipes.name=Induction Smelter
-# Singleblock machinery
-
-gtb.machine.rotary_evaporator.lv.name=Basic Rotary Evaporator
-gtb.machine.rotary_evaporator.mv.name=Advanced Rotary Evaporator
-gtb.machine.rotary_evaporator.hv.name=Advanced Rotary Evaporator II
-gtb.machine.rotary_evaporator.ev.name=Advanced Rotary Evaporator III
-gtb.machine.rotary_evaporator.iv.name=Elite Rotary Evaporator
-gtb.machine.rotary_evaporator.luv.name=Elite Rotary Evaporator II
-gtb.machine.rotary_evaporator.zpm.name=Elite Rotary Evaporator III
-gtb.machine.rotary_evaporator.uv.name=Ultimate Rotary Evaporator
-
-gtb.machine.microscope.lv.name=Basic Microscope
-gtb.machine.microscope.mv.name=Advanced Microscope
-gtb.machine.microscope.hv.name=Advanced Microscope II
-gtb.machine.microscope.ev.name=Advanced Microscope III
-gtb.machine.microscope.iv.name=Elite Microscope
-gtb.machine.microscope.luv.name=Elite Microscope II
-gtb.machine.microscope.zpm.name=Elite Microscope III
-gtb.machine.microscope.uv.name=Ultimate Microscope
-
-gtb.machine.crystallizers.lv.name=Basic Crystallizer
-gtb.machine.crystallizers.mv.name=Advanced Crystallizer
-gtb.machine.crystallizers.hv.name=Advanced Crystallizer II
-gtb.machine.crystallizers.ev.name=Advanced Crystallizer III
-gtb.machine.crystallizers.iv.name=Elite Crystallizer
-gtb.machine.crystallizers.luv.name=Elite Crystallizer II
-gtb.machine.crystallizers.zpm.name=Elite Crystallizer III
-gtb.machine.crystallizers.uv.name=Ultimate Crystallizer
-
-gtb.machine.dehydrator.lv.name=Basic Dehydrator
-gtb.machine.dehydrator.mv.name=Advanced Dehydrator
-gtb.machine.dehydrator.hv.name=Advanced Dehydrator II
-gtb.machine.dehydrator.ev.name=Advanced Dehydrator III
-gtb.machine.dehydrator.iv.name=Elite Dehydrator
-gtb.machine.dehydrator.luv.name=Elite Dehydrator II
-gtb.machine.dehydrator.zpm.name=Elite Dehydrator III
-gtb.machine.dehydrator.uv.name=Ultimate Dehydrator
-
-gtb.machine.roaster.lv.name=Basic Roaster
-gtb.machine.roaster.mv.name=Advanced Roaster
-gtb.machine.roaster.hv.name=Advanced Roaster II
-gtb.machine.roaster.ev.name=Advanced Roaster III
-gtb.machine.roaster.iv.name=Elite Roaster
-gtb.machine.roaster.luv.name=Elite Roaster II
-gtb.machine.roaster.zpm.name=Elite Roaster III
-gtb.machine.roaster.uv.name=Ultimate Roaster
-
-gtb.machine.cvd_unit.lv.name=Basic CVD Unit
-gtb.machine.cvd_unit.mv.name=Advanced CVD Unit
-gtb.machine.cvd_unit.hv.name=Advanced CVD Unit II
-gtb.machine.cvd_unit.ev.name=Advanced CVD Unit III
-gtb.machine.cvd_unit.iv.name=Elite CVD Unit
-gtb.machine.cvd_unit.luv.name=Elite CVD Unit II
-gtb.machine.cvd_unit.zpm.name=Elite CVD Unit III
-gtb.machine.cvd_unit.uv.name=Ultimate CVD Unit
-
-gtb.machine.ion_implanter.lv.name=Basic Ion Implanter
-gtb.machine.ion_implanter.mv.name=Advanced Ion Implanter
-gtb.machine.ion_implanter.hv.name=Advanced Ion Implanter II
-gtb.machine.ion_implanter.ev.name=Advanced Ion Implanter III
-gtb.machine.ion_implanter.iv.name=Elite Ion Implanter
-gtb.machine.ion_implanter.luv.name=Elite Ion Implanter II
-gtb.machine.ion_implanter.zpm.name=Elite Ion Implanter III
-gtb.machine.ion_implanter.uv.name=Ultimate Ion Implanter
-
-gtb.machine.dryer.lv.name=Basic Dryer
-gtb.machine.dryer.mv.name=Advanced Dryer
-gtb.machine.dryer.hv.name=Advanced Dryer  II
-gtb.machine.dryer.ev.name=Advanced Dryer III
-gtb.machine.dryer.iv.name=Elite Dryer
-gtb.machine.dryer.luv.name=Elite Dryer II
-gtb.machine.dryer.zpm.name=Elite Dryer III
-gtb.machine.dryer.uv.name=Ultimate Dryer
-
-gtb.machine.bio_reactor_single.lv.name=Basic Bio Reactor
-gtb.machine.bio_reactor_single.mv.name=Advanced Bio Reactor
-gtb.machine.bio_reactor_single.hv.name=Advanced Bio Reactor II
-gtb.machine.bio_reactor_single.ev.name=Advanced Bio Reactor III
-gtb.machine.bio_reactor_single.iv.name=Elite Bio Reactor
-
-gtb.machine.vacuum_ejector.lv.name=Basic Vacuum Ejector
-gtb.machine.vacuum_ejector.mv.name=Advanced Vacuum Ejector
-gtb.machine.vacuum_ejector.hv.name=Advanced Vacuum Ejector II
-
-gtb.machine.electron_beam_lithographer.lv.name=Basic Electron Beam Lithographer
-gtb.machine.electron_beam_lithographer.mv.name=Advanced Electron Beam Lithographer
-gtb.machine.electron_beam_lithographer.hv.name=Advanced Electron Beam Lithographer II
-gtb.machine.electron_beam_lithographer.ev.name=Advanced Electron Beam Lithographer III
-gtb.machine.electron_beam_lithographer.iv.name=Elite Electron Beam Lithographer
-gtb.machine.electron_beam_lithographer.luv.name=Elite Electron Beam Lithographer II
-gtb.machine.electron_beam_lithographer.zpm.name=Elite Electron Beam Lithographer III
-gtb.machine.electron_beam_lithographer.uv.name=Ultimate Electron Beam Lithographer
-
-gtb.machine.beam_shrinking_device.lv.name=Basic Beam Shrinking Device
-gtb.machine.beam_shrinking_device.mv.name=Advanced Beam Shrinking Device
-gtb.machine.beam_shrinking_device.hv.name=Advanced Beam Shrinking Device II
-gtb.machine.beam_shrinking_device.ev.name=Advanced Beam Shrinking Device III
-gtb.machine.beam_shrinking_device.iv.name=Elite Beam Shrinking Device
-gtb.machine.beam_shrinking_device.luv.name=Elite Beam Shrinking Device II
-gtb.machine.beam_shrinking_device.zpm.name=Elite Beam Shrinking Device III
-gtb.machine.beam_shrinking_device.uv.name=Ultimate Beam Shrinking Device
-
-gtb.machine.fluid_compressor.lv.name=Basic Fluid Compressor
-gtb.machine.fluid_compressor.mv.name=Advanced Fluid Compressor
-gtb.machine.fluid_compressor.hv.name=Advanced Fluid Compressor II
-gtb.machine.fluid_compressor.ev.name=Advanced Fluid Compressor III
-gtb.machine.fluid_compressor.iv.name=Elite Fluid Compressor
-gtb.machine.fluid_compressor.luv.name=Elite Fluid Compressor II
-gtb.machine.fluid_compressor.zpm.name=Elite Fluid Compressor III
-gtb.machine.fluid_compressor.uv.name=Ultimate Fluid Compressor
-
-gtb.machine.inscriber.lv.name=Basic Inscriber
-gtb.machine.inscriber.mv.name=Advanced Inscriber
-gtb.machine.inscriber.hv.name=Advanced Inscriber II
-gtb.machine.inscriber.ev.name=Advanced Inscriber III
-
-gtb.machine.induction_smelter.lv.name=Basic Induction Smelter
-gtb.machine.induction_smelter.mv.name=Advanced Induction Smelter
+recipemap.meteorite_mining.name=Meteorite Mining
+recipemap.meteorite_prediction_calculation.name=Meteorite Prediction
+recipemap.fractional_distillation.name=Fractional Distillation
 
 # Multiblock machine controllers
 
+
+gtb.machine.fractional_distillation_unit.name=Fractional Distillation Unit
+gtb.machine.mocvd_unit.name=MOCVD Unit
+gtb.machine.cold_tower.name=Cold Tower
+gtb.machine.hot_tower.name=Hot Tower
+gtb.machine.oxidation_furnace.name=Oxidation Furnace
 gtb.machine.enzymatic_hydrolysis_tank.name=Enzymatic Hydrolysis Tank
 gtb.machine.sintering_oven.name=Sintering Oven
 gtb.machine.dissolution_tank.name=Dissolution Tank
@@ -258,8 +370,6 @@ gtb.machine.dilution_refrigerator.name=Dilution Refrigerator
 gtb.machine.gravity_separator.name=Gravity Separator
 gtb.machine.vacuum_metallizer.name=Vacuum Metallizer
 gtb.machine.high_temp_polymerization_tank.name=High-Temperature Polymerization Tank
-gtb.machine.mocvd_unit.name=MOCVD Unit
-gtb.machine.oxidation_furnace.name=Oxidation Furnace
 gtb.machine.vis_breaker.name=Vis Breaker
 gtb.machine.gravity_settler_tank.name=Gravity Settler Tank
 gtb.machine.vulcanized_press.name=Vulcanized Press
@@ -267,5 +377,27 @@ gtb.machine.curing_oven.name=Curing Oven
 gtb.machine.sealed_reaction_chamber.name=Sealed Reaction Chamber
 metaitem.electrically_wired_petri_dish.name=Electrically Wired Petri Dish
 gtb.multiblock.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
+gtb.machine.meteorite_prediction_matrix.name=Meteorite Prediction Matrix
+gtb.machine.meteorite_mining_station.name=Meteorite Mining Station
+
+#Materials
+gregtech.material.awakened_draconium=Awakened Draconium
+gregtech.material.adamantium=Adamantium
+gregtech.material.cosmic_neutronium=Cosmic Neutronium
+gregtech.material.infinity=
+gregtech.material.eternal=
+gregtech.material.temporally_constrained_anti_matter=Temporally Constrained Anti Matter
+gregtech.material.pikyonium=Pikyonium
+gregtech.material.cataclysm_induced_mixed_matter=Cataclysm Induced Mixed Matter
+
+
+
+
+
+
+
+#Cooling Coils
+
+tile.cooling_coil.tooltip_temperature=Cooling Capabilites %K
 gtb.multiblock.coke_oven.hatch_position.tooltip.hold_ctrl=Hold CTRL to show additional Structure Information
 gtb.multiblock.coke_oven.hatch_position.tooltip=§fCoke Oven Hatches can be in the §aMIDDLE§f of each side but §cNOT§f in§c edges§f.
