@@ -3,19 +3,31 @@ package gtb.common.metatileentities;
 import static gregtech.common.metatileentities.MetaTileEntities.*;
 import static gtb.api.utils.GTBUtil.gtb;
 
+import org.jetbrains.annotations.NotNull;
+
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
+import gregtech.api.recipes.RecipeMap;
 import gregtech.api.util.GTUtility;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.common.metatileentities.MetaTileEntities;
 
+import crafttweaker.annotations.ZenRegister;
+import gtb.api.metatileentity.BasicSteamMachine;
 import gtb.api.recipes.GTBRecipeMaps;
 import gtb.api.render.GTBTextures;
 import gtb.api.utils.GTBUtil;
 import gtb.common.metatileentities.multiblocks.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import stanhebben.zenscript.annotations.ZenClass;
+import stanhebben.zenscript.annotations.ZenMethod;
 
+@ZenClass("mods.gtb.common.metatileentities.GTBMetaTileEntities")
+@ZenRegister
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GTBMetaTileEntities {
+
+    private static int basicSteamRelativeId = 0;
 
     public static MetaTileEntityCatalyticCrackingUnit CATALYTIC_CRACKING_UNIT;
     public static MetaTileEntityNanoscaleFabricator NANOSCALE_FABRICATOR;
@@ -88,6 +100,10 @@ public final class GTBMetaTileEntities {
     public static SimpleMachineMetaTileEntity[] FLUID_COMPRESSOR = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] PLASMA_ETCHER = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] SPACE_COMPONENT_ASSEMBLER = new SimpleMachineMetaTileEntity[15];
+
+    public static final int MAX_BASIC_MACHINES = 100;
+    public static BasicSteamMachine[] BASIC_STEAM_MACHINES = new BasicSteamMachine[MAX_BASIC_MACHINES];
+    public static int BASIC_STEAM_MACHINES_START_ID = 10000;
 
     public static void init() {
         // Multiblocks
@@ -253,5 +269,18 @@ public final class GTBMetaTileEntities {
                 SPACE_COMPONENT_ASSEMBLER, 4300, "space_component_assembler",
                 GTBRecipeMaps.SPACE_COMPONENT_ASSEMBLING, Textures.ASSEMBLER_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+
+        /**
+         * Machine ids from {@link #BASIC_STEAM_MACHINES_START_ID} are reserved for {@link #BASIC_STEAM_MACHINES}.
+         * They are added via {@link #addSteamMachine(String, boolean, RecipeMap)}.
+         */
+    }
+
+    @ZenMethod
+    public static void addSteamMachine(String machineName, boolean isHighPressure, @NotNull RecipeMap<?> recipeMap) {
+        GTBMetaTileEntities.BASIC_STEAM_MACHINES[basicSteamRelativeId] = MetaTileEntities.registerMetaTileEntity(
+                GTBMetaTileEntities.BASIC_STEAM_MACHINES_START_ID + basicSteamRelativeId,
+                BasicSteamMachine.addSteamMachine(machineName, isHighPressure, recipeMap));
+        basicSteamRelativeId++;
     }
 }

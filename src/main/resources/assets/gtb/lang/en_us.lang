@@ -399,3 +399,5 @@ gregtech.material.cataclysm_induced_mixed_matter=Cataclysm Induced Mixed Matter
 #Cooling Coils
 
 tile.cooling_coil.tooltip_temperature=Cooling Capabilites %K
+gtb.multiblock.coke_oven.hatch_position.tooltip.hold_ctrl=Hold CTRL to show additional Structure Information
+gtb.multiblock.coke_oven.hatch_position.tooltip=§fCoke Oven Hatches can be in the §aMIDDLE§f of each side but §cNOT§f in§c edges§f.

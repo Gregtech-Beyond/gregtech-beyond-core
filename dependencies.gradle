@@ -27,7 +27,7 @@ dependencies {
 
     //Hard Dependencies
     implementation rfg.deobf("curse.maven:codechicken-lib-1-8-242818:2779848") // CCL 3.2.3.358
-    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:5519022") // 2.8.10
+    implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:5519022-deobf-5519023-sources-5519024") // 2.8.10
     implementation rfg.deobf("curse.maven:gregicality-multiblocks-564858:5619513") // 1.2.11
     implementation rfg.deobf("curse.maven:gregtech-food-option-477021:6147619") // 1.12.4
 
