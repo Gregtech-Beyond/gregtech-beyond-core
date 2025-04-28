@@ -28,6 +28,7 @@ public final class GTBRecipeLoader {
         RecipeMaps.ARC_FURNACE_RECIPES.setMaxInputs(2);
         RecipeMaps.ARC_FURNACE_RECIPES.setMaxFluidOutputs(3);
         RecipeMaps.ELECTROLYZER_RECIPES.setMaxInputs(3);
+        RecipeMaps.BLAST_RECIPES.setMaxFluidOutputs(2);
 
         MachineRecipes.init();
     }
