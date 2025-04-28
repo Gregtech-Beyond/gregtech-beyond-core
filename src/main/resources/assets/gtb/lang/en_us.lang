@@ -6,6 +6,7 @@ item.material.oreprefix.item_casing=%s Item Casing
 item.material.oreprefix.seed_crystal=%s Seed Crystal
 item.material.oreprefix.boule=%s Boule
 item.material.oreprefix.sponge=%s Sponge
+item.material.oreprefix.concentrate=%s Concentrate
 
 # Blocks
 tile.gtb_multiblock_active_casing.high_energy_coil.name=High Energy Coil
@@ -40,7 +41,7 @@ tile.gtb_multiblock_casing.advanced_substrate_casing.name=Advanced Substrate Cas
 tile.gtb_multiblock_casing.substrate_casing.name=Substrate Casing
 tile.cooling_coil.silver_alloy.name=Silver Alloy Cooling Coil
 tile.gtb_multiblock_casing.gravity_separator_rotor_block.name=Gravity Separator Rotor Block
-
+tile.gtb_multiblock_casing.corrosion_proof_carbon_steel_casing.name=Corrosion Proof Carbon Steel Casing
 
 # Singleblock machinery
 
@@ -219,6 +220,21 @@ gtb.machine.uv_light.uxv.name=Epic UV-Light IV
 gtb.machine.uv_light.opv.name=Legendary UV-Light
 gtb.machine.uv_light.max.name=Legendary UV-Light II
 
+gtb.machine.uv_light.lv.name=Basic UV-Light
+gtb.machine.uv_light.mv.name=Advanced UV-Light
+gtb.machine.uv_light.hv.name=Advanced UV-Light II
+gtb.machine.uv_light.ev.name=Advanced UV-Light III
+gtb.machine.uv_light.iv.name=Elite UV-Light
+gtb.machine.uv_light.luv.name=Elite UV-Light II
+gtb.machine.uv_light.zpm.name=Elite UV-Light III
+gtb.machine.uv_light.uv.name=Ultimate UV-Light
+gtb.machine.uv_light.uhv.name=Epic UV-Light
+gtb.machine.uv_light.uev.name=Epic UV-Light II
+gtb.machine.uv_light.uiv.name=Epic UV-Light III
+gtb.machine.uv_light.uxv.name=Epic UV-Light IV
+gtb.machine.uv_light.opv.name=Legendary UV-Light
+gtb.machine.uv_light.max.name=Legendary UV-Light II
+
 gtb.machine.ion_exchange_unit.lv.name=Basic Ion Exchange Unit
 gtb.machine.ion_exchange_unit.mv.name=Advanced Ion Exchange Unit
 gtb.machine.ion_exchange_unit.hv.name=Advanced Ion Exchange Unit II
@@ -250,9 +266,6 @@ gtb.machine.fluid_compressor.opv.name=Legendary Fluid Compressor
 gtb.machine.fluid_compressor.max.name=Legendary Fluid Compressor II
 
 # Recipemaps
-
-
-
 
 recipemap.oxidation_furnace.name=Oxidation Furnace
 recipemap.water_tank_recipes.name=Water Collection
@@ -315,10 +328,15 @@ recipemap.fluid_compressor_recipes.name=Fluid Compression
 recipemap.beam_shrinking_recipes.name=Beam Shrinking
 recipemap.water_collector_recipes.name=Water Collection
 recipemap.induction_smelter_recipes.name=Induction Smelter
+recipemap.meteorite_mining.name=Meteorite Mining
+recipemap.meteorite_prediction_calculation.name=Meteorite Prediction
+recipemap.fractional_distillation.name=Fractional Distillation
 
 # Multiblock machine controllers
 
 
+
+gtb.machine.fractional_distillation_unit.name=Fractional Distillation Unit
 gtb.machine.mocvd_unit.name=MOCVD Unit
 gtb.machine.cold_tower.name=Cold Tower
 gtb.machine.hot_tower.name=Hot Tower
@@ -365,8 +383,6 @@ gtb.machine.dilution_refrigerator.name=Dilution Refrigerator
 gtb.machine.gravity_separator.name=Gravity Separator
 gtb.machine.vacuum_metallizer.name=Vacuum Metallizer
 gtb.machine.high_temp_polymerization_tank.name=High-Temperature Polymerization Tank
-gtb.machine.mocvd_unit.name=MOCVD Unit
-gtb.machine.oxidation_furnace.name=Oxidation Furnace
 gtb.machine.vis_breaker.name=Vis Breaker
 gtb.machine.gravity_settler_tank.name=Gravity Settler Tank
 gtb.machine.vulcanized_press.name=Vulcanized Press
@@ -376,8 +392,11 @@ metaitem.electrically_wired_petri_dish.name=Electrically Wired Petri Dish
 gtb.multiblock.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
 
 
+
 #Materials
 
+gtb.machine.meteorite_prediction_matrix.name=Meteorite Prediction Matrix
+gtb.machine.meteorite_mining_station.name=Meteorite Mining Station
 gregtech.material.awakened_draconium=Awakened Draconium
 gregtech.material.adamantium=Adamantium
 gregtech.material.cosmic_neutronium=Cosmic Neutronium
@@ -396,3 +415,5 @@ gregtech.material.cataclysm_induced_mixed_matter=Cataclysm Induced Mixed Matter
 #Cooling Coils
 
 tile.cooling_coil.tooltip_temperature=Cooling Capabilites %K
+gtb.multiblock.coke_oven.hatch_position.tooltip.hold_ctrl=Hold CTRL to show additional Structure Information
+gtb.multiblock.coke_oven.hatch_position.tooltip=§fCoke Oven Hatches can be in the §aMIDDLE§f of each side but §cNOT§f in§c edges§f.

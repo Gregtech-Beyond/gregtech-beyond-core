@@ -1,7 +1,6 @@
 package gtb.common.metatileentities.multiblocks;
 
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -19,38 +18,37 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
-import gregtech.common.blocks.BlockBoilerCasing.BoilerCasingType;
+import gregtech.common.blocks.BlockMetalCasing;
 import gregtech.common.blocks.MetaBlocks;
 
 import gtb.api.recipes.GTBRecipeMaps;
-import gtb.api.render.GTBTextures;
-import gtb.common.block.GTBMetaBlocks;
-import gtb.common.block.blocks.GTBMultiblockCasing;
 
-public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
+public class MetaTileEntityFractionalDistillationUnit extends RecipeMapMultiblockController {
 
-    public MetaTileEntityVacuumFurnace(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, GTBRecipeMaps.VACUUM_FURNACE_RECIPES);
+    public MetaTileEntityFractionalDistillationUnit(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, GTBRecipeMaps.FRACTIONAL_DISTILLATION_RECIPES);
     }
 
     public IBlockState getCasingState() {
-        return GTBMetaBlocks.GTB_MULTIBLOCK_CASING.getState(GTBMultiblockCasing.CasingType.VACUUM_FURNACE_CASING);
+        return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.STEEL_SOLID);
     }
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start(RelativeDirection.RIGHT, RelativeDirection.BACK, RelativeDirection.UP)
-                .aisle("PCP", "FCF", "~C~", "~C~", "WCW", "WCW")
-                .aisle("WCW", "P~P", "G~G", "G~G", "P~P", "CSC")
-                .aisle("PCP", "FCF", "~C~", "~C~", "WCW", "WCW")
+                .aisle("~CCC~", "FCCCF", "~CCC~", "FCCCF", "~CCC~", "FCCCF", "~CCC~", "FCCCF", "~CCC~", "FCCCF",
+                        "~CCC~")
+                .aisle("~CCC~", "FC~CF", "~C~C~", "FC~CF", "~C~C~", "FC~CF", "~C~C~", "FC~CF", "~C~C~", "FC~CF",
+                        "~CSC~")
+                .aisle("~CCC~", "FCCCF", "~CCC~", "FCCCF", "~CCC~", "FCCCF", "~CCC~", "FCCCF", "~CCC~", "FCCCF",
+                        "~CCC~")
+                .aisle("~~~~~", "FFFFF", "~~~~~", "FFFFF", "~~~~~", "FFFFF", "~~~~~", "FFFFF", "~~~~~", "FFFFF",
+                        "~~~~~")
                 .where('S', selfPredicate())
                 .where('~', any())
-                .where('C', states(getCasingState()).setMinGlobalLimited(7)
+                .where('C', states(getCasingState()).setMinGlobalLimited(60)
                         .or(autoAbilities()))
                 .where('F', frames(Materials.Steel))
-                .where('W', states(MetaBlocks.MACHINE_CASING.getDefaultState()))
-                .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
-                .where('G', states(Blocks.GLASS.getDefaultState()))
                 .build();
     }
 
@@ -62,7 +60,7 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return GTBTextures.VACUUM_CASING;
+        return Textures.SOLID_STEEL_CASING;
     }
 
     @SideOnly(Side.CLIENT)
@@ -74,6 +72,6 @@ public class MetaTileEntityVacuumFurnace extends RecipeMapMultiblockController {
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new MetaTileEntityVacuumFurnace(metaTileEntityId);
+        return new MetaTileEntityFractionalDistillationUnit(metaTileEntityId);
     }
 }

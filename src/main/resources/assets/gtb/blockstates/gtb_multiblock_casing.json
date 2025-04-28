@@ -84,6 +84,8 @@
         "model" : "minecraft:cube_all",
         "textures" : {
           "all" : "gregtech:blocks/gtb_multiblock_casing/corrosion_proof_carbon_steel_casing"
+        }
+      },
       "perfectly_sealed_vacuum_casing" : {
         "model" : "minecraft:cube_all",
         "textures" : {
