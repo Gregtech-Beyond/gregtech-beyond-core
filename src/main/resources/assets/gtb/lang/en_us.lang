@@ -267,3 +267,5 @@ gtb.machine.curing_oven.name=Curing Oven
 gtb.machine.sealed_reaction_chamber.name=Sealed Reaction Chamber
 metaitem.electrically_wired_petri_dish.name=Electrically Wired Petri Dish
 gtb.multiblock.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
+gtb.multiblock.coke_oven.hatch_position.tooltip.hold_ctrl=Hold CTRL to show additional Structure Information
+gtb.multiblock.coke_oven.hatch_position.tooltip=§fCoke Oven Hatches can be in the §aMIDDLE§f of each side but §cNOT§f in§c edges§f.

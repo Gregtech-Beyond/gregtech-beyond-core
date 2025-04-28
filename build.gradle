@@ -457,7 +457,7 @@ configurations {
     }
 }
 
-String mixinProviderSpec = 'zone.rong:mixinbooter:8.9'
+String mixinProviderSpec = 'zone.rong:mixinbooter:9.1'
 dependencies {
     implementation 'org.projectlombok:lombok:1.18.26'
     if (usesMixins.toBoolean()) {
@@ -522,6 +522,12 @@ pluginManager.withPlugin('org.jetbrains.kotlin.kapt') {
         dependencies {
             kapt(mixinProviderSpec)
         }
+    }
+}
+
+configurations.configureEach {
+    resolutionStrategy.dependencySubstitution {
+        substitute module('org.scala-lang:scala-library:2.11.1') using module('org.scala-lang:scala-library:2.11.5') because('To allow mixing with Java 8 targets')
     }
 }
 
