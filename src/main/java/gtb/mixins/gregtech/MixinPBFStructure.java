@@ -5,6 +5,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.spongepowered.asm.mixin.Mixin;
@@ -95,6 +97,7 @@ public abstract class MixinPBFStructure extends RecipeMapPrimitiveMultiblockCont
      * must be moved one block further in the back.
      */
     @Inject(method = "renderMetaTileEntity", at = @At(value = "HEAD", ordinal = 0), cancellable = true)
+    @SideOnly(Side.CLIENT)
     public void changeLavaPosition(CCRenderState renderState, Matrix4 translation, IVertexOperation[] pipeline,
                                    CallbackInfo ci) {
         super.renderMetaTileEntity(renderState, translation, pipeline);
@@ -133,6 +136,7 @@ public abstract class MixinPBFStructure extends RecipeMapPrimitiveMultiblockCont
      * Since the structure of the multi is changed and the hole is one block further in the back, the smoke linked
      * to the fake lava block must be emitted one block further in the back.
      */
+
     @Inject(method = "update", at = @At(value = "HEAD", ordinal = 0), cancellable = true)
     public void changeSmokeEffect(CallbackInfo callbackInfo) {
         super.update();
