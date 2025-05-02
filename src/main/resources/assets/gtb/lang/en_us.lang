@@ -220,6 +220,21 @@ gtb.machine.uv_light.uxv.name=Epic UV-Light IV
 gtb.machine.uv_light.opv.name=Legendary UV-Light
 gtb.machine.uv_light.max.name=Legendary UV-Light II
 
+gtb.machine.uv_light.lv.name=Basic UV-Light
+gtb.machine.uv_light.mv.name=Advanced UV-Light
+gtb.machine.uv_light.hv.name=Advanced UV-Light II
+gtb.machine.uv_light.ev.name=Advanced UV-Light III
+gtb.machine.uv_light.iv.name=Elite UV-Light
+gtb.machine.uv_light.luv.name=Elite UV-Light II
+gtb.machine.uv_light.zpm.name=Elite UV-Light III
+gtb.machine.uv_light.uv.name=Ultimate UV-Light
+gtb.machine.uv_light.uhv.name=Epic UV-Light
+gtb.machine.uv_light.uev.name=Epic UV-Light II
+gtb.machine.uv_light.uiv.name=Epic UV-Light III
+gtb.machine.uv_light.uxv.name=Epic UV-Light IV
+gtb.machine.uv_light.opv.name=Legendary UV-Light
+gtb.machine.uv_light.max.name=Legendary UV-Light II
+
 gtb.machine.ion_exchange_unit.lv.name=Basic Ion Exchange Unit
 gtb.machine.ion_exchange_unit.mv.name=Advanced Ion Exchange Unit
 gtb.machine.ion_exchange_unit.hv.name=Advanced Ion Exchange Unit II
@@ -251,9 +266,6 @@ gtb.machine.fluid_compressor.opv.name=Legendary Fluid Compressor
 gtb.machine.fluid_compressor.max.name=Legendary Fluid Compressor II
 
 # Recipemaps
-
-
-
 
 recipemap.oxidation_furnace.name=Oxidation Furnace
 recipemap.water_tank_recipes.name=Water Collection
@@ -323,6 +335,7 @@ recipemap.fractional_distillation.name=Fractional Distillation
 # Multiblock machine controllers
 
 
+
 gtb.machine.fractional_distillation_unit.name=Fractional Distillation Unit
 gtb.machine.mocvd_unit.name=MOCVD Unit
 gtb.machine.cold_tower.name=Cold Tower
@@ -377,10 +390,13 @@ gtb.machine.curing_oven.name=Curing Oven
 gtb.machine.sealed_reaction_chamber.name=Sealed Reaction Chamber
 metaitem.electrically_wired_petri_dish.name=Electrically Wired Petri Dish
 gtb.multiblock.nanoscale_fabricator.tooltip.1=Average Crucible heat cannot exceed the target by more than §c250K§7.
-gtb.machine.meteorite_prediction_matrix.name=Meteorite Prediction Matrix
-gtb.machine.meteorite_mining_station.name=Meteorite Mining Station
+
+
 
 #Materials
+
+gtb.machine.meteorite_prediction_matrix.name=Meteorite Prediction Matrix
+gtb.machine.meteorite_mining_station.name=Meteorite Mining Station
 gregtech.material.awakened_draconium=Awakened Draconium
 gregtech.material.adamantium=Adamantium
 gregtech.material.cosmic_neutronium=Cosmic Neutronium
