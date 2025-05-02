@@ -282,6 +282,5 @@ public final class GTBMetaTileEntities {
                 GTBMetaTileEntities.BASIC_STEAM_MACHINES_START_ID + basicSteamRelativeId,
                 BasicSteamMachine.addSteamMachine(machineName, isHighPressure, recipeMap));
         basicSteamRelativeId++;
-
     }
 }

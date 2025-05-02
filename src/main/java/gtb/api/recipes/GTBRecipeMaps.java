@@ -1,5 +1,7 @@
 package gtb.api.recipes;
 
+import gregtech.api.gui.GuiTextures;
+import gregtech.api.gui.widgets.ProgressWidget;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.SimpleRecipeBuilder;
 
@@ -265,12 +267,4 @@ public final class GTBRecipeMaps {
             1, 0, 0, 1, new SimpleRecipeBuilder(), false)
                     .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
                     .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
-
-    public static final RecipeMap<SimpleRecipeBuilder> COLD_TOWER = new RecipeMap<>(
-            "cold_tower",
-            1, 1, 2, 2, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> HOT_TOWER = new RecipeMap<>(
-            "hot_tower",
-            1, 1, 2, 2, new SimpleRecipeBuilder(), false);
 }
