@@ -3,6 +3,7 @@ package gtb.loaders.recipe;
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.ore.OrePrefix.*;
+import static gregtech.common.blocks.MetaBlocks.MACHINE_CASING;
 import static gregtech.common.items.MetaItems.*;
 import static gregtech.loaders.recipe.CraftingComponent.*;
 import static gregtech.loaders.recipe.MetaTileEntityLoader.*;
@@ -120,7 +121,7 @@ public class MachineRecipes {
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(circuit, MarkerMaterials.Tier.EV, 2)
-                .input(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.HV).getBlock())
+                .input(MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.HV).getBlock())
                 .inputs(ELECTRIC_PUMP_HV.getStackForm(2))
                 .input(frameGt, StainlessSteel, 2)
                 .input(cableGtQuadruple, BlackSteel, 4)
@@ -132,7 +133,7 @@ public class MachineRecipes {
         ASSEMBLER_RECIPES.recipeBuilder()
                 .input(stick, Steel, 6)
                 .input(circuit, MarkerMaterials.Tier.EV, 4)
-                .input(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.HV).getBlock())
+                .input(MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.HV).getBlock())
                 .inputs(ELECTRIC_PUMP_HV.getStackForm(2))
                 .circuitMeta(1)
                 .input(frameGt, BlackSteel)
@@ -161,23 +162,12 @@ public class MachineRecipes {
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .fluidInputs(TungstenSteel.getFluid(512))
-                .input(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.IV).getBlock())
+                .input(MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.IV).getBlock())
                 .inputs(ELECTRIC_PUMP_IV.getStackForm(2))
                 .input(plateDense, Steel, 2)
                 .input(rotor, TungstenSteel, 4)
                 .input(circuit, MarkerMaterials.Tier.IV, 4)
                 .output(GTBMetaTileEntities.ENGRAVING_UNIT)
-                .duration(200)
-                .EUt(700)
-                .buildAndRegister();
-
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .input(VOLTAGE_COIL_HV, 2)
-                .input(circuit, MarkerMaterials.Tier.HV, 2)
-                .input(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.HV).getBlock())
-                .input(ELECTRIC_PUMP_HV, 2)
-                .input(ELECTRIC_MOTOR_HV, 2)
-                .output(GTBMetaTileEntities.PHASE_SEPARATOR)
                 .duration(200)
                 .EUt(700)
                 .buildAndRegister();
@@ -204,19 +194,6 @@ public class MachineRecipes {
                 'C', new UnificationEntry(circuit, MarkerMaterials.Tier.MV),
                 'R', new UnificationEntry(rotor, Steel),
                 'P', ELECTRIC_PUMP_LV);
-
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .input(MetaBlocks.MACHINE_CASING.getState(BlockMachineCasing.MachineCasingType.HV).getBlock())
-                .input(circuit, MarkerMaterials.Tier.HV, 2)
-                .input(plate, Gold, 2)
-                .inputs(ROBOT_ARM_EV.getStackForm(2))
-                .inputs(ELECTRIC_MOTOR_EV.getStackForm(2))
-                .inputs(ELECTRIC_PISTON_EV.getStackForm(2))
-                .input(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.LAMINATED_GLASS).getBlock())
-                .output(GTBMetaTileEntities.TEXTILE_FACTORY)
-                .duration(200)
-                .EUt(120)
-                .buildAndRegister();
 
         ModHandler.addShapedRecipe("clarifier_machine", GTBMetaTileEntities.CLARIFIER.getStackForm(),
                 "PCP", "UMU", "PCP",
