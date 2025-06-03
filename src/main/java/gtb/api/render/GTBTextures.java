@@ -13,10 +13,10 @@ public final class GTBTextures {
 
     public static SimpleOverlayRenderer VACUUM_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/vacuum_furnace_casing");
+    public static SimpleOverlayRenderer SINTERING_CASING = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing/sintering_oven_casing");
     public static SimpleOverlayRenderer CLIMATE_PROOF_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/climate_proof_casing");
-    public static SimpleOverlayRenderer STEEL_BORDERED_WOODEN_CASING = new SimpleOverlayRenderer(
-            "gtb_multiblock_casing/steel_bordered_wooden_casing");
     public static SimpleOverlayRenderer BIOLOGICALLY_STERILE_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/biologically_sterile_casing");
     public static final OrientedOverlayRenderer CRYSTALLIZER_OVERLAY = new OrientedOverlayRenderer(
@@ -27,6 +27,10 @@ public final class GTBTextures {
             "machines/nanoscale_fabricator");
     public static SimpleOverlayRenderer SILICON_CARBIDE_CASING = new SimpleOverlayRenderer(
             "gtb_multiblock_casing/silicon_carbide_casing");
+    public static SimpleOverlayRenderer LEAD_CASING = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing/lead_casing");
+    public static SimpleOverlayRenderer HSS_G_CASING = new SimpleOverlayRenderer(
+            "gtb_multiblock_casing2/hss_g_casing");
     public static SimpleOverlayRenderer CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(
             "multiblock/cvd_unit");
     public static SimpleOverlayRenderer LARGE_CVD_UNIT_OVERLAY = new SimpleOverlayRenderer(
@@ -53,6 +57,20 @@ public final class GTBTextures {
             "machines/induction_smelter");
     public static OrientedOverlayRenderer INSCRIBER_OVERLAY = new OrientedOverlayRenderer(
             "machines/inscriber");
+    public static OrientedOverlayRenderer ION_EXCHANGE_UNIT_OVERLAY = new OrientedOverlayRenderer(
+            "machines/ion_exchange_unit");
+    public static OrientedOverlayRenderer UV_LIGHT_OVERLAY = new OrientedOverlayRenderer(
+            "machines/uv_light");
+    public static OrientedOverlayRenderer FLUID_COMPRESSOR_OVERLAY = new OrientedOverlayRenderer(
+            "machines/fluid_compressor");
+    public static OrientedOverlayRenderer PLASMA_ETCHER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/plasma_etcher");
+    public static OrientedOverlayRenderer BIO_REACTOR_OVERLAY = new OrientedOverlayRenderer(
+            "machines/bio_reactor");
+    public static OrientedOverlayRenderer ION_IMPLANTER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/ion_implanter");
+    public static OrientedOverlayRenderer ELECTRON_BEAM_LITHOGRAPHER_OVERLAY = new OrientedOverlayRenderer(
+            "machines/electron_beam");
 
     private GTBTextures() {}
 
