@@ -26,6 +26,12 @@
           "all" : "gregtech:blocks/gtb_multiblock_casing/gravity_separator_rotor_block"
         }
       },
+      "lead_casing" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing/lead_casing"
+        }
+      },
       "quantum_casing" : {
         "model" : "minecraft:cube_all",
         "textures" : {
@@ -106,6 +112,14 @@
         "textures" : {
           "top" : "gregtech:blocks/gtb_multiblock_casing/basic_structural_casing",
           "side" : "gregtech:blocks/gtb_multiblock_casing/basic_structural_casing",
+          "bottom" : "#side"
+        }
+      },
+      "hard_stone" : {
+        "model" : "minecraft:cube_bottom_top",
+        "textures" : {
+          "top" : "gregtech:blocks/gtb_multiblock_casing/hard_stone",
+          "side" : "gregtech:blocks/gtb_multiblock_casing/hard_stone",
           "bottom" : "#side"
         }
       },
