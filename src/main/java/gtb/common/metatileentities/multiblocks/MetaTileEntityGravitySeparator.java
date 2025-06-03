@@ -54,7 +54,7 @@ public class MetaTileEntityGravitySeparator extends RecipeMapMultiblockControlle
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, false, true, true, true, true, true);
     }
 
     @SideOnly(Side.CLIENT)

@@ -56,7 +56,7 @@ public class MetaTileEntityDissolutionTank extends RecipeMapMultiblockController
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, false, true, false, false, true, false);
+        return autoAbilities(true, true, true, false, false, true, false);
     }
 
     @SideOnly(Side.CLIENT)
