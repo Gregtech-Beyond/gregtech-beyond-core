@@ -135,7 +135,7 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> CONDENSATION_UNIT_RECIPES = new RecipeMap<>(
             "condensation_unit_recipes",
-            1, 0, 2, 4, new SimpleRecipeBuilder(), false);
+            1, 1, 2, 4, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> CRYOGENIC_DISTILLATION_PLANT_RECIPES = new RecipeMap<>(
             "cryogenic_distillation_plant_recipes",
@@ -186,9 +186,6 @@ public final class GTBRecipeMaps {
 
     public static final RecipeMap<SimpleRecipeBuilder> CURING_OVEN_RECIPES = new RecipeMap<>(
             "curing_oven_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
-
-    public static final RecipeMap<SimpleRecipeBuilder> VULCANIZED_PRESS_RECIPES = new RecipeMap<>(
-            "vulcanized_press_recipes", 2, 1, 2, 2, new SimpleRecipeBuilder(), false);
 
     public static final RecipeMap<SimpleRecipeBuilder> VIS_BREAKER_RECIPES = new RecipeMap<>(
             "vis_breaker_recipes", 1, 1, 1, 2, new SimpleRecipeBuilder(), false);
@@ -262,21 +259,29 @@ public final class GTBRecipeMaps {
                     .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
                     .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
 
-    public static final RecipeMap<SimpleRecipeBuilder> WATER_COLLECTOR_RECIPES = new RecipeMap<>(
-            "water_collector_recipes",
-            1, 0, 0, 1, new SimpleRecipeBuilder(), false)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-                    .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
-
-    public static final RecipeMap<SimpleRecipeBuilder> INDUCTION_SMELTER_RECIPES = new RecipeMap<>(
-            "induction_smelter_recipes",
-            3, 2, 0, 0, new SimpleRecipeBuilder(), false)
-                    .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
-                    .setSlotOverlay(false, false, false, GuiTextures.CRYSTAL_OVERLAY);
-
     public static final RecipeMap<SimpleRecipeBuilder> INSCRIBER_RECIPES = new RecipeMap<>(
             "inscriber_recipes",
             3, 1, 0, 0, new SimpleRecipeBuilder(), false)
                     .setProgressBar(GuiTextures.PROGRESS_BAR_BENDING, ProgressWidget.MoveType.VERTICAL)
                     .setSlotOverlay(false, false, false, GuiTextures.HAMMER_OVERLAY);
+
+    public static final RecipeMap<NoEnergyRecipeBuilder> BLOOMERY_RECIPES = new RecipeMap<>(
+            "bloomery_recipes",
+            2, 3, 0, 0, new NoEnergyRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> TUBE_IN_TUBE_REACTOR_RECIPES = new RecipeMap<>(
+            "tube_in_tube_reactor_recipes",
+            2, 3, 2, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ADSORPTION_TOWER = new RecipeMap<>(
+            "adsorption_tower",
+            1, 0, 3, 2, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> REACTIVE_ION_ETCHER_RECIPES = new RecipeMap<>(
+            "reactive_ion_etcher",
+            1, 1, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> PVD_UNIT_RECIPES = new RecipeMap<>(
+            "pvd_unit_recipes",
+            4, 1, 3, 1, new SimpleRecipeBuilder(), false);
 }
