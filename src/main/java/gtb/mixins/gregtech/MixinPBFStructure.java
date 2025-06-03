@@ -136,7 +136,6 @@ public abstract class MixinPBFStructure extends RecipeMapPrimitiveMultiblockCont
      * Since the structure of the multi is changed and the hole is one block further in the back, the smoke linked
      * to the fake lava block must be emitted one block further in the back.
      */
-
     @Inject(method = "update", at = @At(value = "HEAD", ordinal = 0), cancellable = true)
     public void changeSmokeEffect(CallbackInfo callbackInfo) {
         super.update();
