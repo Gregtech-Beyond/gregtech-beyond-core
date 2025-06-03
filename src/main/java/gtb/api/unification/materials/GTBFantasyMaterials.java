@@ -68,6 +68,13 @@ public class GTBFantasyMaterials {
                 .flags(GENERATE_FLOATED, GENERATE_SIFTED, GENERATE_CONCENTRATE)
                 .color(0xF98B69)
                 .build().setFormula("REE", true);
+
+        Zirkelite = new Material.Builder(getMaterialsId(), gregtechId("zirkelite"))
+                .dust()
+                .ore()
+                .flags(GENERATE_FLOATED, GENERATE_SIFTED, GENERATE_CONCENTRATE)
+                .color(0x908492)
+                .build().setFormula("Ca2Th2CeZr7(TiO2)6Nb4O10", true);
     }
 
     private static int getMaterialsId() {
