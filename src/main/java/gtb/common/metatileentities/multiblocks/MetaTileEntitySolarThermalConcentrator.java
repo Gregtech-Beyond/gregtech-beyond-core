@@ -54,7 +54,9 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
                 .where('C', states(getCasingState())
                         .or(abilities(MultiblockAbility.IMPORT_FLUIDS).setExactLimit(1))
                         .or(abilities(MultiblockAbility.EXPORT_FLUIDS).setExactLimit(1))
-                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1)))
+                        .or(abilities(MultiblockAbility.IMPORT_ITEMS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.STEAM_EXPORT_ITEMS).setExactLimit(1))
+                        .or(abilities(MultiblockAbility.STEAM_IMPORT_ITEMS).setExactLimit(1)))
                 .where('Z', frames(Materials.Bronze))
                 .where('B', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.STEEL_PIPE))))
                 .where('P', states(MetaBlocks.BOILER_CASING.getState((BoilerCasingType.BRONZE_PIPE))))
@@ -66,7 +68,7 @@ public class MetaTileEntitySolarThermalConcentrator extends NoEnergyMultiControl
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, true, true, true, true, true, true);
     }
 
     @SideOnly(Side.CLIENT)

@@ -85,7 +85,7 @@ public class MetaTileEntityNanoscaleFabricator extends RecipeMapMultiblockContro
                         states(GCYMMetaBlocks.LARGE_MULTIBLOCK_CASING
                                 .getState(BlockLargeMultiblockCasing.CasingType.ENGRAVER_CASING))
                                         .setMinGlobalLimited(84)
-                                        .or(autoAbilities(true, true, false, true, true, true, true)))
+                                        .or(autoAbilities(true, true, true, true, true, true, true)))
                 .where('T', states(getNonconductingState()).setMinGlobalLimited(36))
                 .where('G', states(MetaBlocks.TRANSPARENT_CASING.getState(BlockGlassCasing.CasingType.LAMINATED_GLASS)))
                 .where('I',

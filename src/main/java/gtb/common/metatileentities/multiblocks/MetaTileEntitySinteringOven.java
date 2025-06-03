@@ -21,6 +21,7 @@ import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
 
 import gtb.api.recipes.GTBRecipeMaps;
+import gtb.api.render.GTBTextures;
 import gtb.common.block.GTBMetaBlocks;
 import gtb.common.block.blocks.GTBMultiblockCasing;
 
@@ -51,13 +52,13 @@ public class MetaTileEntitySinteringOven extends RecipeMapMultiblockController {
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, false, true, true, true, true, false);
+        return autoAbilities(true, true, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        return Textures.SOLID_STEEL_CASING;
+        return GTBTextures.SINTERING_CASING;
     }
 
     @SideOnly(Side.CLIENT)

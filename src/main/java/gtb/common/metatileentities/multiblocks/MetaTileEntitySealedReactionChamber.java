@@ -173,7 +173,7 @@ public class MetaTileEntitySealedReactionChamber extends RecipeMapMultiblockCont
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(true, false, true, true, true, true, false);
+        return autoAbilities(true, true, true, true, true, true, false);
     }
 
     @SideOnly(Side.CLIENT)
