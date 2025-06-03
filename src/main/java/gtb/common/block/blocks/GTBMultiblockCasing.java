@@ -38,6 +38,8 @@ public class GTBMultiblockCasing extends VariantBlock<GTBMultiblockCasing.Casing
         PERFECTLY_SEALED_VACUUM_CASING("perfectly_sealed_vacuum_casing"),
         ENGRAVER_CASING("engraver_casing"),
         SUBSTRATE("substrate_casing"),
+        HARD_STONE("hard_stone"),
+        LEAD_CASING("lead_casing"),
         BASIC_STRUCTURAL_CASING("basic_structural_casing"),
         ADVANCED_SUBSTRATE("advanced_substrate_casing"),
         VACUUM_FURNACE_CASING("vacuum_furnace_casing"),

@@ -20,6 +20,7 @@ public class GTBMaterials {
     public static Material Pikyonium;
     public static Material Tenannite;
     public static Material Xenotime;
+    public static Material Zirkelite;
     // SD Materials
 
     // Unknown Materials
