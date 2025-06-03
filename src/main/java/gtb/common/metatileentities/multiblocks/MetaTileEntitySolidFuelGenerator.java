@@ -62,7 +62,7 @@ public class MetaTileEntitySolidFuelGenerator extends NoEnergyMultiController {
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(false, true, true, false, false, true, false);
     }
 
     @SideOnly(Side.CLIENT)

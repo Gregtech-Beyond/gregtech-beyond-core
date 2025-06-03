@@ -59,7 +59,7 @@ public class MetaTileEntityTextileFactory extends RecipeMapMultiblockController 
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, true, true, true, true, true, true);
     }
 
     @SideOnly(Side.CLIENT)
