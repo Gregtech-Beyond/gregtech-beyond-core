@@ -64,7 +64,7 @@ public class MetaTileEntityCVDUnit extends RecipeMapMultiblockController {
 
     @Override
     protected @NotNull SimpleOverlayRenderer getFrontOverlay() {
-        return GTBTextures.CVD_UNIT_OVERLAY;
+        return GTBTextures.LARGE_CVD_UNIT_OVERLAY;
     }
 
     @Override

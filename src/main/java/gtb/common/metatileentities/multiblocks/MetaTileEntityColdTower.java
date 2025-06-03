@@ -54,7 +54,7 @@ public class MetaTileEntityColdTower extends RecipeMapMultiblockController {
 
     @Override
     public TraceabilityPredicate autoAbilities() {
-        return autoAbilities(false, false, true, false, false, true, false);
+        return autoAbilities(true, true, true, false, false, true, false);
     }
 
     @SideOnly(Side.CLIENT)
