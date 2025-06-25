@@ -1,4 +1,5 @@
 
+
 //file:noinspection DependencyNotationArgument
 // TODO remove when fixed in RFG ^
 /*
@@ -30,6 +31,18 @@ dependencies {
     implementation rfg.deobf("curse.maven:gregtech-ce-unofficial-557242:5519022-deobf-5519023-sources-5519024") // 2.8.10
     implementation rfg.deobf("curse.maven:gregicality-multiblocks-564858:5619513") // 1.2.11
     implementation rfg.deobf("curse.maven:gregtech-food-option-477021:6147619") // 1.12.4
+    implementation rfg.deobf("curse.maven:galacticraft-legacy-564236:6364107")
+    implementation rfg.deobf("curse.maven:asmodeuscore-303101:6058953")
+    implementation rfg.deobf("curse.maven:ae2-extended-life-570458:6302098")
+
+
+    implementation rfg.deobf("curse.maven:pyrotech-306676:6253355")
+
+    //Pyrotech dependencies
+    //No need for implementation right now
+    runtimeOnly rfg.deobf("curse.maven:athenaeum-284350:4633750") //1.19.6
+    runtimeOnly rfg.deobf("curse.maven:dropt-284973:5405050") //1.19.4
+    runtimeOnly rfg.deobf("curse.maven:patchouli-306770:3162874")//1.0-23.6.jar
 
     //Soft Dependency
     implementation "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.684"

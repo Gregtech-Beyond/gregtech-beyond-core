@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gtb:items/metaitems/passivated_quantum_smd_wafer"
+  }
+}

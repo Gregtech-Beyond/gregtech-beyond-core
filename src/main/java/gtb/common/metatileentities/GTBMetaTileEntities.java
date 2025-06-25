@@ -97,7 +97,11 @@ public final class GTBMetaTileEntities {
     public static MetaTileEntityFluidizedBedReactor FLUIDIZED_BED_REACTOR;
     public static MetaTileEntityTubeFurnace TUBE_FURNACE;
     public static MetaTileEntityHeatExchanger HEAT_EXCHANGER;
+    public static MetaTileEntityPrecisionLaser PRECISION_LASER;
     public static MetaTileEntityFlashChromatographySystem FLASH_CHROMATOGRAPHY_SYSTEM;
+    public static MetaTileEntityRocketLaunchPad ROCKET_LAUNCH_PAD;
+    public static MetaTileEntityRocketAssemblingMachine ROCKET_ASSEMBLING_MACHINE;
+    public static MetaTileEntityAlloyKiln ALLOY_KILN;
 
     public static SimpleMachineMetaTileEntity[] CRYSTALLIZERS = new SimpleMachineMetaTileEntity[15];
     public static SimpleMachineMetaTileEntity[] DEHYDRATORS = new SimpleMachineMetaTileEntity[15];
@@ -251,6 +255,14 @@ public final class GTBMetaTileEntities {
                 new MetaTileEntityTubeFurnace(gtb("tube_furnace")));
         HEAT_EXCHANGER = registerMetaTileEntity(3070,
                 new MetaTileEntityHeatExchanger(gtb("heat_exchanger")));
+        PRECISION_LASER = registerMetaTileEntity(3071,
+                new MetaTileEntityPrecisionLaser(gtb("precision_laser")));
+        ROCKET_ASSEMBLING_MACHINE = registerMetaTileEntity(3072,
+                new MetaTileEntityRocketAssemblingMachine(gtb("rocket_assembling_machine")));
+        ROCKET_LAUNCH_PAD = registerMetaTileEntity(3073,
+                new MetaTileEntityRocketLaunchPad(gtb("rocket_launch_pad")));
+        ALLOY_KILN = registerMetaTileEntity(3074,
+                new MetaTileEntityAlloyKiln(gtb("alloy_kiln")));
 
         registerSimpleMetaTileEntity(
                 CRYSTALLIZERS, 4012, "crystallizers",
@@ -264,7 +276,7 @@ public final class GTBMetaTileEntities {
 
         registerSimpleMetaTileEntity(
                 MICROSCOPE, 4044, "microscope",
-                GTBRecipeMaps.MICROSCOPE_RECIPES, Textures.ASSEMBLER_OVERLAY,
+                GTBRecipeMaps.MICROSCOPE_RECIPES, GTBTextures.MICROSCOPE_OVERLAY,
                 true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(
@@ -279,10 +291,10 @@ public final class GTBMetaTileEntities {
                 GTBTextures.ION_IMPLANTER_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(ROASTER, 4130, "roaster", GTBRecipeMaps.ROASTER_RECIPES,
-                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+                GTBTextures.ROASTER_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(DRYER, 4150, "dryer", GTBRecipeMaps.DRYER_RECIPES,
-                GTBTextures.DEHYDRATOR_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
+                GTBTextures.DRYER_OVERLAY, true, GTBUtil::gtb, GTUtility.hvCappedTankSizeFunction);
 
         registerSimpleMetaTileEntity(ELECTRON_BEAM_LITHOGRAPHER, 4170, "electron_beam_lithographer",
                 GTBRecipeMaps.ELECTRON_BEAM_LITHOGRAPHER_RECIPES,

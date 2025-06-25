@@ -18,6 +18,7 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.RelativeDirection;
 import gregtech.client.renderer.ICubeRenderer;
 import gregtech.client.renderer.texture.Textures;
+import gregtech.client.renderer.texture.cube.OrientedOverlayRenderer;
 import gregtech.common.blocks.*;
 
 import gtb.api.recipes.GTBRecipeMaps;
@@ -63,7 +64,7 @@ public class MetaTileEntityCuringOven extends RecipeMapMultiblockController {
 
     @Nonnull
     @Override
-    protected ICubeRenderer getFrontOverlay() {
+    protected OrientedOverlayRenderer getFrontOverlay() {
         return GTBTextures.CURING_OVEN_OVERLAY;
     }
 

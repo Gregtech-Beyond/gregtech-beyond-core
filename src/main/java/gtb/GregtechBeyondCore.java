@@ -40,7 +40,6 @@ public class GregtechBeyondCore {
         for (GTBBlockWireCoil.GTBCoilType type : GTBBlockWireCoil.GTBCoilType.values()) {
             HEATING_COILS.put(GTBMetaBlocks.GTB_BLOCK_WIRE_COIL.getState(type), type);
         }
-
         proxy.preLoad();
     }
 }

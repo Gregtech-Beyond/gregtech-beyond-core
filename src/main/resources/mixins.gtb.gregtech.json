@@ -7,6 +7,7 @@
   "mixins": [
     "MixinCokeOvenStructure",
     "MixinEBFStructure",
+    "MixinEntityLanderBase",
     "MixinPBFStructure",
     "MixinVacuumFreezerStructure"
   ]

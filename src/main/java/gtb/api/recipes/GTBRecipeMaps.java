@@ -307,9 +307,6 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> HIGH_VACUUM_EVAPORATION_RECIPES = new RecipeMap<>(
             "high_vacuum_evaporation_recipes", 2, 1, 1, 1, new SimpleRecipeBuilder(), false);
 
-    public static final RecipeMap<SimpleRecipeBuilder> CRUCIBLE_RECIPES = new RecipeMap<>(
-            "crucible", 4, 1, 2, 1, new SimpleRecipeBuilder(), false);
-
     public static final RecipeMap<SimpleRecipeBuilder> ATOMIC_LAYER_DEPOSITION_RECIPES = new RecipeMap<>(
             "atomic_layer_deposition", 4, 1, 2, 0, new SimpleRecipeBuilder(), false);
 
@@ -334,4 +331,18 @@ public final class GTBRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> TUBE_FURNACE_RECIPES = new RecipeMap<>(
             "tube_furnace", 4, 4, 2, 2, new SimpleRecipeBuilder(), false);
 
+    public static final RecipeMap<SimpleRecipeBuilder> PRECISION_LASER_RECIPES = new RecipeMap<>(
+            "precision_laser", 4, 2, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ROCKET_LAUNCH_PAD_RECIPES = new RecipeMap<>(
+            "rocket_launch_pad", 4, 2, 1, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ROCKET_ASSEMBLY_RECIPES = new RecipeMap<>(
+            "rocket_assembly_recipes", 16, 1, 4, 0, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> ALLOY_KILN = new RecipeMap<>(
+            "alloy_kiln", 2, 2, 2, 1, new SimpleRecipeBuilder(), false);
+
+    public static final RecipeMap<SimpleRecipeBuilder> CRUCIBLE_RECIPES = new RecipeMap<>(
+            "crucible_recipes", 2, 2, 2, 1, new SimpleRecipeBuilder(), false);
 }

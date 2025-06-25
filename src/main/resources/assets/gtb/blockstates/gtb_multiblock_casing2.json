@@ -32,6 +32,18 @@
           "all" : "gregtech:blocks/gtb_multiblock_casing2/fused_quartz_block"
         }
       },
+      "rocket_block_base" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/rocket_block_base"
+        }
+      },
+      "galvanized_porcelain_tiles" : {
+        "model" : "minecraft:cube_all",
+        "textures" : {
+          "all" : "gregtech:blocks/gtb_multiblock_casing2/galvanized_porcelain_tiles"
+        }
+      },
       "sonicator_casing" : {
         "model" : "minecraft:cube_all",
         "textures" : {
