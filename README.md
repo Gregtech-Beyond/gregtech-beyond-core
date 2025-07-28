@@ -31,6 +31,8 @@ GT6 and Greg for his great mods and ideas.
 
 Supersymmetry (SUSY)
 for their Idea of Catalytic Reformation Unit and its corresponding recipes
+for some of their recipes and ideas
+
 
 [InventoryBogoSorter](https://github.com/CleanroomMC/InventoryBogoSorter) and [Supercritical](https://github.com/SymmetricDevs/Supercritical)  for MixinLoader template and examples
 
